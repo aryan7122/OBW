@@ -1,0 +1,174 @@
+.hero-section {
+  background: linear-gradient(120deg, #5329ab, #1b003e);
+  color: white;
+  margin-top: -122px;
+  //   height: 775px;
+  background: linear-gradient(
+      112.2deg,
+      rgba(70, 43, 151, 0.6) 5.44%,
+      rgba(91, 47, 47, 0.6) 51.47%
+    ),
+    url("../../assets/icons/Group\ 1597883014.png");
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  .hero_bg {
+    padding: 10px;
+    background-size: cover;
+    background-image: url("../../assets//icons/Rectangle\ 16.png");
+    // border: 1px solid red;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .content {
+    padding-left: 60px;
+    max-width: 700px;
+
+    h1 {
+      background: linear-gradient(
+        111.56deg,
+        #d89393 6.06%,
+        #b4b3b3 37.4%,
+        #ffffff 70.6%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 70px;
+      letter-spacing: -3px;
+      text-align: left;
+
+      margin-bottom: 1rem;
+    }
+
+    p {
+      width: 90%;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+      text-align: left;
+      color: #ffffff;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 60px;
+      .appointment-button {
+        width: 276px;
+        height: 52px;
+        padding: 0px 6px 0px 20px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        outline: none;
+        border: 1px solid transparent;
+        background: #ffffff;
+        color: #643434;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: #00575d;
+          color: #fff;
+
+          .arrow-icon {
+            background: #ffffff;
+            color: #643434;
+          }
+        }
+
+        &:active {
+          scale: 0.9;
+        }
+
+        .arrow-icon {
+          color: #fff;
+          width: 26.67px;
+          height: 26.67px;
+          padding: 5px;
+          border-radius: 100px;
+          margin-left: 8px;
+          background: #00575d;
+        }
+      }
+
+      .secondary-btn {
+        width: 242.6px;
+        background: linear-gradient(
+          90.15deg,
+          rgba(36, 99, 235, 0.15) 0.13%,
+          rgba(20, 56, 133, 0.09) 46.74%,
+          rgba(28, 78, 184, 0.15) 103.2%
+        );
+        height: 52.8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52.8px;
+        gap: 8px;
+        outline: none;
+        border: 1px solid #2463eb;
+        border-radius: 120px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: #fff;
+        opacity: 0px;
+        cursor: pointer;
+        transition: 0.3s linear;
+        &:hover {
+          background: #2463eb74;
+        }
+        &:active{
+          box-shadow: 0px 0px 5px 10px #2463eb74;
+        }
+      }
+     
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red !important;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 650px;
+    height: 754px;
+    margin-top: 10px;
+    border-radius: 18px;
+    background: #5b2f2f;
+    overflow: hidden;
+    img {
+      width: 612.47px;
+      height: 918.71px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    .hero-image {
+      margin-top: 2rem;
+    }
+  }
+}
