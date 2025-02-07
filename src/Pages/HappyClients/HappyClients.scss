@@ -6,6 +6,9 @@
   @media only screen and (max-width: 1400px) {
     padding: 40px 0px 40px 40px;
   }
+  @media only screen and (max-width: 1000px) {
+    padding: 20px 0px 20px 20px;
+  }
   .content_top {
     padding-right: 60px;
     display: flex;
@@ -15,6 +18,11 @@
     @media only screen and (max-width: 1400px) {
       padding-right: 40px;
     }
+            @media only screen and (max-width: 1051px) {
+              flex-direction: column;
+              align-items: start;
+      
+            }
     .view-all {
       padding: 8px 10px 8px 25px;
       background-color: #007bff;
@@ -35,7 +43,10 @@
       color: #fff;
       border: 1px solid transparent;
       transition: 0.3s linear;
+@media only screen and (max-width: 1051px) {
+    margin-top: 30px;
 
+  }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -72,6 +83,9 @@
       letter-spacing: -2.200000047683716px;
       text-align: left;
       margin-top: 8px;
+      @media only screen and (max-width: 1051px) {
+        width: 100%;
+      }
     }
 
     .slider-subheading {
@@ -83,6 +97,9 @@
       color: #454545;
       width: 750px;
       margin-top: 8px;
+      @media only screen and (max-width: 1051px) {
+          width: 100%;
+        }
     }
   }
 
@@ -99,7 +116,9 @@
     display: flex;
     transition: transform 0.5s ease;
     padding: 10px;
-
+  @media only screen and (max-width: 1000px) {
+     margin-left: -20px;
+    }
     .slider-card {
       border: 20px;
       overflow: hidden;

@@ -154,6 +154,12 @@
             margin: 10px;
             margin-top: 20px;
           }
+          @media only screen and (max-width: 810px) {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 22.1px;
+            margin: 10px;
+          }
         }
 
         .card-description {
@@ -170,10 +176,19 @@
           /* Blur effect */
           -webkit-backdrop-filter: blur(10px);
           animation: fadeIn 0.5s ease-in-out forwards;
-              @media only screen and (max-width: 1100px) {
-                height: 80%;
-                margin-bottom: -20%;
-              }
+          @media only screen and (max-width: 1100px) {
+            height: 80%;
+            margin-bottom: -20%;
+          }
+          @media only screen and (max-width: 810px) {
+            margin-bottom: -25%;
+          }
+          @media only screen and (max-width: 750px) {
+            margin-bottom: -15%;
+          }
+                         @media only screen and (max-width: 730px) {
+                           margin-bottom: -10%;
+                         }
           .card-title2 {
             font-size: 28px;
             font-weight: 500;
@@ -187,8 +202,15 @@
               font-weight: 500;
               line-height: 26.4px;
             }
+            @media only screen and (max-width: 810px) {
+              font-size: 18px;
+              line-height: 20.1px;
+            }
           }
           .description-category {
+            @media only screen and (max-width: 730px) {
+                margin-bottom: -5% !important;
+              }
             strong {
               font-size: 20px;
               font-weight: 500;
@@ -200,6 +222,12 @@
                 font-weight: 400;
                 line-height: 20.4px;
               }
+              @media only screen and (max-width: 810px) {
+                font-size: 14px;
+                line-height: 18.1px;
+              }
+                           
+             
             }
             ul {
               margin-bottom: 20px !important;
@@ -207,6 +235,9 @@
               display: flex;
               flex-wrap: wrap;
               gap: 10px;
+                @media only screen and (max-width: 750px) {
+                    margin-top: 5px;
+                  }
             }
 
             li {
@@ -222,6 +253,10 @@
                 font-size: 14px;
                 font-weight: 400;
                 line-height: 18.4px;
+              }
+              @media only screen and (max-width: 810px) {
+                font-size: 12px;
+                line-height: 16.1px;
               }
               /* text ek line me rakhega */
             }

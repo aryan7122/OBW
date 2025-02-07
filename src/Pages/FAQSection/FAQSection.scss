@@ -2,9 +2,15 @@
   display: flex;
   gap: 2rem;
   padding: 60px;
-  background-color: #F2FEFF;
-@media only screen and (max-width: 1400px) {
+  background-color: #f2feff;
+  @media only screen and (max-width: 1400px) {
     padding: 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 20px;
+  }
+  @media only screen and (max-width: 770px) {
+    flex-direction: column;
   }
   .faq-left {
     width: 425px;
@@ -16,6 +22,17 @@
     background-image: url("../../assets/faq/Rectangle\ 3463667.png");
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (max-width: 850px) {
+      width: 350px;
+      height: 687px;
+    }
+    @media only screen and (max-width: 770px) {
+      width: 100%;
+      background-position: 10% 60%;
+      background-image: none;
+      height: fit-content;
+      padding: 0;
+    }
     .FAQ’s {
       background: #b8b8b833;
       padding: 4px 10px;
@@ -27,6 +44,9 @@
       line-height: 16.8px;
       letter-spacing: 0.01em;
       text-align: center;
+      @media only screen and (max-width: 770px) {
+         color: #171717;
+        }
     }
     h2 {
       font-size: 48px;
@@ -36,6 +56,13 @@
       letter-spacing: -2.200000047683716px;
       text-align: left;
       color: #fff;
+      @media only screen and (max-width: 850px) {
+        font-size: 38px;
+        line-height: 44.6px;
+      }
+             @media only screen and (max-width: 770px) {
+               color: #171717;
+             }
     }
 
     p {
@@ -47,6 +74,15 @@
       margin-top: 8px;
       color: #fff;
       width: 340px;
+      @media only screen and (max-width: 850px) {
+        font-size: 16px;
+        line-height: 24.6px;
+        width: 260px;
+      }
+      @media only screen and (max-width: 770px) {
+        width: 66%;
+        color: #171717;
+      }
     }
 
     .get-in-touch {
@@ -101,7 +137,7 @@
       background: #e6fafc;
       border-bottom: 1px solid #ddd;
       border-radius: 10px;
-      padding:20px 15px;
+      padding: 20px 15px;
       margin-bottom: 23px;
       cursor: pointer;
       transition: all 0.3s;
@@ -122,27 +158,27 @@
         justify-content: space-between;
         font-size: 1.2rem;
         font-weight: bold;
-        .icon_round{
-            width: 27px;
-            height: 27px;
-            border-radius: 100px;
-            background: #5B2F2F;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5px;
+        .icon_round {
+          width: 27px;
+          height: 27px;
+          border-radius: 100px;
+          background: #5b2f2f;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
         }
       }
 
       .faq-answer {
         margin-top: 0.5rem;
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 28px;
-            letter-spacing: -0.5px;
-            text-align: left;
-         
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+        text-align: left;
+
         color: #171717;
       }
     }

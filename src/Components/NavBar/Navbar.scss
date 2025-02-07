@@ -14,6 +14,9 @@
   @media only screen and (max-width: 1400px) {
     padding: 0 40px;
   }
+  @media only screen and (max-width: 1000px) {
+    padding: 0 20px;
+  }
   user-select: none;
   z-index: 999;
   -webkit-user-select: none;
@@ -23,32 +26,30 @@
   -ms-user-select: none;
   &.navbar-scrolled {
     // background-color: #ffffff;
-    .navbar-container{
+    .navbar-container {
       background: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      .navbar-logo{
-        img{
-            filter: sepia(100%) saturate(1000%) hue-rotate(111deg) brightness(1);
+      .navbar-logo {
+        img {
+          filter: sepia(100%) saturate(1000%) hue-rotate(111deg) brightness(1);
         }
       }
-      .navbar-links{
-        li{
-          a{
+      .navbar-links {
+        li {
+          a {
             // color: #00575D ;
-            color: #171717 ;
+            color: #171717;
           }
         }
-
       }
-      .navbar-actions{
-       
-        .search-icon{
+      .navbar-actions {
+        .search-icon {
           color: #171717;
         }
-        .search-bar{
-          .card_search{
+        .search-bar {
+          .card_search {
           }
-          .close-button{
+          .close-button {
             color: #171717 !important;
           }
         }
@@ -70,6 +71,7 @@
       rgba(153, 153, 153, 0.08) 62.72%
     );
     backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(22px);
     // width: 1323px;
     height: 76px;
 
@@ -279,18 +281,127 @@
   }
 }
 
-@media (max-width: 768px) {
+//
+.navbar-scrolled{
+  .navbar-container{
+    .mobile-menu-icon{
+      color: #171717;
+    }
+  }
+}
+.menu-active-navbar-container {
+  
+  @media (max-width: 950px) {
+    border-top-left-radius: 40px !important;
+    border-top-right-radius: 40px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+     transition: 0.2s linear;
+  }
+ .menu-active {
+   li {
+     a {
+       color: #171717 !important;
+     }
+   }
+ }
+ 
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   .navbar-links {
-    display: none;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  animation: slideDown 0.3s ease forwards;
+    li {
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    @media (max-width: 950px) {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #ffffff;
+      width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+      /* Safari Support */
+      padding: 30px;
+      z-index: 100;
+      border-bottom-left-radius: 40px !important;
+      border-bottom-right-radius: 40px !important;
+      &.menu-active {
+        display: flex;
+      }
+     
+    }
   }
 
-  .menu-icon {
-    display: block;
-    color: white;
+
+  .mobile-menu-icon {
+    margin-top: 5px;
+    display: none;
     cursor: pointer;
+    color: #fff;
+    margin-right: 10px;
+    @media (max-width: 950px) {
+      display: block;
+    }
+  }
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 950px) {
+
+      // flex-direction: column;
+      display: none;
+      // border: 1px solid red;
+      position: absolute;
+      z-index: 111;
+      right: 60px;
+      width: fit-content;
+      .appointment-button {
+        display: none;
+      }
+      .search-bar {
+        // position: absolute;
+        transform: translateX(26%);
+        // right: 0px;
+        // margin-right: 200px;
+        // width: fit-content;
+        .card_search {
+          width: fit-content;
+        }
+      }
+
+      &.menu-active {
+        display: flex;
+      }
+    }
+  }
+}
+
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-15px);
+    scale: 0.9;
+    opacity: 0;
   }
 
-  .navbar-actions {
-    display: none;
+  100% {
+    transform: translateY(0);
+    scale: 1;
+    opacity: 1;
   }
 }

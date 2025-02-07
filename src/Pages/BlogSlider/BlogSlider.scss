@@ -6,6 +6,9 @@
   @media only screen and (max-width: 1400px) {
     padding: 40px 0px 40px 40px;
   }
+        @media only screen and (max-width: 1000px) {
+          padding: 20px 0px 20px 20px;
+        }
   .blog_title {
     background: #b8b8b833;
     font-size: 14px;
@@ -26,6 +29,9 @@
     justify-content: space-between;
     @media only screen and (max-width: 1400px) {
       padding-right: 40px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding-right: 20px;
     }
     @media only screen and (max-width: 1080px) {
       flex-direction: column;
@@ -120,6 +126,9 @@
     transition: transform 0.5s ease;
     // border: 1px solid red;
     padding: 10px;
+    @media only screen and (max-width: 1000px) {
+      margin-left: -20px;
+    }
     .slider-card {
       position: relative;
       background: #fff;
@@ -138,6 +147,10 @@
         min-width: 400px !important;
         // border: 1px solid red;
         // min-height: 600px;
+      }
+      @media only screen and (max-width: 1111px) {
+        width: 400px !important;
+        
       }
       .card-image {
         width: 569.68px;
@@ -172,6 +185,10 @@
         color: #454545;
         width: 500px;
         margin-top: 8px;
+        @media only screen and (max-width: 1111px) {
+            width: 100%;
+        
+          }
       }
       .author {
         margin-top: 15px;
@@ -237,6 +254,7 @@
     gap: 20px;
     padding-right: 60px;
     margin-top: 30px;
+   
     .nav-btn {
       min-width: 54px;
       min-height: 54px;

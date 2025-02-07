@@ -8,6 +8,10 @@
   flex-direction: column;
   background-size: cover;
   background-position: center;
+  @media only screen and (max-width: 840px) {
+    height: fit-content;
+    padding: 40px 20px;
+  }
   .h1_card {
     background: #ffffff66;
     width: 1138.82px;
@@ -17,6 +21,14 @@
     @media only screen and (max-width: 1170px) {
       width: 900.82px;
       height: 190px;
+    }
+    @media only screen and (max-width: 1000px) {
+      width: 800.82px;
+      height: 190px;
+    }
+    @media only screen and (max-width: 840px) {
+      width: 100%;
+      height: fit-content;
     }
     h1 {
       background: linear-gradient(275.34deg, #472525 26.67%, #883939 81.05%);
@@ -32,6 +44,15 @@
         font-weight: 500;
         line-height: 70.4px;
       }
+      @media only screen and (max-width: 1000px) {
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 70.4px;
+      }
+      @media only screen and (max-width: 840px) {
+        font-size: 40px;
+        line-height: 40.4px;
+      }
     }
   }
   p {
@@ -42,6 +63,9 @@
     line-height: 28px;
     letter-spacing: -0.5px;
     text-align: center;
+    @media only screen and (max-width: 840px) {
+        width: 90%;
+      }
   }
   .view-all {
     margin-top: 2rem;
