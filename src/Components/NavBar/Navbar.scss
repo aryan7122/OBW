@@ -20,9 +20,9 @@
   -ms-user-select: none;
   &.navbar-scrolled {
     // background-color: #ffffff;
-    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     .navbar-container{
       background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       .navbar-logo{
         img{
             filter: sepia(100%) saturate(1000%) hue-rotate(111deg) brightness(1);
@@ -36,6 +36,19 @@
           }
         }
 
+      }
+      .navbar-actions{
+       
+        .search-icon{
+          color: #171717;
+        }
+        .search-bar{
+          .card_search{
+          }
+          .close-button{
+            color: #171717 !important;
+          }
+        }
       }
     }
   }

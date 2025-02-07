@@ -11,6 +11,8 @@ import WhyChooseSection from './Pages/WhyChooseSection/WhyChooseSection'
 import BlogSlider from './Pages/BlogSlider/BlogSlider'
 import FAQSection from './Pages/FAQSection/FAQSection'
 import HappyClients from './Pages/HappyClients/HappyClients'
+import FirstStep from './Pages/FirstStep/FirstStep'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
       <BlogSlider />
       <FAQSection />
       <HappyClients />
+      <FirstStep />
+      <Footer />
     </>
   )
 }
