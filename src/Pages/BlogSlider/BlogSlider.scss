@@ -2,7 +2,10 @@
   margin: 0 auto;
   text-align: center;
   padding: 60px 0px 60px 60px;
-  background: #F3FFF1;
+  background: #f3fff1;
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 0px 40px 40px;
+  }
   .blog_title {
     background: #b8b8b833;
     font-size: 14px;
@@ -21,6 +24,13 @@
     text-align: left;
     align-items: center;
     justify-content: space-between;
+    @media only screen and (max-width: 1400px) {
+      padding-right: 40px;
+    }
+    @media only screen and (max-width: 1080px) {
+      flex-direction: column;
+      align-items: start;
+    }
     .view-all {
       padding: 8px 10px 8px 25px;
       background-color: #007bff;
@@ -41,7 +51,9 @@
       color: #fff;
       border: 1px solid transparent;
       transition: 0.3s linear;
-
+      @media only screen and (max-width: 1080px) {
+        margin-top: 30px;
+      }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -74,6 +86,9 @@
       letter-spacing: -2.200000047683716px;
       text-align: left;
       margin-top: 8px;
+      @media only screen and (max-width: 1080px) {
+          width: 100%;
+        }
     }
 
     .slider-subheading {
@@ -85,6 +100,9 @@
       color: #454545;
       width: 750px;
       margin-top: 8px;
+      @media only screen and (max-width: 1080px) {
+         width: 100%;
+        }
     }
   }
 
@@ -103,6 +121,7 @@
     // border: 1px solid red;
     padding: 10px;
     .slider-card {
+      position: relative;
       background: #fff;
       border-radius: 16px;
       min-width: 591px;
@@ -111,16 +130,25 @@
 
       margin: 0 10px;
       padding: 16px;
-      &:hover{
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      }
       text-align: left;
-
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      @media only screen and (max-width: 1330px) {
+        min-width: 400px !important;
+        // border: 1px solid red;
+        // min-height: 600px;
+      }
       .card-image {
         width: 569.68px;
         height: 266px;
         border-radius: 20px;
         object-fit: cover;
+        @media only screen and (max-width: 1330px) {
+          width: 100% !important;
+          // border: 1px solid red;
+          // min-height: 600px;
+        }
       }
 
       .card-title {
@@ -132,6 +160,9 @@
         text-align: left;
         color: #1b1b1b;
         margin-top: 8px;
+        @media only screen and (max-width: 1330px) {
+          width: 100%;
+        }
       }
       .card-p {
         font-size: 16px;
@@ -147,6 +178,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: absolute;
+        width: 94%;
+        bottom: 20px;
         .aut_text-img {
           display: flex;
           align-items: center;
@@ -199,6 +233,7 @@
 
   .progress {
     display: flex;
+    align-items: center;
     gap: 20px;
     padding-right: 60px;
     margin-top: 30px;
@@ -229,11 +264,11 @@
       width: 100%;
       background: #f0f0f0;
       height: 5px;
-      margin-top: 16px;
+      // margin-top: 16px;
 
       .progress-bar {
         border-radius: 100px;
-        background: #215AD5;
+        background: #215ad5;
         height: 100%;
         transition: width 0.5s ease;
       }

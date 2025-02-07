@@ -28,7 +28,13 @@
   .content {
     padding-left: 60px;
     max-width: 700px;
-
+    @media only screen and (max-width: 1400px) {
+      padding-left: 40px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding-left: 40px;
+      max-width: 600px;
+    }
     h1 {
       background: linear-gradient(
         111.56deg,
@@ -43,8 +49,11 @@
       line-height: 70px;
       letter-spacing: -3px;
       text-align: left;
-
       margin-bottom: 1rem;
+      @media only screen and (max-width: 1200px) {
+        font-size: 62px;
+        line-height: 59px;
+      }
     }
 
     p {
@@ -133,11 +142,10 @@
         &:hover {
           background: #2463eb74;
         }
-        &:active{
+        &:active {
           box-shadow: 0px 0px 5px 10px #2463eb74;
         }
       }
-     
     }
   }
 
@@ -158,6 +166,10 @@
     img {
       width: 612.47px;
       height: 918.71px;
+      @media only screen and (max-width: 1200px) {
+        width: 512.47px;
+        height: auto;
+      }
     }
   }
 }

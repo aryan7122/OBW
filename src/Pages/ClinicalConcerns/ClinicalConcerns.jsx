@@ -94,6 +94,7 @@ const clinicalData = {
             },
             imageUrl: DoubleImg5
         },
+        
         {
             title: "Dryness & Dehydration",
             description: {
@@ -285,16 +286,18 @@ function ClinicalConcerns() {
     return (
         <div className="clinical-concerns">
             <h1>Clinical <img src={IconAdd} alt="add-icon" />  Concerns</h1>
-            <div className="tabs">
-                {Object.keys(clinicalData).map((tab) => (
-                    <button
-                        key={tab}
-                        className={`tab-button ${selectedTab === tab ? "active-tab" : ""}`}
-                        onClick={() => setSelectedTab(tab)}
-                    >
-                        {iconsMap[tab]} {tab}
-                    </button>
-                ))}
+            <div id="tabs">
+                <div className="tabs">
+                    {Object.keys(clinicalData).map((tab) => (
+                        <button
+                            key={tab}
+                            className={`tab-button ${selectedTab === tab ? "active-tab" : ""}`}
+                            onClick={() => setSelectedTab(tab)}
+                        >
+                            {iconsMap[tab]} {tab}
+                        </button>
+                    ))}
+                </div>
             </div>
             {/* <div className="card-container">
                 {clinicalData[selectedTab].map((card, index) => (
@@ -327,7 +330,7 @@ function ClinicalConcerns() {
                             .filter((_, index) => index % 3 === 0)
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
-                                <div className="card" key={index}>
+                                <div className="card col1" key={index}>
                                     <img src={card?.imageUrl} alt={card?.title} className="card-image" />
                                     <div className="card-overlay">
                                         <h3 className="card-title">{card.title}</h3>
@@ -355,7 +358,7 @@ function ClinicalConcerns() {
                             .filter((_, index) => index % 3 === 1)
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
-                                <div className="card" key={index}>
+                                <div className="card col2" key={index}>
                                     <img src={card?.imageUrl} alt={card?.title} className="card-image" />
                                     <div className="card-overlay">
                                         <h3 className="card-title">{card.title}</h3>
@@ -383,7 +386,7 @@ function ClinicalConcerns() {
                             .filter((_, index) => index % 3 === 2)
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
-                                <div className="card" key={index}>
+                                <div className="card col3" key={index}>
                                     <img src={card?.imageUrl} alt={card?.title} className="card-image" />
                                     <div className="card-overlay">
                                         <h3 className="card-title">{card.title}</h3>
