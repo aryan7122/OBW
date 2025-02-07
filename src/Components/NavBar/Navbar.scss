@@ -22,8 +22,21 @@
     // background-color: #ffffff;
     // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     .navbar-container{
-      background: #000000;
-      // color: #000;
+      background: #fff;
+      .navbar-logo{
+        img{
+            filter: sepia(100%) saturate(1000%) hue-rotate(111deg) brightness(1);
+        }
+      }
+      .navbar-links{
+        li{
+          a{
+            // color: #00575D ;
+            color: #171717 ;
+          }
+        }
+
+      }
     }
   }
 
