@@ -1,10 +1,10 @@
 .why-choose-section {
   padding: 60px;
   background-color: #f9f9f9;
-@media only screen and (max-width: 1400px) {
+  @media only screen and (max-width: 1400px) {
     padding: 40px;
   }
-@media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1000px) {
     padding: 20px;
   }
   .content-container {
@@ -37,9 +37,9 @@
       width: 656px;
       margin-top: 8px;
       margin-bottom: 50px;
-        @media only screen and (max-width: 1000px) {
-            width: 100%;
-          }
+      @media only screen and (max-width: 1000px) {
+        width: 100%;
+      }
     }
 
     .image-grid {
@@ -77,14 +77,14 @@
           width: 100%;
           // height: 100%;
         }
-                        @media only screen and (max-width: 950px) {
-                          width:50%;
-                          // min-height: 427px !important;
-                          img{
-                            height: 99%;
-                            object-fit: cover;
-                          }
-                        }
+        @media only screen and (max-width: 950px) {
+          width: 50%;
+          // min-height: 427px !important;
+          img {
+            height: 99%;
+            object-fit: cover;
+          }
+        }
       }
       .image-card:nth-child(2) {
         width: 50%;
@@ -108,7 +108,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
-       gap: 20px;
+      gap: 20px;
+      @media only screen and (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+      }
       .info-card {
         background-color: white;
         padding: 1.5rem;
@@ -120,41 +123,45 @@
         // align-items: start;
         // text-align: start;
         width: 100%;
-        &:hover{
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        &:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-       
 
         h3 {
-            font-size: 24px;
-            font-weight: 500;
-            line-height: 26px;
-            letter-spacing: -0.800000011920929px;
-            text-align: left;
-           color: #000;
-           margin-top: 8px;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 26px;
+          letter-spacing: -0.800000011920929px;
+          text-align: left;
+          color: #000;
+          margin-top: 8px;
         }
 
         p {
-            margin-top: 8px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
-            text-align: left;
-            color: #454545;
+          margin-top: 8px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: left;
+          color: #454545;
         }
       }
 
       .green {
-        background-color: #C3FDC0;
+        background-color: #c3fdc0;
       }
 
       .purple {
-        background-color: #EED7EC;
+        background-color: #eed7ec;
       }
 
       .pink {
-        background-color: #F0EBEB;
+        background-color: #f0ebeb;
+      }
+    }
+    @media only screen and (max-width: 900px) {
+      .info-card:last-child {
+        grid-column: span 2;
       }
     }
   }
