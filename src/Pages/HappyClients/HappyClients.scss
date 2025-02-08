@@ -9,6 +9,9 @@
   @media only screen and (max-width: 1000px) {
     padding: 20px 0px 20px 20px;
   }
+  @media only screen and (max-width: 400px) {
+    padding: 10px 0px 10px 10px;
+  }
   .content_top {
     padding-right: 60px;
     display: flex;
@@ -22,6 +25,9 @@
       flex-direction: column;
       align-items: start;
     }
+         @media only screen and (max-width: 500px) {
+           padding-right: 0;
+         }
     .view-all {
       padding: 8px 10px 8px 25px;
       background-color: #007bff;
@@ -44,6 +50,10 @@
       transition: 0.3s linear;
       @media only screen and (max-width: 1051px) {
         margin-top: 30px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding: 5px 6px 5px 15px;
+        font-size: 16px;
       }
       .arrow-icon {
         transition: 0.3s linear;
@@ -83,10 +93,24 @@
       margin-top: 8px;
       @media only screen and (max-width: 1051px) {
         font-size: 38px;
+        width: 100%;
         img {
           width: 40px;
         }
-        width: 100%;
+      }
+      @media only screen and (max-width: 550px) {
+        font-size: 30px;
+
+        img {
+          width: 30px;
+        }
+      }
+      @media only screen and (max-width: 440px) {
+        font-size: 30px;
+line-height: 35px;
+        img {
+          display: none;
+        }
       }
     }
 
@@ -101,6 +125,10 @@
       margin-top: 8px;
       @media only screen and (max-width: 1051px) {
         width: 100%;
+      }
+      @media only screen and (max-width: 1051px) {
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }
@@ -125,10 +153,10 @@
       border: 20px;
       overflow: hidden;
       border-radius: 16px;
-     
+
       background: #02282b;
       border-radius: 20px;
-      
+
       margin: 0 10px;
       // padding: 16px;
       &:hover {
@@ -141,19 +169,35 @@
       }
 
       text-align: left;
- @media only screen and (max-width: 750px) {
-    width: 350px;
-      height: 487px;
- }
+      @media only screen and (max-width: 750px) {
+        width: 350px;
+        height: 487px;
+      }
+      @media only screen and (max-width: 550px) {
+        width: 300px;
+        height: 440px;
+      }
+             @media only screen and (max-width: 400px) {
+               width: 280px;
+               height: 440px;
+             }
       .card-image {
         width: 427px;
         height: 587px;
         border-radius: 20px;
         object-fit: cover;
         @media only screen and (max-width: 750px) {
-            width: 350px;
-            height: 487px;
-          }
+          width: 350px;
+          height: 487px;
+        }
+        @media only screen and (max-width: 550px) {
+          width: 300px;
+          height: 440px;
+        }
+                @media only screen and (max-width: 400px) {
+                  width: 280px;
+                  height: 440px;
+                }
       }
 
       .card_blur {
@@ -176,8 +220,14 @@
         border-bottom-left-radius: 20px !important;
         border-bottom-right-radius: 20px !important;
         @media only screen and (max-width: 750px) {
-            width: 350px;
-          }
+          width: 350px;
+        }
+        @media only screen and (max-width: 550px) {
+          width: 300px;
+        }
+                @media only screen and (max-width: 400px) {
+                  width: 280px;
+                }
         .aut_text-img {
           display: flex;
           align-items: center;
@@ -202,6 +252,9 @@
               letter-spacing: -0.5px;
               text-align: left;
               color: #ffffff;
+              @media only screen and (max-width: 550px) {
+                font-size: 20px;
+              }
             }
 
             .card-location {
@@ -211,11 +264,19 @@
               text-align: left;
               color: #ffffff;
               opacity: 0.8;
+              @media only screen and (max-width: 550px) {
+                font-size: 14px;
+              }
             }
             .stars {
               margin-top: 5px;
               display: inline-flex;
               gap: 2px;
+              @media only screen and (max-width: 550px) {
+                svg {
+                  width: 20px;
+                }
+              }
             }
           }
         }
@@ -251,11 +312,18 @@
       border: none;
       border-radius: 100px;
       cursor: pointer;
-
+@media only screen and (max-width: 400px) {
+    min-width: 40px;
+    min-height: 40px;
+  }
       svg {
         width: 32px;
         height: 32px;
         color: #fff;
+        @media only screen and (max-width: 400px) {
+            width: 22px;
+            height: 22px;
+          }
       }
 
       &:disabled {

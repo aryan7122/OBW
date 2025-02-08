@@ -60,6 +60,10 @@
       @media only screen and (max-width: 1080px) {
         margin-top: 30px;
       }
+      @media only screen and (max-width: 500px) {
+        padding: 5px 6px 5px 15px;
+        font-size: 16px;
+      }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -96,6 +100,11 @@
         font-size: 38px;
         line-height: 46px;
         width: 100%;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 100%;
+        font-size: 32px;
+        line-height: 36px;
       }
     }
 
@@ -146,11 +155,21 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
       @media only screen and (max-width: 1330px) {
-        min-width: 400px !important;
+        min-width: 400px;
         // min-height: 600px;
       }
       @media only screen and (max-width: 1111px) {
-        width: 400px !important;
+        // width: 400px ;
+      }
+      @media only screen and (max-width: 660px) {
+        min-width: 350px !important;
+      }
+      @media only screen and (max-width: 530px) {
+        padding: 10px;
+        min-width: 300px !important;
+      }
+      @media only screen and (max-width: 370px) {
+        min-width: 270px !important;
       }
       .card-image {
         width: 569.68px;
@@ -159,7 +178,6 @@
         object-fit: cover;
         @media only screen and (max-width: 1330px) {
           width: 100% !important;
-          // border: 1px solid red;
           // min-height: 600px;
         }
       }
@@ -176,6 +194,13 @@
         @media only screen and (max-width: 1330px) {
           width: 100%;
         }
+        @media only screen and (max-width: 660px) {
+          font-size: 20px;
+        }
+                @media only screen and (max-width: 370px) {
+                  font-size: 17px;
+                  line-height: 20px;
+                }
       }
       .card-p {
         font-size: 16px;
@@ -188,6 +213,14 @@
         @media only screen and (max-width: 1111px) {
           width: 100%;
         }
+        @media only screen and (max-width: 660px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+                    @media only screen and (max-width: 370px) {
+                      font-size: 13px;
+                      line-height: 16px;
+                    }
       }
       .author {
         margin-top: 15px;
@@ -197,6 +230,7 @@
         position: absolute;
         width: 94%;
         bottom: 20px;
+
         .aut_text-img {
           display: flex;
           align-items: center;
@@ -208,6 +242,10 @@
             border-radius: 100px;
             object-fit: cover;
             margin-top: 10px;
+            @media only screen and (max-width: 660px) {
+              width: 40px;
+              height: 40px;
+            }
           }
           .aut_text {
             margin-top: 10px;
@@ -218,6 +256,14 @@
               letter-spacing: -0.5px;
               text-align: left;
               color: #151515;
+              @media only screen and (max-width: 660px) {
+                font-size: 16px;
+                line-height: 19px;
+              }
+              @media only screen and (max-width: 370px) {
+                font-size: 14px;
+                line-height: 17px;
+              }
             }
             .card-date {
               font-size: 16px;
@@ -226,6 +272,13 @@
               text-align: left;
               color: #000000;
               opacity: 0.8;
+              @media only screen and (max-width: 660px) {
+                font-size: 13px;
+              }
+              @media only screen and (max-width: 370px) {
+                font-size: 12px;
+                line-height: 14px;
+              }
             }
           }
         }
@@ -238,6 +291,13 @@
           margin-top: 8px;
           background: transparent;
           transition: 0.3s linear;
+          @media only screen and (max-width: 660px) {
+            scale: 0.9;
+          }
+          @media only screen and (max-width: 370px) {
+            font-size: 11px;
+            line-height: 14px;
+          }
           &:hover {
             background: #010066;
             color: #fff;
@@ -261,11 +321,18 @@
       border: none;
       border-radius: 100px;
       cursor: pointer;
-
+      @media only screen and (max-width: 400px) {
+        min-width: 40px;
+        min-height: 40px;
+      }
       svg {
         width: 32px;
         height: 32px;
         color: #fff;
+        @media only screen and (max-width: 400px) {
+          dth: 20px;
+          height: 20px;
+        }
       }
 
       &:disabled {

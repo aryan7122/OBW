@@ -17,6 +17,9 @@
     @media only screen and (max-width: 1000px) {
       padding: 20px 0px 0px 20px;
     }
+    @media only screen and (max-width: 400px) {
+      padding: 10px 0px 0px 10px;
+    }
     .team-photo {
       // width: 800px;
       height: 600px;
@@ -30,9 +33,16 @@
       @media only screen and (max-width: 900px) {
         height: 400px;
       }
+      @media only screen and (max-width: 500px) {
+        height: 300px;
+        width: 70%;
+      }
     }
     .team-photo:nth-child(2) {
       margin-right: -400px;
+      @media only screen and (max-width: 500px) {
+        margin-right: -150px;
+      }
     }
   }
   .team-container {
@@ -43,6 +53,9 @@
     }
     @media only screen and (max-width: 1000px) {
       padding: 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 10px;
     }
     margin-top: -40px;
   }
@@ -80,9 +93,17 @@
       @media only screen and (max-width: 1000px) {
         font-size: 40px;
         line-height: 45px;
-          font-weight: 500;
+        font-weight: 500;
         width: 100%;
       }
+            @media only screen and (max-width: 500px) {
+              font-size: 32px;
+              line-height: 35px;
+              font-weight: 500;
+              img{
+                width: 30px;
+              }
+            }
     }
 
     p {
@@ -131,6 +152,10 @@
       transition: 0.3s linear;
       @media only screen and (max-width: 1000px) {
         margin-top: 30px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding: 5px 6px 5px 15px;
+        font-size: 16px;
       }
       .arrow-icon {
         transition: 0.3s linear;
@@ -184,6 +209,10 @@
         letter-spacing: -2.200000047683716px;
         text-align: left;
         color: #643434;
+        @media only screen and (max-width: 400px) {
+            font-size: 34px;
+            line-height: 38px;
+          }
       }
       p {
         margin-top: 15px;
@@ -193,11 +222,19 @@
         letter-spacing: -0.800000011920929px;
         text-align: left;
         color: #00575d;
+        @media only screen and (max-width: 400px) {
+            font-size: 18px;
+            line-height: 22px;
+          }
       }
       .icon {
         color: #0056d2;
         font-size: 2rem;
         margin-bottom: 0.5rem;
+        
+      }
+      img{
+        width: 70px;
       }
     }
   }
