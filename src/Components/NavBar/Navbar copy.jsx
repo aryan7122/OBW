@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/icons/logo.svg';
 import { Menu, X, Search, ArrowRight } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const location = useLocation(); // Get current location
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,10 +31,6 @@ function Navbar() {
         setMenuOpen(!menuOpen);
     };
 
-    const isActive = (path) => {
-        return location.pathname === path ? 'active-link' : '';
-    };
-
     return (
         <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
             <nav className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}>
@@ -45,14 +39,16 @@ function Navbar() {
                     <div className="logo-circle"><img src={logo} alt="logo" /></div>
                 </div>
 
+               
+
                 {/* Navigation Links */}
                 <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
-                    <li><Link to="/" className={isActive('/')}>HOME</Link></li>
-                    <li><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
-                    <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
-                    <li><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
-                    <li><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
-                    <li><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                    <li ><a href="#home">HOME</a></li>
+                    <li><a href="#treatment">TREATMENT</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#locations">LOCATIONS</a></li>
+                    <li><a href="#blogs">BLOGS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
 
                 {/* Book Appointment and Search Section */}
@@ -82,13 +78,12 @@ function Navbar() {
                             </button>
                         </div>
                     )}
+                    {/* Mobile Menu Toggle */}
                 </div>
-
-                {/* Mobile Menu Toggle */}
-                <div className="mobile-menu-icon" onClick={toggleMenu}>
-                    {menuOpen ? <X size={28} /> : <Menu size={28} />}
-                </div>
-
+                    <div className="mobile-menu-icon" onClick={toggleMenu}>
+                        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+                    </div>
+                
             </nav>
         </header>
     );

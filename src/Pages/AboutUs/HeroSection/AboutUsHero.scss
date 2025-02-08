@@ -1,0 +1,164 @@
+// AboutUs.scss
+
+.about-us {
+  display: flex;
+  align-items: center;
+//   justify-content: center;
+padding: 60px;
+  height: 703px;
+  background: linear-gradient(106.86deg, #00575d 37.92%, #334f51 85.74%);
+  position: relative;
+  overflow: hidden;
+  margin-top: -122px;
+  backdrop-filter: blur(180px);
+  //
+
+  .element1::before,
+  .element2::before,
+  .element3::before {
+    content: "";
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    border-radius: 50%;
+    background: #ff71b6;
+    filter: blur(130px);
+    z-index: 2;
+  }
+  .element4::before,
+  .element5::before {
+      content: "";
+      position: absolute;
+      width: 254px;
+      height: 254px;
+      border-radius: 50%;
+    background: #9DFF00;
+      filter: blur(140px);
+      z-index: 2;
+     
+  }
+
+  .element1::before {
+    top: 10%;
+    left: 0%;
+    animation: float 13s ease-in-out infinite;
+  }
+
+  .element2::before {
+    top: 70%;
+    left: 15%;
+    animation: float 14s ease-in-out infinite;  }
+  .element3::before {
+    top: 60%;
+    left: 45%;
+        animation: float 15s ease-in-out infinite;
+  }
+  .element4::before {
+    top: 30%;
+    left: 70%;
+    animation: float 20s ease-in-out infinite;  }
+  .element5::before {
+    top: 80%;
+    left: 80%;
+        animation: float 18s ease-in-out infinite;
+  }
+
+  .content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    max-width: 700px;
+
+    h1 {
+        margin-top: 0px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 70px;
+        letter-spacing: -3px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25.2px;
+        letter-spacing: 0%;
+        margin-top: 8px;
+        text-align: left;
+    }
+        .BookAppointmentNow {
+            margin-top: 2rem;
+            padding: 8px 10px 8px 25px;
+            margin-top: 70px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            font-size: 20px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.5px;
+    
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background: linear-gradient(90.15deg, #f2f3f4 0.13%, #ffffff 103.2%);
+            color: #364242;
+            border: 1px solid transparent;
+            transition: 0.3s linear;
+    
+            @media only screen and (max-width: 500px) {
+                padding: 5px 6px 5px 15px;
+                font-size: 16px;
+            }
+    
+            .arrow-icon {
+                transition: 0.3s linear;
+                background: #364242;
+                color: #ffffff;
+                border-radius: 100px;
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+            }
+    
+            &:hover {
+                background: #364242 !important;
+                border: 1px solid #364242;
+                color: #fff;
+    
+                .arrow-icon {
+                    background: linear-gradient(90.15deg, #ffffff 0.13%, #ffffff 103.2%);
+                    color: #364242;
+                }
+            }
+        }
+  }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+        scale: 1;
+    }
+
+    25% {
+        transform: translateY(-50%) translateX(25%);
+        scale: 0.95;
+    }
+
+    50% {
+        transform: translateY(-100%) translateX(50%);
+        scale: 0.9;
+    }
+
+    75% {
+        transform: translateY(-50%) translateX(75%);
+        scale: 0.95;
+    }
+}

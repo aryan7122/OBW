@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.scss";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import logo from '../../assets/footer/logo.svg'
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <footer className="footer">
@@ -19,7 +20,7 @@ const Footer = () => {
                 <div className="footer-icons">
                     <FaFacebook className="icon" />
                     <FaInstagram className="icon" />
-                    <FaTwitter className="icon" />
+                    <FaXTwitter className="icon" />
                     <FaLinkedin className="icon" />
                     <FaYoutube className="icon" />
                 </div>

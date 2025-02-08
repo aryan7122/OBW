@@ -1,6 +1,11 @@
 // @import 'variables';
 /* Include your custom colors in variables file */
-
+.active-link{
+  color: #06adea !important;
+  /* Active color */
+  font-weight: bold;
+  /* Optional: Bold text */
+}
 .navbar {
   position: sticky;
   top: 0;
