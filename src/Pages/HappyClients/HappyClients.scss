@@ -18,11 +18,10 @@
     @media only screen and (max-width: 1400px) {
       padding-right: 40px;
     }
-            @media only screen and (max-width: 1051px) {
-              flex-direction: column;
-              align-items: start;
-      
-            }
+    @media only screen and (max-width: 1051px) {
+      flex-direction: column;
+      align-items: start;
+    }
     .view-all {
       padding: 8px 10px 8px 25px;
       background-color: #007bff;
@@ -43,10 +42,9 @@
       color: #fff;
       border: 1px solid transparent;
       transition: 0.3s linear;
-@media only screen and (max-width: 1051px) {
-    margin-top: 30px;
-
-  }
+      @media only screen and (max-width: 1051px) {
+        margin-top: 30px;
+      }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -84,6 +82,10 @@
       text-align: left;
       margin-top: 8px;
       @media only screen and (max-width: 1051px) {
+        font-size: 38px;
+        img {
+          width: 40px;
+        }
         width: 100%;
       }
     }
@@ -98,8 +100,8 @@
       width: 750px;
       margin-top: 8px;
       @media only screen and (max-width: 1051px) {
-          width: 100%;
-        }
+        width: 100%;
+      }
     }
   }
 
@@ -116,21 +118,19 @@
     display: flex;
     transition: transform 0.5s ease;
     padding: 10px;
-  @media only screen and (max-width: 1000px) {
-     margin-left: -20px;
+    @media only screen and (max-width: 1000px) {
+      margin-left: -20px;
     }
     .slider-card {
       border: 20px;
       overflow: hidden;
       border-radius: 16px;
-      width: 427px;
-      height: 587px;
+     
       background: #02282b;
       border-radius: 20px;
-
+      
       margin: 0 10px;
       // padding: 16px;
-      // border: 1px solid red !important;
       &:hover {
         box-shadow: 0px 2px 10px 1px #00000067 !important;
         // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -141,12 +141,19 @@
       }
 
       text-align: left;
-
+ @media only screen and (max-width: 750px) {
+    width: 350px;
+      height: 487px;
+ }
       .card-image {
         width: 427px;
         height: 587px;
         border-radius: 20px;
         object-fit: cover;
+        @media only screen and (max-width: 750px) {
+            width: 350px;
+            height: 487px;
+          }
       }
 
       .card_blur {
@@ -156,7 +163,7 @@
         margin-top: -130px;
         display: flex;
         align-items: start;
-        padding:10px 20px;
+        padding: 10px 20px;
         justify-content: space-between;
         background: linear-gradient(
           348.42deg,
@@ -168,6 +175,9 @@
         -webkit-backdrop-filter: blur(10px);
         border-bottom-left-radius: 20px !important;
         border-bottom-right-radius: 20px !important;
+        @media only screen and (max-width: 750px) {
+            width: 350px;
+          }
         .aut_text-img {
           display: flex;
           align-items: center;
