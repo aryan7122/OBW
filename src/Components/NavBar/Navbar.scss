@@ -11,6 +11,13 @@
   background: transparent;
   transition: background-color 0.3s ease;
   padding: 0 60px;
+  user-select: none;
+    z-index: 999;
+    -webkit-user-select: none;
+    /* Chrome, Safari, Opera */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
   @media only screen and (max-width: 1400px) {
     padding: 0 40px;
   }
@@ -20,13 +27,7 @@
   @media only screen and (max-width: 400px) {
     padding: 0 10px;
   }
-  user-select: none;
-  z-index: 999;
-  -webkit-user-select: none;
-  /* Chrome, Safari, Opera */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
+  
   &.navbar-scrolled {
     // background-color: #ffffff;
     .navbar-container {
@@ -82,7 +83,7 @@
     gap: 16px;
     border-radius: 100px;
     @media only screen and (max-width: 500px) {
-      padding: 5px 10px 5px 10px;
+      padding: 3px 10px 5px 17px;
       margin: 10px auto;
     }
   }
@@ -120,7 +121,7 @@
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration: none;
-        // color: white;
+        color: white;
         border-bottom: 1px solid transparent;
         transition: 0.3s linear;
         &:hover {
@@ -307,7 +308,9 @@
   .menu-active {
     li {
       a {
-        color: #171717 !important;
+        @media only screen and (max-width: 950px) {
+          color: #171717 !important;
+        }
       }
     }
   }
@@ -404,5 +407,70 @@
     transform: translateY(0);
     scale: 1;
     opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .navbar-container .navbar-actions .search-bar {
+    position: absolute;
+    margin-left: 0;
+    min-width: fit-content !important;
+    transform: translateX(-100%) !important;
+
+    .card_search .search-input {
+      width: fit-content;
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .navbar-container .navbar-actions .search-bar {
+    position: absolute;
+    /* Fixed to make it overlay */
+    top: -50px;
+    left: 80px;
+    width: 100vw;
+    /* Full width */
+    height: 100vh;
+    /* Full height */
+    background: #ffffff;
+    z-index: 9999;
+    /* Bring it to front */
+    // padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #171717 !important;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .card_search {
+    // width: 90%;
+    // margin-top: 20px;
+  }
+
+  .card_search .search-input {
+    width: 100%;
+  }
+
+  .navbar-container {
+    // border: none;
+    // overflow-x: hidden !important;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .navbar .navbar-actions .search-bar .card_search .search-button{
+    width: 60px;
+      height: 40px;
+      font-size: 12px;
   }
 }

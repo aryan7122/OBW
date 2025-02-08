@@ -28,6 +28,15 @@
         width: 40px;
       }
     }
+        @media only screen and (max-width: 890px) {
+          font-size: 34px;
+          line-height: 39px;
+          gap: 10px;
+    
+          img {
+            width: 40px;
+          }
+        }
   }
   #tabs {
     @media only screen and (max-width: 1200px) {
@@ -81,14 +90,14 @@
       @media only screen and (max-width: 790px) {
         font-size: 20.18px;
         line-height: 22.74px;
-        img{
+        img {
           width: 25px;
         }
       }
       @media only screen and (max-width: 600px) {
         font-size: 18px;
         line-height: 20.74px;
-        img{
+        img {
           width: 20px;
         }
       }
@@ -340,7 +349,7 @@
           overflow: hidden;
           .card-title {
             display: block;
-            padding: 10px 0;
+            padding: 20px 0;
           }
         }
       }
@@ -358,10 +367,16 @@
   .ScalpHairCare {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media only screen and (max-width: 550px) {
+      grid-template-columns: 1fr ;
+    }
     .card {
       height: 350px;
       &:last-child {
         grid-column: span 2;
+        @media only screen and (max-width: 550px) {
+          grid-column: span 1;
+          }
       }
 
       .card-overlay {
@@ -373,15 +388,25 @@
   }
   .ScalpHairCare .card:nth-child(1) {
     width: 120%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+      }
   }
 
   .ScalpHairCare .card:nth-child(2) {
     width: 80%;
     margin-left: 20%;
+    @media only screen and (max-width: 550px) {
+        margin-left: 0;
+        width: 100%;
+      }
   }
   .BodyCare {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media only screen and (max-width: 550px) {
+      grid-template-columns:  1fr;
+      }
     .card {
       height: 350px;
       &:last-child {
@@ -396,25 +421,42 @@
   }
   .BodyCare .card:nth-child(1) {
     width: 120%;
+    @media only screen and (max-width: 550px) {
+       width: 100%;
+      }
   }
 
   .BodyCare .card:nth-child(2) {
     width: 80%;
     margin-left: 20%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
   }
   .BodyCare .card:nth-child(4) {
     width: 120%;
     margin-left: -20%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
   }
 
   .BodyCare .card:nth-child(3) {
     width: 80%;
     margin-left: 0%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+      }
   }
   .Beautifying {
     width: 100% !important;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media only screen and (max-width: 550px) {
+      grid-template-columns: 1fr ;
+      }
     .card {
       height: 350px;
       &:last-child {
@@ -429,27 +471,49 @@
   }
   .Beautifying .card:nth-child(1) {
     width: 120%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+      }
   }
   .Beautifying .card:nth-child(2) {
     width: 80%;
     margin-left: 20%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
   }
   .Beautifying .card:nth-child(4) {
     width: 120%;
     margin-left: -20%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
   }
 
   .Beautifying .card:nth-child(3) {
     width: 80%;
     margin-left: 0%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
   }
   .Beautifying .card:nth-child(5) {
     width: 120%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+      }
   }
 
   .Beautifying .card:nth-child(6) {
     width: 80%;
     margin-left: 20%;
+    @media only screen and (max-width: 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
   }
 
   //   .Beautifying .card:nth-child(even) {
