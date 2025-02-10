@@ -17,6 +17,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUsHero from "./Pages/AboutUs/HeroSection/AboutUsHero";
 import OurValue from "./Pages/AboutUs/OurValue/OurValue";
 import OurTeam from "./Pages/AboutUs/OurTeam/OurTeam";
+import MissionVision from "./Pages/AboutUs/MissionVision/MissionVision";
+import LocationSection from "./Pages/AboutUs/LocationSection/LocationSection";
  
 function App() {
   return (
@@ -47,7 +49,10 @@ function App() {
               <>
                 <AboutUsHero />
                 <OurValue />
+                <MissionVision />
                 <OurTeam />
+                <LocationSection />
+                <FirstStep />
               </>
             }
           />
