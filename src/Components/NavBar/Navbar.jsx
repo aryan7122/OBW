@@ -49,6 +49,7 @@ function Navbar() {
                 </div>
 
                 {/* Navigation Links */}
+                {!isVisible &&
                 <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
                     <li><Link to="/" className={isActive('/')}>HOME</Link></li>
                     <li><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
@@ -57,6 +58,7 @@ function Navbar() {
                     <li><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
                     <li><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                 </ul>
+                }
 
                 {/* Book Appointment and Search Section */}
                 <div className={`navbar-actions ${menuOpen ? 'menu-active' : ''}`}>

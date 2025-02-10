@@ -44,7 +44,7 @@ const ContactForm = () => {
                                 country={"in"}
                                 value={phone}
                                 onChange={(phone) => setPhone(phone)}
-                                placeholder="Enter your phone number"
+                                placeholder="+(91) 00000 - 00000"
                             />
                         </div>
 

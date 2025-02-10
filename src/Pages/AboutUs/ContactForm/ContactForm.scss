@@ -44,6 +44,7 @@
 
       p {
         margin-top: 20px;
+        margin-bottom: 40px;
         font-weight: 400;
         color: #667085;
         font-size: 20px;
@@ -60,7 +61,7 @@
       }
 
       .form-group {
-        margin-top: 40px;
+        margin-top: 20px;
 
         label {
           display: block;
@@ -92,10 +93,10 @@
           line-height: 19.2px;
           letter-spacing: 1%;
           box-shadow: 1px 1px 1px 0.1px rgba(0, 0, 0, 0.123);
-          &:hover{
+          &:hover {
             border: 1px solid rgba(0, 76, 255, 0.466);
           }
-          &:focus{
+          &:focus {
             box-shadow: 0px 0px 4px 0.1px #004cffd0;
             border: 1px solid #004cffd0;
           }
@@ -104,14 +105,13 @@
           padding: 0.8rem;
           padding-left: 38px;
         }
-                .react-tel-input{
-                   
-                 .flag-dropdown{
-                    background: #fff;
-                    border: none;
-                    scale: 0.9;
-                            
-                }}
+        .react-tel-input {
+          .flag-dropdown {
+            background: #fff;
+            border: none;
+            scale: 0.9;
+          }
+        }
 
         textarea {
           height: 100px;
@@ -140,57 +140,59 @@
         }
       }
 
-           .submit-btn {
-               margin-top: 2rem;
-               padding: 8px 30px 8px 45px;
-               margin-top: 70px;
-               background-color: #007bff;
-               color: #fff;
-               border: none;
-               font-size: 20px;
-               border-radius: 100px;
-               display: flex;
-               align-items: center;
-               gap: 10px;
-               font-weight: 500;
-               line-height: 24px;
-               letter-spacing: -0.5px;
-    
-               cursor: pointer;
-               transition: background-color 0.3s ease;
-               background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
-               color: #fff;
-               border: 1px solid transparent;
-               transition: 0.3s linear;
-    
-               @media only screen and (max-width: 500px) {
-                   padding: 5px 6px 5px 15px;
-                   font-size: 16px;
-               }
-    
-               .arrow-icon {
-                   transition: 0.3s linear;
-                   background: #fff;
-                   color: #2463eb;
-                   border-radius: 100px;
-                   width: 30px;
-                   height: 30px;
-                   padding: 5px;
-               }
-    
-               &:hover {
-                   background: #fff !important;
-                   border: 1px solid #2463eb;
-                   color: #2463eb;
-    
-                   .arrow-icon {
-                       background: linear-gradient(90.15deg,
-                               #2463eb 0.13%,
-                               #1c4eb8 103.2%);
-                       color: #fff;
-                   }
-               }
-           }
+      .submit-btn {
+        margin-top: 2rem;
+        padding: 8px 30px 8px 45px;
+        margin-top: 40px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+        color: #fff;
+        border: 1px solid transparent;
+        transition: 0.3s linear;
+
+        @media only screen and (max-width: 500px) {
+          padding: 5px 6px 5px 15px;
+          font-size: 16px;
+        }
+
+        .arrow-icon {
+          transition: 0.3s linear;
+          background: #fff;
+          color: #2463eb;
+          border-radius: 100px;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+        }
+
+        &:hover {
+          background: #fff !important;
+          border: 1px solid #2463eb;
+          color: #2463eb;
+
+          .arrow-icon {
+            background: linear-gradient(
+              90.15deg,
+              #2463eb 0.13%,
+              #1c4eb8 103.2%
+            );
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }
