@@ -1,0 +1,198 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px;
+  // margin-top: -120px;
+  // background: linear-gradient(135deg, #c4f0ff, #ffdae4);
+  background-image: url("../../../assets/about/Gradient.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    width: 100%;
+
+    .image-section {
+      //   width: 50%;
+
+      img {
+        width: 663px;
+        height: 1018.441650390625px;
+        border-radius: 20px;
+
+        object-fit: cover;
+      }
+    }
+
+    .form-section {
+      padding: 30px;
+      //   width: 50%;
+      margin-left: 30px;
+
+      h2 {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 57.6px;
+        letter-spacing: -2.2px;
+      }
+
+      p {
+        margin-top: 20px;
+        font-weight: 400;
+        color: #667085;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.5px;
+        span {
+          color: #101010;
+        }
+      }
+
+      a {
+        color: #000000;
+        // text-decoration: none;
+      }
+
+      .form-group {
+        margin-top: 40px;
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          color: #333;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19.2px;
+          letter-spacing: 1%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea {
+          width: 471px;
+          height: 45px;
+          padding-top: 11.05px;
+          padding-right: 14.73px;
+          padding-bottom: 11.05px;
+          padding-left: 14.73px;
+          border-radius: 7.37px;
+          border-bottom-width: 0.92px;
+          outline: none;
+          border: 1px solid transparent;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19.2px;
+          letter-spacing: 1%;
+          box-shadow: 1px 1px 1px 0.1px rgba(0, 0, 0, 0.123);
+          &:hover{
+            border: 1px solid rgba(0, 76, 255, 0.466);
+          }
+          &:focus{
+            box-shadow: 0px 0px 4px 0.1px #004cffd0;
+            border: 1px solid #004cffd0;
+          }
+        }
+        .react-tel-input .form-control {
+          padding: 0.8rem;
+          padding-left: 38px;
+        }
+                .react-tel-input{
+                   
+                 .flag-dropdown{
+                    background: #fff;
+                    border: none;
+                    scale: 0.9;
+                            
+                }}
+
+        textarea {
+          height: 100px;
+          resize: none;
+        }
+
+        .radio-section {
+          .radio-options {
+            display: flex;
+            gap: 1rem;
+          }
+        }
+      }
+      .radio-section {
+        .radio-options {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .date-group {
+        position: relative;
+        .calendar-icon {
+          position: absolute;
+          margin-top: -35px;
+          margin-left: 430px;
+        }
+      }
+
+           .submit-btn {
+               margin-top: 2rem;
+               padding: 8px 30px 8px 45px;
+               margin-top: 70px;
+               background-color: #007bff;
+               color: #fff;
+               border: none;
+               font-size: 20px;
+               border-radius: 100px;
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               font-weight: 500;
+               line-height: 24px;
+               letter-spacing: -0.5px;
+    
+               cursor: pointer;
+               transition: background-color 0.3s ease;
+               background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+               color: #fff;
+               border: 1px solid transparent;
+               transition: 0.3s linear;
+    
+               @media only screen and (max-width: 500px) {
+                   padding: 5px 6px 5px 15px;
+                   font-size: 16px;
+               }
+    
+               .arrow-icon {
+                   transition: 0.3s linear;
+                   background: #fff;
+                   color: #2463eb;
+                   border-radius: 100px;
+                   width: 30px;
+                   height: 30px;
+                   padding: 5px;
+               }
+    
+               &:hover {
+                   background: #fff !important;
+                   border: 1px solid #2463eb;
+                   color: #2463eb;
+    
+                   .arrow-icon {
+                       background: linear-gradient(90.15deg,
+                               #2463eb 0.13%,
+                               #1c4eb8 103.2%);
+                       color: #fff;
+                   }
+               }
+           }
+    }
+  }
+}
+
+//

@@ -36,9 +36,12 @@ function Navbar() {
     const isActive = (path) => {
         return location.pathname === path ? 'active-link' : '';
     };
+    // white bg
+    const whiteBg = ['contact'];
+    const isWhite = whiteBg.some((path) => location.pathname.includes(path));
 
     return (
-        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}  ${isWhite ? 'navbar-scrolled' : ''}`}>
             <nav className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}>
                 {/* Logo Section */}
                 <div className="navbar-logo">

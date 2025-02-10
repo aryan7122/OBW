@@ -19,6 +19,7 @@ import OurValue from "./Pages/AboutUs/OurValue/OurValue";
 import OurTeam from "./Pages/AboutUs/OurTeam/OurTeam";
 import MissionVision from "./Pages/AboutUs/MissionVision/MissionVision";
 import LocationSection from "./Pages/AboutUs/LocationSection/LocationSection";
+import ContactForm from "./Pages/AboutUs/ContactForm/ContactForm";
  
 function App() {
   return (
@@ -53,6 +54,15 @@ function App() {
                 <OurTeam />
                 <LocationSection />
                 <FirstStep />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <ContactForm />
+                <LocationSection />
               </>
             }
           />
