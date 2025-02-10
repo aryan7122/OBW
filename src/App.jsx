@@ -22,6 +22,7 @@ import LocationSection from "./Pages/AboutUs/LocationSection/LocationSection";
 import ContactForm from "./Pages/AboutUs/ContactForm/ContactForm";
 import Blog from "./Pages/BlogSlider/Blog";
 import ArticleDetail from "./Pages/BlogSlider/ArticleDetail";
+import Location from "./Pages/DiscoverLocations/Location/Location";
  
 function App() {
   return (
@@ -81,6 +82,14 @@ function App() {
             element={
               <>
                 <ArticleDetail />
+              </>
+            }
+          />
+          <Route
+            path="/locations"
+            element={
+              <>
+                <Location />
               </>
             }
           />
