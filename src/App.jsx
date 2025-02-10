@@ -20,6 +20,8 @@ import OurTeam from "./Pages/AboutUs/OurTeam/OurTeam";
 import MissionVision from "./Pages/AboutUs/MissionVision/MissionVision";
 import LocationSection from "./Pages/AboutUs/LocationSection/LocationSection";
 import ContactForm from "./Pages/AboutUs/ContactForm/ContactForm";
+import Blog from "./Pages/BlogSlider/Blog";
+import ArticleDetail from "./Pages/BlogSlider/ArticleDetail";
  
 function App() {
   return (
@@ -63,6 +65,22 @@ function App() {
               <>
                 <ContactForm />
                 <LocationSection />
+              </>
+            }
+          />
+          <Route
+            path="/blogs"
+            element={
+              <>
+                <Blog />
+              </>
+            }
+          />
+          <Route
+            path="/blog-detail"
+            element={
+              <>
+                <ArticleDetail />
               </>
             }
           />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './BlogSlider.scss';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const blogs = [
     {
@@ -33,7 +34,6 @@ const blogs = [
 const BlogSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const visibleCards = 1;
-
     const handleNext = () => {
         if (currentIndex < blogs.length - visibleCards) {
             setCurrentIndex(currentIndex + 1);
@@ -46,6 +46,12 @@ const BlogSlider = () => {
         }
     };
 
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+
     return (
         <div className="blog-slider-container">
             <h3 className='blog_title'>BLOG</h3>
@@ -56,7 +62,7 @@ const BlogSlider = () => {
                         Explore in-depth expert advice, insightful tips, and the most current trends in skincare, haircare, and a variety of aesthetic treatments to enhance your beauty routine.
                     </p>
                 </div>
-                <button className="view-all">See All Blogs  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button onClick={() => HandleNavigation('/blogs')} className="view-all">See All Blogs  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
             </div>
 
 
@@ -76,7 +82,7 @@ const BlogSlider = () => {
                                         <p className="card-date">{blog?.date}</p>
                                     </div>
                                 </div>
-                                <button className="read-more-btn">Read Full Blog</button>
+                                <button onClick={() => HandleNavigation('/blog-detail')}  className="read-more-btn">Read Full Blog</button>
                             </div>
                         </div>
                     ))}
