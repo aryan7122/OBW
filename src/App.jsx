@@ -23,6 +23,10 @@ import ContactForm from "./Pages/AboutUs/ContactForm/ContactForm";
 import Blog from "./Pages/BlogSlider/Blog";
 import ArticleDetail from "./Pages/BlogSlider/ArticleDetail";
 import Location from "./Pages/DiscoverLocations/Location/Location";
+import Kankpur from "./Pages/DiscoverLocations/Location/Kankpur";
+import Team from "./Pages/DiscoverLocations/Location/Team/Team";
+import RR from "./Pages/DiscoverLocations/Location/RR";
+import Kodipalya from "./Pages/DiscoverLocations/Location/Kodipalya";
  
 function App() {
   return (
@@ -90,6 +94,11 @@ function App() {
             element={
               <>
                 <Location />
+                <Kankpur />
+                <Team />
+                <RR />
+                <Team />
+                <Kodipalya />
               </>
             }
           />
