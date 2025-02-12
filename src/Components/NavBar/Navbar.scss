@@ -95,16 +95,17 @@
 
   .navbar-logo {
     .logo-circle {
-      width: 47.72px;
-      height: 38.3px;
+      // width: 37.72px;
+      // height: 28.3px;
 
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 1.2rem;
+      // font-size: 1.2rem;
       img {
-        filter: brightness(0) invert(1);
+        width: 40px;
+        // filter: brightness(0) invert(1);
       }
     }
   }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.scss';
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../assets/footer/logo.svg'
 import { Menu, X, Search, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 

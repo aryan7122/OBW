@@ -352,6 +352,11 @@ const clinicalData = {
             imageUrl: DrynessImg6
         },
         {
+            title: "",
+            description: '',
+            imageUrl: ''
+        },
+        {
             title: "Acne & Acne Scars",
             description: {
                 "Concerns": ["Active acne", "Acne scars"],
