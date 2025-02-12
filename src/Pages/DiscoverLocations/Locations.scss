@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // border: 1px solid red !important;
     gap: 20px;
     @media only screen and (max-width: 1000px) {
       flex-direction: column;

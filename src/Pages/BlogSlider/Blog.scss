@@ -1,6 +1,5 @@
 .blog-page {
   text-align: center;
-  font-family: "Arial", sans-serif;
 
   .content_top {
     margin-top: -120px;
@@ -11,13 +10,15 @@
     align-items: center;
     justify-content: space-between;
     background: #e6fafc;
-
     @media only screen and (max-width: 1400px) {
       padding: 130px 40px 40px 40px;
     }
 
-    @media only screen and (max-width: 1100px) {
+    @media only screen and (max-width: 900px) {
       padding: 130px 20px 20px 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 130px 10px 10px 10px;
     }
 
     @media only screen and (max-width: 1080px) {
@@ -54,12 +55,18 @@
         font-size: 38px;
         line-height: 46px;
         width: 100%;
+        img{
+          width: 40px;
+        }
       }
 
       @media only screen and (max-width: 600px) {
         width: 100%;
         font-size: 32px;
         line-height: 36px;
+        img {
+            width: 35px;
+          }
       }
     }
 
@@ -81,6 +88,18 @@
   .blogs_card_page {
     display: flex;
     padding: 60px;
+    @media only screen and (max-width: 1400px) {
+      padding: 40px;
+    }
+    @media only screen and (max-width: 1170px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 900px) {
+      padding: 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 10px;
+    }
   }
 
   .categories-filter {
@@ -91,6 +110,12 @@
     margin-right: 10px;
     min-height: 387px;
     gap: 24px;
+    @media only screen and (max-width: 1170px) {
+      min-height: fit-content;
+    }
+         @media only screen and (max-width: 350px) {
+           overflow: hidden;
+         }
     // position: fixed;
     h3 {
       font-weight: 700;
@@ -99,6 +124,9 @@
       letter-spacing: 0%;
       text-align: left;
       color: #000;
+      @media only screen and (max-width: 1170px) {
+        text-align: center;
+      }
     }
     ul {
       list-style: none;
@@ -107,7 +135,14 @@
       justify-content: center;
       flex-direction: column;
       gap: 10px;
-
+      @media only screen and (max-width: 1170px) {
+        flex-direction: row;
+      }
+      @media only screen and (max-width: 350px) {
+      //  border: 1px solid red;
+       overflow: auto !important;
+      white-space: nowrap;
+      }
       li {
         cursor: pointer;
         padding: 8px 10px;
@@ -130,6 +165,9 @@
     // align-items: center;
     // justify-content: space-between;
     position: relative;
+    @media only screen and (max-width: 1170px) {
+      margin-left: 0;
+    }
     // overflow: hidden;
   }
   .blog-cards {
@@ -138,7 +176,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     transition: transform 0.5s ease;
-
+    @media only screen and (max-width: 940px) {
+      gap: 0px;
+    }
+    @media only screen and (max-width: 890px) {
+      display: block;
+    }
     .blog-card {
       position: relative;
       background: #fff;
@@ -160,13 +203,15 @@
       @media only screen and (max-width: 1111px) {
         // width: 400px ;
       }
-
+      @media only screen and (max-width: 890px) {
+        max-width: 100%;
+      }
       @media only screen and (max-width: 660px) {
         min-width: 350px !important;
       }
 
       @media only screen and (max-width: 530px) {
-        padding: 10px;
+        // padding: 10px;
         min-width: 300px !important;
       }
 
@@ -368,8 +413,14 @@
       // border: 1px solid red;
       grid-column: span 2;
       height: 670px;
+      @media only screen and (max-width: 890px) {
+        grid-column: span 1;
+        // max-width: 100%;
+        height: 710px;
+        }
       .card-image {
         height: 450px;
+        
       }
     }
   }

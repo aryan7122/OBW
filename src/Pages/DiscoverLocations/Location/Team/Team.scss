@@ -13,6 +13,9 @@
   @media only screen and (max-width: 400px) {
     padding: 10px 0px 10px 10px;
   }
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
   .content_top {
     width: 470px;
     padding-right: 60px;
@@ -27,19 +30,23 @@
       flex-direction: column;
       align-items: start;
     }
+    @media only screen and (max-width: 700px) {
+      flex-direction: column;
+      width: 100%;
+    }
     @media only screen and (max-width: 500px) {
       padding-right: 0;
     }
-.team{
-    font-weight: 500;
-    background: #B0F0F5CC;
-    padding: 5px 25px;
-    border-radius: 100px;
-    width: fit-content;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0%;
-}
+    .team {
+      font-weight: 500;
+      background: #b0f0f5cc;
+      padding: 5px 25px;
+      border-radius: 100px;
+      width: fit-content;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+    }
     .slider-heading {
       display: flex;
       align-items: start;
@@ -104,12 +111,44 @@
     position: relative;
     overflow: hidden;
   }
-  
+
   .slider-cards {
     margin-top: 40px;
     display: flex;
     transition: transform 0.5s ease;
     padding: 10px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(calc(-10% * var(--index)));
+    @media only screen and (max-width: 1360px) {
+      transform: translateX(calc(-15% * var(--index)));
+    }
+    @media only screen and (max-width: 1260px) {
+      transform: translateX(calc(-20% * var(--index)));
+    }
+    @media only screen and (max-width: 1160px) {
+      transform: translateX(calc(-25% * var(--index)));
+    }
+    @media only screen and (max-width: 770px) {
+      transform: translateX(calc(-30% * var(--index)));
+    }
+    @media only screen and (max-width: 700px) {
+      transform: translateX(calc(-22% * var(--index)));
+    }
+    @media only screen and (max-width: 630px) {
+      transform: translateX(calc(-26% * var(--index)));
+    }
+    @media only screen and (max-width: 560px) {
+      transform: translateX(calc(-29% * var(--index)));
+    }
+    @media only screen and (max-width: 470px) {
+      transform: translateX(calc(-32% * var(--index)));
+    }
+    @media only screen and (max-width: 400px) {
+      transform: translateX(calc(-32% * var(--index)));
+    }
+    @media only screen and (max-width: 340px) {
+      transform: translateX(calc(-32.4% * var(--index)));
+    }
     @media only screen and (max-width: 1000px) {
       margin-left: -20px;
     }
@@ -117,32 +156,41 @@
       border: 20px;
       overflow: hidden;
       border-radius: 16px;
-      
-      background: #6CF6FF;
+
+      background: #6cf6ff;
       border-radius: 20px;
 
       margin: 0 10px;
       // padding: 16px;
-      &:hover {
-        box-shadow: 0px 2px 10px 1px #00000067 !important;
-        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
+ margin-bottom: 20px;
       &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
-      
+      &.active {
+        opacity: 1;
+        box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.101);
+        scale: 1.02;
+        @media only screen and (max-width: 500px) {
+           scale: 1;
+          }
+      }
+
+      &.hidden {
+        opacity: 0.9;
+        scale: 0.97;
+      }
       text-align: left;
       @media only screen and (max-width: 750px) {
         width: 350px;
         height: 487px;
       }
-      @media only screen and (max-width: 550px) {
+
+      @media only screen and (max-width: 400px) {
         width: 300px;
         height: 440px;
       }
-      @media only screen and (max-width: 400px) {
-        width: 280px;
+      @media only screen and (max-width: 350px) {
+        width: 290px;
         height: 440px;
       }
       .card-image {
@@ -154,13 +202,13 @@
           width: 350px;
           height: 487px;
         }
-        @media only screen and (max-width: 550px) {
-          width: 200px;
-          height: 340px;
-        }
         @media only screen and (max-width: 400px) {
-          width: 180px;
-          height: 340px;
+          width: 300px;
+          height: 440px;
+        }
+        @media only screen and (max-width: 350px) {
+          width: 290px;
+          height: 440px;
         }
       }
 
@@ -186,11 +234,13 @@
         @media only screen and (max-width: 750px) {
           width: 350px;
         }
-        @media only screen and (max-width: 550px) {
-          width: 300px;
-        }
         @media only screen and (max-width: 400px) {
-          width: 280px;
+          width: 300px;
+          height: 440px;
+        }
+        @media only screen and (max-width: 350px) {
+          width: 290px;
+          height: 440px;
         }
         .aut_text-img {
           display: flex;
@@ -233,7 +283,6 @@
                 font-size: 14px;
               }
             }
-            
           }
         }
 
@@ -267,7 +316,7 @@
     .nav-btn {
       min-width: 54px;
       min-height: 54px;
-      background: #00575D;
+      background: #00575d;
       border: none;
       border-radius: 100px;
       cursor: pointer;
@@ -287,7 +336,7 @@
 
       &:disabled {
         cursor: not-allowed;
-background: #B3B3B3;
+        background: #b3b3b3;
         svg {
           color: #ffffff42;
         }

@@ -4,8 +4,17 @@
   gap: 2rem;
   padding: 60px;
   background-color: #f7f7f7;
+  @media only screen and (max-width: 1400px) {
+    padding: 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 20px;
+  }
   .text-content {
     width: 768px;
+    @media only screen and (max-width: 900px) {
+      width: 100%;
+    }
     h5 {
       background: #b0f0f5cc;
       font-weight: 500;
@@ -27,7 +36,20 @@
       font-size: 48px;
       line-height: 57.6px;
       letter-spacing: -2.2px;
-
+      @media only screen and (max-width: 535px) {
+        font-size: 40px;
+        line-height: 47.6px;
+        img {
+          width: 40px;
+        }
+      }
+      @media only screen and (max-width: 330px) {
+        font-size: 30px;
+        line-height: 30.6px;
+        img {
+            width: 30px;
+          }
+      }
       span {
         color: #1e90ff;
       }
@@ -43,18 +65,27 @@
     }
   }
   .mapCard {
-    // border: 1px solid red !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     margin-top: 20px;
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     .location-list {
       display: flex;
       flex-direction: column;
       gap: 30px;
       justify-content: space-between;
-
+      margin-right: 20px;
+      @media only screen and (max-width: 900px) {
+        // flex-direction: row;
+        justify-content: left !important;
+        width: 100%;
+        gap: 20px;
+      }
       .location-card {
         padding: 1rem;
         border-radius: 8px;
@@ -117,6 +148,25 @@
         width: 780px;
         height: 430px;
         border-radius: 8px;
+        @media only screen and (max-width: 1260px) {
+          width: 700px;
+          height: 450px;
+        }
+        @media only screen and (max-width: 1120px) {
+          width: 600px;
+          height: 500px;
+        }
+        @media only screen and (max-width: 1000px) {
+          width: 500px;
+          height: 500px;
+        }
+        @media only screen and (max-width: 900px) {
+          width: 90vw;
+        }
+        @media only screen and (max-width: 535px) {
+          width: 88vw !important;
+          height: 400px;
+        }
       }
     }
   }

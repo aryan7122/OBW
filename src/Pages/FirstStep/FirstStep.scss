@@ -1,7 +1,12 @@
 .FirstStep {
-  // background-image: url("../../assets/firststep/colorbox-3-copy\ 1.png");
-  background-image: url("../../assets/firststep/g6.gif");
+  background-image: url("../../assets/firststep/colorbox-3-copy\ 1.png");
+  // background-image: url("../../assets/firststep/g4.gif");
   width: 100%;
+  // filter: sepia(110%) saturate(40%) hue-rotate(70deg) brightness(0.1);
+  transition: 0.5s linear;
+  &:hover {
+    filter: none;
+  }
   height: 544px;
   display: flex;
   align-items: center;

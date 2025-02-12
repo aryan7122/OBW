@@ -26,9 +26,11 @@ const Location = () => {
                 </div>
                 <div className="clinic-selection">
                     <h3>Select a clinic location:</h3>
-                    <button className="clinic-button">Kanakapura Road</button>
-                    <button className="clinic-button">R.R Nagar</button>
-                    <button className="clinic-button">Kodipalya</button>
+                    <div className='smsl'>
+                        <button className="clinic-button">Kanakapura Road</button>
+                        <button className="clinic-button">R.R Nagar</button>
+                        <button className="clinic-button">Kodipalya</button>
+                    </div>
                 </div>
             </div>
         </div>

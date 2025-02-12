@@ -26,7 +26,7 @@ const data = [
 
 const Team = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleCards = 2;
+    const visibleCards = 1;
 
     const handleNext = () => {
         if (currentIndex < data.length - visibleCards) {
@@ -56,9 +56,10 @@ const Team = () => {
 
             <div className="blog-slider-wrapper">
 
-                <div className="slider-cards" style={{ transform: `translateX(-${currentIndex * 300}px)` }}>
+                <div className="slider-cards" style={{ "--index": currentIndex }}>
                     {data.map((blog, index) => (
-                        <div key={index} className="slider-card">
+                        <div key={index} className={`" slider-card ${index === currentIndex ? "active" : "hidden"}`}
+>
                             <img src={blog.image} alt={blog?.title} className="card-image" />
                             <div className="card_blur">
                                 <div className='aut_text-img'>
