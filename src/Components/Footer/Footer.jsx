@@ -28,8 +28,8 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>2025 Relume. All right reserved.</p>
                 <div className="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                    <a href="/privacy-policy">Privacy Policy</a>
+                    <a href="/terms-of-service">Terms of Service</a>
                     <a href="#">Cookies Settings</a>
                 </div>
             </div>
@@ -38,3 +38,4 @@ const Footer = () => {
 };
 
 export default Footer;
+// 

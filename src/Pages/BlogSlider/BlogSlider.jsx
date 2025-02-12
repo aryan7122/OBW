@@ -82,7 +82,7 @@ const BlogSlider = () => {
                                         <p className="card-date">{blog?.date}</p>
                                     </div>
                                 </div>
-                                <button onClick={() => HandleNavigation('/blog-detail')}  className="read-more-btn">Read Full Blog</button>
+                                <button onClick={() => HandleNavigation('/blog-detail')} className="read-more-btn">Read Full Blog</button>
                             </div>
                         </div>
                     ))}
@@ -103,7 +103,7 @@ const BlogSlider = () => {
                         style={{ width: `${((currentIndex + 1) / blogs.length) * 100}%` }}
                     ></div>
                 </div>
-      </div>
+            </div>
         </div>
     );
 };

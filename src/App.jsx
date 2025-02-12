@@ -27,6 +27,9 @@ import Kankpur from "./Pages/DiscoverLocations/Location/Kankpur";
 import Team from "./Pages/DiscoverLocations/Location/Team/Team";
 import RR from "./Pages/DiscoverLocations/Location/RR";
 import Kodipalya from "./Pages/DiscoverLocations/Location/Kodipalya";
+import AllTreatments from "./Pages/TrendingTreatments/AllTreatments/AllTreatments";
+import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
+import TermsOfService from "./Pages/TermsService/TermsOfService";
  
 function App() {
   return (
@@ -99,6 +102,30 @@ function App() {
                 <RR />
                 <Team />
                 <Kodipalya />
+              </>
+            }
+          />
+          <Route
+            path="/treatment"
+            element={
+              <>
+                <AllTreatments />
+              </>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <>
+                <PrivacyPolicy />
+              </>
+            }
+          />
+          <Route
+            path="/terms-of-service"
+            element={
+              <>
+                <TermsOfService />
               </>
             }
           />

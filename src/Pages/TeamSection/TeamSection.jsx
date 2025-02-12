@@ -21,7 +21,7 @@ import {
 
 const TeamSection = () => {
   return (
-    <section className="team-section">
+    <section className="team-section-">
       <div className="team-images">
         <img
           src={img1}
@@ -33,9 +33,10 @@ const TeamSection = () => {
           alt="Team group two"
           className="team-photo"
         />
+       
       </div>
-      <div className="team-container">
-        <div className="team-header">
+      <div className="teams-container">
+        <div className="teams-header">
           <div>
             <h2>
               Our qualified and experienced {' '}

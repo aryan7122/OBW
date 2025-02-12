@@ -134,10 +134,11 @@
       .date-group {
         position: relative;
         .calendar-icon {
-          position: absolute;
-          margin-top: -35px;
-          margin-left: 430px;
-        }
+            position: absolute;
+            top:38px;
+            right: 20px;
+            color: grey;
+          }
       }
 
       .submit-btn {

@@ -36,6 +36,251 @@ const iconsMap = {
 };
 
 
+// const clinicalData = {
+//     "Skin/Face Care": [
+//         {
+//             title: "Anti-Aging",
+//             description: {
+//                 "For fine lines & wrinkles": [
+//                     "Botulinum toxin injection",
+//                     "Dermal fillers",
+//                     "Dermapen/micro-needling treatments"
+//                 ],
+//                 "For Saggy Skin": ["Thread lifts", "HIFU", "Skin tightening lasers"]
+//             },
+//             imageUrl: SkinImg1
+//         },
+//         {
+//             title: "Unwanted Hairs",
+//             description: {
+//                 "---": [
+//                     "--",
+//                 ],
+
+//             },
+//             imageUrl: UnwantedImg2
+//         },
+
+//         {
+//             title: "Enlarged Pores & Uneven Texture",
+//             description: {
+//                 "---": [
+//                     "--",
+//                 ],
+
+
+//             }, imageUrl: EnlargedImg3
+//         },
+//         {
+//             title: "Pigmentation & Uneven Skin Tone",
+//             description: {
+//                 "---": [
+//                     "--",
+//                 ],
+
+
+//             },
+//             imageUrl: PigmentationImg4
+//         },
+
+//         {
+//             title: "Double Chin (Face)",
+//             description: {
+//                 "---": [
+//                     "--",
+//                 ],
+
+
+//             },
+//             imageUrl: DoubleImg5
+//         },
+
+//         {
+//             title: "Dryness & Dehydration",
+//             description: {
+//                 "---": [
+//                     "--",
+//                 ],
+
+
+//             }, imageUrl: DrynessImg6
+//         },
+//         {
+//             title: "",
+//             description: '',
+//             imageUrl: ''
+//         },
+//         {
+//             title: "Acne & Acne Scars",
+//             description: {
+//                 "---": [
+//                     "--",
+//                 ],
+
+//             },
+//             imageUrl: AcneImg7
+//         },
+
+//     ],
+//     "Scalp/Hair Care": [
+//         {
+//             title: "Hair Thinning",
+//             description: {
+//                 "": [
+//                     "LLLT phototherapy",
+//                     "Micro Needling",
+//                     "Platelet Rich Plasma",
+//                     "GFC",
+//                     "Specialized topical treatments",
+//                 ],
+
+//             },
+//             imageUrl: HairImg1
+//         },
+//         {
+//             title: "Alopecia /  Baldness",
+//             description: {
+//                 "": [
+//                     "",
+
+//                 ],
+
+//             },
+//             imageUrl: AlopeciaImg2
+//         },
+//         {
+//             title: "Other Scalp Conditions",
+//             description: {
+//                 "": [
+//                     "",
+
+//                 ],
+
+//             },
+//             imageUrl: ConditionsImg3
+//         },
+//     ],
+//     "Body Care": [
+//         {
+//             title: "Stubborn body fat",
+//             description: {
+//                 "": [
+//                     "Lipolytic injections",
+//                     "Laser Lipolysis",
+//                     "Cool sculpting",
+//                 ],
+
+//             },
+//             imageUrl: StubbornImg1
+//         },
+//         {
+//             title: "Excessive Sweating",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+
+//                 ],
+
+//             },
+//             imageUrl: SweatingImg2
+//         },
+//         {
+//             title: "Sun tan & Body texture",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+
+//                 ],
+
+//             },
+//             imageUrl: SweatingImg2
+//         },
+//         {
+//             title: "Stretch Marks",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+
+//                 ],
+
+//             },
+//             imageUrl: StretchImg3
+//         },
+//     ],
+//     "Beautifying/Cosmetic Surgery": [
+//         {
+//             title: "Skin Tags, Moles, Milia Removal",
+//             description: {
+//                 "": [
+//                     "Laser removal",
+//                     "minor surgical excision",
+//                 ],
+
+//             },
+//             imageUrl: bImg1
+//         },
+//         {
+//             title: "Face & Scalp Cyst Removal",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+//                 ],
+
+//             },
+//             imageUrl: bImg2
+//         },
+//         {
+//             title: "Lobuloplasty",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+//                 ],
+
+//             },
+//             imageUrl: bImg3
+//         },
+//         {
+//             title: "Scar Reduction",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+//                 ],
+
+//             },
+//             imageUrl: bImg4
+//         },
+//         {
+//             title: "Dimpleplasty (Face)",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+//                 ],
+
+//             },
+//             imageUrl: bImg5
+//         },
+//         {
+//             title: "Bichectomy (Face)",
+//             description: {
+//                 "": [
+//                     "",
+//                     "",
+//                 ],
+
+//             },
+//             imageUrl: bImg6
+//         },
+//     ],
+// };
+
+
 const clinicalData = {
     "Skin/Face Care": [
         {
@@ -46,166 +291,156 @@ const clinicalData = {
                     "Dermal fillers",
                     "Dermapen/micro-needling treatments"
                 ],
-                "For Saggy Skin": ["Thread lifts", "HIFU", "Skin tightening lasers"]
+                "For Saggy Skin": ["Thread lifts", "HIFU (High-Intensity Focused Ultrasound)", "Skin tightening lasers"]
             },
             imageUrl: SkinImg1
         },
         {
             title: "Unwanted Hairs",
             description: {
-                "---": [
-                    "--",
-                ],
-
+                "Concerns": ["Unwanted facial and body hair"],
+                "Treatments": ["Laser Hair Reduction (LHR)"]
             },
             imageUrl: UnwantedImg2
         },
-
         {
             title: "Enlarged Pores & Uneven Texture",
             description: {
-                "---": [
-                    "--",
-                ],
-
-
-            }, imageUrl: EnlargedImg3
+                "Concerns": ["Open pores", "Rough skin texture"],
+                "Treatments": [
+                    "Carbon peel laser",
+                    "Hydra-pen treatments",
+                    "Retinol-based treatments",
+                    "Dermaplaning",
+                    "Medi-facials",
+                    "Skin peels"
+                ]
+            },
+            imageUrl: EnlargedImg3
         },
         {
             title: "Pigmentation & Uneven Skin Tone",
             description: {
-                "---": [
-                    "--",
-                ],
-
-
+                "Concerns": ["Dark spots", "Sun damage", "Melasma", "Post-inflammatory hyperpigmentation"],
+                "Treatments": [
+                    "Laser resurfacing",
+                    "Chemical peels",
+                    "Vitamin C facials",
+                    "Skin peels",
+                    "Topical lightening agents",
+                    "Laser toning",
+                    "Micro-needling",
+                    "Medical-grade skincare"
+                ]
             },
             imageUrl: PigmentationImg4
         },
-
         {
             title: "Double Chin (Face)",
             description: {
-                "---": [
-                    "--",
-                ],
-
-
+                "Concerns": ["Excess fat in the chin area"],
+                "Treatments": ["Fat-dissolving injections", "Lipolytic injections"]
             },
             imageUrl: DoubleImg5
         },
-        
         {
             title: "Dryness & Dehydration",
             description: {
-                "---": [
-                    "--",
-                ],
-
-
-            }, imageUrl: DrynessImg6
-        },
-        {
-            title: "",
-            description: '',
-            imageUrl: ''
+                "Concerns": ["Dry, dehydrated skin"],
+                "Treatments": ["Hydra-medi facials", "Hydrating peels", "Mesotherapy"]
+            },
+            imageUrl: DrynessImg6
         },
         {
             title: "Acne & Acne Scars",
             description: {
-                "---": [
-                    "--",
-                ],
-
+                "Concerns": ["Active acne", "Acne scars"],
+                "Treatments": [
+                    "Phototherapy",
+                    "Acne-targeting peels",
+                    "Acne skincare regimens",
+                    "Anti-acne facials",
+                    "Dermapen/micro-needling with PRP",
+                    "Fractional CO2 laser",
+                    "Subcision"
+                ]
             },
             imageUrl: AcneImg7
         },
-
     ],
     "Scalp/Hair Care": [
         {
             title: "Hair Thinning",
             description: {
-                "": [
+                "Concerns": ["Hair thinning", "Hair fall"],
+                "Treatments": [
                     "LLLT phototherapy",
-                    "Micro Needling",
-                    "Platelet Rich Plasma",
+                    "Micro-needling pen",
+                    "Platelet Rich Plasma (PRP)",
                     "GFC",
-                    "Specialized topical treatments",
-                ],
-
+                    "Specialized topical treatments"
+                ]
             },
             imageUrl: HairImg1
         },
         {
-            title: "Alopecia /  Baldness",
+            title: "Alopecia / Baldness",
             description: {
-                "": [
-                    "",
-
-                ],
-
+                "Concerns": ["Severe hair loss", "Baldness"],
+                "Treatments": [
+                    "Scalp mesotherapy",
+                    "Corticosteroid injections",
+                    "Anti-DHT therapy",
+                    "QR678 treatment",
+                    "Exosome therapy",
+                    "Hair transplantation surgery"
+                ]
             },
             imageUrl: AlopeciaImg2
         },
         {
             title: "Other Scalp Conditions",
             description: {
-                "": [
-                    "",
-
-                ],
-
+                "Concerns": ["Dandruff", "Telogen effluvium", "Seborrheic dermatitis"],
+                "Treatments": ["Targeted medical scalp treatments"]
             },
             imageUrl: ConditionsImg3
         },
     ],
     "Body Care": [
         {
-            title: "Stubborn body fat",
+            title: "Stubborn Body Fat",
             description: {
-                "": [
+                "Concerns": ["Excess fat in the belly, thighs, and arms"],
+                "Treatments": [
                     "Lipolytic injections",
                     "Laser Lipolysis",
-                    "Cool sculpting",
-                ],
-
+                    "CoolSculpting"
+                ]
             },
             imageUrl: StubbornImg1
         },
         {
             title: "Excessive Sweating",
             description: {
-                "": [
-                    "",
-                    "",
-
-                ],
-
+                "Concerns": ["Hyperhidrosis (Excessive sweating)"],
+                "Treatments": ["Botox for sweating"]
             },
             imageUrl: SweatingImg2
         },
         {
-            title: "Sun tan & Body texture",
+            title: "Sun Tan & Body Texture",
             description: {
-                "": [
-                    "",
-                    "",
-
-                ],
-
+                "Concerns": ["Sun-tan", "Uneven skin texture"],
+                "Treatments": ["Chemical peels", "Skin-brightening IV injections"]
             },
             imageUrl: SweatingImg2
         },
         {
             title: "Stretch Marks",
             description: {
-                "": [
-                    "",
-                    "",
-
-                ],
-
+                "Concerns": ["Stretch marks"],
+                "Treatments": ["Skin-resurfacing treatments", "Targeted peels"]
             },
             imageUrl: StretchImg3
         },
@@ -214,71 +449,54 @@ const clinicalData = {
         {
             title: "Skin Tags, Moles, Milia Removal",
             description: {
-                "": [
-                    "Laser removal",
-                    "minor surgical excision",
-                ],
-
+                "Concerns": ["Unwanted skin tags, moles, milia"],
+                "Treatments": ["Laser removal", "Minor surgical excision"]
             },
             imageUrl: bImg1
         },
         {
             title: "Face & Scalp Cyst Removal",
             description: {
-                "": [
-                    "",
-                    "",
-                ],
-
+                "Concerns": ["Cysts on the face or scalp"],
+                "Treatments": ["Surgical cyst removal"]
             },
             imageUrl: bImg2
         },
         {
             title: "Lobuloplasty",
             description: {
-                "": [
-                    "",
-                    "",
-                ],
-
+                "Concerns": ["Torn or stretched earlobes"],
+                "Treatments": ["Surgical correction of earlobes"]
             },
             imageUrl: bImg3
         },
         {
             title: "Scar Reduction",
             description: {
-                "": [
-                    "",
-                    "",
-                ],
-
+                "Concerns": ["Scars from injury or surgery"],
+                "Treatments": ["Laser resurfacing", "Subcision", "Surgical revisions"]
             },
             imageUrl: bImg4
         },
         {
             title: "Dimpleplasty (Face)",
             description: {
-                "": [
-                    "",
-                    "",
-                ],
-
+                "Concerns": ["Desire for dimples"],
+                "Treatments": ["Cosmetic surgery to create dimples"]
             },
             imageUrl: bImg5
         },
         {
             title: "Bichectomy (Face)",
             description: {
-                "": [
-                    "",
-                    "",
-                ],
-
+                "Concerns": ["Excess cheek fat"],
+                "Treatments": ["Permanent removal of excessive fat from the cheek region"]
             },
             imageUrl: bImg6
         },
     ],
 };
+
 console.log(clinicalData["Skin/Face Care"])
 function ClinicalConcerns() {
     const [selectedTab, setSelectedTab] = useState("Skin/Face Care");

@@ -37,7 +37,7 @@ function Navbar() {
         return location.pathname === path ? 'active-link' : '';
     };
     // white bg
-    const whiteBg = ['contact', 'blogs', 'blog-detail','locations'];
+    const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy','terms-of-service'];
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
 
     return (
