@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TeamSection.scss";
 import img1 from '../../assets/team/34d2edqd.jpeg'
 import img2 from '../../assets/team/12312.jpeg'
+import img3 from '../../assets/team/t2.avif'
 import icon1 from '../../assets/team/str.svg'
 import icon2 from '../../assets/team/3dicons-travel-front-color.svg'
 import icon3 from '../../assets/team/3dicons-tick-front-color.svg'
@@ -17,12 +18,39 @@ import {
   ThumbsUp,
   Star,
   ArrowRight,
+  ArrowLeft,
 } from "lucide-react";
-
+const images = [
+  img1, // Replace with actual image paths
+  img2,
+  img3,
+];
 const TeamSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCards = 1;
+
+  const handleNext = () => {
+    if (currentIndex < images.length - visibleCards) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+  // Mouse Scroll to Slide Images
+  const handleWheel = (event) => {
+    if (event.deltaY > 0) {
+      handleNext();
+    } else {
+      handlePrevious();
+    }
+  };
   return (
     <section className="team-section-">
-      <div className="team-images">
+      {/* <div className="team-images">
         <img
           src={img1}
           alt="Team group one"
@@ -34,6 +62,28 @@ const TeamSection = () => {
           className="team-photo"
         />
        
+      </div> */}
+      <div className="slider-container" onWheel={handleWheel}>
+        <div className="team-images" style={{ "--index": currentIndex } }
+>
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Team group ${index + 1}`}
+              className={`team-photo ${index === currentIndex ? "active" : "hidden"}`}
+            />
+          ))}
+        </div>
+        <div className="progress">
+          <button className="nav-btn left" onClick={handlePrevious} disabled={currentIndex === 0}>
+            <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
+          </button>
+          <button className="nav-btn right" onClick={handleNext} disabled={currentIndex >= images.length - visibleCards}>
+            <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+          </button>
+         
+        </div>
       </div>
       <div className="teams-container">
         <div className="teams-header">

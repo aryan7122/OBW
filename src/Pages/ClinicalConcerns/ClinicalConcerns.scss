@@ -175,10 +175,9 @@
         align-items: center;
         opacity: 1;
         transition: 0.3s ease;
-        // border: 1px solid red !important;
         .card-title {
-          font-size: 36px;
           font-weight: 800;
+          font-size: 32px;
           line-height: 46.1px;
           letter-spacing: -1.5px;
           text-align: left;
@@ -203,10 +202,9 @@
             font-weight: 500;
             line-height: 22.1px;
             margin: 10px;
-            // border: 1px solid red;
           }
         }
-
+        
         .card-description {
           display: none;
           width: 100%;
@@ -238,12 +236,12 @@
             height: 105%;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
-
+            overflow: scroll;
             // margin-top: -10%;
             // margin-bottom: 5%;
           }
           .card-title2 {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 500;
             line-height: 36.4px;
             letter-spacing: -1px;
@@ -251,7 +249,7 @@
             width: 100%;
             margin-bottom: 10px;
             @media only screen and (max-width: 1300px) {
-              font-size: 22px;
+              font-size: 20px;
               font-weight: 500;
               line-height: 26.4px;
             }
@@ -268,13 +266,13 @@
               margin-bottom: 0% !important;
             }
             strong {
-              font-size: 20px;
+              font-size: 16px;
               font-weight: 500;
               line-height: 28px;
               letter-spacing: -0.5px;
               text-align: left;
               @media only screen and (max-width: 1300px) {
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 400;
                 line-height: 20.4px;
               }
@@ -289,11 +287,13 @@
               display: flex;
               flex-wrap: wrap;
               gap: 10px;
+              
+             
               @media only screen and (max-width: 750px) {
                 margin-top: 5px;
               }
             }
-
+            
             li {
               list-style: none;
               background: #e6fafc40;
@@ -301,16 +301,25 @@
               border-radius: 100px;
               display: flex;
               align-items: center;
+              // border: 1px solid red !important;
               justify-content: center;
               white-space: nowrap;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 18.4px;
+              
+
+              
+              // border: 1px solid red;
               @media only screen and (max-width: 1300px) {
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: 400;
-                line-height: 18.4px;
+                line-height: 16.4px;
               }
+                             
               @media only screen and (max-width: 810px) {
                 font-size: 12px;
-                line-height: 16.1px;
+                line-height: 15.1px;
               }
               /* text ek line me rakhega */
             }

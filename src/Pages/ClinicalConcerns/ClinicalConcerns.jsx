@@ -298,7 +298,7 @@ const clinicalData = {
         {
             title: "Unwanted Hairs",
             description: {
-                "Concerns": ["Unwanted facial and body hair"],
+                // "Concerns": ["Unwanted facial and body hair"],
                 "Treatments": ["Laser Hair Reduction (LHR)"]
             },
             imageUrl: UnwantedImg2
@@ -329,8 +329,8 @@ const clinicalData = {
                     "Skin peels",
                     "Topical lightening agents",
                     "Laser toning",
-                    "Micro-needling",
-                    "Medical-grade skincare"
+                    // "Micro-needling",
+                    // "Medical-grade skincare"
                 ]
             },
             imageUrl: PigmentationImg4
@@ -338,7 +338,7 @@ const clinicalData = {
         {
             title: "Double Chin (Face)",
             description: {
-                "Concerns": ["Excess fat in the chin area"],
+                // "Concerns": ["Excess fat in the chin area"],
                 "Treatments": ["Fat-dissolving injections", "Lipolytic injections"]
             },
             imageUrl: DoubleImg5
