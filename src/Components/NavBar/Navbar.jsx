@@ -38,9 +38,9 @@ function Navbar() {
         return location.pathname === path ? 'active-link' : '';
     };
     // white bg
-    const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy','terms-of-service'];
+    const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service'];
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
- const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
     const handleBookNowClick = () => {
         setShowModal(true);
     };
@@ -49,7 +49,7 @@ function Navbar() {
     };
 
     return (
-        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}  ${isWhite ? 'navbar-scrolled' : ''}`}>
+        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
             <nav className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}>
                 {/* Logo Section */}
                 <div className="navbar-logo">
@@ -58,14 +58,14 @@ function Navbar() {
 
                 {/* Navigation Links */}
                 {!isVisible &&
-                <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
-                    <li><Link to="/" className={isActive('/')}>HOME</Link></li>
-                    <li><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
-                    <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
-                    <li><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
-                    <li><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
-                    <li><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
-                </ul>
+                    <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
+                        <li><Link to="/" className={isActive('/')}>HOME</Link></li>
+                        <li><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
+                        <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                        <li><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
+                        <li><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
+                        <li><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                    </ul>
                 }
 
                 {/* Book Appointment and Search Section */}
@@ -90,7 +90,7 @@ function Navbar() {
                                 />
                                 <button className="search-button">Search</button>
                             </div>
-                            <button className="close-button" onClick={toggleSearchBar}>
+                            <button className="close-button-nav" onClick={toggleSearchBar}>
                                 ✖
                             </button>
                         </div>
@@ -98,14 +98,18 @@ function Navbar() {
                 </div>
 
                 {/* Mobile Menu Toggle */}
-                <div className="mobile-menu-icon" onClick={toggleMenu}>
-                    {menuOpen ? <X size={28} /> : <Menu size={28} />}
-                </div>
+                {!isVisible &&
+                    <>
+                        <div className="mobile-menu-icon" onClick={toggleMenu}>
+                            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+                        </div>
+                    </>
+                }
 
             </nav>
             {showModal && <BookAppointment onClose={closeModal} />}
 
-        </header>
+        </header >
     );
 }
 

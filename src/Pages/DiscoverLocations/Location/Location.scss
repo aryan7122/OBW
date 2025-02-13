@@ -46,6 +46,16 @@
       line-height: 76.4px;
       width: 100%;
     }
+    @media only screen and (max-width: 640px) {
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 56.4px;
+    }
+    @media only screen and (max-width: 452px) {
+      font-weight: 400;
+      font-size: 40px;
+      line-height: 46.4px;
+    }
   }
 
   p {
@@ -88,6 +98,7 @@
       padding: 5px 6px 5px 15px;
       font-size: 16px;
     }
+    
 
     .arrow-icon {
       transition: 0.3s linear;
@@ -97,6 +108,10 @@
       width: 40px;
       height: 40px;
       padding: 5px;
+          @media only screen and (max-width: 400px) {
+            width: 30px;
+            height: 30px;
+          }
     }
 
     &:hover {
@@ -163,16 +178,15 @@
     flex-direction: column;
     align-items: start !important;
     gap: 10px;
-    }
+  }
   @media only screen and (max-width: 428px) {
-   .smsl{
-    gap: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    
-   }
+    .smsl {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
-            
+  }
+
   span {
     display: block;
     font-weight: bold;
@@ -186,7 +200,6 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.3px;
-    
   }
   .clinic-button {
     background-color: white;
@@ -198,8 +211,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     @media only screen and (max-width: 358px) {
-        font-size: 11px;
-      }
+      font-size: 11px;
+    }
     &:hover {
       background-color: #00727a;
       color: white;

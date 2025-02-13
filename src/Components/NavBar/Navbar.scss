@@ -1,6 +1,6 @@
 // @import 'variables';
 /* Include your custom colors in variables file */
-.active-link{
+.active-link {
   color: #07b9c6 !important;
   /* Active color */
   font-weight: bold;
@@ -17,12 +17,12 @@
   transition: background-color 0.3s ease;
   padding: 0 60px;
   user-select: none;
-    z-index: 999;
-    -webkit-user-select: none;
-    /* Chrome, Safari, Opera */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
+  z-index: 999;
+  -webkit-user-select: none;
+  /* Chrome, Safari, Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
   @media only screen and (max-width: 1400px) {
     padding: 0 40px;
   }
@@ -32,7 +32,7 @@
   @media only screen and (max-width: 400px) {
     padding: 0 10px;
   }
-  
+
   &.navbar-scrolled {
     // background-color: #ffffff;
     .navbar-container {
@@ -58,7 +58,7 @@
         .search-bar {
           .card_search {
           }
-          .close-button {
+          close-button-nav {
             color: #171717 !important;
           }
         }
@@ -208,13 +208,14 @@
       align-items: center;
       margin-left: -145px;
       transform: translateX(-50%);
-      min-width: 770px;
+      min-width: 700px;
+      // border: 1px solid red !important;
+
       .card_search {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // border: 1px solid red !important;
         background: #4d5a5b5e;
         border-radius: 50px;
         padding-left: 10px;
@@ -255,21 +256,34 @@
           &:active {
             font-size: 18px;
           }
+          @media only screen and (max-width: 510px) {
+            width: 54px;
+            height: 40px;
+            border-radius: 20px;
+            font-size: 12px;
+          }
         }
       }
 
       .search_icon_1 {
         color: #ffffffe4;
         margin-right: 10px;
+        @media only screen and (max-width: 510px) {
+          display: none;
+        }
       }
     }
-    .close-button {
+    .close-button-nav {
       background: transparent;
       color: white;
       border: none;
       cursor: pointer;
       margin-left: 10px;
       font-size: 24px;
+      @media only screen and (max-width: 950px) {
+        color: #171717 !important;
+      }
+      // margin-right: 100px;
       // margin-right: -200px !important;
     }
 
@@ -313,6 +327,11 @@
   }
   .menu-active {
     li {
+      .active-link{
+        color: rgb(5, 76, 101) !important;
+        width: fit-content;
+        border-bottom: 1px solid;
+      }
       a {
         @media only screen and (max-width: 950px) {
           color: #171717 !important;
@@ -386,10 +405,12 @@
       }
       .search-bar {
         // position: absolute;
-        transform: translateX(26%);
+        transform: translateX(7%);
+        min-width: 500px;
         // right: 0px;
         // margin-right: 200px;
         // width: fit-content;
+
         .card_search {
           width: fit-content;
         }
@@ -421,7 +442,7 @@
     position: absolute;
     margin-left: 0;
     min-width: fit-content !important;
-    transform: translateX(-100%) !important;
+    transform: translateX(-90%) !important;
 
     .card_search .search-input {
       width: fit-content;
@@ -429,54 +450,122 @@
   }
 }
 
-@media only screen and (max-width: 560px) {
+// @media only screen and (max-width: 560px) {
+//   .navbar-container .navbar-actions .search-bar {
+//     position: absolute;
+//     /* Fixed to make it overlay */
+//     top: 50px;
+//     left: 80px;
+//     width: 100vw;
+//     /* Full width */
+//     height: 100%;
+//     /* Full height */
+//     background: #ffffff;close-button-nav
+//     z-index: 9999;
+//     /* Bring it to front */
+//     // padding: 20px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+
+//   close-button-nav {
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     color: #171717 !important;
+//     font-size: 24px;
+//     cursor: pointer;
+//   }
+
+//   .card_search {
+//     // width: 90%;
+//     // margin-top: 20px;
+//   }
+
+//   .card_search .search-input {
+//     width: 100%;
+//   }
+
+//   .navbar-container {
+//     // border: none;
+//     // overflow-x: hidden !important;
+//   }
+// }
+
+// @media only screen and (max-width: 340px) {
+//   .navbar .navbar-actions .search-bar .card_search .search-button{
+//     width: 60px;
+//       height: 40px;
+//       font-size: 12px;
+//   }
+// }
+
+@media only screen and (max-width: 450px) {
   .navbar-container .navbar-actions .search-bar {
     position: absolute;
-    /* Fixed to make it overlay */
-    top: -50px;
-    left: 80px;
-    width: 100vw;
-    /* Full width */
-    height: 100vh;
-    /* Full height */
-    background: #ffffff;
-    z-index: 9999;
-    /* Bring it to front */
-    // padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #171717 !important;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .card_search {
-    // width: 90%;
-    // margin-top: 20px;
-  }
-
-  .card_search .search-input {
+    // background: #000;
+    // padding:20px;
     width: 100%;
+    transform: translateX(55%) !important;
   }
-
-  .navbar-container {
-    // border: none;
-    // overflow-x: hidden !important;
+  .navbar-container .navbar-actions .search-bar .card_search {
+    position: absolute;
+    transform: translateX(-78.9vw) !important;
+    margin-top: 135px;
+    border: 0px;
+    padding: 20px;
+    background: #fff;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 35px !important;
+    border-bottom-right-radius: 35px !important;
+    width: 90.9vw;
+    input{
+      color: #171717 !important;
+    }
   }
 }
 
-@media only screen and (max-width: 340px) {
-  .navbar .navbar-actions .search-bar .card_search .search-button{
-    width: 60px;
-      height: 40px;
-      font-size: 12px;
+
+@media only screen and (max-width: 440px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-78.6vw) !important;
+  }
+}
+@media only screen and (max-width: 432px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-78.3vw) !important;
+  }
+}
+@media only screen and (max-width: 422px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-77.2vw) !important;
+        width: 90.4vw;
+  }
+}
+@media only screen and (max-width: 399px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-81.3vw) !important;
+        width: 95vw;
+  }
+}
+@media only screen and (max-width: 388px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-81vw) !important;
+        width: 94.8vw;
+  }
+}
+@media only screen and (max-width: 385px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-80.6vw) !important;
+        width: 94.8vw;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-80.3vw) !important;
+        width: 94.6vw;
   }
 }

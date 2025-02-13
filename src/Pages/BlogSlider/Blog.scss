@@ -113,8 +113,8 @@
     @media only screen and (max-width: 1170px) {
       min-height: fit-content;
     }
-         @media only screen and (max-width: 350px) {
-           overflow: hidden;
+    @media only screen and (max-width: 350px) {
+      overflow: hidden;
          }
     // position: fixed;
     h3 {
@@ -136,6 +136,7 @@
       flex-direction: column;
       gap: 10px;
       @media only screen and (max-width: 1170px) {
+        margin-bottom: -20px;
         flex-direction: row;
       }
       @media only screen and (max-width: 350px) {
@@ -179,14 +180,14 @@
     @media only screen and (max-width: 940px) {
       gap: 0px;
     }
-    @media only screen and (max-width: 890px) {
+    @media only screen and (max-width: 800px) {
       display: block;
     }
     .blog-card {
       position: relative;
       background: #fff;
       border-radius: 16px;
-      min-height: 563px;
+      min-height: 575px;
       // width: 100%;
       max-width: 540px;
       //   border: 1px solid red;
@@ -203,8 +204,13 @@
       @media only screen and (max-width: 1111px) {
         // width: 400px ;
       }
-      @media only screen and (max-width: 890px) {
-        max-width: 100%;
+      @media only screen and (max-width: 880px) {
+        min-width: 90%;
+      }
+      @media only screen and (max-width: 800px) {
+        min-width: 98%;
+              min-height: 540px;
+              margin-bottom: 25px;
       }
       @media only screen and (max-width: 660px) {
         min-width: 350px !important;
@@ -217,6 +223,7 @@
 
       @media only screen and (max-width: 370px) {
         min-width: 270px !important;
+        min-height: 470px;
       }
 
       .card-image {
@@ -229,6 +236,10 @@
           width: 100% !important;
           // min-height: 600px;
         }
+                 @media only screen and (max-width: 370px) {
+                   height: 250px !important;
+                   border-radius: 10px;
+                 }
       }
       .ct-tm {
         display: flex;
@@ -413,14 +424,28 @@
       // border: 1px solid red;
       grid-column: span 2;
       height: 670px;
-      @media only screen and (max-width: 890px) {
+      @media only screen and (max-width: 800px) {
         grid-column: span 1;
         // max-width: 100%;
-        height: 710px;
+        height: 670px;
+        }
+      @media only screen and (max-width: 519px) {
+        height: 490px;
+        .card-image{
+          // height: 300px;
+        }
+        }
+      @media only screen and (max-width: 370px) {
+        height: 400px !important;
         }
       .card-image {
         height: 450px;
-        
+        @media only screen and (max-width: 519px) {
+            height: 300px;
+          }
+             @media only screen and (max-width: 370px) {
+               height: 250px !important;
+             }
       }
     }
   }
