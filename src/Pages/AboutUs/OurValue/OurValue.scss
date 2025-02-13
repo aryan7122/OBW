@@ -75,9 +75,11 @@
     gap: 40px;
     @media only screen and (max-width: 950px) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
          @media only screen and (max-width: 500px) {
            grid-template-columns: repeat(1, 1fr);
+           gap: 10px;
          }
     .card {
       border-radius: 10px;
