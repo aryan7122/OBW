@@ -36,6 +36,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media only screen and (max-width: 780px) {
+      flex-direction: column;
+      align-items: start;
+    }
     .trending-title {
       margin-top: 10px;
       font-size: 48px;
@@ -67,7 +71,13 @@
       letter-spacing: -0.30000001192092896px;
       text-align: left;
       color: #454545;
-      @media only screen and (max-width: 1000px) {
+      @media only screen and (max-width: 1140px) {
+        width: 600px;
+      }
+      @media only screen and (max-width: 880px) {
+        width: 500px;
+      }
+      @media only screen and (max-width: 780px) {
         width: 100%;
       }
       @media only screen and (max-width: 500px) {
@@ -97,6 +107,11 @@
       border: 1px solid transparent;
       transition: 0.3s linear;
 
+      @media only screen and (max-width: 780px) {
+        padding: 5px 8px 5px 20px;
+        font-size: 18px;
+        margin-top: 20px;
+      }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -125,10 +140,10 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    @media only screen and (max-width: 950px) {
+    @media only screen and (max-width: 1070px) {
       grid-template-columns: repeat(3, 1fr);
     }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 620px) {
       grid-template-columns: repeat(2, 1fr);
     }
     .card {
@@ -205,20 +220,20 @@
     align-items: start;
     gap: 20px;
     flex-direction: column;
- h3{
-  text-align: left;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 41.6px;
-    letter-spacing: 0%;
- }
- p{
-    font-weight: 400;
-    text-align: left;
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: 0%;
- }
+    h3 {
+      text-align: left;
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 41.6px;
+      letter-spacing: 0%;
+    }
+    p {
+      font-weight: 400;
+      text-align: left;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0%;
+    }
     @media only screen and (max-width: 500px) {
       scale: 0.8;
       margin-left: -40px;
@@ -263,7 +278,11 @@
       color: #fff;
       border: 1px solid transparent;
       transition: 0.3s linear;
-
+@media only screen and (max-width: 780px) {
+    padding: 5px 8px 5px 20px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;

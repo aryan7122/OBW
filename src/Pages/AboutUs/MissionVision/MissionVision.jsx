@@ -2,6 +2,7 @@ import React from 'react';
 import './MissionVision.scss';
 import img1 from '../../../assets/about/1e0dabba7f68f9e31e6835489adf12f7.jpg'
 import img2 from '../../../assets/about/3accd80b7ddfc415aab514c71ade1c85.jpg'
+import icon1 from '../../../assets/about/ida.svg'
 import { ArrowRight } from 'lucide-react';
 
 const MissionVision = () => {
@@ -9,7 +10,7 @@ const MissionVision = () => {
         <section className="mission-vision">
             <div className="container">
                 <div className="title0101">
-                    <h2 className="section-title">Our Mission and <span className="icon">&#x1F4A1;</span> Vision</h2>
+                    <h2 className="section-title">Our Mission and <span className="icon"><img src={icon1} alt="" /></span> Vision</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
 
                 </div>
