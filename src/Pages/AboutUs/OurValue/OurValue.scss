@@ -13,10 +13,10 @@
     padding: 40px;
   }
   @media only screen and (max-width: 1000px) {
-    padding: 20px;
+    padding: 30px 20px;
   }
   @media only screen and (max-width: 400px) {
-    padding: 10px;
+    padding: 20px 10px;
   }
   .title-sbt {
     background: #B0F0F5CC;
@@ -189,7 +189,17 @@
       color: #fff;
       border: 1px solid transparent;
       transition: 0.3s linear;
-
+  @media only screen and (max-width: 500px) {
+      padding: 5px 6px 5px 15px;
+      font-size: 16px;
+    }
+  
+    @media only screen and (max-width: 400px) {
+      padding: 3px 4px 4px 10px;
+      font-size: 14px;
+      margin-left: 15px;
+      margin-top: -15px;
+    }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -198,6 +208,11 @@
         width: 40px;
         height: 40px;
         padding: 5px;
+        @media only screen and (max-width: 400px) {
+        
+            width: 30px;
+            height: 30px;
+          }
       }
 
       &:hover {

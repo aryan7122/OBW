@@ -112,6 +112,16 @@
         font-size: 18px;
         margin-top: 20px;
       }
+             @media only screen and (max-width: 500px) {
+               padding: 5px 6px 5px 15px;
+               font-size: 16px;
+             }
+      
+             @media only screen and (max-width: 400px) {
+               padding: 3px 4px 4px 10px;
+               font-size: 14px;
+               
+             }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -120,6 +130,11 @@
         width: 40px;
         height: 40px;
         padding: 5px;
+        @media only screen and (max-width: 400px) {
+        
+            width: 30px;
+            height: 30px;
+          }
       }
 
       &:hover {
@@ -145,13 +160,16 @@
     }
     @media only screen and (max-width: 620px) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
     .card {
       border-radius: 10px;
       text-align: left;
       margin: 30px 0;
       transition: transform 0.3s;
-
+  @media only screen and (max-width: 500px) {
+     margin: 15px 0;
+    }
       &:hover {
         transform: translateY(-5px);
       }
@@ -287,6 +305,16 @@
     font-size: 18px;
     margin-top: 10px;
   }
+     @media only screen and (max-width: 500px) {
+       padding: 5px 6px 5px 15px;
+       font-size: 16px;
+     }
+  
+     @media only screen and (max-width: 400px) {
+       padding: 3px 4px 4px 10px;
+       font-size: 14px;
+  
+     }
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -295,6 +323,11 @@
         width: 40px;
         height: 40px;
         padding: 5px;
+        @media only screen and (max-width: 400px) {
+        
+            width: 30px;
+            height: 30px;
+          }
       }
 
       &:hover {
