@@ -10,6 +10,19 @@
     background-position: 0% 82%;
     padding: 170px 60px 60px 60px;
     margin-top: -120px;
+    @media only screen and (max-width: 1400px) {
+      padding: 170px 40px 40px 40px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 170px 20px 40px 20px;
+    }
+
+    @media only screen and (max-width: 500px) {
+      height: 555px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 170px 10px 40px 10px;
+    }
     .card-Treatments {
       background: #b0f0f566;
       padding: 5px 20px;
@@ -24,6 +37,13 @@
       font-size: 48px;
       line-height: 57.6px;
       letter-spacing: -2.2px;
+      @media only screen and (max-width: 8100px) {
+        width: 100%;
+      }
+                    @media only screen and (max-width: 400px) {
+                      font-size: 40px;
+                        line-height: 50.6px;
+                    }
     }
 
     p {
@@ -34,6 +54,9 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.3px;
+      @media only screen and (max-width: 8100px) {
+        width: 100%;
+      }
     }
     .bott-m {
       margin-top: 80px;
@@ -71,6 +94,20 @@
     background-image: url("../../../assets/TrendingTreatments/Gradient2.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (max-width: 1400px) {
+      padding: 40px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 20px;
+    }
+
+    @media only screen and (max-width: 400px) {
+      padding: 30px 10px;
+    }
+    @media only screen and (max-width: 900px) {
+      overflow: hidden;
+    }
     h1 {
       text-align: center;
       padding-top: 0px;
@@ -79,7 +116,13 @@
       font-size: 40px;
       line-height: 48px;
       letter-spacing: -1.8px;
+      @media only screen and (max-width: 900px) {
+        margin-bottom: 20px;
+      }
     }
+  }
+  .navtab {
+    overflow-x: scroll !important;
   }
   .treatment-filters {
     display: flex;
@@ -89,6 +132,14 @@
     img {
       width: 28px;
       height: 28px;
+    }
+    @media only screen and (max-width: 900px) {
+      // border: 1px solid red;
+      overflow-y: hidden;
+      width: 820px;
+      margin: 0;
+
+      // padding: 0 100px;
     }
     button {
       display: flex;
@@ -102,6 +153,17 @@
       border-radius: 10px;
       font-weight: bold;
       transition: 0.3s;
+
+      @media only screen and (max-width: 1150px) {
+        padding: 10px 20px;
+      }
+      @media only screen and (max-width: 900px) {
+        padding: 10px 15px;
+      }
+      @media only screen and (max-width: 845px) {
+        // min-width: 140px ;
+        // border: 1px solid red;
+      }
 
       &.active {
         background: #b0f0f5;
@@ -118,7 +180,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 15px;
-
+    @media only screen and (max-width: 1350px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 900px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    @media only screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
     .treatment-card {
       background: #ffffff;
       border-radius: 10px;
@@ -136,8 +209,8 @@
         border-radius: 10px;
         overflow: hidden;
         img {
-        //   width: 315px;
-        width: 100%;
+          //   width: 315px;
+          width: 100%;
           height: 586px;
           object-fit: cover;
           border-radius: 10px;
@@ -219,53 +292,51 @@
       }
     }
   }
-  
-         .LoadMoreTreatments {
-         
-           
-           padding: 7px 10px 7px 25px;
-           margin: 50px auto 0px auto;
-           
-           color: #643434;
-           border: none;
-           font-size: 20px;
-           border-radius: 100px;
-           display: flex;
-           align-items: center;
-           gap: 10px;
-           font-weight: 500;
-           line-height: 24px;
-           letter-spacing: -0.5px;
-            background: transparent;
-    
-           cursor: pointer;
-           transition: background-color 0.3s ease;
-           border: 1px solid #2463EB;
-           transition: 0.3s linear;
-    
-           @media only screen and (max-width: 500px) {
-             padding: 5px 6px 5px 15px;
-             font-size: 10px;
-           }
-    
-           .arrow-icon {
-             transition: 0.3s linear;
-             color: #fff;
-            background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%);
-             border-radius: 100px;
-             width: 30px;
-             height: 30px;
-             padding: 5px;
-           }
-    
-           &:hover {
-             border: 1px solid #0056b3;
-             color: #fff;
-                background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%);
-             .arrow-icon {
-               background: #643434;
-               color: #fff;
-             }
-           }
-         }
+
+  .LoadMoreTreatments {
+    padding: 7px 10px 7px 25px;
+    margin: 50px auto 0px auto;
+
+    color: #643434;
+    border: none;
+    font-size: 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    background: transparent;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid #2463eb;
+    transition: 0.3s linear;
+
+    @media only screen and (max-width: 500px) {
+      padding: 5px 6px 5px 15px;
+      font-size: 10px;
+    }
+
+    .arrow-icon {
+      transition: 0.3s linear;
+      color: #fff;
+      background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+      border-radius: 100px;
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+    }
+
+    &:hover {
+      border: 1px solid #0056b3;
+      color: #fff;
+      background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+      .arrow-icon {
+        background: #643434;
+        color: #fff;
+      }
+    }
+  }
 }

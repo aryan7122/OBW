@@ -3,7 +3,7 @@
 .team-section- {
   background-color: #f9fafb;
   // font-family: "Arial", sans-serif;
- 
+
   .slider-container {
     margin-top: 30px;
     position: relative;
@@ -16,6 +16,69 @@
       transition: transform 0.5s ease-in-out;
       transform: translateX(calc(-34% * var(--index)));
       gap: 20px;
+      @media only screen and (max-width: 1500px) {
+        transform: translateX(calc(-37% * var(--index)));
+      }
+      @media only screen and (max-width: 1460px) {
+        transform: translateX(calc(-40% * var(--index)));
+      }
+      @media only screen and (max-width: 1408px) {
+        transform: translateX(calc(-45% * var(--index)));
+      }
+      @media only screen and (max-width: 1348px) {
+        transform: translateX(calc(-50% * var(--index)));
+      }
+      @media only screen and (max-width: 1272px) {
+        transform: translateX(calc(-55% * var(--index)));
+      }
+      @media only screen and (max-width: 1075px) {
+        transform: translateX(calc(-60% * var(--index)));
+      }
+      @media only screen and (max-width: 1025px) {
+        transform: translateX(calc(-65% * var(--index)));
+      }
+      @media only screen and (max-width: 985px) {
+        transform: translateX(calc(-70% * var(--index)));
+      }
+      @media only screen and (max-width: 950px) {
+        transform: translateX(calc(-75% * var(--index)));
+      }
+      @media only screen and (max-width: 911px) {
+        transform: translateX(calc(-85% * var(--index)));
+      }
+      @media only screen and (max-width: 850px) {
+        transform: translateX(calc(-80% * var(--index)));
+      }
+      @media only screen and (max-width: 766px) {
+        transform: translateX(calc(-75% * var(--index)));
+      }
+      @media only screen and (max-width: 675px) {
+        transform: translateX(calc(-85% * var(--index)));
+      }
+      @media only screen and (max-width: 625px) {
+        transform: translateX(calc(-90% * var(--index)));
+      }
+      @media only screen and (max-width: 606px) {
+        transform: translateX(calc(-95% * var(--index)));
+      }
+      @media only screen and (max-width: 586px) {
+        transform: translateX(calc(-84% * var(--index)));
+      }
+      @media only screen and (max-width: 519px) {
+        transform: translateX(calc(-90% * var(--index)));
+      }
+      @media only screen and (max-width: 498px) {
+        transform: translateX(calc(-100% * var(--index)));
+      }
+      @media only screen and (max-width: 466px) {
+        transform: translateX(calc(-95% * var(--index)));
+      }
+      @media only screen and (max-width: 436px) {
+        transform: translateX(calc(-100% * var(--index)));
+      }
+      @media only screen and (max-width: 416px) {
+        transform: translateX(calc(-107% * var(--index)));
+      }
       .team-photo {
         width: 100%;
         flex: 0 0 100%;
@@ -24,7 +87,35 @@
         height: 600px;
         object-fit: cover;
         border-radius: 20px;
-        transition:  0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+          @media only screen and (max-width: 1220px) {
+            max-width: 700px;
+              height: 500px;
+            }
+          @media only screen and (max-width: 850px) {
+            max-width: 600px;
+              height: 450px;
+            }
+          @media only screen and (max-width: 766px) {
+            max-width: 500px;
+              height: 400px;
+            }
+          @media only screen and (max-width: 586px) {
+            max-width: 400px;
+              height: 300px;
+            }
+          @media only screen and (max-width: 466px) {
+            max-width: 350px;
+              height: 250px;
+            }
+          @media only screen and (max-width: 400px) {
+            max-width: 300px;
+              height: 200px;
+            }
+                         @media only screen and (max-width: 350px) {
+                           max-width: 280px;
+                           height: 180px;
+                         }
         &.active {
           opacity: 1;
           box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.202);
@@ -38,57 +129,57 @@
       }
     }
 
-        .progress {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          position: absolute;
-          bottom: 10px;
-          left: 50%;
-          top: 0;
-          transform: translateX(-50%);
-          background: rgba(255, 255, 255, 0.1); // Glass effect background
-          padding: 8px 20px;
-          border-radius: 20px;
-    
-          .nav-btn {
-            background: rgba(0, 0, 0, 0.2);
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
-            backdrop-filter: blur(5px); // Glass effect inside button
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.505);
-            
-            &:hover {
-              transform: scale(1.1);
-              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.519);
-              background: rgba(255, 255, 255, 0.5);
-            }
-    
-            &:disabled {
-              opacity: 0.2;
-              cursor: not-allowed;
-            }
-    
-            .arrow-icon {
-              color: rgb(0, 0, 0);
-            }
-          }
-    
-          .left {
-            margin-right: 15px;
-          }
-    
-          .right {
-            margin-left: 15px;
-          }
+    .progress {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.1); // Glass effect background
+      padding: 8px 20px;
+      border-radius: 20px;
+
+      .nav-btn {
+        background: rgba(0, 0, 0, 0.2);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+        backdrop-filter: blur(5px); // Glass effect inside button
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.505);
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.519);
+          background: rgba(255, 255, 255, 0.5);
         }
+
+        &:disabled {
+          opacity: 0.2;
+          cursor: not-allowed;
+        }
+
+        .arrow-icon {
+          color: rgb(0, 0, 0);
+        }
+      }
+
+      .left {
+        margin-right: 15px;
+      }
+
+      .right {
+        margin-left: 15px;
+      }
+    }
   }
   .teams-container {
     margin: 0 auto;
@@ -122,7 +213,10 @@
       letter-spacing: -2.200000047683716px;
       text-align: left;
       color: #472525;
+      @media only screen and (max-width: 1000px) {
+        margin-top: 30px;
 
+      }
       .highlight {
         color: #0056d2;
       }

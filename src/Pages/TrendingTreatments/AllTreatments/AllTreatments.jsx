@@ -107,18 +107,20 @@ const AllTreatments = () => {
 
             <div className="sectionCard">
                 <h1>All treatments</h1>
-                <nav className="treatment-filters">
-                    {categories.map((category, index) => (
-                        <button
-                            key={index}
-                            className={selectedCategory === category.name ? 'active' : ''}
-                            onClick={() => setSelectedCategory(category.name)}
-                        >
-                            {category.icon && <img src={category.icon} alt={category.name} className="category-icon" />}
-                            {category.name}
-                        </button>
-                    ))}
-                </nav>
+                <div className="navtab">
+                    <nav className="treatment-filters">
+                        {categories.map((category, index) => (
+                            <button
+                                key={index}
+                                className={selectedCategory === category.name ? 'active' : ''}
+                                onClick={() => setSelectedCategory(category.name)}
+                            >
+                                {category.icon && <img src={category.icon} alt={category.name} className="category-icon" />}
+                                {category.name}
+                            </button>
+                        ))}
+                    </nav>
+                </div>
 
                 <div className="treatment-cards">
                     {filteredData.map((item) => (
