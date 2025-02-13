@@ -14,10 +14,10 @@
     padding: 40px;
   }
   @media only screen and (max-width: 1000px) {
-    padding: 30px 20px;
+    padding: 40px 20px;
   }
   @media only screen and (max-width: 400px) {
-    padding:30px 10px;
+    padding: 30px 10px;
   }
   .title-sbt {
     background: #b0f0f5cc;
@@ -117,11 +117,7 @@
                font-size: 16px;
              }
       
-             @media only screen and (max-width: 400px) {
-               padding: 3px 4px 4px 10px;
-               font-size: 14px;
-               
-             }
+           
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -310,11 +306,7 @@
        font-size: 16px;
      }
   
-     @media only screen and (max-width: 400px) {
-       padding: 3px 4px 4px 10px;
-       font-size: 14px;
-  
-     }
+     
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;

@@ -80,7 +80,12 @@
       gap: 50px;
       @media only screen and (max-width: 940px) {
         flex-direction: column;
+        gap: 30px;
       }
+             @media only screen and (max-width: 400px) {
+               flex-direction: column;
+               gap: 20px;
+             }
 
       .image-large {
         width: 100%;
@@ -166,6 +171,7 @@
         }
         @media only screen and (max-width: 400px) {
           height: 200px;
+          margin-top: -20px;
         }
       }
 
@@ -196,7 +202,8 @@
         }
         @media only screen and (max-width: 666px) {
           font-size: 24px;
-          line-height: 32px;
+          line-height: 30px;
+          margin-top: -5px;
         }
       }
 
@@ -233,10 +240,7 @@
           margin-top: 20px;
         }
 
-        @media only screen and (max-width: 400px) {
-          padding: 3px 4px 4px 10px;
-          font-size: 14px;
-        }
+        
         .arrow-icon {
           transition: 0.3s linear;
           background: #fff;

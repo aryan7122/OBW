@@ -63,7 +63,7 @@
       }
       @media only screen and (max-width: 500px) {
         margin-top: 0px;
-        font-size: 14px;
+        // font-size: 14px;
         line-height: 19px;
       }
     }
@@ -115,7 +115,7 @@
         text-align: left;
         color: #101010;
         @media only screen and (max-width: 500px) {
-          font-size: 16px;
+          // font-size: 16px;
           margin-top: 4px;
         }
       }
@@ -132,8 +132,8 @@
           margin-bottom: 20px;
         }
         @media only screen and (max-width: 500px) {
-          font-size: 13px;
-          line-height: 16px;
+          // font-size: 13px;
+          line-height: 19px;
         }
       }
     }
@@ -194,12 +194,7 @@
       font-size: 16px;
     }
   
-    @media only screen and (max-width: 400px) {
-      padding: 3px 4px 4px 10px;
-      font-size: 14px;
-      margin-left: 15px;
-      margin-top: -15px;
-    }
+    
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
