@@ -3,6 +3,7 @@ import './Navbar.scss';
 import logo from '../../assets/footer/logo.svg'
 import { Menu, X, Search, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import BookAppointment from '../BookAppointment/BookAppointment';
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -39,6 +40,13 @@ function Navbar() {
     // white bg
     const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy','terms-of-service'];
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
+ const [showModal, setShowModal] = useState(false);
+    const handleBookNowClick = () => {
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+    };
 
     return (
         <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}  ${isWhite ? 'navbar-scrolled' : ''}`}>
@@ -64,7 +72,7 @@ function Navbar() {
                 <div className={`navbar-actions ${menuOpen ? 'menu-active' : ''}`}>
                     {!isVisible
                         ? <>
-                            <button className="appointment-button">
+                            <button className="appointment-button" onClick={handleBookNowClick}>
                                 Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                             </button>
                             <Search className="search-icon" size={24} onClick={toggleSearchBar} />
@@ -95,6 +103,8 @@ function Navbar() {
                 </div>
 
             </nav>
+            {showModal && <BookAppointment onClose={closeModal} />}
+
         </header>
     );
 }
