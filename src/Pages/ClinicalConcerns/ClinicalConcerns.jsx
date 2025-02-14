@@ -27,6 +27,7 @@ import bImg3 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-hol
 import bImg4 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (4).png';
 import bImg5 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (5).png';
 import bImg6 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (6).png';
+import { motion } from 'framer-motion';
 
 const iconsMap = {
     "Skin/Face Care": <img src={SkinIcon} alt="Skin Care" />,
@@ -512,13 +513,21 @@ function ClinicalConcerns() {
             <div id="tabs">
                 <div className="tabs">
                     {Object.keys(clinicalData).map((tab) => (
-                        <button
+                        <motion.button
+                            whileHover={{ scale: 1.0 }}
+                            whileTap={{ scale: 0.95 }}
+                            whileDrag={{ scale: 0.9, rotate: 10 }}
+                            drag
                             key={tab}
+                            initial={{ opacity: 0, x: 40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true, amount: 0.5 }}
                             className={`tab-button ${selectedTab === tab ? "active-tab" : ""}`}
                             onClick={() => setSelectedTab(tab)}
                         >
                             {iconsMap[tab]} {tab}
-                        </button>
+                        </motion.button>
                     ))}
                 </div>
             </div>
@@ -554,9 +563,25 @@ function ClinicalConcerns() {
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
                                 <div className="card col1" key={index}>
-                                    <img src={card?.imageUrl} alt={card?.title} className="card-image" />
+                                    <motion.img
+                                        src={card?.imageUrl}
+                                        alt={card?.title}
+                                        className="card-image"
+                                        initial={{ opacity: 0, y: -20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        viewport={{ once: false, amount: 0.1 }}
+                                    />
                                     <div className="card-overlay">
-                                        <h3 className="card-title">{card.title}</h3>
+                                        <motion.h3 className="card-title"
+                                            initial={{ opacity: 0, scale: 0 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.6 }}
+                                            viewport={{ once: true, amount: 0.5 }}
+                                        >
+                                            {card.title}
+
+                                        </motion.h3>
                                         <div className="card-description">
                                             <h3 className="card-title2">Treatments</h3>
                                             {Object.keys(card.description).map((category) => (
@@ -582,9 +607,25 @@ function ClinicalConcerns() {
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
                                 <div className="card col2" key={index}>
-                                    <img src={card?.imageUrl} alt={card?.title} className="card-image" />
+                                    <motion.img
+                                        src={card?.imageUrl}
+                                        alt={card?.title}
+                                        className="card-image"
+                                        initial={{ opacity: 0, y: -20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        viewport={{ once: false, amount: 0.1 }}
+                                    />
                                     <div className="card-overlay">
-                                        <h3 className="card-title">{card.title}</h3>
+                                        <motion.h3 className="card-title"
+                                            initial={{ opacity: 0, scale: 0 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.6 }}
+                                            viewport={{ once: true, amount: 0.5 }}
+                                        >
+                                            {card.title}
+
+                                        </motion.h3>
                                         <div className="card-description">
                                             <h3 className="card-title2">Treatments</h3>
                                             {Object.keys(card.description).map((category) => (
@@ -610,9 +651,25 @@ function ClinicalConcerns() {
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
                                 <div className="card col3" key={index}>
-                                    <img src={card?.imageUrl} alt={card?.title} className="card-image" />
+                                    <motion.img
+                                        src={card?.imageUrl}
+                                        alt={card?.title}
+                                        className="card-image"
+                                        initial={{ opacity: 0, y: -20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        viewport={{ once: false, amount: 0.2 }}
+                                    />
                                     <div className="card-overlay">
-                                        <h3 className="card-title">{card.title}</h3>
+                                        <motion.h3 className="card-title"
+                                            initial={{ opacity: 0, scale: 0 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            transition={{ duration: 0.6 }}
+                                            viewport={{ once: true, amount: 0.5 }}
+                                        >
+                                            {card.title}
+
+                                        </motion.h3>
                                         <div className="card-description">
                                             <h3 className="card-title2">Treatments</h3>
                                             {Object.keys(card.description).map((category) => (
@@ -636,9 +693,25 @@ function ClinicalConcerns() {
                 <div className="card-container ScalpHairCare">
                     {clinicalData[selectedTab].map((card, index) => (
                         <div className="card" key={index}>
-                            <img src={card.imageUrl} alt={card.title} className="card-image" />
+                            <motion.img
+                                src={card?.imageUrl}
+                                alt={card?.title}
+                                className="card-image"
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                viewport={{ once: false, amount: 0.1 }}
+                            />
                             <div className="card-overlay">
-                                <h3 className="card-title">{card.title}</h3>
+                                <motion.h3 className="card-title"
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.6 }}
+                                    viewport={{ once: true, amount: 0.5 }}
+                                >
+                                    {card.title}
+
+                                </motion.h3>
                                 <div className="card-description">
                                     <h3 className="card-title2">Treatments</h3>
                                     {Object.keys(card.description).map((category) => (
@@ -661,9 +734,25 @@ function ClinicalConcerns() {
                 <div className="card-container BodyCare">
                     {clinicalData[selectedTab].map((card, index) => (
                         <div className="card" key={index}>
-                            <img src={card.imageUrl} alt={card.title} className="card-image" />
+                            <motion.img
+                                src={card?.imageUrl}
+                                alt={card?.title}
+                                className="card-image"
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                viewport={{ once: false, amount: 0.1 }}
+                            />
                             <div className="card-overlay">
-                                <h3 className="card-title">{card.title}</h3>
+                                <motion.h3 className="card-title"
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.6 }}
+                                    viewport={{ once: true, amount: 0.5 }}
+                                >
+                                    {card.title}
+
+                                </motion.h3>
                                 <div className="card-description">
                                     <h3 className="card-title2">Treatments</h3>
                                     {Object.keys(card.description).map((category) => (
@@ -686,9 +775,25 @@ function ClinicalConcerns() {
                 <div className="card-container Beautifying">
                     {clinicalData[selectedTab].map((card, index) => (
                         <div className="card" key={index}>
-                            <img src={card.imageUrl} alt={card.title} className="card-image" />
+                            <motion.img
+                                src={card?.imageUrl}
+                                alt={card?.title}
+                                className="card-image"
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                viewport={{ once: false, amount: 0.1 }}
+                            />
                             <div className="card-overlay">
-                                <h3 className="card-title">{card.title}</h3>
+                                <motion.h3 className="card-title"
+                                    initial={{ opacity: 0, scale: 0 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.6 }}
+                                    viewport={{ once: true, amount: 0.5 }}
+                                >
+                                    {card.title}
+
+                                </motion.h3>
                                 <div className="card-description">
                                     <h3 className="card-title2">Treatments</h3>
                                     {Object.keys(card.description).map((category) => (

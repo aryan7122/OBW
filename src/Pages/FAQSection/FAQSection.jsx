@@ -3,6 +3,7 @@ import { Plus, Minus, ArrowRight } from "lucide-react";
 import "./FAQSection.scss";
 import faqImg from '../../assets/faq/Rectangle 3463667.png'
 import { useNavigate } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const faqs = [
     {
@@ -41,15 +42,23 @@ const FAQSection = () => {
 
             <div className="faq-right">
                 {faqs.map((faq, index) => (
-                    <div key={index} className={`faq-card ${activeIndex === index ? "active" : ""}`} onClick={() => toggleFAQ(index)}>
-                        <div className="faq-question">
+                    <motion.div key={index} className={`faq-card ${activeIndex === index ? "active" : ""}`} onClick={() => toggleFAQ(index)}
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                       
+                    >
+                        <motion.div className="faq-question"
+                           
+                        >
                             <span>{faq.question}</span>
                             <div className="icon_round">
                                 {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                             </div>
-                        </div>
+                        </motion.div>
                         {activeIndex === index && <div className="faq-answer">{faq.answer}</div>}
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

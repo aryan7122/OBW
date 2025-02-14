@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Locations.scss";
 import img1 from '../../assets/location/Stylish Beauty Salon Interior 1.png'
 import img2 from '../../assets/location/Frame 1597883095.png'
@@ -6,6 +6,7 @@ import img3 from '../../assets/location/Frame 1597883093.png'
 import locationsIcon from '../../assets/location/locationIcon.svg'
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const Locations = () => {
     const locations = [
@@ -37,6 +38,9 @@ const Locations = () => {
         window.open(url, "_blank"); // `_blank` se link new tab me open hoga
     };
 
+
+  
+
     return (
 
         <div
@@ -44,12 +48,21 @@ const Locations = () => {
 
         >
             <div className="locationsTitle">
-                <h2>Discover Our  <img src={locationsIcon} alt="icon" /> Locations Close to You</h2>
-                <p>
+                <h2>Discover Our
+                    <motion.img src={locationsIcon} alt="icon"
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        
+                    /> Locations Close to You</h2>
+                <motion.p
+                    
+                >
                     With four convenient locations across Bangalore, we’re always within reach.
                     Visit any of our clinics for personalized care and exceptional treatments
                     in a welcoming environment.
-                </p>
+                </motion.p>
             </div>
             <div className="cards">
 
