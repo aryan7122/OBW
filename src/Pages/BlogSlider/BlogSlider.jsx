@@ -68,7 +68,7 @@ const BlogSlider = () => {
 
             <div className="blog-slider-wrapper">
 
-                <div className="slider-cards" style={{ transform: `translateX(-${currentIndex * 300}px)` }}>
+                <div className="slider-cards" style={{ "--index": currentIndex }}>
                     {blogs.map((blog, index) => (
                         <div key={index} className="slider-card">
                             <img src={blog.image} alt={blog?.title} className="card-image" />

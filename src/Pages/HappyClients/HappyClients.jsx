@@ -31,13 +31,13 @@ const HappyClients = () => {
 
     const handleNext = () => {
         if (currentIndex < data.length - visibleCards) {
-            setCurrentIndex(currentIndex + 2);
+            setCurrentIndex(currentIndex + 1);
         }
     };
 
     const handlePrevious = () => {
         if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 2);
+            setCurrentIndex(currentIndex - 1);
         }
     };
     const navigate = useNavigate();
@@ -62,7 +62,7 @@ const HappyClients = () => {
 
             <div className="blog-slider-wrapper">
 
-                <div className="slider-cards" style={{ transform: `translateX(-${currentIndex * 300}px)` }}>
+                <div className="slider-cards" style={{ "--index": currentIndex }}>
                     {data.map((blog, index) => (
                         <div key={index} className="slider-card">
                             <img src={blog.image} alt={blog?.title} className="card-image" />

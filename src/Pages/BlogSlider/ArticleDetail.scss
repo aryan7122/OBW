@@ -28,7 +28,7 @@
     border: none;
     background: none;
     font-weight: 400;
-          font-family: 'Supreme-Regular', sans-serif;
+    font-family: "Supreme-Regular", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
@@ -73,17 +73,17 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-top: 10px;
-     
-        @media only screen and (max-width: 1170px) {
-          font-size: 40px;
-            line-height: 50.6px;
-        }
-      
-        @media only screen and (max-width: 570px) {
-          // padding: 20px;
-          font-size: 36px;
-            line-height: 42.6px;
-        }
+
+      @media only screen and (max-width: 1170px) {
+        font-size: 40px;
+        line-height: 50.6px;
+      }
+
+      @media only screen and (max-width: 570px) {
+        // padding: 20px;
+        font-size: 36px;
+        line-height: 42.6px;
+      }
     }
     .meta {
       display: flex;
@@ -160,19 +160,19 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         @media only screen and (max-width: 600px) {
           height: 500px;
-          }
+        }
         @media only screen and (max-width: 400px) {
           height: 400px;
-          }
+        }
       }
     }
   }
 
   .blog-data-detail {
     display: flex;
-        @media only screen and (max-width: 1280px) {
-          flex-direction: column;
-        }
+    @media only screen and (max-width: 1280px) {
+      flex-direction: column;
+    }
   }
 
   .content {
@@ -189,7 +189,7 @@
 
       p {
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0%;
@@ -199,7 +199,7 @@
       .caption_img_ {
         font-weight: 400;
         border-left: 3px solid;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 14px;
         line-height: 21px;
         letter-spacing: 0%;
@@ -232,7 +232,7 @@
     height: 300px;
     margin-left: 40px;
     border-radius: 8px;
-  @media only screen and (max-width: 1280px) {
+    @media only screen and (max-width: 1280px) {
       max-width: 600px;
       margin: 0 auto;
       margin-top: 20px;
@@ -248,7 +248,7 @@
       p {
         font-weight: 400;
         margin-top: 10px;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 16px;
         line-height: 24px;
         color: #000;
@@ -272,7 +272,7 @@
         width: 464px;
         padding: 10px;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: -0.5px;
@@ -282,10 +282,9 @@
         border-radius: 44px;
         cursor: pointer;
         transition: background-color 0.3s;
-    @media only screen and (max-width: 550px) {
-      width: 100%;
-
-    }
+        @media only screen and (max-width: 550px) {
+          width: 100%;
+        }
         &:hover {
           background-color: #0056b3;
         }
@@ -304,19 +303,19 @@
   background: #e6fafc;
   padding: 60px;
   @media only screen and (max-width: 1400px) {
-      padding: 40px;
-    }
-  
-    @media only screen and (max-width: 1170px) {
-      flex-direction: column;
-    }
-  
-    @media only screen and (max-width: 900px) {
-      padding: 20px;
-    }
-    @media only screen and (max-width: 400px) {
-      padding: 20px 10px;
-    }
+    padding: 40px;
+  }
+
+  @media only screen and (max-width: 1170px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 900px) {
+    padding: 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 20px 10px;
+  }
   .title-all-bg {
     display: flex;
     align-items: center;
@@ -328,18 +327,18 @@
       font-size: 40px;
       line-height: 50px;
       letter-spacing: -4%;
-          @media only screen and (max-width: 550px) {
-            font-size: 36px;
-              line-height: 42px;
-          }
-          @media only screen and (max-width: 400px) {
-            font-size: 30px;
-              line-height: 37px;
-          }
-          @media only screen and (max-width: 355px) {
-            font-size: 22px;
-              line-height: 26px;
-          }
+      @media only screen and (max-width: 550px) {
+        font-size: 36px;
+        line-height: 42px;
+      }
+      @media only screen and (max-width: 400px) {
+        font-size: 30px;
+        line-height: 37px;
+      }
+      @media only screen and (max-width: 355px) {
+        font-size: 22px;
+        line-height: 26px;
+      }
     }
     .btn-view-all {
       width: 103px;
@@ -359,11 +358,11 @@
       border-radius: 8px;
       border: 1px solid transparent;
       @media only screen and (max-width: 355px) {
-          font-size: 14px;
-          line-height: 17px;
-          width: 100px;
-            height: 40px;
-        }
+        font-size: 14px;
+        line-height: 17px;
+        width: 100px;
+        height: 40px;
+      }
       &:hover {
         background: none;
         border: 1px solid #010066;
@@ -378,12 +377,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     transition: transform 0.5s ease;
     @media only screen and (max-width: 1280px) {
-      grid-template-columns: 1fr 1fr ;
-      }
+      grid-template-columns: 1fr 1fr;
+    }
     @media only screen and (max-width: 800px) {
-      grid-template-columns: 1fr  ;
+      grid-template-columns: 1fr;
       gap: 20px;
-      }
+    }
     .article-card {
       border: 1px solid rgba(128, 128, 128, 0.349);
       position: relative;
@@ -495,7 +494,7 @@
       .card-p {
         font-size: 16px;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         line-height: 24px;
         text-align: left;
         color: #454545;
@@ -577,7 +576,7 @@
             .card-date {
               font-size: 13px;
               font-weight: 400;
-                    font-family: 'Supreme-Regular', sans-serif;
+              font-family: "Supreme-Regular", sans-serif;
               line-height: 24px;
               text-align: left;
               color: #000000;
@@ -621,11 +620,10 @@
         }
       }
     }
-    .article-card:last-child{
-          @media only screen and (max-width: 1280px) {
-
-            display: none;
-          }
+    .article-card:last-child {
+      @media only screen and (max-width: 1280px) {
+        display: none;
+      }
     }
   }
 }

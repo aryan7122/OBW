@@ -25,9 +25,9 @@
       flex-direction: column;
       align-items: start;
     }
-         @media only screen and (max-width: 500px) {
-           padding-right: 0;
-         }
+    @media only screen and (max-width: 500px) {
+      padding-right: 0;
+    }
     .view-all {
       padding: 8px 10px 8px 25px;
       background-color: #007bff;
@@ -107,7 +107,7 @@
       }
       @media only screen and (max-width: 440px) {
         font-size: 30px;
-line-height: 35px;
+        line-height: 35px;
         img {
           display: none;
         }
@@ -117,7 +117,7 @@ line-height: 35px;
     .slider-subheading {
       font-size: 16px;
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       line-height: 24px;
       letter-spacing: -0.30000001192092896px;
       text-align: left;
@@ -147,8 +147,25 @@ line-height: 35px;
     display: flex;
     transition: transform 0.5s ease;
     padding: 10px;
+    transform: translateX(calc(-0% * var(--index)));
+    @media only screen and (max-width: 1400px) {
+      transform: translateX(calc(-10% * var(--index)));
+    }
+    @media only screen and (max-width: 1140px) {
+      transform: translateX(calc(-15% * var(--index)));
+    }
     @media only screen and (max-width: 1000px) {
+      transform: translateX(calc(-20% * var(--index)));
       margin-left: -20px;
+    }
+    @media only screen and (max-width: 810px) {
+      transform: translateX(calc(-25% * var(--index)));
+    }
+    @media only screen and (max-width: 560px) {
+      transform: translateX(calc(-30% * var(--index)));
+    }
+    @media only screen and (max-width: 360px) {
+      transform: translateX(calc(-32% * var(--index)));
     }
     .slider-card {
       border: 20px;
@@ -178,10 +195,10 @@ line-height: 35px;
         width: 300px;
         height: 440px;
       }
-             @media only screen and (max-width: 400px) {
-               width: 280px;
-               height: 440px;
-             }
+      @media only screen and (max-width: 400px) {
+        width: 280px;
+        height: 440px;
+      }
       .card-image {
         width: 427px;
         height: 587px;
@@ -195,10 +212,10 @@ line-height: 35px;
           width: 300px;
           height: 440px;
         }
-                @media only screen and (max-width: 400px) {
-                  width: 280px;
-                  height: 440px;
-                }
+        @media only screen and (max-width: 400px) {
+          width: 280px;
+          height: 440px;
+        }
       }
 
       .card_blur {
@@ -226,9 +243,9 @@ line-height: 35px;
         @media only screen and (max-width: 550px) {
           width: 300px;
         }
-                @media only screen and (max-width: 400px) {
-                  width: 280px;
-                }
+        @media only screen and (max-width: 400px) {
+          width: 280px;
+        }
         .aut_text-img {
           display: flex;
           align-items: center;
@@ -249,7 +266,7 @@ line-height: 35px;
             .card-name {
               font-size: 28px;
               font-weight: 400;
-                    font-family: 'Supreme-Regular', sans-serif;
+              font-family: "Supreme-Regular", sans-serif;
               line-height: 36.6px;
               letter-spacing: -0.5px;
               text-align: left;
@@ -263,7 +280,7 @@ line-height: 35px;
               font-size: 16px;
               font-weight: 400;
               line-height: 19px;
-                    font-family: 'Supreme-Regular', sans-serif;
+              font-family: "Supreme-Regular", sans-serif;
               text-align: left;
               color: #ffffff;
               opacity: 0.8;
@@ -315,18 +332,18 @@ line-height: 35px;
       border: none;
       border-radius: 100px;
       cursor: pointer;
-@media only screen and (max-width: 400px) {
-    min-width: 40px;
-    min-height: 40px;
-  }
+      @media only screen and (max-width: 400px) {
+        min-width: 40px;
+        min-height: 40px;
+      }
       svg {
         width: 32px;
         height: 32px;
         color: #fff;
         @media only screen and (max-width: 400px) {
-            width: 22px;
-            height: 22px;
-          }
+          width: 22px;
+          height: 22px;
+        }
       }
 
       &:disabled {
