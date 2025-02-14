@@ -28,6 +28,7 @@
     border: none;
     background: none;
     font-weight: 400;
+          font-family: 'Supreme-Regular', sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0%;
@@ -188,6 +189,7 @@
 
       p {
         font-weight: 400;
+              font-family: 'Supreme-Regular', sans-serif;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0%;
@@ -197,6 +199,7 @@
       .caption_img_ {
         font-weight: 400;
         border-left: 3px solid;
+              font-family: 'Supreme-Regular', sans-serif;
         font-size: 14px;
         line-height: 21px;
         letter-spacing: 0%;
@@ -245,6 +248,7 @@
       p {
         font-weight: 400;
         margin-top: 10px;
+              font-family: 'Supreme-Regular', sans-serif;
         font-size: 16px;
         line-height: 24px;
         color: #000;
@@ -268,6 +272,7 @@
         width: 464px;
         padding: 10px;
         font-weight: 400;
+              font-family: 'Supreme-Regular', sans-serif;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: -0.5px;
@@ -490,6 +495,7 @@
       .card-p {
         font-size: 16px;
         font-weight: 400;
+              font-family: 'Supreme-Regular', sans-serif;
         line-height: 24px;
         text-align: left;
         color: #454545;
@@ -571,6 +577,7 @@
             .card-date {
               font-size: 13px;
               font-weight: 400;
+                    font-family: 'Supreme-Regular', sans-serif;
               line-height: 24px;
               text-align: left;
               color: #000000;
@@ -615,7 +622,10 @@
       }
     }
     .article-card:last-child{
-      display: none;
+          @media only screen and (max-width: 1280px) {
+
+            display: none;
+          }
     }
   }
 }

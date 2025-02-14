@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HeroSection.scss";
 import { ArrowRight, CirclePlay } from "lucide-react";
+import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 
 const HeroSection = () => {
+      const [showModal, setShowModal] = useState(false);
+        const handleBookNowClick = () => {
+            setShowModal(true);
+        };
+        const closeModal = () => {
+            setShowModal(false);
+        };
+    
     return (
         <div className="hero-section">
             <div className="hero_bg">
@@ -14,7 +23,7 @@ const HeroSection = () => {
                         unique needs.
                     </p>
                     <div className="buttons">
-                        <button className="appointment-button">
+                        <button className="appointment-button" onClick={handleBookNowClick} >
                             Book Appointment Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                         </button>
                         {/* <button className="secondary-btn">
@@ -30,6 +39,8 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
+            {showModal && <BookAppointment onClose={closeModal} />}
+
         </div>
     );
 };

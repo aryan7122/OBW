@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./OurTeam.scss";
 import img1 from '../../../assets/TrendingTreatments/img1.jpeg'
 import img2 from '../../../assets/TrendingTreatments/img2.jpeg'
@@ -10,6 +10,7 @@ import fallStr from '../../../assets/about/team.svg'
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { AiOutlineDribbble } from "react-icons/ai";
+import { useLocation } from "react-router-dom";
 
 const data = [
     {
@@ -63,8 +64,18 @@ const data = [
 ];
 
 const OurTeam = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
     return (
-        <div className="OurTeam-">
+        <div className="OurTeam-" id="meet-section">
             <div className="title-sbt">Our Team</div>
             <header className="heading-section">
                 <div>
@@ -99,8 +110,8 @@ const OurTeam = () => {
                 <div>
                     <h3>We’re hiring!</h3>
                     <p>Our team is growing fast and we’re always looking for smart people.</p>
-               </div>
-                <button className="Book-Now">Get in touch now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                </div>
+                <button className="Book-Now">View open roles  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 {/* <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div> */}
             </footer>
         </div>

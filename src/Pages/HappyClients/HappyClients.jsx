@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './HappyClients.scss';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import happyImg from '../../assets/HappyClients/happy.svg'
+import { useNavigate } from 'react-router-dom';
 const data = [
     {
         name: "Lalita Thakur",
         location: "Mumbai",
         image: "https://s3-alpha-sig.figma.com/img/73e4/07de/671e93ceca888c6d577d00f110d09b9f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=cAnVkPgi5~NfhHbOq0cFV9-fo04Sfbe1m6b9hJCH0g1ff1rHLyQyKbFghDvOsV9MK98Ram~MAHFR~9w~IQ0Big78frsg8MdJb0PdK5Dmt3nScY3GIxERE28by-MbroCM53fRUJm3cX4EkPUtfLnev86hOFUa0PVSCGV1asisF3z213VR7K1Wi83y5Plp37ILSptXK83a80RuoRIukVBIEsdtp4E018SRdSaR6e73Xnq2-mKtgkahyvGhlURt5LuO6QH3OlV6Dbzec4Glpump2Tbv5sx6JSFDbhHTsmAAaOf4Rs1lIZt2arfeVHCwx2c-UNlXdMyUr~V4-2rjs52urw__", // Replace with your image URL
-        star:3,
+        star: 3,
     },
     {
         name: "Sheetal Trivedi",
@@ -39,6 +40,11 @@ const HappyClients = () => {
             setCurrentIndex(currentIndex - 2);
         }
     };
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
 
     return (
         <div className="happy-slider-container">
@@ -49,7 +55,8 @@ const HappyClients = () => {
                         Discover the insights and feedback from our valued clients as they share their personal experiences and stories about working with us! Their testimonials highlight the positive impact we've made and the exceptional service we strive to provide.
                     </p>
                 </div>
-                <button className="view-all">Get In touch  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="view-all" onClick={() => HandleNavigation("/contact")}
+                >Get In touch  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
             </div>
 
 

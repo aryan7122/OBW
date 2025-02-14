@@ -103,42 +103,42 @@
         line-height: 49px;
         letter-spacing: -1px;
       }
-             @media only screen and (max-width: 420px) {
-               font-size: 38px;
-               line-height: 42px;
-               margin-top: 40px;
-               letter-spacing: -1px;
-             }
+      @media only screen and (max-width: 420px) {
+        font-size: 38px;
+        line-height: 42px;
+        margin-top: 40px;
+        letter-spacing: -1px;
+      }
       @media only screen and (max-width: 380px) {
         font-size: 34px;
         margin-top: 40px;
         line-height: 40px;
       }
-            @media only screen and (max-width: 330px) {
-              font-size: 32px;
-              margin-top: 60px;
-              line-height: 35px;
-            }
+      @media only screen and (max-width: 330px) {
+        font-size: 32px;
+        margin-top: 60px;
+        line-height: 35px;
+      }
     }
 
     p {
-      font-weight: 400;
+      font-family: 'Supreme-Regular', sans-serif;
       font-size: 18px;
       line-height: 25.2px;
       letter-spacing: 0%;
-      margin-top: 8px;
+      margin-top: 20px;
       text-align: left;
       @media only screen and (max-width: 500px) {
-          font-size: 16px;
-            line-height: 22.2px;
-        }
+        font-size: 16px;
+        line-height: 22.2px;
+      }
     }
     .BookAppointmentNow {
       margin-top: 2rem;
       padding: 8px 10px 8px 25px;
       margin-top: 70px;
       background-color: #007bff;
-      color: #fff;
+      color: #643434;
       border: none;
       font-size: 20px;
       border-radius: 100px;
@@ -152,20 +152,19 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       background: linear-gradient(90.15deg, #f2f3f4 0.13%, #ffffff 103.2%);
-      color: #364242;
       border: 1px solid transparent;
       transition: 0.3s linear;
-@media only screen and (max-width: 780px) {
-    padding: 5px 8px 5px 20px;
-    font-size: 18px ;
-    margin-top: 50px;
-    // margin-top: 10px;
-  }
+      @media only screen and (max-width: 780px) {
+        padding: 5px 8px 5px 20px;
+        font-size: 18px;
+        margin-top: 50px;
+        // margin-top: 10px;
+      }
       @media only screen and (max-width: 500px) {
         padding: 5px 6px 5px 15px;
         font-size: 16px;
       }
- 
+
       .arrow-icon {
         transition: 0.3s linear;
         background: #364242;
@@ -175,10 +174,9 @@
         height: 40px;
         padding: 5px;
         @media only screen and (max-width: 400px) {
-           
           width: 30px;
           height: 30px;
-          }
+        }
       }
 
       &:hover {
@@ -188,7 +186,7 @@
 
         .arrow-icon {
           background: linear-gradient(90.15deg, #ffffff 0.13%, #ffffff 103.2%);
-          color: #364242;
+          color: #643434;
         }
       }
     }

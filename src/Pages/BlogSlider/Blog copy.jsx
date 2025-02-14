@@ -1,31 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Blog.scss";
 import Frame from "../../assets/about/Frame.svg";
 import { useNavigate } from "react-router-dom";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function Blog() {
     const [selectedCategory, setSelectedCategory] = useState("View all");
-    const [currentIndex, setCurrentIndex] = useState(0);
-    // const itemsPerPage = 7; 
-    const [itemsPerPage, setBlogsPerPage] = useState(8);
-
-    useEffect(() => {
-        const updateBlogsPerPage = () => {
-            if (window.innerWidth <= 700) {
-                setBlogsPerPage(4);
-            } else if (window.innerWidth <= 1000) {
-                setBlogsPerPage(7);
-            } else {
-                setBlogsPerPage(9);
-            }
-        };
-
-        updateBlogsPerPage();
-        window.addEventListener("resize", updateBlogsPerPage);
-        return () => window.removeEventListener("resize", updateBlogsPerPage);
-    }, []);
-
 
     const blogs = [
         {
@@ -107,42 +86,18 @@ function Blog() {
             category: "Skin",
         },
     ];
-
+    
 
     const categories = ["View all", "Skin", "Hair", "Anti-aging"];
 
-    // const filteredBlogs =
-    //     selectedCategory === "View all"
-    //         ? blogs
-    //         : blogs.filter((blog) => blog.category === selectedCategory);
+    const filteredBlogs =
+        selectedCategory === "View all"
+            ? blogs
+            : blogs.filter((blog) => blog.category === selectedCategory);
     const navigate = useNavigate();
     const HandleNavigation = (path) => {
         navigate(path);
         window.scrollTo(0, 0);
-    };
-
-    // 
-
-    // Category filtering logic
-    const filteredBlogs = selectedCategory === "View all"
-        ? blogs
-        : blogs.filter(blog => blog.category === selectedCategory);
-
-    // Pagination logic
-    const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
-    const visibleBlogs = filteredBlogs.slice(currentIndex, currentIndex + itemsPerPage);
-
-    // Navigation handlers
-    const goNext = () => {
-        if (currentIndex + itemsPerPage < filteredBlogs.length) {
-            setCurrentIndex(currentIndex + itemsPerPage);
-        }
-    };
-
-    const goPrev = () => {
-        if (currentIndex - itemsPerPage >= 0) {
-            setCurrentIndex(currentIndex - itemsPerPage);
-        }
     };
     return (
         <>
@@ -179,7 +134,7 @@ function Blog() {
                     {/* Blog List */}
                     <div className="blog-wrapper">
                         <div className="blog-cards">
-                            {visibleBlogs.map((blog, index) => (
+                            {filteredBlogs.map((blog, index) => (
                                 <div key={index} className="blog-card">
                                     <img
                                         src={blog.image}
@@ -212,16 +167,7 @@ function Blog() {
                     </div>
                 </div>
             </div>
-            {/* Pagination Controls */}
-            <div className="pagination">
-                <button onClick={goPrev} disabled={currentIndex === 0}>
-                    <FaArrowLeft /> Prev
-                </button>
-                <span> Page {currentIndex / itemsPerPage + 1} of {totalPages} </span>
-                <button onClick={goNext} disabled={currentIndex + itemsPerPage >= filteredBlogs.length}>
-                    Next <FaArrowRight />
-                </button>
-            </div>
+            
         </>
     );
 }

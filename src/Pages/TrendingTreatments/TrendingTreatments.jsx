@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TrendingTreatments.scss";
 import img1 from '../../assets/TrendingTreatments/img1.jpeg'
 import img2 from '../../assets/TrendingTreatments/img2.jpeg'
 import img3 from '../../assets/TrendingTreatments/img3.jpeg'
 import img4 from '../../assets/TrendingTreatments/img4.jpeg'
 import { ArrowRight, ChevronRight } from "lucide-react";
+import BookAppointment from "../../Components/BookAppointment/BookAppointment";
+import { useNavigate } from "react-router-dom";
 // import { Button } from "@/components/ui/button";
 
 const treatments = [
@@ -31,6 +33,18 @@ const treatments = [
 ];
 
 const TrendingTreatments = () => {
+     const [showModal, setShowModal] = useState(false);
+            const handleBookNowClick = () => {
+                setShowModal(true);
+            };
+            const closeModal = () => {
+                setShowModal(false);
+            };
+    const navigate = useNavigate();
+    // const HandleNavigation = (path) => {
+    //     navigate(path);
+    //     window.scrollTo(0, 0);
+    // };
     return (
         <div className="trending-treatments">
             <div className="title-sbt">TRENDING</div>
@@ -56,9 +70,11 @@ const TrendingTreatments = () => {
             </div>
 
             <footer className="footer-section">
-                <button className="Book-Now">Book Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="Book-Now" onClick={handleBookNowClick} >Book Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div>
             </footer>
+            {showModal && <BookAppointment onClose={closeModal} />}
+
         </div>
     );
 };

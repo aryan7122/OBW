@@ -20,6 +20,7 @@ import {
   ArrowRight,
   ArrowLeft,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 const images = [
   img1, // Replace with actual image paths
   img2,
@@ -48,6 +49,13 @@ const TeamSection = () => {
       handlePrevious();
     }
   };
+
+  const navigate = useNavigate();
+  
+  const HandleNavigation = (path, sectionId) => {
+    navigate(`${path}#${sectionId}`);
+  };
+
   return (
     <section className="team-section-">
       {/* <div className="team-images">
@@ -64,8 +72,8 @@ const TeamSection = () => {
        
       </div> */}
       <div className="slider-container" onWheel={handleWheel}>
-        <div className="team-images" style={{ "--index": currentIndex } }
->
+        <div className="team-images" style={{ "--index": currentIndex }}
+        >
           {images.map((img, index) => (
             <img
               key={index}
@@ -82,7 +90,7 @@ const TeamSection = () => {
           <button className="nav-btn right" onClick={handleNext} disabled={currentIndex >= images.length - visibleCards}>
             <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
           </button>
-         
+
         </div>
       </div>
       <div className="teams-container">
@@ -99,7 +107,12 @@ const TeamSection = () => {
               health support to meet your needs.
             </p>
           </div>
-          <button className="view-all">Meet The team  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+          <button className="view-all"
+            onClick={() => HandleNavigation("/about", "meet-section")}
+          >
+            Meet The team
+            <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+          </button>
 
         </div>
 

@@ -28,7 +28,7 @@ const treatments = [
 const OurValue = () => {
     return (
         <div className="OurValue-treatments">
-            <div className="title-sbt">Our Value</div>
+            <div className="title-sbt">Our Values</div>
             <header className="heading-section">
                 <h1 className="trending-title">
                     What We  <span className="heart"><img src={fallStr} alt="" /></span>      Stand For
@@ -40,7 +40,7 @@ const OurValue = () => {
 
             <div className="cards-container">
                 {treatments.map((treatment, index) => (
-                    <div key={index} className="card">
+                    <div key={index} className="card_">
                         <div className="card-image">
                             <img src={treatment.image} alt={treatment.title} className="" />
                         </div>

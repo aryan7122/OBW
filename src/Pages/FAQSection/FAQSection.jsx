@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Plus, Minus, ArrowRight } from "lucide-react";
 import "./FAQSection.scss";
 import faqImg from '../../assets/faq/Rectangle 3463667.png'
+import { useNavigate } from "react-router-dom";
 
 const faqs = [
     {
@@ -22,6 +23,11 @@ const FAQSection = () => {
     const toggleFAQ = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
     };
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
 
     return (
         <div className="faq-container">
@@ -29,7 +35,8 @@ const FAQSection = () => {
                 <h6 className="FAQ’s">FAQ’s</h6>
                 <h2>Frequently Asked Questions</h2>
                 <p>Got questions? We’re here to help! Chat with our team anytime or check our FAQ for common inquiries.</p>
-                <button className="get-in-touch">Get In Touch<ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="get-in-touch" onClick={() => HandleNavigation("/contact")}
+                >Get In Touch<ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
             </div>
 
             <div className="faq-right">

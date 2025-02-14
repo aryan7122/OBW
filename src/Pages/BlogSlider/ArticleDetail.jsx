@@ -244,7 +244,9 @@ const ArticleDetail = () => {
                         </div>
                     ))}
                 </div>
+                
             </div>
+            
         </>
     );
 };

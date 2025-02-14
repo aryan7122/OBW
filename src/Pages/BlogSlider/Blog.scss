@@ -73,6 +73,7 @@
     .slider-subheading {
       font-size: 16px;
       font-weight: 400;
+            font-family: 'Supreme-Regular', sans-serif;
       line-height: 24px;
       letter-spacing: -0.30000001192092896px;
       text-align: left;
@@ -298,6 +299,7 @@
       .card-p {
         font-size: 16px;
         font-weight: 400;
+              font-family: 'Supreme-Regular', sans-serif;
         line-height: 24px;
         text-align: left;
         color: #454545;
@@ -376,6 +378,7 @@
             .card-date {
               font-size: 16px;
               font-weight: 400;
+                    font-family: 'Supreme-Regular', sans-serif;
               line-height: 24px;
               text-align: left;
               color: #000000;
@@ -452,4 +455,36 @@
       }
     }
   }
+}
+
+
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+
+.pagination button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: #34160e;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination button:disabled {
+  background: #00575d45;
+  cursor: not-allowed;
 }
