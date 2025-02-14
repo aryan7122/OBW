@@ -33,7 +33,7 @@
   h1 {
     width: 770px;
     font-weight: 400;
-          font-family: 'Supreme-Regular', sans-serif;
+    font-family: "Supreme-Regular", sans-serif;
     font-size: 72px;
     line-height: 86.4px;
     letter-spacing: -4px;
@@ -43,20 +43,20 @@
     -webkit-text-fill-color: transparent;
     @media only screen and (max-width: 830px) {
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       font-size: 67px;
       line-height: 76.4px;
       width: 100%;
     }
     @media only screen and (max-width: 640px) {
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       font-size: 52px;
       line-height: 56.4px;
     }
     @media only screen and (max-width: 452px) {
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       font-size: 40px;
       line-height: 46.4px;
     }
@@ -65,7 +65,7 @@
   p {
     width: 770px;
     font-weight: 400;
-          font-family: 'Supreme-Regular', sans-serif;
+    font-family: "Supreme-Regular", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.3px;
@@ -103,7 +103,6 @@
       padding: 5px 6px 5px 15px;
       font-size: 16px;
     }
-    
 
     .arrow-icon {
       transition: 0.3s linear;
@@ -113,10 +112,10 @@
       width: 40px;
       height: 40px;
       padding: 5px;
-          @media only screen and (max-width: 400px) {
-            width: 30px;
-            height: 30px;
-          }
+      @media only screen and (max-width: 400px) {
+        width: 30px;
+        height: 30px;
+      }
     }
 
     &:hover {
@@ -145,6 +144,7 @@
   border-bottom: 1px solid #000000 !important;
   @media only screen and (max-width: 888px) {
     flex-direction: column;
+    border-bottom: none !important;
     gap: 20px;
     align-items: start;
   }
@@ -168,7 +168,7 @@
   }
   .p {
     font-weight: 400;
-          font-family: 'Supreme-Regular', sans-serif;
+    font-family: "Supreme-Regular", sans-serif;
     color: #171717;
     font-size: 16px;
     line-height: 24px;
@@ -201,7 +201,7 @@
 
   h3 {
     font-weight: 400;
-          font-family: 'Supreme-Regular', sans-serif;
+    font-family: "Supreme-Regular", sans-serif;
     color: #000000;
     opacity: 0.7;
     font-size: 16px;
