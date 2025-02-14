@@ -32,6 +32,7 @@ function Navbar() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+        window.scrollTo(0, 0);
     };
 
     const isActive = (path) => {
@@ -59,12 +60,12 @@ function Navbar() {
                 {/* Navigation Links */}
                 {!isVisible &&
                     <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
-                        <li><Link to="/" className={isActive('/')}>HOME</Link></li>
-                        <li><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
-                        <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
-                        <li><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
-                        <li><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
-                        <li><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                     </ul>
                 }
 

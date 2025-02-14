@@ -55,7 +55,7 @@
         font-size: 38px;
         line-height: 46px;
         width: 100%;
-        img{
+        img {
           width: 40px;
         }
       }
@@ -65,8 +65,8 @@
         font-size: 32px;
         line-height: 36px;
         img {
-            width: 35px;
-          }
+          width: 35px;
+        }
       }
     }
 
@@ -115,7 +115,7 @@
     }
     @media only screen and (max-width: 350px) {
       overflow: hidden;
-         }
+    }
     // position: fixed;
     h3 {
       font-weight: 700;
@@ -140,9 +140,9 @@
         flex-direction: row;
       }
       @media only screen and (max-width: 350px) {
-      //  border: 1px solid red;
-       overflow: auto !important;
-      white-space: nowrap;
+        //  border: 1px solid red;
+        overflow: auto !important;
+        white-space: nowrap;
       }
       li {
         cursor: pointer;
@@ -209,8 +209,8 @@
       }
       @media only screen and (max-width: 800px) {
         min-width: 98%;
-              min-height: 540px;
-              margin-bottom: 25px;
+        min-height: 540px;
+        margin-bottom: 25px;
       }
       @media only screen and (max-width: 660px) {
         min-width: 350px !important;
@@ -236,10 +236,10 @@
           width: 100% !important;
           // min-height: 600px;
         }
-                 @media only screen and (max-width: 370px) {
-                   height: 250px !important;
-                   border-radius: 10px;
-                 }
+        @media only screen and (max-width: 370px) {
+          height: 250px !important;
+          border-radius: 10px;
+        }
       }
       .ct-tm {
         display: flex;
@@ -427,25 +427,28 @@
       @media only screen and (max-width: 800px) {
         grid-column: span 1;
         // max-width: 100%;
-        height: 670px;
-        }
+        height: 490px;
+      }
       @media only screen and (max-width: 519px) {
         height: 490px;
-        .card-image{
+        .card-image {
           // height: 300px;
         }
-        }
+      }
       @media only screen and (max-width: 370px) {
         height: 400px !important;
-        }
+      }
       .card-image {
         height: 450px;
+        @media only screen and (max-width: 800px) {
+          height: 300px;
+        }
         @media only screen and (max-width: 519px) {
-            height: 300px;
-          }
-             @media only screen and (max-width: 370px) {
-               height: 250px !important;
-             }
+          height: 300px;
+        }
+        @media only screen and (max-width: 370px) {
+          height: 250px !important;
+        }
       }
     }
   }

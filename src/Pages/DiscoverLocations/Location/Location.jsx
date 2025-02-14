@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import './Location.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Location = () => {
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+     
     return (
         <div className="location-container">
             <header className="location-header">
@@ -13,7 +20,7 @@ const Location = () => {
                         haircare, and aesthetic treatments to elevate your beauty routine.
                     </p>
                 </div>
-                <button className="get-in-touch">
+                <button className="get-in-touch" onClick={() => HandleNavigation("/contact")}>
                     Get In Touch <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                 </button>
             </header>
@@ -33,6 +40,7 @@ const Location = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     );
 };
