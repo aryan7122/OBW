@@ -570,3 +570,33 @@
         width: 94.6vw;
   }
 }
+@media only screen and (max-width: 364px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-79.5vw) !important;
+        width: 94.6vw;
+  }
+}
+@media only screen and (max-width: 357px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-79.1vw) !important;
+        width: 94.4vw;
+  }
+}
+@media only screen and (max-width: 346px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-78.5vw) !important;
+        width: 94.3vw;
+  }
+}
+@media only screen and (max-width: 337px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-78vw) !important;
+        width: 94.3vw;
+  }
+}
+@media only screen and (max-width: 327px) {
+  .navbar-container .navbar-actions .search-bar .card_search {
+        transform: translateX(-77.2vw) !important;
+        width: 94vw;
+  }
+}

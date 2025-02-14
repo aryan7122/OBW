@@ -145,19 +145,19 @@ const TeamSection = () => {
         </div>
 
         <motion.div className="team-stats" ref={observerRef}
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // transition={{ duration: 0.4 }}
+        // initial={{ opacity: 0 }}
+        // animate={{ opacity: 1 }}
+        // transition={{ duration: 0.4 }}
         >
-          {stats.map((stat,index) => (
+          {stats.map((stat, index) => (
             <motion.div className="stat-item" key={stat.id}
-              // initial={{ opacity: 0, y: -40 }}
-              // whileInView={{ opacity: 1, y: 0 }}
-              // transition={{
-              //   duration: 0.4,
-              //   delay: index * 0.2, // Delay each stat by 0.2s for a staggered effect
-              // }}
-              // viewport={{ once: true, amount: 0 }}
+            // initial={{ opacity: 0, y: -40 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{
+            //   duration: 0.4,
+            //   delay: index * 0.2, // Delay each stat by 0.2s for a staggered effect
+            // }}
+            // viewport={{ once: true, amount: 0 }}
             >
               <div>
                 <h3 id={stat.id} className="stat-number">0{stat.isPercentage ? "%" : "+"}</h3>
