@@ -517,7 +517,7 @@ function ClinicalConcerns() {
                             whileHover={{ scale: 1.0 }}
                             whileTap={{ scale: 0.95 }}
                             whileDrag={{ scale: 0.9, rotate: 10 }}
-                            drag
+                            // drag
                             key={tab}
                             initial={{ opacity: 0, x: 40 }}
                             whileInView={{ opacity: 1, x: 0 }}
