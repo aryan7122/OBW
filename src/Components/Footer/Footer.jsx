@@ -3,11 +3,17 @@ import "./Footer.scss";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import logo from '../../assets/footer/logo.svg'
 import { FaXTwitter } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
     return (
         <footer className="footer">
             <div className="footer-container">
-                <div className="footer-logo">
+                <div className="footer-logo" onClick={() => HandleNavigation("/")}>
                     <img src={logo} alt="OBW Clinic Logo" />
                 </div>
                 <nav className="footer-nav">
