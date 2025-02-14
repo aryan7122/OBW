@@ -4,8 +4,14 @@ import img1 from '../../../assets/about/1e0dabba7f68f9e31e6835489adf12f7.jpg'
 import img2 from '../../../assets/about/3accd80b7ddfc415aab514c71ade1c85.jpg'
 import icon1 from '../../../assets/about/ida.svg'
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const MissionVision = () => {
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
     return (
         <section className="mission-vision">
             <div className="container">
@@ -51,7 +57,7 @@ const MissionVision = () => {
                         <p className="description">
                             We are dedicated to creating safe and affirming environments. We believe in respect, inclusivity, and accessibility of skin healthcare for all.
                         </p>
-                        <button className="BookAppointmentNow">See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                        <button className="BookAppointmentNow" onClick={() => HandleNavigation("/treatment")}>See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
 
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import "./AboutUsHero.scss";
 import { ArrowRight } from "lucide-react";
 
 const AboutUsHero = () => {
+  
   return (
     <div className="about-us">
       <div className="element1"></div>

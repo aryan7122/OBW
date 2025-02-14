@@ -10,7 +10,7 @@ import fallStr from '../../../assets/about/team.svg'
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { AiOutlineDribbble } from "react-icons/ai";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const data = [
     {
@@ -74,6 +74,12 @@ const OurTeam = () => {
             }
         }
     }, [location]);
+
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
     return (
         <div className="OurTeam-" id="meet-section">
             <div className="title-sbt">Our Team</div>
@@ -111,7 +117,7 @@ const OurTeam = () => {
                     <h3>We’re hiring!</h3>
                     <p>Our team is growing fast and we’re always looking for smart people.</p>
                 </div>
-                <button className="Book-Now">View open roles  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="Book-Now" onClick={() => HandleNavigation("/contact")}>View open roles  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 {/* <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div> */}
             </footer>
         </div>

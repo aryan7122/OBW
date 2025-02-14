@@ -7,6 +7,7 @@ import img4 from '../../../assets/TrendingTreatments/img4.jpeg'
 import { ArrowRight, ChevronRight } from "lucide-react";
 // import { Button } from "@/components/ui/button";
 import fallStr from '../../../assets/about/fallStr.svg'
+import { useNavigate } from "react-router-dom";
 const treatments = [
     {
         title: "Integrity",
@@ -26,6 +27,11 @@ const treatments = [
 ];
 
 const OurValue = () => {
+    const navigate = useNavigate();
+    const HandleNavigation = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
     return (
         <div className="OurValue-treatments">
             <div className="title-sbt">Our Values</div>
@@ -51,7 +57,7 @@ const OurValue = () => {
             </div>
 
             <footer className="footer-section">
-                <button className="Book-Now">Get in touch now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="Book-Now" onClick={() => HandleNavigation("/contact")}>Get in touch now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 {/* <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div> */}
             </footer>
         </div>
