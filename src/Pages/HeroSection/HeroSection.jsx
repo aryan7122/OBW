@@ -13,6 +13,7 @@ const HeroSection = () => {
         };
     
     return (
+        <>
         <div className="hero-section">
             <div className="hero_bg">
                 <div className="content">
@@ -39,9 +40,9 @@ const HeroSection = () => {
                     />
                 </div>
             </div>
+            </div>
             {showModal && <BookAppointment onClose={closeModal} />}
-
-        </div>
+        </>
     );
 };
 

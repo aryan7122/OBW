@@ -22,24 +22,24 @@ const BookAppointment = ({ onClose }) => {
                 </p>
                 <form className="modal-form">
                     <div className="form-row">
-                        <div className="form-group">
+                        <div className="form_group">
                             <label>Name</label>
                             <input type="text" placeholder="Enter your name" />
                         </div>
 
-                        <div className="form-group">
+                        <div className="form_group">
                             <label>Company Name</label>
                             <input type="text" placeholder="Enter your company name" />
                         </div>
                     </div>
 
                     <div className="form-row">
-                        <div className="form-group">
+                        <div className="form_group">
                             <label>Email</label>
                             <input type="email" placeholder="Enter your email" />
                         </div>
 
-                        <div className="form-group date-group">
+                        <div className="form_group date-group">
                             <label>Date</label>
                             <div className="date-input-wrapper">
                                 <DatePicker
@@ -61,7 +61,7 @@ const BookAppointment = ({ onClose }) => {
                     </div>
 
                     <div className="form-row">
-                        <div className="form-group">
+                        <div className="form_group">
                             <label>Location</label>
                             <select>
                                 <option value="">Select Location</option>
@@ -71,7 +71,7 @@ const BookAppointment = ({ onClose }) => {
                             </select>
                         </div>
 
-                        <div className="form-group">
+                        <div className="form_group">
                             <label>Treatment</label>
                             <select>
                                 <option value="">Select Treatment</option>
@@ -83,7 +83,7 @@ const BookAppointment = ({ onClose }) => {
                         </div>
                     </div>
 
-                    <div className="form-group textarea-group">
+                    <div className="form_group textarea-group">
                         <label>How can we help?</label>
                         <textarea rows="4" placeholder="Briefly tell us how we can help"></textarea>
                         {/* <span className="textarea-span">Please be specific</span>

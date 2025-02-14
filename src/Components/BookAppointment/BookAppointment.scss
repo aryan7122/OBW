@@ -106,7 +106,7 @@
 
 .modal-title {
   font-weight: 400;
-        font-family: 'Supreme-Regular', sans-serif;
+  font-family: "Supreme-Regular", sans-serif;
   font-size: 50px;
   color: #371d1d;
   text-align: center;
@@ -157,17 +157,24 @@
       // width: 500px;
       width: 100%;
     }
-    .form-group {
+    .form_group {
       display: flex;
       flex-direction: column;
       gap: 8px;
       label {
         color: #171717;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 18px;
         line-height: 25.2px;
         letter-spacing: 0%;
+      }
+      @media only screen and (max-width: 730px) {
+        // margin-top: 5px;
+        &:nth-child(2) {
+          // border: 1px solid red !important;
+          margin-top: 10px;
+        }
       }
 
       input,
@@ -177,7 +184,7 @@
         border-radius: 4px;
         min-width: 300px;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0%;
@@ -282,7 +289,7 @@
       resize: none;
       min-width: 300px;
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0%;
