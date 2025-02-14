@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./AboutUsHero.scss";
 import { ArrowRight } from "lucide-react";
+import BookAppointment from "../../../Components/BookAppointment/BookAppointment";
 
 const AboutUsHero = () => {
-  
+  const [showModal, setShowModal] = useState(false);
+  const handleBookNowClick = () => {
+    setShowModal(true);
+  };
+  const closeModal = () => {
+    setShowModal(false);
+  };
   return (
+    <>
     <div className="about-us">
       <div className="element1"></div>
       <div className="element2"></div>
@@ -19,10 +27,13 @@ const AboutUsHero = () => {
           harnessing the power of advanced technology to ensure optimal results.
         </p>
         {/* <button></button> */}
-        <button className="BookAppointmentNow">Book Appointment Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+          <button onClick={handleBookNowClick} className="BookAppointmentNow">Book Appointment Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
 
       </div>
-    </div>
+      </div>
+      {showModal && <BookAppointment onClose={closeModal} />}
+
+    </>
   );
 };
 

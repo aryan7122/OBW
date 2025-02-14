@@ -92,7 +92,7 @@ const OurTeam = () => {
                         Meet our team of experts who are dedicated to providing you with the best solutions. With years of experience in their respective fields, they are here to share their knowledge and insights to help you succeed. Get to know them and discover how they can assist you on your journey!
                     </p>
                 </div>
-                <button className="Contact-Now">Contact us now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button onClick={() => HandleNavigation("/contact")} className="Contact-Now">Contact us now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
             </header>
 
             <div className="cards-container">

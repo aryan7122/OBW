@@ -3,13 +3,21 @@ import "./BookAppointment.scss";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { ArrowRight } from "lucide-react";
+import { motion } from 'framer-motion';
 
 const BookAppointment = ({ onClose }) => {
     const [selectedDate, setSelectedDate] = useState(null);
 
     return (
-        <div className="modal-overlay">
-            <div className="modal-container">
+        <motion.div className="modal-overlay"
+          
+        >
+            <motion.div className="modal-container"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 <button className="close-button" onClick={onClose}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" color="#000000" fill="none">
                         <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -95,8 +103,8 @@ const BookAppointment = ({ onClose }) => {
                         Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                     </button>
                 </form>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 

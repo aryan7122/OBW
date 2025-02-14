@@ -4,6 +4,7 @@ import logo from '../../assets/footer/logo.svg'
 import { Menu, X, Search, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import BookAppointment from '../BookAppointment/BookAppointment';
+import { motion } from 'framer-motion';
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -51,7 +52,13 @@ function Navbar() {
 
     return (
         <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
-            <nav className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}>
+            <motion.nav
+                className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7 }}
+                viewport={{ once: true, amount: 0.1 }}
+            >
                 {/* Logo Section */}
                 <div className="navbar-logo">
                     <div className="logo-circle"><img src={logo} alt="logo" /></div>
@@ -107,7 +114,7 @@ function Navbar() {
                     </>
                 }
 
-            </nav>
+            </motion.nav>
             {showModal && <BookAppointment onClose={closeModal} />}
 
         </header >

@@ -10,6 +10,7 @@
   align-items: center;
   z-index: 1000;
   backdrop-filter: blur(8px);
+  transition: 0.3s linear;
 }
 
 .modal-container {
