@@ -8,6 +8,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { useNavigate } from "react-router-dom";
 // import { Button } from "@/components/ui/button";
+import { motion } from 'framer-motion';
 
 const treatments = [
     {
@@ -50,7 +51,11 @@ const TrendingTreatments = () => {
             <div className="title-sbt">TRENDING</div>
             <header className="heading-section">
                 <h1 className="trending-title">
-                    Trending <span className="heart">&#x2764;</span> Treatments
+                    Trending <motion.span className="heart"
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1 }}
+                        viewport={{ once: true, amount: 0.2 }}>&#x2764;</motion.span> Treatments
                 </h1>
                 <p className="description">
                     Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
@@ -59,15 +64,25 @@ const TrendingTreatments = () => {
 
             <div className="cards-container">
                 {treatments.map((treatment, index) => (
-                    <div key={index} className="card">
+                    <motion.div
+                        key={index}
+                        className="card"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: { delay: index * 0.2, duration: 0.6, ease: "easeOut" }
+                        }}
+                        viewport={{ once: true, amount: 0.3 }}
+                    >
                         <div className="card-image">
                             <img src={treatment.image} alt={treatment.title} className="" />
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-description">{treatment.description}</p>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </div>;
 
             <footer className="footer-section">
                 <button className="Book-Now" onClick={handleBookNowClick} >Book Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>

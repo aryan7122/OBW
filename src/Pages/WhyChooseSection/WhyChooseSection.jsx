@@ -4,6 +4,7 @@ import img1 from '../../assets/WhyChooseSection/Frame 1597883017.svg'
 import img2 from '../../assets/WhyChooseSection/Confident Hispanic Female Doctor in Hospital Setting.svg'
 import img3 from '../../assets/WhyChooseSection/Serene Beauty Portrait.svg'
 import icon1 from '../../assets/WhyChooseSection/ok.svg'
+import { motion } from 'framer-motion';
 
 const WhyChooseSection = () => {
     return (
@@ -11,28 +12,57 @@ const WhyChooseSection = () => {
             <div className="content-container">
                 <h2 className="title">
                     Why Choose
-                    {' '} <img src={icon1} />  {' '} OBW?
+                    {' '}
+                    <motion.img src={icon1}
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.2 }} />  {' '} OBW?
                 </h2>
                 <p className="description">
-                    Lorem ipsum dolor sit amet consectetur. Ultrices nisl id eu lorem. Turpis amet gravida dui facilisi arcu. At magna sed felis nisi nunc metus. met consectetur. Ultrices nisl id eu lorem. Turpis amet 
+                    Lorem ipsum dolor sit amet consectetur. Ultrices nisl id eu lorem. Turpis amet gravida dui facilisi arcu. At magna sed felis nisi nunc metus. met consectetur. Ultrices nisl id eu lorem. Turpis amet
                 </p>
                 <div className="image-grid">
-                    <div className="image-card">
+                    <motion.div
+                        className="image-card"
+                        initial={{ opacity: 0, y: 50 }} 
+                        whileInView={{ opacity: 1, y: 0 }} 
+                        transition={{ duration: 0.6, delay: 0.2 }} 
+                        viewport={{ once: true, amount: 0.2 }} 
+                    >
                         <img src={img1} alt="Happy Woman" />
                         {/* <p>Certified Dermatologists</p> */}
-                    </div>
-                    <div className="image-card">
+                    </motion.div>
+
+                    <motion.div
+                        className="image-card"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }} // Adjusted delay for staggered effect
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
                         <img src={img2} alt="Care Image" />
                         <p>Personalized Care</p>
-                    </div>
-                    <div className="image-card">
+                    </motion.div>
+
+                    <motion.div
+                        className="image-card"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }} // Adjusted delay for staggered effect
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
                         <img src={img3} alt="Care Image" />
                         <p>Personalized Care</p>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="info-grid">
-                    <div className="info-card green">
+                    <motion.div className="info-card green"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        viewport={{ once: true, amount: 0.2 }}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="#000000" fill="none">
                             <path d="M14.9805 7.01556C14.9805 7.01556 15.4805 7.51556 15.9805 8.51556C15.9805 8.51556 17.5687 6.01556 18.9805 5.51556" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M9.99491 2.02134C7.49644 1.91556 5.56618 2.20338 5.56618 2.20338C4.34733 2.29053 2.01152 2.97385 2.01154 6.96454C2.01156 10.9213 1.9857 15.7993 2.01154 17.7439C2.01154 18.932 2.74716 21.7033 5.29332 21.8518C8.38816 22.0324 13.9628 22.0708 16.5205 21.8518C17.2052 21.8132 19.4847 21.2757 19.7732 18.7956C20.0721 16.2263 20.0126 14.4407 20.0126 14.0157" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -44,8 +74,12 @@ const WhyChooseSection = () => {
                         <p>
                             OBW Clinical Services is certified by leading dermatology and cosmetic boards, ensuring that we meet the highest standards in the industry
                         </p>
-                    </div>
-                    <div className="info-card purple">
+                    </motion.div>
+                    <motion.div className="info-card purple"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                        viewport={{ once: true, amount: 0.2 }}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="#000000" fill="none">
                             <path d="M15 7.5C15 7.5 15.5 7.5 16 8.5C16 8.5 17.5882 6 19 5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M22 7C22 9.76142 19.7614 12 17 12C14.2386 12 12 9.76142 12 7C12 4.23858 14.2386 2 17 2C19.7614 2 22 4.23858 22 7Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
@@ -58,8 +92,12 @@ const WhyChooseSection = () => {
                         <p>
                             To make our treatments accessible to everyone, we offer flexible payment plans and options, ensuring affordability without compromising quality.
                         </p>
-                    </div>
-                    <div className="info-card pink">
+                    </motion.div>
+                    <motion.div className="info-card pink"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                        viewport={{ once: true, amount: 0.2 }}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" color="#000000" fill="none">
                             <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M8 15C8.91212 16.2144 10.3643 17 12 17C13.6357 17 15.0879 16.2144 16 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -69,7 +107,7 @@ const WhyChooseSection = () => {
                         <p>
                             Our commitment doesn’t end with the treatment. We provide post-treatment care and guidance to ensure long-lasting results &address any concerns you
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

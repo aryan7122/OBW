@@ -3,6 +3,8 @@ import './HappyClients.scss';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import happyImg from '../../assets/HappyClients/happy.svg'
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 const data = [
     {
         name: "Lalita Thakur",
@@ -50,7 +52,14 @@ const HappyClients = () => {
         <div className="happy-slider-container">
             <div className="content_top">
                 <div>
-                    <h2 className="slider-heading">Hear From Our Happy  <img src={happyImg} />     Clients</h2>
+                    <h2 className="slider-heading">Hear From Our Happy
+                        <motion.img src={happyImg}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                        />
+                        Clients</h2>
                     <p className="slider-subheading">
                         Discover the insights and feedback from our valued clients as they share their personal experiences and stories about working with us! Their testimonials highlight the positive impact we've made and the exceptional service we strive to provide.
                     </p>
@@ -64,7 +73,11 @@ const HappyClients = () => {
 
                 <div className="slider-cards" style={{ "--index": currentIndex }}>
                     {data.map((blog, index) => (
-                        <div key={index} className="slider-card">
+                        <motion.div key={index} className="slider-card"
+                            initial={{ opacity: 0, x: 40 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true, amount: 0.1 }}>
                             <img src={blog.image} alt={blog?.title} className="card-image" />
                             <div className="card_blur">
                                 <div className='aut_text-img'>
@@ -75,7 +88,16 @@ const HappyClients = () => {
                                         {/* Stars display */}
                                         <div className="stars">
                                             {Array.from({ length: 5 }).map((_, index) => (
-                                                <span key={index}>
+                                                <motion.span
+                                                    key={index}
+                                                    initial={{ opacity: 0, scale: 0 }}
+                                                    whileInView={{ opacity: 1, scale: 1 }}
+                                                    transition={{
+                                                        duration: 0.6,
+                                                        delay: index * 0.2, // Adds a delay for each star, making them appear one by one
+                                                    }}
+                                                    viewport={{ once: true, amount: 0.2 }}
+                                                >
                                                     <svg
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewBox="0 0 24 24"
@@ -85,8 +107,9 @@ const HappyClients = () => {
                                                     >
                                                         <path d="M13.7276 3.44418L15.4874 6.99288C15.7274 7.48687 16.3673 7.9607 16.9073 8.05143L20.0969 8.58575C22.1367 8.92853 22.6167 10.4206 21.1468 11.8925L18.6671 14.3927C18.2471 14.8161 18.0172 15.6327 18.1471 16.2175L18.8571 19.3125C19.417 21.7623 18.1271 22.71 15.9774 21.4296L12.9877 19.6452C12.4478 19.3226 11.5579 19.3226 11.0079 19.6452L8.01827 21.4296C5.8785 22.71 4.57865 21.7522 5.13859 19.3125L5.84851 16.2175C5.97849 15.6327 5.74852 14.8161 5.32856 14.3927L2.84884 11.8925C1.389 10.4206 1.85895 8.92853 3.89872 8.58575L7.08837 8.05143C7.61831 7.9607 8.25824 7.48687 8.49821 6.99288L10.258 3.44418C11.2179 1.51861 12.7777 1.51861 13.7276 3.44418Z" />
                                                     </svg>
-                                                </span>
+                                                </motion.span>
                                             ))}
+
 
                                         </div>
                                     </div>
@@ -96,7 +119,7 @@ const HappyClients = () => {
                                     <path d="M15.9453 12.3948C15.7686 13.0215 14.9333 13.4644 13.2629 14.3502C11.648 15.2064 10.8406 15.6346 10.1899 15.4625C9.9209 15.3913 9.6758 15.2562 9.47812 15.0701C9 14.6198 9 13.7465 9 12C9 10.2535 9 9.38018 9.47812 8.92995C9.6758 8.74381 9.9209 8.60868 10.1899 8.53753C10.8406 8.36544 11.648 8.79357 13.2629 9.64983C14.9333 10.5356 15.7686 10.9785 15.9453 11.6052C16.0182 11.8639 16.0182 12.1361 15.9453 12.3948Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
                                 </svg></button>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 

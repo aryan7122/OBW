@@ -127,7 +127,11 @@ const TeamSection = () => {
           <div>
             <h2>
               Our qualified and experienced {' '}
-              <img src={icon1} alt="" /> {' '}
+              <motion.img src={icon1} alt=""
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true, amount: 0.2 }}/> {' '}
               team
             </h2>
             <p>
