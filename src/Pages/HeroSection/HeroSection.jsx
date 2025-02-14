@@ -17,10 +17,10 @@ const HeroSection = () => {
                         <button className="appointment-button">
                             Book Appointment Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                         </button>
-                        <button className="secondary-btn">
+                        {/* <button className="secondary-btn">
                             <CirclePlay size={32} color="#00CFDE" strokeWidth={3} absoluteStrokeWidth />
                             See How It Works
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                 <div className="hero-image">

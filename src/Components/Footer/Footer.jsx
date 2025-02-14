@@ -11,11 +11,11 @@ const Footer = () => {
                     <img src={logo} alt="OBW Clinic Logo" />
                 </div>
                 <nav className="footer-nav">
-                    <a href="#">About us</a>
-                    <a href="#">Treatment</a>
-                    <a href="#">Contact US</a>
-                    <a href="#">Locations</a>
-                    <a href="#">Blogs</a>
+                    <a href="/about">About us</a>
+                    <a href="/treatment">Treatment</a>
+                    <a href="/contact">Contact US</a>
+                    <a href="/locations">Locations</a>
+                    <a href="/blogs">Blogs</a>
                 </nav>
                 <div className="footer-icons">
                     <FaFacebook className="icon" />
