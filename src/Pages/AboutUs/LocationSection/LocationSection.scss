@@ -156,22 +156,26 @@
     .map-container {
       iframe {
         width: 780px;
-        height: 430px;
+        height: 660px;
         border-radius: 8px;
-        @media only screen and (max-width: 1260px) {
+        @media only screen and (max-width: 1360px) {
           width: 700px;
-          height: 450px;
+          // height: 450px;
+        }
+        @media only screen and (max-width: 1260px) {
+          width: 600px;
+          // height: 450px;
+          height: 700px;
         }
         @media only screen and (max-width: 1120px) {
-          width: 600px;
-          height: 500px;
+          width: 500px;
         }
         @media only screen and (max-width: 1000px) {
-          width: 500px;
-          height: 500px;
+          width: 450px;
+          // height: 500px;
         }
         @media only screen and (max-width: 900px) {
-          width: 90vw;
+          width: 93vw;
         }
         @media only screen and (max-width: 535px) {
           width: 88vw !important;

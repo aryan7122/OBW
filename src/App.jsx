@@ -60,7 +60,7 @@ function App() {
               <>
                 <AboutUsHero />
                 <OurValue />
-                <MissionVision />
+                {/* <MissionVision /> */}
                 <OurTeam />
                 <LocationSection />
                 <FirstStep />

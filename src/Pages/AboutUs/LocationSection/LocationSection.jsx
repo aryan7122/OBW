@@ -3,19 +3,24 @@ import "./LocationSection.scss";
 import icon1 from '../../../assets/about/locationIcon.svg'
 const locations = [
     {
-        name: "Kodipalya",
-        address: "Kodipalya, Bengaluru, Karnataka 560060",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15556.814936208113!2d77.48363884168423!3d12.894617265327124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f3c04b90dd1%3A0x7111e9e1c3f2c737!2sKodipalya%2C%20Bengaluru%2C%20Karnataka%20560060!5e0!3m2!1sen!2sin!4v1739163341793!5m2!1sen!2sin"
+        name: "Banashankari",
+        address: "203, 100 Feet Rd, near Polar Bear Ice Cream, Banashankari 6th Stage 3rd Block, Banashankari Stage 6, Chikkegowdanapalya, Bengaluru, Karnataka 560109",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27462.160178895465!2d77.50609012863052!3d12.877508413200026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f4ec1bdb403%3A0x9025e3ff7e907cbf!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739600998644!5m2!1sen!2sin"
     },
     {
-        name: "R.R Nagar",
-        address: "123, 5th Stage, Rajarajeshwari Nagar, Bengaluru, Karnataka 560060",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d959.0013635174199!2d77.51387976821297!3d12.90478723680714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f084e1263a3%3A0xb70616db18b9e04!2s123%2C%205th%20Stage%2C%20Rajarajeshwari%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560060!5e0!3m2!1sen!2sin!4v1739163493679!5m2!1sen!2sin"
+        name: "Kanakapura Main Rd",
+        address: "No. 3 2nd floor, Kanakapura Main Rd, above Tanishq Jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1237.4005569027722!2d77.54510188463037!3d12.879024934708173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5bea81491d%3A0xacd55621ca8d33c2!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739601210644!5m2!1sen!2sin"
     },
     {
-        name: "Kanakapura Road",
-        address: "Kanakapura, Karnataka 562117",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25568.320604050605!2d77.40575001915674!3d12.547972578232416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae58514a06ef17%3A0x2b7a698976431240!2sKanakapura%2C%20Karnataka%20562117!5e0!3m2!1sen!2sin!4v1739163550354!5m2!1sen!2sin"
+        name: "Rajarajeshwari Nagar",
+        address: "No 2, Balarama Layout, Krishna Garden Main Road, near Happy Home Super Market, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d328.89939542417466!2d77.50870152764773!3d12.915444510330301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f024bd73595%3A0x38a7ddf1d4ef624c!2s2%2C%20Balarama%20Layout%2C%20Rajarajeshwari%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560098!5e0!3m2!1sen!2sin!4v1739601355706!5m2!1sen!2sin"
+    },
+    {
+        name: "Kodipalya Rd",
+        address: "Shop No 6 & 7, Opp Vasthugreens Apartments Near Gudde Anjineya Temple, 1, Kodipalya Rd, opposite to Vaastu Greens, Kengeri, Bengaluru, Karnataka 560060 ",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.042755642787!2d77.48615187461691!3d12.904972316336432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fb9fdaa0f69%3A0xc9a5398e6c62bee2!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739601897930!5m2!1sen!2sin"
     }
 ];
 

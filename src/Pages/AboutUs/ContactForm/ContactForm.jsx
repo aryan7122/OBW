@@ -68,7 +68,7 @@ const ContactForm = () => {
                             </div>
                         </div>
                         <div className="form-group radio-section">
-                            <label>Outlet</label>
+                            <label>Our Location</label>
                             <div className="radio-options">
                                 <label><input type="radio" name="outlet" /> R.R Nagar</label>
                                 <label><input type="radio" name="outlet" /> Kodipalya</label>
