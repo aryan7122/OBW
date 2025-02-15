@@ -40,6 +40,33 @@ function Blog() {
             category: "Skin",
         },
         {
+            title: "Laser Hair Removal: Say Goodbye to Unwanted Hair Forever",
+            p: "Discover how Laser Hair Removal at OBW Clinic can help you achieve silky smooth skin with a painless and long-lasting solution.",
+            author: "Aryan Solanki",
+            authorImg: "https://img.freepik.com/free-photo/portrait-smiling-man-eyeglasses_23-2149374636.jpg?t=st=1739619000~exp=1739622600~hmac=6a8b6890be53b7a1a2a51d7a6cde2de89dc2f2e86d5d1699a19df9e6b1b76a1f&w=1060",
+            date: "25 January 2025",
+            image: "https://img.freepik.com/free-photo/silly-adorable-girl-showing-quotation-marks-gesture-smiling-happy_176420-20776.jpg?t=st=1739618135~exp=1739621735~hmac=448c2e55fe5a3976818a52005706bb589dcabeef93980da6d9f9fab2090f9d1e&w=1060",
+            category: "Skin"
+        },
+        {
+            title: "IV Therapy: The Ultimate Wellness Boost for Your Body",
+            p: "Discover the benefits of IV Therapy and how it can instantly boost your energy, hydration, and overall wellness.",
+            author: "Aryan Sawant",
+            authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
+            date: "Feb 5, 2025",
+            image: "https://img.freepik.com/free-photo/woman-sportwear-holds-fruits_1157-37384.jpg?t=st=1739619694~exp=1739623294~hmac=9bd1599b839f4a4c34782a3c284b3f035462eed5041e686ecf813f68e96160d5&w=1060",
+            category: "Wellness",
+        },
+        {
+            title: "Carbon Laser Peel: The Ultimate Treatment for Clear & Radiant Skin",
+            p: "Discover how Carbon Laser Peel can give you flawless, glowing skin by removing impurities and boosting collagen production.",
+            author: "Aryan Sawant",
+            authorImg: "https://img.freepik.com/free-photo/girl-with-black-mask-lies-table-spa-saloon_8353-5670.jpg?t=st=1739620246~exp=1739623846~hmac=fa5c83525da73d3cb2b601c8094ff55e8cc9d6797416413f95ebd48ecd741070&w=1060",
+            date: "Feb 15, 2025",
+            image: "https://img.freepik.com/free-photo/girl-with-black-mask-lies-table-spa-saloon_8353-5670.jpg?t=st=1739620246~exp=1739623846~hmac=fa5c83525da73d3cb2b601c8094ff55e8cc9d6797416413f95ebd48ecd741070&w=1060",
+            category: "Skin"
+        },
+        {
             title: "Top 5 Anti-Aging Treatments for Timeless Beauty",
             p: "Explore the most effective anti-aging solutions, from Botox to fillers, and discover how they help reduce fine lines, restore elasticity, and enhance your natural glow",
             author: "Sameer Devale",
@@ -116,11 +143,14 @@ function Blog() {
     //         ? blogs
     //         : blogs.filter((blog) => blog.category === selectedCategory);
     const navigate = useNavigate();
-    const HandleNavigation = (path) => {
-        navigate(path);
+    // const HandleNavigation = (path) => {
+    //     navigate(path);
+    // };
+    const HandleNavigation = (title) => {
+        const formattedTitle = title.toLowerCase().replace(/\s+/g, "-"); // Slug conversion
         window.scrollTo(0, 0);
+        navigate(`/blog-detail/${formattedTitle}`);
     };
-
     // 
 
     // Category filtering logic
@@ -201,7 +231,7 @@ function Blog() {
                                             </div>
                                         </div>
                                         <button
-                                            onClick={() => HandleNavigation("/blog-detail")}
+                                            onClick={() => HandleNavigation(`${blog?.title}`)}
                                             className="read-more-btn">
                                             Read Full Blog
                                         </button>
