@@ -20,7 +20,10 @@ const WhyChooseSection = () => {
                         viewport={{ once: true, amount: 0.2 }} />  {' '} OBW?
                 </h2>
                 <p className="description">
-                    Lorem ipsum dolor sit amet consectetur. Ultrices nisl id eu lorem. Turpis amet gravida dui facilisi arcu. At magna sed felis nisi nunc metus. met consectetur. Ultrices nisl id eu lorem. Turpis amet
+                    At OBW Clinic, we are committed to providing expert-driven, result-oriented aesthetic treatments tailored to your unique needs. Our team of skilled dermatologists and specialists uses cutting-edge technology to ensure safe, effective, and long-lasting results. We believe in a holistic approach to beauty and wellness, combining science-backed treatments with personalized care. Our clinic uses premium, dermatologically tested products, ensuring the highest quality standards for your skin and body. With a luxurious and comfortable ambiance, we strive to make every visit a rejuvenating experience.
+                    <br />
+                    <br />
+                    Experience the OBW difference—where beauty meets confidence!
                 </p>
                 <div className="image-grid">
                     <motion.div
