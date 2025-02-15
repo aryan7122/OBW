@@ -23,16 +23,14 @@ const HeroSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
-                        >Experience true elegance and indulge in sophistication.</motion.h1>
+                        >Discover the Art of Timeless Beauty & Wellness. </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
                         >
-                            At OBW, we blend luxury and personalized skincare to rejuvenate your
-                            beauty. Discover the artistry of our expert team dedicated to your
-                            unique needs.
+                            Rejuvenate your skin, restore your glow, and redefine confidence with expert care at OBW. Experience personalized treatments designed to bring out your best self. 
                         </motion.p>
                         <motion.div className="buttons"
                             initial={{ opacity: 0, y: 30 }}

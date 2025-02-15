@@ -20,8 +20,8 @@ const RR = () => {
 
             <div className="content">
                 <div className="top_title">
-                    <p className="address">No 2, Balarama Layout, Krishna Garden Main Road, near Happy Home Super Market, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098</p>
-                    <h1 className="title">R.R NAGAR</h1>
+                    <p className="address">203, 100 Feet Rd, near Polar Bear Ice Cream, Banashankari 6th Stage 3rd Block, Banashankari Stage 6, Chikkegowdanapalya, Bengaluru, Karnataka 560109</p>
+                    <h1 className="title">Banashankari</h1>
                 </div>
                 <div className="_line"><img src={line} /></div>
                 <div className="action_two">

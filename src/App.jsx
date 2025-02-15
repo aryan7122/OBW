@@ -100,8 +100,8 @@ function App() {
                 <Kankpur />
                 <Team />
                 <RR />
-                <Team />
-                <Kodipalya />
+                {/* <Team /> */}
+                {/* <Kodipalya /> */}
               </>
             }
           />

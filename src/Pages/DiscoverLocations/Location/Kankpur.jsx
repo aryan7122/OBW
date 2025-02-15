@@ -18,8 +18,8 @@ const Kankpur = () => {
         <div className="main-container-Kankpur">
             <div className="content">
                 <div className="top_title">
-                    <h1 className="title">KANKPURA ROAD</h1>
-                    <p className="address">No. 3 2nd floor, Kanakapura Rd, above Tanishq jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062</p>
+                    <h1 className="title">Kanakapura Main Rd</h1>
+                    <p className="address">No. 3 2nd floor, Kanakapura Main Rd, above Tanishq Jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062</p>
                 </div>
                 <div className="_line"><img src={line} /></div>
                 <div className="action_two">
