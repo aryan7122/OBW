@@ -8,7 +8,7 @@ const locations = [
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27462.160178895465!2d77.50609012863052!3d12.877508413200026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f4ec1bdb403%3A0x9025e3ff7e907cbf!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739600998644!5m2!1sen!2sin"
     },
     {
-        name: "Kanakapura Main Rd",
+        name: "Kanakapura Main Road",
         address: "No. 3 2nd floor, Kanakapura Main Rd, above Tanishq Jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1237.4005569027722!2d77.54510188463037!3d12.879024934708173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5bea81491d%3A0xacd55621ca8d33c2!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739601210644!5m2!1sen!2sin"
     },
@@ -18,7 +18,7 @@ const locations = [
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d328.89939542417466!2d77.50870152764773!3d12.915444510330301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f024bd73595%3A0x38a7ddf1d4ef624c!2s2%2C%20Balarama%20Layout%2C%20Rajarajeshwari%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560098!5e0!3m2!1sen!2sin!4v1739601355706!5m2!1sen!2sin"
     },
     {
-        name: "Kodipalya Rd",
+        name: "Kodipalya Road",
         address: "Shop No 6 & 7, Opp Vasthugreens Apartments Near Gudde Anjineya Temple, 1, Kodipalya Rd, opposite to Vaastu Greens, Kengeri, Bengaluru, Karnataka 560060 ",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.042755642787!2d77.48615187461691!3d12.904972316336432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fb9fdaa0f69%3A0xc9a5398e6c62bee2!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739601897930!5m2!1sen!2sin"
     }

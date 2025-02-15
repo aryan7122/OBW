@@ -16,7 +16,7 @@ const locations = [
         mapUrl: "https://maps.app.goo.gl/UUwcadDUnnfNB3xh8"
     },
     {
-        name: "Kanakapura Main Rd",
+        name: "Kanakapura Main Road",
         address: "No. 3 2nd floor, Kanakapura Main Rd, above Tanishq Jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062",
         image: img2,
         mapUrl: "https://maps.app.goo.gl/er7oUmJp1YipQ2scA"
@@ -28,7 +28,7 @@ const locations = [
         mapUrl: "https://maps.app.goo.gl/y9JPc4vx7qQiMmEG9"
     },
     {
-        name: "Kodipalya Rd",
+        name: "Kodipalya Road",
         address: "Shop No 6 & 7, Opp Vasthugreens Apartments Near Gudde Anjineya Temple, 1, Kodipalya Rd, opposite to Vaastu Greens, Kengeri, Bengaluru, Karnataka 560060 ",
         image: img3,
         mapUrl: "https://maps.app.goo.gl/JatdTaDU4vPAwkKQ6"
