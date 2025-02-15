@@ -323,7 +323,158 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
-    
+    // const data8 = {
+    //     title: "Laser Hair Reduction: Is It the Right Choice for You?",
+    //     category: "Hair",
+    //     author: "Jyoti Jain",
+    //     date: "08 January 2025",
+    //     coverImage: "https://s3-alpha-sig.figma.com/img/c682/789a/bc9885ea9ae0b68e3e508f7a1c9998b5?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RPj9cYCYavAKTT~ikAnn8c0kUmofVfH9TqDokQHG09NXVdkz0As7IwgnSXl0i-opFPPjnyExupmFgYWlimkyGwjsVywQH8Gsd1SAOGj5rn94-ZH5EYDvZmOFrFOIwC-XbOhG9AX-Naa7xZ31QQ-4Lrmv6mSiRYWbheUfpAMQQIHIaEWAHAMsbXkdVXvxOC7-XDvzf5YHB7vIAA1jkS~t49vejmmp~wh~cryqC~zDmp2ShFFKeggwEif-zK5cnwnsU6OL3~ixBal96do743bKE4EW09j~dV8kpGalDPI0UJqNAwcjPZLmT25S6wXjrMuKvDp82htVRVg1qe8R4sO9Og__",
+    //     sections: [
+    //         {
+    //             heading: "Introduction",
+    //             content: "Find out everything about laser hair reduction, including how it works, what to expect during sessions, and why it’s a long-term solution for smooth, hair-free skin."
+    //         },
+    //         {
+    //             heading: "What is Laser Hair Reduction?",
+    //             content: "Laser hair reduction is a popular cosmetic procedure that uses laser technology to remove unwanted hair. The laser emits light that is absorbed by the pigment in hair follicles, destroying them and reducing future hair growth.",
+    //             image: "https://img.freepik.com/free-photo/laser-epilation-hair-removal-therapy_1303-23659.jpg?t=st=1739625300~exp=1739628900~hmac=7cbacc6fc2aa318334297fa1ecd15074f94e7d762c3e62fb54eaed5a13263d15&w=1060"
+    //         },
+    //         {
+    //             heading: "Benefits of Laser Hair Reduction",
+    //             content: "Laser hair reduction offers several benefits, including:",
+    //             list: [
+    //                 "Long-term hair reduction",
+    //                 "Precision targeting of hair follicles",
+    //                 "Smooth and soft skin",
+    //                 "Minimal discomfort compared to traditional methods"
+    //             ]
+    //         },
+    //         {
+    //             heading: "What to Expect During Treatment",
+    //             content: "A typical laser hair reduction session involves:",
+    //             list: [
+    //                 "Cleansing the treatment area",
+    //                 "Applying a cooling gel",
+    //                 "Using the laser to target hair follicles",
+    //                 "A mild tingling sensation, similar to a rubber band snapping"
+    //             ]
+    //         },
+    //         {
+    //             heading: "Conclusion",
+    //             content: `Laser hair reduction is an effective and convenient solution for those looking for long-term hair removal. It’s safe, efficient, and helps achieve smoother skin with fewer ingrown hairs.
+                     
+    //                  If you’re considering laser hair reduction, consult with OBW Clinical Services today to determine the best treatment plan for your needs!`
+    //         }
+    //     ],
+    //     newsletter: {
+    //         heading: "Subscribe to Newsletter",
+    //         description: "Stay updated with the latest beauty and skincare trends by subscribing to our newsletter.",
+    //         placeholder: "Enter your email",
+    //         buttonText: "Subscribe"
+    //     }
+    // };
+    const data9 = {
+        title: "Hair Loss Solutions: PRP vs. GFC – What Works Best?",
+        category: "Hair",
+        author: "Aryan Sawant",
+        date: "08 January 2025",
+        coverImage: "https://s3-alpha-sig.figma.com/img/2bd4/315f/8e3dca5d199aeacf8ee8bba9d452a626?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=t~qDotPnJ8u7GzBUY0vxWwZ5TraxYfm5caH2befT2JYzIDy2R3al8WFr6PWHrKTGfFMFze6SnAnIoQaoK1Ji4UiM3gc8coGk-D1JMSNWiX0zra8n5RSJ9QdmB3FrrlAyCsfy79BsA0Jp2F~gx9Se16ZVJKs4GagAXm~rHV0s32jsN4TStEfrNKMpZIzyHIgJ~si7kxY-65nSueOiZqcqSARLFDsfKOhOepHRVQCrk0WZnyrWhF6~wR0LztUsC0GeVMrmmRprFX7Qh8SwYrORn6oxk9JiyIVotC4veavHE8~SDRkWIiSBh5XZdjr6qRNpW9kqUGh9Q-ZkyLrxDkPZ~w__",
+        sections: [
+            {
+                heading: "Introduction",
+                content: "Struggling with thinning hair? This guide explores PRP and GFC treatments, detailing their benefits, procedures, and results to help you make an informed choice for luscious locks."
+            },
+            {
+                heading: "What Are PRP and GFC Treatments?",
+                content: "PRP (Platelet-Rich Plasma) and GFC (Growth Factor Concentrate) are two innovative hair restoration therapies that use the body's natural growth factors to stimulate hair growth.",
+                // image: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__"
+            },
+            {
+                heading: "PRP vs. GFC: Key Differences",
+                content: "Understanding the differences between PRP and GFC can help you choose the best treatment for your hair concerns.",
+                list: [
+                    "PRP involves drawing blood, processing it, and injecting platelets back into the scalp.",
+                    "GFC is a more refined version that extracts only the growth factors, leading to a more concentrated treatment.",
+                    "PRP may require more sessions, while GFC often shows results in fewer treatments.",
+                    "Both treatments are non-surgical and promote natural hair regrowth."
+                ]
+            },
+            {
+                heading: "What to Expect During Treatment",
+                content: "Here’s what a typical PRP or GFC session involves:",
+                list: [
+                    "Consultation: A specialist examines your hair condition and suggests the best option.",
+                    "Blood Draw: A small amount of blood is taken from your arm (for PRP or GFC).",
+                    "Processing: The blood is processed to extract the required growth factors.",
+                    "Injection: The prepared solution is injected into the scalp to stimulate hair growth."
+                ]
+            },
+            {
+                heading: "Conclusion",
+                content: `Both PRP and GFC treatments are effective for hair regrowth, but the best choice depends on your hair loss severity and goals. GFC offers a more advanced approach with higher concentration, whereas PRP remains a reliable and widely used method.
+                    
+                    If you're experiencing hair thinning, consulting a dermatologist can help you determine the right treatment. Take the first step towards regaining your confidence with a personalized hair restoration plan!`
+            }
+        ],
+        newsletter: {
+            heading: "Subscribe to Newsletter",
+            description: "Stay updated with the latest hair care tips and treatments by subscribing to our newsletter.",
+            placeholder: "Enter your email",
+            buttonText: "Subscribe"
+        }
+    };
+    const data10 = {
+        title: "The Secret to Radiant Skin: Benefits of Skin Booster Treatments",
+        category: "Skin",
+        author: "Aryan Sawant",
+        date: "08 January 2025",
+        coverImage: "https://s3-alpha-sig.figma.com/img/b186/ae0c/1b929aec1b8cf3edd0f5e549406ce70d?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XhjHyTeifZPHaOzJR9HmLMzDJcPR3ry6zKcj7MAVouQXBPvdY88GbN-3Z3DenIxByX4jzgH2pdR9J1JGPugi7VzSzr6e4ckq34MLN5U5U3BZqzdcPGUqwvHAI6ePd-jV39SESvIygVjgJZqXrMIcsSgQPAa1FXcegJ-4V1SwyrFktHqBArsrSelujGR6XMumIsZfU2ANwh-ntIzZJ7-p5myDvEA-dVCWBOpmGMKFgjXAcdQ4WaevH36watjOl-GCr8IAIzosnsVp4jku-MDL1SMFgOVKnMRwVFYRM0-h7BnNSdvmK4aW7Biq-k9XwjzxJhgp0sor67YFzw3tJeQ53Q__",
+        sections: [
+            {
+                heading: "Introduction",
+                content: "Want glowing, hydrated skin? Explore the magic of skin boosters and find out how they can enhance your skin’s texture, elasticity, and overall radiance."
+            },
+            {
+                heading: "What Are Skin Booster Treatments?",
+                content: "Skin boosters are micro-injections of hyaluronic acid and other skin-rejuvenating ingredients. They hydrate the skin from within, improving its elasticity, smoothness, and radiance.",
+                // image: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__"
+            },
+            {
+                heading: "Benefits of Skin Booster Treatments",
+                content: "These treatments help in:",
+                list: [
+                    "Deep hydration and moisture retention.",
+                    "Improving skin elasticity and firmness.",
+                    "Reducing fine lines and wrinkles.",
+                    "Enhancing overall skin radiance and glow."
+                ]
+            },
+            {
+                heading: "What to Expect During the Treatment?",
+                content: "A skin booster session involves:",
+                list: [
+                    "Consultation with a skincare specialist to assess your needs.",
+                    "Application of numbing cream for comfort.",
+                    "Micro-injections of skin-boosting ingredients into targeted areas.",
+                    "Post-treatment care to maximize results."
+                ]
+            },
+            {
+                heading: "Conclusion",
+                content: `Skin booster treatments offer a revolutionary way to rejuvenate your skin by providing deep hydration and nourishment from within.
+                
+            If you want to achieve a naturally glowing complexion, this treatment could be the perfect solution. Consult with a skincare expert today and take the first step towards radiant skin!`
+            }
+        ],
+        newsletter: {
+            heading: "Subscribe to Newsletter",
+            description: "Stay up-to-date with the latest skincare tips and articles by subscribing to our newsletter.",
+            placeholder: "Enter your email",
+            buttonText: "Subscribe"
+        }
+    };
+
+
     const data0 = {
         title: " Not Found This page",
         category: "",
@@ -332,7 +483,7 @@ const ArticleDetail = () => {
         date: "--",
         coverImage: "https://img.freepik.com/free-vector/no-data-concept-illustration_114360-626.jpg?t=st=1739623432~exp=1739627032~hmac=3de6e9d64703e8febb50e16ce40786018484b0e98f1e60d292d6445279a54f8f&w=1060",
         sections: [
-            
+
             {
                 heading: "",
                 content: ""
@@ -377,6 +528,12 @@ const ArticleDetail = () => {
             return data6;
         } else if (formattedId === "botox-and-fillers-demystified:-a-beginner's-guide-to-anti-aging-treatments") {
             return data7;
+        // } else if (formattedId === "laser-hair-reduction:-is-it-the-right-choice-for-you") {
+        //     return data8;
+        } else if (formattedId === "hair-loss-solutions:-prp-vs.-gfc-–-what-works-best") {
+            return data9;
+        } else if (formattedId === "the-secret-to-radiant-skin:-benefits-of-skin-booster-treatments") {
+            return data10;
         } else {
             return data0;
         }

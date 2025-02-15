@@ -38,6 +38,8 @@ function Navbar() {
 
     const isActive = (path) => {
         return location.pathname === path ? 'active-link' : '';
+        // return location.pathname.includes(path) ? "active-link" : "";
+
     };
     // white bg
     const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service'];
@@ -71,7 +73,7 @@ function Navbar() {
                         <li onClick={() => toggleMenu()}><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
-                        <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs')}>BLOGS</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail') }>BLOGS</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                     </ul>
                 }
