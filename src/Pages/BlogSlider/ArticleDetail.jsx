@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ArticleDetail.scss";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaLinkedin, FaFacebook, FaTwitter, FaLink } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { toast, Toaster } from "react-hot-toast";
 
 const ArticleDetail = () => {
     const data1 = {
@@ -616,9 +617,42 @@ const ArticleDetail = () => {
         navigate(`/blog-detail/${formattedTitle}`);
     };
 
+// 
+    const [email, setEmail] = useState("");
 
+    // Email validation function
+    const isValidEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    // Handle form submit
+    const handleSubscribe = (e) => {
+        e.preventDefault();
+
+        // Validation check
+        if (!email) {
+            toast.error("Please enter your email!");
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            toast.error("Please enter a valid email address!");
+            return;
+        }
+
+        // Success message
+        toast.success("Subscribed successfully!");
+
+        // Console log for debugging
+        console.log("Subscribed Email:", email);
+
+        // Reset email input
+        setEmail("");
+    };
     return (
         <>
+            <Toaster position="top-center" />
             <div className="article-detail">
                 <button onClick={() => HandleNavigation('/blogs')} className="allBlg"> <FaAngleLeft />All Posts</button>
                 <div className="ct-tm">
@@ -688,13 +722,34 @@ const ArticleDetail = () => {
                         ))}
                     </div>
 
-                    <aside className="sidebar">
+                    {/* <aside className="sidebar">
                         <div className="newsletter">
                             <h3>{article.newsletter.heading}</h3>
                             <p>{article.newsletter.description}</p>
                             <input type="email" placeholder={article.newsletter.placeholder} />
                             <button>{article.newsletter.buttonText}</button>
                             <p>By subscribing you agree to with our <a href="">Privacy Policy</a>.</p>
+                        </div>
+                    </aside> */}
+                    <aside className="sidebar">
+                        <div className="newsletter">
+                            <h3>{article.newsletter.heading}</h3>
+                            <p>{article.newsletter.description}</p>
+
+                            <form onSubmit={handleSubscribe}>
+                                <input
+                                    type="email"
+                                    placeholder={article.newsletter.placeholder}
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                                <button type="submit">{article.newsletter.buttonText}</button>
+                            </form>
+
+                            <p>
+                                By subscribing you agree to our{" "}
+                                <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+                            </p>
                         </div>
                     </aside>
                 </div>
