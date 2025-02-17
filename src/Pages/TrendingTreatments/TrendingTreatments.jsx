@@ -116,7 +116,7 @@ const TrendingTreatments = () => {
 
             <footer className="footer-section">
                 <button className="Book-Now" onClick={handleBookNowClick} >Book Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
-                <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div>
+                <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
             </footer>
             {showModal && <BookAppointment onClose={closeModal} />}
 

@@ -6,7 +6,7 @@
   width: 100%;
   padding: 60px;
   background-color: #1c1c1c;
-  color: white;
+  // color: white;
   //   font-family: "Poppins", sans-serif;
   background-image: url("../../../assets/about/rr.jpg");
   background-repeat: no-repeat;
@@ -44,6 +44,7 @@
         text-align: left;
       }
       .title {
+        color: #fff;
         font-family: "Ubuntu Condensed", sans-serif;
         font-size: 140px;
         font-weight: 200 !important;
