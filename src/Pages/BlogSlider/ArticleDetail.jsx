@@ -8,46 +8,37 @@ import { toast, Toaster } from "react-hot-toast";
 
 const ArticleDetail = () => {
     const data1 = {
-        title: "The Science Behind Skin Peels: What You Need to Know",
+        title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
         category: "Skin",
         author: "Aryan Solanki",
-        date: "25 January 2025",
+        date: "17 February 2025",
         coverImage: "https://s3-alpha-sig.figma.com/img/c08c/bca2/78b2d646e0acb22d61689f83b9d38feb?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ltGvqUU5GEKEhx0ci9-0C-6m2HQP6r0MYMG9H01XGaLeKtTlp0jXIuNSrUAh~m4i2Sg9s8n40McreWFub3K06Ptdz3qY8Q-bmppfarJtrFNOF2RANLptnEdnTiQKSEX2ruNW4zFTRSnBPj8YCSgkq5sOYcby9wIfJ97bcIpOgmhG5ZlRXwcNC~PJJWy5lAT6DZjlJb-Cd72psYv8Hww5hd9EIgBo1wBkGNKxcqgyCBRPuXlrG4C4~gNhpuA6niTg5uubo2x394C0kyGQUobNKoqTtSVDZWfFDDZkTqPpawD0qh0JIPIwxDw3r15Qonmn-2lM66kgHYp1KKxjfL9ANA__",
         sections: [
             {
                 heading: "Introduction",
-                content: "If you’re looking to rejuvenate your skin, improve texture, or address specific concerns like acne, pigmentation, or fine lines, skin peels could be your secret weapon. These treatments, performed by dermatologists, offer a range of solutions tailored to your skin type and needs. In this guide, we’ll walk you through the different types of skin peels, their benefits, and how to choose the right one for you"
+                content: "In today’s fast-paced world, our skin is constantly exposed to pollution, stress, and harsh weather conditions, leading to dullness, breakouts, and premature aging. Medi-facials are an advanced skincare treatment designed to address specific skin concerns using medical-grade ingredients and cutting-edge technology. At OBW Clinic, our medi-facials are customized to rejuvenate, hydrate, and restore your skin’s natural glow."
             },
             {
-                heading: "What Are Skin Peels?",
-                content: "Skin peels, also known as chemical peels, involve applying a solution to the skin to exfoliate its top layers. This process promotes cell turnover, revealing fresher, smoother, and more radiant skin underneath. Depending on the type of peel, they can address various skin concerns, from acne scars to uneven tone.",
-                image: "https://s3-alpha-sig.figma.com/img/eefb/2e44/219a501e9aa570ed081638ea5b1db6e3?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=sqEGDEjtn2so8~9rSJ9I4LArWWir-hLf-unLbwTu~zbICAVcOrT0XQtMWj4-6cHhlrhn0tHTDMh0I235ZGR~F3WoqdWZwpb8Gwq4Mu8pqo~ts6M9N0uShVxAD6m0m2O-j1Ly4rFRCWOi55p6Z8PPOOOTttcGhSDTqeU3G~Ife3hCVhOV2LI-1eINk2Co3~G1FMWfS-4K3VXXcIy1dKC3DVER32HZIoxwMNNpv5rfqlhMvA6E2Oeu6oB0kJnvF8yKBIAkU9h0rH8H4gAd~yGmr1RrkbczppMGhIcMb67Ps7sZyAYucH4NhZQO2J8QLjaWI43aF6J8T0kwzesiwjuxkA__"
+                heading: "How Do Medi-Facials Work?",
+                content: "Unlike regular facials, medi-facials penetrate deeper into the skin using advanced technology like LED therapy, microdermabrasion, oxygen infusion, and chemical peels. These treatments stimulate collagen production, promote cell renewal, and deeply hydrate the skin."
             },
             {
-                heading: "How to Choose the Right Peel for You",
-                content: "Selecting the perfect peel depends on your skin type, concerns, and goals. Here are some factors to consider:",
+                heading: "Benefits of Medi-Facials",
                 list: [
-                    "Skin Concerns: Identify your primary issue, such as acne, pigmentation, or aging.",
-                    "Skin Type: Sensitive skin may benefit from gentler options like lactic peels, while oily skin can handle stronger peels like salicylic acid.",
-                    "Downtime: Some peels, like TCA, require recovery time, whereas lighter peels have minimal downtime.",
-                    "Professional Guidance: Always consult with a dermatologist to ensure the chosen peel is safe and effective for your skin.",
+                    "Deeply hydrates & nourishes skin",
+                    "Reduces acne, pigmentation & fine lines",
+                    "Boosts collagen production for firmer skin",
+                    "Removes dead skin cells, leaving a radiant glow",
+                    "Customizable for all skin types & concerns"
                 ]
             },
             {
-                heading: "What to Expect During a Skin Peel Treatment",
-                content: "Here’s a quick rundown of what typically happens during a skin peel treatment:",
-                list: [
-                    "Consultation: Your dermatologist will examine your skin and recommend the appropriate peel.",
-                    "Preparation: Your skin will be cleansed and prepped for the application.",
-                    "Application: The peeling solution is applied and left on for a specific duration."
-                ]
+                heading: "What to Expect During a Medi-Facial Treatment at OBW Clinic?",
+                content: "Your medi-facial session will begin with a skin analysis, followed by a deep cleanse, exfoliation, and treatment using customized serums and advanced technology. The session is relaxing, painless, and takes around 45-60 minutes."
             },
             {
                 heading: "Conclusion",
-                content: `Results depend on the type of peel. Lighter peels may show immediate improvements, while deeper peels require a few days to a week for full effects to appear. Regular sessions can amplify results over time.
-                            
-                           Skin peels are a transformative treatment that can address various skin concerns and leave you with radiant, youthful skin. By understanding the types of peels and working with a professional, you can achieve your desired results safely and effectively.
-                            Ready to embark on your journey to better skin? Book a consultation with OBW Clinical Services today and let us help you glow like never before!`
+                content: "If you’re looking for a safe, effective way to maintain healthy, youthful skin, book a Medi-Facial at OBW Clinic today!"
             }
         ],
         newsletter: {
@@ -57,48 +48,43 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
+
     const data2 = {
-        title: "Laser Hair Removal: Say Goodbye to Unwanted Hair Forever",
+        title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
         category: "Skin",
         author: "Aryan Solanki",
         date: "25 January 2025",
-        coverImage: "https://img.freepik.com/free-photo/silly-adorable-girl-showing-quotation-marks-gesture-smiling-happy_176420-20776.jpg?t=st=1739618135~exp=1739621735~hmac=448c2e55fe5a3976818a52005706bb589dcabeef93980da6d9f9fab2090f9d1e&w=1060",
+        coverImage: "https://example.com/your-image-url.jpg", // Replace with actual image URL
         sections: [
             {
                 heading: "Introduction",
-                content: "Unwanted hair can be a persistent problem, requiring constant shaving, waxing, or threading. These methods can be time-consuming, painful, and temporary. At OBW Clinic, we offer advanced Laser Hair Removal, a safe and long-lasting solution to remove unwanted hair and achieve silky smooth skin. "
+                content: "Tired of shaving, waxing, and threading? Laser Hair Removal is a game-changing treatment that offers long-term hair reduction by targeting hair follicles with laser energy. At OBW Clinic, we use advanced laser technology to provide safe and effective results for all skin types."
             },
             {
                 heading: "How Does Laser Hair Removal Work?",
-                content: "Laser Hair Removal uses concentrated light beams to target and destroy hair follicles. The pigment in the hair absorbs the laser energy, which effectively prevents future growth. Since hair grows in cycles, multiple sessions are required for optimal results. ",
-                image: "https://img.freepik.com/free-photo/beautiful-young-girl-beauty-salon_1157-21117.jpg?t=st=1739617778~exp=1739621378~hmac=dd6391869acf5cba251ef056820e9b1c6121692a1f17d918549968d24af398cf&w=1060"
+                content: "Laser energy is absorbed by the melanin (pigment) in hair follicles, heating them to disable future growth. Multiple sessions ensure that all hair cycles are treated for the best results."
             },
             {
-                heading: "Benefits of Laser Hair Removal at OBW Clinic:",
-                content: "At OBW Clinic, our expert dermatologists provide customized laser treatments based on your skin type and hair color, ensuring the best results. ",
+                heading: "Benefits of Laser Hair Removal",
                 list: [
-                    "Long-Term Hair Reduction – Say goodbye to frequent shaving and waxing.",
-                    "No More Ingrown Hairs – Unlike waxing or shaving, laser treatment reduces ingrown hairs.",
-                    "Painless & Quick – Our advanced laser technology ensures minimal discomfort and no downtime.",
-                    "Suitable for All Skin Types – Our lasers are safe and effective for various skin tones.",
-                    "Saves Time & Money – No need to spend on razors, waxing appointments, or depilatory creams.",
+                    "Permanent hair reduction",
+                    "No more ingrown hairs",
+                    "Smooth, silky skin with minimal effort",
+                    "Safe & effective for all areas",
+                    "Saves time & money in the long run"
                 ]
             },
             {
-                heading: "What to Expect During a Skin Peel Treatment",
-                content: "Here’s a quick rundown of what typically happens during a skin peel treatment:",
+                heading: "What to Expect During Laser Hair Removal at OBW Clinic?",
                 list: [
-                    "Consultation: Your dermatologist will examine your skin and recommend the appropriate peel.",
-                    "Preparation: Your skin will be cleansed and prepped for the application.",
-                    "Application: The peeling solution is applied and left on for a specific duration."
+                    "Consultation & Patch Test to determine skin suitability",
+                    "Laser Treatment with minimal discomfort",
+                    "Post-Treatment Care including sun protection"
                 ]
             },
             {
                 heading: "Conclusion",
-                content: `Results depend on the type of peel. Lighter peels may show immediate improvements, while deeper peels require a few days to a week for full effects to appear. Regular sessions can amplify results over time.
-                            
-                           Skin peels are a transformative treatment that can address various skin concerns and leave you with radiant, youthful skin. By understanding the types of peels and working with a professional, you can achieve your desired results safely and effectively.
-                            Ready to embark on your journey to better skin? Book a consultation with OBW Clinical Services today and let us help you glow like never before!`
+                content: "Ditch the razors and book your Laser Hair Removal sessions at OBW Clinic for smooth, hair-free skin!"
             }
         ],
         newsletter: {
@@ -108,8 +94,9 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
+
     const data3 = {
-        title: "IV Therapy: The Ultimate Wellness Boost for Your Body",
+        title: "IV Therapy for Skin, Hair & Body Wellness",
         category: "Wellness",
         author: "Aryan Solanki",
         date: "10 February 2025",
@@ -117,22 +104,28 @@ const ArticleDetail = () => {
         sections: [
             {
                 heading: "Introduction",
-                content: "Do you often feel tired, dehydrated, or low on energy? Our bodies require essential vitamins and minerals to function at their best. At OBW Clinic, we offer IV Therapy, a quick and effective way to rejuvenate your body, boost energy, and improve overall health.",
-                image: 'https://img.freepik.com/free-photo/close-up-woman-getting-prp-treatment_23-2149404690.jpg?t=st=1739621096~exp=1739624696~hmac=769e9b8d84bfc426094d68e204bb79a911e7e3f98cdc60f2ca666125d625ed11&w=1060'
+                content: "Feeling drained, dehydrated, or struggling with dull skin? IV Therapy at OBW Clinic replenishes essential vitamins, minerals, and hydration directly into your bloodstream for instant rejuvenation."
             },
             {
                 heading: "How Does IV Therapy Work?",
-                content: "IV Therapy delivers essential nutrients directly into your bloodstream, bypassing the digestive system for immediate absorption. Whether you're looking to rehydrate, boost immunity, or recover from fatigue, IV drips can help."
+                content: "Unlike oral supplements, IV therapy ensures 100% absorption of nutrients, delivering them directly to your cells for maximum effectiveness."
             },
             {
-                heading: "Benefits of IV Therapy at OBW Clinic:",
+                heading: "Benefits of IV Therapy",
                 list: [
-                    "Instant Hydration – Replenishes lost fluids and electrolytes.",
-                    "Increases Energy Levels – Infuses the body with vital vitamins like B12 and C.",
-                    "Strengthens Immunity – Helps fight infections and supports immune function.",
-                    "Enhances Skin Health – Hydrates and brightens the skin from within.",
-                    "Speeds Up Recovery – Ideal for post-workout recovery, hangovers, and chronic fatigue."
+                    "Glowing, hydrated skin",
+                    "Stronger hair & nails",
+                    "Boosted immunity & energy levels",
+                    "Detoxification & anti-aging benefits"
                 ]
+            },
+            {
+                heading: "What to Expect During IV Therapy at OBW Clinic?",
+                content: "A relaxing 30-60 minute session where you receive a customized IV drip while comfortably seated."
+            },
+            {
+                heading: "Conclusion",
+                content: "Recharge your skin, hair, and body with IV Therapy at OBW Clinic!"
             }
         ],
         newsletter: {
@@ -142,8 +135,9 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
+
     const data4 = {
-        title: "Carbon Laser Peel: The Ultimate Treatment for Clear & Radiant Skin",
+        title: "Carbon Laser Peel: The Secret to Flawless Skin",
         category: "Skin",
         author: "Aryan Solanki",
         date: "15 February 2025",
@@ -151,26 +145,28 @@ const ArticleDetail = () => {
         sections: [
             {
                 heading: "Introduction",
-                content: "Is acne, enlarged pores, or dull skin affecting your confidence? The Carbon Laser Peel, also known as the 'Hollywood Peel,' is a revolutionary treatment that deeply cleanses the skin, minimizes pores, and enhances your natural glow. At OBW Clinic, we specialize in Carbon Laser Peel to give you flawless, youthful skin."
+                content: "Struggling with acne, enlarged pores, or oily skin? The Carbon Laser Peel, also known as the Hollywood Peel, deeply cleanses, exfoliates, and brightens your skin. At OBW Clinic, we offer this advanced treatment to enhance your natural glow."
             },
             {
                 heading: "How Does Carbon Laser Peel Work?",
-                content: "A layer of medical-grade carbon is applied to the skin, allowing it to absorb oil, dirt, and impurities. A specialized laser then heats and removes the carbon, taking impurities along with it. The result? Instantly refreshed and rejuvenated skin.",
-                image: "https://img.freepik.com/free-photo/composition-with-wooden-natural-toothbrushes-black-teeth-whitening-powder-orchid-flower-copy-space_169016-10828.jpg?t=st=1739620719~exp=1739624319~hmac=31c73e27e5f318cd37e48d7f736bd401b57888216822856c50cebce11e75844d&w=1060"
+                content: "A layer of activated carbon is applied to your skin, absorbing dirt and oil. A laser then vaporizes the carbon, removing impurities and dead skin cells."
             },
             {
                 heading: "Benefits of Carbon Laser Peel",
                 list: [
-                    "Deep Cleansing – Removes dirt, oil, and dead skin cells.",
-                    "Controls Acne & Oil Production – Reduces breakouts and blackheads.",
-                    "Brightens & Evens Skin Tone – Instantly enhances your glow.",
-                    "Quick & Painless – No downtime, making it perfect for busy schedules.",
-                    "Boosts Collagen Production – Improves skin elasticity and smoothness."
+                    "Deep cleans pores & controls acne",
+                    "Reduces oil production",
+                    "Brightens skin & evens tone",
+                    "No downtime – walk out glowing!"
                 ]
             },
             {
+                heading: "What to Expect During Carbon Laser Peel at OBW Clinic?",
+                content: "A quick 30-minute treatment that feels warm but painless."
+            },
+            {
                 heading: "Conclusion",
-                content: "At OBW Clinic, we ensure that our Carbon Laser Peel treatments are tailored to your skin type, giving you the best possible results. Book your appointment today and experience the magic of clear, radiant skin!"
+                content: "Get flawless, radiant skin with a Carbon Laser Peel at OBW Clinic!"
             }
         ],
         newsletter: {
@@ -180,141 +176,146 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
+
     const data5 = {
-        title: "Understanding the Power of Retinol: A Complete Guide",
-        category: "Skin",
-        author: "Aryan Solanki",
-        date: "10 February 2025",
-        coverImage: "https://img.freepik.com/free-photo/young-woman-doing-skin-care_1268-21285.jpg?t=st=1739623323~exp=1739626923~hmac=12e8b3185f76a0559978a82d913f1743215b09b525dba3331e5fe71e4a7a36bf&w=1380",
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Retinol has gained immense popularity in the skincare industry, often touted as a miracle ingredient for anti-aging, acne treatment, and overall skin rejuvenation. But what exactly is retinol, and how does it work? In this comprehensive guide, we will break down the benefits, usage, and precautions of incorporating retinol into your skincare routine."
-            },
-            {
-                heading: "What is Retinol?",
-                content: "Retinol is a derivative of Vitamin A that promotes skin cell turnover, unclogs pores, boosts collagen production, and reduces fine lines and wrinkles. It is widely used in anti-aging and acne treatments due to its ability to improve skin texture and tone.",
-                image: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-standing_114579-81565.jpg?t=st=1739623345~exp=1739626945~hmac=6a53bf79abf05f27f19dc654b5fbebbaa2d38452dcd6d2030085eeb529e2bd83&w=1060"
-            },
-            {
-                heading: "How to Use Retinol Safely",
-                content: "To maximize the benefits of retinol while minimizing irritation, follow these key steps:",
-                list: [
-                    "Start Slowly: Use retinol 2-3 times a week before gradually increasing frequency.",
-                    "Apply at Night: Retinol makes the skin more sensitive to sunlight, so it’s best applied before bed.",
-                    "Use Sunscreen: Always wear sunscreen during the day to prevent damage from UV exposure.",
-                    "Hydrate: Pair retinol with a good moisturizer to reduce dryness and irritation."
-                ]
-            },
-            {
-                heading: "Common Side Effects and How to Manage Them",
-                content: "Retinol can cause some initial side effects, especially for beginners. Here’s what to expect and how to handle them:",
-                list: [
-                    "Dryness & Peeling: Use a hydrating serum or moisturizer to combat dryness.",
-                    "Redness & Irritation: If irritation persists, reduce usage to once a week.",
-                    "Purging: Some may experience breakouts initially; this is normal and should subside within a few weeks.",
-                    "Sun Sensitivity: Never skip sunscreen when using retinol to protect your skin."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: `Retinol is a powerful skincare ingredient that can transform your skin when used correctly. From reducing fine lines and wrinkles to improving acne, its benefits are vast. However, patience is key—results often take weeks or even months to become visible.
-                        
-                        If you’re ready to take your skincare routine to the next level, consult a dermatologist to find the right retinol product for your skin type. Start slow, stay consistent, and embrace the journey to healthier, glowing skin!`
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Get the latest skincare insights and product recommendations straight to your inbox.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-    const data6 = {
-        title: "Laser Hair Removal: Is it Right for You?",
+        title: "Hair GFC & PRP: The Most Effective Hair Growth Solutions",
         category: "Hair",
-        author: "Jyoti Jain",
-        date: "08 January 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/81d9/3752/ba48f7db28f925a9ca9103acbc0f213c?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hrlS5rKjrrnhPXRi~Xn3fE5YYcBMqOl~iRs3i86fxKVuZeWlnAEdBinqT4qU7LVq1iR71oeNNJiAc5N7pRHuE0gT0Dfcn0W~J2iObKVUF440a~X~T-BqBMmrrxXWMTOrY14nqHpIJFLM8o6oyAiflHpcgtv1G7IRsIu2xDYdPHGRtdyyG6F60lrZ0V4O3Wwn~yhf468vECZrjIuY0ozB6IehAgU6VVyQ6IDRqw-QOo3llpqnf0RCwOiaO0xVJYikAJvPnnMgpOW2Z41uSf5lyLi7sADnOMyjjPjIBnbn9XADFkuEKGF-n8odbhGowHHttS05CG4vAEq3x~IRwzRXYg__",
+        author: "Aryan Solanki",
+        date: "15 February 2025",
+        coverImage: "https://img.freepik.com/free-photo/young-woman-hair-care-salon_8353-4357.jpg?t=st=1739623323~exp=1739626923~hmac=5b8d0d9530b1707410345e174515d38fdb9920d0fa78fa787ec83bba835228b6&w=1060",
         sections: [
             {
                 heading: "Introduction",
-                content: "Find out everything about laser hair reduction, including how it works, what to expect during sessions, and why it’s a long-term solution for smooth, hair-free skin."
+                content: "Hair loss can be stressful and frustrating. At OBW Clinic, we offer Hair GFC (Growth Factor Concentrate) & PRP (Platelet-Rich Plasma) Therapy, the latest innovations for natural hair regrowth."
             },
             {
-                heading: "What is Laser Hair Removal?",
-                content: "Laser hair removal is a cosmetic procedure that uses laser light to target and destroy hair follicles, reducing hair growth over time. It is a popular method for achieving long-term hair reduction.",
-                image: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__"
+                heading: "How Do Hair GFC & PRP Work?",
+                content: "These treatments use growth factors from your blood to stimulate hair follicles and improve scalp health."
             },
             {
-                heading: "Benefits of Laser Hair Removal",
-                content: "Laser hair removal offers several benefits, including:",
+                heading: "Benefits of Hair GFC & PRP",
                 list: [
-                    "Long-term hair reduction with minimal maintenance.",
-                    "Precision targeting of hair follicles without damaging surrounding skin.",
-                    "Less painful compared to waxing or epilation.",
-                    "Effective for various body areas, including face, legs, and arms."
+                    "Stimulates hair regrowth",
+                    "Strengthens weak hair follicles",
+                    "Reduces hair thinning & shedding",
+                    "Non-surgical & safe"
                 ]
             },
             {
-                heading: "What to Expect During the Treatment?",
-                content: "A typical laser hair removal session involves:",
-                list: [
-                    "Consultation: Discussing your skin type and hair removal goals with a specialist.",
-                    "Preparation: Shaving the area to be treated and avoiding sun exposure.",
-                    "Procedure: The laser is applied to the skin, targeting hair follicles with controlled light pulses."
-                ]
+                heading: "What to Expect During Hair GFC & PRP at OBW Clinic?",
+                content: "Blood is drawn & processed to extract growth factors. The serum is injected into the scalp. Mild redness may occur but fades quickly."
             },
             {
                 heading: "Conclusion",
-                content: "Laser hair removal is a highly effective method for achieving smooth, hair-free skin. While multiple sessions may be required for optimal results, it offers long-term benefits compared to traditional hair removal methods. Consult a professional to determine if laser hair removal is right for you!"
+                content: "Restore your hair’s thickness & strength with GFC & PRP Therapy at OBW Clinic!"
             }
         ],
         newsletter: {
             heading: "Subscribe to Newsletter",
-            description: "Stay informed about the latest beauty and hair care treatments by subscribing to our newsletter.",
+            description: "Stay informed about the latest hair care treatments and tips by subscribing to our newsletter.",
             placeholder: "Enter your email",
             buttonText: "Subscribe"
         }
     };
+
+    const data6 = {
+        title: "PMU (Permanent Makeup): Enhancing Natural Beauty with Long-Lasting Results",
+        category: "Beauty",
+        author: "Aryan Solanki",
+        date: "17 February 2025",
+        coverImage: "https://img.freepik.com/free-photo/beautiful-woman-getting-makeup_1150-13215.jpg?t=st=1739623323~exp=1739626923~hmac=12e8b3185f76a0559978a82d913f1743215b09b525dba3331e5fe71e4a7a36bf&w=1380",
+        sections: [
+            {
+                heading: "Introduction",
+                content: "Imagine waking up every day with perfectly shaped brows, defined eyes, and beautifully tinted lips—without spending hours in front of the mirror! Permanent Makeup (PMU) is an advanced cosmetic tattooing technique that enhances facial features by replicating the look of makeup with natural pigments. At OBW Clinic, we specialize in safe, high-quality PMU procedures to help you achieve effortless beauty that lasts for years."
+            },
+            {
+                heading: "How Does PMU Work?",
+                content: "PMU involves implanting semi-permanent pigments into the skin using a fine needle or microblade. Unlike traditional tattoos, PMU pigments are designed to fade gradually over time, ensuring a soft, natural appearance."
+            },
+            {
+                heading: "PMU Treatments Offered at OBW Clinic",
+                content: "At OBW Clinic, we offer a variety of PMU treatments:",
+                list: [
+                    "Microblading & Powder Brows – Creates natural, fuller brows",
+                    "Eyeliner Tattoo – Defines your eyes with a subtle or bold line",
+                    "Lip Blush Tattoo – Enhances lip color & shape for a soft tint",
+                    "Scalp Micropigmentation (SMP) – Fills in thinning hair for a denser look"
+                ]
+            },
+            {
+                heading: "Benefits of PMU",
+                content: "PMU provides several advantages for those seeking long-lasting beauty:",
+                list: [
+                    "Saves time – No more daily makeup application",
+                    "Smudge-proof & waterproof – Always look your best",
+                    "Natural-looking results – Enhances your facial features subtly",
+                    "Long-lasting – Enjoy 1-3 years of flawless beauty",
+                    "Customizable – Choose the shape, color, and style that suits you"
+                ]
+            },
+            {
+                heading: "What to Expect During a PMU Session at OBW Clinic?",
+                content: "Here's what you can expect during your PMU procedure at OBW Clinic:",
+                list: [
+                    "Consultation: Our experts assess your facial structure and discuss your desired look.",
+                    "Prepping & Numbing: A numbing cream is applied for a comfortable experience.",
+                    "Pigment Application: The selected pigment is carefully applied to create a natural effect.",
+                    "Healing Process: Mild redness or swelling may occur, but it fades within a few days. A touch-up session may be needed for optimal results."
+                ]
+            },
+            {
+                heading: "Conclusion",
+                content: "Say goodbye to smudged eyeliner, faded brows, and pale lips! PMU at OBW Clinic is your go-to solution for natural, long-lasting beauty."
+            }
+        ],
+        newsletter: {
+            heading: "Subscribe to Newsletter",
+            description: "Stay informed about the latest beauty and PMU treatments by subscribing to our newsletter.",
+            placeholder: "Enter your email",
+            buttonText: "Subscribe"
+        }
+    };
+
     const data7 = {
-        title: "Botox and Fillers Demystified: A Beginner's Guide to Anti-Aging Treatments",
-        category: "Botox",
+        title: "Skin Brightening: Achieve a Radiant and Even Complexion",
+        category: "Skin Brightening",
         author: "Jyoti Jain",
         authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
-        date: "Jan 08, 2025",
+        date: "Feb 17, 2025",
         coverImage: "https://s3-alpha-sig.figma.com/img/3146/b8f3/4c0dbeeedf9e12561734bcc0ef61f4f3?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=G0vg4rAzRXyispWi3rSdGcg5i0RuGCPk8f86FaINB2PDGce5jOQ8qf9XihpQPZvByz4UVMiCyCpbO2t6FArIs6Bkh2ZKzo07CCxEXZAYv6OoPLiWBWys81yvHHuDeiP91MJrmnx8RRiE6QikbZYwuwJs-JWzlMVtV1CXIJKkyPezfpEsLLSi1spAtAtX6CJI85jXWIzkV0aeYnbU5uvDCUni71wspR8IwH4HNSnjBUZt6ftAQKKCMl9GpSuK7VrwfoeYsf2ZfY6jmtDelCH6Zt-hcJGh4u7OGkSMojcx3PkiDtyBWNM3FJ~0s9~pcqkTwWSB6mzKgux3kOzCY37ZyA__",
         sections: [
             {
                 heading: "Introduction",
-                content: "Curious about Botox and fillers? These treatments are popular choices for those looking to reduce wrinkles, enhance facial features, and achieve a youthful look. In this guide, we’ll explain what Botox and fillers are, how they work, and what you should consider before getting them."
+                content: "Dull, uneven skin tone and dark spots can affect your confidence and make you feel less radiant. Skin brightening treatments at OBW Clinic are designed to target hyperpigmentation, dark spots, and uneven skin tone, helping you achieve a clear, luminous complexion. We use advanced technologies and products to revitalize your skin and restore its natural glow."
             },
             {
-                heading: "What Are Botox and Fillers?",
-                content: "Botox is a neurotoxin that temporarily relaxes facial muscles, reducing the appearance of wrinkles. Fillers, on the other hand, are gel-like substances injected to restore volume, smooth lines, and enhance facial contours."
+                heading: "How Does Skin Brightening Work?",
+                content: "Skin brightening treatments work by exfoliating dead skin cells, boosting collagen production, and targeting melanin production to reduce dark spots and uneven tone. At OBW Clinic, we offer a variety of skin-brightening treatments, including chemical peels, mesotherapy, and laser therapy, each customized to address your skin’s specific needs."
             },
             {
-                heading: "Choosing the Right Treatment",
-                content: "Here are some factors to consider before choosing between Botox and fillers:",
+                heading: "Benefits of Skin Brightening",
+                content: "Skin brightening treatments provide numerous benefits, including:",
                 list: [
-                    "Wrinkle Reduction: Botox is best for dynamic wrinkles caused by muscle movement.",
-                    "Volume Restoration: Fillers are ideal for plumping areas like cheeks and lips.",
-                    "Duration: Botox results last around 3-6 months, while fillers can last up to a year or more.",
-                    "Professional Consultation: Always seek expert advice to determine which treatment suits your needs."
+                    "Even skin tone",
+                    "Reduced dark spots and pigmentation",
+                    "Enhanced skin radiance and glow",
+                    "Stimulates collagen for firmer skin",
+                    "Safe and effective for all skin types"
                 ]
             },
             {
-                heading: "What to Expect During the Procedure",
-                content: "Here’s a brief overview of a typical Botox or filler treatment session:",
+                heading: "What to Expect During Treatment at OBW Clinic?",
+                content: "During your treatment, our experts will assess your skin and guide you through the following steps:",
                 list: [
-                    "Consultation: Your provider will discuss your goals and recommend the best treatment.",
-                    "Preparation: The area is cleansed, and a numbing agent may be applied.",
-                    "Injection: The Botox or filler is injected into specific areas to achieve the desired results."
+                    "Consultation: Our experts assess your skin and recommend the most suitable treatment.",
+                    "Procedure: Depending on the treatment, we’ll perform a gentle exfoliation, laser treatment, or mesotherapy.",
+                    "Post-Treatment Care: You may experience mild redness, which fades within a few hours. Regular sun protection is essential during and after treatment."
                 ]
             },
             {
                 heading: "Conclusion",
-                content: "Botox and fillers can be game-changers for those seeking a refreshed appearance. By understanding the differences and consulting with a professional, you can make an informed decision. Ready to enhance your look? Book a consultation with OBW Clinical Services today!"
+                content: "Achieving glowing, even skin has never been easier! Book your skin brightening treatment at OBW Clinic today and let us help you reveal your natural radiance."
             }
         ],
         newsletter: {
@@ -324,58 +325,56 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
-    // const data8 = {
-    //     title: "Laser Hair Reduction: Is It the Right Choice for You?",
-    //     category: "Hair",
-    //     author: "Jyoti Jain",
-    //     date: "08 January 2025",
-    //     coverImage: "https://s3-alpha-sig.figma.com/img/c682/789a/bc9885ea9ae0b68e3e508f7a1c9998b5?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RPj9cYCYavAKTT~ikAnn8c0kUmofVfH9TqDokQHG09NXVdkz0As7IwgnSXl0i-opFPPjnyExupmFgYWlimkyGwjsVywQH8Gsd1SAOGj5rn94-ZH5EYDvZmOFrFOIwC-XbOhG9AX-Naa7xZ31QQ-4Lrmv6mSiRYWbheUfpAMQQIHIaEWAHAMsbXkdVXvxOC7-XDvzf5YHB7vIAA1jkS~t49vejmmp~wh~cryqC~zDmp2ShFFKeggwEif-zK5cnwnsU6OL3~ixBal96do743bKE4EW09j~dV8kpGalDPI0UJqNAwcjPZLmT25S6wXjrMuKvDp82htVRVg1qe8R4sO9Og__",
-    //     sections: [
-    //         {
-    //             heading: "Introduction",
-    //             content: "Find out everything about laser hair reduction, including how it works, what to expect during sessions, and why it’s a long-term solution for smooth, hair-free skin."
-    //         },
-    //         {
-    //             heading: "What is Laser Hair Reduction?",
-    //             content: "Laser hair reduction is a popular cosmetic procedure that uses laser technology to remove unwanted hair. The laser emits light that is absorbed by the pigment in hair follicles, destroying them and reducing future hair growth.",
-    //             image: "https://img.freepik.com/free-photo/laser-epilation-hair-removal-therapy_1303-23659.jpg?t=st=1739625300~exp=1739628900~hmac=7cbacc6fc2aa318334297fa1ecd15074f94e7d762c3e62fb54eaed5a13263d15&w=1060"
-    //         },
-    //         {
-    //             heading: "Benefits of Laser Hair Reduction",
-    //             content: "Laser hair reduction offers several benefits, including:",
-    //             list: [
-    //                 "Long-term hair reduction",
-    //                 "Precision targeting of hair follicles",
-    //                 "Smooth and soft skin",
-    //                 "Minimal discomfort compared to traditional methods"
-    //             ]
-    //         },
-    //         {
-    //             heading: "What to Expect During Treatment",
-    //             content: "A typical laser hair reduction session involves:",
-    //             list: [
-    //                 "Cleansing the treatment area",
-    //                 "Applying a cooling gel",
-    //                 "Using the laser to target hair follicles",
-    //                 "A mild tingling sensation, similar to a rubber band snapping"
-    //             ]
-    //         },
-    //         {
-    //             heading: "Conclusion",
-    //             content: `Laser hair reduction is an effective and convenient solution for those looking for long-term hair removal. It’s safe, efficient, and helps achieve smoother skin with fewer ingrown hairs.
-                     
-    //                  If you’re considering laser hair reduction, consult with OBW Clinical Services today to determine the best treatment plan for your needs!`
-    //         }
-    //     ],
-    //     newsletter: {
-    //         heading: "Subscribe to Newsletter",
-    //         description: "Stay updated with the latest beauty and skincare trends by subscribing to our newsletter.",
-    //         placeholder: "Enter your email",
-    //         buttonText: "Subscribe"
-    //     }
-    // };
+
+    const data8 = {
+        title: "Hair Transplant: Restore Your Hair, Restore Your Confidence",
+        category: "Hair",
+        author: "Jyoti Jain",
+        date: "08 January 2025",
+        coverImage: "https://s3-alpha-sig.figma.com/img/c682/789a/bc9885ea9ae0b68e3e508f7a1c9998b5?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RPj9cYCYavAKTT~ikAnn8c0kUmofVfH9TqDokQHG09NXVdkz0As7IwgnSXl0i-opFPPjnyExupmFgYWlimkyGwjsVywQH8Gsd1SAOGj5rn94-ZH5EYDvZmOFrFOIwC-XbOhG9AX-Naa7xZ31QQ-4Lrmv6mSiRYWbheUfpAMQQIHIaEWAHAMsbXkdVXvxOC7-XDvzf5YHB7vIAA1jkS~t49vejmmp~wh~cryqC~zDmp2ShFFKeggwEif-zK5cnwnsU6OL3~ixBal96do743bKE4EW09j~dV8kpGalDPI0UJqNAwcjPZLmT25S6wXjrMuKvDp82htVRVg1qe8R4sO9Og__",
+        sections: [
+            {
+                heading: "Introduction",
+                content: "Hair loss can significantly impact your confidence and self-esteem. At OBW Clinic, we offer hair transplant solutions to help you regain a fuller, natural-looking head of hair. Whether you’re experiencing male or female pattern baldness, our experienced specialists use advanced techniques to provide you with permanent, natural results."
+            },
+            {
+                heading: "How Does Hair Transplant Work?",
+                content: "Hair transplant involves transferring hair follicles from a donor area (usually the back or sides of your head) to areas with thinning or no hair. We offer FUE (Follicular Unit Extraction) and FUT (Follicular Unit Transplantation) methods, depending on your condition and preferences."
+            },
+            {
+                heading: "Benefits of Hair Transplant",
+                content: "Hair transplants offer numerous benefits, including:",
+                list: [
+                    "Permanent hair restoration",
+                    "Natural-looking results",
+                    "Minimal scarring",
+                    "Boosts self-confidence",
+                    "Low maintenance once healed"
+                ]
+            },
+            {
+                heading: "What to Expect During Treatment at OBW Clinic?",
+                content: "Here’s what you can expect during a typical hair transplant session at OBW Clinic:",
+                list: [
+                    "Consultation & Assessment: Our experts evaluate your hair loss pattern and determine the best treatment plan.",
+                    "Procedure: The procedure takes about 6-8 hours and is performed under local anesthesia for your comfort.",
+                    "Post-Treatment Care: You may experience some swelling or redness, but this will subside within a few days. The results will gradually show in 3-6 months."
+                ]
+            },
+            {
+                heading: "Conclusion",
+                content: "Don’t let hair loss hold you back. OBW Clinic’s hair transplant treatments can help you achieve the fuller, healthier hair you’ve always wanted."
+            }
+        ],
+        newsletter: {
+            heading: "Subscribe to Newsletter",
+            description: "Stay updated with the latest beauty and skincare trends by subscribing to our newsletter.",
+            placeholder: "Enter your email",
+            buttonText: "Subscribe"
+        }
+    };
     const data9 = {
-        title: "Hair Loss Solutions: PRP vs. GFC – What Works Best?",
+        title: "Anti-DHT Mesotherapy: Prevent Hair Loss and Promote Hair Growth",
         category: "Hair",
         author: "Aryan Sawant",
         date: "08 January 2025",
@@ -383,38 +382,35 @@ const ArticleDetail = () => {
         sections: [
             {
                 heading: "Introduction",
-                content: "Struggling with thinning hair? This guide explores PRP and GFC treatments, detailing their benefits, procedures, and results to help you make an informed choice for luscious locks."
+                content: "Hair thinning and hair loss can occur due to DHT (dihydrotestosterone), a hormone responsible for weakening hair follicles. At OBW Clinic, we offer Anti-DHT Mesotherapy to block DHT production, stimulate hair follicles, and prevent further hair loss. This treatment is an effective solution for both men and women experiencing thinning hair or pattern baldness."
             },
             {
-                heading: "What Are PRP and GFC Treatments?",
-                content: "PRP (Platelet-Rich Plasma) and GFC (Growth Factor Concentrate) are two innovative hair restoration therapies that use the body's natural growth factors to stimulate hair growth.",
-                // image: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__"
+                heading: "How Does Anti-DHT Mesotherapy Work?",
+                content: "Anti-DHT mesotherapy involves injecting micronutrients, vitamins, and DHT blockers directly into the scalp. These injections target the root cause of hair loss and encourage hair regeneration by improving circulation and nourishing hair follicles."
             },
             {
-                heading: "PRP vs. GFC: Key Differences",
-                content: "Understanding the differences between PRP and GFC can help you choose the best treatment for your hair concerns.",
+                heading: "Benefits of Anti-DHT Mesotherapy",
+                content: "Anti-DHT Mesotherapy offers several benefits, including:",
                 list: [
-                    "PRP involves drawing blood, processing it, and injecting platelets back into the scalp.",
-                    "GFC is a more refined version that extracts only the growth factors, leading to a more concentrated treatment.",
-                    "PRP may require more sessions, while GFC often shows results in fewer treatments.",
-                    "Both treatments are non-surgical and promote natural hair regrowth."
+                    "Prevents hair loss",
+                    "Stimulates new hair growth",
+                    "Strengthens weak hair follicles",
+                    "Improves scalp health",
+                    "Safe, non-surgical treatment"
                 ]
             },
             {
                 heading: "What to Expect During Treatment",
-                content: "Here’s what a typical PRP or GFC session involves:",
+                content: "The treatment process includes:",
                 list: [
-                    "Consultation: A specialist examines your hair condition and suggests the best option.",
-                    "Blood Draw: A small amount of blood is taken from your arm (for PRP or GFC).",
-                    "Processing: The blood is processed to extract the required growth factors.",
-                    "Injection: The prepared solution is injected into the scalp to stimulate hair growth."
+                    "Consultation & Evaluation: We will assess your scalp condition to create a personalized treatment plan.",
+                    "Injection Procedure: The procedure takes about 30 minutes and involves minimal discomfort.",
+                    "Post-Treatment Care: Mild redness or tenderness may occur, but this usually subsides within a few hours."
                 ]
             },
             {
                 heading: "Conclusion",
-                content: `Both PRP and GFC treatments are effective for hair regrowth, but the best choice depends on your hair loss severity and goals. GFC offers a more advanced approach with higher concentration, whereas PRP remains a reliable and widely used method.
-                    
-                    If you're experiencing hair thinning, consulting a dermatologist can help you determine the right treatment. Take the first step towards regaining your confidence with a personalized hair restoration plan!`
+                content: "Take control of your hair growth with Anti-DHT Mesotherapy at OBW Clinic. Let us help you prevent hair loss and restore a healthy scalp for thicker, stronger hair."
             }
         ],
         newsletter: {
@@ -425,7 +421,7 @@ const ArticleDetail = () => {
         }
     };
     const data10 = {
-        title: "The Secret to Radiant Skin: Benefits of Skin Booster Treatments",
+        title: "Scar Revision or Reduction Treatments: Smooth and Refined Skin",
         category: "Skin",
         author: "Aryan Sawant",
         date: "08 January 2025",
@@ -433,47 +429,92 @@ const ArticleDetail = () => {
         sections: [
             {
                 heading: "Introduction",
-                content: "Want glowing, hydrated skin? Explore the magic of skin boosters and find out how they can enhance your skin’s texture, elasticity, and overall radiance."
+                content: "Scars from acne, surgery, or injury can often leave behind unwanted marks on your skin. At OBW Clinic, we offer advanced scar revision and reduction treatments to help you achieve smooth, flawless skin. Using the latest techniques, we aim to reduce the appearance of scars and improve your skin’s texture."
             },
             {
-                heading: "What Are Skin Booster Treatments?",
-                content: "Skin boosters are micro-injections of hyaluronic acid and other skin-rejuvenating ingredients. They hydrate the skin from within, improving its elasticity, smoothness, and radiance.",
-                // image: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__"
+                heading: "How Do Scar Revision Treatments Work?",
+                content: "We use a combination of laser therapies, microneedling, and dermal fillers to break down scar tissue, promote collagen production, and smoothen the skin. The type of treatment varies depending on the size, depth, and age of the scar."
             },
             {
-                heading: "Benefits of Skin Booster Treatments",
-                content: "These treatments help in:",
+                heading: "Benefits of Scar Revision Treatments",
+                content: "These treatments offer the following benefits:",
                 list: [
-                    "Deep hydration and moisture retention.",
-                    "Improving skin elasticity and firmness.",
-                    "Reducing fine lines and wrinkles.",
-                    "Enhancing overall skin radiance and glow."
+                    "Reduces the appearance of scars",
+                    "Improves skin texture and tone",
+                    "Promotes natural collagen production",
+                    "Boosts skin regeneration",
+                    "Minimally invasive with little downtime"
                 ]
             },
             {
-                heading: "What to Expect During the Treatment?",
-                content: "A skin booster session involves:",
+                heading: "What to Expect During Scar Revision Treatments at OBW Clinic?",
+                content: "Here’s what you can expect during your treatment:",
                 list: [
-                    "Consultation with a skincare specialist to assess your needs.",
-                    "Application of numbing cream for comfort.",
-                    "Micro-injections of skin-boosting ingredients into targeted areas.",
-                    "Post-treatment care to maximize results."
+                    "Consultation & Assessment: We’ll evaluate your scars and suggest the most suitable treatment.",
+                    "Procedure: Depending on the scar type, we may use lasers or microneedling to treat the area.",
+                    "Post-Treatment Care: Some redness and swelling may occur, but this will subside within a few days."
                 ]
             },
             {
                 heading: "Conclusion",
-                content: `Skin booster treatments offer a revolutionary way to rejuvenate your skin by providing deep hydration and nourishment from within.
-                
-            If you want to achieve a naturally glowing complexion, this treatment could be the perfect solution. Consult with a skincare expert today and take the first step towards radiant skin!`
+                content: "Say goodbye to visible scars with scar revision treatments at OBW Clinic. Achieve smooth, even skin and boost your confidence today!"
             }
         ],
         newsletter: {
             heading: "Subscribe to Newsletter",
-            description: "Stay up-to-date with the latest skincare tips and articles by subscribing to our newsletter.",
+            description: "Stay updated with the latest skincare tips and treatments by subscribing to our newsletter.",
             placeholder: "Enter your email",
             buttonText: "Subscribe"
         }
     };
+    const data11 = {
+        title: "Laser Resurfacing Treatments: Smooth, Youthful Skin in No Time",
+        category: "Skin",
+        author: "Aryan Sawant",
+        date: "08 January 2025",
+        coverImage: "https://s3-alpha-sig.figma.com/img/b186/ae0c/1b929aec1b8cf3edd0f5e549406ce70d?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XhjHyTeifZPHaOzJR9HmLMzDJcPR3ry6zKcj7MAVouQXBPvdY88GbN-3Z3DenIxByX4jzgH2pdR9J1JGPugi7VzSzr6e4ckq34MLN5U5U3BZqzdcPGUqwvHAI6ePd-jV39SESvIygVjgJZqXrMIcsSgQPAa1FXcegJ-4V1SwyrFktHqBArsrSelujGR6XMumIsZfU2ANwh-ntIzZJ7-p5myDvEA-dVCWBOpmGMKFgjXAcdQ4WaevH36watjOl-GCr8IAIzosnsVp4jku-MDL1SMFgOVKnMRwVFYRM0-h7BnNSdvmK4aW7Biq-k9XwjzxJhgp0sor67YFzw3tJeQ53Q__",
+        sections: [
+            {
+                heading: "Introduction",
+                content: "Laser resurfacing is one of the most effective treatments for reducing wrinkles, fine lines, and skin blemishes. At OBW Clinic, we use fractional CO2 laser technology to target damaged skin layers, stimulate collagen production, and reveal smoother, more youthful skin."
+            },
+            {
+                heading: "How Does Laser Resurfacing Work?",
+                content: "Laser resurfacing involves using a focused beam of light to remove damaged skin layers, stimulating the body’s natural healing process to produce fresh, rejuvenated skin. This treatment can be customized to address various concerns, including wrinkles, pigmentation, and acne scars."
+            },
+            {
+                heading: "Benefits of Laser Resurfacing Treatments",
+                content: "These treatments offer the following benefits:",
+                list: [
+                    "Reduces wrinkles, fine lines, and blemishes",
+                    "Improves skin texture and tone",
+                    "Stimulates collagen production",
+                    "Minimally invasive with quick recovery time",
+                    "Safe and effective for all skin types"
+                ]
+            },
+            {
+                heading: "What to Expect During Laser Resurfacing at OBW Clinic?",
+                content: "Here’s what you can expect during your treatment:",
+                list: [
+                    "Consultation & Evaluation: We’ll assess your skin concerns and recommend the appropriate treatment.",
+                    "Procedure: The treatment typically takes 30-60 minutes, with a mild sensation of warmth.",
+                    "Post-Treatment Care: Mild redness and peeling may occur, but this will subside within a few days. Results will improve gradually over 2-4 weeks."
+                ]
+            },
+            {
+                heading: "Conclusion",
+                content: "For smoother, younger-looking skin, choose Laser Resurfacing at OBW Clinic. Book your treatment today and reveal a fresher, radiant complexion!"
+            }
+        ],
+        newsletter: {
+            heading: "Subscribe to Newsletter",
+            description: "Stay updated with the latest skincare tips and treatments by subscribing to our newsletter.",
+            placeholder: "Enter your email",
+            buttonText: "Subscribe"
+        }
+    };
+
 
 
     const data0 = {
@@ -515,26 +556,28 @@ const ArticleDetail = () => {
     console.log("Formatted articleId:", formattedId);
 
     const getArticleData = () => {
-        if (formattedId === "the-science-behind-skin-peels:-what-you-need-to-know") {
+        if (formattedId === "medi-facials:-the-ultimate-skin-rejuvenation-treatment") {
             return data1;
-        } else if (formattedId === "laser-hair-removal:-say-goodbye-to-unwanted-hair-forever") {
+        } else if (formattedId === "laser-hair-removal:-the-hassle-free-solution-for-smooth-skin") {
             return data2;
-        } else if (formattedId === "iv-therapy:-the-ultimate-wellness-boost-for-your-body") {
+        } else if (formattedId === "iv-therapy-for-skin,-hair-&-body-wellness") {
             return data3;
-        } else if (formattedId === "carbon-laser-peel:-the-ultimate-treatment-for-clear-&-radiant-skin") {
+        } else if (formattedId === "carbon-laser-peel:-the-secret-to-flawless-skin") {
             return data4;
-        } else if (formattedId === "top-5-anti-aging-treatments-for-timeless-beauty") {
+        } else if (formattedId === "hair-gfc-&-prp:-the-most-effective-hair-growth-solutions") {
             return data5;
-        } else if (formattedId === "laser-hair-removal:-is-it-right-for-you") {
+        } else if (formattedId === "pmu-(permanent-makeup):-enhancing-natural-beauty-with-long-lasting-results") {
             return data6;
-        } else if (formattedId === "botox-and-fillers-demystified:-a-beginner's-guide-to-anti-aging-treatments") {
+        } else if (formattedId === "skin-brightening:-achieve-a-radiant-and-even-complexion") {
             return data7;
-        // } else if (formattedId === "laser-hair-reduction:-is-it-the-right-choice-for-you") {
-        //     return data8;
-        } else if (formattedId === "hair-loss-solutions:-prp-vs.-gfc-–-what-works-best") {
+        } else if (formattedId === "hair-transplant:-restore-your-hair,-restore-your-confidence") {
+            return data8;
+        } else if (formattedId === "anti-dht-mesotherapy:-prevent-hair-loss-and-promote-hair-growth") {
             return data9;
-        } else if (formattedId === "the-secret-to-radiant-skin:-benefits-of-skin-booster-treatments") {
+        } else if (formattedId === "scar-revision-or-reduction-treatments:-smooth-and-refined-skin") {
             return data10;
+        } else if (formattedId === "laser-resurfacing-treatments:-smooth,-youthful-skin-in-no-time") {
+            return data11;
         } else {
             return data0;
         }

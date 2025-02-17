@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import "./TrendingTreatments.scss";
-import img1 from '../../assets/TrendingTreatments/img1.jpeg'
-import img2 from '../../assets/TrendingTreatments/img2.jpeg'
-import img3 from '../../assets/TrendingTreatments/img3.jpeg'
-import img4 from '../../assets/TrendingTreatments/img4.jpeg'
+import img1 from '../../assets/TrendingTreatments/Exosome Therapy for Skin & Scalp-min.jpg'
+import img2 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
+import img3 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
+import img4 from '../../assets/TrendingTreatments/Skin Boosters-min.jpg'
+import img5 from '../../assets/TrendingTreatments/Lipolytic Injections-min.jpg'
+import img6 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
+import img7 from '../../assets/TrendingTreatments/Botulinum Toxin Injections-min.jpg'
+import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
 import { ArrowRight, ChevronRight } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { useNavigate } from "react-router-dom";
@@ -34,22 +38,22 @@ const treatments = [
     {
         title: "Lipolytic Injections   ",
         description: "Melt stubborn fat with our non-surgical lipolytic injections, sculpting and contouring problem areas for a slimmer, more defined look.   ",
-        image: 'https://img.freepik.com/free-photo/beautiful-female-wearing-pink-gloves-showing-filled-syringe-camera-close-up-portrait_7502-10384.jpg?t=st=1739625819~exp=1739629419~hmac=0e8b35515accb356d9ab1110389269b1f32965a3b8add78a8b3a30b255de5564&w=360',
+        image: img5,
     },
     {
         title: "IV Therapy for Skin, Hair & Body Care  ",
         description: "Boost your beauty from within with IV therapy, delivering essential vitamins and antioxidants for radiant skin, strong hair, and overall wellness.   ",
-        image: 'https://img.freepik.com/free-photo/women-discussing-spa-treatment_23-2149871834.jpg?t=st=1739625859~exp=1739629459~hmac=d78fc2adf8d84fc5d25bed6627beb3f484c357a9d3a4e86a632830608e9eede7&w=360',
+        image: img6
     },
     {
         title: "Botulinum Toxin Injections ",
         description: "Smooth fine lines and wrinkles with botulinum toxin injections, giving you a refreshed, youthful, and natural-looking appearance.   ",
-        image: 'https://img.freepik.com/free-photo/young-woman-getting-prp-therapy_23-2149341404.jpg?t=st=1739625892~exp=1739629492~hmac=44cded4e9cd09de4d092a53456c88ceba4a73af54e3fbc1bc779bd79e159e901&w=360',
+        image: img7
     },
     {
         title: " Hair Transplantation ",
         description: " Restore your confidence with advanced hair transplantation, offering natural-looking, long-lasting results for fuller, thicker hair.    ",
-        image: 'https://img.freepik.com/free-photo/man-getting-prp-injection-alopecia_23-2149341451.jpg?t=st=1739625927~exp=1739629527~hmac=c225661cfce7e9b53d942b39af29f5563b758f6b7818acc9d52c2c2717f72fb2&w=360',
+        image: img8
     },
     // {
     //     title: " Scar Revision or Reduction Treatments ",
@@ -64,13 +68,13 @@ const treatments = [
 ];
 
 const TrendingTreatments = () => {
-     const [showModal, setShowModal] = useState(false);
-            const handleBookNowClick = () => {
-                setShowModal(true);
-            };
-            const closeModal = () => {
-                setShowModal(false);
-            };
+    const [showModal, setShowModal] = useState(false);
+    const handleBookNowClick = () => {
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+    };
     const navigate = useNavigate();
     // const HandleNavigation = (path) => {
     //     navigate(path);

@@ -7,15 +7,45 @@ import { motion } from 'framer-motion';
 
 const faqs = [
     {
-        question: "What services does OBW offer?",
-        answer:
-            "OBW offers a variety of services including web development, digital marketing, and IT consulting to help businesses thrive in the digital landscape.",
+        question: "What services does OBW Clinic offer? ",
+        answer: "We offer a wide range of aesthetic and wellness treatments, including skin brightening, anti-aging solutions, laser treatments, chemical peels, PRP therapy, HydraFacial, body contouring, and more. ",
     },
-    { question: "How do I book an appointment?", answer: "You can book it via our website or contact us directly." },
-    { question: "Are the products used safe?", answer: "Yes, all products are tested and certified for safety." },
-    { question: "Can I change my appointment?", answer: "Yes, you can reschedule through your account portal." },
-    { question: "What safety measures are in place?", answer: "We follow all industry-standard safety protocols." },
-    { question: "Do you offer group bookings?", answer: "Yes, we provide customized packages for group bookings." },
+    {
+        question: "Are OBW Clinic treatments safe?",
+        answer: "Yes! All our treatments are FDA-approved, performed by trained professionals, and use clinically tested, dermatologically safe products. "
+    },
+    {
+        question: " How do I book an appointment? ",
+        answer: "To schedule your appointment, you can call us, visit our website, or message us on WhatsApp or social media. "
+    },
+    {
+        question: "How many sessions are required for visible results?",
+        answer: "Results vary based on the treatment and individual skin type. Our experts will provide a personalized treatment plan tailored to your needs during your consultation. "
+    },
+    {
+        question: "Do you offer consultations before treatment? ",
+        answer: "Yes, we provide personalized consultations to understand your concerns and recommend the best treatment options."
+    },
+    {
+        question: "Is there any downtime after treatments?",
+        answer: "Most of our treatments have minimal to no downtime, allowing you to resume daily activities quickly. Our team will guide you on post-care based on your procedure. "
+    },
+    {
+        question: "Do you offer customized treatment plans?",
+        answer: "Absolutely! We assess your skin and aesthetic goals to create a tailor-made treatment plan for the best results. "
+    },
+    {
+        question: "What products do you use for treatments?",
+        answer: "We use premium, dermatologist-approved skincare, and aesthetic products to ensure safety and effectiveness. "
+    },
+    {
+        question: "Can I get a treatment done on the same day as my consultation? ",
+        answer: "Yes, in most cases, you can start your treatment immediately after consultation, depending on the procedure. "
+    },
+    {
+        question: "Where is the OBW Clinic located? ",
+        answer: "We have multiple branches for your convenience. You can check our website or contact us for the nearest location. "
+    },
 ];
 
 const FAQSection = () => {
@@ -47,10 +77,10 @@ const FAQSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true, amount: 0.4 }}
-                       
+
                     >
                         <motion.div className="faq-question"
-                           
+
                         >
                             <span>{faq.question}</span>
                             <div className="icon_round">
