@@ -100,7 +100,7 @@
         // border: 1px solid red;
         padding: 1rem;
         border-radius: 8px;
-
+        border-left: 1px solid transparent;
         h3 {
           font-weight: 500;
           font-size: 24px;
@@ -137,10 +137,27 @@
           }
         }
       }
+      .location-card:hover{
+        position: relative;
+        background: #e6f7ff2e;
+        transition: 0.4s linear;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 90%;
+            margin-top: 5px;
+            width: 1px;
+            background-color: #1e90ff;
+            /* Border ka color */
+          }
+      }
       .locationActive {
         background-color: #e6f7ff;
         position: relative;
         // border-left: 2px solid #1e90ff;
+       
         &::before {
           content: "";
           position: absolute;
