@@ -2,34 +2,39 @@ import React, { useState } from 'react';
 import './BlogSlider.scss';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
+import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
+import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
+import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
 const blogs = [
     {
-        title: "The Science Behind Skin Peels: What You Need to Know",
-        p: 'Dive deep into the transformative world of skin peels. Learn about their benefits, how they work, and why they’re a go-to solution for acne scars, pigmentation, and rejuvenation.',
-        author: "Aryan Sawant",
-        authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
-        date: "Jan 16, 2025",
-        image: "https://s3-alpha-sig.figma.com/img/c08c/bca2/78b2d646e0acb22d61689f83b9d38feb?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=T-T90hIYR-~mawSZZI5nzpVm3L8kaTNnog0TFpaQ5M3jdveuA7uBkcdoBi1Fyk4-20LwGSgh0LZqXv9Xf7L1GAyc8AKmkCpWZsX2UXq~6acWBgRdFsnkNABLWUyt2VbOneupV1rSaRRg0p3ItwMDcoLRkrKlcvXsYlSBNVdYsW2Cigq1gyFhslrulcEyDcy8DAP6uyBVPHzh4PWP0D1sbQFToasBPhfOo6LVcXOH1a5OOQJjFPuYl3uz7h9UHFPsRfC5fCdu1JeMv9xiJYQK9LSPgAComi6XmejMLXPGWlNoQpOvi9JPnM3105aGRtYk-JL8EyUrGZ5MQ0rXV-kHPw__", // Replace with your image URL
+        title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
+        p: "Discover how medi-facials provide deep skin nourishment and rejuvenation. Unlike regular facials, medi-facials use advanced dermatological techniques to hydrate, exfoliate, and treat skin concerns like acne, pigmentation, and fine lines. These facials are customized as per your skin type, ensuring a glowing and refreshed look after every session.",
+        author: "Anjali Verma",
+        authorImg: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg?w=1060",
+        date: "Feb 10, 2025",
+        image: img1,
+        category: "Skin"
     },
     {
-        title: "Top 5 Anti-Aging Treatments for Timeless Beauty",
-        p: 'Explore the most effective anti-aging solutions, from Botox to fillers, and discover how they help reduce fine lines, restore elasticity, and enhance your natural glow',
-        author: "Sameer Devale",
-        authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
-        date: "Jan 14, 2025",
-        image: "https://s3-alpha-sig.figma.com/img/912c/a837/117c9d64bb86b26a60b5c99bb8b860b8?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ooh36m6ePlF-K-zwS7eGiRgZ~VgJx288VKARbH7EIkJH~F1SWBYePMBt3nt68XpLTPgx6n3MjJN4w6UoBzwY7sIw-mE1fr-NpwxpXC2EJfKN3vm2eQxEyC~HisS8pwfXFcoJDKoCWQvAs-HcZKesZuQhtoJXjOsFbyZ~ODz3~mrbc61cKxcv4skFyc8SNl8j6bMApAzcoeulYwHAxjZ7bYxIWRfnHKLi9o6v2oGTwjm39QZz48ZZC~jzKhEeFJ0xgFV9TPHItxLz6b5NCdWJSeNaIR5nn~8ScfCLNlcpSILoykBA46HueeiKOyKgahXAw~Fq~s-r8vG~NZjQjxg7Xg__", // Replace with your image URL
+        title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
+        p: "Say goodbye to the constant struggle of shaving, waxing, and plucking! Laser hair removal offers a long-term solution for smooth, hair-free skin by targeting hair follicles and preventing regrowth. It is a safe, effective, and virtually painless procedure that works well on various skin types, giving you confidence with every session.",
+        author: "Riya Mehta",
+        authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
+        date: "Feb 15, 2025",
+        image: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
+        category: "Hair"
     },
     {
-        title: "Laser Hair Removal: Is it Right for You?",
-        p: 'Find out everything about laser hair reduction, including how it works, what to expect during sessions, and why it’s a long-term solution for smooth, hair-free skin',
-        author: "Jyoti Jain",
-        authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
-        date: "Jan 08, 2025",
-        image: "https://s3-alpha-sig.figma.com/img/81d9/3752/ba48f7db28f925a9ca9103acbc0f213c?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hrlS5rKjrrnhPXRi~Xn3fE5YYcBMqOl~iRs3i86fxKVuZeWlnAEdBinqT4qU7LVq1iR71oeNNJiAc5N7pRHuE0gT0Dfcn0W~J2iObKVUF440a~X~T-BqBMmrrxXWMTOrY14nqHpIJFLM8o6oyAiflHpcgtv1G7IRsIu2xDYdPHGRtdyyG6F60lrZ0V4O3Wwn~yhf468vECZrjIuY0ozB6IehAgU6VVyQ6IDRqw-QOo3llpqnf0RCwOiaO0xVJYikAJvPnnMgpOW2Z41uSf5lyLi7sADnOMyjjPjIBnbn9XADFkuEKGF-n8odbhGowHHttS05CG4vAEq3x~IRwzRXYg__", // Replace with your image URL
+        title: "IV Therapy for Skin, Hair & Body Wellness",
+        p: "IV therapy is a revolutionary treatment designed to nourish your body from within. By delivering essential vitamins, minerals, and antioxidants directly into your bloodstream, IV therapy helps improve skin health, strengthen hair, boost immunity, and increase energy levels. It's a quick and effective way to achieve overall wellness and a youthful glow.",
+        author: "Aarav Sharma",
+        authorImg: "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
+        date: "Feb 20, 2025",
+        image: img3,
+        category: "Wellness"
     },
-
 ];
+
 
 const BlogSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

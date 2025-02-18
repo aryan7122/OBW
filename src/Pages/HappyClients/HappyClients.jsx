@@ -145,7 +145,7 @@ const HappyClients = () => {
                                     if (el) videoRefs.current[index] = el;
                                 }}
                                 className="card-image"
-                                poster={blog.image}
+                                // poster={blog.image}
                                 onClick={() => handlePlayPause(index)}
                             >
                                 <source src={blog.video} type="video/mp4" />

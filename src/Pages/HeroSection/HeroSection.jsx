@@ -3,6 +3,7 @@ import "./HeroSection.scss";
 import { ArrowRight, CirclePlay } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { motion } from 'framer-motion';
+import img1 from '../../assets/firststep/hero.png'
 
 const HeroSection = () => {
     const [showModal, setShowModal] = useState(false);
@@ -58,7 +59,7 @@ const HeroSection = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
-                            src="https://s3-alpha-sig.figma.com/img/4c33/aa75/c0fb940b95018e5564b4964375268ada?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=AcQYKKHdTKu~L54imqEOTsyL1h7QgZ~9hxKcYe9q8Y8jItwm4-pT4IKViAxZM~WDVJ5zjCRU68uG6UpM-IqDSl8U3yAiSWrpHhX~cjrQ~9bOOU958XMctQNgu2dDVHHKAqLYwSGUFBr~pVUEcAspc2O6Ns7AwV1X4XxBJg8ImBh2qikGVAYz2HwBxuSSunkdmc7uGF1YzoU25pxmKyIgb79adYgvyuoo-bltLOsiYrnajMhzWROgLk9PnkXBslu1FWk5HA~xV7v2BZitWfQzyqSx-xXpDu5j6Llfac3wPGWvL2qZsCwUO-hBzKDgsioQCzNSAkvWblxvhSd-SYEzLA__"
+                            src={img1}
                             alt="Hero Girl"
                         />
                     </motion.div>

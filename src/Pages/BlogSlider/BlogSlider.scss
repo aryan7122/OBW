@@ -216,6 +216,11 @@
         letter-spacing: -0.800000011920929px;
         text-align: left;
         color: #1b1b1b;
+        display: -webkit-box;
+          -webkit-line-clamp: 2; // Show only 3 lines
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         margin-top: 8px;
         @media only screen and (max-width: 1330px) {
           width: 100%;
@@ -229,6 +234,11 @@
         }
       }
       .card-p {
+        display: -webkit-box;
+          -webkit-line-clamp: 4; // Show only 3 lines
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         font-size: 16px;
         font-weight: 400;
         font-family: "Supreme-Regular", sans-serif;
