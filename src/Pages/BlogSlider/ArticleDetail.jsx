@@ -11,7 +11,10 @@ import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg
 import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
 import img9 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
 import img11 from '../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg'
-
+import img2 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
+import img7 from '../../assets/TrendingTreatments/Skin Brightening-min.jpg'
+import img10 from '../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg'
+import img5 from '../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg'
 const ArticleDetail = () => {
     const data1 = {
         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
@@ -60,7 +63,7 @@ const ArticleDetail = () => {
         category: "Hair",
         author: "Riya Mehta",
         date: "Feb 15, 2025",
-        coverImage: "https://example.com/your-image-url.jpg", // Replace with actual image URL
+        coverImage: img2, // Replace with actual image URL
         sections: [
             {
                 heading: "Introduction",
@@ -188,7 +191,7 @@ const ArticleDetail = () => {
         category: "Hair",
         author: "Sanya Mehta",
         date: "Mar 1, 2025",
-        coverImage: "https://img.freepik.com/free-photo/young-woman-hair-care-salon_8353-4357.jpg?t=st=1739623323~exp=1739626923~hmac=5b8d0d9530b1707410345e174515d38fdb9920d0fa78fa787ec83bba835228b6&w=1060",
+        coverImage: img5,
         sections: [
             {
                 heading: "Introduction",
@@ -289,7 +292,7 @@ const ArticleDetail = () => {
         author: "Rashi Kapoor",
         authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
         date: "Mar 10, 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/3146/b8f3/4c0dbeeedf9e12561734bcc0ef61f4f3?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=G0vg4rAzRXyispWi3rSdGcg5i0RuGCPk8f86FaINB2PDGce5jOQ8qf9XihpQPZvByz4UVMiCyCpbO2t6FArIs6Bkh2ZKzo07CCxEXZAYv6OoPLiWBWys81yvHHuDeiP91MJrmnx8RRiE6QikbZYwuwJs-JWzlMVtV1CXIJKkyPezfpEsLLSi1spAtAtX6CJI85jXWIzkV0aeYnbU5uvDCUni71wspR8IwH4HNSnjBUZt6ftAQKKCMl9GpSuK7VrwfoeYsf2ZfY6jmtDelCH6Zt-hcJGh4u7OGkSMojcx3PkiDtyBWNM3FJ~0s9~pcqkTwWSB6mzKgux3kOzCY37ZyA__",
+        coverImage:img7,
         sections: [
             {
                 heading: "Introduction",
@@ -431,7 +434,7 @@ const ArticleDetail = () => {
         category: "Skin",
         author: "Tanya Sharma",
         date: "Mar 25, 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/b186/ae0c/1b929aec1b8cf3edd0f5e549406ce70d?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XhjHyTeifZPHaOzJR9HmLMzDJcPR3ry6zKcj7MAVouQXBPvdY88GbN-3Z3DenIxByX4jzgH2pdR9J1JGPugi7VzSzr6e4ckq34MLN5U5U3BZqzdcPGUqwvHAI6ePd-jV39SESvIygVjgJZqXrMIcsSgQPAa1FXcegJ-4V1SwyrFktHqBArsrSelujGR6XMumIsZfU2ANwh-ntIzZJ7-p5myDvEA-dVCWBOpmGMKFgjXAcdQ4WaevH36watjOl-GCr8IAIzosnsVp4jku-MDL1SMFgOVKnMRwVFYRM0-h7BnNSdvmK4aW7Biq-k9XwjzxJhgp0sor67YFzw3tJeQ53Q__",
+        coverImage: img10,
         sections: [
             {
                 heading: "Introduction",

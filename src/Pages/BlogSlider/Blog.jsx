@@ -4,6 +4,10 @@ import Frame from "../../assets/about/Frame.svg";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
+import img2 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
+import img7 from '../../assets/TrendingTreatments/Skin Brightening-min.jpg'
+import img10 from '../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg'
+import img5 from '../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg'
 import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
 import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
 import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
@@ -49,7 +53,7 @@ function Blog() {
             author: "Riya Mehta",
             authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
             date: "Feb 15, 2025",
-            image: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
+            image: img2,
             category: "Hair"
         },
         {
@@ -76,7 +80,7 @@ function Blog() {
             author: "Sanya Mehta",
             authorImg: "https://img.freepik.com/free-photo/young-woman-getting-hair-prp-treatment_1157-14167.jpg?w=1060",
             date: "Mar 1, 2025",
-            image: "https://img.freepik.com/free-photo/young-woman-getting-hair-prp-treatment_1157-14167.jpg?w=1060",
+            image: img5,
             category: "Hair"
         },
         {
@@ -94,7 +98,7 @@ function Blog() {
             author: "Rashi Kapoor",
             authorImg: "https://img.freepik.com/free-photo/young-woman-having-skin-brightening-treatment_1157-12974.jpg?w=1060",
             date: "Mar 10, 2025",
-            image: "https://img.freepik.com/free-photo/young-woman-having-skin-brightening-treatment_1157-12974.jpg?w=1060",
+            image: img7,
             category: "Skin"
         },
         {
@@ -121,7 +125,7 @@ function Blog() {
             author: "Tanya Sharma",
             authorImg: "https://img.freepik.com/free-photo/young-woman-face-scar-revision-treatment_1157-14209.jpg?w=1060",
             date: "Mar 25, 2025",
-            image: "https://img.freepik.com/free-photo/young-woman-face-scar-revision-treatment_1157-14209.jpg?w=1060",
+            image: img10,
             category: "Skin"
         },
         {
@@ -135,7 +139,7 @@ function Blog() {
         }
     ];
 
-    const categories = ["View all", "Skin", "Hair", "Wellness",'Beauty'];
+    const categories = ["View all", "Skin", "Hair", "Wellness", 'Beauty'];
 
     // const filteredBlogs =
     //     selectedCategory === "View all"
