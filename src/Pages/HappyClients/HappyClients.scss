@@ -168,13 +168,12 @@
       transform: translateX(calc(-32% * var(--index)));
     }
     .slider-card {
-      border: 20px;
+      // border: 20px;
       overflow: hidden;
       border-radius: 16px;
 
       background: #02282b;
       border-radius: 20px;
-
       margin: 0 10px;
       // padding: 16px;
       &:hover {
@@ -201,9 +200,10 @@
       }
       .card-image {
         width: 427px;
-        height: 587px;
+        height: 100%;
         border-radius: 20px;
         object-fit: cover;
+        // border: 1px solid red;
         @media only screen and (max-width: 750px) {
           width: 350px;
           height: 487px;
@@ -313,6 +313,12 @@
           &:hover {
             opacity: 0.8;
           }
+        }
+      }
+      .isPlaying {
+        opacity: 0;
+        &:hover {
+          opacity: 1;
         }
       }
     }

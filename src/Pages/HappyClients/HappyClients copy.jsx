@@ -1,30 +1,31 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import './HappyClients.scss';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import happyImg from '../../assets/HappyClients/happy.svg'
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { video } from 'motion/react-client';
 
 const data = [
     {
         name: "Lalita Thakur",
         location: "Mumbai",
         image: "https://s3-alpha-sig.figma.com/img/73e4/07de/671e93ceca888c6d577d00f110d09b9f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=cAnVkPgi5~NfhHbOq0cFV9-fo04Sfbe1m6b9hJCH0g1ff1rHLyQyKbFghDvOsV9MK98Ram~MAHFR~9w~IQ0Big78frsg8MdJb0PdK5Dmt3nScY3GIxERE28by-MbroCM53fRUJm3cX4EkPUtfLnev86hOFUa0PVSCGV1asisF3z213VR7K1Wi83y5Plp37ILSptXK83a80RuoRIukVBIEsdtp4E018SRdSaR6e73Xnq2-mKtgkahyvGhlURt5LuO6QH3OlV6Dbzec4Glpump2Tbv5sx6JSFDbhHTsmAAaOf4Rs1lIZt2arfeVHCwx2c-UNlXdMyUr~V4-2rjs52urw__", // Replace with your image URL
-        video: "https://v1.pinimg.com/videos/mc/expMp4/66/ec/49/66ec49735ba470355110c7b430185eb2_t1.mp4",
-        star: 5,
+        video:'https://static.vecteezy.com/system/resources/previews/027/776/792/mp4/optical-glasses-eye-check-woman-eye-check-person-eye-check-video.mp4',
+        star: 3,
     },
     {
         name: "Sheetal Trivedi",
         location: "Bengaluru",
         image: "https://s3-alpha-sig.figma.com/img/2c57/ec52/5c4130705ab505bc70d55013754612bf?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QX7KTsfNO3SdSM9mc8M7WWkrlvJiWb2fWdeKLV9fHkDFscgMVLbOEMd3Mv6Lh-rMbIfqmXBn~5Ie6bJNAb~QDnzFoxKMSLwIYm3ABQWc~0E13czMhJj~9tgY~WpRLtMLBbFNxGOtoiRC4~Lhc14aFVnYL5zP5LFC8h2OP5WiTCnddgzWwN-jO5W7ZgGSIU5NQwF9PNq5Yy8qdSeGNlHY7WbdyQnGhoDMekziNJrUCXZLz7S2y5voSD~GdWqafw~xA2wVqugW2rS6wJtHI6Wv~ZaNmF6lMzGCgxidZB02K3xECtFiayeIdNkx8zRjhcgGgigmn38UfwagJ4E70gRH1g__", // Replace with your image URL
-        video: "https://v1.pinimg.com/videos/mc/expMp4/39/db/f0/39dbf047286eec239080f13f4b1116c2_t1.mp4",
+        video:'https://v1.pinimg.com/videos/mc/expMp4/8a/6e/3c/8a6e3cd848c71e3bc9ce4438a5be5788_t1.mp4',
         star: 3.5,
     },
     {
         name: "Vishwas Patel",
         location: "Bengaluru",
         image: "https://s3-alpha-sig.figma.com/img/b9e5/4b80/1b535ac760e9750f3824617048afac21?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VE1OPyVn0VGDllWpORrVxovLD9ToVYwR5WcuBDEz~DeAj7w~U7oET6YfYobksqPbILzADsg89X4xYae9qastxBbzUax2Mm9N8O87mJ-hWstdgzSH2mkmrhfYZEBAT9Xx3Helzhuqn5duYTJ4nsqlFI8z6ls5Jl5JcOkIFJBPoHfIWTa1Wa8MJQXHOyg-CdzEJ0znRuyMYt5c8mndNX7lceu4OKFHfoD4QMTrcb523BGoYWN8oFgVT3OTA1lOrAUO64U4jbABLhrYJMwvI0t9KaJPCmPToeWtlKlFNmI62TI5wZYrhrNlkRPJxTUKejwYMsJYnxbg8pw8sOwg1HwfDg__", // Replace with your image URL
-        video: "https://v1.pinimg.com/videos/mc/720p/a2/bd/0d/a2bd0db20d6ee7ccf500390b798dcb58.mp4",
+        video:"",
         star: 5,
     },
 
@@ -50,61 +51,6 @@ const HappyClients = () => {
         navigate(path);
         window.scrollTo(0, 0);
     };
-
-    const [isPlaying, setIsPlaying] = useState(Array(data.length).fill(false));
-    const videoRefs = useRef([]);
-
-    // const handlePlayPause = (index) => {
-    //     const video = videoRefs.current[index];
-    //     if (!video) return;
-
-    //     const updatedPlayingState = [...isPlaying];
-    //     updatedPlayingState[index] = !updatedPlayingState[index];
-
-    //     if (updatedPlayingState[index]) {
-    //         video.play();
-    //     } else {
-    //         video.pause();
-    //     }
-
-    //     setIsPlaying(updatedPlayingState);
-    // };
-
-    const handlePlayPause = (index) => {
-        const video = videoRefs.current[index];
-        if (!video) return;
-
-        const updatedPlayingState = [...isPlaying];
-
-        // Agar video already play ho raha hai, toh pause karenge aur dusra video play karenge
-        if (updatedPlayingState[index]) {
-            video.pause();
-            updatedPlayingState[index] = false;
-        } else {
-            // Agar koi aur video play ho raha hai, usko pause karenge
-            const currentlyPlayingIndex = updatedPlayingState.findIndex(state => state === true);
-            if (currentlyPlayingIndex !== -1) {
-                videoRefs.current[currentlyPlayingIndex].pause();
-                updatedPlayingState[currentlyPlayingIndex] = false;
-            }
-
-            // Naya video play karenge
-            video.play();
-            updatedPlayingState[index] = true;
-        }
-
-        setIsPlaying(updatedPlayingState);
-
-        // Video end hone par play icon ko dikhana
-        video.onended = () => {
-            const updatedEndState = [...updatedPlayingState];
-            updatedEndState[index] = false;
-            setIsPlaying(updatedEndState);
-        };
-    };
-
-
-
 
     return (
         <div className="happy-slider-container">
@@ -136,22 +82,9 @@ const HappyClients = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.1 }}>
-                            {/* {!isPlaying ? (
-                                <img src={blog.image} alt={blog?.title} className="card-image" />
-                            ) : (
-                            )} */}
-                            <video
-                                ref={(el) => {
-                                    if (el) videoRefs.current[index] = el;
-                                }}
-                                className="card-image"
-                                poster={blog.image}
-                                onClick={() => handlePlayPause(index)}
-                            >
-                                <source src={blog.video} type="video/mp4" />
-                            </video>
-
-                            <div className={`card_blur ${isPlaying[index] ? 'isPlaying' :''} `}>
+                            <img src={blog.image} alt={blog?.title} className="card-image" />
+                            
+                            <div className="card_blur">
                                 <div className='aut_text-img'>
                                     <div className='aut_text'>
                                         <p className="card-name">{blog?.name}</p>
@@ -166,7 +99,7 @@ const HappyClients = () => {
                                                     whileInView={{ opacity: 1, scale: 1 }}
                                                     transition={{
                                                         duration: 0.6,
-                                                        delay: index * 0.2,
+                                                        delay: index * 0.2, 
                                                     }}
                                                     viewport={{ once: true, amount: 0.2 }}
                                                 >
@@ -186,21 +119,10 @@ const HappyClients = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="action_btn video_play_push" onClick={() => handlePlayPause(index)}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#ffffff" fill="none">
-                                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-                                        {isPlaying[index] ? (
-                                            // Pause Icon
-                                            <>
-                                                <rect x="9" y="8" width="2" height="8" fill="currentColor" />
-                                                <rect x="13" y="8" width="2" height="8" fill="currentColor" />
-                                            </>
-                                        ) : (
-                                            // Play Icon
-                                            <path d="M15.9453 12.3948C15.7686 13.0215 14.9333 13.4644 13.2629 14.3502C11.648 15.2064 10.8406 15.6346 10.1899 15.4625C9.9209 15.3913 9.6758 15.2562 9.47812 15.0701C9 14.6198 9 13.7465 9 12C9 10.2535 9 9.38018 9.47812 8.92995C9.6758 8.74381 9.9209 8.60868 10.1899 8.53753C10.8406 8.36544 11.648 8.79357 13.2629 9.64983C14.9333 10.5356 15.7686 10.9785 15.9453 11.6052C16.0182 11.8639 16.0182 12.1361 15.9453 12.3948Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-                                        )}
-                                    </svg>
-                                </button>
+                                <button className="action_btn video_play_push"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" color="#ffffff" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M15.9453 12.3948C15.7686 13.0215 14.9333 13.4644 13.2629 14.3502C11.648 15.2064 10.8406 15.6346 10.1899 15.4625C9.9209 15.3913 9.6758 15.2562 9.47812 15.0701C9 14.6198 9 13.7465 9 12C9 10.2535 9 9.38018 9.47812 8.92995C9.6758 8.74381 9.9209 8.60868 10.1899 8.53753C10.8406 8.36544 11.648 8.79357 13.2629 9.64983C14.9333 10.5356 15.7686 10.9785 15.9453 11.6052C16.0182 11.8639 16.0182 12.1361 15.9453 12.3948Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg></button>
                             </div>
                         </motion.div>
                     ))}
