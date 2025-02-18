@@ -140,11 +140,22 @@
         margin-bottom: -20px;
         flex-direction: row;
       }
-      @media only screen and (max-width: 350px) {
+      @media only screen and (max-width: 430px) {
         //  border: 1px solid red;
         overflow: auto !important;
         white-space: nowrap;
+        margin-bottom: 0;
+        padding-left: 40px;
       }
+                        @media only screen and (max-width: 380px) {
+                          padding-left: 60px;
+                        }
+                        @media only screen and (max-width: 355px) {
+                          padding-left: 80px;
+                        }
+                        @media only screen and (max-width: 330px) {
+                          padding-left: 90px;
+                        }
       li {
         cursor: pointer;
         padding: 8px 10px;
