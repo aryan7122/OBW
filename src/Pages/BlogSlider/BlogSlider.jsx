@@ -52,9 +52,10 @@ const BlogSlider = () => {
     };
 
     const navigate = useNavigate();
-    const HandleNavigation = (path) => {
-        navigate(path);
+    const HandleNavigation = (title) => {
+        const formattedTitle = title.toLowerCase().replace(/\s+/g, "-"); // Slug conversion
         window.scrollTo(0, 0);
+        navigate(`/blog-detail/${formattedTitle}`);
     };
 
     return (
@@ -87,7 +88,8 @@ const BlogSlider = () => {
                                         <p className="card-date">{blog?.date}</p>
                                     </div>
                                 </div>
-                                <button onClick={() => HandleNavigation('/blog-detail')} className="read-more-btn">Read Full Blog</button>
+                                <button onClick={() => HandleNavigation(`${blog?.title}`)}
+                                    className="read-more-btn">Read Full Blog</button>
                             </div>
                         </div>
                     ))}

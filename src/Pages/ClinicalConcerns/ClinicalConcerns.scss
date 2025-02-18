@@ -143,15 +143,15 @@
     .card {
       position: relative;
       border-radius: 16px !important;
-      // overflow: hidden;
+      overflow: hidden;
 
       cursor: pointer;
       //   background-color: #f5f5f5;
       width: 100%;
       height: fit-content;
-          @media only screen and (max-width: 1100px) {
-            overflow: hidden;
-          }
+      @media only screen and (max-width: 1100px) {
+        overflow: hidden;
+      }
       .card-image {
         margin-top: 10px;
         width: 100%;
@@ -162,7 +162,7 @@
       }
 
       &:hover .card-image {
-        transform: scale(1.01);
+        // transform: scale(1.01);
       }
       .card-overlay {
         position: absolute;
@@ -210,9 +210,14 @@
         }
 
         .card-description {
-          display: none;
+          // transform: translateY(200%) !important;
+          // display: none;
+          opacity: 0 !important;
+
           width: 101%;
-          height: 100%  ;
+          height: 109%;
+
+          margin-bottom: -25px !important;
           padding: 20px !important;
           border-bottom-left-radius: 16px !important;
           border-bottom-right-radius: 16px !important;
@@ -224,7 +229,7 @@
           backdrop-filter: blur(10px);
           /* Blur effect */
           -webkit-backdrop-filter: blur(10px);
-          animation: fadeIn 0.5s ease-in-out forwards;
+          animation: fadeIn 1s ease-in-out forwards !important;
           overflow: scroll;
           // overflow: auto;
           scrollbar-width: none;
@@ -246,8 +251,8 @@
             height: 105%;
             // border-top-left-radius: 10px;
             padding: 20px !important;
-              border-bottom-left-radius: 16px !important;
-              border-bottom-right-radius: 16px !important;
+            border-bottom-left-radius: 16px !important;
+            border-bottom-right-radius: 16px !important;
             // border-top-right-radius: 10px;
             overflow: scroll;
             // margin-top: -10%;
@@ -344,6 +349,10 @@
             transform: translateY(10px);
           }
 
+          50% {
+            opacity: 0.5;
+            transform: translateY(0);
+          }
           100% {
             opacity: 1;
             transform: translateY(0);
@@ -357,9 +366,11 @@
           display: block;
         }
         .card-description {
-          animation: fadeIn 0.5s ease-in-out forwards;
-          display: block;
-          padding: 10px;
+          // transform: translateY(0%) !important;
+          // border-bottom-left-radius: 16px !important;
+          // border-bottom-right-radius: 16px !important;
+          // display: block;
+          opacity: 1 !important;
         }
         @media only screen and (max-width: 690px) {
           overflow: hidden;

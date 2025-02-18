@@ -8,9 +8,10 @@ import BodyIcon from '../../assets/Clinical Concerns/icon/slim_6381900.svg';
 import BeautifyingIcon from '../../assets/Clinical Concerns/icon/pedicure_3461923.svg';
 // img
 import SkinImg1 from '../../assets/Clinical Concerns/Enlarged Pores & Uneven Texture-min.jpg';
-import UnwantedImg2 from '../../assets/Clinical Concerns/Unwanted Hairs-min.jpg';
+import UnwantedImg2 from '../../assets/Clinical Concerns/Unwanted Hairs-min 1.jpg';
+import SunTunImg from '../../assets/Clinical Concerns/Sun Tan & Body Texture-min.jpg';
 import EnlargedImg3 from '../../assets/Clinical Concerns/Close-up of Human Face.png';
-import PigmentationImg4 from '../../assets/Clinical Concerns/Close-up Portrait with Emphasis on Skin.png';
+import PigmentationImg4 from '../../assets/Clinical Concerns/Pigmentation & Uneven Skin Tone-min.jpg';
 import DoubleImg5 from '../../assets/Clinical Concerns/Double Chin (Face)-min.jpg';
 import DrynessImg6 from '../../assets/Clinical Concerns/Close-up Portrait with Skincare Focus.png';
 import AcneImg7 from '../../assets/Clinical Concerns/closeup-young-woman-with-towel-head-pimples-face.png';
@@ -18,7 +19,7 @@ import none from '../../assets/Clinical Concerns/none1.png';
 import HairImg1 from '../../assets/Clinical Concerns/woman-getting-hair-loss-treatment-clinic.png';
 import AlopeciaImg2 from '../../assets/Clinical Concerns/Serene and Thoughtful.png';
 import ConditionsImg3 from '../../assets/Clinical Concerns/Elegant and Intricate Hairstyle with Jewel-Studded Headband.png';
-import StubbornImg1 from '../../assets/Clinical Concerns/Confident Woman in Teal Tracksuit against Yellow Backdrop.png';
+import StubbornImg1 from '../../assets/Clinical Concerns/Stubborn Body Fat-min.jpg';
 import SweatingImg2 from '../../assets/Clinical Concerns/Thoughtful Young Man with Geometric Backdrop (1).png';
 import StretchImg3 from '../../assets/Clinical Concerns/close-up-woman-with-stretch-marks.png';
 import bImg1 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (1).png';
@@ -200,7 +201,7 @@ const clinicalData = {
                 "Concerns": ["Sun-tan", "Uneven skin texture"],
                 "Treatments": ["Chemical peels", "Skin-brightening IV injections"]
             },
-            imageUrl: SweatingImg2
+            imageUrl: SunTunImg
         },
         {
             title: "Stretch Marks",
