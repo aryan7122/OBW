@@ -6,6 +6,8 @@ import icon3 from '../../../assets/TrendingTreatments/body.png'
 import icon4 from '../../../assets/TrendingTreatments/bue.png'
 import { ArrowRight } from 'lucide-react';
 import BookAppointment from '../../../Components/BookAppointment/BookAppointment';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const treatmentData = [
     {
@@ -126,7 +128,9 @@ const AllTreatments = () => {
                     {filteredData.map((item) => (
                         <div className="treatment-card" key={item.id}>
                             <div className="img">
-                                <img src={item.imgUrl} alt={item.title} />
+                                <LazyLoadImage effect="blur" src={item.imgUrl} alt={item.title} wrapperProps={{
+                                    style: { transitionDelay: "1s" },
+                                }} />
                             </div>
                             <div className='about_action'>
                                 <h3>{item.title}</h3>

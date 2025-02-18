@@ -17,6 +17,8 @@ import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { useNavigate } from "react-router-dom";
 // import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const treatments = [
     {
@@ -124,7 +126,11 @@ const TrendingTreatments = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="card-image">
-                            <img src={treatment.image} alt={treatment.title} className="" />
+                            <LazyLoadImage effect="blur" wrapperProps={{
+                                style: { transitionDelay: "0.5s" },
+                            }}
+                                src={treatment.image} alt={treatment.title} className="" loading="lazy" />
+                            
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-description">{treatment.description}</p>

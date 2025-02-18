@@ -5,14 +5,20 @@ import { FaLinkedin, FaFacebook, FaTwitter, FaLink } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
+import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
+import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
+import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
+import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
+import img9 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
+import img11 from '../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg'
 
 const ArticleDetail = () => {
     const data1 = {
         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
         category: "Skin",
-        author: "Aryan Solanki",
-        date: "17 February 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/c08c/bca2/78b2d646e0acb22d61689f83b9d38feb?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ltGvqUU5GEKEhx0ci9-0C-6m2HQP6r0MYMG9H01XGaLeKtTlp0jXIuNSrUAh~m4i2Sg9s8n40McreWFub3K06Ptdz3qY8Q-bmppfarJtrFNOF2RANLptnEdnTiQKSEX2ruNW4zFTRSnBPj8YCSgkq5sOYcby9wIfJ97bcIpOgmhG5ZlRXwcNC~PJJWy5lAT6DZjlJb-Cd72psYv8Hww5hd9EIgBo1wBkGNKxcqgyCBRPuXlrG4C4~gNhpuA6niTg5uubo2x394C0kyGQUobNKoqTtSVDZWfFDDZkTqPpawD0qh0JIPIwxDw3r15Qonmn-2lM66kgHYp1KKxjfL9ANA__",
+        author: "Anjali Verma",
+        date: "Feb 10, 2025",
+        coverImage: img1,
         sections: [
             {
                 heading: "Introduction",
@@ -51,9 +57,9 @@ const ArticleDetail = () => {
 
     const data2 = {
         title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
-        category: "Skin",
-        author: "Aryan Solanki",
-        date: "25 January 2025",
+        category: "Hair",
+        author: "Riya Mehta",
+        date: "Feb 15, 2025",
         coverImage: "https://example.com/your-image-url.jpg", // Replace with actual image URL
         sections: [
             {
@@ -98,9 +104,9 @@ const ArticleDetail = () => {
     const data3 = {
         title: "IV Therapy for Skin, Hair & Body Wellness",
         category: "Wellness",
-        author: "Aryan Solanki",
-        date: "10 February 2025",
-        coverImage: "https://img.freepik.com/free-photo/side-view-woman-getting-elbow-prp-treatment_23-2149404696.jpg?t=st=1739620769~exp=1739624369~hmac=e7ea251bb97e59eea402c8fb09a99e9286bc28f3120ede9cabd663d48e3c7fb0&w=1060",
+        author: "Aarav Sharma",
+        date: "Feb 20, 2025",
+        coverImage: img3,
         sections: [
             {
                 heading: "Introduction",
@@ -139,8 +145,8 @@ const ArticleDetail = () => {
     const data4 = {
         title: "Carbon Laser Peel: The Secret to Flawless Skin",
         category: "Skin",
-        author: "Aryan Solanki",
-        date: "15 February 2025",
+        author: "Nikita Soni",
+        date: "Feb 25, 2025",
         coverImage: "https://img.freepik.com/free-photo/girl-with-black-mask-lies-table-spa-saloon_8353-5670.jpg?t=st=1739620246~exp=1739623846~hmac=fa5c83525da73d3cb2b601c8094ff55e8cc9d6797416413f95ebd48ecd741070&w=1060",
         sections: [
             {
@@ -180,8 +186,8 @@ const ArticleDetail = () => {
     const data5 = {
         title: "Hair GFC & PRP: The Most Effective Hair Growth Solutions",
         category: "Hair",
-        author: "Aryan Solanki",
-        date: "15 February 2025",
+        author: "Sanya Mehta",
+        date: "Mar 1, 2025",
         coverImage: "https://img.freepik.com/free-photo/young-woman-hair-care-salon_8353-4357.jpg?t=st=1739623323~exp=1739626923~hmac=5b8d0d9530b1707410345e174515d38fdb9920d0fa78fa787ec83bba835228b6&w=1060",
         sections: [
             {
@@ -221,9 +227,9 @@ const ArticleDetail = () => {
     const data6 = {
         title: "PMU (Permanent Makeup): Enhancing Natural Beauty with Long-Lasting Results",
         category: "Beauty",
-        author: "Aryan Solanki",
-        date: "17 February 2025",
-        coverImage: "https://img.freepik.com/free-photo/beautiful-woman-getting-makeup_1150-13215.jpg?t=st=1739623323~exp=1739626923~hmac=12e8b3185f76a0559978a82d913f1743215b09b525dba3331e5fe71e4a7a36bf&w=1380",
+        author: "Pooja Gupta",
+        date: "Mar 5, 2025",
+        coverImage: img6,
         sections: [
             {
                 heading: "Introduction",
@@ -279,10 +285,10 @@ const ArticleDetail = () => {
 
     const data7 = {
         title: "Skin Brightening: Achieve a Radiant and Even Complexion",
-        category: "Skin Brightening",
-        author: "Jyoti Jain",
+        category: "Skin",
+        author: "Rashi Kapoor",
         authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
-        date: "Feb 17, 2025",
+        date: "Mar 10, 2025",
         coverImage: "https://s3-alpha-sig.figma.com/img/3146/b8f3/4c0dbeeedf9e12561734bcc0ef61f4f3?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=G0vg4rAzRXyispWi3rSdGcg5i0RuGCPk8f86FaINB2PDGce5jOQ8qf9XihpQPZvByz4UVMiCyCpbO2t6FArIs6Bkh2ZKzo07CCxEXZAYv6OoPLiWBWys81yvHHuDeiP91MJrmnx8RRiE6QikbZYwuwJs-JWzlMVtV1CXIJKkyPezfpEsLLSi1spAtAtX6CJI85jXWIzkV0aeYnbU5uvDCUni71wspR8IwH4HNSnjBUZt6ftAQKKCMl9GpSuK7VrwfoeYsf2ZfY6jmtDelCH6Zt-hcJGh4u7OGkSMojcx3PkiDtyBWNM3FJ~0s9~pcqkTwWSB6mzKgux3kOzCY37ZyA__",
         sections: [
             {
@@ -329,9 +335,9 @@ const ArticleDetail = () => {
     const data8 = {
         title: "Hair Transplant: Restore Your Hair, Restore Your Confidence",
         category: "Hair",
-        author: "Jyoti Jain",
-        date: "08 January 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/c682/789a/bc9885ea9ae0b68e3e508f7a1c9998b5?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RPj9cYCYavAKTT~ikAnn8c0kUmofVfH9TqDokQHG09NXVdkz0As7IwgnSXl0i-opFPPjnyExupmFgYWlimkyGwjsVywQH8Gsd1SAOGj5rn94-ZH5EYDvZmOFrFOIwC-XbOhG9AX-Naa7xZ31QQ-4Lrmv6mSiRYWbheUfpAMQQIHIaEWAHAMsbXkdVXvxOC7-XDvzf5YHB7vIAA1jkS~t49vejmmp~wh~cryqC~zDmp2ShFFKeggwEif-zK5cnwnsU6OL3~ixBal96do743bKE4EW09j~dV8kpGalDPI0UJqNAwcjPZLmT25S6wXjrMuKvDp82htVRVg1qe8R4sO9Og__",
+        author: "Anjali Sinha",
+        date: "Mar 15, 2025",
+        coverImage: img8,
         sections: [
             {
                 heading: "Introduction",
@@ -376,9 +382,9 @@ const ArticleDetail = () => {
     const data9 = {
         title: "Anti-DHT Mesotherapy: Prevent Hair Loss and Promote Hair Growth",
         category: "Hair",
-        author: "Aryan Sawant",
-        date: "08 January 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/2bd4/315f/8e3dca5d199aeacf8ee8bba9d452a626?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=t~qDotPnJ8u7GzBUY0vxWwZ5TraxYfm5caH2befT2JYzIDy2R3al8WFr6PWHrKTGfFMFze6SnAnIoQaoK1Ji4UiM3gc8coGk-D1JMSNWiX0zra8n5RSJ9QdmB3FrrlAyCsfy79BsA0Jp2F~gx9Se16ZVJKs4GagAXm~rHV0s32jsN4TStEfrNKMpZIzyHIgJ~si7kxY-65nSueOiZqcqSARLFDsfKOhOepHRVQCrk0WZnyrWhF6~wR0LztUsC0GeVMrmmRprFX7Qh8SwYrORn6oxk9JiyIVotC4veavHE8~SDRkWIiSBh5XZdjr6qRNpW9kqUGh9Q-ZkyLrxDkPZ~w__",
+        author: "Sanya Mehta",
+        date: "Mar 20, 2025",
+        coverImage: img9,
         sections: [
             {
                 heading: "Introduction",
@@ -423,8 +429,8 @@ const ArticleDetail = () => {
     const data10 = {
         title: "Scar Revision or Reduction Treatments: Smooth and Refined Skin",
         category: "Skin",
-        author: "Aryan Sawant",
-        date: "08 January 2025",
+        author: "Tanya Sharma",
+        date: "Mar 25, 2025",
         coverImage: "https://s3-alpha-sig.figma.com/img/b186/ae0c/1b929aec1b8cf3edd0f5e549406ce70d?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XhjHyTeifZPHaOzJR9HmLMzDJcPR3ry6zKcj7MAVouQXBPvdY88GbN-3Z3DenIxByX4jzgH2pdR9J1JGPugi7VzSzr6e4ckq34MLN5U5U3BZqzdcPGUqwvHAI6ePd-jV39SESvIygVjgJZqXrMIcsSgQPAa1FXcegJ-4V1SwyrFktHqBArsrSelujGR6XMumIsZfU2ANwh-ntIzZJ7-p5myDvEA-dVCWBOpmGMKFgjXAcdQ4WaevH36watjOl-GCr8IAIzosnsVp4jku-MDL1SMFgOVKnMRwVFYRM0-h7BnNSdvmK4aW7Biq-k9XwjzxJhgp0sor67YFzw3tJeQ53Q__",
         sections: [
             {
@@ -470,9 +476,9 @@ const ArticleDetail = () => {
     const data11 = {
         title: "Laser Resurfacing Treatments: Smooth, Youthful Skin in No Time",
         category: "Skin",
-        author: "Aryan Sawant",
-        date: "08 January 2025",
-        coverImage: "https://s3-alpha-sig.figma.com/img/b186/ae0c/1b929aec1b8cf3edd0f5e549406ce70d?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XhjHyTeifZPHaOzJR9HmLMzDJcPR3ry6zKcj7MAVouQXBPvdY88GbN-3Z3DenIxByX4jzgH2pdR9J1JGPugi7VzSzr6e4ckq34MLN5U5U3BZqzdcPGUqwvHAI6ePd-jV39SESvIygVjgJZqXrMIcsSgQPAa1FXcegJ-4V1SwyrFktHqBArsrSelujGR6XMumIsZfU2ANwh-ntIzZJ7-p5myDvEA-dVCWBOpmGMKFgjXAcdQ4WaevH36watjOl-GCr8IAIzosnsVp4jku-MDL1SMFgOVKnMRwVFYRM0-h7BnNSdvmK4aW7Biq-k9XwjzxJhgp0sor67YFzw3tJeQ53Q__",
+        author: "Sanya Mehta",
+        date: "Apr 1, 2025",
+        coverImage: img11,
         sections: [
             {
                 heading: "Introduction",
@@ -514,8 +520,6 @@ const ArticleDetail = () => {
             buttonText: "Subscribe"
         }
     };
-
-
 
     const data0 = {
         title: " Not Found This page",
@@ -660,7 +664,7 @@ const ArticleDetail = () => {
         navigate(`/blog-detail/${formattedTitle}`);
     };
 
-// 
+    // 
     const [email, setEmail] = useState("");
 
     // Email validation function
