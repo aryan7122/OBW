@@ -1,8 +1,8 @@
 import React from "react";
 import "./OurValue.scss";
-import img1 from '../../../assets/TrendingTreatments/img1.jpeg'
-import img2 from '../../../assets/TrendingTreatments/img2.jpeg'
-import img3 from '../../../assets/TrendingTreatments/img3.jpeg'
+import img1 from '../../../assets/TrendingTreatments/Excellence in Aesthetics-min.jpg'
+import img2 from '../../../assets/TrendingTreatments/Personalized & Holistic Approach-min.jpg'
+import img3 from '../../../assets/TrendingTreatments/Commitment to Safety & Quality-min.jpg'
 import img4 from '../../../assets/TrendingTreatments/img4.jpeg'
 import { ArrowRight, ChevronRight } from "lucide-react";
 // import { Button } from "@/components/ui/button";
@@ -12,17 +12,17 @@ const treatments = [
     {
         title: "Excellence in Aesthetics",
         description: "We combine advanced technology with expert care to deliver high-quality, result-driven treatments. ",
-        image: 'https://s3-alpha-sig.figma.com/img/b38f/ae75/841ab6368f6b4e6d3eb5a7f19757eeda?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KrQ8WZ2Wq~LXIBvK-DsKL8ciZJX-eUzgLlVLd6wyzgo-n6fK-seqcN2e-bvDN~y9pmeHLkDJd1qIyMDTPcG1fIfn~NEJQzEvPVqZL39F9djw31yPcm62Dhv8f2vxHPSi~wZr3j4xkQdz4eTaGe4Xc12dI4VTT2iKQRONxm9dOeQwD~ZMwt8ITVkhYvthBZo0Vqjh~xdDllC8jQTU3a5iQ5KLooSFywbUrf7kDnVwxENVh29y9QS1nVGwHc3tLCFvRBKZoqabE32MJN0sgTrBeruPC~915~uq7PFaLIG9dlZxJPRYye5iSYEXd4h08ZIH6d10ex03r54GUk7o2w~5JA__',
+        image: img1,
     },
     {
         title: "Personalized & Holistic Approach",
         description: "Every client is unique, and we customize our treatments to meet individual beauty and wellness goals. ",
-        image: 'https://s3-alpha-sig.figma.com/img/6283/2809/84f687ae559e541ed4cea11d5462230c?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=MmvvaKhRZ1BCK-VwolhTx18qKPwQwFBIRvKt8UyIqg-PBCSPRx8GPncBwWjVGVrRXi4exSDOJ9gBMHsldSwFawQBKoopLRZx1TZjOefRaA7DDVPTSVN2WuT7JbG4-YD05Ly5rulozvxs158-Xa5ZynByaHkeeq20u-TMY1rSronoTBRBoXET-c8jONeNhAmAUvw~A6W1TVjjaFaamfecc02iPnEZoa~1CAxcDJSqMeF3fzXUTYtcbM-bw~LYhvJxOHRi2QWJLG4eze1qeyB01OfkI0g~3326YgNZ1I6q13WzAJCjwfUFMu0v8jdJSjBDTJvqbOSbQpLNSv~jKaq9-A__',
+        image: img2,
     },
     {
         title: "Commitment to Safety & Quality ",
         description: "We use only clinically tested, dermatologically safe products and FDA-approved procedures to ensure the best care.",
-        image: 'https://s3-alpha-sig.figma.com/img/9cd6/43b9/e3d4068fb1d8de500a768ea3c0dac166?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=q3hlvxg6TpYasJXKSNANnrZIiVLmpxOdid9PBJ4XB4-dgvImKFXPYgr-82xev~DqTdfEEFmKoQdp4v6MKLwwPJmLZpEOw9i8ITUJPT5G0pWGdHnTCiRpj-tXu-ot1XcTfq881CuDMhzPwh3fC4voQ6CpPdcxVYBEh1BDJo1C5f9qZcI0Tu~LIPQH1R7I85OkRpg5CyAUfNbjCQwwCNp1at~3D3HMrB0kVv9oUQInWmOtNF88W6RQZqCojs6rO7WNqCA58qpQCl4UxzYPskziKlquUi7ttvTePwegORBY0P-nPN8CCcV~XFGyKJnf26slZ1~WZqfnxVhF8kIHR~PU3Q__',
+        image: img3,
     },
 ];
 
