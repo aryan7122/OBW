@@ -8,6 +8,10 @@ import img5 from '../../assets/TrendingTreatments/Lipolytic Injections-min.jpg'
 import img6 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
 import img7 from '../../assets/TrendingTreatments/Botulinum Toxin Injections-min.jpg'
 import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
+import img9 from '../../assets/TrendingTreatments/Scar Revision or Reduction Treatments-min.jpg'
+import img10 from '../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg'
+import img11 from '../../assets/TrendingTreatments/HIFU (High-Intensity Focused Ultrasound)-min.jpg'
+import img12 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
 import { ArrowRight, ChevronRight } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { useNavigate } from "react-router-dom";
@@ -55,16 +59,26 @@ const treatments = [
         description: " Restore your confidence with advanced hair transplantation, offering natural-looking, long-lasting results for fuller, thicker hair.    ",
         image: img8
     },
-    // {
-    //     title: " Scar Revision or Reduction Treatments ",
-    //     description: " Minimize scars and reveal smoother skin with our expert scar revision treatments, using cutting-edge techniques for visible improvement.    ",
-    //     image: img4,
-    // },
-    // {
-    //     title: " Laser Resurfacing Treatments ",
-    //     description: " Renew your skin with laser resurfacing, reducing wrinkles, pigmentation, and acne scars for a flawless, youthful complexion.  ",
-    //     image: img4,
-    // },
+    {
+        title: " Scar Revision or Reduction Treatments ",
+        description: " Minimize scars and reveal smoother skin with our expert scar revision treatments, using cutting-edge techniques for visible improvement.    ",
+        image: img9,
+    },
+    {
+        title: " Laser Resurfacing Treatments ",
+        description: " Renew your skin with laser resurfacing, reducing wrinkles, pigmentation, and acne scars for a flawless, youthful complexion.  ",
+        image: img10,
+    },
+    {
+        title: " HIFU (High-Intensity Focused Ultrasound):   ",
+        description: "A non-invasive skin tightening treatment that stimulates collagen production for a firmer, more youthful appearance—without surgery or downtime.   ",
+        image: img11,
+    },
+    {
+        title: "PMU (Permanent Makeup):",
+        description: "Enhance your natural beauty with long-lasting, semi-permanent cosmetic tattooing for brows, lips, and eyeliner, designed for effortless perfection every day.",
+        image: img12,
+    },
 ];
 
 const TrendingTreatments = () => {
