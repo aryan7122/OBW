@@ -136,10 +136,6 @@ const HappyClients = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.1 }}>
-                            {/* {!isPlaying ? (
-                                <img src={blog.image} alt={blog?.title} className="card-image" />
-                            ) : (
-                            )} */}
                             <video
                                 ref={(el) => {
                                     if (el) videoRefs.current[index] = el;

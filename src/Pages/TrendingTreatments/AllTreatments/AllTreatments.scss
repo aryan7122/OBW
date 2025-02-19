@@ -124,7 +124,9 @@
     }
   }
   .navtab {
-    overflow-x: scroll !important;
+    @media only screen and (max-width: 840px) {
+          overflow-x: scroll !important;
+        }
   }
   .treatment-filters {
     display: flex;
@@ -217,6 +219,7 @@
           object-fit: cover;
           border-radius: 10px;
           transition: 0.3s linear;
+          will-change: transform;
           &:hover {
             scale: 1.1;
           }

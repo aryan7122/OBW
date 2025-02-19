@@ -7,6 +7,8 @@ import ScalpIcon from '../../assets/Clinical Concerns/icon/like_5498753 1.svg';
 import BodyIcon from '../../assets/Clinical Concerns/icon/slim_6381900.svg';
 import BeautifyingIcon from '../../assets/Clinical Concerns/icon/cosmetic-surgery_5506893.png';
 // img
+import placeholderImg from '../../assets/TrendingTreatments/LazyLoadImage.png' 
+
 import SkinImg1 from '../../assets/Clinical Concerns/Enlarged Pores & Uneven Texture-min.jpg';
 import UnwantedImg2 from '../../assets/Clinical Concerns/woman-shaving-her-face-by-razor-min.jpg';
 import SunTunImg from '../../assets/Clinical Concerns/Sun Tan & Body Texture-min.jpg';
@@ -293,28 +295,7 @@ function ClinicalConcerns() {
                     ))}
                 </div>
             </div>
-            {/* <div className="card-container">
-                {clinicalData[selectedTab].map((card, index) => (
-                    <div className="card" key={index}>
-                        <img src={card.imageUrl} alt={card.title} className="card-image" />
-                        <div className="card-overlay">
-                            <h3 className="card-title">{card.title}</h3>
-                            <div className="card-description">
-                                {Object.keys(card.description).map((category) => (
-                                    <div key={category} className="description-category">
-                                        <strong>{category}</strong>
-                                        <ul>
-                                            {card.description[category].map((item, i) => (
-                                                <li key={i}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div> */}
+           
 
             {selectedTab == 'Skin/Face Care' &&
                 <div className="card-container">
@@ -333,6 +314,10 @@ function ClinicalConcerns() {
                                         alt={card?.title}
                                         className="card-image"
                                         loading="lazy"
+                                     
+                                        once={true}
+                                         placeholderSrc={placeholderImg}
+                                       
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -345,7 +330,6 @@ function ClinicalConcerns() {
 
                                         </motion.h3>
                                         <div className="card-description">
-                                            {/* <h3 className="card-title2">Treatments</h3> */}
                                             {Object.keys(card.description).map((category) => (
                                                 <div key={category} className="description-category">
                                                     <strong>{category}</strong>
@@ -377,6 +361,9 @@ function ClinicalConcerns() {
                                         alt={card?.title}
                                         className="card-image"
                                         loading="lazy"
+                                        placeholderSrc={placeholderImg}
+                                        once={true}
+                                       
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -421,6 +408,8 @@ function ClinicalConcerns() {
                                         alt={card?.title}
                                         className="card-image"
                                         loading="lazy"
+                                        once={true}
+                                         placeholderSrc={placeholderImg}
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -457,7 +446,7 @@ function ClinicalConcerns() {
                         <div className="card" key={index}>
                             <LazyLoadImage effect="blur"
                                 wrapperProps={{
-                                    style: { transitionDelay: "0.5s" },
+                                    style: { transitionDelay: "1s" },
                                 }}
                                 src={card?.imageUrl}
                                 alt={card?.title}

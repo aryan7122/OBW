@@ -17,6 +17,7 @@
     padding: 10px;
     background-size: cover;
     background-image: url("../../assets//icons/Rectangle\ 16.png");
+    transition: 0.4s linear;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -53,21 +54,29 @@
         font-optical-sizing: auto;
         font-style: normal;
       background: linear-gradient(
-        161.56deg,
-        #d89393 6.06%,
-        #fff 37.4%,
+        160.56deg,
+        #ffffff 6.06%,
+        #eaf8fd 37.4%,
         #03c1f1 70.6%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 72px;
       font-weight: 700;
+
       line-height: 70px;
       letter-spacing: -3px;
       text-align: left;
       margin-bottom: 1rem;
+      color: #fff;
       span{
-        // background: #14839F !important;
+        // color: #00ccff !important;
+        background: linear-gradient(121.56deg,
+              #03b1f1 6.06%,
+              #0392f1 37.4%,
+              #038af1 70.6%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
       }
       @media only screen and (max-width: 1200px) {
         font-size: 62px;
@@ -93,9 +102,10 @@
       font-weight: 400;
             font-family: 'Supreme-Regular', sans-serif;
       line-height: 24px;
-      letter-spacing: -0.5px;
+      letter-spacing: 0px;
       text-align: left;
       color: #ffffff;
+    font-style: italic;
       @media only screen and (max-width: 770px) {
         align-items: center;
         text-align: center;

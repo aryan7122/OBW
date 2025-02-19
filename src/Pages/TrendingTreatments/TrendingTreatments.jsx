@@ -15,10 +15,9 @@ import img12 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jp
 import { ArrowRight, ChevronRight } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { useNavigate } from "react-router-dom";
-// import { Button } from "@/components/ui/button";
-import { motion } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import placeholderImg from '../../assets/TrendingTreatments/LazyLoadImage.png'
 
 const treatments = [
     {
@@ -101,11 +100,9 @@ const TrendingTreatments = () => {
             <div className="title-sbt">TRENDING</div>
             <header className="heading-section">
                 <h1 className="trending-title">
-                    Trending <motion.span className="heart"
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}>&#x2764;</motion.span>
+                    Trending <span className="heart"
+
+                    >&#x2764; </span>
                     Treatments
                 </h1>
                 <p className="description">
@@ -115,27 +112,26 @@ const TrendingTreatments = () => {
 
             <div className="cards-container">
                 {treatments.map((treatment, index) => (
-                    <motion.div
+                    <div
                         key={index}
                         className="card"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{
-                            opacity: 1,
-                            y: 0,
-                            transition: { delay: index * 0.2, duration: 0.6, ease: "easeOut" }
-                        }}
-                        viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="card-image">
                             <LazyLoadImage effect="blur" wrapperProps={{
-                                style: { transitionDelay: "0.5s" },
+                                style: { transitionDelay: "1s" },
                             }}
-                                src={treatment.image} alt={treatment.title} className="" loading="lazy" />
+                                placeholderSrc={placeholderImg}
+                                once={true}
+                                loading="lazy"
+                                key={index}
+                                src={treatment.image}
+                                alt={treatment.title}
+                            />
 
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-description">{treatment.description}</p>
-                    </motion.div>
+                    </div>
                 ))}
             </div>;
 

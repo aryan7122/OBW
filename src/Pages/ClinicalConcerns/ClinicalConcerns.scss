@@ -83,6 +83,7 @@
       gap: 10px;
       border-radius: 100px;
       border: 2px solid transparent;
+      will-change: transform;
       &:hover {
         border: 2px solid #47252564;
         color: #472525;
@@ -164,13 +165,16 @@
         object-fit: cover;
         transition: transform 0.3s ease;
         border-radius: 16px;
+        will-change: transform;
       }
 
       &:hover .card-image {
         // transform: scale(1.01);
         border-radius: 20px !important;
         filter: blur(3px);
-        transition: filter 0.3s ease-in-out;
+        transition: filter 0.3s ease-out;
+         
+        will-change: transform;
       }
       .card-overlay {
         position: absolute;
@@ -187,6 +191,7 @@
         opacity: 1;
 
         transition: 0.3s ease-in-out;
+        will-change: transform;
         &:hover {
           justify-content: space-between !important;
         }
@@ -246,6 +251,7 @@
           /* Blur effect */
           -webkit-backdrop-filter: blur(10px);
           animation: fadeIn 1s ease-in-out forwards !important;
+          will-change: transform;
           overflow: scroll;
           // overflow: auto;
           scrollbar-width: none;

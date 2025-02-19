@@ -31,7 +31,8 @@ const HeroSection = () => {
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
                         >
-                            Rejuvenate your skin, restore your glow, and redefine confidence with expert care at OBW. Experience personalized treatments designed to bring out your best self. 
+                            Rejuvenate your skin, restore your glow, and redefine confidence with expert care at OBW.
+                             {/* Experience personalized treatments designed to bring out your best self. */}
                         </motion.p>
                         <motion.div className="buttons"
                             initial={{ opacity: 0, y: 30 }}
@@ -55,10 +56,7 @@ const HeroSection = () => {
                         viewport={{ once: true, amount: 0.1 }}
                     >
                         <motion.img
-                            initial={{ opacity: 0, x: 150 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                            viewport={{ once: true, amount: 0.5 }}
+                            
                             src={img1}
                             alt="Hero Girl"
                         />

@@ -85,13 +85,13 @@ function Navbar() {
                             <button className="appointment-button" onClick={handleBookNowClick}>
                                 Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                             </button>
-                            <Search className="search-icon" size={24} onClick={toggleSearchBar} />
+                            {/* <Search className="search-icon" size={24} onClick={toggleSearchBar} /> */}
                         </>
                         : ''
                     }
                     {isVisible && (
                         <div className="search-bar">
-                            <div className='card_search'>
+                            {/* <div className='card_search'>
                                 <Search className="search_icon_1" size={24} />
                                 <input
                                     type="text"
@@ -102,7 +102,7 @@ function Navbar() {
                             </div>
                             <button className="close-button-nav" onClick={toggleSearchBar}>
                                 ✖
-                            </button>
+                            </button> */}
                         </div>
                     )}
                 </div>
