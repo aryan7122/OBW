@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./TrendingTreatments.scss";
 import img1 from '../../assets/TrendingTreatments/Exosome Therapy for Skin & Scalp-min.jpg'
 import img2 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
@@ -84,50 +84,50 @@ const treatments = [
 
 const TrendingTreatments = () => {
     const [showModal, setShowModal] = useState(false);
-    const handleBookNowClick = () => {
-        setShowModal(true);
+    const [visibleCount, setVisibleCount] = useState(8); // Initially 8 cards
+    const [itemsPerLoad, setItemsPerLoad] = useState(8);
+
+    useEffect(() => {
+        const updateItemsPerLoad = () => {
+            if (window.innerWidth < 768) {
+                setVisibleCount(4); // Mobile pe 4 dikhao
+                setItemsPerLoad(4);
+            } else {
+                setVisibleCount(8); // Desktop pe 8 dikhao
+                setItemsPerLoad(8);
+            }
+        };
+
+        updateItemsPerLoad();
+        window.addEventListener("resize", updateItemsPerLoad);
+        return () => window.removeEventListener("resize", updateItemsPerLoad);
+    }, []);
+
+    const handleLoadMore = () => {
+        setVisibleCount((prevCount) => prevCount + itemsPerLoad);
     };
-    const closeModal = () => {
-        setShowModal(false);
-    };
-    const navigate = useNavigate();
-    // const HandleNavigation = (path) => {
-    //     navigate(path);
-    //     window.scrollTo(0, 0);
-    // };
+
     return (
         <div className="trending-treatments">
             <div className="title-sbt">TRENDING</div>
             <header className="heading-section">
-                <h1 className="trending-title">
-                    Trending <span className="heart"
-
-                    >&#x2764; </span>
-                    Treatments
-                </h1>
+                <h1 className="trending-title">Trending <span className="heart">&#x2764;</span> Treatments</h1>
                 <p className="description">
                     Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
+
                 </p>
             </header>
 
             <div className="cards-container">
-                {treatments.map((treatment, index) => (
-                    <div
-                        key={index}
-                        className="card"
-                    >
+                {treatments.slice(0, visibleCount).map((treatment, index) => (
+                    <div key={index} className="card">
                         <div className="card-image">
-                            <LazyLoadImage effect="blur" wrapperProps={{
-                                style: { transitionDelay: "0.2s" },
-                            }}
+                            <LazyLoadImage
+                                effect="blur"
                                 placeholderSrc={placeholderImg}
-                                once={true}
-                                loading="lazy"
-                                key={index}
                                 src={treatment.image}
                                 alt={treatment.title}
                             />
-
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-description">{treatment.description}</p>
@@ -135,12 +135,18 @@ const TrendingTreatments = () => {
                 ))}
             </div>
 
+            {visibleCount < treatments.length && (
+                <button className="LoadMoreTreatments" onClick={handleLoadMore}>
+                    Load More Treatments <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                </button>
+            )}
+
             <footer className="footer-section">
-                <button className="Book-Now" onClick={handleBookNowClick} >Book Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="Book-Now" onClick={() => setShowModal(true)}>Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
             </footer>
-            {showModal && <BookAppointment onClose={closeModal} />}
 
+            {showModal && <BookAppointment onClose={() => setShowModal(false)} />}
         </div>
     );
 };

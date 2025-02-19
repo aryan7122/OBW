@@ -148,7 +148,53 @@ will-change: transform;
       }
     }
   }
+ .LoadMoreTreatments {
+   padding: 7px 10px 7px 25px;
+   margin: 50px auto 0px auto;
 
+   color: #643434;
+   border: none;
+   font-size: 20px;
+   border-radius: 100px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   font-weight: 500;
+   line-height: 24px;
+   letter-spacing: -0.5px;
+   background: transparent;
+
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   border: 1px solid #2463eb;
+   transition: 0.3s linear;
+
+   @media only screen and (max-width: 500px) {
+     padding: 5px 6px 5px 15px;
+     font-size: 10px;
+   }
+
+   .arrow-icon {
+     transition: 0.3s linear;
+     color: #fff;
+     background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+     border-radius: 100px;
+     width: 30px;
+     height: 30px;
+     padding: 5px;
+   }
+
+   &:hover {
+     border: 1px solid #0056b3;
+     color: #fff;
+     background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+
+     .arrow-icon {
+       background: #643434;
+       color: #fff;
+     }
+   }
+ }
   .footer-section {
     margin-top: 70px;
     width: 100%;
