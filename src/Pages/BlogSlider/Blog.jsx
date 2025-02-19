@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
 import img2 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
+import img4 from '../../assets/TrendingTreatments/girl-with-black-mask-lies-table-spa-saloon (1).jpg'
 import img7 from '../../assets/TrendingTreatments/Skin Brightening-min.jpg'
 import img10 from '../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg'
 import img5 from '../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg'
@@ -71,7 +72,7 @@ function Blog() {
             author: "Nikita Soni",
             authorImg: "https://img.freepik.com/free-photo/close-up-woman-having-carbon-laser-peel-treatment_1157-15536.jpg?w=1060",
             date: "Feb 25, 2025",
-            image: "https://img.freepik.com/free-photo/close-up-woman-having-carbon-laser-peel-treatment_1157-15536.jpg?w=1060",
+            image: img4,
             category: "Skin"
         },
         {

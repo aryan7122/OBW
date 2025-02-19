@@ -207,6 +207,7 @@
           text-align: center;
           padding: 5px;
           animation: fadeIn 1s ease-in-out forwards !important;
+          will-change: transform;
           @media only screen and (max-width: 1400px) {
             font-size: 30px;
             font-weight: 700;

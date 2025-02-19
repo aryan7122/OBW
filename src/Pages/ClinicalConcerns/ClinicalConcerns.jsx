@@ -308,7 +308,7 @@ function ClinicalConcerns() {
                                 <div className="card col1" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "1s" },
+                                            style: { transitionDelay: "0.5s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
@@ -355,7 +355,7 @@ function ClinicalConcerns() {
                                 <div className="card col2" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "1s" },
+                                            style: { transitionDelay: "0.5s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
@@ -402,7 +402,7 @@ function ClinicalConcerns() {
                                 <div className="card col3" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "1s" },
+                                            style: { transitionDelay: "0.5s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
@@ -446,7 +446,7 @@ function ClinicalConcerns() {
                         <div className="card" key={index}>
                             <LazyLoadImage effect="blur"
                                 wrapperProps={{
-                                    style: { transitionDelay: "1s" },
+                                    style: { transitionDelay: "0.5s" },
                                 }}
                                 src={card?.imageUrl}
                                 alt={card?.title}
@@ -487,7 +487,7 @@ function ClinicalConcerns() {
                         <div className="card" key={index}>
                             <LazyLoadImage effect="blur"
                                 wrapperProps={{
-                                    style: { transitionDelay: "1s" },
+                                    style: { transitionDelay: "0.5s" },
                                 }}
                                 src={card?.imageUrl}
                                 alt={card?.title}
@@ -528,7 +528,7 @@ function ClinicalConcerns() {
                         <div className="card" key={index}>
                             <LazyLoadImage effect="blur"
                                 wrapperProps={{
-                                    style: { transitionDelay: "1s" },
+                                    style: { transitionDelay: "0.5s" },
                                 }}
                                 src={card?.imageUrl}
                                 alt={card?.title}

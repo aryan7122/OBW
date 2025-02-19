@@ -7,6 +7,8 @@ import { useParams } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
 import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
+import img4 from '../../assets/TrendingTreatments/girl-with-black-mask-lies-table-spa-saloon (1).jpg'
+
 import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
 import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
 import img9 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
@@ -150,7 +152,7 @@ const ArticleDetail = () => {
         category: "Skin",
         author: "Nikita Soni",
         date: "Feb 25, 2025",
-        coverImage: "https://img.freepik.com/free-photo/girl-with-black-mask-lies-table-spa-saloon_8353-5670.jpg?t=st=1739620246~exp=1739623846~hmac=fa5c83525da73d3cb2b601c8094ff55e8cc9d6797416413f95ebd48ecd741070&w=1060",
+        coverImage:img4,
         sections: [
             {
                 heading: "Introduction",
