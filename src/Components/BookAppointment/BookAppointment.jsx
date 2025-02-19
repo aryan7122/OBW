@@ -9,7 +9,7 @@ import { toast, Toaster } from "react-hot-toast";
 const BookAppointment = ({ onClose }) => {
     const [formData, setFormData] = useState({
         name: "",
-        companyName: "",
+        MoNumber: "",
         email: "",
         date: null,
         location: "",
@@ -24,10 +24,10 @@ const BookAppointment = ({ onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const { name, companyName, email, date, location, treatment, message } = formData;
+        const { name, MoNumber, email, date, location, treatment, message } = formData;
 
         // Validation Check
-        if (!name || !companyName || !email || !date || !location || !treatment || !message) {
+        if (!name || !MoNumber || !email || !date || !location || !treatment || !message) {
             toast.error("Please fill all required fields!");
             return;
         }
@@ -59,8 +59,7 @@ const BookAppointment = ({ onClose }) => {
                 </button>
                 <h2 className="modal-title">Book Appointment Now</h2>
                 <p className="modal-subtitle">
-                    Please complete the form with all the necessary details, and we will
-                    review your submission and get back to you as soon as possible.
+                    Kindly fill out the form with all required details, and we’ll review your submission and reach out to you shortly.
                 </p>
                 <form className="modal-form" onSubmit={handleSubmit}>
                     <div className="form-row">
@@ -70,8 +69,8 @@ const BookAppointment = ({ onClose }) => {
                         </div>
 
                         <div className="form_group">
-                            <label>Company Name</label>
-                            <input type="text" name="companyName" placeholder="Enter your company name" value={formData.companyName} onChange={handleChange} />
+                            <label>Mo. Number</label>
+                            <input type="text" name="MoNumber" placeholder="Enter your Mo. Number" value={formData.MoNumber} onChange={handleChange} />
                         </div>
                     </div>
 
@@ -84,13 +83,14 @@ const BookAppointment = ({ onClose }) => {
                         <div className="form_group date-group">
                             <label>Date</label>
                             <div className="date-input-wrapper">
-                                <DatePicker
+                                {/* <DatePicker
                                     selected={formData.date}
                                     onChange={(date) => setFormData({ ...formData, date })}
                                     dateFormat="dd/MM/yyyy"
                                     placeholderText="dd/mm/yyyy"
                                     className="custom-date-picker"
-                                />
+                                /> */}
+                                <input type="datetime-local" />
                             </div>
                         </div>
                     </div>
@@ -100,10 +100,10 @@ const BookAppointment = ({ onClose }) => {
                             <label>Location</label>
                             <select name="location" value={formData.location} onChange={handleChange}>
                                 <option value="">Select Location</option>
-                                <option>Banashankari</option>
-                                <option>Kanakapura Main Rd</option>
+                                <option>Banashankari 6th Stage</option>
+                                <option>Kanakapura Main Road</option>
                                 <option>Rajarajeshwari Nagar</option>
-                                <option>Kodipalya Rd</option>
+                                <option>Kodipalya Road</option>
                             </select>
                         </div>
 
@@ -120,7 +120,7 @@ const BookAppointment = ({ onClose }) => {
                     </div>
 
                     <div className="form_group textarea-group">
-                        <label>How can we help?</label>
+                        <label>Note</label>
                         <textarea
                             rows="4"
                             name="message"

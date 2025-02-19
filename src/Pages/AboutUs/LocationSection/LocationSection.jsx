@@ -41,9 +41,7 @@ const LocationSection = () => {
                     Our Salon <img src={icon1} /> Locations
                 </h2>
                 <p>
-                    Welcome to our salon! With multiple locations, we offer a relaxing experience. Our skilled professionals
-                    are dedicated to making you look and feel your best. Whether you need a haircut, color treatment, or spa
-                    service, our friendly team is here for you.
+                    Welcome to our salon! With multiple locations, we provide a relaxing experience with expert care. From haircuts to spa services, our skilled team is here to make you look and feel your best.
                 </p>
             </div>
             <div className="mapCard">

@@ -47,7 +47,7 @@ const Team = () => {
                     <h1 className="team">Team</h1>
                     <h2 className="slider-heading">Our  Experts </h2>
                     <p className="slider-subheading">
-                        Welcome to our salon! With multiple locations, we offer a relaxing experience. Our skilled professionals are dedicated to making you look and feel your best. Whether you need a haircut, color treatment, or spa service, our friendly team is here for you. Visit us today to pamper yourself!
+                        Step into our salon for a rejuvenating experience! With multiple locations, our skilled professionals are committed to enhancing your beauty and confidence. Whether it’s a haircut, color treatment, or spa service, our team ensures top-notch care. Treat yourself today!
                     </p>
                 </div>
                 {/* <button className="view-all">Get In touch  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button> */}

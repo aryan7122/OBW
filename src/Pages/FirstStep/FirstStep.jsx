@@ -12,7 +12,7 @@ const FirstStep = () => {
         <div className='FirstStep'>
             <div className='h1_card'>
                 <h1>
-                    Take the first step towards supporting your Skincare health
+                    Begin your journey to healthier, glowing skin today!
                 </h1>
             </div>
             <p>Contact us today to enquire about our services or to book an appointment</p>

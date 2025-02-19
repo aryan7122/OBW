@@ -16,8 +16,8 @@ const Location = () => {
                 <div>
                     <h1>Skin Clinic Locations</h1>
                     <p>
-                        Discover our salon locations, where you’ll find expert advice, helpful tips, and the latest trends in skincare,
-                        haircare, and aesthetic treatments to elevate your beauty routine.
+                        Explore our clinic locations, where expert care meets innovation. Get personalized advice, the latest skincare trends, and advanced aesthetic treatments to enhance your beauty and wellness.
+                        
                     </p>
                 </div>
                 <button className="get-in-touch" onClick={() => HandleNavigation("/contact")}>

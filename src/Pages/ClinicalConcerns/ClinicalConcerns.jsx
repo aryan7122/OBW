@@ -5,22 +5,22 @@ import IconAdd from '../../assets/Clinical Concerns/icon/add.svg';
 import SkinIcon from '../../assets/Clinical Concerns/icon/skin-care.svg';
 import ScalpIcon from '../../assets/Clinical Concerns/icon/like_5498753 1.svg';
 import BodyIcon from '../../assets/Clinical Concerns/icon/slim_6381900.svg';
-import BeautifyingIcon from '../../assets/Clinical Concerns/icon/pedicure_3461923.svg';
+import BeautifyingIcon from '../../assets/Clinical Concerns/icon/cosmetic-surgery_5506893.png';
 // img
 import SkinImg1 from '../../assets/Clinical Concerns/Enlarged Pores & Uneven Texture-min.jpg';
 import UnwantedImg2 from '../../assets/Clinical Concerns/Unwanted Hairs-min 1.jpg';
 import SunTunImg from '../../assets/Clinical Concerns/Sun Tan & Body Texture-min.jpg';
-import EnlargedImg3 from '../../assets/Clinical Concerns/Close-up of Human Face.png';
+import EnlargedImg3 from '../../assets/Clinical Concerns/young-woman-being-confident-with-her-acne-min.jpg';
 import PigmentationImg4 from '../../assets/Clinical Concerns/Pigmentation & Uneven Skin Tone-min.jpg';
 import DoubleImg5 from '../../assets/Clinical Concerns/Double Chin (Face)-min.jpg';
-import DrynessImg6 from '../../assets/Clinical Concerns/Close-up Portrait with Skincare Focus.png';
-import AcneImg7 from '../../assets/Clinical Concerns/closeup-young-woman-with-towel-head-pimples-face.png';
+import DrynessImg6 from '../../assets/Clinical Concerns/Dryness & Dehydration-min.jpg';
+import AcneImg7 from '../../assets/Clinical Concerns/Acne & Acne Scars.jpg';
 import none from '../../assets/Clinical Concerns/none1.png';
 import HairImg1 from '../../assets/Clinical Concerns/woman-getting-hair-loss-treatment-clinic.png';
-import AlopeciaImg2 from '../../assets/Clinical Concerns/Serene and Thoughtful.png';
-import ConditionsImg3 from '../../assets/Clinical Concerns/Elegant and Intricate Hairstyle with Jewel-Studded Headband.png';
+import AlopeciaImg2 from '../../assets/Clinical Concerns/adult-male-looking-his-hair-min.jpg';
+import ConditionsImg3 from '../../assets/Clinical Concerns/woman-with-comb-dandruff-her-dark-hair-color-background-closeup-min.jpg';
 import StubbornImg1 from '../../assets/Clinical Concerns/Stubborn Body Fat-min.jpg';
-import SweatingImg2 from '../../assets/Clinical Concerns/Thoughtful Young Man with Geometric Backdrop (1).png';
+import SweatingImg2 from '../../assets/Clinical Concerns/Excessive Sweating-min.jpg';
 import StretchImg3 from '../../assets/Clinical Concerns/close-up-woman-with-stretch-marks.png';
 import bImg1 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (1).png';
 import bImg2 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (2).png';
@@ -327,12 +327,12 @@ function ClinicalConcerns() {
                                 <div className="card col1" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            // style: { transitionDelay: "1s" },
+                                            style: { transitionDelay: "0.5s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        loading="lazy"
+                                        // loading="lazy"
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -371,12 +371,12 @@ function ClinicalConcerns() {
                                 <div className="card col2" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            // style: { transitionDelay: "1s" },
+                                            style: { transitionDelay: "0.5s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        loading="lazy"
+                                        // loading="lazy"
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -415,12 +415,12 @@ function ClinicalConcerns() {
                                 <div className="card col3" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            // style: { transitionDelay: "1s" },
+                                            style: { transitionDelay: "0.5s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        loading="lazy"
+                                        // loading="lazy"
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -457,12 +457,12 @@ function ClinicalConcerns() {
                         <div className="card" key={index}>
                             <LazyLoadImage effect="blur"
                                 wrapperProps={{
-                                    style: { transitionDelay: "1s" },
+                                    style: { transitionDelay: "0.5s" },
                                 }}
                                 src={card?.imageUrl}
                                 alt={card?.title}
                                 className="card-image"
-                                loading="lazy"
+                                // loading="lazy"
                             />
                             <div className="card-overlay">
                                 <motion.h3 className="card-title"

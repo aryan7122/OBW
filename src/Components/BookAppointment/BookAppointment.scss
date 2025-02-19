@@ -321,8 +321,8 @@
     margin: 20px auto;
     padding: 8px 8px 8px 45px;
 
-    background-color: #007bff;
-    color: #fff;
+    background-color: #8ae9f0;
+    color: #643434;
     border: none;
     font-size: 13px;
     border-radius: 100px;
@@ -335,8 +335,7 @@
 
     cursor: pointer;
     transition: background-color 0.3s ease;
-    background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
-    color: #fff;
+    // background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
     border: 1px solid transparent;
     transition: 0.3s linear;
 
@@ -347,8 +346,8 @@
 
     .arrow-icon {
       transition: 0.3s linear;
-      background: #fff;
-      color: #0056b3;
+      background: #00575d;
+      color: #fff;
       border-radius: 100px;
       width: 30px;
       height: 30px;
@@ -356,13 +355,14 @@
     }
 
     &:hover {
-      background: #fff !important;
+      background: #00575d !important;
       border: 1px solid #0056b3;
-      color: #472525;
+      color: #fff;
 
       .arrow-icon {
         background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
-        color: #fff;
+        background: #8ae9f0;
+        color: #643434;
       }
     }
   }
