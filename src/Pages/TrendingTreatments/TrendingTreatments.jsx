@@ -118,7 +118,7 @@ const TrendingTreatments = () => {
                     >
                         <div className="card-image">
                             <LazyLoadImage effect="blur" wrapperProps={{
-                                style: { transitionDelay: "1s" },
+                                style: { transitionDelay: "0.2s" },
                             }}
                                 placeholderSrc={placeholderImg}
                                 once={true}

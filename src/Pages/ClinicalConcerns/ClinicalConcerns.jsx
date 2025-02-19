@@ -487,7 +487,7 @@ function ClinicalConcerns() {
                         <div className="card" key={index}>
                             <LazyLoadImage effect="blur"
                                 wrapperProps={{
-                                    style: { transitionDelay: "0.5s" },
+                                    style: { transitionDelay: "0.2s" },
                                 }}
                                 src={card?.imageUrl}
                                 alt={card?.title}
