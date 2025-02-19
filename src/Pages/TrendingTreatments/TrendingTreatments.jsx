@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./TrendingTreatments.scss";
 import img1 from '../../assets/TrendingTreatments/Exosome Therapy for Skin & Scalp-min.jpg'
 import img2 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
@@ -87,6 +87,7 @@ const TrendingTreatments = () => {
     const [visibleCount, setVisibleCount] = useState(8); // Initially 8 cards
     const [itemsPerLoad, setItemsPerLoad] = useState(8);
     const [initialCount, setInitialCount] = useState(8);
+    const buttonRef = useRef(null);
     useEffect(() => {
         const updateItemsPerLoad = () => {
             if (window.innerWidth < 568) {
@@ -110,6 +111,9 @@ const TrendingTreatments = () => {
     };
     const handleLoadLess = () => {
         setVisibleCount(initialCount);
+        setTimeout(() => {
+            buttonRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
     };
     return (
         <div className="trending-treatments">
@@ -146,7 +150,7 @@ const TrendingTreatments = () => {
 
 
 
-            <footer className="footer-section">
+            <footer className="footer-section" ref={buttonRef}>
                 <button className="Book-Now" onClick={() => setShowModal(true)}>Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
             </footer>
