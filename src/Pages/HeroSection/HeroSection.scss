@@ -1,15 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap");
 .hero-section {
-  background: linear-gradient(120deg, #5329ab, #1b003e);
   color: white;
   margin-top: -122px;
-  //   height: 775px;
-  background: linear-gradient(
-      112.2deg,
-      rgba(70, 43, 151, 0.6) 5.44%,
-      rgba(91, 47, 47, 0.6) 51.47%
-    ),
-    url("../../assets/icons/Group\ 1597883014.png");
+  height: 775px;
+  background: linear-gradient(112.2deg, #462b9799 5.44%, #5b2f2f99 51.47%),
+    url("../../assets/icons/Group2.png");
   background-size: cover;
   background-blend-mode: multiply;
 
@@ -49,10 +44,10 @@
     }
     h1 {
       font-family: "Plus Jakarta Sans";
-        // font-family: "Ubuntu Condensed", serif;
-          // font-family: "Unbounded", serif;
-        font-optical-sizing: auto;
-        font-style: normal;
+      // font-family: "Ubuntu Condensed", serif;
+      // font-family: "Unbounded", serif;
+      font-optical-sizing: auto;
+      font-style: normal;
       background: linear-gradient(
         160.56deg,
         #ffffff 6.06%,
@@ -69,14 +64,16 @@
       text-align: left;
       margin-bottom: 1rem;
       color: #fff;
-      span{
+      span {
         // color: #00ccff !important;
-        background: linear-gradient(121.56deg,
-              #03b1f1 6.06%,
-              #0392f1 37.4%,
-              #038af1 70.6%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+        background: linear-gradient(
+          121.56deg,
+          #03b1f1 6.06%,
+          #0392f1 37.4%,
+          #038af1 70.6%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
       @media only screen and (max-width: 1200px) {
         font-size: 62px;
@@ -100,12 +97,12 @@
       width: 90%;
       font-size: 22px;
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       line-height: 24px;
       letter-spacing: 0px;
       text-align: left;
       color: #ffffff;
-    font-style: italic;
+      font-style: italic;
       @media only screen and (max-width: 770px) {
         align-items: center;
         text-align: center;
@@ -125,11 +122,10 @@
       @media only screen and (max-width: 770px) {
         margin-bottom: 130px;
         align-items: center;
-        
       }
-            @media only screen and (max-width: 500px) {
-             scale: 0.9;
-            }
+      @media only screen and (max-width: 500px) {
+        scale: 0.9;
+      }
       .appointment-button {
         width: 276px;
         height: 52px;
@@ -144,7 +140,7 @@
         cursor: pointer;
         font-size: 20px;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         line-height: 28px;
         text-align: center;
         transition: 0.3s ease-in-out;
@@ -223,6 +219,11 @@
     margin-top: 10px;
     border-radius: 18px;
     // background: #5b2f2f;
+    // background: radial-gradient(128.1% 243.86% at 115.57% 146.38%,
+    //       #5b2f2f96 24.26%,
+    //       #5b2f2faa 62.72%);
+    //   backdrop-filter: blur(128px);
+    //   -webkit-backdrop-filter: blur(122px);
     overflow: hidden;
     @media only screen and (max-width: 840px) {
       width: 500px;
@@ -234,7 +235,7 @@
     img {
       width: 650px;
       height: 918.71px;
-          object-fit: cover;
+      object-fit: cover;
       @media only screen and (max-width: 1100px) {
         width: 512.47px;
         height: 100%;
