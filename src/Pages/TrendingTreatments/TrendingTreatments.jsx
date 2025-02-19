@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import placeholderImg from '../../assets/TrendingTreatments/LazyLoadImage.png'
+import WebPImage from "../../util/WebPImage";
 
 const treatments = [
     {
@@ -126,9 +127,7 @@ const TrendingTreatments = () => {
                 {treatments.slice(0, visibleCount).map((treatment, index) => (
                     <div key={index} className="card">
                         <div className="card-image">
-                            <LazyLoadImage
-                                effect="blur"
-                                placeholderSrc={placeholderImg}
+                            <WebPImage 
                                 src={treatment.image}
                                 alt={treatment.title}
                             />
