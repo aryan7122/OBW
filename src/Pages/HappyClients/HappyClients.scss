@@ -3,6 +3,9 @@
   text-align: center;
   padding: 60px 0px 60px 60px;
   background: #f3fff1;
+  @media only screen and (min-width: 1601px) {
+      padding: 60px 80px;
+    }
   @media only screen and (max-width: 1400px) {
     padding: 40px 0px 40px 40px;
   }

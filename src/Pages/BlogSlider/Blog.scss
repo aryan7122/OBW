@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: space-between;
     background: #e6fafc;
+    @media only screen and (min-width: 1601px) {
+        padding: 130px 80px 80px 80px;
+      }
     @media only screen and (max-width: 1400px) {
       padding: 130px 40px 40px 40px;
     }
@@ -125,6 +128,9 @@
       letter-spacing: 0%;
       text-align: left;
       color: #000;
+      @media only screen and (min-width: 1601px) {
+        padding-left: 80px;
+      }
       @media only screen and (max-width: 1170px) {
         text-align: center;
       }
@@ -141,12 +147,14 @@
         flex-direction: row;
       }
       @media only screen and (max-width: 430px) {
-        //  border: 1px solid red;
         overflow: auto !important;
         white-space: nowrap;
         margin-bottom: 0;
         padding-left: 40px;
       }
+             @media only screen and (min-width: 1601px) {
+               padding-left: 80px;
+             }
       @media only screen and (max-width: 380px) {
         padding-left: 60px;
       }

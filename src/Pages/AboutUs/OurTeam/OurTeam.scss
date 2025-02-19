@@ -10,6 +10,9 @@
   color: #333;
   text-align: center;
   background: #e6fafc;
+  @media only screen and (min-width: 1601px) {
+      padding: 60px 80px;
+    }
   @media only screen and (max-width: 1400px) {
     padding: 40px;
   }

@@ -10,6 +10,10 @@
     background-position: 0% 82%;
     padding: 170px 60px 60px 60px;
     margin-top: -120px;
+    @media only screen and (min-width: 1601px) {
+      padding: 170px 80px 80px 80px;
+        // padding: 60px 80px;
+      }
     @media only screen and (max-width: 1400px) {
       padding: 170px 40px 40px 40px;
     }
@@ -96,6 +100,9 @@
     background-image: url("../../../assets/TrendingTreatments/Gradient2.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    @media only screen and (min-width: 1601px) {
+        padding: 60px 80px;
+      }
     @media only screen and (max-width: 1400px) {
       padding: 40px;
     }
