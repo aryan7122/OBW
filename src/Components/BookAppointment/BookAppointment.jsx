@@ -81,7 +81,7 @@ const BookAppointment = ({ onClose }) => {
                         </div>
 
                         <div className="form_group date-group">
-                            <label>Date</label>
+                            <label>Date - Time</label>
                             <div className="date-input-wrapper">
                                 {/* <DatePicker
                                     selected={formData.date}
