@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap');
 .hero-section {
   background: linear-gradient(120deg, #5329ab, #1b003e);
   color: white;
@@ -46,11 +47,16 @@
       padding-left: 0 !important;
     }
     h1 {
+      font-family: "Plus Jakarta Sans";
+        // font-family: "Ubuntu Condensed", serif;
+          // font-family: "Unbounded", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
       background: linear-gradient(
-        111.56deg,
+        161.56deg,
         #d89393 6.06%,
-        #b4b3b3 37.4%,
-        #ffffff 70.6%
+        #fff 37.4%,
+        #03c1f1 70.6%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -60,6 +66,9 @@
       letter-spacing: -3px;
       text-align: left;
       margin-bottom: 1rem;
+      span{
+        // background: #14839F !important;
+      }
       @media only screen and (max-width: 1200px) {
         font-size: 62px;
         line-height: 59px;
@@ -80,7 +89,7 @@
 
     p {
       width: 90%;
-      font-size: 16px;
+      font-size: 22px;
       font-weight: 400;
             font-family: 'Supreme-Regular', sans-serif;
       line-height: 24px;
@@ -207,21 +216,26 @@
     overflow: hidden;
     @media only screen and (max-width: 840px) {
       width: 500px;
-      height: auto;
+      height: 600px;
     }
     @media only screen and (max-width: 770px) {
       display: none;
     }
     img {
-      width: 612.47px;
+      width: 650px;
       height: 918.71px;
-      @media only screen and (max-width: 1200px) {
+          object-fit: cover;
+      @media only screen and (max-width: 1100px) {
         width: 512.47px;
-        height: auto;
+        height: 100%;
+      }
+      @media only screen and (max-width: 1000px) {
+        width: 400px;
+        height: 100%;
       }
       @media only screen and (max-width: 840px) {
         width: 400px;
-        height: auto;
+        height: 100%;
       }
     }
   }

@@ -105,7 +105,8 @@ const TrendingTreatments = () => {
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1 }}
-                        viewport={{ once: true, amount: 0.2 }}>&#x2764;</motion.span> Treatments
+                        viewport={{ once: true, amount: 0.2 }}>&#x2764;</motion.span>
+                    Treatments
                 </h1>
                 <p className="description">
                     Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
@@ -130,7 +131,7 @@ const TrendingTreatments = () => {
                                 style: { transitionDelay: "0.5s" },
                             }}
                                 src={treatment.image} alt={treatment.title} className="" loading="lazy" />
-                            
+
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-description">{treatment.description}</p>

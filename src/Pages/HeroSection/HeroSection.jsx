@@ -3,7 +3,7 @@ import "./HeroSection.scss";
 import { ArrowRight, CirclePlay } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { motion } from 'framer-motion';
-import img1 from '../../assets/firststep/hero.png'
+import img1 from '../../assets/firststep/hero2.jpg'
 
 const HeroSection = () => {
     const [showModal, setShowModal] = useState(false);
@@ -24,7 +24,7 @@ const HeroSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
-                        >Discover the Art of Timeless Beauty & Wellness. </motion.h1>
+                        >Discover the Art of Timeless <span>Beauty</span> & <span>Wellness</span>. </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}

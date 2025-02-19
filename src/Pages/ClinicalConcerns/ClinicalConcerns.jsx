@@ -104,6 +104,7 @@ const clinicalData = {
                 "Treatments": ["Fat-dissolving injections", "Lipolytic injections"]
             },
             imageUrl: DoubleImg5
+            // imageUrl: UnwantedImg2
         },
         {
             title: "Dryness & Dehydration",
@@ -326,7 +327,7 @@ function ClinicalConcerns() {
                                 <div className="card col1" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "1s" },
+                                            // style: { transitionDelay: "1s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
@@ -344,7 +345,7 @@ function ClinicalConcerns() {
 
                                         </motion.h3>
                                         <div className="card-description">
-                                            <h3 className="card-title2">Treatments</h3>
+                                            {/* <h3 className="card-title2">Treatments</h3> */}
                                             {Object.keys(card.description).map((category) => (
                                                 <div key={category} className="description-category">
                                                     <strong>{category}</strong>
@@ -370,7 +371,7 @@ function ClinicalConcerns() {
                                 <div className="card col2" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "1s" },
+                                            // style: { transitionDelay: "1s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
@@ -388,7 +389,7 @@ function ClinicalConcerns() {
 
                                         </motion.h3>
                                         <div className="card-description">
-                                            <h3 className="card-title2">Treatments</h3>
+                                            {/* <h3 className="card-title2">Treatments</h3> */}
                                             {Object.keys(card.description).map((category) => (
                                                 <div key={category} className="description-category">
                                                     <strong>{category}</strong>
@@ -414,7 +415,7 @@ function ClinicalConcerns() {
                                 <div className="card col3" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "1s" },
+                                            // style: { transitionDelay: "1s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
@@ -432,7 +433,7 @@ function ClinicalConcerns() {
 
                                         </motion.h3>
                                         <div className="card-description">
-                                            <h3 className="card-title2">Treatments</h3>
+                                            {/* <h3 className="card-title2">Treatments</h3> */}
                                             {Object.keys(card.description).map((category) => (
                                                 <div key={category} className="description-category">
                                                     <strong>{category}</strong>
@@ -474,7 +475,7 @@ function ClinicalConcerns() {
 
                                 </motion.h3>
                                 <div className="card-description">
-                                    <h3 className="card-title2">Treatments</h3>
+                                    {/* <h3 className="card-title2">Treatments</h3> */}
                                     {Object.keys(card.description).map((category) => (
                                         <div key={category} className="description-category">
                                             <strong>{category}</strong>
@@ -515,7 +516,7 @@ function ClinicalConcerns() {
 
                                 </motion.h3>
                                 <div className="card-description">
-                                    <h3 className="card-title2">Treatments</h3>
+                                    {/* <h3 className="card-title2">Treatments</h3> */}
                                     {Object.keys(card.description).map((category) => (
                                         <div key={category} className="description-category">
                                             <strong>{category}</strong>
@@ -556,7 +557,7 @@ function ClinicalConcerns() {
 
                                 </motion.h3>
                                 <div className="card-description">
-                                    <h3 className="card-title2">Treatments</h3>
+                                    {/* <h3 className="card-title2">Treatments</h3> */}
                                     {Object.keys(card.description).map((category) => (
                                         <div key={category} className="description-category">
                                             <strong>{category}</strong>

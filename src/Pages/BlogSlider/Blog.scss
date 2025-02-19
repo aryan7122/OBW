@@ -73,7 +73,7 @@
     .slider-subheading {
       font-size: 16px;
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       line-height: 24px;
       letter-spacing: -0.30000001192092896px;
       text-align: left;
@@ -147,15 +147,15 @@
         margin-bottom: 0;
         padding-left: 40px;
       }
-                        @media only screen and (max-width: 380px) {
-                          padding-left: 60px;
-                        }
-                        @media only screen and (max-width: 355px) {
-                          padding-left: 80px;
-                        }
-                        @media only screen and (max-width: 330px) {
-                          padding-left: 90px;
-                        }
+      @media only screen and (max-width: 380px) {
+        padding-left: 60px;
+      }
+      @media only screen and (max-width: 355px) {
+        padding-left: 80px;
+      }
+      @media only screen and (max-width: 330px) {
+        padding-left: 90px;
+      }
       li {
         cursor: pointer;
         padding: 8px 10px;
@@ -310,7 +310,7 @@
       .card-p {
         font-size: 16px;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         line-height: 24px;
         text-align: left;
         color: #454545;
@@ -389,7 +389,7 @@
             .card-date {
               font-size: 16px;
               font-weight: 400;
-                    font-family: 'Supreme-Regular', sans-serif;
+              font-family: "Supreme-Regular", sans-serif;
               line-height: 24px;
               text-align: left;
               color: #000000;
@@ -467,11 +467,6 @@
     }
   }
 }
-
-
-
-
-
 
 .pagination {
   display: flex;
