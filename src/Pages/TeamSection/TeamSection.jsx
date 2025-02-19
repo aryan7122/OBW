@@ -12,6 +12,8 @@ import icon6 from '../../assets/team/3dicons-map-pin-front-color.svg';
 import icon7 from '../../assets/team/3dicons-star-2-front-color.svg';
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const images = [img1, img2, img3];
 import { motion } from 'framer-motion';
@@ -131,7 +133,7 @@ const TeamSection = () => {
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.2 }}/> {' '}
+                viewport={{ once: true, amount: 0.2 }} /> {' '}
               team
             </h2>
             <p>
@@ -167,12 +169,20 @@ const TeamSection = () => {
                 <h3 id={stat.id} className="stat-number">0{stat.isPercentage ? "%" : "+"}</h3>
                 <p>{stat.label}</p>
               </div>
-              <img src={stat.id === "experience" ? icon2 :
-                stat.id === "certified" ? icon3 :
-                  stat.id === "treatments" ? icon4 :
-                    stat.id === "satisfaction" ? icon5 :
-                      stat.id === "locations" ? icon6 :
-                        icon7} />
+              <LazyLoadImage
+                effect="blur" wrapperProps={{
+                  style: { transitionDelay: "0.2s" },
+                }}
+                // placeholderSrc={placeholderImg}
+                once={true}
+                loading="lazy"
+                key={index}
+                src={stat.id === "experience" ? icon2 :
+                  stat.id === "certified" ? icon3 :
+                    stat.id === "treatments" ? icon4 :
+                      stat.id === "satisfaction" ? icon5 :
+                        stat.id === "locations" ? icon6 :
+                          icon7} />
             </motion.div>
           ))}
         </motion.div>

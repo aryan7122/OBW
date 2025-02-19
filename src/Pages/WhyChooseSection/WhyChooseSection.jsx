@@ -5,6 +5,8 @@ import img2 from '../../assets/WhyChooseSection/Confident Hispanic Female Doctor
 import img3 from '../../assets/WhyChooseSection/Serene Beauty Portrait.svg'
 import icon1 from '../../assets/WhyChooseSection/ok.svg'
 import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const WhyChooseSection = () => {
     return (
