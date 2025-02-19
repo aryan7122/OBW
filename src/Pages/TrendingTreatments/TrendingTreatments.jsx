@@ -71,12 +71,12 @@ const treatments = [
         image: img10,
     },
     {
-        title: " HIFU (High-Intensity Focused Ultrasound):   ",
+        title: " HIFU (High-Intensity Focused Ultrasound) ",
         description: "A non-invasive skin tightening treatment that stimulates collagen production for a firmer, more youthful appearance—without surgery or downtime.   ",
         image: img11,
     },
     {
-        title: "PMU (Permanent Makeup):",
+        title: "PMU (Permanent Makeup)",
         description: "Enhance your natural beauty with long-lasting, semi-permanent cosmetic tattooing for brows, lips, and eyeliner, designed for effortless perfection every day.",
         image: img12,
     },
@@ -133,7 +133,7 @@ const TrendingTreatments = () => {
                         <p className="card-description">{treatment.description}</p>
                     </div>
                 ))}
-            </div>;
+            </div>
 
             <footer className="footer-section">
                 <button className="Book-Now" onClick={handleBookNowClick} >Book Now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
