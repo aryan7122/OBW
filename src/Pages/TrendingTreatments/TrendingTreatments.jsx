@@ -86,13 +86,13 @@ const TrendingTreatments = () => {
     const [showModal, setShowModal] = useState(false);
     const [visibleCount, setVisibleCount] = useState(8); // Initially 8 cards
     const [itemsPerLoad, setItemsPerLoad] = useState(8);
-    const [initialCount, setInitialCount] = useState(8); 
+    const [initialCount, setInitialCount] = useState(8);
     useEffect(() => {
         const updateItemsPerLoad = () => {
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 568) {
                 setVisibleCount(4); // Mobile pe 4 dikhao
                 setItemsPerLoad(4);
-                setInitialCount(4); 
+                setInitialCount(4);
             } else {
                 setVisibleCount(8); // Desktop pe 8 dikhao
                 setItemsPerLoad(8);
@@ -109,7 +109,7 @@ const TrendingTreatments = () => {
         setVisibleCount((prevCount) => prevCount + itemsPerLoad);
     };
     const handleLoadLess = () => {
-        setVisibleCount(initialCount); // Wapas initial state pe le aao
+        setVisibleCount(initialCount);
     };
     return (
         <div className="trending-treatments">
@@ -139,16 +139,11 @@ const TrendingTreatments = () => {
                 ))}
             </div>
 
-            {visibleCount < treatments.length && (
-                <button className="LoadMoreTreatments" onClick={handleLoadMore}>
-                    Load More Treatments <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-                </button>
-            )}
-            {visibleCount > initialCount && (
-                <button className="LoadMoreTreatments" onClick={handleLoadLess}>
-                    Load Less Treatments <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-                </button>
-            )}
+            <button className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+                {visibleCount < treatments.length ? "Load More" : "Load Less"}
+                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+            </button>
+
 
 
             <footer className="footer-section">
