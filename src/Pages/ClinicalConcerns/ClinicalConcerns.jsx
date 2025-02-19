@@ -327,12 +327,12 @@ function ClinicalConcerns() {
                                 <div className="card col1" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "0.5s" },
+                                            style: { transitionDelay: "1s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        // loading="lazy"
+                                        loading="lazy"
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -371,12 +371,12 @@ function ClinicalConcerns() {
                                 <div className="card col2" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "0.5s" },
+                                            style: { transitionDelay: "1s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        // loading="lazy"
+                                        loading="lazy"
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -415,12 +415,12 @@ function ClinicalConcerns() {
                                 <div className="card col3" key={index}>
                                     <LazyLoadImage effect="blur"
                                         wrapperProps={{
-                                            style: { transitionDelay: "0.5s" },
+                                            style: { transitionDelay: "1s" },
                                         }}
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        // loading="lazy"
+                                        loading="lazy"
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
