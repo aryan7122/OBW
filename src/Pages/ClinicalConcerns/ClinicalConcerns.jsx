@@ -8,7 +8,7 @@ import BodyIcon from '../../assets/Clinical Concerns/icon/slim_6381900.svg';
 import BeautifyingIcon from '../../assets/Clinical Concerns/icon/cosmetic-surgery_5506893.png';
 // img
 import SkinImg1 from '../../assets/Clinical Concerns/Enlarged Pores & Uneven Texture-min.jpg';
-import UnwantedImg2 from '../../assets/Clinical Concerns/Unwanted Hairs-min 1.jpg';
+import UnwantedImg2 from '../../assets/Clinical Concerns/woman-shaving-her-face-by-razor-min.jpg';
 import SunTunImg from '../../assets/Clinical Concerns/Sun Tan & Body Texture-min.jpg';
 import EnlargedImg3 from '../../assets/Clinical Concerns/young-woman-being-confident-with-her-acne-min.jpg';
 import PigmentationImg4 from '../../assets/Clinical Concerns/Pigmentation & Uneven Skin Tone-min.jpg';
