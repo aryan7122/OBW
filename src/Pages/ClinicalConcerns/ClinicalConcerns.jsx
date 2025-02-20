@@ -299,9 +299,8 @@ function ClinicalConcerns() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true, amount: 0.5 }}
-              className={`tab-button ${
-                selectedTab === tab ? "active-tab" : ""
-              }`}
+              className={`tab-button ${selectedTab === tab ? "active-tab" : ""
+                }`}
               onClick={() => setSelectedTab(tab)}>
               {iconsMap[tab]} {tab}
             </motion.button>
@@ -438,7 +437,7 @@ function ClinicalConcerns() {
         <div className="card-container ScalpHairCare">
           {clinicalData[selectedTab].map((card, index) => (
             <div className="card" key={index}>
-              <WebPImage
+              <img
                 src={card?.imageUrl}
                 alt={card?.title}
                 className="card-image"
