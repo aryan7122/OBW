@@ -1,36 +1,44 @@
-import { useState, useEffect } from "react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-import placeholderImg from '../assets/TrendingTreatments/LazyLoadImage.png'
+import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import placeholderImg from "../assets/TrendingTreatments/LazyLoadImage.png";
 
 const WebPImage = ({ src, alt, className }) => {
-    // const [webpSrc, setWebpSrc] = useState(null);
+    const [imageLoaded, setImageLoaded] = useState(false);
 
-    // useEffect(() => {
-    //     if (!src) return;
-    //     const img = new Image();
-    //     img.src = src;
-    //     img.crossOrigin = "anonymous";
-    //     img.onload = () => {
-    //         const canvas = document.createElement("canvas");
-    //         const ctx = canvas.getContext("2d");
-    //         canvas.width = img.width;
-    //         canvas.height = img.height;
-    //         ctx.drawImage(img, 0, 0);
-    //         const webpDataUrl = canvas.toDataURL("image/webp", 0.8); // 80% quality
-    //         setWebpSrc(webpDataUrl);
-    //     };
-    // }, [src]);
+    return (
+        <div className="image-wrapper" style={{ position: "relative" }}>
+            {/* ✅ Placeholder Image will always be visible until real image loads */}
+            {!imageLoaded && (
+                <img
+                    src={placeholderImg}
+                    alt="Loading..."
+                    className="placeholder"
+                    style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        zIndex: 1, // ✅ Ensuring it's above the real image initially
+                        transition: "opacity 0.3s ease-in-out",
+                        opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
+                    }}
+                />
+            )}
 
-    return <LazyLoadImage
-        effect="blur"
-        quality={80}
-        once={true}
-        placeholderSrc={placeholderImg}
-        src={src || src} alt={alt || ''}
-        className={className || ''} loading="lazy" wrapperProps={{
-            style: { transitionDelay: "0.1s" },
-        }} />;
+            <LazyLoadImage
+                effect="blur"
+                src={src}
+                alt={alt || ""}
+                className={className || ""}
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)} // ✅ Set state when image loads
+                wrapperProps={{
+                    style: { transitionDelay: "0.1s" },
+                }}
+            />
+        </div>
+    );
 };
 
 export default WebPImage;
