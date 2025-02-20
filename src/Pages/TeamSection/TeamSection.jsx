@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./TeamSection.scss";
 import img1 from '../../assets/team/0K6A5365-min.jpg';
 import img2 from '../../assets/team/0K6A5357-min.jpg';
@@ -47,11 +47,19 @@ const TeamSection = () => {
   // Mouse Scroll to Slide Images
   const handleWheel = (event) => {
     if (event.deltaY > 0) {
-      handleNext();
+      // handleNext();
     } else {
-      handlePrevious();
+      // handlePrevious();
     }
   };
+  // const handleWheel = useCallback((event) => {
+  //   event.preventDefault(); // Default scroll behavior disable karein
+  //   if (event.deltaY > 0) {
+  //     handleNext();
+  //   } else {
+  //     handlePrevious();
+  //   }
+  // }, [currentIndex]);
 
   const navigate = useNavigate();
 
