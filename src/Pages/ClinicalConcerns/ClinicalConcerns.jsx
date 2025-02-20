@@ -33,6 +33,7 @@ import bImg6 from '../../assets/Clinical Concerns/dermatologist-latex-gloves-hol
 import { motion } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import WebPImage from "../../util/WebPImage";
 
 
 const iconsMap = {
@@ -306,18 +307,10 @@ function ClinicalConcerns() {
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
                                 <div className="card col1" key={index}>
-                                    <LazyLoadImage effect="blur"
-                                        wrapperProps={{
-                                            style: { transitionDelay: "0.5s" },
-                                        }}
+                                    <WebPImage 
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        loading="lazy"
-                                     
-                                        once={true}
-                                         placeholderSrc={placeholderImg}
-                                       
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -353,17 +346,10 @@ function ClinicalConcerns() {
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
                                 <div className="card col2" key={index}>
-                                    <LazyLoadImage effect="blur"
-                                        wrapperProps={{
-                                            style: { transitionDelay: "0.5s" },
-                                        }}
+                                    <WebPImage
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        loading="lazy"
-                                        placeholderSrc={placeholderImg}
-                                        once={true}
-                                       
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -400,16 +386,10 @@ function ClinicalConcerns() {
                             .filter((card) => card && Object.keys(card.description || {}).length > 0)
                             .map((card, index) => (
                                 <div className="card col3" key={index}>
-                                    <LazyLoadImage effect="blur"
-                                        wrapperProps={{
-                                            style: { transitionDelay: "0.5s" },
-                                        }}
+                                    <WebPImage
                                         src={card?.imageUrl}
                                         alt={card?.title}
                                         className="card-image"
-                                        loading="lazy"
-                                        once={true}
-                                         placeholderSrc={placeholderImg}
                                     />
                                     <div className="card-overlay">
                                         <motion.h3 className="card-title"
@@ -444,14 +424,10 @@ function ClinicalConcerns() {
                 <div className="card-container ScalpHairCare">
                     {clinicalData[selectedTab].map((card, index) => (
                         <div className="card" key={index}>
-                            <LazyLoadImage effect="blur"
-                                wrapperProps={{
-                                    style: { transitionDelay: "0.5s" },
-                                }}
+                            <WebPImage
                                 src={card?.imageUrl}
                                 alt={card?.title}
                                 className="card-image"
-                                // loading="lazy"
                             />
                             <div className="card-overlay">
                                 <motion.h3 className="card-title"
@@ -485,14 +461,10 @@ function ClinicalConcerns() {
                 <div className="card-container BodyCare">
                     {clinicalData[selectedTab].map((card, index) => (
                         <div className="card" key={index}>
-                            <LazyLoadImage effect="blur"
-                                wrapperProps={{
-                                    style: { transitionDelay: "0.2s" },
-                                }}
+                            <WebPImage
                                 src={card?.imageUrl}
                                 alt={card?.title}
                                 className="card-image"
-                                loading="lazy"
                             />
                             <div className="card-overlay">
                                 <motion.h3 className="card-title"
@@ -526,14 +498,10 @@ function ClinicalConcerns() {
                 <div className="card-container Beautifying">
                     {clinicalData[selectedTab].map((card, index) => (
                         <div className="card" key={index}>
-                            <LazyLoadImage effect="blur"
-                                wrapperProps={{
-                                    style: { transitionDelay: "0.5s" },
-                                }}
+                            <WebPImage
                                 src={card?.imageUrl}
                                 alt={card?.title}
                                 className="card-image"
-                                loading="lazy"
                             />
                             <div className="card-overlay">
                                 <motion.h3 className="card-title"

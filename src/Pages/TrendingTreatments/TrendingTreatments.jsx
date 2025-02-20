@@ -18,6 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import placeholderImg from '../../assets/TrendingTreatments/LazyLoadImage.png'
+import WebPImage from "../../util/WebPImage";
 
 const treatments = [
     {
@@ -130,7 +131,7 @@ const TrendingTreatments = () => {
                 {treatments.slice(0, visibleCount).map((treatment, index) => (
                     <div key={index} className="card">
                         <div className="card-image">
-                            <LazyLoadImage
+                            <WebPImage
                                 effect="blur"
                                 placeholderSrc={placeholderImg}
                                 src={treatment.image}
@@ -143,14 +144,14 @@ const TrendingTreatments = () => {
                 ))}
             </div>
 
-            <button className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+            <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
                 {visibleCount < treatments.length ? "Load More" : "Load Less"}
                 <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
             </button>
 
 
 
-            <footer className="footer-section" ref={buttonRef}>
+            <footer className="footer-section" >
                 <button className="Book-Now" onClick={() => setShowModal(true)}>Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
                 <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
             </footer>

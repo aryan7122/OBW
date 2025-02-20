@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './AllTreatments.scss';
 import icon1 from '../../../assets/TrendingTreatments/skin.png'
 import icon2 from '../../../assets/TrendingTreatments/hairs.png'
@@ -9,6 +9,7 @@ import BookAppointment from '../../../Components/BookAppointment/BookAppointment
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import placeholderImg from '../../../assets/TrendingTreatments/LazyLoadImage.png'
+import WebPImage from '../../../util/WebPImage';
 
 const treatmentData = [
     {
@@ -94,6 +95,40 @@ const AllTreatments = () => {
         setShowModal(false);
     };
 
+    ///////////////////
+
+    const [visibleCount, setVisibleCount] = useState(8); // Initially 8 cards
+    const [itemsPerLoad, setItemsPerLoad] = useState(8);
+    const [initialCount, setInitialCount] = useState(8);
+    const buttonRef = useRef(null);
+    useEffect(() => {
+        const updateItemsPerLoad = () => {
+            if (window.innerWidth < 568) {
+                setVisibleCount(4); // Mobile pe 4 dikhao
+                setItemsPerLoad(4);
+                setInitialCount(4);
+            } else {
+                setVisibleCount(8); // Desktop pe 8 dikhao
+                setItemsPerLoad(8);
+                setInitialCount(8);
+            }
+        };
+
+        updateItemsPerLoad();
+        window.addEventListener("resize", updateItemsPerLoad);
+        return () => window.removeEventListener("resize", updateItemsPerLoad);
+    }, []);
+
+    const handleLoadMore = () => {
+        setVisibleCount((prevCount) => prevCount + itemsPerLoad);
+    };
+    const handleLoadLess = () => {
+        setVisibleCount(initialCount);
+        setTimeout(() => {
+            buttonRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 100);
+    };
+
     return (
         <div className="treatments-page">
             <header className="treatment-header">
@@ -126,20 +161,13 @@ const AllTreatments = () => {
                 </div>
 
                 <div className="treatment-cards">
-                    {filteredData.map((item) => (
-                        <div className="treatment-card" key={item.id}>
+                    {filteredData.slice(0, visibleCount).map((item, index) => (
+                        <div className="treatment-card" key={item.index}>
                             <div className="img">
-                                <LazyLoadImage
-                                    effect="blur"
+                                <WebPImage
                                     src={item.imgUrl}
                                     once={true}
                                     alt={item.title}
-                                    wrapperProps={{
-                                        style: { transitionDelay: "1s" },
-                                    }}
-                                    placeholderSrc={placeholderImg}
-                                    loading="lazy"
-
                                 />
                             </div>
                             <div className='about_action'>
@@ -151,8 +179,9 @@ const AllTreatments = () => {
                         </div>
                     ))}
                 </div>
-                <button className="LoadMoreTreatments">
-                    Load More Treatments <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < filteredData.length ? handleLoadMore : handleLoadLess}>
+                    {visibleCount < filteredData.length ? "Load More" : "Load Less"}
+                    <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                 </button>
             </div>
             {showModal && <BookAppointment onClose={closeModal} />}
