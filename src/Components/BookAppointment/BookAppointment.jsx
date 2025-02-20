@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./BookAppointment.scss";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -11,7 +10,7 @@ const BookAppointment = ({ onClose }) => {
         name: "",
         MoNumber: "",
         email: "",
-        date: null,
+        date: '',
         location: "",
         treatment: "",
         message: "",
@@ -83,16 +82,15 @@ const BookAppointment = ({ onClose }) => {
                         <div className="form_group date-group">
                             <label>Date - Time</label>
                             <div className="date-input-wrapper">
-                                {/* <DatePicker
-                                    selected={formData.date}
-                                    onChange={(date) => setFormData({ ...formData, date })}
-                                    dateFormat="dd/MM/yyyy"
-                                    placeholderText="dd/mm/yyyy"
+                                <input
+                                    type="datetime-local"
                                     className="custom-date-picker"
-                                /> */}
-                                <input type="datetime-local" className="custom-date-picker" />
+                                    value={formData.date}
+                                    onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                                />
                             </div>
                         </div>
+
                     </div>
 
                     <div className="form-row">
