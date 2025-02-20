@@ -56,7 +56,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true, amount: 0.1 }}
                     >
-                        <WebPImage
+                        <img
  
                             src={img1}
                             alt="Hero Girl"
