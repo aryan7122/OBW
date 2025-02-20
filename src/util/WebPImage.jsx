@@ -8,9 +8,8 @@ const WebPImage = ({ src, alt, className }) => {
 
     return (
         <div className="image-wrapper" style={{ position: "relative" }}>
-            {/* ✅ Placeholder Image will always be visible until real image loads */}
             {!imageLoaded && (
-                <img
+                <LazyLoadImage
                     src={placeholderImg}
                     alt="Loading..."
                     className="placeholder"
