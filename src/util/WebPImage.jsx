@@ -15,7 +15,7 @@ const WebPImage = ({ src, alt, className }) => {
                     alt="Loading..."
                     className="placeholder"
                     style={{
-                        position: "absolute",
+                        // position: "absolute",
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
