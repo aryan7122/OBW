@@ -64,6 +64,8 @@
       letter-spacing: -2.200000047683716px;
       text-align: left;
       color: #fff;
+
+     
       @media only screen and (max-width: 850px) {
         font-size: 38px;
         line-height: 44.6px;
@@ -176,9 +178,11 @@
       .faq-question {
         display: flex;
         justify-content: space-between;
-        font-size: 1.2rem;
-        font-weight: bold;
+        font-size: 24px;
+        // font-weight: bold;
+        line-height: 28px;
         align-items: center;
+        // border: 1px solid red;
         @media only screen and (max-width: 370px) {
           font-size: 1rem;
           line-height: 16px;
