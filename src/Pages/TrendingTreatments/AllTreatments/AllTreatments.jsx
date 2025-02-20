@@ -137,7 +137,7 @@ const AllTreatments = () => {
                 <p>Explore in-depth expert advice, insightful tips, and the most current trends in skincare, haircare, and a variety of aesthetic treatments to enhance your beauty routine.</p>
                 <div className='bott-m'>
                     <span className="unFill-separator">&#9734;</span>
-                    <span className='p_home'>Home</span>
+                    <span className='p_home'><a href="/">Home</a></span>
                     <span className="breadcrumb-separator">&#9733;</span>
                     <span className='p'>All Treatments</span>
                 </div>

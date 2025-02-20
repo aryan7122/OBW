@@ -157,9 +157,15 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.3px;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    color: #00727a;
+    // text-decoration: underline;
+    // text-decoration-style: solid;
+    a {
+      color: #00727a;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .breadcrumb-separator {
     margin: 0 0.5rem;

@@ -6,19 +6,19 @@ const data = [
     {
         name: "Lalita Thakur",
         location: "Mumbai",
-        image: "https://s3-alpha-sig.figma.com/img/73e4/07de/671e93ceca888c6d577d00f110d09b9f?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=cAnVkPgi5~NfhHbOq0cFV9-fo04Sfbe1m6b9hJCH0g1ff1rHLyQyKbFghDvOsV9MK98Ram~MAHFR~9w~IQ0Big78frsg8MdJb0PdK5Dmt3nScY3GIxERE28by-MbroCM53fRUJm3cX4EkPUtfLnev86hOFUa0PVSCGV1asisF3z213VR7K1Wi83y5Plp37ILSptXK83a80RuoRIukVBIEsdtp4E018SRdSaR6e73Xnq2-mKtgkahyvGhlURt5LuO6QH3OlV6Dbzec4Glpump2Tbv5sx6JSFDbhHTsmAAaOf4Rs1lIZt2arfeVHCwx2c-UNlXdMyUr~V4-2rjs52urw__", // Replace with your image URL
+        image: "https://s3-alpha-sig.figma.com/img/73e4/07de/671e93ceca888c6d577d00f110d09b9f?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CWfnMS1aJVacs6R~3aY1udLb8epRBb~y5OewC6Cw0c1qHqnT-i-HcpZgL~kD7sJWYChKPQ1elld-XtE7JLRAx2Shf-62hipttzQG75jO7SBpLApaA393bb-vmjjKOFTPH7lA-IX92hP7T3wyQLYn-MpqcGLGU1JcgmiZddCPDYGYft3sN2fodikAMUlqvwQhsSLr0JC2~lKlxn~3K~MKtrIC5ulMgjNTEGeDX84Lwm6ipRYhrLzqtbcUx3lTaBfkUYuVH~9TGObUaKlRgfREQUx6~gXTP6ZzvaqZNr8VmK7PcvCXLfwSEOJJDgBci~E0Z0b5q6Z6isH6CGK6mT249Q__", // Replace with your image URL
         star: 3,
     },
     {
         name: "Sheetal Trivedi",
         location: "Bengaluru",
-        image: "https://s3-alpha-sig.figma.com/img/2c57/ec52/5c4130705ab505bc70d55013754612bf?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=QX7KTsfNO3SdSM9mc8M7WWkrlvJiWb2fWdeKLV9fHkDFscgMVLbOEMd3Mv6Lh-rMbIfqmXBn~5Ie6bJNAb~QDnzFoxKMSLwIYm3ABQWc~0E13czMhJj~9tgY~WpRLtMLBbFNxGOtoiRC4~Lhc14aFVnYL5zP5LFC8h2OP5WiTCnddgzWwN-jO5W7ZgGSIU5NQwF9PNq5Yy8qdSeGNlHY7WbdyQnGhoDMekziNJrUCXZLz7S2y5voSD~GdWqafw~xA2wVqugW2rS6wJtHI6Wv~ZaNmF6lMzGCgxidZB02K3xECtFiayeIdNkx8zRjhcgGgigmn38UfwagJ4E70gRH1g__", // Replace with your image URL
+        image: "https://s3-alpha-sig.figma.com/img/2c57/ec52/5c4130705ab505bc70d55013754612bf?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=F5LTfydCmjPO7Ik4WZ10YLYtH9CtH9wkqwRF6ATpFjDmSyCDMK6hMHdHcN0cWV2mvmuvOkAez~2TOLWfopyet7FX84tk8Ym2f-VgIC7UXinZJ38dht6Kp22G9LqYllJRpbopsw5Ub0Y~6vls2yiFsOZbc~fWDNOBcbj2gBjQs6GQbaUGwpsw3TA3LUG2G69bHMV3ebDQ1eyjNNPtUTq9jLL5eaVnSPeW7yxEtiLeodABG8OOID9C648rd0wvW-KCICgWUzQYU45IcHpe78VO52WsboHEIjpesDO9YmYNe~1r94jDg3M-fVaPmcKusyVVf5TSOu0vOKmoi3Q9HYlzHA__", // Replace with your image URL
         star: 3.5,
     },
     {
         name: "Vishwas Patel",
         location: "Bengaluru",
-        image: "https://s3-alpha-sig.figma.com/img/b9e5/4b80/1b535ac760e9750f3824617048afac21?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VE1OPyVn0VGDllWpORrVxovLD9ToVYwR5WcuBDEz~DeAj7w~U7oET6YfYobksqPbILzADsg89X4xYae9qastxBbzUax2Mm9N8O87mJ-hWstdgzSH2mkmrhfYZEBAT9Xx3Helzhuqn5duYTJ4nsqlFI8z6ls5Jl5JcOkIFJBPoHfIWTa1Wa8MJQXHOyg-CdzEJ0znRuyMYt5c8mndNX7lceu4OKFHfoD4QMTrcb523BGoYWN8oFgVT3OTA1lOrAUO64U4jbABLhrYJMwvI0t9KaJPCmPToeWtlKlFNmI62TI5wZYrhrNlkRPJxTUKejwYMsJYnxbg8pw8sOwg1HwfDg__", // Replace with your image URL
+        image: "https://s3-alpha-sig.figma.com/img/b9e5/4b80/1b535ac760e9750f3824617048afac21?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VUFSEuso~48hMnvjaJStoKelRMS7pcSQFzeSroYWjwKz2ECAsBU5w87tI9TsRTSM9SOet6u7EaoKP3FefJ8HDUzRNUwWK7KilafDa2uH5POiOuzS4VABPTicz~Jn5eabChuHhsQ6ICJBvCOibh4QJCTKt2yrAHKBtwQn8mhKA~D8Hg9qAgwZpD3X0DGFLWRJZFPHH8YJV6NGgEOJSTbgtCaANg~AclmoCr4ge3EDHnMsSyFtnr0n-Yjyg0pTzZ2DFNlqY3m1NECCNeLWnJx0B54oUKztmTQa-LOeCfUT0z40vFs-fvXze76bMdRXw7FIBdb3RBgU17wNca9jDP2oCw__", // Replace with your image URL
         star: 5,
     },
 
@@ -59,7 +59,7 @@ const Team = () => {
                 <div className="slider-cards" style={{ "--index": currentIndex }}>
                     {data.map((blog, index) => (
                         <div key={index} className={`" slider-card ${index === currentIndex ? "active" : "hidden"}`}
->
+                        >
                             <img src={blog.image} alt={blog?.title} className="card-image" />
                             <div className="card_blur">
                                 <div className='aut_text-img'>

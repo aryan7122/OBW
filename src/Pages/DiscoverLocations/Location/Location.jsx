@@ -9,6 +9,12 @@ const Location = () => {
         navigate(path);
         window.scrollTo(0, 0);
     };
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
      
     return (
         <div className="location-container">
@@ -27,15 +33,15 @@ const Location = () => {
             <div className="breadcrumb">
                 <div>
                     <span className="unFill-separator">&#9734;</span>
-                    <span className='p_home'>Home</span>
+                    <span className='p_home'><a href="/">Home</a></span>
                     <span className="breadcrumb-separator">&#9733;</span>
                     <span className='p'>Skin Clinic Locations</span>
                 </div>
                 <div className="clinic-selection">
                     <h3>Select a clinic location:</h3>
                     <div className='smsl'>
-                        <button className="clinic-button">Banashankari</button>
-                        <button className="clinic-button">Kanakapura Main Rd</button>
+                        <button className="clinic-button" onClick={() => scrollToSection("Banashankari")} >Banashankari</button>
+                        <button className="clinic-button" onClick={() => scrollToSection("Kanakapura")}>Kanakapura Main Rd</button>
                         {/* <button className="clinic-button">Kodipalya</button> */}
                     </div>
                 </div>

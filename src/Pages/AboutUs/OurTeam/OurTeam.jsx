@@ -16,49 +16,49 @@ const data = [
     {
         title: "Mohd Hadi",
         lastName: "Pedicure",
-        image: 'https://s3-alpha-sig.figma.com/img/de3e/4daa/293a8968ad076a95934e2d8ac6d37174?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=eZSw3~KG4uMVGkOGv2prOmCgydItdu~UDk02REN0HrYxSaAASi517DELyxU2bptNoP2gi-~3~yZEaUglj1P9mOCj4yXg2Fo2mF4GVIZ~4dO-Zf8fv5k~uMO9RsSgrT2CGOOw~ujlXZIyMRV6C5qhzstXOMPvEicCIRwza8tmQD6EZ9EOSqYiLLIpMp8IZzRVhwdTqTNZIgIK4f~F9sA-2YSub~5oa0-CVvfkyBQhY7AxDdkteRyO4VoPOhLgFCqk81zYqqFfqoOkTLyNYI3Yikot1Buz3~bfAwgmHIEDBJD3iN2FhtS8FXTBzQ3jesQBnkI1lY0E-24P2lS4RmMB4w__',
+        image: 'https://s3-alpha-sig.figma.com/img/de3e/4daa/293a8968ad076a95934e2d8ac6d37174?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=crSuoPRF7Gy4IJQGAp87jSj999cQx3Wsp70U4h7w8dcMt7skk~mN5u675l3sX-DO5SyA0-lkeBoekwrVbmyT6Y7jh~relNG9Hf7dNK~RKS98PUOxGHVm038IMFpa6gXk7DAEhMohTpymoJPF526rbRHyiwBKLWvnug--0MNzrMGQYAaC5H0dKQkFgw44vZWFpQ8c8vIxJ8vSiMVxEGErihR9Dtd6~OvYWVNtsSL-8ulbrI3tYaMks1kooR57heRNtexoSZDt4XtnLNDEuMhXz12NsOvLdP04QVNQBWjywIjC77ki3C8ahrMCBfZenV0hlqhmMruU-qdMxHN7bILqmw__',
         mediaLink: ['', '', '']
     },
     {
         title: "Nandan Raikwar",
         lastName: "Scalp Treatments",
-        image: 'https://s3-alpha-sig.figma.com/img/18f7/db27/726e822e90743bb9fa3e048ccbfe2928?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=MtOIXoUd5MLA1tsZSrkeTzi1k3jDMUdAFf~F-J09CDjJQ1X8GuQMvP~jtJ0gdpiTDT3vydWGx1c8L9R1fwZ3MdeB9bZ44kVQv6IFXvE9cXmSpGyf9v40yJdB~8V9zEg4dd7HrUec2a0v~f3OLL0Nr0Je9j~JRc0USZrER6L6rDFgjO7HswDO2qr4mp92vbe8b9UP4y0P8vdKqw3E4rgJxqq0j57U1xz7~5odvMdYgPG~X1JflUAN9KcO91jCx6p9ViyBPPl8zb6Horj-hk7BN~Q7nELI9HfhGG5OrkvRhxNt42AJFJ5MJzXx-bc97jaeyWlM~aKyiWdPYR6XFroiAw__',
+        image: 'https://s3-alpha-sig.figma.com/img/18f7/db27/726e822e90743bb9fa3e048ccbfe2928?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ucm1xttHD14gvEiIGsKdKt-vMfb6zQAoXAfeL8epSumfySdnueHsNgcZuRxnC61yrkYcMD-SKfjPubCnROXMLRtQghLgIIk7poJy0u8kAcduJdhYnmtql8Cs23xQVRtyQa3wLH5jcKd-uHmDrIum3b1CUIj3gru-xEvzdzqYS4KE07lOf00vTC9TlUhZN~7Ru~fBBIFnoQRHUWi6bGQupvqWR7HNkNxP0DbP9vUh2J0MSeLz~RsretIAR1GkfoXC4cg9seaasKVEBHO8ZOjXgYCtmOWfJrUAMNnXp-Rt-EnS3-quI8aO2nTuvLvMwPoVdOzgvmI6l3Ulbv0JHJbNhQ__',
         mediaLink: ['', '', '']
     },
     {
         title: "Amardeep Singh",
         lastName: "Organic Treatments",
-        image: 'https://s3-alpha-sig.figma.com/img/6373/0ee1/eb3b581c208849b40a445919c36bfa90?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=ir36Oc80SrxXSIxooRCbONxpztbeFA3d~5HmFgvurvGIB5AStHOJkgtiZpKstkOeHDEscWm-HmS1XcqYATUtbNB6oZi4ugmIKhgGrBYHRccgXMRi-ABsN1pDVW-80KDoysWLBkGkeb~mpMbr2BQoawnSX8nmbcYkI1blSH39omkP3r6BZf~Pg6a~yDehAVMAffi-1iOoHFDaC8KVYh2vuYatxdh2qha6pYCUAD8hQhoIWRQII1N9v-ATZsxJzgNQHiWjJkkZEr62NmSBBQycof53JTa~wLAods2Zxm4nPm5nJmHiNW9kkrnH0sK4rvaPidZOKqifWNe12wW~ubrhOw__',
+        image: 'https://s3-alpha-sig.figma.com/img/6373/0ee1/eb3b581c208849b40a445919c36bfa90?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=tcHJZIfMByW3uUjaF7jlkQhWhPryMJmwwJrkvRVqVblioMVmXSMYls2CHG~Mzei3KkPySpQl0w7LCeSfMvdO9G84ZC6vGxd4cw~rumCaa77VjV7XqSbbJIr57uFrblwo-01ZmxrArtrzY~4MLLlVaPwcs1ewOrt6PJfFfeXqW6~TuNPTqNnZfkWgiF-mtm5kN~z5s~CfCRR~H2E33DxXDk37K~E3ymVQlEZBqsbuBoNzp9K1WgI2t77VzwlNB0ioCNjShLpZLcnuVgigd0~MrcPeUFT79tMnDXsQ92gd248VKFwGnP2uaYP4gwdbnjgrfRaQlVOk1fBmSCxzuTEdxQ__',
         mediaLink: ['', '', '']
     },
     {
         title: "Shalini Jain",
         lastName: "Shave",
-        image: 'https://s3-alpha-sig.figma.com/img/b3dc/146d/65e54d82ce17f70fbc6ff98238739126?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=UWspRTfi~0D8-xLRXzwUWUT3PabO-4OM4--yvd-ZLYSvS5dopLxztX7tTQ8VsVTnpiHKf5GpbJcebUtHG6ZTGYqEkAqHOf4ZGe0qU2~swrKkDHRboRemeE1dIpc4yRhY3rSU1pNCROEtoHQ~N1tUDTSwOozJRclDor5QpVRwtZGVc9FiodpBb88syKZHNo-~cmUOKm0owrk42JtYzNupC66pUKwWdy4qiuDZm-5uqIBRdQLi9I7RROx5PnbUD8AjXJRdHfuFJ9Sb3hmdli3ECeD4bzv3gS2bTLl44HQTOoqxMRYG5urAQrIcFerKky9-24xPc6YIzb2iDKHJR2nfCg__',
+        image: 'https://s3-alpha-sig.figma.com/img/b3dc/146d/65e54d82ce17f70fbc6ff98238739126?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=uXuJF2IV2qD0DjnKYP0c1XPlbzVl~3h4lm9RCQG3p3tawIQNVK0jIImMEs7K-lMVKru1DPcitjXFJ0ZG2xdRgqSD95z~iCPX5Ma74gnsxm3LFgQiR7efbOIXjvWbQzwzfi6fY~fK4QiGwOnDipzKhtFVe43ueVxHhMJg4KzJaE6tQjFUF6ZoAdmi0wco4E-za9VLpHx-pGm2pRsQE0RncHfg1ZPDEJCOwIAoCP1IXVZJz9ydtLpOvIKEPM8M-twgdLr37ixXsJRLvfZk2QbdUqF7Dso9PmqzLbV2c4pjAEcBZ1lN4j3T5AKPLHK~GIhYaUFRUL~8a3G3AbnXmOOM4w__',
         mediaLink: ['', '', '']
     },
     {
         title: "Hillery Moses",
         lastName: "Facials",
-        image: 'https://s3-alpha-sig.figma.com/img/607d/6565/2262ba52bb797aa28132481d22e9ee9d?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VtKUL~KEf2f4PrDdTUlVvw4J-3Jzxjj-ip4vK8zAJKrFdT6HKlx65W23fs8vRROY2e9p9pB4PgwMTJYAIXjnnod2xpuWpZnR2mF~EyHgFR214o1M4C37MmrpQiTPhw~Ha6ZkXcRYcrf~G1zant8bLn8~5mNQZCUUQqezgc-wPY2Zrg2-wzgtER3JdauZ4sNmcdRnEdgDyT25T~J-3qjDvwtGLWMKJ7WkuOKAwNgpWpB-8D~ERVu6cxe79QQy12fhjcXebUUdgTxILQ0eK5k~saUlVprsz72527Fsr5wnEVrCsuQ6bXe37jUD7-vUHGtTpaOwfYp5kMNbkNM9KdeI9A__',
+        image: 'https://s3-alpha-sig.figma.com/img/607d/6565/2262ba52bb797aa28132481d22e9ee9d?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=n9GpKS412VFYvAskXVs3wdnDLiNGCc6TPSYYrcCo2IsnH8hoWlmTeApE4T6MvYV2YPt~3Njg5NdKWI8o7Gy86OYxkIz-1Vh6-ON2DuzGMISXTbNhWySZnQ54f1kaC7qTzXLl7ysStGYxsU1EeWphOm4LguodiZ1TFwKqTMjQtbuRSj7RAibGR3RJsaQRf5MocBuQ0vWajIrE4kSx0KYqcAiyjy6Pon-pxzoxnTLNECV1ICrGQHEuRp0bzT5HqTllWYuhqmVcmi9sOrwpZ1Ib-4Be1MpiBxwWIzrHtYZstkfBM8-C98aBe4VIM0n03jB6SUwvR6JKtbKPzWxaKhARmQ__',
         mediaLink: ['', '', '']
     },
     {
         title: "Paartho Ghosh",
         lastName: "Perming",
-        image: 'https://s3-alpha-sig.figma.com/img/2a8e/1c73/7e8a9313f52dd3d651dc6249be3bfb93?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=qktRYwbn1SfwW7lfPKnQfTeOzRjm9RbemOv7gG2O8ayb4734tTwopElMg6SarZTPRZaNXuhUNYFsM4qdxudU58kCcJ7CD~al4S-hJCkKc0ndeHyvk6Vrr~Y6jo8wEnUuR~X2v9Wq4-9Ukx4apJarlogvoVw6gbC0qBKIKI4kzjyWte-qNQ3t3u~eiIH1CpvXjhMw~m8BM04048XqZ6M25faul3i1IpuwwxWHJOdtiMNcn1gjOowhkRlsp68bq3eZUKEER7yYyIQQxTpQUYe-HATk7R9ticlH9t~kjPZ6vBAj8cqBOcwFiGvzFSzpfLYAMWOmwSNrhGqPJvcLAYqQAw__',
+        image: 'https://s3-alpha-sig.figma.com/img/3788/e20a/7bf3f24f397aa80a726685c93c9bfed5?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=j~SQF81s3~FDfcHzCJxjiFINZdmQ-DY4aDweFLFZbvwrw3Smn1U4PVKB1Xl7AJ4GjTpVrj4uajGxEvD~8BsrMCtXFedT2Mkb4NNlGDb4znDL~h~odtWyEIUCu-ap8uXY86KyiGU6tIhkQpKQzVcxKw5V5NEIGW9~i~F20yu8LMCp-lfNjWkOyi~PRRpn~QSdQFShWsL1WltNCHSE2WIgLXhgC6C-cVhUHNuUxSs30G6EaFY2vX0FEu9fPhbaZzQA3dDi82gf~w-5MXM8muAxKAa-jPuW~tYHW17HRv4jMouEtT99iK~ekUw8pEAeBGKJiPuEhxILjPKPIKSP5sA0hQ__',
         mediaLink: ['', '', '']
     },
     {
         title: "Rahul Choudhary",
         lastName: "Cut and Hair Care",
-        image: 'https://s3-alpha-sig.figma.com/img/3788/e20a/7bf3f24f397aa80a726685c93c9bfed5?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=LnOtRykJtMx975wOEL7h3xd3y1Ki5Kt9Jr2dt-nCrybQPQZUZoSLryXjd050t2XtiVPl8lieDE4d8PiMKAMVyR122ddNm-NJhXs1V3H3bNJ6PL384m48jkws-16I4IP9IGD8AL6P~viNL1CkabINbzVBhA6guyFI~67zQnAvUraNFzYsq8aRf4jB7OPzup8ni4xP48bLo5Ti~3GdfItkF00tKqdxGqXTuDpcp5VT7ws6u-MtGXY2g1TfULOQLTq~CP06MneuszInFuNEEqM4LjUdniQF3MGO78FzPAlJlZH0SVUtRJFzl18JgP1gwgkrZPcB67ix1lh~wHWxhWvNbQ__',
+        image: 'https://s3-alpha-sig.figma.com/img/2a8e/1c73/7e8a9313f52dd3d651dc6249be3bfb93?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=SOTxK8wUYbtD2pP-Bik-8lrL-GGlWVk8tul9Ycwi3DzpN70Avn8rdsAzbEha76NnSHSUI1NdrsuIzeYtKKYHUo90~oC5HMjipWsm8jBz7N04BY4f-kNFncb3ScwVSFhuaLp~i4cbbEjQNiYWDc9SFuM7VAoOrgQvwk91qUHe6mv9djr3iHwqsv8OS-HZI73GeZ7hqY~M31tvJs3gFV9vSLCDoXM6kzkufJ9LnClDF7iiYGcTwea7Tk1pxQ8P5VEnOUDQadvHT4usy1YT8TNC0AHWi~FuheSRjtdvY2vKBavoz8dT0y1WIA9SRt1QJfUiiNHMDN6ZsZg2qT-HaHbqXg__',
         mediaLink: ['', '', '']
     },
     {
         title: "Bhavna Goyal",
         lastName: "Beard Colour",
-        image: 'https://s3-alpha-sig.figma.com/img/3c19/f708/6bb84b5b692a9b23e4dc49b6b4a5c417?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=RcGi~tF5wef0U3JR6Nmgjj2BppP-mkcEcyVUERKXn4LBgbSi8emYaunKhcHQkt~l6EtYhe8zXTdW~D88hBAvSCgiELm~zkbWxNNwBjhrUKytPX~XvqlcQaewfWWl9-axpiVEw6IVKnXl2Em0HTuW2V1-VFZcvGKMNsCSAWARSFE6rqABMDlgU6I8AIuo7MBwSxyHS4BNyxokAOJCKJ1Ae1NbOv8OXu68UsYK16hKC4vmBHqySiXw-7BxxPAPi1F~eq3VmpasNc6IbvwX-gbe6cAAESvw3DuMh-t-8p771qer-O6R1MEdxnU8WDJiPaVJgRIGMeMA1zybo8w-g0lM~Q__',
+        image: 'https://s3-alpha-sig.figma.com/img/3c19/f708/6bb84b5b692a9b23e4dc49b6b4a5c417?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VBdecwP6AfVVmT7QxZNcVy92zZFkFBos8AQscTFUFxRmVPpltEuHfeAmhLGUguD5sOs6YevCKz2coJWRxyHhbAQLjD0kjRTtLvrrfpXT7AXzKjTBuim5OVSblOcSb1KGIINSZAE0mZ-XG8nY~xtzzfk57C1158jcXbvN7a6KuewweRi1pNs07a2HbvEDO5fkvvJQGlUPXSt6oR5TKadGJu1PU~OPGqM8~dpmuR9jCWXjeeOWPAFtJQeIlxQ~ri2G0FiX8jbKEwU4KMnJhjfzlTrPC04HZ8KTBVjEvznU71PXcKOaF6SzTeLmkrg83ySj1hxvA~jN2rX6T9J-amsTdg__',
         mediaLink: ['', '', '']
     },
 ];
