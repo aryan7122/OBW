@@ -14,6 +14,7 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import WebPImage from "../../util/WebPImage";
 
 const images = [img1, img2, img3];
 import { motion } from 'framer-motion';
