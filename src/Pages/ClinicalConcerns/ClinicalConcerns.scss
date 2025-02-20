@@ -1,10 +1,10 @@
 .clinical-concerns {
   padding: 60px;
   background-color: #f6f6f6;
- 
+
   @media only screen and (min-width: 1601px) {
-      padding: 80px;
-    }
+    padding: 80px;
+  }
   @media only screen and (max-width: 1400px) {
     padding: 40px;
   }
@@ -96,7 +96,6 @@
       img {
         width: 25px;
         height: 25px;
-       
       }
       @media only screen and (max-width: 790px) {
         font-size: 20.18px;
@@ -181,12 +180,13 @@
         border-radius: 20px !important;
         filter: blur(3px);
         transition: filter 0.3s ease-out;
-         
+
         will-change: transform;
+        will-change: filter;
       }
       .card-overlay {
         // border: 1px solid red;
-       
+
         position: absolute;
         top: 0;
         left: 0;

@@ -50,18 +50,18 @@ const HeroSection = () => {
                         </button> */}
                         </motion.div>
                     </div>
-                    <motion.div className="hero-image"
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true, amount: 0.1 }}
+                    <div className="hero-image"
+                        // initial={{ opacity: 0, scale: 0.8 }}
+                        // whileInView={{ opacity: 1, scale: 1 }}
+                        // transition={{ duration: 0.6 }}
+                        // viewport={{ once: true, amount: 0.1 }}
                     >
                         <img
  
                             src={img1}
                             alt="Hero Girl"
                         />
-                    </motion.div>
+                    </div>
                 </div>
             </div>
             {showModal && <BookAppointment onClose={closeModal} />}
