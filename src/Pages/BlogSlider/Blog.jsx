@@ -14,6 +14,7 @@ import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg
 import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
 import img9 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
 import img11 from '../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg'
+import WebPImage from "../../util/WebPImage";
 
 function Blog() {
     const [selectedCategory, setSelectedCategory] = useState("View all");
@@ -215,7 +216,7 @@ function Blog() {
                         <div className="blog-cards">
                             {visibleBlogs.map((blog, index) => (
                                 <div key={index} className="blog-card">
-                                    <img
+                                    <WebPImage
                                         src={blog.image}
                                         alt={blog?.title}
                                         className="card-image"
@@ -228,7 +229,7 @@ function Blog() {
                                     <h3 className="card-p">{blog?.p}</h3>
                                     <div className="author">
                                         <div className="aut_text-img">
-                                            <img src={blog?.authorImg} />
+                                            <WebPImage src={blog?.authorImg} />
                                             <div className="aut_text">
                                                 <p className="card-author">{blog?.author}</p>
                                                 <p className="card-date">{blog?.date}</p>

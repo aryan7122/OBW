@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
 import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
 import img6 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
+import WebPImage from '../../util/WebPImage';
 const blogs = [
     {
         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",

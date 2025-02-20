@@ -132,7 +132,6 @@ const TrendingTreatments = () => {
                     <div key={index} className="card">
                         <div className="card-image">
                             <WebPImage
-                                effect="blur"
                                 placeholderSrc={placeholderImg}
                                 src={treatment.image}
                                 alt={treatment.title}

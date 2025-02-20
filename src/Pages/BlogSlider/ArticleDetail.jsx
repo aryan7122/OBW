@@ -17,6 +17,7 @@ import img2 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
 import img7 from '../../assets/TrendingTreatments/Skin Brightening-min.jpg'
 import img10 from '../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg'
 import img5 from '../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg'
+import WebPImage from "../../util/WebPImage";
 const ArticleDetail = () => {
     const data1 = {
         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
@@ -152,7 +153,7 @@ const ArticleDetail = () => {
         category: "Skin",
         author: "Nikita Soni",
         date: "Feb 25, 2025",
-        coverImage:img4,
+        coverImage: img4,
         sections: [
             {
                 heading: "Introduction",
@@ -294,7 +295,7 @@ const ArticleDetail = () => {
         author: "Rashi Kapoor",
         authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
         date: "Mar 10, 2025",
-        coverImage:img7,
+        coverImage: img7,
         sections: [
             {
                 heading: "Introduction",
@@ -751,7 +752,7 @@ const ArticleDetail = () => {
                                 <p>{section.content}</p>
                                 {section.image &&
                                     <>
-                                        <img src={section.image} alt={section.heading} className="section-image" />
+                                        <WebPImage src={section.image} alt={section.heading} className="section-image" />
                                         <div className="caption_img_">{formattedcaaptionImg}</div>
                                     </>
                                 }

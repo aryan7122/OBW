@@ -4,6 +4,7 @@ import { ArrowRight, CirclePlay } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { motion } from 'framer-motion';
 import img1 from '../../assets/firststep/hero2.jpg'
+import WebPImage from "../../util/WebPImage";
 
 const HeroSection = () => {
     const [showModal, setShowModal] = useState(false);
@@ -32,7 +33,7 @@ const HeroSection = () => {
                             viewport={{ once: true, amount: 0.5 }}
                         >
                             Rejuvenate your skin, restore your glow, and redefine confidence with expert care at OBW.
-                             {/* Experience personalized treatments designed to bring out your best self. */}
+                            {/* Experience personalized treatments designed to bring out your best self. */}
                         </motion.p>
                         <motion.div className="buttons"
                             initial={{ opacity: 0, y: 30 }}
@@ -55,8 +56,8 @@ const HeroSection = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true, amount: 0.1 }}
                     >
-                        <motion.img
-                            
+                        <WebPImage
+ 
                             src={img1}
                             alt="Hero Girl"
                         />

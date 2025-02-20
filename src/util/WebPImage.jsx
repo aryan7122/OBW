@@ -22,9 +22,15 @@ const WebPImage = ({ src, alt, className }) => {
     //     };
     // }, [src]);
 
-    return <LazyLoadImage effect="blur" once={true} placeholderSrc={placeholderImg} src={src || src} alt={alt} className={className} loading="lazy" wrapperProps={{
-        style: { transitionDelay: "0.1s" },
-    }} />;
+    return <LazyLoadImage
+        effect="blur"
+        quality={80}
+        once={true}
+        placeholderSrc={placeholderImg}
+        src={src || src} alt={alt || ''}
+        className={className || ''} loading="lazy" wrapperProps={{
+            style: { transitionDelay: "0.1s" },
+        }} />;
 };
 
 export default WebPImage;
