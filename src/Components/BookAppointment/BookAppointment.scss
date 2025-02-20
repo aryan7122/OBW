@@ -210,7 +210,7 @@
         }
       }
     }
-    .date-group {
+        input[type="datetime-local"] {
       position: relative;
       @media only screen and (max-width: 730px) {
         margin-top: 10px;

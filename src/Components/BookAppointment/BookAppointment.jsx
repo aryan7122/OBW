@@ -90,7 +90,7 @@ const BookAppointment = ({ onClose }) => {
                                     placeholderText="dd/mm/yyyy"
                                     className="custom-date-picker"
                                 /> */}
-                                <input type="datetime-local" />
+                                <input type="datetime-local" className="custom-date-picker" />
                             </div>
                         </div>
                     </div>
