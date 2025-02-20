@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./TeamSection.scss";
-import img1 from '../../assets/team/34d2edqd.jpeg';
-import img2 from '../../assets/team/12312.jpeg';
-import img3 from '../../assets/team/t2.avif';
+import img1 from '../../assets/team/0K6A5365-min.jpg';
+import img2 from '../../assets/team/0K6A5357-min.jpg';
+import img3 from '../../assets/team/0K6A5359-min.jpg';
 import icon1 from '../../assets/team/str.svg';
 import icon2 from '../../assets/team/3dicons-travel-front-color.svg';
 import icon3 from '../../assets/team/3dicons-tick-front-color.svg';
@@ -73,17 +73,16 @@ const TeamSection = () => {
     }, 30);
   };
 
-  // Intersection observer to trigger animations when the element is in view
   const observerRef = useRef(null);
 
   const handleObserver = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Trigger number animation once the element is in view
+
         stats.forEach(stat => {
           animateCount(0, stat.value, stat.id, stat.isPercentage);
         });
-        observer.unobserve(entry.target); // Stop observing after animation
+        observer.unobserve(entry.target);
       }
     });
   };
@@ -97,7 +96,7 @@ const TeamSection = () => {
     }
     return () => {
       if (observerRef.current) {
-        observer.disconnect(); // Clean up the observer
+        observer.disconnect();
       }
     };
   }, []);

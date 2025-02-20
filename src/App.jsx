@@ -43,10 +43,11 @@ function App() {
               <>
                 <HeroSection />
                 <ClinicalConcerns />
+                <WhyChooseSection />
                 {/* <Locations /> */}
                 <TeamSection />
                 <TrendingTreatments />
-                <WhyChooseSection />
+             
                 <BlogSlider />
                 <FAQSection />
                 <HappyClients />

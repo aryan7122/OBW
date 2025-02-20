@@ -12,7 +12,7 @@ import img9 from '../../assets/TrendingTreatments/Scar Revision or Reduction Tre
 import img10 from '../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg'
 import img11 from '../../assets/TrendingTreatments/HIFU (High-Intensity Focused Ultrasound)-min.jpg'
 import img12 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
-import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -116,39 +116,8 @@ const TrendingTreatments = () => {
             buttonRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
         }, 100);
     };
-
-    console.log('treatments', treatments.length
-    )
-
-    //  sliders
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleCards = 1;
-    const handleNext = () => {
-        if (currentIndex < treatments.length - visibleCards) {
-            setCurrentIndex(currentIndex + 1);
-        }
-    };
-
-    const handlePrevious = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
-    };
-
-    const handleWheel = (event) => {
-        if (event.deltaY > 0) {
-            // handleNext();
-        } else {
-            // handlePrevious();
-        }
-    };
-    //  sliders
-
     return (
         <div className="trending-treatments">
-            <div className="header_top">
-
-          
             <div className="title-sbt">TRENDING</div>
             <header className="heading-section">
                 <h1 className="trending-title">Trending <span className="heart">&#x2764;</span> Treatments</h1>
@@ -156,11 +125,9 @@ const TrendingTreatments = () => {
                     Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
 
                 </p>
-                </header>
-            </div>
+            </header>
 
-
-            {/* <div className="cards-container">
+            <div className="cards-container">
                 {treatments.slice(0, visibleCount).map((treatment, index) => (
                     <div key={index} className="card">
                         <div className="card-image">
@@ -174,45 +141,12 @@ const TrendingTreatments = () => {
                         <p className="card-description">{treatment.description}</p>
                     </div>
                 ))}
-            </div> */}
-
-            {/* <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
-                {visibleCount < treatments.length ? "Load More" : "Load Less"}
-                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-            </button> */}
-
-            <div className="card-slider-container" onWheel={handleWheel}>
-                <div className="team-images" style={{ "--index": currentIndex }}>
-                    {treatments.map((treatment, index) => (
-                        <>
-                            <div className="card">
-                                <div className="card-image">
-                                    <WebPImage
-                                        key={index}
-                                        src={treatment.image}
-                                        alt={`Team group ${index + 1}`}
-                                        className={`team-photo ${index === currentIndex ? "active" : "hidden"}`}
-                                    />
-                                </div>
-
-                                <h3 className="card-title">{treatment.title}</h3>
-                                <p className="card-description">{treatment.description}</p>
-                            </div>
-                        </>
-                    ))}
-                </div>
-                <div className="progress">
-                    <button className="nav-btn left" onClick={handlePrevious} disabled={currentIndex === 0}>
-                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
-                    </button>
-                    <button className="nav-btn right" onClick={handleNext} disabled={currentIndex >= treatments.length - visibleCards}>
-                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-                    </button>
-                </div>
             </div>
 
-
-
+            <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+                {visibleCount < treatments.length ? "Load More" : "Load Less"}
+                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+            </button>
 
 
 
