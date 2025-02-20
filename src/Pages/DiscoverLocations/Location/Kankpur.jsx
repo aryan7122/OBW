@@ -4,18 +4,17 @@ import { ArrowRight, Phone } from "lucide-react";
 import img1 from '../../../assets/about/e8942418fa09580f4a304b1b75102ee7.jpg'
 import img2 from '../../../assets/about/5866f3bf14b8a2d9b731276b9089de83.jpg'
 import img3 from '../../../assets/about/012b32172e499b8eed8d42a3bed687e1.jpg'
+import img4 from '../../../assets/about/unnamed (1).jpg'
+import img5 from '../../../assets/about/unnamed (2).jpg'
+import img6 from '../../../assets/about/unnamed (3).jpg'
+import img7 from '../../../assets/about/unnamed.jpg'
 import line from '../../../assets/about/Line 267.svg'
 import BookAppointment from "../../../Components/BookAppointment/BookAppointment";
 // 012b32172e499b8eed8d42a3bed687e1.jpg
 import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
-const images = [img1, img2, img3,
+const images = [img1, img2, img3, img4, img5, img6, img7,
     'https://lh3.googleusercontent.com/gps-cs-s/AB5caB-oXlX1eDzxJ1vWmLMhc9HxC1TYV3lQFQnVPE_FcIR-ogKRTdN2FUbqBxRVMtKSL3EooN2U4psOBImtGiCZ6e3vnbX4yaohUz3ciDpmooarnKEKoqlp_gqO-hHTQlxuput2VnY4fQ=s1024',
-    'https://lh3.googleusercontent.com/gps-cs-s/AB5caB9M1yNanuD2Lf8wPgK6E0AKiRqFNOHy4ggFMHaC-jf5TjlAx8v7TgEnPCCD9r8OwkMVKuDbVa0wCTN9NVZqXWopq3cX0__y1K8fqMYDfnJpQ5EKKKpxToXy6aErpIvVhVcT3FMk1w=s1024',
-    'https://lh3.googleusercontent.com/gps-cs-s/AB5caB8iv_9G0PeGjh_-w8o9bKAKdTPi_YbtcLGavvBj6l4VRCqcF7MeQZs7X0SK0f4lIL6NnoVYfF3VwUk_Yr-hmFmfQX7eLMBhd8_b2PbG3RcMfjJOtwY9VStuWVhMHwbX6vcaNtjX=s1024',
-    'https://lh3.googleusercontent.com/gps-cs-s/AB5caB91scZK8jDl3CHYi8b2fo4pCBeJzFDHmfN0BsqPW_qj9USH06pv9FbxJErsM1KfL69LltOhq1rffKAvuC0KRcaxkkGjotCPTck2YBsaE_erimvML2YH6I8ORDcerbsyOyajTOH2=s1024',
-    'https://lh3.googleusercontent.com/gps-cs-s/AB5caB83vODEONxi6OVVXzl3KhvMsjKf4t_Ge4fSBUSaFDk-5_x6fjdsXuL3Bx9hhXaT9ySfrVNAe4ioXPDmx98_Ya_10u_kMHn3HQyccwBK-mUQ6dGYRT0rU0iVHgqJk86g7iCVTvA-=s1024',
-    
 ];
 const Kankpur = () => {
     const [showModal, setShowModal] = useState(false);
@@ -64,7 +63,7 @@ const Kankpur = () => {
                             </PhotoView>
                         </div>
 
-                        {images.slice(1).map((image, index) => (
+                        {images.map((image, index) => (
                             <PhotoView key={index + 1} src={image} />
                         ))}
                     </div>
