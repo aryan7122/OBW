@@ -144,7 +144,7 @@ const AllTreatments = () => {
             </header>
 
             <div className="sectionCard">
-                <h1>All treatments</h1>
+                <h1>All Treatments</h1>
                 <div className="navtab">
                     <nav className="treatment-filters">
                         {categories.map((category, index) => (
@@ -154,7 +154,8 @@ const AllTreatments = () => {
                                 onClick={() => setSelectedCategory(category.name)}
                             >
                                 {category.icon && <img src={category.icon} alt={category.name} className="category-icon" />}
-                                {category.name}
+                                <span style={{fontSize:"18px"}}> {category.name}</span>
+                               
                             </button>
                         ))}
                     </nav>

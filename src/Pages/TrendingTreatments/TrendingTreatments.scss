@@ -8,7 +8,7 @@
   scroll-behavior: smooth;
   color: #333;
   .header_top {
-    padding: 60px;
+    padding: 60px 100px 60px 100px;
 
     // text-align: center;
     @media only screen and (min-width: 1601px) {
@@ -207,6 +207,8 @@
     // width: 100%;
     overflow: hidden;
     padding: 30px;
+    padding-top: 5px;
+    padding-left: 100px;
 
     .team-images {
       display: flex;
@@ -545,7 +547,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 60px;
+    padding: 60px 100px 60px 100px;
 
     // text-align: center;
     @media only screen and (min-width: 1601px) {
