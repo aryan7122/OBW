@@ -94,6 +94,7 @@
           // min-width: 580px;
           border-radius: 1rem;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
         p {
@@ -173,6 +174,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
       gap: 20px;
+        transition: box-shadow 0.3s ease-in-out;
 
       @media only screen and (max-width: 900px) {
         grid-template-columns: 1fr 1fr;
