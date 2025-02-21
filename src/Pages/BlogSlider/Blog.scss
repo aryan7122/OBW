@@ -4,7 +4,7 @@
   .content_top {
     margin-top: -120px;
 
-    padding: 130px 60px 60px 60px;
+    padding: 130px 100px 60px 100px;
     display: flex;
     text-align: left;
     align-items: center;
@@ -45,7 +45,7 @@
       font-size: 48px;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      width: 750px;
+      width: 1000px;
       font-weight: 500;
       line-height: 57.6px;
       letter-spacing: -2.200000047683716px;
@@ -91,7 +91,7 @@
   }
   .blogs_card_page {
     display: flex;
-    padding: 60px;
+    padding: 60px 100px 60px 100px;
     @media only screen and (max-width: 1400px) {
       padding: 40px;
     }
