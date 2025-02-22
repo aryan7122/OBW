@@ -1,23 +1,23 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TeamSection.scss";
-import img1 from '../../assets/team/0K6A5365-min.jpg';
-import img2 from '../../assets/team/0K6A5357-min.jpg';
-import img3 from '../../assets/team/0K6A5359-min.jpg';
-import icon1 from '../../assets/team/str.svg';
-import icon2 from '../../assets/team/3dicons-travel-front-color.svg';
-import icon3 from '../../assets/team/3dicons-tick-front-color.svg';
-import icon4 from '../../assets/team/3dicons-thumb-up-front-color.svg';
-import icon5 from '../../assets/team/3dicons-trophy-front-color.svg';
-import icon6 from '../../assets/team/3dicons-map-pin-front-color.svg';
-import icon7 from '../../assets/team/3dicons-star-2-front-color.svg';
-import { ArrowRight, ArrowLeft } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { motion } from 'framer-motion';
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import WebPImage from "../../util/WebPImage";
+import { useNavigate } from "react-router-dom";
+
+const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/i38dnetngbnyftvucibs"
+const img2="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/xhwhyct7xs2yehbto7fm"
+const img3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/mliudlqchy4xm0c9lbd9"
+const icon1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/ehtgyrcp6c8z9kxpg88h"
+const icon2="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/nxctprhdl38umm0opc5c"
+const icon3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/tjnngwmfmjb4ac5sofrr"
+const icon4="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/ko5jbmkpcrdnhccyynm2"
+const icon5="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/foguxt7tgp1rg8fawtfj"
+const icon6="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/mtudaldvzvdx1i1yyhp3"
+const icon7="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/fw0ufhddkgxjbmofypun"
 
 const images = [img1, img2, img3];
-import { motion } from 'framer-motion';
 
 const stats = [
   { label: "Years of Combine Experience", value: 20, id: "experience", isPercentage: false },
