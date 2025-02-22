@@ -3,8 +3,8 @@ import "./HeroSection.scss";
 import { ArrowRight, CirclePlay } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { motion } from 'framer-motion';
-import img1 from '../../assets/firststep/hero2.jpg'
-import WebPImage from "../../util/WebPImage";
+
+const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HeroSection/rzj46jkcwd2ib9kxzvtt"
 
 const HeroSection = () => {
     const [showModal, setShowModal] = useState(false);

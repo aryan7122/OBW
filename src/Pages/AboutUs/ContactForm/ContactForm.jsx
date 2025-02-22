@@ -5,10 +5,11 @@ import "react-phone-input-2/lib/style.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendarAlt } from "react-icons/fa"; // Calendar icon
-import img from '../../../assets/about/ae7fe1d6d3f899f793a7d688e60821c9.jpg'
 import Vector from '../../../assets/about/Vector.svg'
 import { ArrowRight } from "lucide-react";
 import { toast, Toaster } from "react-hot-toast"; // Import toast
+
+const img="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
 
 const ContactForm = () => {
     const [phone, setPhone] = useState("");

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./RR.scss";
 import { ArrowRight, Phone } from "lucide-react";
-import img1 from '../../../assets/about/e8942418fa09580f4a304b1b75102ee7.jpg'
-import img2 from '../../../assets/about/5866f3bf14b8a2d9b731276b9089de83.jpg'
-import img3 from '../../../assets/about/012b32172e499b8eed8d42a3bed687e1.jpg'
-import line from '../../../assets/about/Line 267.svg'
 import BookAppointment from "../../../Components/BookAppointment/BookAppointment";
 import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+
+const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/n41ogjspe9zdpvvpnj2c"
+const img2="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/iufgfssgijlkgutduwf6"
+const img3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/wix4llnhkeg8mio531us"
+const line="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/kavwq8lk6uamf4zgvqjr"
 
 const images = [img1, img2, img3]; // Saari images ek array me store
 

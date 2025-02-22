@@ -1,28 +1,24 @@
+import { ArrowRight } from "lucide-react";
 import React from "react";
 import "./OurValue.scss";
-import img1 from '../../../assets/TrendingTreatments/Excellence in Aesthetics-min.jpg'
-import img2 from '../../../assets/TrendingTreatments/Personalized & Holistic Approach-min.jpg'
-import img3 from '../../../assets/TrendingTreatments/Commitment to Safety & Quality-min.jpg'
-import img4 from '../../../assets/TrendingTreatments/img4.jpeg'
-import { ArrowRight, ChevronRight } from "lucide-react";
 // import { Button } from "@/components/ui/button";
-import fallStr from '../../../assets/about/fallStr.svg'
 import { useNavigate } from "react-router-dom";
+import fallStr from '../../../assets/about/fallStr.svg';
 const treatments = [
     {
         title: "Excellence in Aesthetics",
         description: "We combine advanced technology with expert care to deliver high-quality, result-driven treatments. ",
-        image: img1,
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhatWeStandsFor/tn4cgskcw7zluw7yvczk",
     },
     {
         title: "Personalized & Holistic Approach",
         description: "Every client is unique, and we customize our treatments to meet individual beauty and wellness goals. ",
-        image: img2,
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhatWeStandsFor/nwbelkkkddk2pnwfw4iu",
     },
     {
         title: "Commitment to Safety & Quality ",
         description: "We use only clinically tested, dermatologically safe products and FDA-approved procedures to ensure the best care.",
-        image: img3,
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhatWeStandsFor/fhlnfxjmwgxgatdzddye",
     },
 ];
 

@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import "./Kankpur.scss";
 import { ArrowRight, Phone } from "lucide-react";
-import img1 from '../../../assets/about/e8942418fa09580f4a304b1b75102ee7.jpg'
-import img2 from '../../../assets/about/5866f3bf14b8a2d9b731276b9089de83.jpg'
-import img3 from '../../../assets/about/012b32172e499b8eed8d42a3bed687e1.jpg'
-import img4 from '../../../assets/about/unnamed (1).jpg'
-import img5 from '../../../assets/about/unnamed (2).jpg'
-import img6 from '../../../assets/about/unnamed (3).jpg'
-import img7 from '../../../assets/about/unnamed.jpg'
-import line from '../../../assets/about/Line 267.svg'
 import BookAppointment from "../../../Components/BookAppointment/BookAppointment";
 // 012b32172e499b8eed8d42a3bed687e1.jpg
 import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+
+const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/n41ogjspe9zdpvvpnj2c"
+const img2="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/iufgfssgijlkgutduwf6"
+const img3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/wix4llnhkeg8mio531us"
+const img4="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/uzfnhdozbhyeddegmiz4"
+const img5="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/qg3edlkkibok785csunm"
+const img6="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/paotnmsxnumytoktcvpt"
+const img7="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/zonusbtfyakz34utzlic"
+const line="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/kavwq8lk6uamf4zgvqjr"
 const images = [img1, img2, img3, img4, img5, img6, img7,
     'https://lh3.googleusercontent.com/gps-cs-s/AB5caB-oXlX1eDzxJ1vWmLMhc9HxC1TYV3lQFQnVPE_FcIR-ogKRTdN2FUbqBxRVMtKSL3EooN2U4psOBImtGiCZ6e3vnbX4yaohUz3ciDpmooarnKEKoqlp_gqO-hHTQlxuput2VnY4fQ=s1024',
 ];

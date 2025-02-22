@@ -60,7 +60,8 @@ const clinicalData = {
           "Skin tightening lasers",
         ],
       },
-      imageUrl: SkinImg1,
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740202660/Clinical%20Concerns/zvcpmvzj4eveid1nw8sz.jpg",
+     
     },
     {
       title: "Unwanted Hairs",
@@ -68,7 +69,8 @@ const clinicalData = {
         Concerns: ["Unwanted facial and body hair"],
         Treatments: ["Laser Hair Reduction (LHR)"],
       },
-      imageUrl: UnwantedImg2,
+      // imageUrl: UnwantedImg2,
+      imageUrl:"https://ik.imagekit.io/4amijg7ug/Unwanted%20Hairs-min.jpg?updatedAt=1740139969070",
     },
     {
       title: "Enlarged Pores & Uneven Texture",
@@ -83,7 +85,7 @@ const clinicalData = {
           "Skin peels",
         ],
       },
-      imageUrl: EnlargedImg3,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740202771/Clinical%20Concerns/pdlxgc3owtmugozhshck.jpg",
     },
     {
       title: "Pigmentation & Uneven Skin Tone",
@@ -105,7 +107,8 @@ const clinicalData = {
           // "Medical-grade skincare"
         ],
       },
-      imageUrl: PigmentationImg4,
+      // imageUrl: PigmentationImg4,
+      imageUrl:"https://ik.imagekit.io/4amijg7ug/Pigmentation%20&%20Uneven%20Skin%20Tone-min.jpg?updatedAt=1740139862143"
     },
     {
       title: "Double Chin (Face)",
@@ -113,8 +116,8 @@ const clinicalData = {
         Concerns: ["Excess fat in the chin area"],
         Treatments: ["Fat-dissolving injections", "Lipolytic injections"],
       },
-      imageUrl: DoubleImg5,
-      // imageUrl: UnwantedImg2
+      // imageUrl: DoubleImg5,
+      imageUrl:"https://ik.imagekit.io/4amijg7ug/Double%20Chin%20(Face)-min.jpg?updatedAt=1740139823132"
     },
     {
       title: "Dryness & Dehydration",
@@ -122,7 +125,8 @@ const clinicalData = {
         Concerns: ["Dry, dehydrated skin"],
         Treatments: ["Hydra-medi facials", "Hydrating peels", "Mesotherapy"],
       },
-      imageUrl: DrynessImg6,
+      // imageUrl: DrynessImg6,
+      imageUrl:"https://ik.imagekit.io/4amijg7ug/Dryness%20&%20Dehydration-min.jpg?updatedAt=1740202041421"
     },
     {
       title: "",
@@ -143,7 +147,8 @@ const clinicalData = {
           "Subcision",
         ],
       },
-      imageUrl: AcneImg7,
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740201058/Clinical%20Concerns/xmoxlipurww0fseped9r.jpg",
+      
     },
   ],
   "Scalp/Hair Care": [

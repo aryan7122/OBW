@@ -1,14 +1,14 @@
 import React from "react";
 import "./WhyChooseSection.scss";
-import img1 from '../../assets/WhyChooseSection/Frame 1597883017.svg'
-import img2 from '../../assets/WhyChooseSection/Confident Hispanic Female Doctor in Hospital Setting.svg'
-import img3 from '../../assets/WhyChooseSection/Serene Beauty Portrait.svg'
-import icon1 from '../../assets/WhyChooseSection/ok.svg'
 import { motion } from 'framer-motion';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const WhyChooseSection = () => {
+    const img2= "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/eimccgamvas1fxy1vy"
+    const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/upimjxgdcs7vitbylan9"
+    const img3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/xir8lh6mqwa8q1iwjukk"
+    const icon1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/cwlr9yev7jiiwy7575u0"
+    
     return (
         <section className="why-choose-section">
             <div className="content-container">

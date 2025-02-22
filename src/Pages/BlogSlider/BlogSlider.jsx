@@ -1,11 +1,7 @@
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
-import './BlogSlider.scss';
-import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
-import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
-import img6 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
-import WebPImage from '../../util/WebPImage';
+import './BlogSlider.scss';
 const blogs = [
     {
         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
@@ -13,7 +9,7 @@ const blogs = [
         author: "Anjali Verma",
         authorImg: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg?w=1060",
         date: "Feb 10, 2025",
-        image: img1,
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/lldglrzaq4mfpre7ggqo",
         category: "Skin"
     },
     {
@@ -22,7 +18,7 @@ const blogs = [
         author: "Riya Mehta",
         authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
         date: "Feb 15, 2025",
-        image: img6,
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/mgp21fo5pzjy3gapzwim",
         category: "Hair"
     },
     {
@@ -31,7 +27,7 @@ const blogs = [
         author: "Aarav Sharma",
         authorImg: "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
         date: "Feb 20, 2025",
-        image: img3,
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/y6tqnhdcncam70t7v8g1",
         category: "Wellness"
     },
 ];
