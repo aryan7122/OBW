@@ -2,7 +2,6 @@ import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
-import WebPImage from "../../util/WebPImage";
 import "./TrendingTreatments.scss";
 
 const treatments = [
@@ -172,7 +171,7 @@ const TrendingTreatments = () => {
                         <>
                             <div className="card">
                                 <div className="card-image">
-                                    <WebPImage
+                                    <img
                                         key={index}
                                         src={treatment.image}
                                         alt={`Team group ${index + 1}`}

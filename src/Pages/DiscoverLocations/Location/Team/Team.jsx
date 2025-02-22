@@ -6,19 +6,19 @@ const data = [
     {
         name: "Lalita Thakur",
         location: "Mumbai",
-        image: "https://s3-alpha-sig.figma.com/img/73e4/07de/671e93ceca888c6d577d00f110d09b9f?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=CWfnMS1aJVacs6R~3aY1udLb8epRBb~y5OewC6Cw0c1qHqnT-i-HcpZgL~kD7sJWYChKPQ1elld-XtE7JLRAx2Shf-62hipttzQG75jO7SBpLApaA393bb-vmjjKOFTPH7lA-IX92hP7T3wyQLYn-MpqcGLGU1JcgmiZddCPDYGYft3sN2fodikAMUlqvwQhsSLr0JC2~lKlxn~3K~MKtrIC5ulMgjNTEGeDX84Lwm6ipRYhrLzqtbcUx3lTaBfkUYuVH~9TGObUaKlRgfREQUx6~gXTP6ZzvaqZNr8VmK7PcvCXLfwSEOJJDgBci~E0Z0b5q6Z6isH6CGK6mT249Q__", // Replace with your image URL
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/OurExperts/jakfv66owrqbhsvyw1fe", // Replace with your image URL
         star: 3,
     },
     {
         name: "Sheetal Trivedi",
         location: "Bengaluru",
-        image: "https://s3-alpha-sig.figma.com/img/2c57/ec52/5c4130705ab505bc70d55013754612bf?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=F5LTfydCmjPO7Ik4WZ10YLYtH9CtH9wkqwRF6ATpFjDmSyCDMK6hMHdHcN0cWV2mvmuvOkAez~2TOLWfopyet7FX84tk8Ym2f-VgIC7UXinZJ38dht6Kp22G9LqYllJRpbopsw5Ub0Y~6vls2yiFsOZbc~fWDNOBcbj2gBjQs6GQbaUGwpsw3TA3LUG2G69bHMV3ebDQ1eyjNNPtUTq9jLL5eaVnSPeW7yxEtiLeodABG8OOID9C648rd0wvW-KCICgWUzQYU45IcHpe78VO52WsboHEIjpesDO9YmYNe~1r94jDg3M-fVaPmcKusyVVf5TSOu0vOKmoi3Q9HYlzHA__", // Replace with your image URL
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/OurExperts/fd0fkgkvkaomkkezctxi", // Replace with your image URL
         star: 3.5,
     },
     {
         name: "Vishwas Patel",
         location: "Bengaluru",
-        image: "https://s3-alpha-sig.figma.com/img/b9e5/4b80/1b535ac760e9750f3824617048afac21?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VUFSEuso~48hMnvjaJStoKelRMS7pcSQFzeSroYWjwKz2ECAsBU5w87tI9TsRTSM9SOet6u7EaoKP3FefJ8HDUzRNUwWK7KilafDa2uH5POiOuzS4VABPTicz~Jn5eabChuHhsQ6ICJBvCOibh4QJCTKt2yrAHKBtwQn8mhKA~D8Hg9qAgwZpD3X0DGFLWRJZFPHH8YJV6NGgEOJSTbgtCaANg~AclmoCr4ge3EDHnMsSyFtnr0n-Yjyg0pTzZ2DFNlqY3m1NECCNeLWnJx0B54oUKztmTQa-LOeCfUT0z40vFs-fvXze76bMdRXw7FIBdb3RBgU17wNca9jDP2oCw__", // Replace with your image URL
+        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/OurExperts/s8a4kae3lbjhcsvznica", // Replace with your image URL
         star: 5,
     },
 
