@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 import Navbar from "./Components/NavBar/Navbar";
@@ -30,111 +30,127 @@ import Kodipalya from "./Pages/DiscoverLocations/Location/Kodipalya";
 import AllTreatments from "./Pages/TrendingTreatments/AllTreatments/AllTreatments";
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./Pages/TermsService/TermsOfService";
- 
+import Loader from "./Components/Loading/Loader";
+
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading delay (you can replace this with real data fetching logic)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust time as needed
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection />
-                <ClinicalConcerns />
-                <WhyChooseSection />
-                {/* <Locations /> */}
-                <TeamSection />
-                <TrendingTreatments />
-             
-                <BlogSlider />
-                <FAQSection />
-                <HappyClients />
-                <FirstStep />
-              </>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <>
-                <AboutUsHero />
-                <OurValue />
-                {/* <MissionVision /> */}
-                <OurTeam />
-                <LocationSection />
-                <FirstStep />
-              </>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <>
-                <ContactForm />
-                <LocationSection />
-              </>
-            }
-          />
-          <Route
-            path="/blogs"
-            element={
-              <>
-                <Blog />
-              </>
-            }
-          />
-          <Route
-            path="/blog-detail/:id"
-            element={
-              <>
-                <ArticleDetail />
-              </>
-            }
-          />
-          <Route
-            path="/locations"
-            element={
-              <>
-                <Location />
-                <Kankpur />
-                <Team />
-                <RR />
-                {/* <Team /> */}
-                {/* <Kodipalya /> */}
-              </>
-            }
-          />
-          <Route
-            path="/treatment"
-            element={
-              <>
-                <AllTreatments />
-              </>
-            }
-          />
-          <Route
-            path="/privacy-policy"
-            element={
-              <>
-                <PrivacyPolicy />
-              </>
-            }
-          />
-          <Route
-            path="/terms-of-service"
-            element={
-              <>
-                <TermsOfService />
-              </>
-            }
-          />
-        </Routes>
-        <Footer />
-      </Router>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <ClinicalConcerns />
+                  <WhyChooseSection />
+                  {/* <Locations /> */}
+                  <TeamSection />
+                  <TrendingTreatments />
+
+                  <BlogSlider />
+                  <FAQSection />
+                  <HappyClients />
+                  <FirstStep />
+                </>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <>
+                  <AboutUsHero />
+                  <OurValue />
+                  {/* <MissionVision /> */}
+                  <OurTeam />
+                  <LocationSection />
+                  <FirstStep />
+                </>
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <>
+                  <ContactForm />
+                  <LocationSection />
+                </>
+              }
+            />
+            <Route
+              path="/blogs"
+              element={
+                <>
+                  <Blog />
+                </>
+              }
+            />
+            <Route
+              path="/blog-detail/:id"
+              element={
+                <>
+                  <ArticleDetail />
+                </>
+              }
+            />
+            <Route
+              path="/locations"
+              element={
+                <>
+                  <Location />
+                  <Kankpur />
+                  <Team />
+                  <RR />
+                  {/* <Team /> */}
+                  {/* <Kodipalya /> */}
+                </>
+              }
+            />
+            <Route
+              path="/treatment"
+              element={
+                <>
+                  <AllTreatments />
+                </>
+              }
+            />
+            <Route
+              path="/privacy-policy"
+              element={
+                <>
+                  <PrivacyPolicy />
+                </>
+              }
+            />
+            <Route
+              path="/terms-of-service"
+              element={
+                <>
+                  <TermsOfService />
+                </>
+              }
+            />
+          </Routes>
+          <Footer />
+        </Router>
+      )}
     </>
   );
 }
 
-export default App;
+export default App
