@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './BlogSlider.scss';
+import WebPImage from '../../util/WebPImage';
 const blogs = [
     {
         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
@@ -74,7 +75,7 @@ const BlogSlider = () => {
                 <div className="slider-cards" style={{ "--index": currentIndex }}>
                     {blogs.map((blog, index) => (
                         <div key={index} className="slider-card">
-                            <img src={blog.image} alt={blog?.title} className="card-image" />
+                            <WebPImage src={blog.image} alt={blog?.title} className="card-image" />
                             <h3 className="card-title">{blog?.title}</h3>
                             <h3 className="card-p">{blog?.p}</h3>
                             <div className="author">

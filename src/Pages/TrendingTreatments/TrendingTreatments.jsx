@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import "./TrendingTreatments.scss";
+import WebPImage from "../../util/WebPImage";
 
 const treatments = [
     {
@@ -171,7 +172,7 @@ const TrendingTreatments = () => {
                         <>
                             <div className="card">
                                 <div className="card-image">
-                                    <img
+                                    <WebPImage
                                         key={index}
                                         src={treatment.image}
                                         alt={`Team group ${index + 1}`}
