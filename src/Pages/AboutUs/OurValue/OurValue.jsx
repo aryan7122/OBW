@@ -4,6 +4,7 @@ import "./OurValue.scss";
 // import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import fallStr from '../../../assets/about/fallStr.svg';
+import WebPImage from "../../../util/WebPImage";
 const treatments = [
     {
         title: "Excellence in Aesthetics",
@@ -44,7 +45,7 @@ const OurValue = () => {
                 {treatments.map((treatment, index) => (
                     <div key={index} className="card_">
                         <div className="card-image">
-                            <img src={treatment.image} alt={treatment.title} className="" />
+                            <WebPImage src={treatment.image} alt={treatment.title} className="" />
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-description">{treatment.description}</p>

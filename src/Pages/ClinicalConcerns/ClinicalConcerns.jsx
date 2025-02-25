@@ -282,7 +282,7 @@ const clinicalData = {
   ],
 };
 
-console.log(clinicalData["Skin/Face Care"]);
+
 function ClinicalConcerns() {
   const [selectedTab, setSelectedTab] = useState("Skin/Face Care");
 
@@ -324,7 +324,7 @@ function ClinicalConcerns() {
               )
               .map((card, index) => (
                 <div className="card col1" key={index}>
-                  <img
+                  <WebPImage
                     src={card?.imageUrl}
                     alt={card?.title}
                     className="card-image"

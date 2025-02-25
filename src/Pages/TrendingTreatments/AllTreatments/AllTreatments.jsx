@@ -165,7 +165,7 @@ const AllTreatments = () => {
                     {filteredData.slice(0, visibleCount).map((item, index) => (
                         <div className="treatment-card" key={item.index}>
                             <div className="img">
-                                <img
+                                <WebPImage
                                     src={item.imgUrl}
                                     once={true}
                                     alt={item.title}

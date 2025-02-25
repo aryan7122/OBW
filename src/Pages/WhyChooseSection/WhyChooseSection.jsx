@@ -2,6 +2,7 @@ import React from "react";
 import "./WhyChooseSection.scss";
 import { motion } from 'framer-motion';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import WebPImage from "../../util/WebPImage";
 
 const WhyChooseSection = () => {
     const img2= "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/eimccgamvas1fxy1vy"
@@ -35,7 +36,7 @@ const WhyChooseSection = () => {
                         transition={{ duration: 0.6, delay: 0.2 }} 
                         viewport={{ once: true, amount: 0.2 }} 
                     >
-                        <img src={img1} alt="Happy Woman" />
+                        <WebPImage src={img1} alt="Happy Woman" />
                         {/* <p>Certified Dermatologists</p> */}
                     </motion.div>
 
@@ -46,7 +47,7 @@ const WhyChooseSection = () => {
                         transition={{ duration: 0.6, delay: 0.4 }} // Adjusted delay for staggered effect
                         viewport={{ once: true, amount: 0.2 }}
                     >
-                        <img src={img2} alt="Care Image" />
+                        <WebPImage src={img2} alt="Care Image" />
                         <p>Personalized Care</p>
                     </motion.div>
 
@@ -57,7 +58,7 @@ const WhyChooseSection = () => {
                         transition={{ duration: 0.6, delay: 0.6 }} // Adjusted delay for staggered effect
                         viewport={{ once: true, amount: 0.2 }}
                     >
-                        <img src={img3} alt="Care Image" />
+                        <WebPImage src={img3} alt="Care Image" />
                         <p>Personalized Care</p>
                     </motion.div>
                 </div>

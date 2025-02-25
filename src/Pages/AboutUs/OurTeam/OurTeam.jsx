@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useLocation, useNavigate } from "react-router-dom";
 import fallStr from '../../../assets/about/team.svg';
+import WebPImage from "../../../util/WebPImage";
 
 const data = [
     {
@@ -95,7 +96,7 @@ const OurTeam = () => {
                 {data.map((treatment, index) => (
                     <div key={index} className="card">
                         <div className="card-image">
-                            <img src={treatment.image} alt={treatment.title} className="" />
+                            <WebPImage src={treatment.image} alt={treatment.title} className="" />
                         </div>
                         <h3 className="card-title">{treatment.title}</h3>
                         <p className="card-lastName">{treatment.lastName}</p>

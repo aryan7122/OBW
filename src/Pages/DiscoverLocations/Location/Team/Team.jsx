@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Team.scss';
 import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import happyImg from '../../../../assets/HappyClients/happy.svg'
+import WebPImage from '../../../../util/WebPImage';
 const data = [
     {
         name: "Lalita Thakur",
@@ -60,7 +61,7 @@ const Team = () => {
                     {data.map((blog, index) => (
                         <div key={index} className={`" slider-card ${index === currentIndex ? "active" : "hidden"}`}
                         >
-                            <img src={blog.image} alt={blog?.title} className="card-image" />
+                            <WebPImage src={blog.image} alt={blog?.title} className="card-image" />
                             <div className="card_blur">
                                 <div className='aut_text-img'>
                                     <div className='aut_text'>

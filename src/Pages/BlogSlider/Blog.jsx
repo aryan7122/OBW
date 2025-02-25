@@ -204,7 +204,7 @@ function Blog() {
           <div>
             <h3 className="blog_title">BLOG</h3>
             <h2 className="slider-heading">
-              Latest <img src={Frame} alt="" /> Insights
+              Latest <WebPImage src={Frame} alt="" /> Insights
             </h2>
             <p className="slider-subheading">
               Explore in-depth expert advice, insightful tips, and the most
