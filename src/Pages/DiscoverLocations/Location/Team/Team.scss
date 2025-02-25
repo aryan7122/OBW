@@ -87,7 +87,7 @@
     .slider-subheading {
       font-size: 16px;
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       line-height: 24px;
       letter-spacing: -0.30000001192092896px;
       text-align: left;
@@ -163,7 +163,8 @@
 
       margin: 0 10px;
       // padding: 16px;
- margin-bottom: 20px;
+      margin-bottom: 20px;
+      text-align: left;
       &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
@@ -172,15 +173,14 @@
         box-shadow: 0px 0px 14px 1px rgba(0, 0, 0, 0.101);
         scale: 1.02;
         @media only screen and (max-width: 500px) {
-           scale: 1;
-          }
+          scale: 1;
+        }
       }
 
       &.hidden {
         opacity: 0.9;
         scale: 0.97;
       }
-      text-align: left;
       @media only screen and (max-width: 750px) {
         width: 350px;
         height: 487px;
@@ -263,7 +263,7 @@
             .card-name {
               font-size: 17px;
               font-weight: 400;
-                    font-family: 'Supreme-Regular', sans-serif;
+              font-family: "Supreme-Regular", sans-serif;
               line-height: 22.6px;
               letter-spacing: -0.5px;
               text-align: left;
@@ -276,7 +276,7 @@
             .card-location {
               font-size: 10px;
               font-weight: 400;
-                    font-family: 'Supreme-Regular', sans-serif;
+              font-family: "Supreme-Regular", sans-serif;
               line-height: 12px;
               margin-top: 4px;
               text-align: left;
