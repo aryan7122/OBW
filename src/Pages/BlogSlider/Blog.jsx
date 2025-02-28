@@ -47,7 +47,7 @@ function Blog() {
         "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg?w=1060",
       date: "Feb 10, 2025",
       image:
-        "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/mlspriuvbrcebi9iusup",
+        img1,
       category: "Skin",
     },
     {
@@ -55,10 +55,9 @@ function Blog() {
       p: "Say goodbye to shaving and waxing with laser hair removal, a long-lasting solution for smooth, hair-free skin.",
       author: "Riya Mehta",
       image:
-        "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/mgp21fo5pzjy3gapzwim",
-
+        img2,
       date: "Feb 15, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/mgp21fo5pzjy3gapzwim",
+      // image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/mgp21fo5pzjy3gapzwim",
       category: "Hair",
     },
     {
@@ -68,7 +67,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
       date: "Feb 20, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/eidjxvnkelfhreo2karf",
+      image: img3,
       category: "Wellness",
     },
     {
@@ -78,7 +77,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/close-up-woman-having-carbon-laser-peel-treatment_1157-15536.jpg?w=1060",
       date: "Feb 25, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/lx9s3mqxqrxso45wm5dy",
+      image: img4,
       category: "Skin",
     },
     {
@@ -88,7 +87,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/young-woman-getting-hair-prp-treatment_1157-14167.jpg?w=1060",
       date: "Mar 1, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/xqxctc5yh7nh96xbadgb",
+      image: img5,
       category: "Hair",
     },
     {
@@ -99,7 +98,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/beautiful-woman-eyebrow-tattoo-pmu_1157-12007.jpg?w=1060",
       date: "Mar 5, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/bpmwovt0mallxxjd7nu7",
+      image:img6,
       category: "Beauty",
     },
     {
@@ -109,7 +108,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/young-woman-having-skin-brightening-treatment_1157-12974.jpg?w=1060",
       date: "Mar 10, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/eqkbsvyvqqodtnin2fhs",
+      image: img7,
       category: "Skin",
     },
     {
@@ -119,7 +118,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/young-man-hair-transplant-hair-restoration-surgery_1157-13978.jpg?w=1060",
       date: "Mar 15, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/h37ljtlpmquyugd9mygj",
+      image: img8,
       category: "Hair",
     },
     {
@@ -129,7 +128,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/close-up-woman-hair-mesotherapy-treatment_1157-14113.jpg?w=1060",
       date: "Mar 20, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/eztv3stbmzpkyoytbqyr",
+      image:img9,
      category: "Hair",
     },
     {
@@ -139,7 +138,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/young-woman-face-scar-revision-treatment_1157-14209.jpg?w=1060",
       date: "Mar 25, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/vveltd58pkzt4uqsredu",
+      image: img10,
 
       category: "Skin",
     },
@@ -150,7 +149,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/close-up-woman-laser-skin-resurfacing-treatment_1157-15163.jpg?w=1060",
       date: "Apr 1, 2025",
-      image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/ClinicalConcerns/tiwy0cseohjykdqrj5fe",
+      image:img11,
       category: "Skin",
     },
   ];

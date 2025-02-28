@@ -5,21 +5,23 @@ import "./OurValue.scss";
 import { useNavigate } from "react-router-dom";
 import fallStr from '../../../assets/about/fallStr.svg';
 import WebPImage from "../../../util/WebPImage";
+import img2 from '../../../assets/TrendingTreatments/Personalized & Holistic Approach-min.jpg'
+import img3 from '../../../assets/TrendingTreatments/Commitment to Safety & Quality-min.jpg'
 const treatments = [
     {
         title: "Excellence in Aesthetics",
         description: "We combine advanced technology with expert care to deliver high-quality, result-driven treatments. ",
-        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhatWeStandsFor/tn4cgskcw7zluw7yvczk",
+        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Exosome_Therapy_for_Skin_Scalp-min_yykqhj",
     },
     {
         title: "Personalized & Holistic Approach",
         description: "Every client is unique, and we customize our treatments to meet individual beauty and wellness goals. ",
-        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhatWeStandsFor/nwbelkkkddk2pnwfw4iu",
+        image: img2,
     },
     {
         title: "Commitment to Safety & Quality ",
         description: "We use only clinically tested, dermatologically safe products and FDA-approved procedures to ensure the best care.",
-        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhatWeStandsFor/fhlnfxjmwgxgatdzddye",
+        image: img3,
     },
 ];
 
