@@ -52,7 +52,7 @@ const Locations = () => {
             <div className="locationsTitle">
                 <h2>
                     Discover Our
-                    <motion.img
+                    <img
                         src={locationsIcon}
                         alt="icon"
                         initial={{ opacity: 0, scale: 0 }}
@@ -62,10 +62,10 @@ const Locations = () => {
                     />
                     Locations Close to You
                 </h2>
-                <motion.p>
+                <p>
                     With multiple locations across Bangalore, we’re always within reach.
                     Visit any of our clinics for personalized care and exceptional treatments.
-                </motion.p>
+                </p>
             </div>
             <div className="cards">
                 {locations.map((location, index) => (

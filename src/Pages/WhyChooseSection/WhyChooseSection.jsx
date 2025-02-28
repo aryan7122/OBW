@@ -16,7 +16,7 @@ const WhyChooseSection = () => {
                 <h2 className="title">
                     Why Choose
                     {' '}
-                    <motion.img src={icon1}
+                    <img src={icon1}
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6 }}
@@ -29,7 +29,7 @@ const WhyChooseSection = () => {
                     Experience the OBW difference—where beauty meets confidence!
                 </p>
                 <div className="image-grid">
-                    <motion.div
+                    <div
                         className="image-card"
                         initial={{ opacity: 0, y: 50 }} 
                         whileInView={{ opacity: 1, y: 0 }} 
@@ -38,9 +38,9 @@ const WhyChooseSection = () => {
                     >
                         <WebPImage src={img1} alt="Happy Woman" />
                         {/* <p>Certified Dermatologists</p> */}
-                    </motion.div>
+                    </div>
 
-                    <motion.div
+                    <div
                         className="image-card"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -49,9 +49,9 @@ const WhyChooseSection = () => {
                     >
                         <WebPImage src={img2} alt="Care Image" />
                         <p>Personalized Care</p>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
+                    <div
                         className="image-card"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -60,11 +60,11 @@ const WhyChooseSection = () => {
                     >
                         <WebPImage src={img3} alt="Care Image" />
                         <p>Personalized Care</p>
-                    </motion.div>
+                    </div>
                 </div>
 
                 <div className="info-grid">
-                    <motion.div className="info-card green"
+                    <div className="info-card green"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
@@ -80,8 +80,8 @@ const WhyChooseSection = () => {
                         <p>
                             OBW Clinical Services is certified by leading dermatology and cosmetic boards, ensuring that we meet the highest standards in the industry
                         </p>
-                    </motion.div>
-                    <motion.div className="info-card purple"
+                    </div>
+                    <div className="info-card purple"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.5 }}
@@ -98,8 +98,8 @@ const WhyChooseSection = () => {
                         <p>
                             To make our treatments accessible to everyone, we offer flexible payment plans and options, ensuring affordability without compromising quality.
                         </p>
-                    </motion.div>
-                    <motion.div className="info-card pink"
+                    </div>
+                    <div className="info-card pink"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.6 }}
@@ -113,7 +113,7 @@ const WhyChooseSection = () => {
                         <p>
                             Our commitment doesn’t end with the treatment. We provide post-treatment care and guidance to ensure long-lasting results &address any concerns you
                         </p>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

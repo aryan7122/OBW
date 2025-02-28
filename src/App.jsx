@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 import "./App.css";
 import Navbar from "./Components/NavBar/Navbar";
@@ -13,7 +14,6 @@ import FAQSection from "./Pages/FAQSection/FAQSection";
 import HappyClients from "./Pages/HappyClients/HappyClients";
 import FirstStep from "./Pages/FirstStep/FirstStep";
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUsHero from "./Pages/AboutUs/HeroSection/AboutUsHero";
 import OurValue from "./Pages/AboutUs/OurValue/OurValue";
 import OurTeam from "./Pages/AboutUs/OurTeam/OurTeam";
@@ -32,124 +32,99 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./Pages/TermsService/TermsOfService";
 import Loader from "./Components/Loading/Loader";
 
-function App() {
+function Loader2() {
+  return (
+    <div className="loader">
+      <div className="spinner"></div>
+    </div>
+  );
+}
+
+function PageWrapper({ children }) {
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
-    // Simulate loading delay (you can replace this with real data fetching logic)
+    setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust time as needed
+    }, 1500); // Adjust the delay as needed
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [location]); // Runs when the route changes
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <HeroSection />
-                  <ClinicalConcerns />
-                  <WhyChooseSection />
-                  <TeamSection />
-                  <TrendingTreatments />
-
-                  <BlogSlider />
-                  <FAQSection />
-                  <HappyClients />
-                  <FirstStep />
-                </>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <>
-                  <AboutUsHero />
-                  <OurValue />
-                  {/* <MissionVision /> */}
-                  <OurTeam />
-                  <LocationSection />
-                  <FirstStep />
-                </>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <>
-                  <ContactForm />
-                  <LocationSection />
-                </>
-              }
-            />
-            <Route
-              path="/blogs"
-              element={
-                <>
-                  <Blog />
-                </>
-              }
-            />
-            <Route
-              path="/blog-detail/:id"
-              element={
-                <>
-                  <ArticleDetail />
-                </>
-              }
-            />
-            <Route
-              path="/locations"
-              element={
-                <>
-                  <Location />
-                  <Kankpur />
-                  <Team />
-                  <RR />
-                  {/* <Team /> */}
-                  {/* <Kodipalya /> */}
-                </>
-              }
-            />
-            <Route
-              path="/treatment"
-              element={
-                <>
-                  <AllTreatments />
-                </>
-              }
-            />
-            <Route
-              path="/privacy-policy"
-              element={
-                <>
-                  <PrivacyPolicy />
-                </>
-              }
-            />
-            <Route
-              path="/terms-of-service"
-              element={
-                <>
-                  <TermsOfService />
-                </>
-              }
-            />
-          </Routes>
-          <Footer />
-        </Router>
-      )}
+      {loading && <Loader2 />}
+      <div style={{ display: loading ? "none" : "block" }}>{children}</div>
     </>
   );
 }
 
-export default App
+function App() {
+  return (
+    <Router>
+      <PageWrapper>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+                <ClinicalConcerns />
+                <WhyChooseSection />
+                <TeamSection />
+                <TrendingTreatments />
+                <BlogSlider />
+                <FAQSection />
+                <HappyClients />
+                <FirstStep />
+              </>
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <>
+                <AboutUsHero />
+                <OurValue />
+                <OurTeam />
+                <LocationSection />
+                <FirstStep />
+              </>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <>
+                <ContactForm />
+                <LocationSection />
+              </>
+            }
+          />
+          <Route path="/blogs" element={<Blog />} />
+          <Route path="/blog-detail/:id" element={<ArticleDetail />} />
+          <Route
+            path="/locations"
+            element={
+              <>
+                <Location />
+                <Kankpur />
+                <Team />
+                <RR />
+              </>
+            }
+          />
+          <Route path="/treatment" element={<AllTreatments />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+        </Routes>
+        <Footer />
+      </PageWrapper>
+    </Router>
+  );
+}
+
+export default App;
