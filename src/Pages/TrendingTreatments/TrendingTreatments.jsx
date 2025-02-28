@@ -1,6 +1,6 @@
 import { ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import "./TrendingTreatments.scss";
 import WebPImage from "../../util/WebPImage";

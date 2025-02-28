@@ -30,10 +30,10 @@ import bImg3 from "../../assets/Clinical Concerns/dermatologist-latex-gloves-hol
 import bImg4 from "../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (4).png";
 import bImg5 from "../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (5).png";
 import bImg6 from "../../assets/Clinical Concerns/dermatologist-latex-gloves-holding-dermatoscope-while-examining-attractive- (6).png";
-import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import WebPImage from "../../util/WebPImage";
+// import { motion } from "framer-motion";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
+// import WebPImage from "../../util/WebPImage";
 
 const iconsMap = {
   "Skin/Face Care": <img src={SkinIcon} alt="Skin Care" />,
@@ -60,7 +60,7 @@ const clinicalData = {
           "Skin tightening lasers",
         ],
       },
-      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740202660/Clinical%20Concerns/zvcpmvzj4eveid1nw8sz.jpg",
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/zhldwzmwa2r0ptwlt3of"
      
     },
     {
@@ -69,8 +69,7 @@ const clinicalData = {
         Concerns: ["Unwanted facial and body hair"],
         Treatments: ["Laser Hair Reduction (LHR)"],
       },
-      // imageUrl: UnwantedImg2,
-      imageUrl:"https://ik.imagekit.io/4amijg7ug/Unwanted%20Hairs-min.jpg?updatedAt=1740139969070",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/feztzv9t51uejexgu0am",
     },
     {
       title: "Enlarged Pores & Uneven Texture",
@@ -85,7 +84,7 @@ const clinicalData = {
           "Skin peels",
         ],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740202771/Clinical%20Concerns/pdlxgc3owtmugozhshck.jpg",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/dqzb2zffkozk3vxlau90",
     },
     {
       title: "Pigmentation & Uneven Skin Tone",
@@ -107,8 +106,7 @@ const clinicalData = {
           // "Medical-grade skincare"
         ],
       },
-      // imageUrl: PigmentationImg4,
-      imageUrl:"https://ik.imagekit.io/4amijg7ug/Pigmentation%20&%20Uneven%20Skin%20Tone-min.jpg?updatedAt=1740139862143"
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/wqhu7kdozglk1ix9jbkk",
     },
     {
       title: "Double Chin (Face)",
@@ -116,8 +114,7 @@ const clinicalData = {
         Concerns: ["Excess fat in the chin area"],
         Treatments: ["Fat-dissolving injections", "Lipolytic injections"],
       },
-      // imageUrl: DoubleImg5,
-      imageUrl:"https://ik.imagekit.io/4amijg7ug/Double%20Chin%20(Face)-min.jpg?updatedAt=1740139823132"
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/bsxzxshlig0xxknjvyek",
     },
     {
       title: "Dryness & Dehydration",
@@ -126,7 +123,7 @@ const clinicalData = {
         Treatments: ["Hydra-medi facials", "Hydrating peels", "Mesotherapy"],
       },
       // imageUrl: DrynessImg6,
-      imageUrl:"https://ik.imagekit.io/4amijg7ug/Dryness%20&%20Dehydration-min.jpg?updatedAt=1740202041421"
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/l9n7mnrydd5k1joo19nt"
     },
     {
       title: "",
@@ -147,7 +144,7 @@ const clinicalData = {
           "Subcision",
         ],
       },
-      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740201058/Clinical%20Concerns/xmoxlipurww0fseped9r.jpg",
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/li658v9fm26ht6ufd0jc",
       
     },
   ],
@@ -164,7 +161,7 @@ const clinicalData = {
           "Specialized topical treatments",
         ],
       },
-      imageUrl: HairImg1,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section2/ujwayfvzjpqjsfse7emz",
     },
     {
       title: "Alopecia / Baldness",
@@ -179,7 +176,7 @@ const clinicalData = {
           "Hair transplantation surgery",
         ],
       },
-      imageUrl: AlopeciaImg2,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section2/btfzdgawgzmda7ovgbt8",
     },
     {
       title: "Other Scalp Conditions",
@@ -187,7 +184,7 @@ const clinicalData = {
         Concerns: ["Dandruff", "Telogen effluvium", "Seborrheic dermatitis"],
         Treatments: ["Targeted medical scalp treatments"],
       },
-      imageUrl: ConditionsImg3,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section2/ez6zeti6s6cbsybzj5cf",
     },
   ],
   "Body Care": [
@@ -201,7 +198,7 @@ const clinicalData = {
           "CoolSculpting",
         ],
       },
-      imageUrl: StubbornImg1,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/xfkcixsjkycgnyorch3s",
     },
     {
       title: "Excessive Sweating",
@@ -209,7 +206,7 @@ const clinicalData = {
         Concerns: ["Hyperhidrosis (Excessive sweating)"],
         Treatments: ["Botox for sweating"],
       },
-      imageUrl: SweatingImg2,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/mxkzofxcdrrlpfb3ofos",
     },
     {
       title: "Sun Tan & Body Texture",
@@ -217,7 +214,7 @@ const clinicalData = {
         Concerns: ["Sun-tan", "Uneven skin texture"],
         Treatments: ["Chemical peels", "Skin-brightening IV injections"],
       },
-      imageUrl: SunTunImg,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/jlmgozuas9hpxbvif7j6",
     },
     {
       title: "Stretch Marks",
@@ -225,61 +222,61 @@ const clinicalData = {
         Concerns: ["Stretch marks"],
         Treatments: ["Skin-resurfacing treatments", "Targeted peels"],
       },
-      imageUrl: StretchImg3,
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/ksu9a0rbejyj6pmcla8v",
     },
   ],
-  "Beautifying/Cosmetic Surgery": [
-    {
-      title: "Skin Tags, Moles, Milia Removal",
-      description: {
-        Concerns: ["Unwanted skin tags, moles, milia"],
-        Treatments: ["Laser removal", "Minor surgical excision"],
-      },
-      imageUrl: bImg1,
-    },
-    {
-      title: "Face & Scalp Cyst Removal",
-      description: {
-        Concerns: ["Cysts on the face or scalp"],
-        Treatments: ["Surgical cyst removal"],
-      },
-      imageUrl: bImg2,
-    },
-    {
-      title: "Lobuloplasty",
-      description: {
-        Concerns: ["Torn or stretched earlobes"],
-        Treatments: ["Surgical correction of earlobes"],
-      },
-      imageUrl: bImg3,
-    },
-    {
-      title: "Scar Reduction",
-      description: {
-        Concerns: ["Scars from injury or surgery"],
-        Treatments: ["Laser resurfacing", "Subcision", "Surgical revisions"],
-      },
-      imageUrl: bImg4,
-    },
-    {
-      title: "Dimpleplasty (Face)",
-      description: {
-        Concerns: ["Desire for dimples"],
-        Treatments: ["Cosmetic surgery to create dimples"],
-      },
-      imageUrl: bImg5,
-    },
-    {
-      title: "Bichectomy (Face)",
-      description: {
-        Concerns: ["Excess cheek fat"],
-        Treatments: [
-          "Permanent removal of excessive fat from the cheek region",
-        ],
-      },
-      imageUrl: bImg6,
-    },
-  ],
+  // "Beautifying/Cosmetic Surgery": [
+  //   {
+  //     title: "Skin Tags, Moles, Milia Removal",
+  //     description: {
+  //       Concerns: ["Unwanted skin tags, moles, milia"],
+  //       Treatments: ["Laser removal", "Minor surgical excision"],
+  //     },
+  //     imageUrl: bImg1,
+  //   },
+  //   {
+  //     title: "Face & Scalp Cyst Removal",
+  //     description: {
+  //       Concerns: ["Cysts on the face or scalp"],
+  //       Treatments: ["Surgical cyst removal"],
+  //     },
+  //     imageUrl: bImg2,
+  //   },
+  //   {
+  //     title: "Lobuloplasty",
+  //     description: {
+  //       Concerns: ["Torn or stretched earlobes"],
+  //       Treatments: ["Surgical correction of earlobes"],
+  //     },
+  //     imageUrl: bImg3,
+  //   },
+  //   {
+  //     title: "Scar Reduction",
+  //     description: {
+  //       Concerns: ["Scars from injury or surgery"],
+  //       Treatments: ["Laser resurfacing", "Subcision", "Surgical revisions"],
+  //     },
+  //     imageUrl: bImg4,
+  //   },
+  //   {
+  //     title: "Dimpleplasty (Face)",
+  //     description: {
+  //       Concerns: ["Desire for dimples"],
+  //       Treatments: ["Cosmetic surgery to create dimples"],
+  //     },
+  //     imageUrl: bImg5,
+  //   },
+  //   {
+  //     title: "Bichectomy (Face)",
+  //     description: {
+  //       Concerns: ["Excess cheek fat"],
+  //       Treatments: [
+  //         "Permanent removal of excessive fat from the cheek region",
+  //       ],
+  //     },
+  //     imageUrl: bImg6,
+  //   },
+  // ],
 };
 
 
@@ -294,7 +291,7 @@ function ClinicalConcerns() {
       <div id="tabs">
         <div className="tabs">
           {Object.keys(clinicalData).map((tab) => (
-            <motion.button
+            <button
               whileHover={{ scale: 1.0 }}
               whileTap={{ scale: 0.95 }}
               whileDrag={{ scale: 0.9, rotate: 10 }}
@@ -308,7 +305,7 @@ function ClinicalConcerns() {
                 }`}
               onClick={() => setSelectedTab(tab)}>
               {iconsMap[tab]} {tab}
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>
@@ -324,20 +321,20 @@ function ClinicalConcerns() {
               )
               .map((card, index) => (
                 <div className="card col1" key={index}>
-                  <WebPImage
+                  <img
                     src={card?.imageUrl}
                     alt={card?.title}
                     className="card-image"
                   />
                   <div className="card-overlay">
-                    <motion.h3
+                    <h3
                       className="card-title"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6 }}
                       viewport={{ once: true, amount: 0.5 }}>
                       {card.title}
-                    </motion.h3>
+                    </h3>
                     <div className="card-description">
                       {Object.keys(card.description).map((category) => (
                         <div key={category} className="description-category">
@@ -370,14 +367,14 @@ function ClinicalConcerns() {
                     className="card-image"
                   />
                   <div className="card-overlay">
-                    <motion.h3
+                    <h3
                       className="card-title"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6 }}
                       viewport={{ once: true, amount: 0.5 }}>
                       {card.title}
-                    </motion.h3>
+                    </h3>
                     <div className="card-description">
                       {/* <h3 className="card-title2">Treatments</h3> */}
                       {Object.keys(card.description).map((category) => (
@@ -411,14 +408,14 @@ function ClinicalConcerns() {
                     className="card-image"
                   />
                   <div className="card-overlay">
-                    <motion.h3
+                    <h3
                       className="card-title"
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.6 }}
                       viewport={{ once: true, amount: 0.5 }}>
                       {card.title}
-                    </motion.h3>
+                    </h3>
                     <div className="card-description">
                       {/* <h3 className="card-title2">Treatments</h3> */}
                       {Object.keys(card.description).map((category) => (
@@ -448,14 +445,14 @@ function ClinicalConcerns() {
                 className="card-image"
               />
               <div className="card-overlay">
-                <motion.h3
+                <h3
                   className="card-title"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.5 }}>
                   {card.title}
-                </motion.h3>
+                </h3>
                 <div className="card-description">
                   {/* <h3 className="card-title2">Treatments</h3> */}
                   {Object.keys(card.description).map((category) => (
@@ -484,14 +481,14 @@ function ClinicalConcerns() {
                 className="card-image"
               />
               <div className="card-overlay">
-                <motion.h3
+                <h3
                   className="card-title"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.5 }}>
                   {card.title}
-                </motion.h3>
+                </h3>
                 <div className="card-description">
                   {/* <h3 className="card-title2">Treatments</h3> */}
                   {Object.keys(card.description).map((category) => (
@@ -520,14 +517,14 @@ function ClinicalConcerns() {
                 className="card-image"
               />
               <div className="card-overlay">
-                <motion.h3
+                <h3
                   className="card-title"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, amount: 0.5 }}>
                   {card.title}
-                </motion.h3>
+                </h3>
                 <div className="card-description">
                   {/* <h3 className="card-title2">Treatments</h3> */}
                   {Object.keys(card.description).map((category) => (
@@ -551,4 +548,3 @@ function ClinicalConcerns() {
 }
 
 export default ClinicalConcerns;
-//

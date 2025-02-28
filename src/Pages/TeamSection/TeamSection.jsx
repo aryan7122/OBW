@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./TeamSection.scss";
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useNavigate } from "react-router-dom";
 
 const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/i38dnetngbnyftvucibs"
@@ -177,7 +177,7 @@ const TeamSection = () => {
                 <h3 id={stat.id} className="stat-number">0{stat.isPercentage ? "%" : "+"}</h3>
                 <p>{stat.label}</p>
               </div>
-              <LazyLoadImage
+              <img
                 effect="blur" wrapperProps={{
                   style: { transitionDelay: "0.2s" },
                 }}

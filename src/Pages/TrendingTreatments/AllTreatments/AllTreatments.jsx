@@ -6,8 +6,8 @@ import icon3 from '../../../assets/TrendingTreatments/body.png'
 import icon4 from '../../../assets/TrendingTreatments/bue.png'
 import { ArrowRight } from 'lucide-react';
 import BookAppointment from '../../../Components/BookAppointment/BookAppointment';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+// import { LazyLoadImage } from 'react-lazy-load-image-component';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 import placeholderImg from '../../../assets/TrendingTreatments/LazyLoadImage.png'
 import WebPImage from '../../../util/WebPImage';
 

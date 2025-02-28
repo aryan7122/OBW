@@ -59,7 +59,6 @@ function App() {
                   <HeroSection />
                   <ClinicalConcerns />
                   <WhyChooseSection />
-                  {/* <Locations /> */}
                   <TeamSection />
                   <TrendingTreatments />
 

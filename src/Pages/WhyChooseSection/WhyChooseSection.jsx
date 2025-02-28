@@ -1,7 +1,7 @@
 import React from "react";
 import "./WhyChooseSection.scss";
 import { motion } from 'framer-motion';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 import WebPImage from "../../util/WebPImage";
 
 const WhyChooseSection = () => {
