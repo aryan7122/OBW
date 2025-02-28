@@ -294,21 +294,21 @@ function ClinicalConcerns() {
       <div id="tabs">
         <div className="tabs">
           {Object.keys(clinicalData).map((tab) => (
-            <motion.button
-              whileHover={{ scale: 1.0 }}
-              whileTap={{ scale: 0.95 }}
-              whileDrag={{ scale: 0.9, rotate: 10 }}
+            <button
+              // whileHover={{ scale: 1.0 }}
+              // whileTap={{ scale: 0.95 }}
+              // whileDrag={{ scale: 0.9, rotate: 10 }}
               // drag
               key={tab}
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.5 }}
+              // initial={{ opacity: 0, x: 40 }}
+              // whileInView={{ opacity: 1, x: 0 }}
+              // transition={{ duration: 0.6 }}
+              // viewport={{ once: true, amount: 0.5 }}
               className={`tab-button ${selectedTab === tab ? "active-tab" : ""
                 }`}
               onClick={() => setSelectedTab(tab)}>
               {iconsMap[tab]} {tab}
-            </motion.button>
+            </button>
           ))}
         </div>
       </div>
