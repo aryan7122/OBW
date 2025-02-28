@@ -137,7 +137,7 @@ const TeamSection = () => {
           <div>
             <h2>
               Our qualified and experienced {' '}
-              <motion.img src={icon1} alt=""
+              <img src={icon1} alt=""
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
@@ -158,13 +158,13 @@ const TeamSection = () => {
           </button>
         </div>
 
-        <motion.div className="team-stats" ref={observerRef}
+        <div className="team-stats" ref={observerRef}
         // initial={{ opacity: 0 }}
         // animate={{ opacity: 1 }}
         // transition={{ duration: 0.4 }}
         >
           {stats.map((stat, index) => (
-            <motion.div className="stat-item" key={stat.id}
+            <div className="stat-item" key={stat.id}
             // initial={{ opacity: 0, y: -40 }}
             // whileInView={{ opacity: 1, y: 0 }}
             // transition={{
@@ -191,9 +191,9 @@ const TeamSection = () => {
                       stat.id === "satisfaction" ? icon5 :
                         stat.id === "locations" ? icon6 :
                           icon7} />
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
