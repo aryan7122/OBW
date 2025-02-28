@@ -82,13 +82,13 @@
       text-decoration-skip-ink: none;
       color: #00575d;
       padding: 5px 10px;
-      // transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease;
       display: flex;
       align-items: center;
       gap: 10px;
       border-radius: 100px;
       border: 2px solid transparent;
-      // will-change: transform;
+      will-change: transform;
       &:hover {
         border: 2px solid #47252564;
         color: #472525;
@@ -170,18 +170,18 @@
         height: 100%;
         min-height: 200px;
         object-fit: cover;
-        // transition: transform 0.3s ease;
+        transition: transform 0.3s ease;
         border-radius: 16px;
-        // will-change: transform;
+        will-change: transform;
       }
 
       &:hover .card-image {
         // transform: scale(1.01);
         border-radius: 20px !important;
         filter: blur(3px);
-        // transition: filter 0.3s ease-out;
+        transition: filter 0.3s ease-out;
 
-        // will-change: transform;
+        will-change: transform;
         // will-change: filter;
       }
       .card-overlay {
@@ -200,8 +200,8 @@
         align-items: center;
         opacity: 1;
 
-        // transition: 0.3s ease-in-out;
-        // will-change: transform;
+        transition: 0.3s ease-in-out;
+        will-change: transform;
         &:hover {
           justify-content: space-between !important;
         }
@@ -216,8 +216,8 @@
           max-width: 330px;
           text-align: center;
           padding: 5px;
-          // animation: fadeIn 1s ease-in-out forwards !important;
-          // will-change: transform;
+          animation: fadeIn 1s ease-in-out forwards !important;
+          will-change: transform;
           @media only screen and (max-width: 1400px) {
             font-size: 30px;
             font-weight: 700;
@@ -261,8 +261,8 @@
           backdrop-filter: blur(10px);
           /* Blur effect */
           -webkit-backdrop-filter: blur(10px);
-          // animation: fadeIn 1s ease-in-out forwards !important;
-          // will-change: transform;
+          animation: fadeIn 1s ease-in-out forwards !important;
+          will-change: transform;
           overflow: scroll;
           // overflow: auto;
           scrollbar-width: none;
