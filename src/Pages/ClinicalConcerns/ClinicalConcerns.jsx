@@ -60,7 +60,7 @@ const clinicalData = {
           "Skin tightening lasers",
         ],
       },
-      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/zhldwzmwa2r0ptwlt3of"
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740723356/ClinicalConcerns2/zhldwzmwa2r0ptwlt3of.webp"
      
     },
     {
@@ -69,7 +69,7 @@ const clinicalData = {
         Concerns: ["Unwanted facial and body hair"],
         Treatments: ["Laser Hair Reduction (LHR)"],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/feztzv9t51uejexgu0am",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740723734/ClinicalConcerns2/feztzv9t51uejexgu0am.webp",
     },
     {
       title: "Enlarged Pores & Uneven Texture",
@@ -84,7 +84,7 @@ const clinicalData = {
           "Skin peels",
         ],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/dqzb2zffkozk3vxlau90",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740724458/ClinicalConcerns2/dqzb2zffkozk3vxlau90.webp",
     },
     {
       title: "Pigmentation & Uneven Skin Tone",
@@ -106,7 +106,7 @@ const clinicalData = {
           // "Medical-grade skincare"
         ],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/wqhu7kdozglk1ix9jbkk",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740723925/ClinicalConcerns2/wqhu7kdozglk1ix9jbkk.webp",
     },
     {
       title: "Double Chin (Face)",
@@ -114,7 +114,7 @@ const clinicalData = {
         Concerns: ["Excess fat in the chin area"],
         Treatments: ["Fat-dissolving injections", "Lipolytic injections"],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/bsxzxshlig0xxknjvyek",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740724195/ClinicalConcerns2/bsxzxshlig0xxknjvyek.webp",
     },
     {
       title: "Dryness & Dehydration",
@@ -123,7 +123,7 @@ const clinicalData = {
         Treatments: ["Hydra-medi facials", "Hydrating peels", "Mesotherapy"],
       },
       // imageUrl: DrynessImg6,
-      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/l9n7mnrydd5k1joo19nt"
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725051/ClinicalConcerns2/l9n7mnrydd5k1joo19nt.webp"
     },
     {
       title: "",
@@ -144,7 +144,7 @@ const clinicalData = {
           "Subcision",
         ],
       },
-      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/li658v9fm26ht6ufd0jc",
+      imageUrl:"https://res.cloudinary.com/dkxfvxdca/image/upload/v1740724076/ClinicalConcerns2/li658v9fm26ht6ufd0jc.webp",
       
     },
   ],
@@ -161,7 +161,7 @@ const clinicalData = {
           "Specialized topical treatments",
         ],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section2/ujwayfvzjpqjsfse7emz",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725436/ClinicalConcerns2/section2/ujwayfvzjpqjsfse7emz.webp",
     },
     {
       title: "Alopecia / Baldness",
@@ -176,7 +176,7 @@ const clinicalData = {
           "Hair transplantation surgery",
         ],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section2/btfzdgawgzmda7ovgbt8",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725592/ClinicalConcerns2/section2/btfzdgawgzmda7ovgbt8.webp",
     },
     {
       title: "Other Scalp Conditions",
@@ -184,7 +184,7 @@ const clinicalData = {
         Concerns: ["Dandruff", "Telogen effluvium", "Seborrheic dermatitis"],
         Treatments: ["Targeted medical scalp treatments"],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section2/ez6zeti6s6cbsybzj5cf",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725531/ClinicalConcerns2/section2/ez6zeti6s6cbsybzj5cf.webp",
     },
   ],
   "Body Care": [
@@ -198,7 +198,7 @@ const clinicalData = {
           "CoolSculpting",
         ],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/xfkcixsjkycgnyorch3s",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725723/ClinicalConcerns2/section3/xfkcixsjkycgnyorch3s.webp",
     },
     {
       title: "Excessive Sweating",
@@ -206,7 +206,7 @@ const clinicalData = {
         Concerns: ["Hyperhidrosis (Excessive sweating)"],
         Treatments: ["Botox for sweating"],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/mxkzofxcdrrlpfb3ofos",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725818/ClinicalConcerns2/section3/mxkzofxcdrrlpfb3ofos.webp",
     },
     {
       title: "Sun Tan & Body Texture",
@@ -214,7 +214,7 @@ const clinicalData = {
         Concerns: ["Sun-tan", "Uneven skin texture"],
         Treatments: ["Chemical peels", "Skin-brightening IV injections"],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/jlmgozuas9hpxbvif7j6",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740725889/ClinicalConcerns2/section3/jlmgozuas9hpxbvif7j6.webp",
     },
     {
       title: "Stretch Marks",
@@ -222,61 +222,61 @@ const clinicalData = {
         Concerns: ["Stretch marks"],
         Treatments: ["Skin-resurfacing treatments", "Targeted peels"],
       },
-      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section3/ksu9a0rbejyj6pmcla8v",
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/v1740726009/ClinicalConcerns2/section3/ksu9a0rbejyj6pmcla8v.webp",
     },
   ],
-  // "Beautifying/Cosmetic Surgery": [
-  //   {
-  //     title: "Skin Tags, Moles, Milia Removal",
-  //     description: {
-  //       Concerns: ["Unwanted skin tags, moles, milia"],
-  //       Treatments: ["Laser removal", "Minor surgical excision"],
-  //     },
-  //     imageUrl: bImg1,
-  //   },
-  //   {
-  //     title: "Face & Scalp Cyst Removal",
-  //     description: {
-  //       Concerns: ["Cysts on the face or scalp"],
-  //       Treatments: ["Surgical cyst removal"],
-  //     },
-  //     imageUrl: bImg2,
-  //   },
-  //   {
-  //     title: "Lobuloplasty",
-  //     description: {
-  //       Concerns: ["Torn or stretched earlobes"],
-  //       Treatments: ["Surgical correction of earlobes"],
-  //     },
-  //     imageUrl: bImg3,
-  //   },
-  //   {
-  //     title: "Scar Reduction",
-  //     description: {
-  //       Concerns: ["Scars from injury or surgery"],
-  //       Treatments: ["Laser resurfacing", "Subcision", "Surgical revisions"],
-  //     },
-  //     imageUrl: bImg4,
-  //   },
-  //   {
-  //     title: "Dimpleplasty (Face)",
-  //     description: {
-  //       Concerns: ["Desire for dimples"],
-  //       Treatments: ["Cosmetic surgery to create dimples"],
-  //     },
-  //     imageUrl: bImg5,
-  //   },
-  //   {
-  //     title: "Bichectomy (Face)",
-  //     description: {
-  //       Concerns: ["Excess cheek fat"],
-  //       Treatments: [
-  //         "Permanent removal of excessive fat from the cheek region",
-  //       ],
-  //     },
-  //     imageUrl: bImg6,
-  //   },
-  // ],
+  "Beautifying/Cosmetic Surgery": [
+    {
+      title: "Skin Tags, Moles, Milia Removal",
+      description: {
+        Concerns: ["Unwanted skin tags, moles, milia"],
+        Treatments: ["Laser removal", "Minor surgical excision"],
+      },
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section4/gdfa0rttnhhfl44mcwl5",
+    },
+    {
+      title: "Face & Scalp Cyst Removal",
+      description: {
+        Concerns: ["Cysts on the face or scalp"],
+        Treatments: ["Surgical cyst removal"],
+      },
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section4/r1zggoxytzllzjsgdj8x",
+    },
+    {
+      title: "Lobuloplasty",
+      description: {
+        Concerns: ["Torn or stretched earlobes"],
+        Treatments: ["Surgical correction of earlobes"],
+      },
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section4/suyjlbkph0tkynl5csyf",
+    },
+    {
+      title: "Scar Reduction",
+      description: {
+        Concerns: ["Scars from injury or surgery"],
+        Treatments: ["Laser resurfacing", "Subcision", "Surgical revisions"],
+      },
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section4/r20s1l16plxwynfseo3t",
+    },
+    {
+      title: "Dimpleplasty (Face)",
+      description: {
+        Concerns: ["Desire for dimples"],
+        Treatments: ["Cosmetic surgery to create dimples"],
+      },
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section4/dnmzaqvtaahrqacyovjw",
+    },
+    {
+      title: "Bichectomy (Face)",
+      description: {
+        Concerns: ["Excess cheek fat"],
+        Treatments: [
+          "Permanent removal of excessive fat from the cheek region",
+        ],
+      },
+      imageUrl: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/ClinicalConcerns2/section4/xicvt2rnyxrhpg6ff68g",
+    },
+  ],
 };
 
 
