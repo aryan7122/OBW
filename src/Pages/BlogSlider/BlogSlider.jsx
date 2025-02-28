@@ -10,7 +10,7 @@ const blogs = [
         author: "Anjali Verma",
         authorImg: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg?w=1060",
         date: "Feb 10, 2025",
-        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/lldglrzaq4mfpre7ggqo",
+        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Medi-Facials-min_xn8znv",
         category: "Skin"
     },
     {
@@ -19,7 +19,7 @@ const blogs = [
         author: "Riya Mehta",
         authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
         date: "Feb 15, 2025",
-        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/mgp21fo5pzjy3gapzwim",
+        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Laser_Hair_Removal-min_u7vpue",
         category: "Hair"
     },
     {
@@ -28,7 +28,7 @@ const blogs = [
         author: "Aarav Sharma",
         authorImg: "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
         date: "Feb 20, 2025",
-        image: "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/BlogSlider/y6tqnhdcncam70t7v8g1",
+        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/IV_Therapy_for_Skin_Hair_Body_Care-min_w5xd4u",
         category: "Wellness"
     },
 ];
