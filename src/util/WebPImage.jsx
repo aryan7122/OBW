@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
 import placeholderImg from "../assets/TrendingTreatments/LazyLoadImage.png";
 
 const WebPImage = ({ src, alt, className }) => {
@@ -9,7 +9,7 @@ const WebPImage = ({ src, alt, className }) => {
     return (
         <div className="image-wrapper" style={{ position: "relative" }}>
             {!imageLoaded && (
-                <LazyLoadImage
+                <img
                     src={placeholderImg}
                     alt="Loading..."
                     className="placeholder"
@@ -25,7 +25,7 @@ const WebPImage = ({ src, alt, className }) => {
                 />
             )}
 
-            <LazyLoadImage
+            <img
                 effect="blur"
                 src={src}
                 alt={alt || ""}
