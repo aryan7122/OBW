@@ -78,7 +78,7 @@ function App() {
                 <TrendingTreatments />
                 <BlogSlider />
                 <FAQSection />
-                <HappyClients />
+                {/* <HappyClients /> */}
                 <FirstStep />
               </>
             }
@@ -89,7 +89,7 @@ function App() {
               <>
                 <AboutUsHero />
                 <OurValue />
-                <OurTeam />
+                {/* <OurTeam /> */}
                 <LocationSection />
                 <FirstStep />
               </>

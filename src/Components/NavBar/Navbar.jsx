@@ -72,7 +72,7 @@ function Navbar() {
                         <li onClick={() => toggleMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
-                        <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li>
+                        {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
                         <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail') }>BLOGS</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                     </ul>

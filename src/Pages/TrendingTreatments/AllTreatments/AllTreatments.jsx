@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 import BookAppointment from '../../../Components/BookAppointment/BookAppointment';
 // import { LazyLoadImage } from 'react-lazy-load-image-component';
 // import 'react-lazy-load-image-component/src/effects/blur.css';
-import placeholderImg from '../../../assets/TrendingTreatments/LazyLoadImage.png'
+import img1 from '../../../assets/TrendingTreatments/doctor-wearing-blue-gloves-gives-injections-woman-scalp-treatment_11zon.jpg'
 import WebPImage from '../../../util/WebPImage';
 
 const treatmentData = [
@@ -50,7 +50,7 @@ const treatmentData = [
     {
         category: 'Body care',
         title: 'GFC',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/blakq6ebxgeb8l4ds85g',
+        imgUrl: img1,
     },
     // {
     //     category: 'Scalp & Hair care',

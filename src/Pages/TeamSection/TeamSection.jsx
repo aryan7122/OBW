@@ -23,10 +23,10 @@ const icon7 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v
 const images = [img1, img2, img3];
 
 const stats = [
-  { label: "Years of Combine Experience", value: 20, id: "experience", isPercentage: false },
-  { label: "Certified Specialists", value: 100, id: "certified", isPercentage: false },
-  { label: "Successful Treatments", value: 5000, id: "treatments", isPercentage: false },
-  { label: "Client Satisfaction Rate", value: 96, id: "satisfaction", isPercentage: true },
+  { label: "Years of Combine Experience", value: 5, id: "experience", isPercentage: false },
+  { label: "Certified Specialists", value: 50, id: "certified", isPercentage: false },
+  { label: "Successful Treatments", value: 300, id: "treatments", isPercentage: false },
+  { label: "Client Satisfaction Rate", value: 99, id: "satisfaction", isPercentage: true },
   { label: "Convenient Locations", value: 4, id: "locations", isPercentage: false },
   { label: "Positive Testimonials", value: 100, id: "testimonials", isPercentage: false },
 ];
@@ -115,7 +115,7 @@ const TeamSection = () => {
 
   return (
     <section className="team-section-">
-      <div className="slider-container" onWheel={handleWheel}>
+      {/* <div className="slider-container" onWheel={handleWheel}>
         <div className="team-images" style={{ "--index": currentIndex }}>
           {images.map((img, index) => (
             <img
@@ -134,7 +134,7 @@ const TeamSection = () => {
             <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="teams-container">
         <div className="teams-header">
           <div>

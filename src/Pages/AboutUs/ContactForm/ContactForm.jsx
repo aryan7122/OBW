@@ -9,7 +9,8 @@ import Vector from '../../../assets/about/Vector.svg'
 import { ArrowRight } from "lucide-react";
 import { toast, Toaster } from "react-hot-toast"; // Import toast
 
-const img="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
+// const img = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
+import img from '../../../assets/about/contactimg.jpg'
 
 const ContactForm = () => {
     const [phone, setPhone] = useState("");
@@ -34,7 +35,7 @@ const ContactForm = () => {
 
         // Validation
         if (!formData.name || !formData.email || !phone || !selectedDate || !formData.message || !formData.location) {
-            toast.error("🙏 Please fill all the fields!"),{
+            toast.error("🙏 Please fill all the fields!"), {
                 // duration: 5000,
             };
             return;
@@ -65,7 +66,7 @@ const ContactForm = () => {
                     <h2>Get In <span className="touch-icon"><img src={Vector} alt="" /></span> Touch!</h2>
                     <p>
                         Please feel free to get in touch at any time. <br />
-                        <span> You can reach us anytime via <a href="mailto:obw@clinic.com">obw@clinic.com</a> </span>
+                        <span> You can reach us anytime via <a href="mailto:info@obwclinic.com">info@obwclinic.com</a> </span>
                     </p>
 
                     <form onSubmit={handleSubmit}>
@@ -106,7 +107,7 @@ const ContactForm = () => {
                         <div className="form-group radio-section">
                             <label>Our Location</label>
                             <div className="radio-options">
-                                {["Banashankari", "Kanakapura Main Road", "Rajarajeshwari Nagar", "Kodipalya Road"].map((loc) => (
+                                {["Banashankari", "Kanakapura Main Road", "Rajarajeshwari Nagar", "Kodipalya"].map((loc) => (
                                     <label key={loc}>
                                         <input
                                             type="radio"

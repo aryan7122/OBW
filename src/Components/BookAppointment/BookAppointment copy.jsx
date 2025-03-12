@@ -4,9 +4,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast, Toaster } from "react-hot-toast";
-import emailjs from "@emailjs/browser";
-const BookAppointment = ({ onClose }) => {
 
+const BookAppointment = ({ onClose }) => {
     const [formData, setFormData] = useState({
         name: "",
         MoNumber: "",
@@ -36,38 +35,6 @@ const BookAppointment = ({ onClose }) => {
         toast.success("Appointment booked successfully!");
 
         console.log("Form Submitted:", formData);
-        // EmailJS se email send karna
-        const templateParams = {
-            to_email: "aryankushwaha2121@gmail.com", // Jis email pe bhejna hai
-            name,
-            MoNumber,
-            email,
-            date,
-            location,
-            treatment,
-            message,
-        };
-
-        emailjs
-            .send(
-                "service_zwhrgv1", // Replace with your EmailJS service ID
-                "template_go8s6bk", // Replace with your EmailJS template ID
-                templateParams,
-                "dnG0LC_cuxIZMOgLu" // Replace with your EmailJS Public Key
-            )
-            .then(
-                (response) => {
-                    console.log("SUCCESS!", response.status, response.text);
-                    toast.success("Appointment booked successfully! ✅");
-                    setTimeout(() => {
-                        onClose();
-                    }, 1500);
-                },
-                (err) => {
-                    console.log("FAILED...", err);
-                    toast.error("Failed to send email! ❌");
-                }
-            );
 
         // Modal Close after 1.5s
         setTimeout(() => {
