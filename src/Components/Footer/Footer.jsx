@@ -24,20 +24,24 @@ const Footer = () => {
                     <a href="/blogs">Blogs</a>
                 </nav>
                 <div className="footer-icons">
-                    <FaFacebook className="icon" />
-                    <FaInstagram className="icon" />
-                    <FaXTwitter className="icon" />
+                    <a href="https://www.instagram.com/obwclinic?igsh=MTQxM2phdWZoZTRreA==">
+                        <FaInstagram className="icon" />
+                    </a>
+                    <a href="https://www.facebook.com/share/1CpRx6vUJB/?mibextid=qi2Omg">
+                        <FaFacebook className="icon" />
+                    </a>
+                    {/* <FaXTwitter className="icon" />
                     <FaLinkedin className="icon" />
-                    <FaYoutube className="icon" />
+                    <FaYoutube className="icon" /> */}
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>2025 Relume. All right reserved.</p>
-                <div className="footer-links">
+                <p>© 2025 OWB Relume | All Rights Reserved.</p>
+                {/* <div className="footer-links">
                     <a href="/privacy-policy">Privacy Policy</a>
                     <a href="/terms-of-service">Terms of Service</a>
                     <a href="#">Cookies Settings</a>
-                </div>
+                </div> */}
             </div>
         </footer>
     );
