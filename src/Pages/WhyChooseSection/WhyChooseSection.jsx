@@ -3,15 +3,15 @@ import "./WhyChooseSection.scss";
 import { motion } from 'framer-motion';
 // import 'react-lazy-load-image-component/src/effects/blur.css';
 import WebPImage from "../../util/WebPImage";
-import img1 from '../../assets/WhyChooseSection/Cutting-Edge Technology_11zon.jpg'
+import img1 from '../../assets/WhyChooseSection/007A0853_11zon.jpg'
 import img2 from '../../assets/WhyChooseSection/Personalized Solutions_11zon.jpg'
-import img3 from '../../assets/WhyChooseSection/Expert Care_11zon.jpg'
+import img3 from '../../assets/WhyChooseSection/0K6A5904_11zon.jpg'
 const WhyChooseSection = () => {
     // const img2= "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/eimccgamvas1fxy1vy"
     // const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/upimjxgdcs7vitbylan9"
     // const img3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/xir8lh6mqwa8q1iwjukk"
-    const icon1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/cwlr9yev7jiiwy7575u0"
-    
+    const icon1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/cwlr9yev7jiiwy7575u0"
+
     return (
         <section className="why-choose-section">
             <div className="content-container">
@@ -33,10 +33,10 @@ const WhyChooseSection = () => {
                 <div className="image-grid">
                     <div
                         className="image-card"
-                        initial={{ opacity: 0, y: 50 }} 
-                        whileInView={{ opacity: 1, y: 0 }} 
-                        transition={{ duration: 0.6, delay: 0.2 }} 
-                        viewport={{ once: true, amount: 0.2 }} 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        viewport={{ once: true, amount: 0.2 }}
                     >
                         <WebPImage src={img1} alt="Happy Woman" />
                         <p>Cutting Edge Treatments</p>
