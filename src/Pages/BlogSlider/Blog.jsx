@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import img1 from "../../assets/TrendingTreatments/Medi-Facials-min.jpg";
 import img2 from "../../assets/TrendingTreatments/Laser Hair Removal-min.jpg";
-import img4 from "../../assets/TrendingTreatments/girl-with-black-mask-lies-table-spa-saloon (1).jpg";
+import img4 from "../../assets/TrendingTreatments/Carbon Laser Peel_11zon.jpg";
 import img7 from "../../assets/TrendingTreatments/Skin Brightening-min.jpg";
 import img10 from "../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg";
 import img5 from "../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg";
@@ -54,6 +54,8 @@ function Blog() {
       title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
       p: "Say goodbye to shaving and waxing with laser hair removal, a long-lasting solution for smooth, hair-free skin.",
       author: "Riya Mehta",
+      authorImg:
+        "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
       image:
         img2,
       date: "Feb 15, 2025",
@@ -98,7 +100,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/beautiful-woman-eyebrow-tattoo-pmu_1157-12007.jpg?w=1060",
       date: "Mar 5, 2025",
-      image:img6,
+      image: img6,
       category: "Beauty",
     },
     {
@@ -128,8 +130,8 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/close-up-woman-hair-mesotherapy-treatment_1157-14113.jpg?w=1060",
       date: "Mar 20, 2025",
-      image:img9,
-     category: "Hair",
+      image: img9,
+      category: "Hair",
     },
     {
       title: "Scar Revision or Reduction Treatments: Smooth and Refined Skin",
@@ -149,7 +151,7 @@ function Blog() {
       authorImg:
         "https://img.freepik.com/free-photo/close-up-woman-laser-skin-resurfacing-treatment_1157-15163.jpg?w=1060",
       date: "Apr 1, 2025",
-      image:img11,
+      image: img11,
       category: "Skin",
     },
   ];
