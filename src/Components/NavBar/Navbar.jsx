@@ -63,7 +63,7 @@ function Navbar() {
             >
                 {/* Logo Section */}
                 <div className="navbar-logo">
-                    <div className="logo-circle"><img src={logo} alt="logo" /></div>
+                    <div className="logo-circle" onClick={() => toggleMenu()}><Link to="/" className={isActive('/')}><img src={logo} alt="logo" /></Link></div>
                 </div>
 
                 {/* Navigation Links */}

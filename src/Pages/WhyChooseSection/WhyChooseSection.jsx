@@ -39,7 +39,7 @@ const WhyChooseSection = () => {
                         viewport={{ once: true, amount: 0.2 }} 
                     >
                         <WebPImage src={img1} alt="Happy Woman" />
-                        {/* <p>Certified Dermatologists</p> */}
+                        <p>Cutting Edge Treatments</p>
                     </div>
 
                     <div
@@ -50,7 +50,7 @@ const WhyChooseSection = () => {
                         viewport={{ once: true, amount: 0.2 }}
                     >
                         <WebPImage src={img2} alt="Care Image" />
-                        <p>Personalized Care</p>
+                        <p>Expert care</p>
                     </div>
 
                     <div
