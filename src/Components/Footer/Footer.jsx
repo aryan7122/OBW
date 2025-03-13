@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>© 2025 OWB Relume | All Rights Reserved.</p>
+                <p>© 2025 OWB CLINIC | All Rights Reserved.</p>
                 {/* <div className="footer-links">
                     <a href="/privacy-policy">Privacy Policy</a>
                     <a href="/terms-of-service">Terms of Service</a>

@@ -2,7 +2,7 @@
   // padding: 20px;
 
   .treatment-header {
-    background-image: url("https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/bzjpqp49v6rgo686bmuw");
+    background-image: url("../../../assets//TrendingTreatments/allTreatments\ \(2\).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
@@ -12,8 +12,8 @@
     margin-top: -120px;
     @media only screen and (min-width: 1601px) {
       padding: 170px 80px 80px 80px;
-        // padding: 60px 80px;
-      }
+      // padding: 60px 80px;
+    }
     @media only screen and (max-width: 1400px) {
       padding: 170px 40px 40px 40px;
     }
@@ -44,18 +44,19 @@
       @media only screen and (max-width: 8100px) {
         width: 100%;
       }
-                    @media only screen and (max-width: 400px) {
-                      font-size: 40px;
-                        line-height: 50.6px;
-                    }
+      @media only screen and (max-width: 400px) {
+        font-size: 40px;
+        line-height: 50.6px;
+      }
     }
 
     p {
       margin-top: 10px;
       color: #fff;
-      width: 770px;
+      max-width: 600px;
+      // border: 1px solid red;
       font-weight: 400;
-            font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.3px;
@@ -80,14 +81,14 @@
         letter-spacing: -0.3px;
         // text-decoration: underline;
         // text-decoration-style: solid;
-        a{
+        a {
           // text-decoration: none;
-          color: #00727A;
-                text-decoration: none;
-                
-                  &:hover {
-                    text-decoration: underline;
-                  }
+          color: #02d1df;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       .breadcrumb-separator {
@@ -97,7 +98,7 @@
       .p {
         color: #ffffff6d;
         font-weight: 400;
-              font-family: 'Supreme-Regular', sans-serif;
+        font-family: "Supreme-Regular", sans-serif;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.3px;
@@ -110,8 +111,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     @media only screen and (min-width: 1601px) {
-        padding: 60px 80px;
-      }
+      padding: 60px 80px;
+    }
     @media only screen and (max-width: 1400px) {
       padding: 40px;
     }
@@ -141,8 +142,8 @@
   }
   .navtab {
     @media only screen and (max-width: 840px) {
-          overflow-x: scroll !important;
-        }
+      overflow-x: scroll !important;
+    }
   }
   .treatment-filters {
     display: flex;
@@ -361,6 +362,3 @@
     }
   }
 }
-
-
-

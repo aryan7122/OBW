@@ -27,7 +27,7 @@ const BookAppointment = ({ onClose }) => {
         const { name, MoNumber, email, date, location, treatment, message } = formData;
 
         // Validation Check
-        if (!name || !MoNumber || !email || !date || !location || !treatment || !message) {
+        if (!name || !MoNumber) {
             toast.error("Please fill all required fields!");
             return;
         }
@@ -38,7 +38,7 @@ const BookAppointment = ({ onClose }) => {
         console.log("Form Submitted:", formData);
         // EmailJS se email send karna
         const templateParams = {
-            to_email: "aryankushwaha2121@gmail.com", // Jis email pe bhejna hai
+            to_email: "obwellness1@gmail.com", // Jis email pe bhejna hai
             name,
             MoNumber,
             email,

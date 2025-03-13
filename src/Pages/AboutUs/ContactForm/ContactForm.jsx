@@ -8,6 +8,7 @@ import { FaCalendarAlt } from "react-icons/fa"; // Calendar icon
 import Vector from '../../../assets/about/Vector.svg'
 import { ArrowRight } from "lucide-react";
 import { toast, Toaster } from "react-hot-toast"; // Import toast
+import emailjs from "@emailjs/browser";
 
 // const img = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
 import img from '../../../assets/about/contactimg.jpg'
@@ -18,6 +19,8 @@ const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phone: phone,
+        selectedDate: selectedDate,
         message: "",
         location: "",
     });
@@ -31,10 +34,12 @@ const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log("Form Data Submitted:", formData);
+        console.log("📩 Form Data Submitted:", formData);
+        console.log("📞 Phone:", phone);
+        console.log("📅 Selected Date:", selectedDate);
 
         // Validation
-        if (!formData.name || !formData.email || !phone || !selectedDate || !formData.message || !formData.location) {
+        if (!formData.name || !phone) {
             toast.error("🙏 Please fill all the fields!"), {
                 // duration: 5000,
             };
@@ -43,6 +48,41 @@ const ContactForm = () => {
 
         // Success Message
         toast.success("Form submitted successfully! 🎉");
+
+
+
+
+        // EmailJS se email send karna
+        // EmailJS se email send karna
+        const templateParams = {
+            to_email: "obwellness1@gmail.com", // Jis email pe bhejna hai
+            name: formData.name,
+            MoNumber: phone,
+            email: formData.email,
+            date: selectedDate ? selectedDate.toLocaleDateString("en-GB") : "",
+            location: formData.location,
+            // treatment: "General Consultation", // Agar treatment select karwana ho toh alag se field add karo
+            message: formData.message,
+        };
+
+
+        emailjs
+            .send(
+                "service_zwhrgv1", // Replace with your EmailJS service ID
+                "template_np3exoh", // Replace with your EmailJS template ID
+                templateParams,
+                "dnG0LC_cuxIZMOgLu" // Replace with your EmailJS Public Key
+            )
+            .then(
+                (response) => {
+                    console.log("SUCCESS!", response.status, response.text);
+                    toast.success("Appointment booked successfully! ✅");
+                },
+                (err) => {
+                    console.log("FAILED...", err);
+                    toast.error("Failed to send email! ❌");
+                }
+            );
 
         // Reset Form
         setFormData({
@@ -85,9 +125,13 @@ const ContactForm = () => {
                             <PhoneInput
                                 country={"in"}
                                 value={phone}
-                                onChange={(phone) => setPhone(phone)}
+                                onChange={(phone) => {
+                                    setPhone(phone);
+                                    setFormData((prev) => ({ ...prev, phone }));
+                                }}
                                 placeholder="+(91) 00000 - 00000"
                             />
+
                         </div>
 
                         <div className="form-group date-group">
