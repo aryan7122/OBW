@@ -153,12 +153,12 @@ const TeamSection = () => {
               health support to meet your needs.
             </p>
           </div>
-          <button className="view-all"
+          {/* <button className="view-all"
             onClick={() => HandleNavigation("/about", "meet-section")}
           >
             Meet The team
             <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-          </button>
+          </button> */}
         </div>
 
         <div className="team-stats" ref={observerRef}
