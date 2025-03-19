@@ -15,36 +15,40 @@ const faqs = [
         answer: "Yes! All our treatments are FDA-approved, performed by trained professionals, and use clinically tested, dermatologically safe products. "
     },
     {
-        question: " How do I book an appointment? ",
-        answer: "To schedule your appointment, you can call us, visit our website, or message us on WhatsApp or social media. "
+        question: "What skin treatments do you offer? ",
+        answer: "We offer Clinical Medi Facial, chemical peels, skin brightening, laser treatments, and more."
     },
     {
-        question: "How many sessions are required for visible results?",
-        answer: "Results vary based on the treatment and individual skin type. Our experts will provide a personalized treatment plan tailored to your needs during your consultation. "
+        question: "Do you provide hair loss solutions?",
+        answer: "Yes, we offer Hair PRP, Hair GFC, and advanced hair rejuvenation treatments. "
     },
     {
-        question: "Do you offer consultations before treatment? ",
-        answer: "Yes, we provide personalized consultations to understand your concerns and recommend the best treatment options."
+        question: "Is the Clinical Medi Facial safe for sensitive skin? ",
+        answer: "Absolutely! Our Clinical Medi Facial is gentle and customizable for all skin types."
     },
     {
-        question: "Is there any downtime after treatments?",
-        answer: "Most of our treatments have minimal to no downtime, allowing you to resume daily activities quickly. Our team will guide you on post-care based on your procedure. "
+        question: "How many sessions are needed for laser hair reduction?",
+        answer: "Typically, 6-8 sessions are recommended for optimal results. "
     },
     {
-        question: "Do you offer customized treatment plans?",
-        answer: "Absolutely! We assess your skin and aesthetic goals to create a tailor-made treatment plan for the best results. "
+        question: "Do you offer skin brightening treatments?",
+        answer: "Yes, we provide advanced skin-brightening solutions for a radiant glow."
     },
     {
-        question: "What products do you use for treatments?",
-        answer: "We use premium, dermatologist-approved skincare, and aesthetic products to ensure safety and effectiveness. "
+        question: "Is there downtime after chemical peels?",
+        answer: "Mild peels have minimal downtime, while deeper peels may need a few days of recovery."
     },
     {
-        question: "Can I get a treatment done on the same day as my consultation? ",
-        answer: "Yes, in most cases, you can start your treatment immediately after consultation, depending on the procedure. "
+        question: "How soon will I see results from hair treatments?",
+        answer: "Visible improvements typically start within 3-6 months, depending on the treatment. "
     },
     {
-        question: "Where is the OBW Clinic located? ",
-        answer: "We have multiple branches for your convenience. You can check our website or contact us for the nearest location. "
+        question: "Do you offer free consultations?",
+        answer: "Yes, we provide personalized consultations to understand your skin and hair needs."
+    },
+    {
+        question: "Where is the OBW Clinic located?",
+        answer: "We have multiple branches for your convenience. You can check our website or contact us for the nearest location."
     },
 ];
 

@@ -154,7 +154,7 @@
       transform: translateX(calc(-20% * var(--index)));
     }
     @media only screen and (max-width: 1000px) {
-      margin-left: -20px;
+      // margin-left: -20px;
     }
     @media only screen and (max-width: 770px) {
       transform: translateX(calc(-23% * var(--index)));
@@ -169,7 +169,7 @@
       transform: translateX(calc(-30% * var(--index)));
     }
     @media only screen and (max-width: 390px) {
-      transform: translateX(calc(-32% * var(--index)));
+      // transform: translateX(calc(-32% * var(--index)));
     }
     .slider-card {
       position: relative;
@@ -184,6 +184,7 @@
       margin-right: 10px;
       padding: 16px;
       text-align: left;
+        // border: 1px solid red;
       &:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
