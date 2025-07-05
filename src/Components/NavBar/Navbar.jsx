@@ -16,6 +16,7 @@ function Navbar() {
         const handleScroll = () => {
             if (window.scrollY > 650) {
                 setScrolled(true);
+
             } else {
                 setScrolled(false);
             }
@@ -26,6 +27,7 @@ function Navbar() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
 
     const toggleSearchBar = () => {
         setIsVisible(!isVisible);
@@ -73,7 +75,7 @@ function Navbar() {
                         <li onClick={() => toggleMenu()}><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                         {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
-                        <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail') }>BLOGS</Link></li>
+                        <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
                         <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                     </ul>
                 }
@@ -82,8 +84,10 @@ function Navbar() {
                 <div className={`navbar-actions ${menuOpen ? 'menu-active' : ''}`}>
                     {!isVisible
                         ? <>
-                            <button className="appointment-button" onClick={handleBookNowClick}>
-                                Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                            <button className="appointment-button btn2" onClick={handleBookNowClick}>
+                                <span>
+                                    Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                </span>
                             </button>
                             {/* <Search className="search-icon" size={24} onClick={toggleSearchBar} /> */}
                         </>

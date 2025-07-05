@@ -1,0 +1,225 @@
+.faq-container {
+  display: flex;
+  gap: 2rem;
+  padding: 60px 100px 60px 100px;
+  background-color: #f2feff;
+  @media only screen and (min-width: 1601px) {
+      padding: 60px 80px;
+    }
+  @media only screen and (max-width: 1400px) {
+    padding: 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 20px 10px;
+  }
+  @media only screen and (max-width: 770px) {
+    flex-direction: column;
+  }
+  .faq-left {
+    width: 425px;
+    height: 897px;
+    // background: linear-gradient(135deg, #98a3c4, #355ceb);
+background-image: linear-gradient(120deg, #515052 0%, #8ec5fc 100%);  
+  border-radius: 18px;
+    padding: 2rem;
+    text-align: left;
+    // background-image: url("https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/FAQ/q5tuojrczeqbwbrrmkld");
+    // background-image: url("https://t3.ftcdn.net/jpg/04/56/00/16/360_F_456001627_vYt7ZFjxEQ1sshme67JAXorKRPo8gsfN.jpg");
+    background-image: url("https://images.ctfassets.net/z2yjrn4ew0rg/4zQ8BqOIoNW4ZUaQYiYTTb/1d5bca5ada526fe8ebd2567285cf0fc9/question.jpeg?w=1920&fm=jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 20%;
+    @media only screen and (max-width: 850px) {
+      width: 350px;
+      height: 687px;
+    }
+    @media only screen and (max-width: 770px) {
+      width: 100%;
+      background-position: 10% 60%;
+      background-image: none;
+      height: fit-content;
+      padding: 0;
+    }
+    .FAQ’s {
+      background: #b8b8b833;
+      padding: 4px 10px;
+      color: #fff;
+      border-radius: 100px;
+      width: fit-content;
+      font-size: 14px;
+      font-weight: 400;
+      font-family: "Supreme-Regular", sans-serif;
+      line-height: 16.8px;
+      letter-spacing: 0.01em;
+      text-align: center;
+      @media only screen and (max-width: 770px) {
+        color: #171717;
+      }
+    }
+    h2 {
+      font-size: 48px;
+      margin-top: 8px;
+      font-weight: 500;
+      line-height: 57.6px;
+      letter-spacing: -2.200000047683716px;
+      text-align: left;
+      color: #fff;
+
+     
+      @media only screen and (max-width: 850px) {
+        font-size: 38px;
+        line-height: 44.6px;
+      }
+      @media only screen and (max-width: 770px) {
+        color: #171717;
+      }
+      @media only screen and (max-width: 470px) {
+        font-size: 30px;
+        line-height: 34.6px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      font-family: "Supreme-Regular", sans-serif;
+      line-height: 24px;
+      letter-spacing: -0.3px;
+      text-align: left;
+      margin-top: 8px;
+      color: #fff;
+      width: 340px;
+      @media only screen and (max-width: 850px) {
+        font-size: 16px;
+        line-height: 24.6px;
+        width: 260px;
+      }
+      @media only screen and (max-width: 770px) {
+        width: 66%;
+        color: #171717;
+      }
+      @media only screen and (max-width: 470px) {
+        width: 100%;
+      }
+    }
+
+    .get-in-touch {
+      padding: 8px 10px 8px 25px;
+      margin-top: 30px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+      color: #fff;
+      border: 1px solid transparent;
+      transition: 0.3s linear;
+      @media only screen and (max-width: 500px) {
+        padding: 5px 6px 5px 15px;
+        font-size: 16px;
+      }
+      .arrow-icon {
+        transition: 0.3s linear;
+        background: #fff;
+        color: #0056b3;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+      }
+
+      &:hover {
+        background: #fff !important;
+        border: 1px solid #0056b3;
+        color: #472525;
+
+        .arrow-icon {
+          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .faq-right {
+    width: 100%;
+
+    .faq-card {
+      background: #e6fafc;
+      border-bottom: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px 15px;
+      margin-bottom: 23px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &.active {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: "Supreme-Regular", sans-serif;
+        line-height: 28.8px;
+        letter-spacing: -0.800000011920929px;
+        text-align: left;
+        color: #171717;
+        background: #ddf4f6;
+        border-color: #5b2f2f5c;
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        // font-weight: bold;
+        font-weight: 400;
+        line-height: 28px;
+        align-items: center;
+        // border: 1px solid red;
+        @media only screen and (max-width: 370px) {
+          font-size: 1rem;
+          line-height: 16px;
+          font-weight: 500;
+        }
+        .icon_round {
+          width: 27px;
+          height: 27px;
+          border-radius: 100px;
+          background: #5b2f2f;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+        }
+      }
+
+      .faq-answer {
+        margin-top: 0.5rem;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Supreme-Regular", sans-serif;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+        text-align: left;
+        color: #171717;
+        @media only screen and (max-width: 370px) {
+          font-size: 0.85rem;
+          line-height: 16px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

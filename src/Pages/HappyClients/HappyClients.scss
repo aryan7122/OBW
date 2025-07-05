@@ -3,9 +3,10 @@
   text-align: center;
   padding: 0px 100px 60px 100px;
   background: #f3fff1;
+
   @media only screen and (min-width: 1601px) {
-      padding: 60px 80px;
-    }
+    padding: 60px 80px;
+  }
   @media only screen and (max-width: 1400px) {
     padding: 40px 0px 40px 40px;
   }
@@ -15,8 +16,8 @@
   @media only screen and (max-width: 400px) {
     padding: 20px 0px 30px 10px;
   }
+
   .content_top {
-    // padding-right: 60px;
     display: flex;
     text-align: left;
     align-items: center;
@@ -31,6 +32,7 @@
     @media only screen and (max-width: 500px) {
       padding-right: 0;
     }
+
     .view-all {
       padding: 8px 10px 8px 25px;
       background-color: #007bff;
@@ -44,7 +46,6 @@
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.5px;
-
       cursor: pointer;
       transition: background-color 0.3s ease;
       background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
@@ -140,208 +141,205 @@
   .blog-slider-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    margin-top: 40px;
+    padding: 10px 0;
   }
 
   .slider-cards {
-    margin-top: 40px;
     display: flex;
     transition: transform 0.5s ease;
-    padding: 10px 0px 10px 0px;
-    transform: translateX(calc(-0% * var(--index)));
-    @media only screen and (max-width: 1400px) {
-      transform: translateX(calc(-10% * var(--index)));
-    }
-    @media only screen and (max-width: 1140px) {
-      transform: translateX(calc(-15% * var(--index)));
-    }
-    @media only screen and (max-width: 1000px) {
-      transform: translateX(calc(-20% * var(--index)));
-      margin-left: -20px;
-    }
-    @media only screen and (max-width: 810px) {
-      transform: translateX(calc(-25% * var(--index)));
-    }
-    @media only screen and (max-width: 560px) {
-      transform: translateX(calc(-30% * var(--index)));
-    }
-    @media only screen and (max-width: 360px) {
-      transform: translateX(calc(-32% * var(--index)));
-    }
-    .slider-card {
-      // border: 20px;
-      overflow: hidden;
-      border-radius: 16px;
-    //  height: fit-content;
+  }
+
+  .slider-card {
+    overflow: hidden;
+    border-radius: 16px;
+    background: #02282b;
+    border-radius: 20px;
+    margin-right: 20px;
+    flex-shrink: 0;
+    width: 287px;
     max-height: 587px;
-      background: #02282b;
+    text-align: left;
+    position: relative;
+    &:hover {
+      box-shadow: 0px 2px 10px 1px #00000067 !important;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 364px;
       border-radius: 20px;
-      margin: 0 20px 0 0px;
-      // padding: 16px;
-      &:hover {
-        box-shadow: 0px 2px 10px 1px #00000067 !important;
-        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+      object-fit: cover;
+      display: block;
+      
+    }
 
-      &:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      }
 
-      text-align: left;
-      @media only screen and (max-width: 750px) {
-        width: 350px;
+    @media only screen and (max-width: 750px) {
+      width: 350px;
+      .card-image {
         height: 487px;
       }
-      @media only screen and (max-width: 550px) {
-        width: 300px;
-        height: 440px;
-      }
-      @media only screen and (max-width: 400px) {
-        width: 280px;
-        height: 440px;
-      }
+    }
+    @media only screen and (max-width: 550px) {
+      width: 300px;
       .card-image {
-        width: 427px;
-        height: 587px;
-        border-radius: 20px;
-        object-fit: cover;
-        // border: 1px solid red;
-        @media only screen and (max-width: 750px) {
-          width: 350px;
-          height: 487px;
-        }
-        @media only screen and (max-width: 550px) {
-          width: 300px;
-          height: 440px;
-        }
-        @media only screen and (max-width: 400px) {
-          width: 280px;
-          height: 440px;
-        }
+        height: 440px;
       }
+    }
+    @media only screen and (max-width: 400px) {
+      width: 280px;
+      .card-image {
+        height: 440px;
+      }
+    }
 
-      .card_blur {
-        width: 427px;
-        height: 130px;
-        position: absolute;
-        margin-top: -130px;
+    .card_blur {
+      width: 100%;
+      height: 90px;
+      position: absolute;
+      margin-top: -80px;
+      
+      display: flex;
+      align-items: start;
+      padding: 10px 20px;
+      justify-content: space-between;
+      background: linear-gradient(
+        348.42deg,
+        rgba(0, 0, 0, 0.2) 56.4%,
+        rgba(102, 102, 102, 0.02) 88.78%
+      );
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom-left-radius: 20px !important;
+      border-bottom-right-radius: 20px !important;
+      transition: opacity 0.3s ease-in-out;
+
+      .aut_text-img {
         display: flex;
-        align-items: start;
-        padding: 10px 20px;
-        justify-content: space-between;
-        background: linear-gradient(
-          348.42deg,
-          rgba(0, 0, 0, 0.2) 56.4%,
-          rgba(102, 102, 102, 0.02) 88.78%
-        );
-        backdrop-filter: blur(10px);
-        /* Blur effect */
-        -webkit-backdrop-filter: blur(10px);
-        border-bottom-left-radius: 20px !important;
-        border-bottom-right-radius: 20px !important;
-        @media only screen and (max-width: 750px) {
-          width: 350px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        img {
+          width: 51px;
+          height: 51px;
+          border-radius: 100px;
+          object-fit: cover;
+          margin-top: 10px;
         }
-        @media only screen and (max-width: 550px) {
-          width: 300px;
-        }
-        @media only screen and (max-width: 400px) {
-          width: 280px;
-        }
-        .aut_text-img {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
 
-          img {
-            width: 51px;
-            height: 51px;
-            border-radius: 100px;
-            object-fit: cover;
-            margin-top: 10px;
-          }
+        .aut_text {
+          // margin-top: 10px;
 
-          .aut_text {
-            margin-top: 10px;
-
-            .card-name {
-              font-size: 28px;
-              font-weight: 400;
-              font-family: "Supreme-Regular", sans-serif;
-              line-height: 36.6px;
-              letter-spacing: -0.5px;
-              text-align: left;
-              color: #ffffff;
-              @media only screen and (max-width: 550px) {
-                font-size: 20px;
-              }
-            }
-
-            .card-location {
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 19px;
-              font-family: "Supreme-Regular", sans-serif;
-              text-align: left;
-              color: #ffffff;
-              opacity: 0.8;
-              @media only screen and (max-width: 550px) {
-                font-size: 14px;
-              }
-            }
-            .stars {
-              margin-top: 5px;
-              display: inline-flex;
-              gap: 2px;
-              @media only screen and (max-width: 550px) {
-                svg {
-                  width: 20px;
-                }
-              }
+          .card-name {
+            font-size: 25px;
+            font-weight: 400;
+            font-family: "Supreme-Regular", sans-serif;
+            line-height: 36.6px;
+            letter-spacing: -0.5px;
+            text-align: left;
+            color: #ffffff;
+            @media only screen and (max-width: 550px) {
+              font-size: 20px;
             }
           }
-        }
 
-        .action_btn {
-          border: none;
-          padding: 8px 12px;
-          border-radius: 190px;
-          cursor: pointer;
-          margin-top: 8px;
-          background: transparent;
-          transition: 0.3s linear;
-
-          &:hover {
-            opacity: 0.8;
+          .card-location {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            font-family: "Supreme-Regular", sans-serif;
+            text-align: left;
+            color: #ffffffca;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100% ;
+            @media only screen and (max-width: 550px) {
+              font-size: 14px;
+            }
+          }
+          .stars {
+            bottom:30px;
+            right: 10px;
+            position: absolute;
+            margin-top: 5px;
+            display: inline-flex;
+            gap: 2px;
+            @media only screen and (max-width: 550px) {
+              svg {
+                width: 10px;
+              }
+            }
           }
         }
       }
-      .isPlaying {
-        opacity: 0;
+
+      .action_btn {
+        border: none;
+        padding: 8px 12px;
+        border-radius: 190px;
+        cursor: pointer;
+        margin-top: 8px;
+        background: transparent;
+        transition: 0.3s linear;
+
         &:hover {
-          opacity: 1;
+          opacity: 0.8;
         }
+      }
+    }
+    .isPlaying {
+      opacity: 0;
+      pointer-events: none;
+      &:hover {
+        opacity: 1;
+        pointer-events: auto;
       }
     }
   }
 
+  hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 40px 0;
+  }
+
+  // Styles for the new progress bar section
   .progress {
     display: flex;
     align-items: center;
     gap: 20px;
-    // padding-right: 60px;
     margin-top: 30px;
+    padding-right: 60px; // Add padding similar to content_top for alignment
+
+    @media only screen and (max-width: 1400px) {
+      padding-right: 40px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding-right: 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding-right: 10px;
+    }
 
     .nav-btn {
       min-width: 54px;
       min-height: 54px;
-      background: #2a1616;
       border: none;
       border-radius: 100px;
       cursor: pointer;
+      display: flex; // Ensure icons are centered
+      justify-content: center;
+      align-items: center;
+      transition: background 0.3s ease; // Add transition for background
+      border: 1px solid #00CFDE;
+      background: transparent;
       @media only screen and (max-width: 400px) {
         min-width: 40px;
         min-height: 40px;
@@ -349,7 +347,9 @@
       svg {
         width: 32px;
         height: 32px;
-        color: #fff;
+        color: #2a1616;
+        transition: color 0.3s ease; // Add transition for SVG color
+
         @media only screen and (max-width: 400px) {
           width: 22px;
           height: 22px;
@@ -358,24 +358,28 @@
 
       &:disabled {
         cursor: not-allowed;
-
+        border: 1px solid rgba(128, 128, 128, 0.645);
         svg {
-          color: #ffffff42;
+          color: #0000005c;
         }
+      }
+      &:not(:disabled):hover {
+        // background: #0056b3; // Hover effect for buttons
       }
     }
 
     .progress-bar-wrapper {
-      width: 100%;
+      flex-grow: 1; // Allows the progress bar to take up available space
       background: #f0f0f0;
       height: 5px;
-      // margin-top: 16px;
+      border-radius: 100px; // Make corners rounded
+      overflow: hidden; // Ensures progress bar doesn't extend beyond wrapper
 
       .progress-bar {
         border-radius: 100px;
         background: #215ad5;
         height: 100%;
-        transition: width 0.5s ease;
+        transition: width 0.5s ease-in-out; // Smooth transition for width change
       }
     }
   }

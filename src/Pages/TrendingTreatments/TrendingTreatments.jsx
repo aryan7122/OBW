@@ -208,7 +208,11 @@ const TrendingTreatments = () => {
 
 
             <footer className="footer-section" >
-                <button className="Book-Now" onClick={() => setShowModal(true)}>Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="Book-Now btn" onClick={() => setShowModal(true)}>
+                    <span>
+                    Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                    </span>
+                </button>
                 <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
             </footer>
 

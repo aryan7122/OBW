@@ -1,0 +1,276 @@
+// Locations.scss
+
+.locations-container {
+  padding: 60px;
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  text-align: center;
+  background-image: url("../../assets/location/Gradient.svg");
+  @media only screen and (max-width: 1400px) {
+    padding: 40px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 30px 10px;
+  }
+  .locationsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // border: 1px solid red !important;
+    gap: 20px;
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      align-items: start;
+    }
+    h2 {
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 75px;
+      letter-spacing: -2.200000047683716px;
+      text-align: left;
+      color: #151515;
+      width: 679px;
+      img {
+        margin-left: 10px !important;
+        width: 50px;
+      }
+      @media only screen and (max-width: 1300px) {
+        font-size: 52px;
+        line-height: 65px;
+        img {
+          margin-left: 10px !important;
+          width: 50px;
+        }
+      }
+      @media only screen and (max-width: 1000px) {
+        font-size: 40px;
+        line-height: 45px;
+        width: 100%;
+        img {
+          width: 40px;
+        }
+      }
+    }
+
+    p {
+      width: 555px;
+      font-size: 24px;
+      font-weight: 400;
+      font-family: "Supreme-Regular", sans-serif;
+
+      line-height: 31.2px;
+      letter-spacing: -0.800000011920929px;
+      text-align: right;
+      color: #454545;
+      @media only screen and (max-width: 1300px) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      @media only screen and (max-width: 1000px) {
+        font-size: 18px;
+        line-height: 20px;
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+
+  .cards {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
+    @media only screen and (max-width: 1502px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media only screen and (max-width: 1260px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      // width: 300px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 440px;
+      @media only screen and (max-width: 500px) {
+        height: fit-content;
+      }
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        @media only screen and (max-width: 500px) {
+          max-height: 200px;
+        }
+      }
+
+      h3 {
+        padding: 10px 15px;
+        font-size: 28px;
+        font-weight: 500;
+        line-height: 36.4px;
+        letter-spacing: -1px;
+        text-align: left;
+        color: #472525;
+        @media only screen and (max-width: 660px) {
+          font-size: 22px;
+          font-weight: 500;
+          line-height: 30.4px;
+          padding: 0 10px;
+        }
+      }
+
+      p {
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Supreme-Regular", sans-serif;
+        line-height: 22.4px;
+        text-align: left;
+        color: #454545;
+        @media only screen and (max-width: 660px) {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20.4px;
+          padding: 10px;
+        }
+      }
+
+      button {
+        margin: 15px 15px;
+        display: block;
+        padding: 5px 7px;
+        border: 1px solid #2463eb;
+        color: #643434;
+        border-radius: 100px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        transition: 0.3s ease;
+        .arrow-icon {
+          transition: 0.3s linear;
+          width: 30px;
+          height: 30px;
+          border-radius: 100px;
+          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+          font-size: 16px;
+          color: #fff;
+          padding: 8px;
+        }
+        &:hover {
+          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+          color: #fff;
+          .arrow-icon {
+            background: #fff;
+            color: #0056b3;
+          }
+        }
+      }
+    }
+    .card:nth-child(4) {
+      @media only screen and (max-width: 1502px) {
+        display: flex;
+        grid-column: span 2;
+      }
+      // width: 160%;
+      @media only screen and (max-width: 1260px) {
+        width: 100%;
+        display: grid;
+        grid-column: span 1;
+      }
+
+      // align-items: center;
+      img {
+        @media only screen and (max-width: 1502px) {
+          min-width: 350px;
+          height: 100%;
+        }
+        @media only screen and (max-width: 1300px) {
+          min-width: 300px;
+        }
+        @media only screen and (max-width: 1260px) {
+          // min-width: 600px;
+          height: 200px;
+        }
+        @media only screen and (max-width: 660px) {
+          min-width: 250px;
+        }
+      }
+      // .Rajarajeshwar {
+      //   padding: 30px 15px;
+      //   @media only screen and (max-width: 500px) {
+      //     padding: 10px 0;
+      //   }
+      // }
+    }
+  }
+
+  .view-all {
+    margin-top: 2rem;
+    padding: 8px 10px 8px 25px;
+    margin-top: 70px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+    color: #fff;
+    border: 1px solid transparent;
+    transition: 0.3s linear;
+    @media only screen and (max-width: 500px) {
+      padding: 5px 6px 5px 15px;
+      font-size: 16px;
+    }
+    .arrow-icon {
+      transition: 0.3s linear;
+      background: #fff;
+      color: #0056b3;
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+    }
+    &:hover {
+      background: #fff !important;
+      border: 1px solid #0056b3;
+      color: #472525;
+      .arrow-icon {
+        background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+        color: #fff;
+      }
+    }
+  }
+}

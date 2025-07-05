@@ -1,0 +1,220 @@
+// AboutUs.scss
+
+.about-us {
+  display: flex;
+  align-items: center;
+  //   justify-content: center;
+  padding: 60px 100px 60px 100px;
+  height: 703px;
+  background: linear-gradient(106.86deg, #00575d 37.92%, #334f51 85.74%);
+  position: relative;
+  overflow: hidden;
+  margin-top: -122px;
+  backdrop-filter: blur(180px);
+  //
+  
+  @media only screen and (min-width: 1601px) {
+      padding:  80px;
+    }
+  @media only screen and (max-width: 1400px) {
+    padding: 40px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 10px;
+    height: 650px;
+  }
+  .element1::before,
+  .element2::before,
+  .element3::before {
+    content: "";
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    border-radius: 50%;
+    background: #ff71b6;
+    filter: blur(130px);
+    z-index: 2;
+  }
+  .element4::before,
+  .element5::before {
+    content: "";
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    border-radius: 50%;
+    background: #9dff00;
+    filter: blur(140px);
+    z-index: 2;
+  }
+
+  .element1::before {
+    top: 10%;
+    left: 0%;
+    animation: float 13s ease-in-out infinite;
+  }
+
+  .element2::before {
+    top: 70%;
+    left: 15%;
+    animation: float 14s ease-in-out infinite;
+  }
+  .element3::before {
+    top: 60%;
+    left: 45%;
+    animation: float 15s ease-in-out infinite;
+  }
+  .element4::before {
+    top: 30%;
+    left: 70%;
+    animation: float 20s ease-in-out infinite;
+  }
+  .element5::before {
+    top: 80%;
+    left: 80%;
+    animation: float 18s ease-in-out infinite;
+  }
+
+  .content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: white;
+    max-width: 770px;
+
+    h1 {
+      margin-top: 0px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 70px;
+      letter-spacing: -3px;
+      @media only screen and (max-width: 813px) {
+        font-size: 60px;
+        line-height: 67px;
+      }
+      @media only screen and (max-width: 628px) {
+        font-size: 50px;
+        line-height: 54px;
+        letter-spacing: -2px;
+      }
+      @media only screen and (max-width: 555px) {
+        font-size: 42px;
+        line-height: 49px;
+        letter-spacing: -1px;
+      }
+      @media only screen and (max-width: 420px) {
+        font-size: 38px;
+        line-height: 42px;
+        margin-top: 80px;
+        letter-spacing: -1px;
+      }
+      @media only screen and (max-width: 380px) {
+        font-size: 34px;
+        line-height: 40px;
+      }
+      @media only screen and (max-width: 330px) {
+        font-size: 32px;
+        margin-top: 111px;
+        line-height: 35px;
+      }
+    }
+
+    p {
+      font-family: 'Supreme-Regular', sans-serif;
+      font-size: 18px;
+      line-height: 25.2px;
+      letter-spacing: 0%;
+      margin-top: 20px;
+      text-align: left;
+      @media only screen and (max-width: 500px) {
+        font-size: 16px;
+        line-height: 22.2px;
+      }
+    }
+    .BookAppointmentNow {
+      margin-top: 2rem;
+      padding: 8px 10px 8px 25px;
+      margin-top: 50px;
+      background-color: #007bff;
+      color: #643434;
+      border: none;
+      font-size: 20px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background: linear-gradient(90.15deg, #f2f3f4 0.13%, #ffffff 103.2%);
+      border: 1px solid transparent;
+      transition: 0.3s linear;
+      @media only screen and (max-width: 780px) {
+        padding: 5px 8px 5px 20px;
+        font-size: 18px;
+        margin-top: 50px;
+        // margin-top: 10px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding: 5px 6px 5px 15px;
+        font-size: 16px;
+      }
+
+      .arrow-icon {
+        transition: 0.3s linear;
+        background: #364242;
+        color: #ffffff;
+        border-radius: 100px;
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        @media only screen and (max-width: 400px) {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      &:hover {
+        background: #364242 !important;
+        border: 1px solid #364242;
+        color: #fff;
+
+        .arrow-icon {
+          background: linear-gradient(90.15deg, #ffffff 0.13%, #ffffff 103.2%);
+          color: #643434;
+        }
+      }
+    }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    scale: 1;
+  }
+
+  25% {
+    transform: translateY(-50%) translateX(25%);
+    scale: 0.95;
+  }
+
+  50% {
+    transform: translateY(-100%) translateX(50%);
+    scale: 0.9;
+  }
+
+  75% {
+    transform: translateY(-50%) translateX(75%);
+    scale: 0.95;
+  }
+}

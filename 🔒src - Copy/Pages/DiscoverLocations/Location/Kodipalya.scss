@@ -1,0 +1,197 @@
+// App.scss
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu+Condensed&display=swap");
+
+.main-container-Kankpur {
+    height: 815px;
+    width: 100%;
+    padding: 60px 100px 60px 100px;
+    background-color: #1c1c1c;
+    // color: white;
+    //   font-family: "Poppins", sans-serif;
+    background-image: url("https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Locations/egb6xfxceezeogkbnb1r");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20% 48%;
+@media only screen and (max-width: 1400px) {
+        padding: 40px;
+    }
+
+    @media only screen and (max-width: 900px) {
+        padding: 20px;
+    }
+
+    @media only screen and (max-width: 400px) {
+        padding: 10px;
+    }
+    .content {
+        width: 100%;
+        // padding: 2rem;
+
+        .top_title {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .title {
+                font-family: "Ubuntu Condensed", sans-serif;
+                font-size: 140px;
+                font-weight: 200 !important;
+                letter-spacing: -10px;
+                @media only screen and (max-width: 1300px) {
+                        font-size: 100px ;
+                    }
+                                         @media only screen and (max-width: 600px) {
+                                             font-size: 80px;
+                                             letter-spacing: -3px;
+                                         }
+            }
+
+            .address {
+                width: 360px;
+                font-weight: 400;
+                    font-family: 'Supreme-Regular', sans-serif;
+                font-size: 16px;
+                line-height: 19.2px;
+                letter-spacing: 0%;
+                text-align: right;
+                color: #ffffff;
+                margin-bottom: 2rem;
+            }
+        }
+
+        ._line {
+            width: 100% !important;
+            height: 10px;
+            margin-top: 60px;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .action_two {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .buttons {
+                margin-top: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                gap: 1rem;
+
+                .book-btn,
+                .phone-btn {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    padding: 10px 15px;
+                    border: 1px solid #ffffff;
+                    background: transparent;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: 400;
+                        font-family: 'Supreme-Regular', sans-serif;
+                    font-size: 20px;
+                    line-height: 28px;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    border-radius: 50px;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+
+                    span {
+                        background: #1e54c9;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 15px;
+                        padding: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        svg {
+                            padding: 1px;
+                        }
+                    }
+
+                    &:hover {
+                        //   background-color: #1E54C9;
+                        border: 1px solid #1e54c9;
+                    }
+                }
+            }
+
+            .description {
+                margin-top: 50px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.5px;
+                text-align: right;
+                color: #ffffff;
+                margin-bottom: 2rem;
+                width: 545px;
+            }
+        }
+    }
+
+    .photos-section {
+        text-align: left;
+        margin-top: 80px;
+
+        span {
+            font-weight: 400;
+                font-family: 'Supreme-Regular', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0%;
+            color: white;
+
+        }
+
+        .photos {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+
+            .photo {
+                border: 1px solid rgb(255, 255, 255);
+                position: relative;
+                width: 130px;
+                height: 130px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+
+                &:hover {
+                    opacity: 0.9;
+                    scale: 1.03;
+                }
+            }
+
+            .more-photos {
+                width: 130px;
+                height: 130px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000000;
+                border-radius: 8px;
+                color: white;
+                font-weight: 700;
+                font-size: 48.1px;
+                line-height: 67.34px;
+                letter-spacing: -1.2px;
+                text-align: right;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+            }
+        }
+    }
+}

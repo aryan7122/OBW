@@ -137,20 +137,22 @@ const TeamSection = () => {
       </div> */}
       <div className="teams-container">
         <div className="teams-header">
-          <div>
+          <div className="head-title-team">
             <h2>
-              Our qualified and experienced {' '}
+              Our
+              {'  '}
               <img src={icon1} alt=""
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true, amount: 0.2 }} /> {' '}
-              team
+              qualified and experienced team
             </h2>
             <p>
-              At OBW, we have a diverse team with a broad range of expertise. We
+              At OBW Clinic, our team provides compassionate mental health support tailored to you.
+              {/* At OBW, we have a diverse team with a broad range of expertise. We
               are committed to providing high quality and compassionate mental
-              health support to meet your needs.
+              health support to meet your needs. */}
             </p>
           </div>
           {/* <button className="view-all"
@@ -177,9 +179,6 @@ const TeamSection = () => {
             // viewport={{ once: true, amount: 0 }}
             >
               <div>
-                <h3 id={stat.id} className="stat-number">0{stat.isPercentage ? "%" : "+"}</h3>
-                <p>{stat.label}</p>
-              </div>
               <img
                 effect="blur" wrapperProps={{
                   style: { transitionDelay: "0.2s" },
@@ -194,6 +193,9 @@ const TeamSection = () => {
                       stat.id === "satisfaction" ? icon5 :
                         stat.id === "locations" ? icon6 :
                           icon7} />
+                <p>{stat.label}</p>
+              </div>
+                <h3 id={stat.id} className="stat-number">0{stat.isPercentage ? "%" : "+"}</h3>
             </div>
           ))}
         </div>

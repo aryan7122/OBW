@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+.classic-deals {
+  padding: clamp(2rem, 6vw, 6rem);
+  background-color: #f4fdff;
+  text-align: left;
+  margin-top: clamp(-2rem, 6vw, -6rem);
+  .top-heading {
+    display: flex;
+    justify-content: space-between !important;
+    align-items: center;
+    @media only screen and (max-width: 630px){
+      // width: 95%;
+      flex-direction: column;
+      align-items: start;
+      text-align: left;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+      background-color: #e9f1ff;
+      color: #0032a0;
+      font-weight: 500;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 5vw, 2.5rem); // 40px max
+      color: #002092;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -1.8px;
+      display: flex;
+      gap: 10px;
+      @media (max-width: 1100px){
+          display: block;
+          line-height: 1.1;
+      }
+      img {
+        width: clamp(1.75rem, 5vw, 2.5rem);
+      }
+      @media only screen and (max-width: 630px){
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1rem); // 20px max
+      color: #1a1a1a;
+      max-width: 600px;
+      // margin: 0 auto 2rem;
+      line-height: 1.4;
+      text-align: right;
+      @media (max-width: 1300px){
+        max-width: 340px;
+      }
+      @media only screen and (max-width: 630px){
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .offers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 1140px){
+      grid-template-columns: 1fr ;
+    }
+    gap: 20px;
+    margin: 2rem 0;
+
+    .offer-card {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      padding: clamp(1rem, 2vw, 1.5rem);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 212px;
+      max-height: 212px;
+
+      .text-content {
+        z-index: 2;
+
+        h3 {
+          font-size: clamp(1.5rem, 4vw, 2.5rem); // 40px
+          font-weight: 500;
+          line-height: 1.2;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: clamp(1rem, 2vw, 1.25rem); // 20px
+          line-height: 1.3;
+          white-space: pre-line;
+          margin-bottom: 1rem;
+        }
+
+        .Book-Now {
+          position: absolute;
+          bottom: 20px;
+          padding: 5px 5px 5px 20px;
+          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+          color: #fff;
+          border: 1px solid transparent;
+          border-radius: 100px;
+          font-size: clamp(1rem, 2vw, 1.1rem); // 20px
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 500;
+          letter-spacing: -0.5px;
+          line-height: 24px;
+          cursor: pointer;
+          transition: 0.3s linear;
+          height: 40px;
+          .arrow-icon {
+            background: #fff;
+            color: #0056b3;
+            border-radius: 100px;
+            width: 30px;
+            height: 30px;
+            padding: 5px;
+            transition: 0.3s linear;
+          }
+
+          &:hover {
+            background: #fff !important;
+            color: #472525;
+            border: 1px solid #0056b3;
+
+            .arrow-icon {
+              background: linear-gradient(
+                90.15deg,
+                #2463eb 0.13%,
+                #1c4eb8 103.2%
+              );
+              color: #fff;
+            }
+          }
+        }
+      }
+
+      .deal-img {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 1140px) {
+      grid-template-columns: 1fr 1fr ;
+    }
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr  ;
+    }
+    .offer-card {
+      .text-content {
+        h3 {
+          font-size: clamp(1rem, 2vw, 1.5rem);
+        }
+        p {
+          font-size: clamp(1rem, 2vw, 1.1rem);
+        }
+      }
+    }
+  }
+  .grid-3 {
+    .offer-card:nth-child(1) {
+      .text-content {
+        h3 {
+          font-size: clamp(1rem, 2vw, 2.5rem) !important;
+          width: 150px;
+        }
+      }
+    }
+    @media (max-width: 1140px){
+      .offer-card:nth-child(3) {
+        grid-column: 1;
+        width: 203.5%;
+        @media (max-width: 800px){
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .see-all {
+    margin-top: 2rem;
+    margin: 0 auto !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .see-all-btn {
+      cursor: pointer;
+      padding: 12px 20px 12px 25px;
+      background: #fff;
+      border: 1px solid #2463eb;
+      color: #1c4eb8;
+      border-radius: 100px;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      transition: 0.3s ease;
+      .arrow-icon {
+        // background: #2463eb;
+        // color: #fff;
+        // border-radius: 100px;
+        // padding: 5px;
+        // width: 40px;
+        // height: 40px;
+      }
+
+      &:hover {
+        background: #1c4eb8;
+        color: #fff;
+
+        .arrow-icon {
+          // background: #fff;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

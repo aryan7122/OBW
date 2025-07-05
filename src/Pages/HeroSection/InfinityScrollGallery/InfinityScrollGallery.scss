@@ -1,0 +1,70 @@
+/* InfinityScrollBeautyGallery.scss */
+.gallery-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+    background: #ffffff00;
+    // padding: 20px;
+  }
+  
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: scrollInfinite 30s linear infinite;
+  }
+  
+  .columns.lefts {
+    animation-direction: normal;
+  }
+  
+  .columns.rights {
+    animation-direction: reverse;
+  }
+  
+  .columns .imgS {
+    max-width: 320px;
+    max-height: 340px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #CFC0C0;
+    @media only screen and (max-width: 1340px){
+      max-width: 280px;
+      max-height: 300px;
+    }
+    @media only screen and (max-width: 1099px){
+      max-width: 220px;
+      max-height: 240px;
+    }
+    @media only screen and (max-width: 969px){
+      max-width: 200px;
+      max-height: 220px;
+    }
+    &:hover{
+        border: 1px solid #2463EB;
+        box-shadow: 0px 0px 10px 0.1px #79797974;
+        transform: translateY(0.5%);
+        transform: translateX(-0.5%);
+    }
+  }
+  
+  @keyframes scrollInfinite {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30%); }
+  }
+  
+  @media (max-width: 768px) {
+    .gallery-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px;
+    }  
+    .columns .imgS {
+      width: 45vw;
+      height: auto;
+    }
+  }

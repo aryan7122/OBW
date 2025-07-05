@@ -23,9 +23,19 @@
   -moz-user-select: none;
   /* Firefox */
   -ms-user-select: none;
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #ffffff26;
+    backdrop-filter: blur(10px);
+  }
   @media only screen and (min-width: 1601px) {
-      padding: 0 80px;
-    }
+    padding: 0 80px;
+  }
   @media only screen and (max-width: 1400px) {
     padding: 0 40px;
   }
@@ -35,15 +45,19 @@
   @media only screen and (max-width: 400px) {
     padding: 0 10px;
   }
+  .navbar-links {
+    border: 1px solid #e8e8e8;
+    border-radius: 50px;
+    padding: 10px 20px;
+  }
 
   &.navbar-scrolled {
     // background-color: #ffffff;
     .navbar-container {
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      // background: #fff;
       .navbar-logo {
         img {
-          filter: sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0);
+          // filter: sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0);
         }
       }
       .navbar-links {
@@ -73,17 +87,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 0px auto;
     display: flex;
     align-items: center;
     width: 100%;
-    background: radial-gradient(
-      128.1% 243.86% at 115.57% 146.38%,
-      rgba(255, 255, 255, 0.08) 24.26%,
-      rgba(153, 153, 153, 0.08) 62.72%
-    );
-    backdrop-filter: blur(128px);
-    -webkit-backdrop-filter: blur(122px);
+    // background: radial-gradient(
+    //   128.1% 243.86% at 115.57% 146.38%,
+    //   rgba(255, 255, 255, 0.08) 24.26%,
+    //   rgba(153, 153, 153, 0.08) 62.72%
+    // );
+    backdrop-filter: blur(0px);
+    // -webkit-backdrop-filter: blur(122px);
     // width: 1323px;
     height: 76px;
 
@@ -98,8 +112,16 @@
 
   .navbar-logo {
     .logo-circle {
-      // width: 37.72px;
-      // height: 28.3px;
+     
+      background: #643434;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 !important;
+      left: 120px;
+      border-radius: 10.88px;
 
       display: flex;
       align-items: center;
@@ -107,7 +129,8 @@
       color: white;
       // font-size: 1.2rem;
       img {
-        width: 35px;
+        max-width: 44px;
+        max-height: 44px;
         // filter: brightness(0) invert(1);
       }
     }
@@ -155,7 +178,7 @@
     // width: 250px;
 
     .appointment-button {
-      width: 196px;
+      width: 210px;
       height: 44px;
       padding: 0px 6px 0px 20px;
       border-radius: 100px;
@@ -331,9 +354,11 @@
   }
   .menu-active {
     li {
-      .active-link{
-        color: rgb(5, 76, 101) !important;
+      .active-link {
+        // color: rgb(5, 76, 101) !important;
         width: fit-content;
+        font-weight: 500;
+        color: #000 !important;
         border-bottom: 1px solid;
       }
       a {
@@ -357,7 +382,7 @@
     li {
       a {
         text-decoration: none;
-        color: white;
+        color: #000000;
       }
     }
 
@@ -526,80 +551,79 @@
     border-bottom-left-radius: 35px !important;
     border-bottom-right-radius: 35px !important;
     width: 90.9vw;
-    input{
+    input {
       color: #171717 !important;
     }
   }
 }
 
-
 @media only screen and (max-width: 440px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-78.6vw) !important;
+    transform: translateX(-78.6vw) !important;
   }
 }
 @media only screen and (max-width: 432px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-78.3vw) !important;
+    transform: translateX(-78.3vw) !important;
   }
 }
 @media only screen and (max-width: 422px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-77.2vw) !important;
-        width: 90.4vw;
+    transform: translateX(-77.2vw) !important;
+    width: 90.4vw;
   }
 }
 @media only screen and (max-width: 399px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-81.3vw) !important;
-        width: 95vw;
+    transform: translateX(-81.3vw) !important;
+    width: 95vw;
   }
 }
 @media only screen and (max-width: 388px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-81vw) !important;
-        width: 94.8vw;
+    transform: translateX(-81vw) !important;
+    width: 94.8vw;
   }
 }
 @media only screen and (max-width: 385px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-80.6vw) !important;
-        width: 94.8vw;
+    transform: translateX(-80.6vw) !important;
+    width: 94.8vw;
   }
 }
 @media only screen and (max-width: 376px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-80.3vw) !important;
-        width: 94.6vw;
+    transform: translateX(-80.3vw) !important;
+    width: 94.6vw;
   }
 }
 @media only screen and (max-width: 364px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-79.5vw) !important;
-        width: 94.6vw;
+    transform: translateX(-79.5vw) !important;
+    width: 94.6vw;
   }
 }
 @media only screen and (max-width: 357px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-79.1vw) !important;
-        width: 94.4vw;
+    transform: translateX(-79.1vw) !important;
+    width: 94.4vw;
   }
 }
 @media only screen and (max-width: 346px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-78.5vw) !important;
-        width: 94.3vw;
+    transform: translateX(-78.5vw) !important;
+    width: 94.3vw;
   }
 }
 @media only screen and (max-width: 337px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-78vw) !important;
-        width: 94.3vw;
+    transform: translateX(-78vw) !important;
+    width: 94.3vw;
   }
 }
 @media only screen and (max-width: 327px) {
   .navbar-container .navbar-actions .search-bar .card_search {
-        transform: translateX(-77.2vw) !important;
-        width: 94vw;
+    transform: translateX(-77.2vw) !important;
+    width: 94vw;
   }
 }

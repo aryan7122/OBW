@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
-import "./App.css";
+import "./App.scss";
 import Navbar from "./Components/NavBar/Navbar";
 import HeroSection from "./Pages/HeroSection/HeroSection";
 import ClinicalConcerns from "./Pages/ClinicalConcerns/ClinicalConcerns";
@@ -31,6 +31,10 @@ import AllTreatments from "./Pages/TrendingTreatments/AllTreatments/AllTreatment
 import PrivacyPolicy from "./Pages/PrivacyPolicy/PrivacyPolicy";
 import TermsOfService from "./Pages/TermsService/TermsOfService";
 import Loader from "./Components/Loading/Loader";
+import WebTabs from "./Components/WebTabs/WebTabs";
+import FabulousSection from "./Pages/FabulousSection/FabulousSection";
+import ClassicDeals from "./Pages/ClassicDeals/ClassicDeals";
+import BannerSectionSalon from "./Pages/BannerSectionSalon/BannerSectionSalon";
 
 function Loader2() {
   return (
@@ -41,11 +45,11 @@ function Loader2() {
 }
 
 function PageWrapper({ children }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    setLoading(true);
+    // setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500); // Adjust the delay as needed
@@ -65,6 +69,7 @@ function App() {
   return (
     <Router>
       <PageWrapper>
+        <WebTabs />
         <Navbar />
         <Routes>
           <Route
@@ -73,13 +78,16 @@ function App() {
               <>
                 <HeroSection />
                 <ClinicalConcerns />
-                <WhyChooseSection />
                 <TeamSection />
+                <WhyChooseSection />
                 <TrendingTreatments />
+                <FabulousSection />
+                <ClassicDeals/>
                 <BlogSlider />
-                <FAQSection />
-                {/* <HappyClients /> */}
-                <FirstStep />
+                <HappyClients />
+                {/* <FAQSection /> */}
+                {/* <FirstStep /> */}
+                <BannerSectionSalon />
               </>
             }
           />

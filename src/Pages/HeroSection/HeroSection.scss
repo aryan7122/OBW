@@ -1,18 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Ubuntu+Condensed&family=Unbounded:wght@200..900&display=swap");
 .hero-section {
   color: white;
-  margin-top: -122px;
+  margin-top: -70px;
   height: 775px;
-  background: linear-gradient(112.2deg, #462b9799 5.44%, #5b2f2f99 51.47%),
-    url("../../assets/icons/Group2.png");
-  background-size: cover;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,      // top pure white
+    #fdf5ec 30%,     // soft center tone
+    #fdf0df 50%,     // hold that peach in middle
+    #504cff66 100%   // bottom slight bluish glow
+  );  background-size: cover;
   background-blend-mode: multiply;
 
   .hero_bg {
     padding: 10px;
     background-size: cover;
-    background-image: url("../../assets//icons/Rectangle\ 16.png");
+    // background-image: url("../../assets//icons/Rectangle\ 16.png");
     transition: 0.4s linear;
+    backdrop-filter: blur(10px);
+
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -22,8 +28,11 @@
     align-items: center;
   }
   .content {
-    padding-left: 100px;
-    max-width: 700px;
+    // padding-left: 100px;
+    margin-top: -4rem;
+    padding-left: clamp(2rem, 6vw, 6rem);
+
+    max-width: 790px;
     @media only screen and (max-width: 1400px) {
       padding-left: 40px;
     }
@@ -33,6 +42,7 @@
     @media only screen and (max-width: 1200px) {
       padding-left: 40px;
       max-width: 600px;
+      margin-top: 0rem;
     }
     @media only screen and (max-width: 930px) {
       padding-left: 20px;
@@ -41,66 +51,113 @@
     @media only screen and (max-width: 770px) {
       max-width: 100%;
       padding-left: 0 !important;
+      margin-top: 60px;
     }
     h1 {
+      width: 667px;
       font-family: "Plus Jakarta Sans";
       // font-family: "Ubuntu Condensed", serif;
       // font-family: "Unbounded", serif;
       font-optical-sizing: auto;
       font-style: normal;
-      background: linear-gradient(
-        160.56deg,
-        #ffffff 6.06%,
-        #eaf8fd 37.4%,
-        #03c1f1 70.6%
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 72px;
-      font-weight: 700;
-
-      line-height: 70px;
-      letter-spacing: -3px;
+     
+      font-size: clamp(2.5rem, 6vw + 1rem, 4.125rem);   // ~40px to 66px
+      line-height: clamp(2rem, 6vw + 1rem, 4.5rem);    // ~48px to 76px
+      letter-spacing: clamp(-4px, -0.3vw, -3px);        // smooth between -2px and -3px
+      
+      font-weight: 500;
+      
       text-align: left;
       margin-bottom: 1rem;
-      color: #fff;
+      color: #0A0A0A ;
       span {
-        // color: #00ccff !important;
-        background: linear-gradient(
-          121.56deg,
-          #03b1f1 6.06%,
-          #0392f1 37.4%,
-          #038af1 70.6%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        // font-size: 70px;
+        // font-size: clamp(2.5rem, 5vw + 1rem, 4.35rem);   // ~40px to 66px
+        // line-height: clamp(3rem, 6vw + 1rem, 4.75rem);    // ~48px to 76px
+        // letter-spacing: clamp(-2px, -0.3vw, -3px); 
+        font-size: 66px;
+        line-height: 76px;
+        letter-spacing: -3px;
+       color: #00575D;
+      }
+      @media only screen and (max-width: 1445px) {
+        font-size: 60px;
+        line-height: 71px;
+        width: 620px;
+      }
+      @media only screen and (max-width: 1340px) {
+        font-size: 55px;
+        line-height: 66px;
+        width: 500px;
       }
       @media only screen and (max-width: 1200px) {
-        font-size: 62px;
-        line-height: 59px;
+        font-size: 54px;
+        line-height: 60px;
+        width: 457px;
+        letter-spacing: -2px;
+        span{
+          font-size: 60px;
+          letter-spacing: -2px;
+
+        }
       }
-      @media only screen and (max-width: 930px) {
-        font-size: 52px;
-        line-height: 50px;
+      @media only screen and (max-width: 940px) {
+        width: 400px;
+        font-size: 44px ;
+        line-height: 49px;
+        span{
+          font-size: 50px;
+          line-height: 54px;
+          letter-spacing: -2px;
+
+        }
       }
       @media only screen and (max-width: 840px) {
         margin-top: 40px;
       }
       @media only screen and (max-width: 770px) {
         margin-top: 160px;
+        width: 85%;
+        margin: 20px auto;
         align-items: center;
         text-align: center;
+        font-size: 57px ;
+        line-height: 64px;
+        letter-spacing: -2.1px;
+        span{
+          font-size: 70px;
+          line-height: 54px;
+          letter-spacing: -2px;
+
+        }
       }
-      @media only screen and (max-width: 430px) {
-          font-size: 46px;
-            line-height: 50px;
-            letter-spacing: -2px;
+      @media only screen and (max-width: 640px){
+        width: 90%;
+        font-size: 47px;
+        line-height: 54px;
+        letter-spacing: -2.1px;
+        span{
+          font-size: 50px;
+          line-height: 57px;
+          letter-spacing: -2px;
+
+        }
       }
-      @media only screen and (max-width: 400px) {
-          font-size: 42px;
-            line-height: 44px;
-            letter-spacing: -2px;
+      @media only screen and (max-width: 580px){
+        width: 95%;
       }
+      @media only screen and (max-width: 410px) {
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -1.8px;
+        span{
+          font-size: 44px;
+          line-height: 50px;
+          letter-spacing: -2px;
+
+        }
+      }
+    
       @media only screen and (max-width: 360px) {
           font-size: 38px;
             line-height: 44px;
@@ -109,21 +166,37 @@
     }
 
     p {
-      width: 90%;
-      font-size: 22px;
+      width: 514px;
+      font-family: 'Geist';
       font-weight: 400;
-      font-family: "Supreme-Regular", sans-serif;
+      font-size: 16px;
       line-height: 24px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+      
       letter-spacing: 0px;
       text-align: left;
-      color: #ffffff;
+      color: #171717;
       // font-style: italic;
      text-transform: capitalize;
      text-shadow: 1px 1px 3px #fdfdfd76;
+     @media only screen and (max-width: 1200px) {
+      width: 434px;
+     }
+     @media only screen and (max-width: 940px) {
+      width: 400px;
+     }
       @media only screen and (max-width: 770px) {
         align-items: center;
         text-align: center;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
+      }
+      @media only screen and (max-width: 640px){
+        width: 90%;
+      }
+      @media only screen and (max-width: 580px){
+        width: 95%;
       }
     }
 
@@ -131,6 +204,9 @@
       display: flex;
       gap: 1rem;
       margin-top: 60px;
+      @media only screen and (max-width: 1200px) {
+        flex-direction: column-reverse;
+      }
       @media only screen and (max-width: 930px) {
         flex-direction: column;
         align-items: start;
@@ -144,7 +220,7 @@
         scale: 0.9;
       }
       .appointment-button {
-        width: 276px;
+        width: 280px;
         height: 52px;
         padding: 0px 6px 0px 20px;
         border-radius: 100px;
@@ -152,8 +228,8 @@
         align-items: center;
         outline: none;
         border: 1px solid transparent;
-        background: #ffffff;
-        color: #643434;
+        background: #5B2F2F;
+        color: #ffff;
         cursor: pointer;
         font-size: 20px;
         font-weight: 400;
@@ -167,8 +243,8 @@
           color: #fff;
 
           .arrow-icon {
-            background: #ffffff;
-            color: #643434;
+            background: #5B2F2F;
+            color: #ffff;
           }
         }
 
@@ -189,18 +265,13 @@
 
       .secondary-btn {
         width: 242.6px;
-        background: linear-gradient(
-          90.15deg,
-          rgba(36, 99, 235, 0.15) 0.13%,
-          rgba(20, 56, 133, 0.09) 46.74%,
-          rgba(28, 78, 184, 0.15) 103.2%
-        );
+        background: linear-gradient(90.15deg, rgba(36, 99, 235, 0.15) 0.13%, rgba(20, 56, 133, 0.09) 46.74%, rgba(28, 78, 184, 0.15) 103.2%);
         height: 52.8px;
         display: flex;
         align-items: center;
         justify-content: center;
         min-height: 52.8px;
-        gap: 8px;
+        gap: 10px;
         outline: none;
         border: 1px solid #2463eb;
         border-radius: 120px;
@@ -209,10 +280,14 @@
         line-height: 28px;
         letter-spacing: -0.5px;
         text-align: center;
-        color: #fff;
+        color: #171717;
         opacity: 0px;
         cursor: pointer;
         transition: 0.3s linear;
+        svg{
+          stroke:#171717;
+          fill: transparent;
+        }
         &:hover {
           background: #2463eb74;
         }
@@ -224,16 +299,16 @@
   }
 
   .hero-image {
+    background: #f0ebeb00;
     display: flex;
     justify-content: center;
     align-items: center;
-    // border: 1px solid red !important;
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 650px;
-    height: 754px;
-    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    margin-top: 18px;
     border-radius: 18px;
     // background: #5b2f2f;
     // background: radial-gradient(128.1% 243.86% at 115.57% 146.38%,

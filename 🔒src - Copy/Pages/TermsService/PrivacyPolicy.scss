@@ -1,0 +1,127 @@
+.privacy-policy {
+  color: #333;
+  // padding: 40px;
+
+  margin: auto;
+
+  header {
+    background-image: url("../../assets/policy/Gradient.svg");
+    filter: sepia(0.5) hue-rotate(230deg) brightness(1.2) saturate(1.5);
+    // background: linear-gradient(40deg, #caf3f8, #f6f8f8, #caf3f8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    text-align: center;
+    padding-bottom: 20px;
+    height: 325px;
+    h1 {
+        margin: 0 auto;
+        width: 770px;
+      padding-top: 50px;
+      text-align: left;
+      color: #371d1d !important;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 67.2px;
+      letter-spacing: -3px;
+    }
+
+    p {
+        margin: 0 auto;
+            width: 770px;
+      margin-top: 20px;
+            font-family: 'Supreme-Regular', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #171717;
+      text-align: left;
+      letter-spacing: 0%;
+    }
+
+    .effective-date {
+        margin: 0 auto;
+            width: 770px;
+      margin-top: 20px;
+      font-weight: 400;
+            font-family: 'Supreme-Regular', sans-serif;
+      font-size: 18px;
+      line-height: 27px;
+      letter-spacing: 0%;
+      text-align: left;
+      color: #171717;
+    }
+  }
+
+  main {
+    width: 770px;
+    margin: 0 auto;
+    section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #fafafa;
+      border-bottom: 2px solid #e0e0e0;
+
+      h2 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31.2px;
+        letter-spacing: -0.8px;
+        color: #151515;
+        margin-bottom: 8px;
+      }
+      p{
+            font-weight: 400;
+                  font-family: 'Supreme-Regular', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0%;
+            color: #454545;
+            // margin-top: 8px;
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+        font-weight: 400;
+              font-family: 'Supreme-Regular', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0%;
+            color: #454545;
+        }
+      }
+    }
+  }
+
+  .contact-us {
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        font-weight: 400;
+              font-family: 'Supreme-Regular', sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0%;
+            color: #454545;
+      }
+    }
+  }
+
+  footer {
+    text-align: left;
+  
+    font-weight: 500;
+        font-size: 20px;
+        width: 770px;
+        margin: 40px auto;
+        line-height: 24px;
+        letter-spacing: 0%;
+        color: #454545;
+        border-bottom: 2px solid #e0dede;
+        padding-bottom: 20px;
+  }
+}

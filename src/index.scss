@@ -1,4 +1,6 @@
-@import './Fonts/WEB/css/supreme.css';
+// @import './Fonts/WEB/css/supreme.css';
+// @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -8,7 +10,9 @@
 }
 
 body {
-  font-family: 'Supreme-Medium', sans-serif;
+  font-family: 'Geist', sans-serif;
+  // font-family: 'Bricolage Grotesque', sans-serif;
+
   overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
