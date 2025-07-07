@@ -1,7 +1,7 @@
 .hero-section {
   color: white;
   margin-top: -70px;
-  height: 640px;
+  height: 670px;
   background: linear-gradient(
     180deg,
     #ffffff 0%,      // top pure white
@@ -29,7 +29,7 @@
 
   .content {
     // padding-left: 100px;
-    margin-top: -4rem;
+    margin-top: -1rem;
     padding-left: 120px;
 
     max-width: 790px;
@@ -59,7 +59,6 @@
       // font-family: "Unbounded", serif;
       font-optical-sizing: auto;
       font-style: normal;
-     
       font-size: clamp(2.5rem, 6vw + 1rem, 4.125rem);   // ~40px to 66px
       line-height: clamp(2rem, 6vw + 1rem, 4.5rem);    // ~48px to 76px
       letter-spacing: clamp(-4px, -0.3vw, -3px);        // smooth between -2px and -3px
@@ -202,7 +201,7 @@
     .buttons {
       display: flex;
       gap: 1rem;
-      margin-top: 60px;
+      margin-top: 40px;
       @media only screen and (max-width: 1200px) {
         flex-direction: column-reverse;
       }

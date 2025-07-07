@@ -384,41 +384,21 @@ const clinicalData = {
       type: "simple",
       title: "Melasma",
       tags: [
-        "Lip Peels",
-        "Lip Neutralizing Treatment"
+        "Cosmelan Peel ",
+        "Skin Peels",
+        "Topical Lightening Agents"    
       ],
       imageUrl: Lip_pegmentation_img
     },
-    // {
-    //   type: "simple",
-    //   title: "Scar Reduction",
-    //   tags: [
-    //     "Dermapen/Microneedling",
-    //     "Subcision with Fillers",
-    //     "TCA Cross",
-    //     "Keloid Treatments"
-    //   ],
-    //   imageUrl: Scar_reduction_img, // <- Add this image
-    // },
-    // {
-    //   type: "simple",
-    //   title: "Dark Spots",
-    //   tags: [
-    //     "Carbon Peel",
-    //     "Microdermabrasion",
-    //     "Laser Resurfacing",
-    //     "Retinol Treatments"
-    //   ],
-    //   imageUrl: Dark_spots_img
-    // },
+
     {
       type: "simple",
       title: "Saggy Skin",
       tags: [
-        "Fat Freezing",
-        "Chin Sculpting",
-        "RF Tightening",
-        "Kybella Injections"
+        "Thread Lifts",
+        "HIFU",
+        "Skin Tightening Lasers",
+        "Profhilo"
       ],
       imageUrl: Saggy_skin_img,
     },
@@ -426,15 +406,15 @@ const clinicalData = {
       type: "simple",
       title: "IV  Therapy",
       tags: [
-        "Fat Freezing",
-        "Chin Sculpting",
-        "RF Tightening",
-        "Kybella Injections"
+        "Re-Glow Therapy",
+        "Pro-Aging Therapy",
+        "Beauty Drip",
+        "Hydrating Drip"
       ],
       imageUrl: Saggy_skin_img,
     }
   ]
-,
+  ,
 
   "Scalp/Hair Care": [
     {
