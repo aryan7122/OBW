@@ -744,21 +744,24 @@ function ClinicalConcerns() {
                         {/* Checkmark SVG for each tag, only if selected */}
                         {selectedTagIndex === tagIdx && (
                           <span>
-                            ☑ {" "}
+                            ✓ {" "}
                           </span>
                         )}
                         {selectedTagIndex !== tagIdx && (
                           <span>
-                            ▢  {" "}
+                            {/* ▢  {" "} */}
                           </span>
                         )}
                         {tag}
                       </span>
                     ))}
                     {/* "More >" Tag */}
-                    <span className="tag more-tag" onClick={handleMoreClick}>
-                      More &gt;
-                    </span>
+                    {card.tags.length > 4 && (
+                      <span className="tag more-tag" onClick={handleMoreClick}>
+                        More &gt;
+                      </span>
+                    )}
+
                   </div>
                 )}
               </div>
