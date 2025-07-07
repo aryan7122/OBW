@@ -25,7 +25,7 @@ const iconsMap = {
 };
 
 
-import Anti_Aging_img from '../../assets/TrendingTreatments/Anti_Aging_img.png'
+import Anti_Aging_img from '../../assets/TrendingTreatments/fliii.jpg'
 import Dark_circles_img from '../../assets/TrendingTreatments/Dark circles.jpg'
 import active_anc_img from '../../assets/TrendingTreatments/active-anc.jpg'
 import Lip_pegmentation_img from '../../assets/TrendingTreatments/Lip pegmentation.jpg'
@@ -58,6 +58,8 @@ import Lobuloplasty_img from '../../assets/TrendingTreatments/Body concerns/Earl
 import Face_removal_img from '../../assets/TrendingTreatments/Face & scalp cyst removal.jpg'
 import dimpleplasty_img from '../../assets/TrendingTreatments/dimpleplasty.jpg'
 import PMUimg from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
+import IVtherapy_img from '../../assets/TrendingTreatments/IV therapy.jpg'
+import Melasma_img from '../../assets/TrendingTreatments/Melesma.jpg'
 
 // Your clinicalData remains unchanged
 // const clinicalData = {
@@ -375,8 +377,10 @@ const clinicalData = {
       type: "simple",
       title: "Dark Spots & Sun damage",
       tags: [
-        "Lip Peels",
-        "Lip Neutralizing Treatment"
+        "Laser Toning",
+        "Chemical Peels",
+        "Vitamin C Facials",
+        "Dermaplaning"
       ],
       imageUrl: Dark_spots_img
     },
@@ -388,7 +392,7 @@ const clinicalData = {
         "Skin Peels",
         "Topical Lightening Agents"    
       ],
-      imageUrl: Lip_pegmentation_img
+      imageUrl: Melasma_img,
     },
 
     {
@@ -411,7 +415,7 @@ const clinicalData = {
         "Beauty Drip",
         "Hydrating Drip"
       ],
-      imageUrl: Saggy_skin_img,
+      imageUrl: IVtherapy_img,
     }
   ]
   ,
@@ -625,7 +629,7 @@ const clinicalData = {
 
 function ClinicalConcerns() {
   const [selectedTab, setSelectedTab] = useState("Skin/Face Care");
-  const [selectedCardIndex, setSelectedCardIndex] = useState(0); // Which card is active/expanded
+  const [selectedCardIndex, setSelectedCardIndex] = useState(null); // Which card is active/expanded
   // New state to track the *specific tag* selected within the active card
   const [selectedTagIndex, setSelectedTagIndex] = useState(null);
   const [showModal, setShowModal] = useState(false); // State for modal visibility
