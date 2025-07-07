@@ -2,11 +2,11 @@
   // padding: 20px;
 
   .treatment-header {
-    background-image: url("../../../assets//TrendingTreatments/allTreatments\ \(2\).jpg");
+    background-image: url("../../../assets//TrendingTreatments/bannner0.png");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
-    height: 500px;
+    height: 670px;
     background-position: 0% 82%;
     padding: 170px 100px 60px 100px;
     margin-top: -120px;
@@ -15,17 +15,21 @@
       // padding: 60px 80px;
     }
     @media only screen and (max-width: 1400px) {
-      padding: 170px 40px 40px 40px;
+      padding: 170px 40px 40px 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      background-position: 50% 92%;
+
     }
     @media only screen and (max-width: 1000px) {
-      padding: 170px 20px 40px 20px;
+      padding: 170px 20px 40px 50px;
+      background-position: 70% 92%;
+
     }
 
-    @media only screen and (max-width: 500px) {
-      height: 555px;
-    }
     @media only screen and (max-width: 400px) {
-      padding: 170px 10px 40px 10px;
+      padding: 170px 10px 40px 20px;
+      
     }
     .card-Treatments {
       background: #b0f0f566;
@@ -34,7 +38,7 @@
       color: #000;
     }
     h1 {
-      margin-top: 20px;
+      margin-top: 160px;
       width: 770px;
       font-weight: 500;
       color: #fff;
@@ -157,7 +161,6 @@
       height: 23px;
     }
     @media only screen and (max-width: 900px) {
-      // border: 1px solid red;
       overflow-y: hidden;
       width: 820px;
       margin: 0;
@@ -174,8 +177,9 @@
       border: none;
       cursor: pointer;
       border-radius: 10px;
-      font-weight: bold;
+      font-weight: 500;
       transition: 0.3s;
+      color: #121212;
 
       @media only screen and (max-width: 1150px) {
         padding: 10px 20px;
@@ -224,6 +228,37 @@
       width: 100%;
       height: 586px;
       border-radius: 20.13px;
+      position: relative;
+      &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        background: rgba(0, 0, 0, 0.058);
+        position: absolute;
+        z-index: 1;
+        border-radius: 12px;
+      }
+      &:hover{
+      &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        background: rgba(0, 0, 0, 0.239);
+        position: absolute;
+        z-index: 1;
+        border-radius: 12px;
+      }
+      .about_action{
+        p{
+          display: block;
+        }
+      }
+    }
+
       .img {
         // width: 315px;
         width: 100%;
@@ -245,19 +280,41 @@
         }
       }
       .about_action {
-        position: absolute;
-        margin-top: -120px;
-        padding: 15px 10px;
 
+          width: 100%;
+        position: absolute;
+        // margin-top: -120px;
+        bottom: 0;
+        // margin-top: 0;
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+      
         // width: 315px;
         h3 {
-          text-align: left;
+          text-align: center;
           font-weight: 700;
           color: #fff;
           text-shadow: 0px 1px 22px rgba(0, 0, 0, 0.517);
           font-size: 25.07px;
           line-height: 32.59px;
           letter-spacing: -0.84px;
+          margin: 0 auto;
+          z-index: 2;
+        }
+        p {
+          position: relative;
+          text-align: center;
+          font-weight: 500;
+          color: #fff;
+          text-shadow: 0px 1px 22px rgba(0, 0, 0, 0.517);
+          font-size: 14.7px;
+          line-height: 22.59px;
+          letter-spacing: -0.84px;
+          transition: 0.3s linear;
+          display: none;
+          z-index: 2;
         }
 
         .book-now {
@@ -275,7 +332,9 @@
           font-weight: 500;
           line-height: 24px;
           letter-spacing: -0.5px;
-
+          min-width: 120px;
+          z-index: 2;
+            margin: 10px auto;
           cursor: pointer;
           transition: background-color 0.3s ease;
           background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);

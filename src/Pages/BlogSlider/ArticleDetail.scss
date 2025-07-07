@@ -396,10 +396,10 @@
       position: relative;
       background: #fff;
       border-radius: 16px;
-      min-height: 563px;
+      min-height: 515px;
       // width: 100%;
       // max-width: 540px;
-      //   border: 1px solid red;
+        // border: 1px solid red;
       border-radius: 20px;
 
       margin: 0 10px;
@@ -508,7 +508,7 @@
         color: #454545;
         margin-top: 8px;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         /* Maximum 3 lines */
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -603,9 +603,9 @@
         }
 
         .read-more-btn {
-          border: 1px solid #010066;
-          color: #010066;
-          padding: 8px 12px;
+          border: 1px solid #02006600;
+          color: #00575D;
+          // padding: 8px 12px;
           border-radius: 190px;
           cursor: pointer;
           margin-top: 8px;
@@ -623,8 +623,9 @@
           }
 
           &:hover {
-            background: #010066;
-            color: #fff;
+            // background: #010066;
+            color: #010066;
+            text-decoration: underline;
           }
         }
       }

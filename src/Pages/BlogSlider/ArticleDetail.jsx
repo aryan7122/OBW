@@ -820,17 +820,17 @@ const ArticleDetail = () => {
                             <h3 className="card-title">{blog?.title}</h3>
                             <h3 className="card-p">{blog?.p}</h3>
                             <div className="author">
-                                <div className="aut_text-img">
+                                {/* <div className="aut_text-img">
                                     <img src={blog?.authorImg} />
                                     <div className="aut_text">
                                         <p className="card-author">{blog?.author}</p>
                                         <p className="card-date">{blog?.date}</p>
                                     </div>
-                                </div>
+                                </div> */}
                                 <button
                                     onClick={() => HandleNavigation2(`${blog?.title}`)}
                                     className="read-more-btn">
-                                    Read Full Blog
+                                    Read more {'>'}
                                 </button>
                             </div>
                         </div>

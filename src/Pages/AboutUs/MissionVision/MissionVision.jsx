@@ -17,17 +17,17 @@ const MissionVision = () => {
             <div className="container">
                 <div className="title0101">
                     <h2 className="section-title">Our Mission and <span className="icon"><img src={icon1} alt="" /></span> Vision</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-
+                    <img
+                        src={img1}
+                        alt="Meeting discussion"
+                        className="image-large"
+                    />
                 </div>
                 <div className="content-wrapper">
                     <div className="left-content">
-                        <img
-                            src={img1}
-                            alt="Meeting discussion"
-                            className="image-large"
-                        />
+                        <p>We’re here to lead the shift from beauty trends to true skin wellness, where results are real, care is personal, and confidence is rooted in clarity. At OBW Clinic, our purpose is simple: to help every individual feel at home in their skin through honest guidance, science-backed treatments, and an experience that feels as good as it works.</p>
                         <div className="stats">
+
                             <div className="cards">
                                 <div className="stat-item">
                                     <h3>2024</h3>
@@ -48,20 +48,24 @@ const MissionVision = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
                     <div className="right-content">
-                        <img
+                        {/* <img
                             src={img2}
                             alt="Skincare model closeup"
                             className="image-feature"
-                        />
+                        /> */}
                         <p className="description">
                             We are dedicated to creating safe and affirming environments. We believe in respect, inclusivity, and accessibility of skin healthcare for all.
                         </p>
-                        <button className="BookAppointmentNow" onClick={() => HandleNavigation("/treatment")}>See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                <button className="BookAppointmentNow btn" onClick={() => HandleNavigation("/treatment")}>
+                    <span> 
+                    See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                </span>
+                </button>
 
                     </div>
-                </div>
-            </div>
         </section>
     );
 };

@@ -84,7 +84,7 @@ function Navbar() {
                 <div className={`navbar-actions ${menuOpen ? 'menu-active' : ''}`}>
                     {!isVisible
                         ? <>
-                            <button className="appointment-button btn2" onClick={handleBookNowClick}>
+                            <button className="appointment-button btn" onClick={handleBookNowClick}>
                                 <span>
                                     Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                                 </span>

@@ -35,6 +35,7 @@ import WebTabs from "./Components/WebTabs/WebTabs";
 import FabulousSection from "./Pages/FabulousSection/FabulousSection";
 import ClassicDeals from "./Pages/ClassicDeals/ClassicDeals";
 import BannerSectionSalon from "./Pages/BannerSectionSalon/BannerSectionSalon";
+import FaqC from "./Pages/AboutUs/ContactForm/FAQC/Faqc";
 
 function Loader2() {
   return (
@@ -82,7 +83,7 @@ function App() {
                 <WhyChooseSection />
                 <TrendingTreatments />
                 <FabulousSection />
-                <ClassicDeals/>
+                <ClassicDeals />
                 <BlogSlider />
                 <HappyClients />
                 {/* <FAQSection /> */}
@@ -98,8 +99,9 @@ function App() {
                 <AboutUsHero />
                 <OurValue />
                 {/* <OurTeam /> */}
+                <MissionVision/>
                 <LocationSection />
-                <FirstStep />
+                {/* <FirstStep /> */}
               </>
             }
           />
@@ -109,6 +111,7 @@ function App() {
               <>
                 <ContactForm />
                 <LocationSection />
+                <FaqC />
               </>
             }
           />

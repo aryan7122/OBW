@@ -11,7 +11,7 @@ import { toast, Toaster } from "react-hot-toast"; // Import toast
 import emailjs from "@emailjs/browser";
 
 // const img = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
-import img from '../../../assets/about/contactimg.jpg'
+import img from '../../../assets/about/Radiant South Asian Woman with Circular Glasses.png'
 
 const ContactForm = () => {
     const [phone, setPhone] = useState("");
@@ -101,15 +101,13 @@ const ContactForm = () => {
                 <div className="image-section">
                     <img src={img} alt="Contact Page Visual" />
                 </div>
-
                 <div className="form-section">
                     <h2>Get In <span className="touch-icon"><img src={Vector} alt="" /></span> Touch!</h2>
                     <p>
                         Please feel free to get in touch at any time. <br />
                         <span> You can reach us anytime via <a href="mailto:info@obwclinic.com">info@obwclinic.com</a> </span>
                     </p>
-
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className="form_card">
                         <div className="form-group">
                             <label>Full Name</label>
                             <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Your name" />
@@ -134,7 +132,7 @@ const ContactForm = () => {
 
                         </div>
 
-                        <div className="form-group date-group">
+                        {/* <div className="form-group date-group">
                             <label>Date</label>
                             <div className="date-input-wrapper">
                                 <DatePicker
@@ -146,7 +144,7 @@ const ContactForm = () => {
                                 />
                                 <FaCalendarAlt className="calendar-icon" />
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="form-group radio-section">
                             <label>Our Location</label>
@@ -170,8 +168,12 @@ const ContactForm = () => {
                             <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Write your message..."></textarea>
                         </div>
 
-                        <button type="submit" className="submit-btn">
-                            Book Now <ArrowRight className="arrow-icon" size={16} strokeWidth={3} />
+                        <button type="submit" className="submit-btn btn">
+                            <span>
+                                
+                            Book Now
+                        </span>
+                            {/* <ArrowRight className="arrow-icon" size={16} strokeWidth={3} /> */}
                         </button>
                     </form>
                 </div>

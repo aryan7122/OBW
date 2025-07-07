@@ -114,10 +114,14 @@
               padding: 0;
               margin: 0;
               display: grid;
-              grid-template-columns: 1fr 1fr;
-              gap: 0;
+              @media only screen and (max-width: 768px){
+                  grid-template-columns: 1fr 1fr;
+                  gap: 0;
+                }
+            }
               li {
                 margin-bottom: 20px; // Spacing between list items
+                @media only screen and (max-width: 768px){
                 @media only screen and (max-width: 768px){
                   margin-bottom: 10px;
                 }

@@ -55,10 +55,10 @@ const OurValue = () => {
                 ))}
             </div>
 
-            <footer className="footer-section">
-                <button className="Book-Now" onClick={() => HandleNavigation("/contact")}>Get in touch now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
-                {/* <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div> */}
-            </footer>
+            {/* <footer className="footer-section"> */}
+            {/* <button className="Book-Now" onClick={() => HandleNavigation("/contact")}>Get in touch now  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button> */}
+            {/* <div className="next-btn"><a href="">Next</a> <ChevronRight color="#5B2F2F" /> </div> */}
+            {/* </footer> */}
         </div>
     );
 };

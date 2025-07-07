@@ -240,14 +240,17 @@ function Blog() {
                     src={blog.image}
                     alt={blog?.title}
                     className="card-image"
+                    onClick={() => HandleNavigation(`${blog?.title}`)}
+
                   />
                   <div className="ct-tm">
                     <h3>{blog?.category}</h3>
                     <h4>5 min read</h4>
                   </div>
-                  <h3 className="card-title">{blog?.title}</h3>
-                  <h3 className="card-p">{blog?.p}</h3>
-                  <div className="author">
+                  <h3 className="card-title" onClick={() => HandleNavigation(`${blog?.title}`)}
+                  >{blog?.title}</h3>
+                  <h3 className="card-p" >{blog?.p}</h3>
+                  {/* <div className="author">
                     <div className="aut_text-img">
                       <WebPImage src={blog?.authorImg} />
                       <div className="aut_text">
@@ -261,7 +264,7 @@ function Blog() {
                     >
                       Read Full Blog
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>

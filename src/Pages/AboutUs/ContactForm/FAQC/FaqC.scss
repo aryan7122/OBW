@@ -1,0 +1,240 @@
+// Fonts
+$font-geist: 'Geist', sans-serif;
+
+// Colors
+$color-primary-blue: #2463eb;
+$color-dark-blue: #1c4eb8;
+$color-white: #fff;
+$color-light-gray-bg: #f3feff; // Background for the FAQ section
+$color-text-dark: #333; // For general text, question titles
+$color-text-light: #6c757d; // For answers, tag line, sub-text
+$color-hover-text: #472525; // As specified for button hover
+
+// Padding
+$section-padding-min: 2rem;
+$section-padding-vw: 6vw;
+$section-padding-max: 6rem;
+
+// Responsive breakpoints
+$breakpoint-sm: 500px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Clamp for responsive text sizes
+  @mixin clamp-text($min-size, $vw-size, $max-size) {
+    font-size: clamp($min-size, $vw-size, $max-size);
+  }
+
+
+//   @import 'variables';
+// @import 'mixins';
+
+.faq-page {
+  padding: clamp($section-padding-min, $section-padding-vw, $section-padding-max);
+  background-color: $color-light-gray-bg;
+  min-height: 100vh;
+  font-family: $font-geist;
+  box-sizing: border-box; // Ensure padding is included in total width/height
+
+  @media (max-width: $breakpoint-sm) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .faq-header {
+    margin-bottom: 3rem;
+
+    .faq-tag {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $color-text-light;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      font-family: $font-geist;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -1.8px;
+      color: $color-text-dark;
+
+      @media (max-width: $breakpoint-md) {
+        @include clamp-text(28px, 5vw, 40px);
+        line-height: 1.2;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        @include clamp-text(24px, 6vw, 28px);
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; // Spacing between FAQ items
+
+    .faq-item {
+    //   background-color: $color-white;
+      border-radius: 8px;
+      padding: 1.5rem 2rem; // Combined padding for question and answer area
+    //   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      border: 1px solid #E8E8E8;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      @media (max-width: $breakpoint-lg) {
+          grid-template-columns: 1fr ;
+          gap: 0;
+          
+      }
+      @media (max-width: $breakpoint-sm) {
+        padding: 1rem 1.2rem;
+      }
+
+      .faq-question-text {
+        h3 {
+          font-family: $font-geist;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 120%;
+          letter-spacing: -0.8px;
+          color: $color-text-dark;
+          margin-top: 0; // Remove default top margin
+          margin-bottom: 0.5rem; // Space between question and answer
+
+          @media (max-width: $breakpoint-md) {
+            @include clamp-text(18px, 3.5vw, 24px);
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            @include clamp-text(16px, 4.5vw, 18px);
+          }
+        }
+      }
+
+      .faq-answer-text {
+        p {
+          font-family: $font-geist;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 26px;
+          color: $color-text-light;
+          margin-top: 0; // Remove default top margin
+          margin-bottom: 0; // Remove default bottom margin
+
+          @media (max-width: $breakpoint-md) {
+            @include clamp-text(14px, 3vw, 16px);
+            line-height: 1.6;
+          }
+
+          @media (max-width: $breakpoint-sm) {
+            @include clamp-text(13px, 3.5vw, 14px);
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+
+  .still-have-questions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 1.5rem 2rem;
+    background-color: $color-white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    p {
+      font-family: $font-geist;
+      font-weight: 500;
+      font-size: 20px;
+      color: $color-text-dark;
+      margin: 0; // Remove default margins
+      line-height: 1.2; // Adjust line height for better appearance
+
+      @media (max-width: $breakpoint-md) {
+        @include clamp-text(16px, 4vw, 20px);
+      }
+    }
+
+    span {
+      font-family: $font-geist;
+      font-weight: 400;
+      font-size: 16px;
+      color: $color-text-light;
+      display: block; // Ensures it goes to a new line below the paragraph
+
+      @media (max-width: $breakpoint-md) {
+        @include clamp-text(14px, 3.5vw, 16px);
+      }
+    }
+
+    .book-now {
+      padding: 5px 8px 5px 15px;
+      background: linear-gradient(90.15deg, $color-primary-blue 0.13%, $color-dark-blue 103.2%);
+      color: $color-white;
+      border: 1px solid transparent;
+      font-size: 13px;
+      border-radius: 100px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.5px;
+      min-width: 120px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border 0.3s linear, color 0.3s linear;
+      text-decoration: none; // If it's an actual link
+      justify-content: center; // Center content for smaller screens
+
+      @media only screen and (max-width: $breakpoint-sm) {
+        padding: 5px 6px 5px 15px;
+        font-size: 10px;
+        min-width: 100px;
+      }
+
+      .arrow-icon {
+        transition: 0.3s linear;
+        background: $color-white;
+        color: $color-dark-blue; // Use a slightly darker blue for the icon background to match the gradient
+        border-radius: 100px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        @include flex-center; // Use mixin for centering content
+      }
+
+      &:hover {
+        background: $color-white !important; // !important to override gradient
+        border: 1px solid $color-dark-blue;
+        color: $color-hover-text;
+
+        .arrow-icon {
+          background: linear-gradient(90.15deg, $color-primary-blue 0.13%, $color-dark-blue 103.2%);
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

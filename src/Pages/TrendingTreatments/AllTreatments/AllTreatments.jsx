@@ -15,6 +15,7 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Botulinum toxin injection',
+        des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
         imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/q35wpx5spp1uh837lmub',
     },
     {
@@ -132,15 +133,15 @@ const AllTreatments = () => {
     return (
         <div className="treatments-page">
             <header className="treatment-header">
-                <span className='card-Treatments'>Treatments</span>
+                {/* <span className='card-Treatments'>Treatments</span> */}
                 <h1>All Treatments</h1>
                 <p>Explore in-depth expert advice, insightful tips, and the most current trends in skincare, haircare, and a variety of aesthetic treatments to enhance your beauty routine.</p>
-                <div className='bott-m'>
+                {/* <div className='bott-m'>
                     <span className="unFill-separator">&#9734;</span>
                     <span className='p_home'><a href="/">Home</a></span>
                     <span className="breadcrumb-separator">&#9733;</span>
                     <span className='p'>All Treatments</span>
-                </div>
+                </div> */}
             </header>
 
             <div className="sectionCard">
@@ -173,8 +174,12 @@ const AllTreatments = () => {
                             </div>
                             <div className='about_action'>
                                 <h3>{item.title}</h3>
-                                <button onClick={handleBookNowClick} className="book-now">
-                                    Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                <p>{item.des}</p>
+                                <button onClick={handleBookNowClick} className="book-now btn">
+                                    <span> 
+                                    Book Now
+                                    {/* <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /> */}
+                                </span>
                                 </button>
                             </div>
                         </div>
