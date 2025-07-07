@@ -16,7 +16,7 @@
   justify-content: space-between;
   background: transparent;
   transition: background-color 0.3s ease;
-  padding: 0 60px;
+  padding: 0 120px;
   user-select: none;
   z-index: 999;
   -webkit-user-select: none;
@@ -34,11 +34,9 @@
     background: #ffffff26;
     backdrop-filter: blur(8px);
   }
-  @media only screen and (min-width: 1601px) {
-    padding: 0 80px;
-  }
+ 
   @media only screen and (max-width: 1400px) {
-    padding: 0 40px;
+    padding: 0 100px;
   }
   @media only screen and (max-width: 1000px) {
     padding: 0 20px;
@@ -102,7 +100,7 @@
     // width: 1323px;
     height: 76px;
 
-    padding: 28.8px 15px 28.8px 24px;
+    // padding: 28.8px 15px 28.8px 24px;
     gap: 16px;
     border-radius: 100px;
     @media only screen and (max-width: 500px) {
@@ -430,6 +428,7 @@
     margin-right: 10px;
     @media (max-width: 950px) {
       display: block;
+      color: #000 !important;
     }
   }
   .navbar-actions {

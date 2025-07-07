@@ -57,9 +57,6 @@ function Navbar() {
         setShowModal(false);
     };
 
-
-
-
     return (
         <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''} ${isbgBlur ? 'isbgBlur' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
             <motion.nav

@@ -2,11 +2,10 @@
   margin: 0 auto;
   background: linear-gradient(179.02deg, #fff0df 60.94%, #f3feff 104.22%);
   padding: clamp(1.8rem, 6vw, 6rem);
-
+  padding-top: 50px !important;
   .concerns-header {
     text-align: center;
     margin-bottom: clamp(2rem, 5vw, 3rem);
-
     .concerns-label {
       color: #1b3e9f;
       background: #b8b8b833;
@@ -35,7 +34,7 @@
       display: flex;
       gap: 10px;
       margin-top: 10px;
-      @media (max-width: 1050px){
+      @media (max-width: 1050px) {
         display: block;
         width: 100%;
       }
@@ -47,12 +46,12 @@
       }
     }
   }
-  .tabs_main{
-    height: 35px;
+  .tabs_main {
+    margin-top: 20px;
+    height: 50px;
     margin-bottom: 40px;
-    overflow-x: auto ;
-    overflow-Y: hidden !important ;
-    
+    overflow-x: auto;
+    overflow-y: hidden !important ;
   }
   .tabs-navigation {
     display: flex;
@@ -62,17 +61,17 @@
     // flex-wrap: wrap;
     border-bottom: 1px solid #e8e8e8;
     min-width: 800px;
-    @media (max-width: 1050px){
-
+    @media (max-width: 1050px) {
     }
-    
+
     .tab-button {
       font-family: "Geist";
       background-color: transparent;
       border: none;
+      padding: 5px 20px;
       // padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
       font-size: clamp(1.2rem, 2vw, 1.5rem);
-      font-weight: 500;
+      font-weight: 400;
       color: #555;
       cursor: pointer;
       display: flex;
@@ -96,6 +95,7 @@
         border-bottom: 2px solid #5b2f2f;
         // box-shadow: 0px 12px 20px -8px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 10px 25px -10px #5b2f2f1c;
+        font-weight: 500;
       }
     }
   }
@@ -104,7 +104,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    @media (max-width: 700px){
+    @media (max-width: 700px) {
       gap: 40px;
     }
     .concern-card {
@@ -120,34 +120,33 @@
 
       .card-info {
         display: flex;
-        justify-content: space-between ;
+        justify-content: space-between;
         align-items: center;
         gap: 20px;
         flex-grow: 1;
         padding-right: 20px;
 
-        .flex-tags{
+        .flex-tags {
           width: 100%;
           display: flex;
           justify-content: space-between;
           gap: 30px;
-          @media (max-width: 1333px){
+          @media (max-width: 1333px) {
             flex-direction: column;
           }
-          @media (max-width: 870px){
+          @media (max-width: 870px) {
             flex-direction: row;
             width: 100%;
           }
-          @media (max-width: 700px){
+          @media (max-width: 700px) {
             flex-direction: column;
             width: 100%;
           }
-
         }
-        .info-title{
+        .info-title {
           display: flex;
           gap: 20px;
-          @media only screen and (max-width: 500px){
+          @media only screen and (max-width: 500px) {
             gap: 10px;
           }
         }
@@ -170,7 +169,6 @@
           letter-spacing: -0.8px;
           color: #333;
           margin: 0;
-          
         }
 
         .card-tags {
@@ -179,13 +177,13 @@
           gap: 8px;
           max-width: 371px;
           margin: 0 auto;
-          @media only screen and (max-width: 1333px){
-            margin:  0 0 !important;
+          @media only screen and (max-width: 1333px) {
+            margin: 0 0 !important;
           }
           .tag {
             animation: smoothFadeUp 0.2s ease forwards;
             font-family: Geist;
-            background-color: #E6FAFC;
+            background-color: #e6fafc;
             color: #171717;
             padding: 5px 10px;
             border-radius: 20px;
@@ -195,7 +193,7 @@
             align-items: center;
             gap: 5px;
             white-space: nowrap;
-            border: 0.91px solid #E8E8E8;
+            border: 0.91px solid #e8e8e8;
             svg {
               min-width: 10px;
               height: 8px;
@@ -209,47 +207,47 @@
           // gap: 15px;
           // margin-left: auto;
           // flex-shrink: 0;
-         position: relative;
+          position: relative;
 
-         .book-appointment-btn {
-          // position: absolute; // Position button relative to .card-media
-          bottom: 25px; // Adjust as needed for your image layout
-          right: -25%; // Adjust as needed
-          z-index: 10; // Ensure it's above the image
+          .book-appointment-btn {
+            // position: absolute; // Position button relative to .card-media
+            bottom: 25px; // Adjust as needed for your image layout
+            right: -25%; // Adjust as needed
+            z-index: 10; // Ensure it's above the image
             height: 40px;
-          padding: 8px 5px 8px 25px; // Your specified padding
-          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%); // Your gradient
-          color: #fff;
-          border: 1px solid transparent;
-          font-size: 16px; // Adjust if too large for image
-          border-radius: 100px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-weight: 500;
-          line-height: 24px;
-          letter-spacing: -0.5px;
-          cursor: pointer;
-          transition: 0.3s linear;
-          white-space: nowrap; // Prevent button text from wrapping
-          // width: fit-content;
-          @media only screen and (max-width: 500px) {
+            padding: 8px 5px 8px 25px; // Your specified padding
+            background:#5B2F2F; // Your gradient
+            color: #fff;
+            font-size: 16px; // Adjust if too large for image
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            line-height: 24px;
+            border: 1px solid #5B2F2F !important;
+            letter-spacing: -0.5px;
+            cursor: pointer;
+            transition: 0.3s linear;
+            white-space: nowrap; // Prevent button text from wrapping
+            // width: fit-content;
+            @media only screen and (max-width: 500px) {
               padding: 5px 6px 5px 15px;
               font-size: 14px;
               bottom: 10px; // Adjust for smaller screens
               right: 10px; // Adjust for smaller screens
-          }
-          @media only screen and (max-width: 350px) {
+            }
+            @media only screen and (max-width: 350px) {
               font-size: 12px;
               padding: 4px 5px 4px 10px;
               bottom: 8px;
               right: 8px;
-          }
+            }
 
-          .arrow-icon {
+            .arrow-icon {
               transition: 0.3s linear;
-              background: #fff;
-              color: #0056b3; // Darker blue for the arrow inside the white circle
+              background: #00575D;
+              color: #fff; // Darker blue for the arrow inside the white circle
               border-radius: 100px;
               width: 30px; // Adjusted size for better fit
               height: 30px; // Adjusted size for better fit
@@ -257,40 +255,40 @@
               display: flex;
               align-items: center;
               justify-content: center;
-          }
+            }
 
-          &:hover {
+            &:hover {
               background: #fff !important;
-              border: 1px solid #0056b3;
+              border: 1px solid #fff;
               color: #472525;
 
               .arrow-icon {
-                  background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
-                  color: #fff;
+                background:#472525;
+                color: #fff;
               }
+            }
           }
-      }
-          
+          .iconDown{
+            opacity: 0.5;
+          }
           .card-image.large-image {
             // width: clamp(200px, 30vw, 360px);
             // height: clamp(120px, 20vw, 175px);
             width: 360px;
-            height:176px ;
+            height: 176px;
             border-radius: 10px;
             object-fit: cover;
             // position: absolute;
             transition: transform 0.3s ease-in-out;
             animation: smoothFadeUp 0.3s ease forwards;
             box-shadow: 1px 2px 15px 0px #00000033;
-           
-            
           }
         }
-        .card-media-active{
+        .card-media-active {
           // width: clamp(180px, 30vw, 335px);
           // height: clamp(85px, 20vw, 120px);
           width: 340px;
-          height:126px ;
+          height: 126px;
         }
       }
 
@@ -303,71 +301,72 @@
         transition: all 0.3s ease;
         box-shadow: 0px 10px 25px -10px #5b2f2f1c;
         border-radius: 12px;
-       
         .card-info {
           .tag {
             // NEW: Style for selected tag
             &.selected-tag {
-                background-color: #B2EBF2; // A slightly different background to show selection
-                font-weight: 400; // Make it a bit bolder
-                border: 0.91px solid #1B3E9F; // A distinct border
-                color: #1B3E9F; // A distinct text color
-                svg {
-                    fill: #1B3E9F; // Match checkmark color
-                }
+              background-color: #b2ebf2; // A slightly different background to show selection
+              font-weight: 400; // Make it a bit bolder
+              border: 0.91px solid #1b3e9f; // A distinct border
+              color: #1b3e9f; // A distinct text color
+              svg {
+                fill: #1b3e9f; // Match checkmark color
+              }
+              span{
+                scale: 1.3;
+              }
             }
             // NEW: Style for "More >" tag
             &.more-tag {
-                background-color: #f0f0f0; // A neutral background
-                cursor: pointer;
-                font-weight: 400; // Slightly bolder
-                &:hover {
-                    background-color: #e0e0e0;
-                }
+              background-color: #e6fafc; // A neutral background
+              cursor: pointer;
+              font-weight: 400; // Slightly bolder
+              &:hover {
+                background-color: #ddf8fa;
+              }
             }
-        }
-          @media (max-width: 870px){
+          }
+          @media (max-width: 870px) {
             flex-direction: column;
             padding-right: 0;
-            .card-tags{
+            .card-tags {
               max-width: 300px;
               font-size: 12px;
               padding: 4px 8px;
-              @media (max-width: 700px){
+              @media (max-width: 700px) {
                 max-width: 100%;
                 margin-left: 20px;
                 margin-top: -20px;
               }
             }
-            .card-media{
+            .card-media {
               width: 95%;
               height: 200px;
-              .card-image.large-image{
-                  width: 100% ;              
-                  height: 120%;
-              } 
+              .card-image.large-image {
+                width: 100%;
+                height: 120%;
+                }
+              }
             }
-
-        }
+          }
           .card-number,
           .card-title {
             opacity: 1;
-                  }
-          .card-title{
+          }
+          .card-title {
             // width: 200px;
-            @media (max-width: 1461px){
+            @media (max-width: 1461px) {
               width: 350px;
             }
-            @media (max-width: 1391px){
+            @media (max-width: 1391px) {
               width: 300px;
             }
-            @media (max-width: 1391px){
+            @media (max-width: 1391px) {
               width: 300px;
             }
-            @media (max-width: 1333px){
+            @media (max-width: 1333px) {
               width: 100%;
             }
-          
           }
         }
       }
@@ -423,7 +422,6 @@
         flex-shrink: 0;
         margin-left: 10px;
         transition: transform 0.3s ease;
-
       }
     }
     @keyframes smoothFadeUp {
@@ -436,7 +434,5 @@
         transform: translateY(0) scale(1);
       }
     }
-    
   }
-}
 
