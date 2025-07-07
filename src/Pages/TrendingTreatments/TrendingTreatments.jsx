@@ -142,21 +142,28 @@ const TrendingTreatments = () => {
 
                 <div className="title-sbt">TRENDING</div>
                 <header className="heading-section">
-                    <h1 className="trending-title">Trending <span className="heart">&#x2764;</span> Treatments</h1>
-                    <p className="description">
-                        Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
-
-                    </p>
+                    <div>
+                        <h1 className="trending-title">Trending <span className="heart">&#x2764;</span> Treatments</h1>
+                        <p className="description">
+                            Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
+                        </p>
+                    </div>
+                    <button ref={buttonRef} className="LoadMoreTreatments btn" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+                        <span>
+                           View All
+                            <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        </span>
+                    </button>
                 </header>
             </div>
 
 
-            {/* <div className="cards-container">
-                {treatments.slice(0, visibleCount).map((treatment, index) => (
+            <div className="cards-container">
+                {treatments.slice(0, 4).map((treatment, index) => (
                     <div key={index} className="card">
                         <div className="card-image">
                             <WebPImage
-                                placeholderSrc={placeholderImg}
+                                // placeholderSrc={placeholderImg}
                                 src={treatment.image}
                                 alt={treatment.title}
                             />
@@ -165,14 +172,13 @@ const TrendingTreatments = () => {
                         <p className="card-description">{treatment.description}</p>
                     </div>
                 ))}
-            </div> */}
+                <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
 
-            {/* <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
-                {visibleCount < treatments.length ? "Load More" : "Load Less"}
-                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-            </button> */}
+            </div>
 
-            <div className="card-slider-container" onWheel={handleWheel}>
+
+
+            {/* <div className="card-slider-container" onWheel={handleWheel}>
                 <div className="team-images" style={{ "--index": currentIndex }}>
                     {treatments.map((treatment, index) => (
                         <>
@@ -200,22 +206,20 @@ const TrendingTreatments = () => {
                         <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                     </button>
                 </div>
-            </div>
+            </div> */}
+
+            {/* <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+                {visibleCount < treatments.length ? "Load More" : "Load Less"}
+                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+            </button> */}
 
 
 
 
+            {/* <footer className="footer-section" >
 
-
-            <footer className="footer-section" >
-                <button className="Book-Now btn" onClick={() => setShowModal(true)}>
-                    <span>
-                    Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-                    </span>
-                </button>
-                <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
-            </footer>
-
+            </footer> */}
+                {/* <hr /> */}
             {showModal && <BookAppointment onClose={() => setShowModal(false)} />}
         </div>
     );

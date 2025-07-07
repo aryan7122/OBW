@@ -1,7 +1,29 @@
 .clinical-concerns-section {
   margin: 0 auto;
   background: linear-gradient(179.02deg, #fff0df 60.94%, #f3feff 104.22%);
-  padding: clamp(1.8rem, 6vw, 6rem);
+  // padding: clamp(0rem, 0vw, 8rem);
+  padding: 60px 120px;
+ 
+@media only screen and (max-width: 1400px) {
+  padding: 40px 100px;
+}
+
+@media only screen and (max-width: 1400px) {
+  padding: 30px 100px;
+}
+@media only screen and (max-width: 1000px) {
+  padding: 30px 40px;
+}
+@media only screen and (max-width: 600px) {
+  padding:  30px;
+}
+@media only screen and (max-width: 500px) {
+  padding: 30px 20px;
+}
+@media only screen and (max-width: 400px) {
+  padding: 20px 10px;
+}
+
   padding-top: 50px !important;
   .concerns-header {
     text-align: center;
@@ -108,7 +130,6 @@
       gap: 40px;
     }
     .concern-card {
-      // border: 1px solid red !important;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -234,14 +255,14 @@
             @media only screen and (max-width: 500px) {
               padding: 5px 6px 5px 15px;
               font-size: 14px;
-              bottom: 10px; // Adjust for smaller screens
-              right: 10px; // Adjust for smaller screens
+              // bottom: 10px; // Adjust for smaller screens
+              // right: 10px; // Adjust for smaller screens
             }
             @media only screen and (max-width: 350px) {
               font-size: 12px;
               padding: 4px 5px 4px 10px;
-              bottom: 8px;
-              right: 8px;
+              // bottom: 8px;
+              // right: 8px;
             }
 
             .arrow-icon {
@@ -369,6 +390,9 @@
             }
           }
         }
+      }
+      .active{
+        margin-bottom: 20px;
       }
 
       // }

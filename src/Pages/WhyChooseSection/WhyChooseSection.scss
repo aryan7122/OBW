@@ -1,24 +1,32 @@
 .why-choose-section {
-  // padding: 60px 100px 60px 100px;
+  padding: 60px 120px 60px 120px;
   background-color: #f9f9f9;
 
-  // @media only screen and (min-width: 1601px) {
-  //     padding: 60px 80px;
-  //   }
-  // @media only screen and (max-width: 1400px) {
-  //   padding: 40px;
-  // }
+  padding: 60px 120px;
+ 
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    padding: 30px 100px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 30px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding:  30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 20px 10px;
+  }
+  
+  // padding: clamp(2rem, 8vw, 8rem);
 
-  // @media only screen and (max-width: 1000px) {
-  //   padding:30px 20px;
-  // }
-
-  // @media only screen and (max-width: 400px) {
-  //   padding:30px 10px;
-  // }
-  padding: clamp(2rem, 6vw, 6rem);
-
-
+  // margin-top: -50px;
   .content-container {
     text-align: center;
     margin: 0 auto;

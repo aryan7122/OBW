@@ -1,5 +1,26 @@
 .fabulous-section {
-  padding: clamp(2rem, 6vw, 6rem);
+  // padding: clamp(2rem, 6vw, 6rem);
+  padding: 40px 120px;
+ 
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 30px 10px;
+  }
   background-color: #f6fbff;
   .cont-card {
     background: #fff;
