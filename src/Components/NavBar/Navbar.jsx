@@ -11,6 +11,7 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation(); // Get current location
+    // const [isWhite, setIsWhite] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,6 +45,8 @@ function Navbar() {
 
     };
     // white bg
+    const bgBlur = ['treatment'];
+    const isbgBlur = bgBlur.some((path) => location.pathname.includes(path));
     const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service'];
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
     const [showModal, setShowModal] = useState(false);
@@ -54,8 +57,11 @@ function Navbar() {
         setShowModal(false);
     };
 
+
+
+
     return (
-        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
+        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''} ${isbgBlur ? 'isbgBlur' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
             <motion.nav
                 className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}
                 initial={{ opacity: 0, y: -20 }}

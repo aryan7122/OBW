@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { toast, Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 const BookAppointment = ({ onClose }) => {
-
+    
     const [formData, setFormData] = useState({
         name: "",
         MoNumber: "",

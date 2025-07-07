@@ -1,9 +1,10 @@
 // @import 'variables';
 /* Include your custom colors in variables file */
 .active-link {
-  color: #07b9c6 !important;
+  // color: #07b9c6 !important;
   /* Active color */
   font-weight: bold;
+  text-decoration: underline;
   /* Optional: Bold text */
 }
 .navbar {
@@ -31,7 +32,7 @@
     height: 100%;
     position: absolute;
     background: #ffffff26;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
   }
   @media only screen and (min-width: 1601px) {
     padding: 0 80px;
@@ -52,7 +53,7 @@
   }
 
   &.navbar-scrolled {
-    // background-color: #ffffff;
+    background-color: #ffffff;
     .navbar-container {
       // background: #fff;
       .navbar-logo {
@@ -337,9 +338,21 @@
     display: none;
   }
 }
+.isbgBlur{
+  li{
+    a{
+      color: #fff !important;
+    }
+  }
+}
 
 //
 .navbar-scrolled {
+  li{
+    a{
+      color: #000 !important;
+    }
+  }
   .navbar-container {
     .mobile-menu-icon {
       color: #171717;
