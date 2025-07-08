@@ -12,6 +12,12 @@ import WebPImage from '../../../util/WebPImage'; // Assuming this utility exists
 import defaultLazyLoadImage from '../../../assets/TrendingTreatments/LazyLoadImage.png';
 
 import imgPhototherapy from '../../../assets/TrendingTreatments/img0.jpg';
+import imgAcneTargeting from '../../../assets/TrendingTreatments/img (7).jpg';
+import imgAcneregime from '../../../assets/TrendingTreatments/img (12).jpg';
+import imgskinregime from '../../../assets/TrendingTreatments/img (8).jpg';
+import imgCarbonLasers from '../../../assets/TrendingTreatments/img (13).jpg';
+import imgOxygenjet from '../../../assets/TrendingTreatments/img (14).jpg';
+import imgMesobotox from '../../../assets/TrendingTreatments/img (4).jpg';
 import imgAcneSkincareRegime from '../../../assets/TrendingTreatments/img (8).jpg';
 import imgMicroNeedling from '../../../assets/TrendingTreatments/img (6).jpg';
 import imgLipolyticInjection from '../../../assets/TrendingTreatments/img (7).jpg';
@@ -40,7 +46,15 @@ import imgLaserLipolysis from '../../../assets/TrendingTreatments/img (6).jpg';
 import imgOzempicInjections from '../../../assets/TrendingTreatments/img (6).jpg';
 import imgBotoxForSweating from '../../../assets/TrendingTreatments/Laser Hair reduction.jpg';
 import imgRFCautery from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgDermapenMicroneedling from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgDermapenMicroneedling from '../../../assets/TrendingTreatments/img (6).jpg';
+import imgTCACross from '../../../assets/TrendingTreatments/img (10).jpg';
+import imgScarCross from '../../../assets/TrendingTreatments/img (5).jpg';
+import imgKeloidTreatments from '../../../assets/TrendingTreatments/img (1).png';
+import imgHydratingPeels from '../../../assets/TrendingTreatments/img (9).jpg';
+import imgHydratingtreatments from '../../../assets/TrendingTreatments/img (11).jpg';
+import imgSkinBooster from '../../../assets/TrendingTreatments/222im.jpg';
+import imgUnderpeels from '../../../assets/TrendingTreatments/img (6).jpg';
+import imgUndereye from '../../../assets/TrendingTreatments/img (12).jpg';
 import imgDeepChemicalPeels from '../../../assets/TrendingTreatments/LazyLoadImage.png';
 import imgNeckPeelBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
 import imgKneePeelBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
@@ -65,12 +79,132 @@ import imgScalpMicropigmentation from '../../../assets/TrendingTreatments/LazyLo
 
 const treatmentData = [
     {
-        category: 'Skin & Face care',
+        category: 'Skin care',
         title: 'Phototherapy',
         des: '',
         Concerns: [],
         SkinType: [],
         imgUrl: imgPhototherapy,
+    },
+    {
+        category: 'Skin care',
+        title: 'Acne Targeting peels',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgAcneTargeting,
+    },
+    {
+        category: 'Skin care',
+        title: 'Acne skin care  regime',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgskinregime,
+    },
+    {
+        category: 'Skin care',
+        title: 'Anti acne facials',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgAcneregime,
+    },
+    {
+        category: 'Skin care',
+        title: 'Carbon Laser',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgCarbonLasers,
+    },
+    {
+        category: 'Skin care',
+        title: 'Oxygen jet peel',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgOxygenjet,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Meso botox',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgMesobotox,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Dermapen', // Matched image text
+        des: '',
+        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgDermapenMicroneedling,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'TCA Cross', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgTCACross,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Scar excision', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgScarCross,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Keloid Treatments', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgKeloidTreatments,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Hydrating Peels', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgHydratingPeels,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Hydrapen treatments', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgHydratingtreatments,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Skin Booster', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgSkinBooster,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Under Eye peels', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgUnderpeels,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Under eye collagen therapy', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgUndereye,
     },
     {
         category: 'Skin & Face care',
@@ -271,30 +405,7 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgBotoxForSweating,
     },
-    {
-        category: 'Skin care', // Changed to Skin care as per image
-        title: 'RF Cautery',
-        des: '',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgRFCautery,
-    },
-    {
-        category: 'Skin care', // Changed to Skin care as per image
-        title: 'Dermapen/ Microneedling', // Matched image text
-        des: '',
-        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin', 'Enlarged pores'],
-        SkinType: [],
-        imgUrl: imgDermapenMicroneedling,
-    },
-    {
-        category: 'Skin care', // Changed to Skin care as per image
-        title: 'Deep chemical peels', // Matched image text
-        des: '',
-        Concerns: ['Dark spots', 'Melasma'],
-        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
-        imgUrl: imgDeepChemicalPeels,
-    },
+
     {
         category: 'Body care',
         title: 'Neck peel Body pigmentation',
