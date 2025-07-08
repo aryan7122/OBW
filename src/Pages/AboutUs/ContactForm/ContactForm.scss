@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 60px 100px 60px 100px;
+  padding: 60px 100px 60px 120px;
   padding-left: 0 !important;
   padding-top: 0;
   // margin-top: -120px;
@@ -14,33 +14,46 @@
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  @media only screen and (min-width: 1601px) {
-      padding: 60px 80px;
-    }
+ 
   @media only screen and (max-width: 1400px) {
-    padding: 40px;
+    padding: 0px 100px;
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    padding: 0px 100px;
   }
   @media only screen and (max-width: 1000px) {
-    padding: 20px;
+    padding: 0px 40px;
   }
-  @media only screen and (max-width: 700px) {
-    padding: 10px;
+  @media only screen and (max-width: 830px){
+    padding: 40px !important;
+  }
+  @media only screen and (max-width: 600px) {
+    padding:  30px !important;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px !important;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 20px 10px !important;
   }
   .contact-container {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     overflow: hidden;
     width: 100%;
     @media only screen and (max-width: 830px) {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .image-section {
       //   width: 50%;
       img {
         width: 600px;
-        height: 1018.441650390625px;
+        height: 9018;
         // border-radius: 20px;
         object-fit: cover;
         @media only screen and (max-width: 1320px) {
@@ -88,34 +101,47 @@
         margin-left: 0px;
       }
       @media only screen and (max-width: 830px) {
-        //  width:80% !important;
+         width:90% !important;
+      }
+      @media only screen and (max-width: 700px) {
+         width:100% !important;
+         margin-left: 0;
+      }
+      .di{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
       }
       h2 {
         font-weight: 500;
         font-size: 48px;
         line-height: 57.6px;
         letter-spacing: -2.2px;
+        text-align: center;
         img{
           width: 40px;
         }
         @media only screen and (max-width: 400px) {
-          font-size: 40px;
-          line-height: 42px;
+          font-size: 30px;
+          line-height: 37px;
+          letter-spacing: -1px;
           img{
-            width: 30px;
+            width: 20px;
           }
         }
       }
 
       p {
-        margin-top: 20px;
-        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-bottom: 30px;
         font-weight: 400;
         font-family: "Supreme-Regular", sans-serif;
         color: #667085;
         font-size: 20px;
         line-height: 24px;
         letter-spacing: -0.5px;
+        text-align: center;
         span {
           color: #101010;
         }
@@ -170,24 +196,19 @@
           @media only screen and (max-width: 1115px) {
             width: 400px;
           }
-          @media only screen and (max-width: 830px) {
-            width: 500px !important;
+          @media only screen and (max-width: 870px) {
+            width: 100% !important;
           }
           @media only screen and (max-width: 620px) {
-            width: 450px !important;
+            width: 100% !important;
           }
           @media only screen and (max-width: 520px) {
-            width: 400px !important;
+            width: 100% !important;
           }
           @media only screen and (max-width: 460px) {
-            width: 350px !important;
+            width: 100% !important;
           }
-          @media only screen and (max-width: 400px) {
-            width: 300px !important;
-          }
-          @media only screen and (max-width: 330px) {
-            width: 295px !important;
-          }
+       
         }
         .react-tel-input .form-control {
           padding: 0.8rem;
@@ -257,7 +278,8 @@
         color: #fff;
         border: 1px solid transparent;
         transition: 0.3s linear;
-
+        width:320px;
+        height:52px;
         @media only screen and (max-width: 500px) {
           padding: 5px 6px 5px 15px;
           font-size: 16px;

@@ -102,11 +102,13 @@ const ContactForm = () => {
                     <img src={img} alt="Contact Page Visual" />
                 </div>
                 <div className="form-section">
-                    <h2>Get In <span className="touch-icon"><img src={Vector} alt="" /></span> Touch!</h2>
-                    <p>
-                        Please feel free to get in touch at any time. <br />
-                        <span> You can reach us anytime via <a href="mailto:info@obwclinic.com">info@obwclinic.com</a> </span>
-                    </p>
+                    <div className="di">
+                        <h2>Get In <span className="touch-icon"><img src={Vector} alt="" /></span> Touch!</h2>
+                        <p>
+                            {/* Please feel free to get in touch at any time. <br /> */}
+                            <span> You can reach us anytime via <a href="mailto:info@obwclinic.com">info@obwclinic.com</a> </span>
+                        </p>
+                   </div>
                     <form onSubmit={handleSubmit} className="form_card">
                         <div className="form-group">
                             <label>Full Name</label>
