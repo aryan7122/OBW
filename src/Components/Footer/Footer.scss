@@ -14,6 +14,7 @@
 // }
 
 .footer {
+    border-top: 1px solid #FFFFFF;
   background-color: #4e2c2c; // Dark brown from the image
   color: #ffffff;
   padding: 60px 100px; // Consistent padding for larger screens
@@ -155,6 +156,11 @@
               line-height: 24px;
               opacity: 0.8;
           }
+          .action_bt{
+              p{
+                opacity: 1;
+            }
+          }
       }
 
       .footer-description-section {
@@ -173,6 +179,10 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+
+        .action_bt{
+            
+        }
         @media only screen and (max-width: 348px){
           flex-direction: column;
           align-items: start;

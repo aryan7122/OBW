@@ -40,7 +40,7 @@ function Navbar() {
     };
 
     const isActive = (path) => {
-        return location.pathname === path ? 'active-link' : '';
+        return location.pathname === path ? 'active' : '';
         // return location.pathname.includes(path) ? "active-link" : "";
 
     };

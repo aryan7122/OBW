@@ -9,16 +9,24 @@ import img1 from '../../assets/team/0K6A5365-min.jpg'
 import img2 from '../../assets/team/0K6A5357-min.jpg'
 import img3 from '../../assets/team/0K6A5359-min.jpg'
 
+import icon1 from '../../assets/team/icon1.png'
+import icon2 from '../../assets/team/icon2.png'
+import icon3 from '../../assets/team/icon3.png'
+import icon4 from '../../assets/team/icon4.png'
+import icon5 from '../../assets/team/icon5.png'
+import icon6 from '../../assets/team/icon6.png'
+import icon7 from '../../assets/team/icon6.png'
+
 // const img1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/i38dnetngbnyftvucibs"
 // const img2 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/xhwhyct7xs2yehbto7fm"
 // const img3 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/mliudlqchy4xm0c9lbd9"
-const icon1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/ehtgyrcp6c8z9kxpg88h"
-const icon2 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/nxctprhdl38umm0opc5c"
-const icon3 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/tjnngwmfmjb4ac5sofrr"
-const icon4 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/ko5jbmkpcrdnhccyynm2"
-const icon5 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/foguxt7tgp1rg8fawtfj"
-const icon6 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/mtudaldvzvdx1i1yyhp3"
-const icon7 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/fw0ufhddkgxjbmofypun"
+// const icon1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/ehtgyrcp6c8z9kxpg88h"
+// const icon2 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/nxctprhdl38umm0opc5c"
+// const icon3 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/tjnngwmfmjb4ac5sofrr"
+// const icon4 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/ko5jbmkpcrdnhccyynm2"
+// const icon5 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/foguxt7tgp1rg8fawtfj"
+// const icon6 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/mtudaldvzvdx1i1yyhp3"
+// const icon7 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/qualifiedTeam/fw0ufhddkgxjbmofypun"
 
 const images = [img1, img2, img3];
 
@@ -187,12 +195,12 @@ const TeamSection = () => {
                 once={true}
                 loading="lazy"
                 key={index}
-                src={stat.id === "experience" ? icon2 :
-                  stat.id === "certified" ? icon3 :
-                    stat.id === "treatments" ? icon4 :
-                      stat.id === "satisfaction" ? icon5 :
-                        stat.id === "locations" ? icon6 :
-                          icon7} />
+                src={stat.id === "experience" ? icon1 :
+                  stat.id === "certified" ? icon2 :
+                    stat.id === "treatments" ? icon3 :
+                      stat.id === "satisfaction" ? icon4 :
+                        stat.id === "locations" ? icon5 :
+                          icon6} />
                 <p>{stat.label}</p>
               </div>
                 <h3 id={stat.id} className="stat-number">0{stat.isPercentage ? "%" : "+"}</h3>

@@ -4,33 +4,37 @@ import React, { useEffect, useRef, useState } from "react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import "./TrendingTreatments.scss";
 import WebPImage from "../../util/WebPImage";
-import { image } from "motion/react-client";
-import img1 from '../../assets/TrendingTreatments/Exosome Therapy for Skin & Scalp-min.jpg'
-import img2 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
+// import { image } from "motion/react-client";
+import img1 from '../../assets/TrendingTreatments/Body Contouring (LipoLaser).jpg'
+import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.png'
+import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
+import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
 
 const treatments = [
     {
-        title: "Exosome Therapy for Skin & Scalp ",
+        title: "Body Contouring (LipoLaser)  ",
         description: "Revitalize your skin and scalp with cutting-edge exosome therapy, promoting collagen production, hair regrowth, and a youthful glow.",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Exosome_Therapy_for_Skin_Scalp-min_yykqhj",
-        // image: img1,
+        // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Exosome_Therapy_for_Skin_Scalp-min_yykqhj",
+        image: img1,
 
     },
     {
-        title: "Anti-DHT Mesotherapy  ",
+        title: "PRP-GFC for Hair",
         description: "Combat hair thinning with targeted anti-DHT mesotherapy, nourishing hair follicles and reducing hair loss for fuller, healthier hair.",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Anti-DHT_Mesotherapy-min_eq4fns",
-        // image: img2,
+        // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Anti-DHT_Mesotherapy-min_eq4fns",
+        image: img2,
     },
     {
-        title: "Medi-Facials ",
+        title: "Laser Hair reduction",
         description: "Experience advanced Medi-facials tailored to your skin’s needs, combining medical-grade ingredients for instant radiance and skin health.   ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Medi-Facials-min_xn8znv",
+        // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Medi-Facials-min_xn8znv",
+        image: img3,
     },
     {
-        title: "Skin Boosters  ",
+        title: "Laser Hair reduction",
         description: "Deeply hydrate and rejuvenate your skin with our premium skin boosters, enhancing elasticity, glow, and long-lasting hydration.   ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Skin_Boosters-min_rcxqeq",
+        // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Skin_Boosters-min_rcxqeq",
+        image: img4,
     },
     {
         title: "Lipolytic Injections   ",

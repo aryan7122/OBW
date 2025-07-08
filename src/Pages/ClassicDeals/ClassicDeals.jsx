@@ -104,13 +104,13 @@ const ClassicDeals = () => {
         ))}
       </div>
 
-      <div className="see-all">
+      {/* <div className="see-all">
         <button className="see-all-btn btn">
           <span>
           See All Offers <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
           </span>
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };

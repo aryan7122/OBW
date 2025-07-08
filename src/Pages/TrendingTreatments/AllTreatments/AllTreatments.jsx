@@ -1,93 +1,524 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AllTreatments.scss';
-import icon1 from '../../../assets/TrendingTreatments/skin.png'
-import icon2 from '../../../assets/TrendingTreatments/hairs.png'
-import icon3 from '../../../assets/TrendingTreatments/body.png'
-import icon4 from '../../../assets/TrendingTreatments/bue.png'
-import { ArrowRight } from 'lucide-react';
+import icon1 from '../../../assets/TrendingTreatments/skin.png';
+import icon2 from '../../../assets/TrendingTreatments/hairs.png';
+import icon3 from '../../../assets/TrendingTreatments/body.png';
+import icon4 from '../../../assets/TrendingTreatments/bue.png';
+import { ArrowRight, Search } from 'lucide-react';
 import BookAppointment from '../../../Components/BookAppointment/BookAppointment';
-// import { LazyLoadImage } from 'react-lazy-load-image-component';
-// import 'react-lazy-load-image-component/src/effects/blur.css';
-import img1 from '../../../assets/TrendingTreatments/doctor-wearing-blue-gloves-gives-injections-woman-scalp-treatment_11zon.jpg'
-import WebPImage from '../../../util/WebPImage';
+import WebPImage from '../../../util/WebPImage'; // Assuming this utility exists
+
+// Import default placeholder image
+import defaultLazyLoadImage from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+
+import imgPhototherapy from '../../../assets/TrendingTreatments/img0.jpg';
+import imgAcneSkincareRegime from '../../../assets/TrendingTreatments/img (8).jpg';
+import imgMicroNeedling from '../../../assets/TrendingTreatments/img (6).jpg';
+import imgLipolyticInjection from '../../../assets/TrendingTreatments/img (7).jpg';
+import imgChemicalPeel from '../../../assets/TrendingTreatments/Excellence in Aesthetics-min.jpg';
+import imgDimpleplasty1 from '../../../assets/TrendingTreatments/img (12).jpg';
+import imgMicroBotoxTherapy from '../../../assets/TrendingTreatments/img (14).jpg';
+import imgSkinTighteningLasers from '../../../assets/TrendingTreatments/img (5).jpg';
+import imgGFC from '../../../assets/TrendingTreatments/img (1).png';
+import imgPRP from '../../../assets/TrendingTreatments/img13.jpg';
+import imgIVFatLossTherapy from '../../../assets/TrendingTreatments/img (10).jpg';
+import imgCarbonLaser from '../../../assets/TrendingTreatments/img (13).jpg';
+import imgDermapen from '../../../assets/TrendingTreatments/img (6).jpg';
+import imgThreadLifts from '../../../assets/TrendingTreatments/img (9).jpg';
+import imgMinorSurgicalExcision from '../../../assets/TrendingTreatments/img (11).jpg';
+import imgDermalFillers from '../../../assets/TrendingTreatments/img (12).jpg';
+import imgLobuloplasty1 from '../../../assets/TrendingTreatments/img (7).jpg';
+import imgDimpleplasty2 from '../../../assets/TrendingTreatments/dimpleplasty.jpg';
+import imgDimpleplasty3 from '../../../assets/TrendingTreatments/dimpleplasty.jpg';
+
+
+import imgSurgicalExcision from '../../../assets/TrendingTreatments/Scar Revision or Reduction Treatments-min.jpg';
+import imgLobuloplasty2 from '../../../assets/TrendingTreatments/Earlobe-Repair-Header.bak.jpg';
+import imgLipolyticInjection2 from '../../../assets/TrendingTreatments/img0.jpg';
+
+import imgLaserLipolysis from '../../../assets/TrendingTreatments/img (6).jpg';
+import imgOzempicInjections from '../../../assets/TrendingTreatments/img (6).jpg';
+import imgBotoxForSweating from '../../../assets/TrendingTreatments/Laser Hair reduction.jpg';
+import imgRFCautery from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgDermapenMicroneedling from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgDeepChemicalPeels from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgNeckPeelBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgKneePeelBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgFullArmsBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgFullLegs from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgFullBodyLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgKneePeelLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgFullArmsLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgFullLegsLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+
+import imgPRPTreatment from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgScalpPhototherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgGFCTreatment from '../../../assets/TrendingTreatments/img (1).jpg';
+import imgTrichoScalpTherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgQR678Treatment from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgHairRegrowthIVTherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgExosomeTherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgCosmeticHairTransplantation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgScalpMesotherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgScalpMicropigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+
 
 const treatmentData = [
     {
         category: 'Skin & Face care',
-        title: 'Botulinum toxin injection',
-        des: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/q35wpx5spp1uh837lmub',
+        title: 'Phototherapy',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgPhototherapy,
     },
     {
         category: 'Skin & Face care',
-        title: 'Dermal Fillers',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/kvqisdrdu47p9dsub8hm',
+        title: 'Acne Skin Care Regime',
+        des: '',
+        Concerns: ['Active Acne'],
+        SkinType: ['Sensitive Skin'],
+        imgUrl: imgAcneSkincareRegime,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Micro-Needling',
+        des: 'A Powerful Treatment For Signs Of Aging, Fine Lines, Pigmentation, And Scars. It Boosts Collagen Production For Youthful, Radiant Skin.',
+        Concerns: ['Fine Lines & Wrinkles', 'Saggy skin', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgMicroNeedling,
     },
     {
         category: 'Body care',
-        title: 'Dermapen',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/mxulimvvas9w67hmhilj',
+        title: 'Laser liplolysis',
+        des: 'An Effective Lipolytic Injection That Reduces Fine Lines, Pigmentation, And Scars While Boosting Collagen For Smoother Skin.',
+        Concerns: ['Dryness'],
+        SkinType: [],
+        imgUrl: imgLipolyticInjection2,
     },
     {
         category: 'Skin & Face care',
-        title: 'Thread Lifts',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/jbxgcaekf58rpd9nb8hw',
-    },
-    {
-        category: 'Skin & Face care',
-        title: 'LLLT phototherapy',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/ojzdpuv3ewimvvvob5tx',
-    },
-    {
-        category: 'Skin & Face care',
-        title: 'micro-needling pen',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/y1ahi446rybcqs6n4ssp',
-    },
-    {
-        category: 'Skin & Face care',
-        title: 'PRP',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/bniw9jgm6gokbobtjccb',
-    },
-    {
-        category: 'Body care',
-        title: 'GFC',
-        imgUrl: img1,
-    },
-    // {
-    //     category: 'Scalp & Hair care',
-    //     title: 'minor surgical excision',
-    //     imgUrl: '',
-    // },
-    // {
-    //     category: 'Beautifying/cosmetic surgery',
-    //     title: 'Surgical cyst removal',
-    //     imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/tvg5guu1k0w92zmbtrjm',
-    // },
-    {
-        category: 'Skin & Face care',
-        title: 'Lobuloplasty',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/tvg5guu1k0w92zmbtrjm',
+        title: 'Chemical Peel',
+        des: 'A Chemical Peel Treats Aging Signs, Improves Stretch Marks And Acne Scars, And Boosts Collagen For Smoother Skin.',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin'],
+        imgUrl: imgChemicalPeel,
     },
     {
         category: 'Beautifying/cosmetic surgery',
         title: 'Dimpleplasty',
-        imgUrl: 'https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Treatments/aavrbbxku6puhbu4lgvr',
+        des: 'Dimpleplasty Is A Cosmetic Procedure That Creates Natural Dimples On The Cheeks, Enhancing Smiles And Adding Charm.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgDimpleplasty1,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Micro-Botox Therapy',
+        des: 'A Diluted Botox Injection Smoothing Fine Lines And Enlarged Pores For An Airbrushed Look Without Freezing Your Expressions.',
+        Concerns: ['Fine Lines & Wrinkles', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgMicroBotoxTherapy,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Skin Tightening Lasers',
+        des: 'Non-Invasive Laser Technology That Firms Collagen, Treats And Lifts Sagging Skin For A More Youthful Appearance.',
+        Concerns: ['Saggy skin'],
+        SkinType: [],
+        imgUrl: imgSkinTighteningLasers,
+    },
+    {
+        category: 'Body care',
+        title: 'GFC',
+        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgGFC,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'PRP',
+        des: 'A Therapy Using Your Blood\'s Platelets To Heal And Repair Hair And Boost Collagen And Hair Growth.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgPRP,
+    },
+    {
+        category: 'Body care',
+        title: 'IV Fat Loss Therapy',
+        des: 'A Drip Infused With Nutrients That Boost Metabolism And Aid In Fat Burning.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgIVFatLossTherapy,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Carbon Laser',
+        des: 'A Gentle Laser Facial With Activated Carbon That Cleanses, Exfoliates Skin, And Leaves Your Complexion Glowing.',
+        Concerns: ['Dark spots', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgCarbonLaser,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Dermapen',
+        des: 'A Microneedling Treatment That Boosts Collagen, Treats Fine Lines, And Minimizes Scars And Fine Lines.',
+        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin'],
+        SkinType: [],
+        imgUrl: imgDermapen,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Thread Lifts',
+        des: 'A Non-Surgical Facelift Using Dissolvable Threads To Lift Loose Skin And Boost Collagen For A Natural Look.',
+        Concerns: ['Saggy skin'],
+        SkinType: [],
+        imgUrl: imgThreadLifts,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Minor Surgical Excision',
+        des: 'A Quick And Safe Procedure To Remove Unwanted Skin Growths Like Moles And Skin Tags With Minimal Scarring.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgMinorSurgicalExcision,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Dermal Fillers',
+        des: 'Injectable Gels Restore Volume, Smooth Wrinkles, And Enhance Features For A Youthful Appearance.',
+        Concerns: ['Fine Lines & Wrinkles'],
+        SkinType: [],
+        imgUrl: imgDermalFillers,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Lobuloplasty',
+        des: 'A Quick Surgery To Fix Torn Earlobes, Restoring Their Shape For Safe Earring Wear.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgLobuloplasty1,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Dimpleplasty',
+        des: 'A Cosmetic Procedure That Creates Natural Dimples By Making A Small Incision In The Mouth.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgDimpleplasty2,
+    },
+    // Add treatments from 'Screenshot 2025-07-08 103731.png'
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Surgical Excision',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgSurgicalExcision,
+    },
+    // Lobuloplasty and Dimpleplasty are already added, using specific image variables now
+    // If you have distinct images for these from different screenshots, you should define and use them.
+    // Otherwise, these references can be omitted if the above entries suffice.
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Lobuloplasty (variant)', // Differentiated if it's a slightly different card/image
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgLobuloplasty2,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Dimpleplasty (variant)', // Differentiated if it's a slightly different card/image
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgDimpleplasty3,
     },
 
-];
+    // Add treatments from 'Screenshot 2025-07-08 103724.jpg'
+    {
+        category: 'Body care',
+        title: 'Lipolytic Injections', // Renamed to match the image text precisely
+        des: '',
+        Concerns: ['Dryness'], // Assuming this is for fat reduction/body contouring concern
+        SkinType: [],
+        imgUrl: imgLipolyticInjection, // Reusing the specific img for Lipolytic Injection
+    },
+    {
+        category: 'Body care',
+        title: 'Laser Lipolysis',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgLaserLipolysis,
+    },
+
+    {
+        category: 'Body care',
+        title: 'Ozempic Injections',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgOzempicInjections,
+    },
+    {
+        category: 'Body care',
+        title: 'Botox for Sweating',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgBotoxForSweating,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'RF Cautery',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgRFCautery,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Dermapen/ Microneedling', // Matched image text
+        des: '',
+        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgDermapenMicroneedling,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Deep chemical peels', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgDeepChemicalPeels,
+    },
+    {
+        category: 'Body care',
+        title: 'Neck peel Body pigmentation',
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'], // Assuming for pigmentation concerns
+        SkinType: [],
+        imgUrl: imgNeckPeelBodyPigmentation,
+    },
+    {
+        category: 'Body care',
+        title: 'Knee peel Body pigmentation',
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: [],
+        imgUrl: imgKneePeelBodyPigmentation,
+    },
+    {
+        category: 'Body care',
+        title: 'Full arms Body pigmentation',
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: [],
+        imgUrl: imgFullArmsBodyPigmentation,
+    },
+    {
+        category: 'Body care',
+        title: 'Full legs',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgFullLegs,
+    },
+    {
+        category: 'Body care',
+        title: 'Full body laser hair reduction',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgFullBodyLaserHairReduction,
+    },
+    {
+        category: 'Body care',
+        title: 'Knee peel laser hair reduction',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgKneePeelLaserHairReduction,
+    },
+    {
+        category: 'Body care',
+        title: 'Full arms laser hair reduction',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgFullArmsLaserHairReduction,
+    },
+    {
+        category: 'Body care',
+        title: 'Full legs laser hair reduction',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgFullLegsLaserHairReduction,
+    },
+
+    // Add treatments from 'Screenshot 2025-07-08 103708.jpg'
+    {
+        category: 'Scalp & Hair care',
+        title: 'PRP Treatment',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgPRPTreatment,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Scalp phototherapy',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgScalpPhototherapy,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'GFC Treatment',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgGFCTreatment,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Tricho scalp therapy',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgTrichoScalpTherapy,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'QR 678 Treatment',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgQR678Treatment,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Hair regrowth IV Therapy',
+        des: '',
+        Concerns: ['IV Therapy'],
+        SkinType: [],
+        imgUrl: imgHairRegrowthIVTherapy,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Exosome therapy',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgExosomeTherapy,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Cosmetic hair transplantation',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgCosmeticHairTransplantation,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Scalp Mesotherapy',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgScalpMesotherapy,
+    },
+    {
+        category: 'Scalp & Hair care',
+        title: 'Scalp Micropigmentation',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgScalpMicropigmentation,
+    },
+].map(treatment => ({ // Map over the array to ensure default image if missing
+    ...treatment,
+    imgUrl: treatment.imgUrl || defaultLazyLoadImage // Use default if imgUrl is blank/null/undefined
+}));
+
 
 const categories = [
-    { name: 'All', icon: null },
-    { name: 'Skin & Face care', icon: icon1 },
+    { name: 'All Treatments', icon: null },
+    { name: 'Skin care', icon: icon1 },
     { name: 'Scalp & Hair care', icon: icon2 },
     { name: 'Body care', icon: icon3 },
     { name: 'Beautifying/cosmetic surgery', icon: icon4 },
 ];
 
-const AllTreatments = () => {
-    const [selectedCategory, setSelectedCategory] = useState('All');
+const allConcerns = [
+    'Active Acne', 'Fine Lines & Wrinkles', 'Dryness', 'Dark circles',
+    'Dark spots', 'Saggy skin', 'Melasma', 'Enlarged pores',
+    'Lip Pigmentation', 'IV Therapy', 'Hyperpigmentation'
+];
 
-    const filteredData = selectedCategory === 'All' ? treatmentData : treatmentData.filter(item => item.category === selectedCategory);
+const allSkinTypes = [
+    'Sensitive Skin', 'Oily Skin', 'Dry Skin', 'Combination Skin'
+];
+
+const AllTreatments = () => {
+    const [selectedCategory, setSelectedCategory] = useState('All Treatments');
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedConcerns, setSelectedConcerns] = useState([]);
+    const [selectedSkinTypes, setSelectedSkinTypes] = useState([]);
+    const [showConcernsDropdown, setShowConcernsDropdown] = useState(false);
+    const [showSkinTypeDropdown, setShowSkinTypeDropdown] = useState(false);
+
+    const concernsRef = useRef(null);
+    const skinTypeRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (concernsRef.current && !concernsRef.current.contains(event.target)) {
+                setShowConcernsDropdown(false);
+            }
+            if (skinTypeRef.current && !skinTypeRef.current.contains(event.target)) {
+                setShowSkinTypeDropdown(false);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleConcernChange = (concern) => {
+        setSelectedConcerns(prev =>
+            prev.includes(concern)
+                ? prev.filter(c => c !== concern)
+                : [...prev, concern]
+        );
+    };
+
+    const handleSkinTypeChange = (skinType) => {
+        setSelectedSkinTypes(prev =>
+            prev.includes(skinType)
+                ? prev.filter(st => st !== skinType)
+                : [skinType] // Radio button behavior: only one can be selected
+        );
+    };
+
+    const filteredData = treatmentData.filter(item => {
+        const matchesCategory = selectedCategory === 'All Treatments' || item.category.toLowerCase().includes(selectedCategory.toLowerCase());
+        const matchesSearchTerm = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            (item.des && item.des.toLowerCase().includes(searchTerm.toLowerCase()));
+
+        const matchesConcerns = selectedConcerns.length === 0 ||
+            selectedConcerns.every(concern => item.Concerns.includes(concern));
+
+        const matchesSkinTypes = selectedSkinTypes.length === 0 ||
+            selectedSkinTypes.every(skinType => item.SkinType.includes(skinType));
+
+        return matchesCategory && matchesSearchTerm && matchesConcerns && matchesSkinTypes;
+    });
+
     const [showModal, setShowModal] = useState(false);
     const handleBookNowClick = () => {
         setShowModal(true);
@@ -96,20 +527,19 @@ const AllTreatments = () => {
         setShowModal(false);
     };
 
-    ///////////////////
-
-    const [visibleCount, setVisibleCount] = useState(8); // Initially 8 cards
+    const [visibleCount, setVisibleCount] = useState(8);
     const [itemsPerLoad, setItemsPerLoad] = useState(8);
     const [initialCount, setInitialCount] = useState(8);
     const buttonRef = useRef(null);
+
     useEffect(() => {
         const updateItemsPerLoad = () => {
             if (window.innerWidth < 568) {
-                setVisibleCount(4); // Mobile pe 4 dikhao
+                setVisibleCount(4);
                 setItemsPerLoad(4);
                 setInitialCount(4);
             } else {
-                setVisibleCount(8); // Desktop pe 8 dikhao
+                setVisibleCount(8);
                 setItemsPerLoad(8);
                 setInitialCount(8);
             }
@@ -133,19 +563,72 @@ const AllTreatments = () => {
     return (
         <div className="treatments-page">
             <header className="treatment-header">
-                {/* <span className='card-Treatments'>Treatments</span> */}
                 <h1>All Treatments</h1>
                 <p>Explore in-depth expert advice, insightful tips, and the most current trends in skincare, haircare, and a variety of aesthetic treatments to enhance your beauty routine.</p>
-                {/* <div className='bott-m'>
-                    <span className="unFill-separator">&#9734;</span>
-                    <span className='p_home'><a href="/">Home</a></span>
-                    <span className="breadcrumb-separator">&#9733;</span>
-                    <span className='p'>All Treatments</span>
-                </div> */}
             </header>
 
             <div className="sectionCard">
-                <h1>All Treatments</h1>
+                <div className="filters-container">
+                    <div className="search-bar">
+                        <Search className="search-icon" size={20} />
+                        <input
+                            type="text"
+                            placeholder="Search treatment name, type"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
+
+                    <div className="filter-dropdown-wrapper">
+                        <div className="filter-dropdown" ref={concernsRef}>
+                            <button className="dropdown-button" onClick={() => setShowConcernsDropdown(!showConcernsDropdown)}>
+                                Concerns {selectedConcerns.length > 0 && `(${selectedConcerns.length})`}
+                                <span className="arrow">{showConcernsDropdown ? '▲' : '▼'}</span>
+                            </button>
+                            {showConcernsDropdown && (
+                                <div className="dropdown-content">
+                                    {allConcerns.map((concern, index) => (
+                                        <label key={index} className="dropdown-item">
+                                            <input
+                                                type="checkbox"
+                                                checked={selectedConcerns.includes(concern)}
+                                                onChange={() => handleConcernChange(concern)}
+                                            />
+                                            {concern}
+                                        </label>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="filter-dropdown" ref={skinTypeRef}>
+                            <button className="dropdown-button" onClick={() => setShowSkinTypeDropdown(!showSkinTypeDropdown)}>
+                                Skin type {selectedSkinTypes.length > 0 && `(${selectedSkinTypes[0]})`} {/* Display selected skin type */}
+                                <span className="arrow">{showSkinTypeDropdown ? '▲' : '▼'}</span>
+                            </button>
+                            {showSkinTypeDropdown && (
+                                <div className="dropdown-content radio-group">
+                                    {allSkinTypes.map((skinType, index) => (
+                                        <label key={index} className="dropdown-item radio-item">
+                                            <input
+                                                type="radio"
+                                                name="skinType"
+                                                value={skinType}
+                                                checked={selectedSkinTypes.includes(skinType)}
+                                                onChange={() => handleSkinTypeChange(skinType)}
+                                            />
+                                            {skinType}
+                                        </label>
+                                    ))}
+                                    {selectedSkinTypes.length > 0 && (
+                                        <button className="clear-filter-btn" onClick={() => setSelectedSkinTypes([])}>Clear Selection</button>
+                                    )}
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+
                 <div className="navtab">
                     <nav className="treatment-filters">
                         {categories.map((category, index) => (
@@ -155,40 +638,44 @@ const AllTreatments = () => {
                                 onClick={() => setSelectedCategory(category.name)}
                             >
                                 {category.icon && <img src={category.icon} alt={category.name} className="category-icon" />}
-                                <span style={{fontSize:"18px"}}> {category.name}</span>
-                               
+                                <span style={{ fontSize: "18px" }}> {category.name}</span>
                             </button>
                         ))}
                     </nav>
                 </div>
 
                 <div className="treatment-cards">
-                    {filteredData.slice(0, visibleCount).map((item, index) => (
-                        <div className="treatment-card" key={item.index}>
-                            <div className="img">
-                                <WebPImage
-                                    src={item.imgUrl}
-                                    once={true}
-                                    alt={item.title}
-                                />
+                    {filteredData.length > 0 ? (
+                        filteredData.slice(0, visibleCount).map((item, index) => (
+                            <div className="treatment-card" key={index}>
+                                <div className="img">
+                                    <WebPImage
+                                        src={item.imgUrl}
+                                        once={true}
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="about_action">
+                                    <h3>{item.title}</h3>
+                                    <p>{item.des}</p>
+                                    <button onClick={handleBookNowClick} className="book-now btn">
+                                        <span>
+                                            Book Now
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
-                            <div className='about_action'>
-                                <h3>{item.title}</h3>
-                                <p>{item.des}</p>
-                                <button onClick={handleBookNowClick} className="book-now btn">
-                                    <span> 
-                                    Book Now
-                                    {/* <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /> */}
-                                </span>
-                                </button>
-                            </div>
-                        </div>
-                    ))}
+                        ))
+                    ) : (
+                        <p className="no-results">No treatments found matching your criteria.</p>
+                    )}
                 </div>
-                <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < filteredData.length ? handleLoadMore : handleLoadLess}>
-                    {visibleCount < filteredData.length ? "Load More" : "Load Less"}
-                    <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
-                </button>
+                {filteredData.length > initialCount && ( // Only show Load More if there are actually more items
+                    <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < filteredData.length ? handleLoadMore : handleLoadLess}>
+                        {visibleCount < filteredData.length ? "Load More" : "Load Less"}
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                    </button>
+                )}
             </div>
             {showModal && <BookAppointment onClose={closeModal} />}
         </div>
