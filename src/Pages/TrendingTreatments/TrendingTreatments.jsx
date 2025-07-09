@@ -9,6 +9,7 @@ import img1 from '../../assets/TrendingTreatments/Body Contouring (LipoLaser).jp
 import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.png'
 import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
 import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
+import { useNavigate } from "react-router-dom";
 
 const treatments = [
     {
@@ -79,6 +80,8 @@ const treatments = [
 ];
 
 const TrendingTreatments = () => {
+    const navigate = useNavigate();
+
     const [showModal, setShowModal] = useState(false);
     const [visibleCount, setVisibleCount] = useState(8); // Initially 8 cards
     const [itemsPerLoad, setItemsPerLoad] = useState(8);
@@ -117,18 +120,29 @@ const TrendingTreatments = () => {
 
     //  sliders
     const [currentIndex, setCurrentIndex] = useState(0);
-    const visibleCards = 1;
-    const handleNext = () => {
-        if (currentIndex < treatments.length - visibleCards) {
-            setCurrentIndex(currentIndex + 1);
-        }
-    };
+    const [cardsToShow, setCardsToShow] = useState(1);
+    const gap = 20;
+    const sliderRef = useRef(null);
 
-    const handlePrevious = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
-    };
+    useEffect(() => {
+        const updateCards = () => {
+            const width = window.innerWidth;
+            if (width < 500) setCardsToShow(0); // On small mobiles
+            if (width < 600) setCardsToShow(1); // On small mobiles
+            if (width < 700) setCardsToShow(1.5); // On small mobiles
+            else if (width < 900) setCardsToShow(2); // On tablets
+            else if (width < 980) setCardsToShow(2.5); // On tablets
+            else if (width < 1150) setCardsToShow(3); // On tablets
+            else setCardsToShow(3.5); 
+        };
+        updateCards();
+        window.addEventListener("resize", updateCards);
+        return () => window.removeEventListener("resize", updateCards);
+    }, []);
+
+    const totalPages = treatments.length - cardsToShow + 1;
+    const transformValue = `translateX(calc(-${currentIndex * (100 / cardsToShow)}% - ${currentIndex * gap}px))`;
+  
 
     const handleWheel = (event) => {
         if (event.deltaY > 0) {
@@ -138,7 +152,11 @@ const TrendingTreatments = () => {
         }
     };
     //  sliders
-
+    const HandleNavigation = (title) => {
+        window.scrollTo(0, 0);
+        navigate(`/${title}`);
+    };
+    
     return (
         <div className="trending-treatments">
             <div className="header_top">
@@ -152,7 +170,13 @@ const TrendingTreatments = () => {
                             Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
                         </p>
                     </div>
-                    <button ref={buttonRef} className="LoadMoreTreatments btn" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+                    <button
+                        onClick={() => HandleNavigation('treatment')}
+
+                        ref={buttonRef}
+                        className="LoadMoreTreatments btn"
+                        // onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}
+                    >
                         <span>
                            View All
                             <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
@@ -183,10 +207,17 @@ const TrendingTreatments = () => {
 
 
             <div className="card-slider-container" onWheel={handleWheel}>
-                <div className="team-images" style={{ "--index": currentIndex }}>
+                <div className="team-images"
+                    // style={{ "--index": currentIndex }}
+                    style={{ transform: transformValue }}
+                    ref={sliderRef}
+                >
                     {treatments.map((treatment, index) => (
                         <>
-                            <div className="card">
+                            <div className="card"
+                                key={index}
+                                style={{ minWidth: `calc(${100 / cardsToShow}% - ${gap * (cardsToShow - 1) / cardsToShow}px)` }}
+                                          >
                                 <div className="card-image">
                                     <WebPImage
                                         key={index}
@@ -203,10 +234,18 @@ const TrendingTreatments = () => {
                     ))}
                 </div>
                 <div className="progress">
-                    <button className="nav-btn left" onClick={handlePrevious} disabled={currentIndex === 0}>
+                    <button className="nav-btn left"
+                        // onClick={handlePrevious} disabled={currentIndex === 0}
+                        onClick={() => setCurrentIndex(Math.max(currentIndex - 1, 0))}
+                        disabled={currentIndex === 0}
+                    >
                         <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
                     </button>
-                    <button className="nav-btn right" onClick={handleNext} disabled={currentIndex >= treatments.length - visibleCards}>
+                    <button className="nav-btn right"
+                        // onClick={handleNext} disabled={currentIndex >= treatments.length - visibleCards}
+                        onClick={() => setCurrentIndex(Math.min(currentIndex + 1, treatments.length - cardsToShow))}
+                        disabled={currentIndex >= treatments.length - cardsToShow}
+                    >
                         <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                     </button>
                 </div>

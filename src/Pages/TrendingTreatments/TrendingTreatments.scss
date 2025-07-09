@@ -51,6 +51,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between !important;
+      @media only screen and (max-width: 1120px){
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+      }
       .trending-title {
         display: flex;
         align-items: center;
@@ -229,6 +234,9 @@
     transition: 0.3s linear;
     background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
     
+    @media only screen and (max-width: 1120px){
+      margin-top: 20px;
+    }
     @media only screen and (max-width: 500px) {
       padding: 5px 6px 5px 15px;
       font-size: 10px;
@@ -289,162 +297,162 @@
       display: flex;
       transition: transform 0.5s ease-out;
       will-change: transform;
-      transform: translateX(calc(-23% * var(--index)));
+      // transform: translateX(calc(-23% * var(--index)));
       gap: 20px;
-      @media only screen and (max-width: 1480px) {
-        transform: translateX(calc(-24% * var(--index)));
-      }
+      // @media only screen and (max-width: 1480px) {
+      //   transform: translateX(calc(-24% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1444px) {
-        transform: translateX(calc(-25% * var(--index)));
-      }
+      // @media only screen and (max-width: 1444px) {
+      //   transform: translateX(calc(-25% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1396px) {
-        transform: translateX(calc(-26% * var(--index)));
-      }
+      // @media only screen and (max-width: 1396px) {
+      //   transform: translateX(calc(-26% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1356px) {
-        transform: translateX(calc(-27% * var(--index)));
-      }
+      // @media only screen and (max-width: 1356px) {
+      //   transform: translateX(calc(-27% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1322px) {
-        transform: translateX(calc(-28% * var(--index)));
-      }
+      // @media only screen and (max-width: 1322px) {
+      //   transform: translateX(calc(-28% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1288px) {
-        transform: translateX(calc(-29% * var(--index)));
-      }
+      // @media only screen and (max-width: 1288px) {
+      //   transform: translateX(calc(-29% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1255px) {
-        transform: translateX(calc(-30% * var(--index)));
-      }
+      // @media only screen and (max-width: 1255px) {
+      //   transform: translateX(calc(-30% * var(--index)));
+      // }
 
-      @media only screen and (max-width: 1224px) {
-        transform: translateX(calc(-31% * var(--index)));
-      }
-      @media only screen and (max-width: 1196px) {
-        transform: translateX(calc(-32% * var(--index)));
-      }
-      @media only screen and (max-width: 1168px) {
-        transform: translateX(calc(-33% * var(--index)));
-      }
-      @media only screen and (max-width: 1142px) {
-        transform: translateX(calc(-34% * var(--index)));
-      }
-      @media only screen and (max-width: 1111px) {
-        transform: translateX(calc(-35% * var(--index)));
-      }
-      @media only screen and (max-width: 1090px) {
-        transform: translateX(calc(-36% * var(--index)));
-      }
-      @media only screen and (max-width: 1070px) {
-        transform: translateX(calc(-37% * var(--index)));
-      }
-      @media only screen and (max-width: 1040px) {
-        transform: translateX(calc(-38% * var(--index)));
-      }
-      @media only screen and (max-width: 1025px) {
-        transform: translateX(calc(-40% * var(--index)));
-      }
-      @media only screen and (max-width: 985px) {
-        transform: translateX(calc(-42% * var(--index)));
-      }
-      @media only screen and (max-width: 950px) {
-        transform: translateX(calc(-44% * var(--index)));
-      }
-      @media only screen and (max-width: 917px) {
-        transform: translateX(calc(-46% * var(--index)));
-      }
-      @media only screen and (max-width: 885px) {
-        transform: translateX(calc(-48% * var(--index)));
-      }
-      @media only screen and (max-width: 855px) {
-        transform: translateX(calc(-50% * var(--index)));
-      }
-      @media only screen and (max-width: 825px) {
-        transform: translateX(calc(-52% * var(--index)));
-      }
-      @media only screen and (max-width: 805px) {
-        transform: translateX(calc(-55% * var(--index)));
-      }
-      @media only screen and (max-width: 770px) {
-        transform: translateX(calc(-56% * var(--index)));
-      }
-      @media only screen and (max-width: 758px) {
-        transform: translateX(calc(-57% * var(--index)));
-      }
-      @media only screen and (max-width: 750px) {
-        transform: translateX(calc(-59% * var(--index)));
-      }
-      @media only screen and (max-width: 727px) {
-        transform: translateX(calc(-61% * var(--index)));
-      }
-      @media only screen and (max-width: 708px) {
-        transform: translateX(calc(-63% * var(--index)));
-      }
-      @media only screen and (max-width: 690px) {
-        transform: translateX(calc(-66% * var(--index)));
-      }
-      @media only screen and (max-width: 664px) {
-        transform: translateX(calc(-69% * var(--index)));
-      }
-      @media only screen and (max-width: 642px) {
-        transform: translateX(calc(-73% * var(--index)));
-      }
-      @media only screen and (max-width: 614px) {
-        transform: translateX(calc(-76% * var(--index)));
-      }
-      @media only screen and (max-width: 593px) {
-        transform: translateX(calc(-79% * var(--index)));
-      }
-      @media only screen and (max-width: 576px) {
-        transform: translateX(calc(-81.8% * var(--index)));
-      }
-      @media only screen and (max-width: 560px) {
-        transform: translateX(calc(-84.5% * var(--index)));
-      }
-      @media only screen and (max-width: 546px) {
-        transform: translateX(calc(-87% * var(--index)));
-      }
-      @media only screen and (max-width: 533px) {
-        transform: translateX(calc(-90% * var(--index)));
-      }
-      @media only screen and (max-width: 517px) {
-        transform: translateX(calc(-92% * var(--index)));
-      }
-      @media only screen and (max-width: 509px) {
-        transform: translateX(calc(-94% * var(--index)));
-      }
-      @media only screen and (max-width: 500px) {
-        transform: translateX(calc(-96% * var(--index)));
-      }
-      @media only screen and (max-width: 367px) {
-        transform: translateX(calc(-99% * var(--index)));
-      }
-      @media only screen and (max-width: 359px) {
-        transform: translateX(calc(-101% * var(--index)));
-      }
-      @media only screen and (max-width: 352px) {
-        transform: translateX(calc(-103% * var(--index)));
-      }
-      @media only screen and (max-width: 348px) {
-        transform: translateX(calc(-105% * var(--index)));
-      }
-      @media only screen and (max-width: 343px) {
-        transform: translateX(calc(-107% * var(--index)));
-      }
-      @media only screen and (max-width: 338px) {
-        transform: translateX(calc(-105% * var(--index)));
-      }
-      @media only screen and (max-width: 333px) {
-        transform: translateX(calc(-108% * var(--index)));
-      }
-      @media only screen and (max-width: 326px) {
-        transform: translateX(calc(-110% * var(--index)));
-      }
-      @media only screen and (max-width: 322px) {
-        transform: translateX(calc(-111% * var(--index)));
-      }
+      // @media only screen and (max-width: 1224px) {
+      //   transform: translateX(calc(-31% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1196px) {
+      //   transform: translateX(calc(-32% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1168px) {
+      //   transform: translateX(calc(-33% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1142px) {
+      //   transform: translateX(calc(-34% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1111px) {
+      //   transform: translateX(calc(-35% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1090px) {
+      //   transform: translateX(calc(-36% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1070px) {
+      //   transform: translateX(calc(-37% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1040px) {
+      //   transform: translateX(calc(-38% * var(--index)));
+      // }
+      // @media only screen and (max-width: 1025px) {
+      //   transform: translateX(calc(-40% * var(--index)));
+      // }
+      // @media only screen and (max-width: 985px) {
+      //   transform: translateX(calc(-42% * var(--index)));
+      // }
+      // @media only screen and (max-width: 950px) {
+      //   transform: translateX(calc(-44% * var(--index)));
+      // }
+      // @media only screen and (max-width: 917px) {
+      //   transform: translateX(calc(-46% * var(--index)));
+      // }
+      // @media only screen and (max-width: 885px) {
+      //   transform: translateX(calc(-48% * var(--index)));
+      // }
+      // @media only screen and (max-width: 855px) {
+      //   transform: translateX(calc(-50% * var(--index)));
+      // }
+      // @media only screen and (max-width: 825px) {
+      //   transform: translateX(calc(-52% * var(--index)));
+      // }
+      // @media only screen and (max-width: 805px) {
+      //   transform: translateX(calc(-55% * var(--index)));
+      // }
+      // @media only screen and (max-width: 770px) {
+      //   transform: translateX(calc(-56% * var(--index)));
+      // }
+      // @media only screen and (max-width: 758px) {
+      //   transform: translateX(calc(-57% * var(--index)));
+      // }
+      // @media only screen and (max-width: 750px) {
+      //   transform: translateX(calc(-59% * var(--index)));
+      // }
+      // @media only screen and (max-width: 727px) {
+      //   transform: translateX(calc(-61% * var(--index)));
+      // }
+      // @media only screen and (max-width: 708px) {
+      //   transform: translateX(calc(-63% * var(--index)));
+      // }
+      // @media only screen and (max-width: 690px) {
+      //   transform: translateX(calc(-66% * var(--index)));
+      // }
+      // @media only screen and (max-width: 664px) {
+      //   transform: translateX(calc(-69% * var(--index)));
+      // }
+      // @media only screen and (max-width: 642px) {
+      //   transform: translateX(calc(-73% * var(--index)));
+      // }
+      // @media only screen and (max-width: 614px) {
+      //   transform: translateX(calc(-76% * var(--index)));
+      // }
+      // @media only screen and (max-width: 593px) {
+      //   transform: translateX(calc(-79% * var(--index)));
+      // }
+      // @media only screen and (max-width: 576px) {
+      //   transform: translateX(calc(-81.8% * var(--index)));
+      // }
+      // @media only screen and (max-width: 560px) {
+      //   transform: translateX(calc(-84.5% * var(--index)));
+      // }
+      // @media only screen and (max-width: 546px) {
+      //   transform: translateX(calc(-87% * var(--index)));
+      // }
+      // @media only screen and (max-width: 533px) {
+      //   transform: translateX(calc(-90% * var(--index)));
+      // }
+      // @media only screen and (max-width: 517px) {
+      //   transform: translateX(calc(-92% * var(--index)));
+      // }
+      // @media only screen and (max-width: 509px) {
+      //   transform: translateX(calc(-94% * var(--index)));
+      // }
+      // @media only screen and (max-width: 500px) {
+      //   transform: translateX(calc(-96% * var(--index)));
+      // }
+      // @media only screen and (max-width: 367px) {
+      //   transform: translateX(calc(-99% * var(--index)));
+      // }
+      // @media only screen and (max-width: 359px) {
+      //   transform: translateX(calc(-101% * var(--index)));
+      // }
+      // @media only screen and (max-width: 352px) {
+      //   transform: translateX(calc(-103% * var(--index)));
+      // }
+      // @media only screen and (max-width: 348px) {
+      //   transform: translateX(calc(-105% * var(--index)));
+      // }
+      // @media only screen and (max-width: 343px) {
+      //   transform: translateX(calc(-107% * var(--index)));
+      // }
+      // @media only screen and (max-width: 338px) {
+      //   transform: translateX(calc(-105% * var(--index)));
+      // }
+      // @media only screen and (max-width: 333px) {
+      //   transform: translateX(calc(-108% * var(--index)));
+      // }
+      // @media only screen and (max-width: 326px) {
+      //   transform: translateX(calc(-110% * var(--index)));
+      // }
+      // @media only screen and (max-width: 322px) {
+      //   transform: translateX(calc(-111% * var(--index)));
+      // }
       .card {
         width: 100%;
         min-width: 400px;
