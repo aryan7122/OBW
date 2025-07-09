@@ -92,22 +92,23 @@
     .BookAppointmentNow {
 
       margin-top: 2rem;
-      padding: 8px 5px 8px 25px;
+      padding: 10px 7px 10px 35px;
       margin-top: 50px;
       background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%) !important;
       height: 43px;
       color: #fff;
       border: none;
-      font-size: 20px;
+      font-size: 18px;
       border-radius: 100px;
       display: flex;
       align-items: center;
       gap: 10px;
+      height: 54px;
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.5px;
-
-      cursor: pointer;
+      // width: 215px;
+      cursor: pointer; 
       transition: background-color 0.3s ease;
       background: linear-gradient(90.15deg, #f2f3f4 0.13%, #ffffff 103.2%);
       border: 1px solid transparent;
@@ -128,8 +129,8 @@
         background: #fff;
         color: #2463EB;
         border-radius: 100px;
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
         padding: 5px;
         @media only screen and (max-width: 400px) {
           width: 30px;

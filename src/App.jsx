@@ -11,7 +11,7 @@ import TrendingTreatments from "./Pages/TrendingTreatments/TrendingTreatments";
 import WhyChooseSection from "./Pages/WhyChooseSection/WhyChooseSection";
 import BlogSlider from "./Pages/BlogSlider/BlogSlider";
 import FAQSection from "./Pages/FAQSection/FAQSection";
-import HappyClients from "./Pages/HappyClients/HappyClients";
+import HappyClients from "./Pages/HappyClients/HappyClients.jsx";
 import FirstStep from "./Pages/FirstStep/FirstStep";
 import Footer from "./Components/Footer/Footer";
 import AboutUsHero from "./Pages/AboutUs/HeroSection/AboutUsHero";

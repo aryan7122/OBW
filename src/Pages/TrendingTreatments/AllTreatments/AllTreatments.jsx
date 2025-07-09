@@ -11,25 +11,27 @@ import WebPImage from '../../../util/WebPImage'; // Assuming this utility exists
 // Import default placeholder image
 import defaultLazyLoadImage from '../../../assets/TrendingTreatments/LazyLoadImage.png';
 
-import imgPhototherapy from '../../../assets/TrendingTreatments/img0.jpg';
-import imgAcneTargeting from '../../../assets/TrendingTreatments/img (7).jpg';
-import imgAcneregime from '../../../assets/TrendingTreatments/img (12).jpg';
-import imgskinregime from '../../../assets/TrendingTreatments/img (8).jpg';
-import imgCarbonLasers from '../../../assets/TrendingTreatments/img (13).jpg';
-import imgOxygenjet from '../../../assets/TrendingTreatments/img (14).jpg';
-import imgMesobotox from '../../../assets/TrendingTreatments/img (4).jpg';
+import imgPhototherapy from '../../../assets/TrendingTreatments/Phototherapy.jpg';
+import imgAcneTargeting from '../../../assets/TrendingTreatments/Acne Targeting peels.jpg';
+import imgAcneregime from '../../../assets/TrendingTreatments/Anti acne facials.jpg';
+import imgskinregime from '../../../assets/TrendingTreatments/Acne skin care  regime.jpg';
+import imgCarbonLasers from '../../../assets/TrendingTreatments/Carbon Laser.png';
+import imgOxygenjet from '../../../assets/TrendingTreatments/Oxygen jet peel.jpg';
+import imgDermapen from '../../../assets/TrendingTreatments/Dermapen.jpg';
+
+import imgMesobotox from '../../../assets/TrendingTreatments/Meso botox.jpg';
 import imgAcneSkincareRegime from '../../../assets/TrendingTreatments/img (8).jpg';
 import imgMicroNeedling from '../../../assets/TrendingTreatments/img (6).jpg';
-import imgLipolyticInjection from '../../../assets/TrendingTreatments/img (7).jpg';
+import imgLipolyticInjection from '../../../assets/TrendingTreatments/Lipolytic Injections.jpg';
 import imgChemicalPeel from '../../../assets/TrendingTreatments/Excellence in Aesthetics-min.jpg';
 import imgDimpleplasty1 from '../../../assets/TrendingTreatments/img (12).jpg';
 import imgMicroBotoxTherapy from '../../../assets/TrendingTreatments/img (14).jpg';
 import imgSkinTighteningLasers from '../../../assets/TrendingTreatments/img (5).jpg';
 import imgGFC from '../../../assets/TrendingTreatments/img (1).png';
 import imgPRP from '../../../assets/TrendingTreatments/img13.jpg';
-import imgIVFatLossTherapy from '../../../assets/TrendingTreatments/img (10).jpg';
+import imgIVFatLossTherapy from '../../../assets/TrendingTreatments/IV Fatloss therapy.png';
 import imgCarbonLaser from '../../../assets/TrendingTreatments/img (13).jpg';
-import imgDermapen from '../../../assets/TrendingTreatments/img (6).jpg';
+// import imgDermapen from '../../../assets/TrendingTreatments/img (6).jpg';
 import imgThreadLifts from '../../../assets/TrendingTreatments/img (9).jpg';
 import imgMinorSurgicalExcision from '../../../assets/TrendingTreatments/img (11).jpg';
 import imgDermalFillers from '../../../assets/TrendingTreatments/img (12).jpg';
@@ -38,43 +40,44 @@ import imgDimpleplasty2 from '../../../assets/TrendingTreatments/dimpleplasty.jp
 import imgDimpleplasty3 from '../../../assets/TrendingTreatments/dimpleplasty.jpg';
 
 
-import imgSurgicalExcision from '../../../assets/TrendingTreatments/Scar Revision or Reduction Treatments-min.jpg';
+import imgSurgicalExcision from '../../../assets/TrendingTreatments/img0.jpg';
 import imgLobuloplasty2 from '../../../assets/TrendingTreatments/Earlobe-Repair-Header.bak.jpg';
-import imgLipolyticInjection2 from '../../../assets/TrendingTreatments/img0.jpg';
+import imgLipolyticInjection2 from '../../../assets/TrendingTreatments/Laser liplolysis.jpg';
 
 import imgLaserLipolysis from '../../../assets/TrendingTreatments/img (6).jpg';
-import imgOzempicInjections from '../../../assets/TrendingTreatments/img (6).jpg';
-import imgBotoxForSweating from '../../../assets/TrendingTreatments/Laser Hair reduction.jpg';
-import imgRFCautery from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgDermapenMicroneedling from '../../../assets/TrendingTreatments/img (6).jpg';
-import imgTCACross from '../../../assets/TrendingTreatments/img (10).jpg';
-import imgScarCross from '../../../assets/TrendingTreatments/img (5).jpg';
-import imgKeloidTreatments from '../../../assets/TrendingTreatments/img (1).png';
-import imgHydratingPeels from '../../../assets/TrendingTreatments/img (9).jpg';
+import imgOzempicInjections from '../../../assets/TrendingTreatments/Ozempic injections.jpg';
+import imgBotoxForSweating from '../../../assets/TrendingTreatments/Botox for sweating.png';
+import imgRFCautery from '../../../assets/TrendingTreatments/RF Cautery.jpg';
+import imgDermapenMicroneedling2 from '../../../assets/TrendingTreatments/DermapenMicroneedling.jpg';
+import imgTCACross from '../../../assets/TrendingTreatments/TCA Cross.png';
+import imgScarCross from '../../../assets/TrendingTreatments/Scar excision.jpg';
+import imgKeloidTreatments from '../../../assets/TrendingTreatments/Keloid Treatments.png';
+import imgHydratingPeels from '../../../assets/TrendingTreatments/Hydrating Peels.jpg';
+import imgLipPeel from '../../../assets/TrendingTreatments/Lip Peel.jpg';
 import imgHydratingtreatments from '../../../assets/TrendingTreatments/img (11).jpg';
-import imgSkinBooster from '../../../assets/TrendingTreatments/222im.jpg';
-import imgUnderpeels from '../../../assets/TrendingTreatments/img (6).jpg';
-import imgUndereye from '../../../assets/TrendingTreatments/img (12).jpg';
-import imgDeepChemicalPeels from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgNeckPeelBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgKneePeelBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgFullArmsBodyPigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgFullLegs from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgFullBodyLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgKneePeelLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgFullArmsLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgFullLegsLaserHairReduction from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgSkinBooster from '../../../assets/TrendingTreatments/Skin Boosters.jpg';
+import imgUnderpeels from '../../../assets/TrendingTreatments/Under Eye peels.jpg';
+import imgUndereye from '../../../assets/TrendingTreatments/Under eye collagen therapy.jpg';
+import imgDeepChemicalPeels from '../../../assets/TrendingTreatments/Deep chemical peels.jpg';
+import imgNeckPeelBodyPigmentation from '../../../assets/TrendingTreatments/Neck peel Body pigmentation.png';
+import imgKneePeelBodyPigmentation from '../../../assets/TrendingTreatments/img (5).jpg';
+import imgFullArmsBodyPigmentation from '../../../assets/TrendingTreatments/img (10).jpg';
+import imgFullFace from '../../../assets/TrendingTreatments/Full face laser hair reduction.png';
+import imgFullBodyLaserHairReduction from '../../../assets/TrendingTreatments/Full body laser hair reduction.jpg';
+import imgKneePeelLaserHairReduction from '../../../assets/TrendingTreatments/Full leg laser hair reduction.jpg';
+import imgFullArmsLaserHairReduction from '../../../assets/TrendingTreatments/Full arms laser hair reduction.jpg';
+import imgFullLegsLaserHairReduction from '../../../assets/TrendingTreatments/img (12).jpg';
 
-import imgPRPTreatment from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgScalpPhototherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgGFCTreatment from '../../../assets/TrendingTreatments/img (1).jpg';
-import imgTrichoScalpTherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgQR678Treatment from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgHairRegrowthIVTherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgExosomeTherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgCosmeticHairTransplantation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgScalpMesotherapy from '../../../assets/TrendingTreatments/LazyLoadImage.png';
-import imgScalpMicropigmentation from '../../../assets/TrendingTreatments/LazyLoadImage.png';
+import imgPRPTreatment from '../../../assets/TrendingTreatments/PRP for hair.jpg';
+import imgScalpPhototherapy from '../../../assets/TrendingTreatments/img (7).jpg';
+import imgGFCTreatment from '../../../assets/TrendingTreatments/GFC Treatment.png';
+import imgTrichoScalpTherapy from '../../../assets/TrendingTreatments/Tricho scalp therapy.jpg';
+import imgQR678Treatment from '../../../assets/TrendingTreatments/QR 678 Treatment.jpg';
+import imgHairRegrowthIVTherapy from '../../../assets/TrendingTreatments/Hair regrowth IV Therapy.jpg';
+import imgExosomeTherapy from '../../../assets/TrendingTreatments/Exosome therapy.png';
+import imgCosmeticHairTransplantation from '../../../assets/TrendingTreatments/Cosmetic hair transplantation.jpg';
+import imgScalpMesotherapy from '../../../assets/TrendingTreatments/img (10).jpg';
+import imgScalpMicropigmentation from '../../../assets/TrendingTreatments/img (5).jpg';
 
 
 const treatmentData = [
@@ -128,19 +131,19 @@ const treatmentData = [
     },
     {
         category: 'Skin care', // Changed to Skin care as per image
+        title: 'Dermapen', // Matched image text
+        des: '',
+        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgDermapen,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
         title: 'Meso botox',
         des: '',
         Concerns: [],
         SkinType: [],
         imgUrl: imgMesobotox,
-    },
-    {
-        category: 'Skin care', // Changed to Skin care as per image
-        title: 'Dermapen', // Matched image text
-        des: '',
-        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin', 'Enlarged pores'],
-        SkinType: [],
-        imgUrl: imgDermapenMicroneedling,
     },
     {
         category: 'Skin care', // Changed to Skin care as per image
@@ -176,11 +179,11 @@ const treatmentData = [
     },
     {
         category: 'Skin care', // Changed to Skin care as per image
-        title: 'Hydrapen treatments', // Matched image text
+        title: 'Lip Peel', // Matched image text
         des: '',
         Concerns: ['Dark spots', 'Melasma'],
         SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
-        imgUrl: imgHydratingtreatments,
+        imgUrl: imgLipPeel,
     },
     {
         category: 'Skin care', // Changed to Skin care as per image
@@ -222,14 +225,7 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgMicroNeedling,
     },
-    {
-        category: 'Body care',
-        title: 'Laser liplolysis',
-        des: 'An Effective Lipolytic Injection That Reduces Fine Lines, Pigmentation, And Scars While Boosting Collagen For Smoother Skin.',
-        Concerns: ['Dryness'],
-        SkinType: [],
-        imgUrl: imgLipolyticInjection2,
-    },
+
     {
         category: 'Skin & Face care',
         title: 'Chemical Peel',
@@ -238,14 +234,7 @@ const treatmentData = [
         SkinType: ['Oily Skin', 'Dry Skin'],
         imgUrl: imgChemicalPeel,
     },
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Dimpleplasty',
-        des: 'Dimpleplasty Is A Cosmetic Procedure That Creates Natural Dimples On The Cheeks, Enhancing Smiles And Adding Charm.',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgDimpleplasty1,
-    },
+   
     {
         category: 'Skin & Face care',
         title: 'Micro-Botox Therapy',
@@ -262,21 +251,23 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgSkinTighteningLasers,
     },
+    // body
     {
         category: 'Body care',
-        title: 'GFC',
-        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
-        Concerns: [],
+        title: 'Lipolytic Injections', // Renamed to match the image text precisely
+        des: '',
+        Concerns: ['Dryness'], // Assuming this is for fat reduction/body contouring concern
         SkinType: [],
-        imgUrl: imgGFC,
+        imgUrl: imgLipolyticInjection, // Reusing the specific img for Lipolytic Injection
     },
+
     {
-        category: 'Scalp & Hair care',
-        title: 'PRP',
-        des: 'A Therapy Using Your Blood\'s Platelets To Heal And Repair Hair And Boost Collagen And Hair Growth.',
-        Concerns: [],
+        category: 'Body care',
+        title: 'Laser liplolysis',
+        des: 'An Effective Lipolytic Injection That Reduces Fine Lines, Pigmentation, And Scars While Boosting Collagen For Smoother Skin.',
+        Concerns: ['Dryness'],
         SkinType: [],
-        imgUrl: imgPRP,
+        imgUrl: imgLipolyticInjection2,
     },
     {
         category: 'Body care',
@@ -286,109 +277,6 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgIVFatLossTherapy,
     },
-    {
-        category: 'Skin & Face care',
-        title: 'Carbon Laser',
-        des: 'A Gentle Laser Facial With Activated Carbon That Cleanses, Exfoliates Skin, And Leaves Your Complexion Glowing.',
-        Concerns: ['Dark spots', 'Enlarged pores'],
-        SkinType: [],
-        imgUrl: imgCarbonLaser,
-    },
-    {
-        category: 'Skin & Face care',
-        title: 'Dermapen',
-        des: 'A Microneedling Treatment That Boosts Collagen, Treats Fine Lines, And Minimizes Scars And Fine Lines.',
-        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin'],
-        SkinType: [],
-        imgUrl: imgDermapen,
-    },
-    {
-        category: 'Skin & Face care',
-        title: 'Thread Lifts',
-        des: 'A Non-Surgical Facelift Using Dissolvable Threads To Lift Loose Skin And Boost Collagen For A Natural Look.',
-        Concerns: ['Saggy skin'],
-        SkinType: [],
-        imgUrl: imgThreadLifts,
-    },
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Minor Surgical Excision',
-        des: 'A Quick And Safe Procedure To Remove Unwanted Skin Growths Like Moles And Skin Tags With Minimal Scarring.',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgMinorSurgicalExcision,
-    },
-    {
-        category: 'Skin & Face care',
-        title: 'Dermal Fillers',
-        des: 'Injectable Gels Restore Volume, Smooth Wrinkles, And Enhance Features For A Youthful Appearance.',
-        Concerns: ['Fine Lines & Wrinkles'],
-        SkinType: [],
-        imgUrl: imgDermalFillers,
-    },
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Lobuloplasty',
-        des: 'A Quick Surgery To Fix Torn Earlobes, Restoring Their Shape For Safe Earring Wear.',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgLobuloplasty1,
-    },
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Dimpleplasty',
-        des: 'A Cosmetic Procedure That Creates Natural Dimples By Making A Small Incision In The Mouth.',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgDimpleplasty2,
-    },
-    // Add treatments from 'Screenshot 2025-07-08 103731.png'
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Surgical Excision',
-        des: '',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgSurgicalExcision,
-    },
-    // Lobuloplasty and Dimpleplasty are already added, using specific image variables now
-    // If you have distinct images for these from different screenshots, you should define and use them.
-    // Otherwise, these references can be omitted if the above entries suffice.
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Lobuloplasty (variant)', // Differentiated if it's a slightly different card/image
-        des: '',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgLobuloplasty2,
-    },
-    {
-        category: 'Beautifying/cosmetic surgery',
-        title: 'Dimpleplasty (variant)', // Differentiated if it's a slightly different card/image
-        des: '',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgDimpleplasty3,
-    },
-
-    // Add treatments from 'Screenshot 2025-07-08 103724.jpg'
-    {
-        category: 'Body care',
-        title: 'Lipolytic Injections', // Renamed to match the image text precisely
-        des: '',
-        Concerns: ['Dryness'], // Assuming this is for fat reduction/body contouring concern
-        SkinType: [],
-        imgUrl: imgLipolyticInjection, // Reusing the specific img for Lipolytic Injection
-    },
-    {
-        category: 'Body care',
-        title: 'Laser Lipolysis',
-        des: '',
-        Concerns: [],
-        SkinType: [],
-        imgUrl: imgLaserLipolysis,
-    },
-
     {
         category: 'Body care',
         title: 'Ozempic Injections',
@@ -405,6 +293,35 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgBotoxForSweating,
     },
+    {
+        category: 'Body care',
+        title: 'RF Cautery',
+        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgRFCautery,
+    },
+    {
+        category: 'Body care',
+        title: 'Dermapen/Microneedling',
+        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgDermapenMicroneedling2,
+    },
+    {
+        category: 'Body care',
+        title: 'Deep chemical peels',
+        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgDeepChemicalPeels,
+    },
+  
+   
+
+
+  
 
     {
         category: 'Body care',
@@ -432,11 +349,11 @@ const treatmentData = [
     },
     {
         category: 'Body care',
-        title: 'Full legs',
+        title: 'Full face laser hair reduction',
         des: '',
         Concerns: [],
         SkinType: [],
-        imgUrl: imgFullLegs,
+        imgUrl: imgFullFace,
     },
     {
         category: 'Body care',
@@ -448,7 +365,7 @@ const treatmentData = [
     },
     {
         category: 'Body care',
-        title: 'Knee peel laser hair reduction',
+        title: 'Knee leg laser hair reduction',
         des: '',
         Concerns: [],
         SkinType: [],
@@ -471,6 +388,70 @@ const treatmentData = [
         imgUrl: imgFullLegsLaserHairReduction,
     },
 
+// body
+  
+    {
+        category: 'Skin & Face care',
+        title: 'Carbon Laser',
+        des: 'A Gentle Laser Facial With Activated Carbon That Cleanses, Exfoliates Skin, And Leaves Your Complexion Glowing.',
+        Concerns: ['Dark spots', 'Enlarged pores'],
+        SkinType: [],
+        imgUrl: imgCarbonLaser,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Dermapen',
+        des: 'A Microneedling Treatment That Boosts Collagen, Treats Fine Lines, And Minimizes Scars And Fine Lines.',
+        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin'],
+        SkinType: [],
+        imgUrl: imgDermapen,
+    },
+    {
+        category: 'Skin & Face care',
+        title: 'Thread Lifts',
+        des: 'A Non-Surgical Facelift Using Dissolvable Threads To Lift Loose Skin And Boost Collagen For A Natural Look.',
+        Concerns: ['Saggy skin'],
+        SkinType: [],
+        imgUrl: imgThreadLifts,
+    },
+ 
+    {
+        category: 'Skin & Face care',
+        title: 'Dermal Fillers',
+        des: 'Injectable Gels Restore Volume, Smooth Wrinkles, And Enhance Features For A Youthful Appearance.',
+        Concerns: ['Fine Lines & Wrinkles'],
+        SkinType: [],
+        imgUrl: imgDermalFillers,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Surgical excision',
+        des: '',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgSurgicalExcision,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Lobuloplasty',
+        des: 'A Quick Surgery To Fix Torn Earlobes, Restoring Their Shape For Safe Earring Wear.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgLobuloplasty1,
+    },
+    {
+        category: 'Beautifying/cosmetic surgery',
+        title: 'Dimpleplasty',
+        des: 'A Cosmetic Procedure That Creates Natural Dimples By Making A Small Incision In The Mouth.',
+        Concerns: [],
+        SkinType: [],
+        imgUrl: imgDimpleplasty2,
+    },
+    // Add treatments from 'Screenshot 2025-07-08 103731.png'
+  
+    
+
+ 
     // Add treatments from 'Screenshot 2025-07-08 103708.jpg'
     {
         category: 'Scalp & Hair care',

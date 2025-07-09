@@ -70,12 +70,8 @@ const HappyClients = () => {
             const offset = currentIndex * cardSize;
             const lastVisibleIndex = data.length - visibleCardsCount;
             const isLastSlide = currentIndex >= lastVisibleIndex;
-            const windowWidth = window.innerWidth;
-
-            const extra =
-                isLastSlide && windowWidth <= 1600 && windowWidth >= 990 ? 100 : 0;
-
-            sliderRef.current.style.transform = `translateX(-${offset + extra}px)`;
+            const extra = isLastSlide ? 150 : 0; // 👈 100px shift for last
+            sliderRef.current.style.transform = `translateX(-${offset +  extra}px)`;
         }
     }, [currentIndex, cardSize]);
 
@@ -110,9 +106,9 @@ const HappyClients = () => {
                             onMouseEnter={() => {
                                 // clearTimeout(hoverTimeout.current);
                                 hoverTimeout.current = setTimeout(() => {
-                                    handleHover(index);
-                                    setHoveredIndex(index)
-                                }, 3900); // smoother
+                                    // handleHover(index);
+                                    // setHoveredIndex(index)
+                                }, 300); // smoother
                             }}
                             onMouseLeave={() => {
                                 clearTimeout(hoverTimeout.current);

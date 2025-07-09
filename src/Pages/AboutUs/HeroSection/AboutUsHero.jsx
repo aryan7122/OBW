@@ -39,7 +39,7 @@ const AboutUsHero = () => {
             <span>
 
             Contact Us {" "}
-              <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+              <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
             </span>
           </button>
         </div>

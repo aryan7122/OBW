@@ -61,7 +61,7 @@ const MissionVision = () => {
                         </p>
                 <button className="BookAppointmentNow btn" onClick={() => HandleNavigation("/treatment")}>
                     <span> 
-                    See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                    See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                 </span>
                 </button>
 
