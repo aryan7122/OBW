@@ -45,9 +45,9 @@
     .section-title {
       font-family: "Geist";
       font-weight: 400;
-      font-size: clamp(2rem, 5vw, 2.5rem);
+      font-size: clamp(24px, 5vw, 40px);
       line-height: clamp(2.2rem, 6vw, 3rem);
-      letter-spacing: clamp(-1.5px, 6vw, -1.5px);
+      letter-spacing: clamp(-3px, 6vw, -2.5px);
       text-transform: capitalize;
       text-align: left;
       background: linear-gradient(135.34deg, #643434 5.18%, #010066 74.19%);

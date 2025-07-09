@@ -115,7 +115,10 @@ const BlogSlider = () => {
                 <div className="content_top">
                     <div>
                         <h3 className='blog_title'>BLOGS</h3>
-                        <h2 className="slider-heading">Unlock The Power Of Tailored Growth Solutions</h2>
+                        <h2 className="slider-heading">
+                        {/* Unlock The Power Of Tailored Growth Solutions */}
+                        Discover beauty and wellness tips to enhance your glow and well-being.
+                        </h2>
                     </div>
                     <button className="view-all btn" onClick={() => navigate('/blogs')}>
                         <span>

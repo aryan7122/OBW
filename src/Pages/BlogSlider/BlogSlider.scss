@@ -11,7 +11,6 @@
     padding: 20px 0px 20px 40px;
   }
 
-
   @media only screen and (max-width: 600px) {
     padding:20px 0px 20px 30px;
   }
@@ -34,7 +33,7 @@
     border-radius: 100px;
   }
   .content_top {
-    padding-right: 100px;
+    padding-right: 120px;
     display: flex;
     text-align: left;
     align-items: center;
@@ -50,7 +49,7 @@
       align-items: start;
     }
     .view-all {
-      padding: 5px 5px 5px 20px;
+      padding: 5px 8px 5px 30px;
       background-color: #007bff;
       color: #fff;
       border: none;
@@ -62,7 +61,7 @@
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.5px;
-
+      height: 48px;
       cursor: pointer;
       transition: background-color 0.3s ease;
       background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
@@ -83,8 +82,8 @@
         background: #fff;
         color: #0056b3;
         border-radius: 100px;
-        width: 30px;
-        height: 30px;
+        width: 29px;
+        height: 29px;
         padding: 5px;
       }
 
@@ -101,13 +100,13 @@
     }
     .slider-heading {
       background: linear-gradient(91.63deg, #0200cc 2.06%, #010066 85.94%);
-      font-size: 40px;
+      font-size: 36px;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       width: 671px;
-      font-weight: 500;
-      line-height: 57.6px;
-      letter-spacing: -2.200000047683716px;
+      font-weight: 400;
+      line-height: 46.6px;
+      letter-spacing: -1.5px;
       text-align: left;
       margin-top: 8px;
       @media only screen and (max-width: 1080px) {
@@ -399,6 +398,9 @@
      
         z-index: 2;
         color: #fff;
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       .card-title {

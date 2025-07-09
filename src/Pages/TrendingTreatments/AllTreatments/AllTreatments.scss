@@ -151,10 +151,11 @@
     // ... other styles for sectionCard ...
 
     .filters-container {
+      margin-top: 20px;
+      margin-bottom: 50px;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
-      margin-bottom: 30px;
       gap: 20px;
 
       @media (max-width: 768px) {
@@ -167,8 +168,8 @@
         position: relative;
         max-width: 400px;
         width: 100%;
-
         input {
+          background: #fff;
           width: 100%;
           padding: 12px 12px 12px 40px;
           border: 1px solid #ddd;
@@ -176,6 +177,7 @@
           font-size: 1em;
           outline: none;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+          height: 40px;
 
           &:focus {
             border-color: #007bff;
@@ -214,15 +216,22 @@
 
           .dropdown-button {
             width: 100%;
-            padding: 12px 15px;
+            padding: 8px 15px;
+            height: 40px;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            font-size: 1em;
+            // align-items: center;
+            font-family: Geist;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0%;
+
             color: #333;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
             transition: all 0.2s ease-in-out;
@@ -239,18 +248,37 @@
           }
 
           .dropdown-content {
+            // border: 1px solid red;
             position: absolute;
+
             background-color: #fff;
             min-width: 200px;
             box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 100;
             border-radius: 8px;
-            padding: 10px 0;
+            // padding: 10px 0;
             margin-top: 5px;
             left: 0;
             max-height: 250px;
             overflow-y: auto;
-
+            font-family: "Geist";
+            font-weight: 400;
+            font-style: Regular;
+            font-size: 13px;
+            leading-trim: NONE;
+            line-height: 16px;
+            letter-spacing: 0%;
+            .dropdown-item {
+              display: flex !important;
+              flex-direction: row-reverse;
+              align-items: center;
+              justify-content: space-between;
+              padding: 7px 10px !important;
+              text-align: left !important;
+              .checkbox-input {
+                margin-right: -14px;
+              }
+            }
             &.radio-group {
               .dropdown-item {
                 display: flex;
@@ -298,17 +326,20 @@
 
   //
   .navtab {
+    border-bottom: 1px solid #E8E8E8;
+    margin-top: 20px;
+
     @media only screen and (max-width: 840px) {
       overflow-x: scroll !important;
     }
   }
   .treatment-filters {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    justify-content: start;
+    gap: 40px;
+    margin: 2px 0;
     img {
-      width: 28px;
+      width: 23px;
       height: 23px;
     }
     @media only screen and (max-width: 900px) {
@@ -324,13 +355,24 @@
       justify-content: center;
       gap: 5px;
       background: transparent;
-      padding: 10px 40px;
+      // padding: 10px 40px;
       border: none;
       cursor: pointer;
-      border-radius: 10px;
+      // border-radius: 10px;
       font-weight: 500;
       transition: 0.3s;
       color: #121212;
+      text-align: left;
+      font-family: Geist;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 20px;
+      leading-trim: NONE;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+      vertical-align: middle;
+      padding-bottom: 3px;
+      border-bottom: 2px solid transparent;
 
       @media only screen and (max-width: 1150px) {
         padding: 10px 20px;
@@ -344,12 +386,14 @@
       }
 
       &.active {
-        background: #b0f0f5;
-        color: #333;
+        // background: #b0f0f5;
+        border-bottom: 2px solid #643434;
+        color: #643434;
       }
 
       &:hover {
-        background: #ddd;
+        color: #643434;
+        // background: #ddd;
       }
     }
   }
@@ -449,7 +493,6 @@
             display: block;
             height: 100%;
             transform: translateY(0);
-
           }
         }
       }
@@ -520,8 +563,6 @@
           opacity: 0;
           transition: all 0.4s ease;
           display: none;
-          
-
         }
 
         .book-now {
@@ -629,5 +670,83 @@
         color: #fff;
       }
     }
+  }
+}
+
+//
+/* Custom Checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+
+  &:checked {
+    border-color: #6750a4;
+    background-color: #6750a4;
+  }
+
+  &:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    border-color: #6750a4;
+  }
+}
+
+/* Label alignment for checkbox text */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95em;
+  color: #333;
+}
+
+/* Custom Radio */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+
+  &:checked {
+    border-color: #6750a4;
+  }
+
+  &:checked::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #6750a4;
+    position: absolute;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+  }
+
+  &:hover {
+    border-color: #6750a4;
   }
 }

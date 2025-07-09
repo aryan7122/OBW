@@ -99,7 +99,7 @@ function App() {
                 <AboutUsHero />
                 <OurValue />
                 {/* <OurTeam /> */}
-                <MissionVision/>
+                <MissionVision />
                 <LocationSection />
                 {/* <FirstStep /> */}
               </>

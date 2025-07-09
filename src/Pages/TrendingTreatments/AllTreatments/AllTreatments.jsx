@@ -4,7 +4,7 @@ import icon1 from '../../../assets/TrendingTreatments/skin.png';
 import icon2 from '../../../assets/TrendingTreatments/hairs.png';
 import icon3 from '../../../assets/TrendingTreatments/body.png';
 import icon4 from '../../../assets/TrendingTreatments/bue.png';
-import { ArrowRight, Search } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronUp, Search } from 'lucide-react';
 import BookAppointment from '../../../Components/BookAppointment/BookAppointment';
 import WebPImage from '../../../util/WebPImage'; // Assuming this utility exists
 
@@ -234,7 +234,7 @@ const treatmentData = [
         SkinType: ['Oily Skin', 'Dry Skin'],
         imgUrl: imgChemicalPeel,
     },
-   
+
     {
         category: 'Skin & Face care',
         title: 'Micro-Botox Therapy',
@@ -317,11 +317,11 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgDeepChemicalPeels,
     },
-  
-   
 
 
-  
+
+
+
 
     {
         category: 'Body care',
@@ -388,8 +388,8 @@ const treatmentData = [
         imgUrl: imgFullLegsLaserHairReduction,
     },
 
-// body
-  
+    // body
+
     {
         category: 'Skin & Face care',
         title: 'Carbon Laser',
@@ -414,7 +414,7 @@ const treatmentData = [
         SkinType: [],
         imgUrl: imgThreadLifts,
     },
- 
+
     {
         category: 'Skin & Face care',
         title: 'Dermal Fillers',
@@ -448,10 +448,10 @@ const treatmentData = [
         imgUrl: imgDimpleplasty2,
     },
     // Add treatments from 'Screenshot 2025-07-08 103731.png'
-  
-    
 
- 
+
+
+
     // Add treatments from 'Screenshot 2025-07-08 103708.jpg'
     {
         category: 'Scalp & Hair care',
@@ -660,6 +660,23 @@ const AllTreatments = () => {
             </header>
 
             <div className="sectionCard">
+
+
+                <div className="navtab">
+                    <nav className="treatment-filters">
+                        {categories.map((category, index) => (
+                            <button
+                                key={index}
+                                className={selectedCategory === category.name ? 'active' : ''}
+                                onClick={() => setSelectedCategory(category.name)}
+                            >
+                                {category.icon && <img src={category.icon} alt={category.name} className="category-icon" />}
+                                <span style={{ fontSize: "18px" }}> {category.name}</span>
+                            </button>
+                        ))}
+                    </nav>
+                </div>
+
                 <div className="filters-container">
                     <div className="search-bar">
                         <Search className="search-icon" size={20} />
@@ -675,7 +692,11 @@ const AllTreatments = () => {
                         <div className="filter-dropdown" ref={concernsRef}>
                             <button className="dropdown-button" onClick={() => setShowConcernsDropdown(!showConcernsDropdown)}>
                                 Concerns {selectedConcerns.length > 0 && `(${selectedConcerns.length})`}
-                                <span className="arrow">{showConcernsDropdown ? '▲' : '▼'}</span>
+                                <span className="arrow">{showConcernsDropdown ?
+                                    <ChevronUp strokeWidth={1.25} />
+                                    :
+                                    <ChevronDown strokeWidth={1.25} />
+                                }</span>
                             </button>
                             {showConcernsDropdown && (
                                 <div className="dropdown-content">
@@ -685,6 +706,7 @@ const AllTreatments = () => {
                                                 type="checkbox"
                                                 checked={selectedConcerns.includes(concern)}
                                                 onChange={() => handleConcernChange(concern)}
+                                                className='checkbox-input'
                                             />
                                             {concern}
                                         </label>
@@ -695,8 +717,14 @@ const AllTreatments = () => {
 
                         <div className="filter-dropdown" ref={skinTypeRef}>
                             <button className="dropdown-button" onClick={() => setShowSkinTypeDropdown(!showSkinTypeDropdown)}>
-                                Skin type {selectedSkinTypes.length > 0 && `(${selectedSkinTypes[0]})`} {/* Display selected skin type */}
-                                <span className="arrow">{showSkinTypeDropdown ? '▲' : '▼'}</span>
+                                Skin type
+                                {/* {selectedSkinTypes.length > 0 && `(${selectedSkinTypes[0]})`} */}
+                                {/* Display selected skin type */}
+                                <span className="arrow">{showSkinTypeDropdown ?
+                                    <ChevronUp strokeWidth={1.25} />
+                                    :
+                                    <ChevronDown strokeWidth={1.25} />
+                                }</span>
                             </button>
                             {showSkinTypeDropdown && (
                                 <div className="dropdown-content radio-group">
@@ -719,21 +747,6 @@ const AllTreatments = () => {
                             )}
                         </div>
                     </div>
-                </div>
-
-                <div className="navtab">
-                    <nav className="treatment-filters">
-                        {categories.map((category, index) => (
-                            <button
-                                key={index}
-                                className={selectedCategory === category.name ? 'active' : ''}
-                                onClick={() => setSelectedCategory(category.name)}
-                            >
-                                {category.icon && <img src={category.icon} alt={category.name} className="category-icon" />}
-                                <span style={{ fontSize: "18px" }}> {category.name}</span>
-                            </button>
-                        ))}
-                    </nav>
                 </div>
 
                 <div className="treatment-cards">

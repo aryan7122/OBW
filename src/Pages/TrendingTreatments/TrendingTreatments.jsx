@@ -162,7 +162,7 @@ const TrendingTreatments = () => {
             </div>
 
 
-            <div className="cards-container">
+            {/* <div className="cards-container">
                 {treatments.slice(0, 4).map((treatment, index) => (
                     <div key={index} className="card">
                         <div className="card-image">
@@ -178,11 +178,11 @@ const TrendingTreatments = () => {
                 ))}
                 <div className="next-btn"><a href="/treatment">Next</a> <ChevronRight color="#5B2F2F" /> </div>
 
-            </div>
+            </div> */}
 
 
 
-            {/* <div className="card-slider-container" onWheel={handleWheel}>
+            <div className="card-slider-container" onWheel={handleWheel}>
                 <div className="team-images" style={{ "--index": currentIndex }}>
                     {treatments.map((treatment, index) => (
                         <>
@@ -210,9 +210,9 @@ const TrendingTreatments = () => {
                         <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
                     </button>
                 </div>
-            </div> */}
-
-            {/* <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
+            </div>
+{/* 
+            <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
                 {visibleCount < treatments.length ? "Load More" : "Load Less"}
                 <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
             </button> */}

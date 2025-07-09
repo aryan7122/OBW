@@ -15,7 +15,7 @@ import icon3 from '../../assets/team/icon3.png'
 import icon4 from '../../assets/team/icon4.png'
 import icon5 from '../../assets/team/icon5.png'
 import icon6 from '../../assets/team/icon6.png'
-import icon7 from '../../assets/team/icon6.png'
+import icon7 from '../../assets/team/str.svg'
 
 // const img1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/i38dnetngbnyftvucibs"
 // const img2 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/HappyFaces/xhwhyct7xs2yehbto7fm"
@@ -149,7 +149,7 @@ const TeamSection = () => {
             <h2>
               Our
               {'  '}
-              <img src={icon1} alt=""
+              <img src={icon7} alt=""
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
