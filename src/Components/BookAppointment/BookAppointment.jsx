@@ -5,15 +5,36 @@ import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast, Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
-const BookAppointment = ({ onClose }) => {
+import Select from "react-select";
+import { clinicalData } from "../../Pages/ClinicalConcerns/ClinicalConcerns";
+
+
+
+  
+const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
     
+    const allTags = [];
+
+    Object.values(clinicalData).forEach(category => {
+        category.forEach(t => {
+            t.tags.forEach(tag => {
+                if (!allTags.includes(tag)) {
+                    allTags.push(tag);
+                }
+            });
+        });
+    });
+    
+    const treatmentOptions = allTags.map(tag => ({ label: tag, value: tag }));
+
+
     const [formData, setFormData] = useState({
         name: "",
         MoNumber: "",
         email: "",
         date: '',
         location: "",
-        treatment: "",
+        treatment: preSelectedTreatment,
         message: "",
     });
 
@@ -127,7 +148,7 @@ const BookAppointment = ({ onClose }) => {
                     </div>
 
                     <div className="form-row">
-                        <div className="form_group">
+                    <div className="form_group">
                             <label>Location</label>
                             <select name="location" value={formData.location} onChange={handleChange}>
                                 <option value="">Select Location</option>
@@ -137,8 +158,23 @@ const BookAppointment = ({ onClose }) => {
                                 <option>Kodipalya</option>
                             </select>
                         </div>
-
                         <div className="form_group">
+                            <label>Treatment</label>
+                            <Select
+                                className="react-select-container"
+                                classNamePrefix="react-select"
+                                name="treatment"
+                                value={treatmentOptions.find(option => option.value === formData.treatment)}
+                                onChange={(selectedOption) =>
+                                    setFormData({ ...formData, treatment: selectedOption.value })
+                                }
+                                options={treatmentOptions}
+                                isSearchable
+                                placeholder="Select Treatment"
+                            />
+                        </div>
+
+                        {/* <div className="form_group">
                             <label>Treatment</label>
                             <select name="treatment" value={formData.treatment} onChange={handleChange}>
                                 <option value="">Select Treatment</option>
@@ -147,7 +183,7 @@ const BookAppointment = ({ onClose }) => {
                                 <option>Body Care</option>
                                 <option>Beautifying/Cosmetic Surgery</option>
                             </select>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="form_group textarea-group">

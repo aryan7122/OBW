@@ -299,7 +299,7 @@ import Melasma_img from '../../assets/TrendingTreatments/Melesma.jpg'
 //   ],
 // };
 
-const clinicalData = {
+export  const clinicalData = {
   "Skin/Face Care": [
     {
       type: "detailed",
@@ -634,6 +634,7 @@ function ClinicalConcerns() {
   const [selectedTagIndex, setSelectedTagIndex] = useState(null);
   const [showModal, setShowModal] = useState(false); // State for modal visibility
   const navigate = useNavigate(); // For navigation
+  const [selectedTreatment, setSelectedTreatment] = useState("");
 
   // Handler for clicking a card to expand/select it
   const handleCardClick = (index) => {
@@ -642,11 +643,13 @@ function ClinicalConcerns() {
   };
 
   // Handler for clicking a specific tag
-  const handleTagClick = (tagIndex) => {
+  const handleTagClick = (tagIndex, tagValue) => {
     if (selectedTagIndex === tagIndex) {
       setSelectedTagIndex(null);
+      setSelectedTreatment("");
     } else {
       setSelectedTagIndex(tagIndex);
+      setSelectedTreatment(tagValue);
     }
   };
 
@@ -722,7 +725,8 @@ function ClinicalConcerns() {
                         className={`tag ${selectedTagIndex === tagIdx ? "selected-tag" : ""}`}
                         onClick={(e) => {
                           e.stopPropagation(); // Prevent card selection when clicking tag
-                          handleTagClick(tagIdx);
+                          // handleTagClick(tagIdx);
+                          handleTagClick(tagIdx, tag); 
                         }}
                       >
                         {/* Checkmark SVG for each tag, only if selected */}
@@ -789,7 +793,7 @@ function ClinicalConcerns() {
       </div>
 
       {/* Book Appointment Modal */}
-      {showModal && <BookAppointment onClose={closeModal} />}
+      {showModal && <BookAppointment onClose={closeModal} preSelectedTreatment={selectedTreatment} />}
     </div>
   );
 }
