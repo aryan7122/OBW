@@ -20,6 +20,15 @@
   @media only screen and (max-width: 1000px) {
     padding: 40px;
   }
+  @media only screen and (max-width: 500px) {
+    padding: 20px 30px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 20px;
+  }
+  @media only screen and (max-width: 350px) {
+    padding: 20px 15px;
+  }
   .text-content {
     width: 768px;
     margin: 0 auto;

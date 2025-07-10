@@ -36,7 +36,7 @@ function Navbar() {
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     };
 
     const isActive = (path) => {
