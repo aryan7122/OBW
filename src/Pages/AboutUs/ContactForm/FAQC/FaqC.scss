@@ -38,12 +38,41 @@ $breakpoint-lg: 1024px;
 // @import 'mixins';
 
 .faq-page {
-  padding: clamp($section-padding-min, $section-padding-vw, $section-padding-max);
+  // padding: clamp($section-padding-min, $section-padding-vw, $section-padding-max);
   background-color: $color-light-gray-bg;
   min-height: 100vh;
   font-family: $font-geist;
   box-sizing: border-box; // Ensure padding is included in total width/height
+  padding: 0px 120px;
+  @media only screen and (max-width: 1400px) {
+    padding: 0px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 0 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 0 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 0 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 0px 40px;
+  }
+ 
 
+  @media only screen and (max-width: 830px){
+    padding: 40px !important;
+  }
+  @media only screen and (max-width: 600px) {
+    padding:  30px !important;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px !important;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 20px 10px !important;
+  }
   @media (max-width: $breakpoint-sm) {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -224,7 +253,6 @@ $breakpoint-lg: 1024px;
         padding: 5px;
         @include flex-center; // Use mixin for centering content
       }
-
       &:hover {
         background: $color-white !important; // !important to override gradient
         border: 1px solid $color-dark-blue;

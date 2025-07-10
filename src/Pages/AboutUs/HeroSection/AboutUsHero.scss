@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   //   justify-content: center;
-  padding: 60px 100px 60px 100px;
+  padding: 60px 120px 60px 120px;
   height: 503px;
   background: linear-gradient(106.86deg, #FFFFFF 37.92%, #fff 85.74%);
   position: relative;
@@ -12,15 +12,21 @@
   // margin-top: -122px;
   backdrop-filter: blur(180px);
   //
-  @media only screen and (min-width: 1601px) {
-      padding:  80px;
-    }
-  @media only screen and (max-width: 1400px) {
-    padding: 40px;
-  }
 
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 60px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 50px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 50px 60px;
+  }
   @media only screen and (max-width: 1000px) {
-    padding: 20px;
+    padding: 40px;
   }
 
   @media only screen and (max-width: 400px) {
@@ -84,6 +90,7 @@
     align-content: baseline;
     justify-content: space-between;
     width: 100%;
+    
     @media only screen and (max-width: 1250px) {
       flex-direction: column;
       align-items: start;

@@ -72,22 +72,25 @@ const Footer = () => {
 
             {/* Bottom Section */}
             <div className="footer-bottom">
-                <div className="footer-copyright">
-                    <p>© 2025 OBW . All rights reserved.</p>
-                </div>
+               
                 <div className="footer-policy-links">
                     <a onClick={() => HandleNavigation("/privacy-policy")}>Privacy Policy</a>
                     <a onClick={() => HandleNavigation("/terms-of-service")}>Terms of Service</a>
                     <a onClick={() => HandleNavigation("/cookies-settings")}>Cookies Settings</a>
                 </div>
-                <div className="footer-social-icons">
-                    <a href="https://www.facebook.com/share/1CpRx6vUJB/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
-                        <FaFacebook className="icon" />
-                    </a>
-                    <a href="https://www.instagram.com/obwclinic?igsh=MTQxM2phdWZoZTRreA==" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram className="icon" />
-                    </a>
-                </div>
+                <div className="right_">
+                    <div className="footer-copyright">
+                        <p>© 2025 OBW . All rights reserved.</p>
+                    </div>
+                    <div className="footer-social-icons">
+                        <a href="https://www.facebook.com/share/1CpRx6vUJB/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+                            <FaFacebook className="icon" />
+                        </a>
+                        <a href="https://www.instagram.com/obwclinic?igsh=MTQxM2phdWZoZTRreA==" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram className="icon" />
+                        </a>
+                    </div>
+               </div>
             </div>
         </footer>
     );

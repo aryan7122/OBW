@@ -27,19 +27,28 @@
       align-items: start;
     }
     @media only screen and (max-width: 1400px) {
-      padding: 0 100px;
+      padding: 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      padding: 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding: 60px;
     }
     @media only screen and (max-width: 1000px) {
-      padding: 0 40px;
+      padding: 70px 40px;
     }
     @media only screen and (max-width: 600px) {
-      padding: 0 30px;
+      padding: 60px 30px;
     }
     @media only screen and (max-width: 500px) {
-      padding: 0 20px;
+      padding: 50px 20px;
     }
     @media only screen and (max-width: 400px) {
-      padding: 0 10px;
+      padding: 50px 10px;
     }
     .blog_title {
       background: #b8b8b833;
@@ -105,29 +114,41 @@
   .blogs_card_page {
     display: flex;
     margin-top: -20px;
-    padding: 60px 100px 60px 100px;
+    padding: 60px 120px 60px 120px;
     @media only screen and (max-width: 1400px) {
-      padding: 40px;
+      padding: 40px 100px;
     }
+    @media only screen and (max-width: 1300px) {
+      padding: 40px 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding:40px 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding:  40px 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding:  40px 40px;
+    }
+    @media only screen and (max-width: 900px) {
+      padding:  40px 40px;
+    }
+   
     @media only screen and (max-width: 1170px) {
       flex-direction: column;
     }
     @media only screen and (max-width: 900px) {
-      padding: 20px;
+      padding: 20px 30px;
       margin-top: 0;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 10px 20px;
     }
     @media only screen and (max-width: 400px) {
       padding: 10px;
     }
   }
-  .blog_filter_card{
-    border: 1px solid red;
-    position: relative;
-    min-width: 200px;
-    @media only screen and (max-width: 1170px) {
-      min-height: fit-content;
-    }
-  }
+ 
   .categories-filter {
     position: sticky;
     margin-bottom: 20px;
@@ -138,11 +159,15 @@
     min-height: 387px;
     gap: 24px;
     // position: ;
+    @media only screen and (max-width: 1250px){
+      min-width: 150px;
+    }
     @media only screen and (max-width: 1170px) {
       min-height: fit-content;
     }
+   
     @media only screen and (max-width: 350px) {
-      overflow: hidden;
+      // overflow: hidden;
     }
     // position: fixed;
     h3 {
@@ -153,7 +178,7 @@
       text-align: left;
       color: #000;
       @media only screen and (min-width: 1601px) {
-        padding-left: 80px;
+        // padding-left: 80px;
       }
       @media only screen and (max-width: 1170px) {
         text-align: center;
@@ -166,6 +191,21 @@
       justify-content: center;
       flex-direction: column;
       gap: 10px;
+      @media only screen and (max-width: 430px){
+        // padding-left: 40px;
+        padding-left: 50px;
+        // width: 200px;
+      }
+      @media only screen and (max-width: 350px){
+        // padding-left: 40px;
+        padding-left: 80px;
+        // width: 200px;
+      }
+      @media only screen and (max-width: 320px){
+        // padding-left: 40px;
+        padding-left: 100px;
+        // width: 200px;
+      }
       @media only screen and (max-width: 1170px) {
         margin-bottom: -20px;
         flex-direction: row;
@@ -174,20 +214,20 @@
         overflow: auto !important;
         white-space: nowrap;
         margin-bottom: 0;
-        padding-left: 40px;
+        // padding-left: 40px;
       }
              @media only screen and (min-width: 1601px) {
-               padding-left: 80px;
+              //  padding-left: 80px;
              }
-      @media only screen and (max-width: 380px) {
-        padding-left: 60px;
-      }
-      @media only screen and (max-width: 355px) {
-        padding-left: 80px;
-      }
-      @media only screen and (max-width: 330px) {
-        padding-left: 90px;
-      }
+      // @media only screen and (max-width: 380px) {
+      //   padding-left: 60px;
+      // }
+      // @media only screen and (max-width: 355px) {
+      //   padding-left: 80px;
+      // }
+      // @media only screen and (max-width: 330px) {
+      //   padding-left: 90px;
+      // }
       li {
         cursor: pointer;
         padding: 8px 10px;
@@ -202,7 +242,32 @@
       }
     }
   }
+// 
 
+
+
+.blog_filter_card {
+  position: sticky; // Make it sticky!
+  top: 100px; // Distance from the top of the viewport when sticky (adjust as needed)
+  align-self: flex-start; // Ensures it sticks to the top within its flex container
+  @media only screen and (max-width: 1170px) {
+    overflow: auto;
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+ 
+}
+
+
+
+
+
+
+
+
+
+// 
   .blog-wrapper {
     margin-top: -30px;
 
@@ -214,6 +279,7 @@
     position: relative;
     @media only screen and (max-width: 1170px) {
       margin-left: 0;
+      margin-top: 10px;
     }
     // overflow: hidden;
   }
@@ -224,6 +290,9 @@
     grid-template-columns: 1fr 1fr;
     transition: transform 0.5s ease;
     will-change: transform;
+    @media only screen and (max-width: 1250px) {
+      gap: 10px;
+    }
     @media only screen and (max-width: 940px) {
       gap: 0px;
     }
@@ -247,6 +316,9 @@
       @media only screen and (max-width: 1330px) {
         min-width: 400px;
         // min-height: 600px;
+      }
+      @media only screen and (max-width: 1250px){
+        // max-width: 500px !important;
       }
 
       @media only screen and (max-width: 1111px) {
@@ -506,29 +578,126 @@ will-change: transform;
   }
 }
 
+// .pagination {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 10px;
+//   margin: 20px;
+// }
+
+// .pagination button {
+//   display: flex;
+//   align-items: center;
+//   gap: 5px;
+
+//   padding: 8px 12px;
+//   font-size: 16px;
+//   cursor: pointer;
+//   border: none;
+//   background: #34160e;
+//   color: white;
+//   border-radius: 5px;
+// }
+
+// .pagination button:disabled {
+//   background: #00575d45;
+//   cursor: not-allowed;
+// }
+
+
+/* Pagination Styles */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  margin: 20px;
-}
+  margin-bottom: 2rem;
+  // gap: 10px; // Space between buttons and page numbers
+  background-color: #ffffff; // White background for the pagination bar
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: fit-content; // Adjust width to content
+  margin-left: auto;
+  margin-right: auto;
+  // border: 1px solid #e0e6ed; // Border color from the image
+  @media only screen and (max-width: 400px){
+    gap: 10px !important;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+  }
+  button {
+    background-color: transparent;
+    border: 1px solid #e0e6ed; // Border color
+    color: #344054; // Default text color
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-family: Geist;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+   
+    
+    // gap: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
-.pagination button {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    &:hover:not(:disabled) {
+      background-color: #f1f3f5; // Light hover background
+      border-color: #d1d9e0;
+    }
 
-  padding: 8px 12px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  background: #34160e;
-  color: white;
-  border-radius: 5px;
-}
+    &.active {
+      // background-color: #6a5acd; // Active page number background
+      color: #6a5acd;
+      
+      // border-color: #6a5acd;
+      font-weight: 500;
+    }
 
-.pagination button:disabled {
-  background: #00575d45;
-  cursor: not-allowed;
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.3;
+      // background-color: #f8faff; // Lighter background for disabled
+      // color: #adb5bd; // Muted color for disabled text
+      // border-color: #f8faff; // No visible border for disabled
+    }
+  }
+  .pre-{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .next-{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  .pagination-prev-next {
+    // padding: 0.6rem 1.5rem; // Slightly more padding for prev/next buttons
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    background-color: #f8faff; // White background for prev/next from image
+    border: 1px solid #e0e6ed; // Border color
+    color: #495057; // Text color
+    font-weight: 500; // Slightly bolder text
+    &:hover:not(:disabled) {
+        background-color: #e9ecef;
+    }
+  }
+
+  .page-numbers {
+    display: flex;
+    // gap: 5px; // Space between individual page number buttons
+    border-radius: 0 !important;
+    @media only screen and (max-width: 400px){
+     display: none;
+    }
+  }
+
+  .ellipsis {
+    padding: 0.6rem 0.5rem;
+    color: #6c757d;
+    font-weight: bold;
+  }
 }

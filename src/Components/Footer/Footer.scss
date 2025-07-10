@@ -17,19 +17,20 @@
     border-top: 1px solid #FFFFFF;
   background-color: #4e2c2c; // Dark brown from the image
   color: #ffffff;
-  padding: 60px 100px; // Consistent padding for larger screens
   font-family: 'Geist', sans-serif; // Apply Geist font globally to the footer
 
-  @media only screen and (min-width: 1601px) {
-      padding: 60px 120px; // Slightly more padding on very wide screens
-  }
+
+padding: 60px 120px; // Slightly more padding on very wide screens
 
   @media only screen and (max-width: 1400px) {
+      padding: 40px 100px; // Adjust padding for medium desktops
+  }
+  @media only screen and (max-width: 1300px) {
       padding: 40px 80px; // Adjust padding for medium desktops
   }
 
   @media only screen and (max-width: 1200px) {
-      padding: 30px 60px;
+      padding: 30px 70px;
   }
 
   @media only screen and (max-width: 1000px) {
@@ -253,7 +254,11 @@
       justify-content: space-between;
       align-items: center;
       padding-top: 20px; // Space from the line above
-
+    .right_{
+        display: flex;
+        align-items: center;
+        gap: 50px; // Space between copyright and social icons  
+    }
       @media only screen and (max-width: 1000px) {
           flex-wrap: wrap; // Allow items to wrap
           justify-content: center; // Center items when wrapped
@@ -261,10 +266,15 @@
       }
 
       @media only screen and (max-width: 768px) {
-          flex-direction: column; // Stack all items vertically
-          align-items: flex-start; // Align to the left when stacked
+          flex-direction: column-reverse; // Stack all items vertically
+          align-items: center; // Align to the left when stacked
           gap: 10px;
           padding-top: 15px; // Reduce padding for smaller screens
+          .right_{
+            // gap: 30px;
+            justify-content: space-between;
+
+          }
       }
 
       .footer-copyright {
@@ -286,7 +296,7 @@
               margin-top: 10px; // Space from items above
           }
 
-          @media only screen and (max-width: 480px) {
+          @media only screen and (max-width: 360px) {
               flex-direction: column-reverse; // Stack policy links on very small screens
               gap: 8px;
           }

@@ -179,130 +179,25 @@ function Blog() {
       ? blogs
       : blogs.filter((blog) => blog.category === selectedCategory);
 
-  // // Pagination logic
-  // const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
-  // const visibleBlogs = filteredBlogs.slice(
-  //   currentIndex,
-  //   currentIndex + itemsPerPage
-  // );
-
-  // // Navigation handlers
-  // const goNext = () => {
-  //   if (currentIndex + itemsPerPage < filteredBlogs.length) {
-  //     setCurrentIndex(currentIndex + itemsPerPage);
-  //   }
-  // };
-
-  // const goPrev = () => {
-  //   if (currentIndex - itemsPerPage >= 0) {
-  //     setCurrentIndex(currentIndex - itemsPerPage);
-  //   }
-  // };
-
-
-
   // Pagination logic
-  const [currentPage, setCurrentPage] = useState(1); // Changed from currentIndex to currentPage
   const totalPages = Math.ceil(filteredBlogs.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const visibleBlogs = filteredBlogs.slice(startIndex, endIndex);
-  // const [itemsPerPage, setBlogsPerPage] = useState(8);
+  const visibleBlogs = filteredBlogs.slice(
+    currentIndex,
+    currentIndex + itemsPerPage
+  );
 
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-    window.scrollTo(0, 0); // Scroll to top when page changes
-  };
-
-  // Generate pagination numbers to display (similar to the image)
-  const renderPageNumbers = () => {
-    const pageNumbers = [];
-    const maxPagesToShow = 5; // Max numbers to display directly (e.g., 1, 2, 3, ..., 8, 9, 10)
-
-    if (totalPages <= maxPagesToShow) {
-      for (let i = 1; i <= totalPages; i++) {
-        pageNumbers.push(i);
-      }
-    } else {
-      // Logic for displaying numbers like 1, 2, 3, ..., 8, 9, 10
-      // Always show first two pages
-      pageNumbers.push(1);
-      pageNumbers.push(2);
-
-      if (currentPage > 3) {
-        pageNumbers.push("...");
-      }
-
-      // Show current page, and pages around it
-      if (currentPage > 2 && currentPage < totalPages - 1) {
-        if (currentPage === totalPages) { // If current page is the last one
-          pageNumbers.push(currentPage - 2);
-          pageNumbers.push(currentPage - 1);
-        } else if (currentPage === totalPages - 1) { // If current page is second to last
-          pageNumbers.push(currentPage - 1);
-          pageNumbers.push(currentPage);
-        } else {
-          pageNumbers.push(currentPage);
-        }
-      }
-
-      if (currentPage < totalPages - 2) {
-        pageNumbers.push("...");
-      }
-
-      // Always show last two pages
-      if (totalPages > 2) {
-        if (!pageNumbers.includes(totalPages - 1)) {
-          pageNumbers.push(totalPages - 1);
-        }
-        if (!pageNumbers.includes(totalPages)) {
-          pageNumbers.push(totalPages);
-        }
-      }
-
-      // Filter out duplicates and sort
-      const uniquePageNumbers = [...new Set(pageNumbers)].sort((a, b) => {
-        if (a === "...") return 1;
-        if (b === "...") return -1;
-        return a - b;
-      });
-
-      return uniquePageNumbers.map((number, index) => {
-        if (number === "...") {
-          return (
-            <span key={index} className="ellipsis">
-              ...
-            </span>
-          );
-        }
-        return (
-          <button
-            key={number}
-            onClick={() => handlePageChange(number)}
-            className={currentPage === number ? "active" : ""}
-          >
-            {number}
-          </button>
-        );
-      });
+  // Navigation handlers
+  const goNext = () => {
+    if (currentIndex + itemsPerPage < filteredBlogs.length) {
+      setCurrentIndex(currentIndex + itemsPerPage);
     }
-
-    return pageNumbers.map((number) => (
-      <button
-        key={number}
-        onClick={() => handlePageChange(number)}
-        className={currentPage === number ? "active" : ""}
-      >
-        {number}
-      </button>
-    ));
   };
 
-  useEffect(() => {
-    // Reset current page to 1 when category changes
-    setCurrentPage(1);
-  }, [selectedCategory]);
+  const goPrev = () => {
+    if (currentIndex - itemsPerPage >= 0) {
+      setCurrentIndex(currentIndex - itemsPerPage);
+    }
+  };
   return (
     <>
       <div className="blog-page">
@@ -380,7 +275,7 @@ function Blog() {
         </div>
       </div>
       {/* Pagination Controls */}
-      {/* <div className="pagination">
+      <div className="pagination">
         <button onClick={goPrev} disabled={currentIndex === 0}>
           <FaArrowLeft /> Prev
         </button>
@@ -394,27 +289,7 @@ function Blog() {
         >
           Next <FaArrowRight />
         </button>
-      </div> */}
-      {/* Pagination Controls */}
-      {totalPages > 1 && ( // Only show pagination if there's more than one page
-        <div className="pagination">
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className="pagination-prev-next pre-"
-          >
-            <FaArrowLeft /> Previous
-          </button>
-          <div className="page-numbers">{renderPageNumbers()}</div>
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className="pagination-prev-next next-"
-          >
-            Next <FaArrowRight />
-          </button>
-        </div>
-      )}
+      </div>
     </>
   );
 }

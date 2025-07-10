@@ -111,9 +111,9 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
                     </svg>
                 </button>
                 <h2 className="modal-title">Book Appointment Now</h2>
-                <p className="modal-subtitle">
+                {/* <p className="modal-subtitle">
                     Kindly fill out the form with all required details, and we’ll review your submission and reach out to you shortly.
-                </p>
+                </p> */}
                 <form className="modal-form" onSubmit={handleSubmit}>
                     <div className="form-row">
                         <div className="form_group">
