@@ -121,15 +121,15 @@ const TrendingTreatments = () => {
     //  sliders
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsToShow, setCardsToShow] = useState(1);
-    const gap = 20;
+    const gap = 18;
     const sliderRef = useRef(null);
 
     useEffect(() => {
         const updateCards = () => {
             const width = window.innerWidth;
-            if (width < 500) setCardsToShow(0); // On small mobiles
+            if (width < 500) setCardsToShow(1); // On small mobiles
             if (width < 600) setCardsToShow(1); // On small mobiles
-            if (width < 700) setCardsToShow(1.5); // On small mobiles
+            if (width < 700) setCardsToShow(1.2); // On small mobiles
             else if (width < 900) setCardsToShow(2); // On tablets
             else if (width < 980) setCardsToShow(2.5); // On tablets
             else if (width < 1150) setCardsToShow(3); // On tablets

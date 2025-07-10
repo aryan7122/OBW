@@ -139,7 +139,7 @@ const BlogSlider = () => {
                     <div
                         className="slider-cards"
                         style={{
-                            transform: `translateX(calc(-${currentIndex * (100 / cardsToShow)}% - ${currentIndex * gap}px))`,
+                            transform: `translateX(calc(-${currentIndex * (103 / cardsToShow)}% )`,
                             // For 3 cards, each takes 1/3 of width. For each step, move 1/3 width + 1 gap.
                             // If it's a fixed percentage and gap is also fixed, the calculation can be more precise:
                             // transform: `translateX(calc(-${currentIndex * (100 / cardsToShow)}% - ${currentIndex * gap}px))`
