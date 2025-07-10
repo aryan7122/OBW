@@ -216,19 +216,22 @@ function Blog() {
         </div>
         {/* Category Filter */}
         <div className="blogs_card_page">
-          <div className="categories-filter">
-            <h3>Blog Categories</h3>
-            <ul>
-              {categories.map((category) => (
-                <li
-                  key={category}
-                  className={selectedCategory === category ? "active" : ""}
-                  onClick={() => setSelectedCategory(category)}
-                >
-                  {category}
-                </li>
-              ))}
-            </ul>
+        
+          <div className="blog_filter_card">
+            <div className="categories-filter">
+              <h3>Blog Categories</h3>
+              <ul>
+                {categories.map((category) => (
+                  <li
+                    key={category}
+                    className={selectedCategory === category ? "active" : ""}
+                    onClick={() => setSelectedCategory(category)}
+                  >
+                    {category}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Blog List */}

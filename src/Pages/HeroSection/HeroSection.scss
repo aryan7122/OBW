@@ -223,9 +223,9 @@
         scale: 0.9;
       }
       .appointment-button {
-        width: 280px;
+        // width: 280px;
         height: 52px;
-        padding: 0px 8px 0px 20px;
+        padding: 0px 8px 0px 24px;
         border-radius: 100px;
         display: flex;
         align-items: center;
@@ -273,7 +273,7 @@ vertical-align: middle;
       }
 
       .secondary-btn {
-        width: 242.6px;
+        // width: 242.6px;
         background: linear-gradient(90.15deg, rgba(36, 99, 235, 0.15) 0.13%, rgba(20, 56, 133, 0.09) 46.74%, rgba(28, 78, 184, 0.15) 103.2%);
         height: 52.8px;
         display: flex;
@@ -281,6 +281,7 @@ vertical-align: middle;
         justify-content: left;
         min-height: 52.8px;
         padding-left: 8px;
+        padding-right: 20px;
         gap: 10px;
         outline: none;
         border: 1px solid #2463eb;

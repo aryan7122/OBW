@@ -4,29 +4,42 @@
   .content_top {
     // margin-top: -120px;
 
-    padding: 130px 100px 60px 100px;
+    padding: 130px 100px 60px 120px;
     display: flex;
     text-align: left;
     align-items: center;
     justify-content: space-between;
     background: #FFF1DF;
-    @media only screen and (min-width: 1601px) {
-        padding: 130px 80px 80px 80px;
-      }
-    @media only screen and (max-width: 1400px) {
-      padding: 130px 40px 40px 40px;
-    }
+   
+    // @media only screen and (max-width: 1400px) {
+    //   padding: 130px 40px 40px 40px;
+    // }
 
-    @media only screen and (max-width: 900px) {
-      padding: 130px 20px 30px 20px;
-    }
-    @media only screen and (max-width: 400px) {
-      padding: 150px 10px 30px 10px;
-    }
+    // @media only screen and (max-width: 900px) {
+    //   padding: 130px 20px 30px 20px;
+    // }
+    // @media only screen and (max-width: 400px) {
+    //   padding: 150px 10px 30px 10px;
+    // }
 
     @media only screen and (max-width: 1080px) {
       flex-direction: column;
       align-items: start;
+    }
+    @media only screen and (max-width: 1400px) {
+      padding: 0 100px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 0 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 0 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: 0 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 0 10px;
     }
     .blog_title {
       background: #b8b8b833;
@@ -107,8 +120,16 @@
       padding: 10px;
     }
   }
-
+  .blog_filter_card{
+    border: 1px solid red;
+    position: relative;
+    min-width: 200px;
+    @media only screen and (max-width: 1170px) {
+      min-height: fit-content;
+    }
+  }
   .categories-filter {
+    position: sticky;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -116,6 +137,7 @@
     margin-right: 10px;
     min-height: 387px;
     gap: 24px;
+    // position: ;
     @media only screen and (max-width: 1170px) {
       min-height: fit-content;
     }
