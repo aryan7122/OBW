@@ -144,7 +144,6 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
                                 />
                             </div>
                         </div>
-
                     </div>
 
                     <div className="form-row">

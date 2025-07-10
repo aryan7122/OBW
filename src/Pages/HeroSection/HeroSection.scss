@@ -54,6 +54,10 @@
       padding-left: 0 !important;
       margin-top: 100px;
     }
+    @media only screen and (max-width: 420px) {
+     
+      margin-top: 170px;
+    }
     h1 {
       width: 667px;
       // font-family: "Ubuntu Condensed", serif;
@@ -221,20 +225,26 @@
       .appointment-button {
         width: 280px;
         height: 52px;
-        padding: 0px 6px 0px 20px;
+        padding: 0px 8px 0px 20px;
         border-radius: 100px;
         display: flex;
         align-items: center;
+        justify-content: right;
         outline: none;
         border: 1px solid transparent;
         background: #5B2F2F;
         color: #ffff;
         cursor: pointer;
-        font-size: 20px;
-        font-weight: 400;
-        font-family: "Supreme-Regular", sans-serif;
-        line-height: 28px;
-        text-align: center;
+        font-family: Geist;
+font-weight: 500;
+font-style: Medium;
+font-size: 14.86px;
+leading-trim: NONE;
+line-height: 26px;
+letter-spacing: -0.46px;
+text-align: center;
+vertical-align: middle;
+
         transition: 0.3s ease-in-out;
 
         &:hover {
@@ -253,8 +263,8 @@
 
         .arrow-icon {
           color: #fff;
-          width: 26.67px;
-          height: 26.67px;
+          width: 35.67px;
+          height: 35.67px;
           padding: 5px;
           border-radius: 100px;
           margin-left: 8px;
@@ -268,17 +278,23 @@
         height: 52.8px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         min-height: 52.8px;
+        padding-left: 8px;
         gap: 10px;
         outline: none;
         border: 1px solid #2463eb;
         border-radius: 120px;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 28px;
-        letter-spacing: -0.5px;
+        font-family: Geist;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 26px;
+        letter-spacing: -0.46px;
         text-align: center;
+        vertical-align: middle;
+        
         color: #171717;
         opacity: 0px;
         cursor: pointer;
@@ -286,6 +302,8 @@
         svg{
           stroke:#171717;
           fill: transparent;
+          height: 40px;
+          width: 40px;
         }
         &:hover {
           background: #2463eb74;
