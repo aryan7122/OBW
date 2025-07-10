@@ -69,6 +69,11 @@
     border: 1px solid #e8e8e8;
     border-radius: 50px;
     padding: 10px 20px;
+    @media only screen and (max-width: 950px){
+      border-radius: 0;
+      border: transparent;
+
+    }
   }
 
   &.navbar-scrolled {
