@@ -1,0 +1,129 @@
+.top-services {
+  background-color: #fff6ea;
+  text-align: center;
+  padding-bottom: 40px;
+  .subtitle {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 10%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    span {
+      color: #00cfde;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: clamp(24px, 4vw, 40px);
+    background: linear-gradient(135.34deg, #643434 5.18%, #010066 74.19%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 48px;
+    letter-spacing: -1.8px;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+
+  .ellipse-carousel {
+    position: relative;
+    width: 100%;
+    &::before {
+      content: url("../../../assets/SALON/hero/TOP SERVICES/Ellipse\ 890.png");
+      z-index: 9;
+      position: absolute;
+      top: -30px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      border-radius: 100px; // More oval ellipse
+    }
+    &::after {
+      content: url("../../../assets/SALON/hero/TOP SERVICES/Ellipse\ 890.png");
+      z-index: 9;
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      border-radius: 100px; // More oval ellipse
+    }
+    .swiper-container {
+      // width: 100%;
+      // padding-bottom: 40px;
+      // border: 1px solid red;
+      // height: 100vh;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide-custom {
+      width: 250px;
+      height: 360px;
+      // border-radius: 60px / 30px; // More oval ellipse
+      // overflow: hidden;
+      background: #fff;
+      // box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+      position: relative;
+      transform: scale(0.9);
+      transition: all 0.3s ease-in-out;
+      background-position: center;
+      background-size: cover;
+      width: 230px;
+      height: 350px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .label {
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        right: 0;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        text-align: center;
+        text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .swiper-slide-active {
+      transform: scale(1);
+    }
+
+    .swiper-pagination {
+      bottom: 0px !important;
+    }
+
+    .swiper-pagination-bullet {
+      background: #999;
+      opacity: 0.7;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #007aff;
+      opacity: 1;
+    }
+  }
+}

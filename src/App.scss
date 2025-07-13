@@ -1,9 +1,21 @@
 html {
   scroll-behavior: smooth;
 }
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap');
+// gest
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&display=swap');
 
+*{
+  // font-family: 'Geist', sans-serif;
+  // font-family: 'Bricolage Grotesque', sans-serif;
 
-
+}
+.CLINIC{
+  font-family: 'Geist', sans-serif;
+}
+.SALON{
+  font-family: 'Bricolage Grotesque', sans-serif;
+}
 
 $primary-color: #1d89ff;
 $hover-color: #164ca7;
@@ -148,5 +160,34 @@ $shine-color: #38ef7d;
 
   100% {
     transform: rotate(0deg);
+  }
+}
+
+
+@keyframes scaleUpPop {
+  0% {
+    opacity: 0;
+    transform:translateY(100%);
+  }
+ 
+  100% {
+    opacity: 1;
+    transform:translateY(0%);
+
+  }
+}
+
+
+@keyframes scaleSlideFade {
+  0% {
+    // opacity: 0;
+    transform:  scale(0.5);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    // opacity: 1;
+    transform: scale(1) translateY(0);
   }
 }

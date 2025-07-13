@@ -1,0 +1,201 @@
+
+.salon-hero {
+  margin-top: -90px;
+  width: 100%;
+  position: relative;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  overflow: hidden;
+  height: clamp(500px, 95vh, 800px);
+  background: #00000026;
+  background-image: url('../../../assets/salon/hero/hero-image.jpg');
+  background-position: 0% 75% !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #20000026 0%, rgba(103, 1, 1, 0.3) 100%);
+    z-index: 1;
+  }
+ 
+
+  .hero-content {
+    margin-top: 30%;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+    padding-left: clamp(20px, 8vw, 120px);
+    padding-right: clamp(20px, 8vw, 120px);
+    color: white;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      backdrop-filter: blur(4px);
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) -16.81%, rgba(255, 255, 255, 0) 75.03%);
+    }
+    .trust-card {
+      display: flex;
+      align-items: center;
+      margin-top: -20px;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 8px 16px;
+      border-radius: 40px;
+      max-width: fit-content;
+      margin-bottom: 1.5rem;
+
+      .profiles {
+        display: flex;
+
+        img {
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          border: 2px solid white;
+          margin-left: -10px;
+          
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      
+      span {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+    }
+    
+    h1 {
+      font-size: clamp(30px, 5vw, 50px);
+      font-weight: 600;
+      line-height: clamp(40px, 6vw, 64px);
+      letter-spacing: -2px;
+      text-transform: capitalize;
+      margin-bottom: 0.8rem;
+      // border: 1px solid red;
+      &::after{
+        content: '';
+        background-image: url('../../../assets/SALON/hero/line.svg');
+        background-repeat: no-repeat;
+        display: inline-block;
+        // transform: rotate(-200deg);
+        margin-top: -20px !important;
+        height: 35px;
+        width: 35px;
+        font-weight: 300;
+        font-size: 22px;
+        color: #9DFF00;
+      }
+      span {
+        // color: #00c2ff;
+      }
+    }
+
+    .subline {
+      font-size: clamp(13px, 3vw, 14px);
+      line-height: 24px;
+      font-weight: 400;
+      text-align: right;
+      margin-top: -100px;
+      // color: #2cff00;
+    }
+  }
+
+  .scrolling-features {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    background-color: #5B2F2F;
+    overflow: hidden;
+    display: flex;
+    z-index: 3;
+
+    .feature-strip {
+      display: flex;
+      width: max-content;
+      animation: scrollFeature 20s linear infinite;
+
+      .feature-item {
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 16px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        span {
+          img{
+            animation: rotate306 10s linear infinite;
+          }
+        }
+      }
+    }
+  }
+  @keyframes rotate306 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-306deg);
+    }
+  }
+  @keyframes scrollFeature {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .salon-hero {
+    height: auto;
+
+    .hero-content {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      .subline {
+        text-align: left;
+        font-size: 12px;
+      }
+
+      .trust-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+    }
+
+    .scrolling-features .feature-item {
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+  }
+}

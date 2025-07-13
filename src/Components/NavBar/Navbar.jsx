@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/footer/logo.svg'
 import { Menu, X, Search, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import BookAppointment from '../BookAppointment/BookAppointment';
 import { motion } from 'framer-motion';
+import { TabContext } from '../../util/TabContext';
 
 function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -12,6 +13,7 @@ function Navbar() {
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation(); // Get current location
     // const [isWhite, setIsWhite] = useState(false);
+  const { pageTab, changeTab } = useContext(TabContext);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -58,7 +60,7 @@ function Navbar() {
     };
 
     return (
-        <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''} ${isbgBlur ? 'isbgBlur' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
+        <header className={`navbar ${pageTab === "SALON" ? 'SALON' : ''} ${scrolled ? 'navbar-scrolled' : ''} ${isbgBlur ? 'isbgBlur' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
             <motion.nav
                 className={`navbar-container ${menuOpen ? 'menu-active-navbar-container' : ''}`}
                 initial={{ opacity: 0, y: -20 }}

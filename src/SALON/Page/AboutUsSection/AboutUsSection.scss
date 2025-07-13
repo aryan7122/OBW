@@ -1,0 +1,125 @@
+// File: AboutUsSection.scss
+.about-us-section {
+  padding: clamp(20px, 8vw, 120px);
+  background: #FFF6EA;
+  display: flex;
+  justify-content: center;
+
+  .about-us-container {
+    display: flex;
+    gap: 4rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .about-us-left {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    // position: relative;
+    // flex: 1;
+    position: relative;
+
+    .about-us-face-img {
+      width: 290px;
+      height: 482px;
+      border-radius: 200px / 180px; // Top-bottom round, left-right straight
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .str3{
+        position: absolute;
+        right: 14%;
+        top: 10%;
+    }
+    .about-us-product-img {
+      width: 170px;
+      height: 282px;
+      border-radius: 200px / 180px; // Top-bottom round, left-right straight
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+
+  .about-us-right {
+    flex: 1;
+    max-width: 600px;
+
+    .about-us-subhead {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 10%;
+      margin-bottom: 10px;
+      color: #3032B6 ;
+      display: flex;
+      gap: 7px;
+      .about-us-spark {
+       img{
+        width: 16px;
+       }
+      }
+    }
+
+    .about-us-headline {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 500;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.2;
+      color: #2a1e1e;
+      margin-bottom: 1rem;
+      letter-spacing: -1.8px;
+    }
+
+    .about-us-description {
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      line-height: 28px;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .about-us-cta-btn{
+      padding: 1.1rem 2.5rem;
+      background-color: #5e2a2a;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #3e1b1b;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-us-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-us-left {
+      .product-img {
+        position: static;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

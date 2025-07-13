@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 import "./App.scss";
@@ -36,6 +36,15 @@ import FabulousSection from "./Pages/FabulousSection/FabulousSection";
 import ClassicDeals from "./Pages/ClassicDeals/ClassicDeals";
 import BannerSectionSalon from "./Pages/BannerSectionSalon/BannerSectionSalon";
 import FaqC from "./Pages/AboutUs/ContactForm/FAQC/Faqc";
+import { toast, Toaster } from "react-hot-toast"; // Import toast
+import { TabContext } from "./util/TabContext.jsx";
+import NotFound from "./Components/NotFound/NotFound.jsx";
+import NavBar from "./SALON/Components/NavBar/Navbar.jsx";
+import SalonHeroSection from "./SALON/Page/SalonHeroSection/SalonHeroSection.jsx";
+import AboutUsSection from "./SALON/Page/AboutUsSection/AboutUsSection.jsx";
+import ServicesSection from "./SALON/Page/ServicesSection/ServicesSection.jsx";
+import TOPSERVICES from "./SALON/Page/TOPSERVICES/TOPSERVICES.jsx";
+import LocationSelector from "./SALON/Page/LocationSelector/LocationSelector.jsx";
 
 function Loader2() {
   return (
@@ -67,74 +76,114 @@ function PageWrapper({ children }) {
 }
 
 function App() {
+  const { pageTab, changeTab } = useContext(TabContext);
+
+  const dynamicFontStyle = {
+    fontFamily: pageTab === "CLINIC" ? "'Geist', sans-serif" : "'Bricolage Grotesque', sans-serif",
+  };
+
   return (
-    <Router>
-      <PageWrapper>
-        <WebTabs />
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection />
-                <ClinicalConcerns />
-                <TeamSection />
-                <WhyChooseSection />
-                <TrendingTreatments />
-                <FabulousSection />
-                <ClassicDeals />
-                <BlogSlider />
-                <HappyClients />
-                {/* <FAQSection /> */}
-                {/* <FirstStep /> */}
-                <BannerSectionSalon />
-              </>
-            }
-          />
-          <Route
-            path="/about"
-            element={
-              <>
-                <AboutUsHero />
-                <OurValue />
-                {/* <OurTeam /> */}
-                <MissionVision />
-                <LocationSection />
-                {/* <FirstStep /> */}
-              </>
-            }
-          />
-          <Route
-            path="/contact"
-            element={
-              <>
-                <ContactForm />
-                <LocationSection />
-                <FaqC />
-              </>
-            }
-          />
-          <Route path="/blogs" element={<Blog />} />
-          <Route path="/blog-detail/:id" element={<ArticleDetail />} />
-          <Route
-            path="/locations"
-            element={
-              <>
-                <Location />
-                <Kankpur />
-                <Team />
-                <RR />
-              </>
-            }
-          />
-          <Route path="/treatment" element={<AllTreatments />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-        </Routes>
-        <Footer />
-      </PageWrapper>
-    </Router>
+    <div className="App" style={dynamicFontStyle}>
+      <Router>
+        <Toaster
+          position="top-center"
+          reverseOrder={true}
+        />
+        <PageWrapper>
+
+          <WebTabs />
+          {pageTab === "CLINIC" &&
+            <>
+              <Navbar />
+              <Routes>
+                <Route path="*" element={<NotFound />} />
+
+                <Route
+                  path="/"
+                  element={
+                    <div className="CLINIC">
+                      <HeroSection />
+                      <ClinicalConcerns />
+                      <TeamSection />
+                      <WhyChooseSection />
+                      <TrendingTreatments />
+                      <FabulousSection />
+                      <ClassicDeals />
+                      <BlogSlider />
+                      <HappyClients />
+                      {/* <FAQSection /> */}
+                      {/* <FirstStep /> */}
+                      <BannerSectionSalon />
+                    </div>
+                  }
+                />
+                <Route
+                  path="/about"
+                  element={
+                    <>
+                      <AboutUsHero />
+                      <OurValue />
+                      {/* <OurTeam /> */}
+                      <MissionVision />
+                      <LocationSection />
+                      {/* <FirstStep /> */}
+                    </>
+                  }
+                />
+                <Route
+                  path="/contact"
+                  element={
+                    <>
+                      <ContactForm />
+                      <LocationSection />
+                      <FaqC />
+                    </>
+                  }
+                />
+                <Route path="/blogs" element={<Blog />} />
+                <Route path="/blog-detail/:id" element={<ArticleDetail />} />
+                <Route
+                  path="/locations"
+                  element={
+                    <>
+                      <Location />
+                      <Kankpur />
+                      <Team />
+                      <RR />
+                    </>
+                  }
+                />
+                <Route path="/treatment" element={<AllTreatments />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+              </Routes>
+              <Footer />
+            </>
+          }
+          {pageTab === "SALON" &&
+            <div className="SALON">
+              <NavBar />
+              <Routes>
+                <Route path="*" element={<NotFound />} />
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <SalonHeroSection />
+                      <AboutUsSection />
+                      <ServicesSection />
+                      <TOPSERVICES />
+                      <LocationSelector />
+                    </>
+                  }
+                />
+              </Routes>
+            </div>
+          }
+
+        </PageWrapper>
+      </Router>
+    </div>
   );
 }
 

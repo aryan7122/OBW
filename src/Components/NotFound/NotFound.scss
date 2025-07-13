@@ -1,0 +1,53 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+  margin-top: -90px;
+    .error-code {
+      font-size: 10rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+  
+    .error-message {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #bbbbbb;
+    }
+  
+    .back-button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      background: #ff4b2b;
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background: #ff416c;
+        box-shadow: 0 0 15px #ff416c99;
+      }
+    }
+  
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff416c, 0 0 20px #ff416c;
+      }
+      to {
+        text-shadow: 0 0 20px #ff4b2b, 0 0 40px #ff4b2b;
+      }
+    }
+  }
+  
