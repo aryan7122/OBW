@@ -262,7 +262,7 @@
   // filter: blur(0.1px);
     backdrop-filter: blur(20px);
   position: relative;
-  animation: spin 10s linear infinite;
+  animation: spining 10s linear infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,7 +297,7 @@
   right: 15%;
 }
 
-@keyframes spin {
+@keyframes spining {
   0% {
     transform: rotate(0deg);
   }
