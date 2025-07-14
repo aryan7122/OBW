@@ -49,6 +49,8 @@ import ClassicDealsOffer from "./SALON/Page/ClassicDealsOffer/ClassicDealsOffer.
 import WhyChooseUs from "./SALON/Page/WhyChooseUs/WhyChooseUs.jsx";
 import TestimonialsSlider from "./SALON/Page/TestimonialsSlider/TestimonialsSlider.jsx";
 import NewsArticles from "./SALON/Page/NewsArticles/NewsArticles.jsx";
+import HeroGlowSection from "./SALON/Page/HeroGlowSection/HeroGlowSection.jsx";
+import SalonFooter from "./SALON/Components/NavBar/SalonFooter.jsx";
 
 function Loader2() {
   return (
@@ -182,6 +184,8 @@ function App() {
                       <WhyChooseUs />
                       <TestimonialsSlider />
                       <NewsArticles />
+                      <HeroGlowSection />
+                      <SalonFooter/>
                     </>
                   }
                 />

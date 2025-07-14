@@ -1,0 +1,180 @@
+// Base styling for the salon footer
+.salon-footer {
+  background-color: #2a1a1a; // Dark brown background from the image
+  color: #e0e0e0; // Soft white for text for better readability
+  font-family: sans-serif;
+  font-size: 16px;
+
+  // Your provided padding with all media queries
+  padding: 40px 120px;
+  @media only screen and (max-width: 1400px) { padding: 40px 100px; }
+  @media only screen and (max-width: 1300px) { padding: 30px 80px; }
+  @media only screen and (max-width: 1200px) { padding: 30px 70px; }
+  @media only screen and (max-width: 1100px) { padding: 30px 60px; }
+  @media only screen and (max-width: 1000px) { padding: 40px 40px; }
+  @media only screen and (max-width: 600px)  { padding: 40px 30px; }
+  @media only screen and (max-width: 500px)  { padding: 30px 20px; }
+  @media only screen and (max-width: 400px)  { padding: 30px 10px; }
+
+  a {
+    color: #e0e0e0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  // Main content area
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  // Left column (logo, description, socials)
+  &__left {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    
+    @media only screen and (max-width: 900px) {
+      max-width: 100%;
+    }
+  }
+
+  // Right column (nav, trending, contact)
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+    max-width: 600px;
+    
+    @media only screen and (max-width: 900px) {
+      max-width: 100%;
+    }
+  }
+
+  // Logo styling
+  &__logo {
+    margin-bottom: 20px;
+    cursor: pointer;
+    img {
+      width: 80px;
+      height: auto;
+    }
+  }
+
+  // Description text
+  &__description {
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 30px;
+    color: #c0c0c0;
+  }
+
+  // Social media icons container
+  &__socials {
+    display: flex;
+    gap: 20px;
+    a {
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  // Top navigation links
+  &__nav {
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+    a:hover {
+        text-decoration: underline;
+    }
+    @media only screen and (max-width: 400px) {
+      gap: 20px;
+      flex-wrap: wrap; // Allow nav items to wrap on very small screens
+    }
+  }
+  
+  // Section titles like "TRENDING SERVICES"
+  &__title {
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+    letter-spacing: 0.5px;
+  }
+  
+  // Text for trending services and contact info
+  &__trending p, &__contact-details {
+    line-height: 1.7;
+    margin: 0;
+    color: #d0d0d0;
+  }
+  
+  // Contact details wrapper
+  &__contact-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; // Allow contact info to wrap if needed
+  }
+  
+  // Separator for contact info
+  &__separator {
+    margin: 0 8px;
+  }
+
+  // Horizontal divider line
+  &__divider {
+    border: 0;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 40px 0;
+  }
+
+  // Bottom bar (copyright and legal links)
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start; // Align to the left on small screens
+    }
+  }
+
+  // Copyright text
+  &__copyright {
+    font-size: 14px;
+    color: #a0a0a0;
+    margin: 0;
+  }
+
+  // Legal links container
+  &__legal-links {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    
+    a {
+      color: #a0a0a0;
+      text-decoration: underline;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
