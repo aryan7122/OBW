@@ -1,5 +1,5 @@
 import React from 'react';
-import './Top_Services.scss';
+import './TOP_SERVICES.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
