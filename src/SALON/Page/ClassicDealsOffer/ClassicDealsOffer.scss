@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+.ClassicDealsOffer-deals {
+  background-color: #fff6ea;
+  padding: 40px 120px;
+
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 30px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 30px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 30px 10px;
+  }
+  padding-right: 0;
+
+  .ClassicDealsOffer-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 14px;
+      color: #3032b6;
+      font-weight: 500;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      img {
+        width: 16px;
+      }
+    }
+
+    h2 {
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      color: #002092;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -1.8px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+
+      img {
+        width: clamp(1.75rem, 5vw, 2.5rem);
+      }
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1rem);
+      color: #1a1a1a;
+      max-width: 470px;
+      line-height: 1.4;
+      text-align: right;
+
+      @media (max-width: 630px) {
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+    .swiper-controls {
+      display: flex;
+      gap: 10px;
+      padding-right:120px;
+      @media only screen and (max-width: 1400px) {
+        padding-right: 100px;
+      }
+      @media only screen and (max-width: 1300px) {
+        padding-right: 80px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding-right:  70px;
+      }
+      @media only screen and (max-width: 1100px) {
+        padding-right:  60px;
+      }
+      @media only screen and (max-width: 1000px) {
+        padding-right:  40px;
+      }
+      @media only screen and (max-width: 600px) {
+        padding-right:  30px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding-right:  20px;
+      }
+      @media only screen and (max-width: 400px) {
+        padding-right:  10px;
+      }
+      .swiper-prev,
+      .swiper-next {
+        background: #fff;
+        border: 1px solid #00cfde;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        color: #643434;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::after {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background: #00cfde;
+          color: #fff;
+        }
+      }
+
+      .swiper-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .swiper {
+    margin-top: 2rem;
+    padding-bottom: 30px;
+  }
+
+  .swiper-slide {
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 1.5rem;
+    min-height: 212px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: white;
+
+    .text-content {
+      z-index: 2;
+
+      h3 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        line-height: 1.3;
+        white-space: pre-line;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .deal-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .offer-card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+    min-height: 212px;
+    position: relative;
+    border: 1px solid red;
+    min-width: 520px;
+
+    h3 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem); // 40px
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: clamp(1rem, 2vw, 1.25rem); // 20px
+      line-height: 1.3;
+      white-space: pre-line;
+      margin-bottom: 1rem;
+    }
+
+    .Book-Now {
+      position: absolute;
+      bottom: 20px;
+      padding: 5px 5px 5px 20px;
+      background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+      color: #fff;
+      border: 1px solid transparent;
+      border-radius: 100px;
+      font-size: clamp(1rem, 2vw, 1.1rem); // 20px
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      letter-spacing: -0.5px;
+      line-height: 24px;
+      cursor: pointer;
+      transition: 0.3s linear;
+      height: 40px;
+      .arrow-icon {
+        background: #fff;
+        color: #0056b3;
+        border-radius: 100px;
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        transition: 0.3s linear;
+      }
+
+      &:hover {
+        background: #fff !important;
+        color: #472525;
+        border: 1px solid #0056b3;
+
+        .arrow-icon {
+          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+          color: #fff;
+        }
+      }
+    }
+    .deal-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,0 +1,332 @@
+.why-choose-us {
+  background: #fff;
+  padding: 40px 120px;
+
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 30px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 30px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 30px 10px;
+  }
+  text-align: center;
+  border-top: 1px solid #e8e8e8;
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 14px;
+      color: #3032b6;
+      font-weight: 500;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      img {
+        width: 16px;
+      }
+    }
+
+    .heading {
+      color: #004e4e;
+      font-weight: 600;
+      font-size: clamp(30px, 5vw, 60px);
+      margin-bottom: 1rem;
+      font-weight: 500;
+      line-height: clamp(34px, 5vw, 64px);
+      letter-spacing: clamp(-1.8px, 0.5vw, -3px);
+      width: 528px;
+      text-align: left;
+    }
+    .bottom_title {
+      display: flex;
+      align-items: center;
+      margin-top: -20px;
+      .desc {
+        font-size: 14px;
+        letter-spacing: 1%;
+        color: #444;
+        width: 321px;
+        text-align: left;
+      }
+
+      .elevated {
+        margin-left: 30px;
+        font-weight: 500;
+        font-style: Italic;
+        font-size: 54px;
+        line-height: 60px;
+        letter-spacing: -4px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 0%;
+        text-decoration-skip-ink: auto;
+
+        color: #00575d;
+        margin-top: 1.5rem;
+        text-decoration: 2px underline;
+      }
+    }
+  }
+
+  .card-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1600px;
+
+    // height: ;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -190px;
+      right: 15%;
+      width: 230px;
+      height: 230px;
+      background-image: url("../../../assets//SALON/hero/whyChooseUs/Arrow.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 11;
+      rotate: -15deg;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: -90px;
+      right: 25%;
+      width: 177px;
+      height: 220px;
+      background-image: url("../../../assets//SALON/hero/whyChooseUs/Cosmetic\ Product\ Display.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 11;
+      rotate: -5deg;
+    }
+    .main-img {
+      width: 60%;
+      height: auto;
+      // border-radius: 999px;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .floating-img {
+      position: absolute;
+      width: 80px;
+      height: auto;
+      animation: floatY 5s ease-in-out infinite;
+    }
+
+    .serum1 {
+      top: -20px;
+      right: 100px;
+      transform: rotate(-15deg);
+    }
+
+    .serum2 {
+      top: 0;
+      right: 40px;
+      transform: rotate(25deg);
+    }
+
+    .info-card {
+      position: absolute;
+      width: 254px;
+      height: 360px;
+      padding: 1.5rem;
+      background: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      animation: popFade 1s ease both;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      border: 1px solid #E8E8E8;
+      .icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        width: 113px;
+        height: 113px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border-radius: 200px;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 20px;
+        line-height: 23.64px;
+        letter-spacing: 0px;
+        text-align: center;
+        width: 80%;
+        vertical-align: middle;
+        color: #000;
+
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-weight: 300;
+        font-style: Light;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 1%;
+        text-align: center;
+        vertical-align: middle;
+        width: 80%;
+        color: #171717;
+      }
+    }
+
+    .card-1 {
+      top: -40px;
+      left: 25%;
+    }
+    .card-2 {
+      top: 15%;
+      right: 40px;
+    }
+    .card-3 {
+      bottom: -20px;
+      right: 25%;
+    }
+    .card-4 {
+      border: 20px;
+      left: 3%;
+    }
+     @media only screen and (max-width: 1500px){
+      
+    .card-2 {
+      top: 15%;
+      right: 10px;
+    }
+    .card-3 {
+      bottom: -50px;
+      right: 25%;
+    }
+    .card-4 {
+      border: 20px;
+      left: 1%;
+    }
+     }
+
+  //
+  .circle-stamp-wrapper {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  bottom: -55px;
+  left: 25%;
+}
+
+.circle-stamp {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #2F201A;
+  // background: radial-gradient(circle, rgba(206,255,206,0.4), #a6c6aa);
+  // filter: blur(0.1px);
+    backdrop-filter: blur(20px);
+  position: relative;
+  animation: spin 10s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotating-text {
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18.3px;
+  fill: #2F201A;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+// .dot {
+//   width: 6px;
+//   height: 6px;
+//   background-color: #2F201A;
+//   border-radius: 50%;
+//   position: absolute;
+// }
+
+.top-left {
+  top: 20%;
+  left: 15%;
+}
+
+.bottom-right {
+  bottom: 20%;
+  right: 15%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+  
+  // 
+  }
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+}
+
+@keyframes popFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

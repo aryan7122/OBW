@@ -45,6 +45,10 @@ import AboutUsSection from "./SALON/Page/AboutUsSection/AboutUsSection.jsx";
 import ServicesSection from "./SALON/Page/ServicesSection/ServicesSection.jsx";
 import TOPSERVICES from "./SALON/Page/TOPSERVICES/TOPSERVICES.jsx";
 import LocationSelector from "./SALON/Page/LocationSelector/LocationSelector.jsx";
+import ClassicDealsOffer from "./SALON/Page/ClassicDealsOffer/ClassicDealsOffer.jsx";
+import WhyChooseUs from "./SALON/Page/WhyChooseUs/WhyChooseUs.jsx";
+import TestimonialsSlider from "./SALON/Page/TestimonialsSlider/TestimonialsSlider.jsx";
+import NewsArticles from "./SALON/Page/NewsArticles/NewsArticles.jsx";
 
 function Loader2() {
   return (
@@ -174,6 +178,10 @@ function App() {
                       <ServicesSection />
                       <TOPSERVICES />
                       <LocationSelector />
+                      <ClassicDealsOffer />
+                      <WhyChooseUs />
+                      <TestimonialsSlider />
+                      <NewsArticles />
                     </>
                   }
                 />

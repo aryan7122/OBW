@@ -12,7 +12,7 @@ const locations = [
             "203, 100 Feet Rd, near Polar Bear Ice Cream, Banashankari 6th Stage 3rd Block, Chikkegowdanapalya, Bengaluru, Karnataka",
         image:
             LocationImg1,
-        color: "#c7bfff",
+        color: "#c7bfff", 
     },
     {
         id: 2,
