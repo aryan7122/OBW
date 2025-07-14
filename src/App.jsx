@@ -39,7 +39,7 @@ import FaqC from "./Pages/AboutUs/ContactForm/FAQC/Faqc";
 import { toast, Toaster } from "react-hot-toast"; // Import toast
 import { TabContext } from "./util/TabContext.jsx";
 import NotFound from "./Components/NotFound/NotFound.jsx";
-import NavBar from "./SALON/Components/NavBar/Navbar.jsx";
+import NavBar from "./SALON/Components/NavBar/NavBar.jsx";
 import SalonHeroSection from "./SALON/Page/SalonHeroSection/SalonHeroSection.jsx";
 import AboutUsSection from "./SALON/Page/AboutUsSection/AboutUsSection.jsx";
 import ServicesSection from "./SALON/Page/ServicesSection/ServicesSection.jsx";
