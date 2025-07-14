@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./TestimonialsSlider.scss";
+import str3 from "../../../assets/SALON/hero/str.png";
 
 const testimonials = [
     {
@@ -50,7 +51,11 @@ export default function TestimonialsSlider() {
     return (
         <section className="testimonials-section">
             <div className="header">
-                <span className="badge">TESTIMONIALS</span>
+                <div className="badge">
+                <h3> <img src={str3} />
+                TESTIMONIALS
+                 <img src={str3} /></h3>
+                </div>
                 <h2>Our Success Stories</h2>
             </div>
             <Swiper
