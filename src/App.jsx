@@ -225,7 +225,7 @@ function App() {
                     <>
                       <SalonContactUs />
                       <SalonFaq />
-                        {/* <SalonLocationSection /> */}
+                        <SalonLocationSection />
                       <SalonFooter />
                     </>
                   }

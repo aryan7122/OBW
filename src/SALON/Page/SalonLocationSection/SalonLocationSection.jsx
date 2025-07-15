@@ -1,72 +1,79 @@
 import React, { useState } from "react";
+import { Sparkles } from 'lucide-react';
 import "./SalonLocationSection.scss";
-import icon1 from '../../../assets/about/locationIcon.svg'
+import str3 from "../../../assets/SALON/hero/str.png";
+
 const locations = [
     {
-        name: "Banashankari",
+        name: "Bhanshankari",
         address: "203, 100 Feet Rd, near Polar Bear Ice Cream, Banashankari 6th Stage 3rd Block, Banashankari Stage 6, Chikkegowdanapalya, Bengaluru, Karnataka 560109",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27462.160178895465!2d77.50609012863052!3d12.877508413200026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f4ec1bdb403%3A0x9025e3ff7e907cbf!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739600998644!5m2!1sen!2sin"
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.790159491763!2d77.53585831482149!3d12.92117899088998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e1e6e3b5a7b%3A0x8c8f5f24449a7c3f!2sBanashankari%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1626352934278!5m2!1sen!2sin"
     },
     {
-        name: "Kanakapura Main Road",
-        address: "No. 3 2nd floor, Kanakapura Main Rd, above Tanishq Jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1237.4005569027722!2d77.54510188463037!3d12.879024934708173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f5bea81491d%3A0xacd55621ca8d33c2!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739601210644!5m2!1sen!2sin"
-    },
-    {
-        name: "Rajarajeshwari Nagar",
+        name: "R.R Nagar",
         address: "No 2, Balarama Layout, Krishna Garden Main Road, near Happy Home Super Market, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d328.89939542417466!2d77.50870152764773!3d12.915444510330301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f024bd73595%3A0x38a7ddf1d4ef624c!2s2%2C%20Balarama%20Layout%2C%20Rajarajeshwari%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560098!5e0!3m2!1sen!2sin!4v1739601355706!5m2!1sen!2sin"
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.397693521235!2d77.51390331482173!3d12.94639399087349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e244b1b3b3b%3A0x2c6f1c7d6c6b3e3e!2sRajarajeshwari%20Nagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1626352984123!5m2!1sen!2sin"
+    },
+    {
+        name: "Kankapura Main road",
+        address: "No. 3 2nd floor, Kanakapura Main Rd, above Tanishq Jewellery, near KSIT college, Raghuvanahalli, KSIT junction, Bengaluru, Karnataka 560062",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.375836214342!2d77.54589801482103!3d12.8833339909139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae156b156b156b%3A0x156b156b156b156b!2sKanakapura%20Rd%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1626353023987!5m2!1sen!2sin"
     },
     {
         name: "Kodipalya Road",
-        address: "Shop No 6 & 7, Opp Vasthugreens Apartments Near Gudde Anjineya Temple, 1, Kodipalya Rd, opposite to Vaastu Greens, Kengeri, Bengaluru, Karnataka 560060 ",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.042755642787!2d77.48615187461691!3d12.904972316336432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fb9fdaa0f69%3A0xc9a5398e6c62bee2!2sObw%20Salon%20%7C%20Hair%20%26%20Skin%20Clinic!5e0!3m2!1sen!2sin!4v1739601897930!5m2!1sen!2sin"
+        address: "Shop No 6 & 7, Opp Vasthugreens Apartments Near Gudde Anjineya Temple, 1, Kodipalya Rd, opposite to Vaastu Greens, Kengeri, Bengaluru,",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.001700424594!2d77.4766835148219!3d12.97159899085566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f2e2e2e2e2e%3A0x2e2e2e2e2e2e2e2e!2sKengeri%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1626353063543!5m2!1sen!2sin"
     }
 ];
 
 const SalonLocationSection = () => {
-    const [activeMap, setActiveMap] = useState(locations[0].mapUrl); // Default first map
-    const [activeIndex, setActiveIndex] = useState(0); // Default first card active
+    // State to manage the active location card and map URL
+    const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleLocationClick = (index, mapUrl) => {
-        setActiveMap(mapUrl);
+    const handleLocationClick = (index) => {
         setActiveIndex(index);
     };
 
     return (
-        <section className="location-section">
-            <div className="text-content">
-                <h5>Location</h5>
-                <h2>
-                    Our Salon <img src={icon1} /> Locations
-                </h2>
-                <p>
-                    Welcome to our salon! With multiple locations, we provide a relaxing experience with expert care. From haircuts to spa services, our skilled team is here to make you look and feel your best.
+        <section className="salon-locations">
+            <header className="salon-locations__header">
+                <p className="salon-locations__label">
+                    <img src={str3} /> LOCATIONS <img src={str3} />
                 </p>
-            </div>
-            <div className="mapCard">
-                <div className="location-list">
-                    {locations.map((location, index) => (
-                        <div
-                            key={index}
-                            className={`location-card ${activeIndex === index ? "locationActive" : ""}`}
-                            onClick={() => handleLocationClick(index, location.mapUrl)}
+                <h2 className="salon-locations__title">Our Salon locations</h2>
+            </header>
+
+            <div className="salon-locations__grid">
+                {locations.map((location, index) => (
+                    <div
+                        key={index}
+                        className={`location-card ${activeIndex === index ? "location-card--active" : ""}`}
+                        onClick={() => handleLocationClick(index)}
+                    >
+                        <h3 className="location-card__name">{location.name}</h3>
+                        <p className="location-card__address">{location.address}</p>
+                        <a
+                            href={location.mapUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="location-card__link"
+                            onClick={(e) => e.stopPropagation()} // Prevents card click when link is clicked
                         >
-                            <h3>{location.name}</h3>
-                            <p>{location.address}</p>
-                            <button>View Location</button>
-                        </div>
-                    ))}
-                </div>
-                <div className="map-container">
-                    <iframe
-                        title="location-map"
-                        src={activeMap}
-                        frameBorder="0"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                    ></iframe>
-                </div>
+                            View Map
+                        </a>
+                    </div>
+                ))}
+            </div>
+
+            <div className="salon-locations__map-wrapper">
+                <iframe
+                    title="location-map"
+                    src={locations[activeIndex].mapUrl}
+                    className="salon-locations__map-iframe"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
         </section>
     );

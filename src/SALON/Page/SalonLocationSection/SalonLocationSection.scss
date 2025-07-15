@@ -1,235 +1,154 @@
-.location-section {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 60px 120px 60px 120px;
-  background-color: #f3feff;
-  // background-color: #f7f7f7;
+/* --- Variables & General Setup --- */
+$color-bg-page: #F9FAFB;
+$color-text-heading: #171717;
+$color-text-body: #475467;
+$color-text-link: #4338CA; // A nice indigo for the link
+$color-border-active: #3032B6;
+
+/* --- Main Section Container --- */
+.salon-locations {
+background: linear-gradient(180deg, #FFEFDB 8.75%, #FFF6EA 133.43%);
+   padding: 40px 120px;
   @media only screen and (max-width: 1400px) {
     padding: 40px 100px;
   }
   @media only screen and (max-width: 1300px) {
-    padding: 60px 80px;
+    padding: 30px 80px;
   }
   @media only screen and (max-width: 1200px) {
-    padding: 50px 70px;
+    padding: 30px 70px;
   }
   @media only screen and (max-width: 1100px) {
-    padding: 50px 60px;
+    padding: 30px 60px;
   }
   @media only screen and (max-width: 1000px) {
-    padding: 40px;
+    padding: 40px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 30px;
   }
   @media only screen and (max-width: 500px) {
-    padding: 20px 30px;
+    padding: 30px 20px;
   }
   @media only screen and (max-width: 400px) {
-    padding: 20px;
+    padding: 30px 10px;
   }
-  @media only screen and (max-width: 350px) {
-    padding: 20px 15px;
-  }
-  .text-content {
-    width: 768px;
+
+}
+
+/* --- Header --- */
+.salon-locations__header {
+    text-align: center;
+    margin-bottom: 48px;
+
+    .salon-locations__label {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-text-link;
+        margin: 0 0 12px 0;
+        img{
+          width: 14px;
+        }
+    }
+
+    .salon-locations__title {
+        font-size: clamp(26px, 5vw,40px);
+        font-weight: 600;
+        color: #472525;
+        margin: 0;
+    }
+}
+
+/* --- Locations Grid --- */
+.salon-locations__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1100px;
     margin: 0 auto;
-    @media only screen and (max-width: 900px) {
-      width: 100%;
-    }
-    h5 {
-      background: #b8b8b833;
-      font-weight: 500;
-      color: #000;
-      width: fit-content;
-      padding: 4px 10px;
-      border-radius: 100px;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0%;
-      text-align: center;
-      margin: 0 auto;
-    }
-    h2 {
-      margin-top: 10px;
-      font-weight: 500;
-      // display: flex;
-      // align-items: center;
-      gap: 10px;
-      color: #472525;
-      font-size: 40px;
-      line-height: 48.6px;
-      letter-spacing: -2.2px;
-      margin: 10px auto !important;
-      text-align: center !important;
-      width: 100%;
-      img {
-        width: 40px;
-      }
-      @media only screen and (max-width: 535px) {
-        font-size: 36px;
-        line-height: 42.6px;
-        img {
-          width: 40px;
-        }
-      }
-      @media only screen and (max-width: 420px) {
-        font-size: 35px;
-        line-height: 40.6px;
+}
 
-        img {
-          width: 35px;
-        }
-      }
-      @media only screen and (max-width: 360px) {
-        font-size: 30px;
-        line-height: 30.6px;
-        img {
-          width: 30px;
-        }
-      }
-      span {
-        color: #3032b6;
-      }
+/* --- Individual Location Card --- */
+.location-card {
+    padding: 24px;
+    border: 1px solid transparent; // Keep space but hide border by default
+    border-radius: 12px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+border: 1px solid #E8E8E8;
+    .location-card__name {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.8px;
+        color: $color-text-heading;
+        margin: 0 0 8px 0;
     }
 
-    p {
-      margin-top: 8px;
-      font-weight: 400;
-      font-family: "Supreme-Regular", sans-serif;
-      font-size: 16px;
-      line-height: 22.4px;
-      letter-spacing: 0%;
-      color: #454545;
-      text-align: center;
+    .location-card__address {
+        font-size: 16px;
+        color: $color-text-body;
+        line-height: 1.6;
+        margin: 0 0 16px 0;
+        min-height: 85px; // Ensures cards have a similar height
     }
-  }
-  .mapCard {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-    @media only screen and (max-width: 900px) {
-      flex-direction: column;
-      gap: 20px;
-    }
-    .location-list {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      justify-content: space-between;
-      margin-right: 20px;
-      @media only screen and (max-width: 900px) {
-        // flex-direction: row;
-        justify-content: left !important;
-        margin-right: 0;
-        width: 100%;
-        gap: 20px;
-      }
-      .location-card {
-        // border: 1px solid red;
-        padding: 1rem;
-        border-radius: 8px;
-        border-left: 1px solid transparent;
-        h3 {
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 28.8px;
-          letter-spacing: -0.8px;
-          color: #171717;
-        }
 
-        p {
-          margin-top: -1px;
-          color: #171717;
-          font-weight: 400;
-          font-family: "Supreme-Regular", sans-serif;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0%;
-        }
-
-        button {
-          margin-top: 13px;
-          border: none;
-          outline: none;
-          background: none;
-          cursor: pointer;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0%;
-          color: #3032b6;
-          text-decoration: none;
-
-          &:hover {
+    .location-card__link {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-text-link;
+        text-decoration: none;
+        
+        &:hover {
             text-decoration: underline;
-          }
         }
-      }
-      .location-card:hover {
-        position: relative;
-        background: #e6f7ff2e;
-        transition: 0.4s linear;
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 90%;
-          margin-top: 5px;
-          width: 1px;
-          background-color: #3032b6;
-          /* Border ka color */
-        }
-      }
-      .locationActive {
-        background-color: #e6f7ff;
-        position: relative;
-        // border-left: 2px solid #1e90ff;
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 90%;
-          margin-top: 5px;
-          width: 2px;
-          background-color: #3032b6;
-          /* Border ka color */
-        }
-      }
     }
 
-    .map-container {
-      iframe {
-        width: 780px;
-        height: 660px;
-        border-radius: 8px;
-        @media only screen and (max-width: 1360px) {
-          width: 700px;
-          // height: 450px;
-        }
-        @media only screen and (max-width: 1260px) {
-          width: 600px;
-          // height: 450px;
-          height: 700px;
-        }
-        @media only screen and (max-width: 1120px) {
-          width: 500px;
-        }
-        @media only screen and (max-width: 1000px) {
-          width: 450px;
-          // height: 500px;
-        }
-        @media only screen and (max-width: 900px) {
-          width: 93vw;
-        }
-        @media only screen and (max-width: 535px) {
-          width: 88vw !important;
-          height: 400px;
-        }
-      }
+    // Active state for the selected card
+    &--active {
+        background-color: #FFFFFF;
+        border-color: $color-border-active;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
     }
-  }
+}
+
+/* --- Map Wrapper --- */
+.salon-locations__map-wrapper {
+    max-width: 1100px;
+    margin: 48px auto 0;
+    
+    .salon-locations__map-iframe {
+        width: 100%;
+        height: 450px;
+        border: 0;
+        border-radius: 12px;
+    }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .salon-locations {
+        padding: 60px 15px;
+    }
+
+    .salon-locations__grid {
+        grid-template-columns: 1fr; // Stack cards vertically
+    }
+
+    .location-card__address {
+        min-height: auto; // Remove min-height on mobile
+    }
+}
+
+@media (max-width: 480px) {
+    .salon-locations__header .salon-locations__title {
+        font-size: 30px;
+    }
+
+    .salon-locations__map-wrapper .salon-locations__map-iframe {
+        height: 350px;
+    }
 }
