@@ -2,28 +2,24 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Facebook, Youtube, Instagram } from 'lucide-react';
 import './SalonFooter.scss';
-import logo from '../../../assets/footer/logo.svg'; // Make sure this path to your logo is correct
+import logo from '../../../assets/SALON/hero/flogo.svg'; // Make sure this path to your logo is correct
 
-/**
- * A responsive footer component for the salon website.
- *
- * @component
- * @example
- * return (
- * <SalonFooter />
- * )
- */
 const SalonFooter = () => {
     const navigate = useNavigate();
 
-    /**
-     * Handles navigation to a new page and scrolls to the top.
-     * @param {string} path - The route to navigate to.
-     */
     const handleNavigation = (path) => {
         navigate(path);
         window.scrollTo(0, 0);
     };
+    const trendingServices = [
+        "Mens hair cut",
+        "Blowdry",
+        "Womens hair cut",
+        "Hair spa",
+        "Fashion color",
+        "Keratin treatment",
+        "Frizz control hair spa"
+    ];
 
     return (
         <footer className="salon-footer">
@@ -59,8 +55,16 @@ const SalonFooter = () => {
                     </nav>
                     <div className="salon-footer__trending">
                         <h4 className="salon-footer__title">TRENDING SERVICES</h4>
-                        <p>
-                            Mens hair cut, Blowdry, Womens hair cut, Hair spa, Fashion color, Keratin treatment, Frizz control hair spa
+                       <p className="salon-footer__trending-links">
+                            {trendingServices.map((service, index) => (
+                                <React.Fragment key={service}>
+                                    <a onClick={() => handleNavigation(createServiceSlug(service))}>
+                                        {service}
+                                    {index < trendingServices.length - 1 && ', '}
+                                    </a>
+                                    {/* Add a comma and space only if it's not the last item */}
+                                </React.Fragment>
+                            ))}
                         </p>
                     </div>
                     <div className="salon-footer__contact">

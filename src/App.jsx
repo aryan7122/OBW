@@ -1,5 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 import "./App.scss";
 import Navbar from "./Components/NavBar/Navbar";
@@ -50,7 +55,9 @@ import WhyChooseUs from "./SALON/Page/WhyChooseUs/WhyChooseUs.jsx";
 import TestimonialsSlider from "./SALON/Page/TestimonialsSlider/TestimonialsSlider.jsx";
 import NewsArticles from "./SALON/Page/NewsArticles/NewsArticles.jsx";
 import HeroGlowSection from "./SALON/Page/HeroGlowSection/HeroGlowSection.jsx";
-import SalonFooter from "./SALON/Components/NavBar/SalonFooter.jsx";
+import SalonFooter from "./SALON/Components/SalonFooter/SalonFooter.jsx";
+import SalonBlog from "./SALON/Page/SalonBlog/SalonBlog.jsx";
+import SalonBlogDetail from "./SALON/Page/SalonBlog/SalonBlogDetail/SalonBlogDetail.jsx";
 
 function Loader2() {
   return (
@@ -85,20 +92,19 @@ function App() {
   const { pageTab, changeTab } = useContext(TabContext);
 
   const dynamicFontStyle = {
-    fontFamily: pageTab === "CLINIC" ? "'Geist', sans-serif" : "'Bricolage Grotesque', sans-serif",
+    fontFamily:
+      pageTab === "CLINIC"
+        ? "'Geist', sans-serif"
+        : "'Bricolage Grotesque', sans-serif",
   };
 
   return (
     <div className="App" style={dynamicFontStyle}>
       <Router>
-        <Toaster
-          position="top-center"
-          reverseOrder={true}
-        />
+        <Toaster position="top-center" reverseOrder={true} />
         <PageWrapper>
-
           <WebTabs />
-          {pageTab === "CLINIC" &&
+          {pageTab === "CLINIC" && (
             <>
               <Navbar />
               <Routes>
@@ -165,8 +171,8 @@ function App() {
               </Routes>
               <Footer />
             </>
-          }
-          {pageTab === "SALON" &&
+          )}
+          {pageTab === "SALON" && (
             <div className="SALON">
               <NavBar />
               <Routes>
@@ -185,14 +191,34 @@ function App() {
                       <TestimonialsSlider />
                       <NewsArticles />
                       <HeroGlowSection />
-                      <SalonFooter/>
+                      <SalonFooter />
+                    </>
+                  }
+                />
+                <Route
+                  path="/blogs"
+                  element={
+                    <>
+                      <SalonBlog />
+                      <HeroGlowSection />
+                      <SalonFooter />
+                    </>
+                  }
+                />
+                <Route
+                  // path="/blog-detail/:id"
+                 path="/blog-detail/:slug"
+                  element={
+                    <>
+                      <SalonBlogDetail />
+                      {/* <HeroGlowSection /> */}
+                      <SalonFooter />
                     </>
                   }
                 />
               </Routes>
             </div>
-          }
-
+          )}
         </PageWrapper>
       </Router>
     </div>

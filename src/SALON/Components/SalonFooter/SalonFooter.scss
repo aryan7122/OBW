@@ -1,12 +1,14 @@
 // Base styling for the salon footer
 .salon-footer {
-  background-color: #2a1a1a; // Dark brown background from the image
+  // background-color: #2a1a1a; // Dark brown background from the image
+  background: linear-gradient(0deg, #222222 -64.29%, #490D0D 113.02%);
+border-top: 1px solid #FFFFFF;
   color: #e0e0e0; // Soft white for text for better readability
-  font-family: sans-serif;
   font-size: 16px;
 
   // Your provided padding with all media queries
-  padding: 40px 120px;
+  padding: 50px 120px;
+
   @media only screen and (max-width: 1400px) { padding: 40px 100px; }
   @media only screen and (max-width: 1300px) { padding: 30px 80px; }
   @media only screen and (max-width: 1200px) { padding: 30px 70px; }
@@ -41,7 +43,7 @@
 
   // Left column (logo, description, socials)
   &__left {
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     
@@ -99,7 +101,7 @@
     gap: 30px;
     font-weight: 500;
     a:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
     @media only screen and (max-width: 400px) {
       gap: 20px;
@@ -117,10 +119,34 @@
   }
   
   // Text for trending services and contact info
+  &__trending-links {
+    line-height: 1.7;
+    margin: 0;
+    color: #d0d0d0;
+    
+    a {
+      // Inherit color from parent by default
+      color: inherit; 
+      
+      &:hover {
+        // On hover, make the link white and add an underline
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__trending p{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+  }
   &__trending p, &__contact-details {
     line-height: 1.7;
     margin: 0;
     color: #d0d0d0;
+    display: flex;
+    font-family: 'Bricolage Grotesque';
   }
   
   // Contact details wrapper
