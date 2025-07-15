@@ -60,6 +60,7 @@ import SalonBlog from "./SALON/Page/SalonBlog/SalonBlog.jsx";
 import SalonBlogDetail from "./SALON/Page/SalonBlog/SalonBlogDetail/SalonBlogDetail.jsx";
 import SalonContactUs from "./SALON/Page/SalonContactUs/SalonContactUs.jsx";
 import SalonFaq from "./SALON/Page/SalonFaq/SalonFaq.jsx";
+import SalonLocationSection from "./SALON/Page/SalonLocationSection/SalonLocationSection.jsx";
 
 function Loader2() {
   return (
@@ -224,6 +225,7 @@ function App() {
                     <>
                       <SalonContactUs />
                       <SalonFaq />
+                        {/* <SalonLocationSection /> */}
                       <SalonFooter />
                     </>
                   }
