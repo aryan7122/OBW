@@ -1,0 +1,301 @@
+/* --- Variables from Design Image --- */
+
+$color-bg-page: #fff3e4;
+$color-bg-container: #fffdf9;
+$color-bg-image: #fee4e2;
+$color-bg-contact-box: #fff6f3;
+$color-bg-feature: #f0f9ff;
+
+$color-text-dark: #101828;
+$color-text-light: #475467;
+$color-border: #eaecf0;
+$color-accent: #2563eb;
+
+/* --- Main Page Container --- */
+.salon-contact-page {
+  background-color: $color-bg-page;
+  padding: 40px 120px;
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 30px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 30px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 30px 10px;
+  }
+}
+
+/* --- Header Section --- */
+.contact-header {
+  text-align: center;
+  margin: 0 auto 60px;
+
+  h1 {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -2px;
+    vertical-align: middle;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 3%;
+    text-decoration-skip-ink: auto;
+
+    margin-bottom: 16px;
+    background: linear-gradient(0deg, #2a1616, #2a1616),
+      linear-gradient(0deg, #0c0c0c, #0c0c0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    max-width: 747px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+
+  .features-bar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .feature-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #B0F0F5;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    svg{
+        color: #fff;
+        fill: #3032B6;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+  }
+}
+
+/* --- Main Form & Info Container --- */
+.contact-main-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 70px;
+  margin: 0 auto;
+  padding: 48px;
+  border: 1px solid #B0F0F5;
+  border-radius: 24px;
+}
+
+/* --- Form Section (Left) --- */
+.form-section {
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    color: $color-text-dark;
+    margin: 0 0 8px 0;
+  }
+
+  .handwritten-text {
+    font-weight: 700;
+    position: relative;
+    color: $color-text-dark;
+
+    // Creates the decorative underline
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='5' viewBox='0 0 100 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C20.2 1.83333 69.2 -1.4 99 3.5' stroke='%23101828' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .form-subheading {
+    color: $color-text-light;
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #00000066;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 16px;
+      background-color: transparent;
+      border: 1px solid #0000001A;
+      border-radius: 8px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus {
+        outline: none;
+        border-color: $color-accent;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      }
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667085' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      background-size: 1.2em;
+      padding-right: 2.5rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+  }
+
+  .submit-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 38px;
+    border: 1px solid #3032B6;
+    background-color: transparent;
+    color: $color-text-dark;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: #3032B6;
+      color: #fff;
+    }
+  }
+}
+
+/* --- Info Section (Right) --- */
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .image-wrapper {
+     
+      img {
+          width: 100%;
+          border-radius: 12px;
+        }
+        
+        
+    }
+    
+    .contact-details-box {
+        background: #FFEFE1;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    
+
+    .contact-detail-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+
+      .contact-icon {
+        color: $color-text-light;
+        flex-shrink: 0;
+        margin-top: 2px;
+        border: 1px solid #0000001A;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-text-dark;
+        margin-bottom: 2px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: $color-text-light;
+      }
+    }
+  }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .contact-main-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .salon-contact-page {
+    padding: 40px 15px;
+  }
+  .contact-header h1 {
+    font-size: 40px;
+  }
+  .form-section .form-row {
+    grid-template-columns: 1fr;
+    gap: 0; // The form-group margin will handle the gap
+  }
+}

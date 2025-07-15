@@ -58,6 +58,8 @@ import HeroGlowSection from "./SALON/Page/HeroGlowSection/HeroGlowSection.jsx";
 import SalonFooter from "./SALON/Components/SalonFooter/SalonFooter.jsx";
 import SalonBlog from "./SALON/Page/SalonBlog/SalonBlog.jsx";
 import SalonBlogDetail from "./SALON/Page/SalonBlog/SalonBlogDetail/SalonBlogDetail.jsx";
+import SalonContactUs from "./SALON/Page/SalonContactUs/SalonContactUs.jsx";
+import SalonFaq from "./SALON/Page/SalonFaq/SalonFaq.jsx";
 
 function Loader2() {
   return (
@@ -212,6 +214,16 @@ function App() {
                     <>
                       <SalonBlogDetail />
                       {/* <HeroGlowSection /> */}
+                      <SalonFooter />
+                    </>
+                  }
+                />
+                  <Route
+                  path="/contact"
+                  element={
+                    <>
+                      <SalonContactUs />
+                      <SalonFaq />
                       <SalonFooter />
                     </>
                   }

@@ -1,0 +1,263 @@
+/* --- Variables & General Setup --- */
+$color-bg-page: #fff3e4;
+$color-text-heading: #171717;
+$color-text-body: #475467;
+$color-text-question: #1d2939;
+$color-border: #eaecf0;
+$color-label-icon: #16a34a; // Green icon for the label
+
+/* --- Main Page Container --- */
+.salon-faq-page {
+  background-color: $color-bg-page;
+  padding: 40px 120px;
+  @media only screen and (max-width: 1400px) {
+    padding: 40px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 30px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 30px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 30px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 40px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 40px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 30px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 30px 10px;
+  }
+
+  .faq_titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 14px;
+      color: #3032b6;
+      font-weight: 500;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      img {
+        width: 14px;
+      }
+    }
+    p {
+      width: 400px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #454545;
+      letter-spacing: 0%;
+      text-align: right;
+      vertical-align: middle;
+    }
+    h1 {
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 40px;
+      leading-trim: NONE;
+      line-height: 48px;
+      letter-spacing: -1.8px;
+      vertical-align: middle;
+      text-transform: capitalize;
+      margin-top: -10px;
+    }
+  }
+}
+
+/* --- Two-Column Layout --- */
+.salon-faq-container {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 80px;
+  margin: 0 auto;
+  background: transparent;
+  margin-top: 30px;
+}
+
+/* --- Left Column: FAQ Content --- */
+.salon-faq-content {
+  .salon-faq-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-text-body;
+    margin-bottom: 12px;
+
+    svg {
+      color: $color-label-icon;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: $color-text-heading;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 40px 0;
+  }
+}
+
+/* --- Accordion Styling --- */
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  border-bottom: 1px solid $color-border;
+  padding: 24px 0;
+
+  .accordion-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    .question-number {
+      color: $color-text-question;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+    }
+
+    .question-text {
+      color: $color-text-question;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+    }
+
+    .accordion-icon {
+      color: $color-text-body;
+    }
+  }
+
+  .accordion-content {
+    // This is the magic for the smooth expand/collapse animation
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out,
+      margin-top 0.4s ease-in-out;
+
+    p {
+      color: $color-text-body;
+
+      padding-right: 40px; // To not run into the icon space
+      margin: 0;
+      font-family: Bricolage Grotesque;
+      font-weight: 300;
+      font-style: Light;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
+    }
+  }
+
+  // When the item is open, expand the content
+  &.open .accordion-content {
+    max-height: 300px; // A safe large value
+    opacity: 1;
+    margin-top: 16px;
+  }
+}
+
+/* --- Right Column: Sidebar --- */
+.salon-faq-sidebar {
+  
+        margin-bottom: 130px;
+    .image-stack {
+        
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: end;
+        gap: 24px;
+        
+        position: relative !important;
+        .img_f_1 {
+            width: 354px;
+            height: 500px;
+            border-radius: 16px;
+            
+            border-radius: 16px;
+            object-fit: cover;
+        }
+        .img_f_2{
+            position: absolute !important;
+            width: 214px;
+            height: 267px;
+            border-radius: 10px;
+            position: relative;
+            bottom: -20% !important;
+            right: 50%;
+            object-fit: cover;
+
+
+    }
+  }
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .salon-faq-container {
+    grid-template-columns: 1fr; // Stack columns
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .salon-faq-page {
+    padding: 60px 15px;
+  }
+
+  .salon-faq-content h1 {
+    font-size: 36px;
+  }
+
+  .accordion-header {
+    .question-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .salon-faq-content h1 {
+    font-size: 30px;
+  }
+
+  .accordion-item {
+    padding: 20px 0;
+  }
+
+  .accordion-content p {
+    padding-right: 10px;
+    font-size: 15px;
+  }
+}
