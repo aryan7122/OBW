@@ -30,14 +30,13 @@ const ServicesSlider = ({ services }) => {
         const el = containerRef.current;
         if (el) el.scrollBy({ left: 300, behavior: 'smooth' });
     };
-
+// console.log('😒😒😒😒😒',services.length)
     return (
         <div className="slider-wrapper">
            
-
-            <div className="services-slider" ref={containerRef}>
+            <div className={`services-slider card_is_${services.length}`} ref={containerRef}>
                 {services.map((service, index) => (
-                    <div className="service-card" key={index}>
+                    <div className={`service-card ` } key={index}>
                         <img src={service.image} alt={service.title} className="service-img" />
                         <div className="service-blur">
                             <h4 className="service-title">{service.title}</h4>

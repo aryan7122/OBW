@@ -25,7 +25,7 @@ const AboutUsSection = () => {
                         ABOUT US <span className="about-us-spark"><img src={str} /></span>
                     </h4>
                     <h2 className="about-us-headline">
-                        We Provide Special Care For Your<br />
+                        We Provide Special Care For Your
                         Appearance And Beauty
                     </h2>
                     <p className="about-us-description">

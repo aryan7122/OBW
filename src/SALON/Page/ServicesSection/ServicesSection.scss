@@ -2,12 +2,12 @@
 .services-section {
   background: #fff6ea;
   padding-right: 0;
-border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
 
   .section-header {
     text-align: left;
     margin-bottom: 2rem;
-  padding: 10px clamp(20px, 8vw, 120px);
+    padding: 10px clamp(20px, 8vw, 120px);
 
     .small-title {
       // font-size: clamp(0.8rem, 2vw, 1rem);
@@ -46,10 +46,9 @@ border-bottom: 1px solid #E8E8E8;
     width: fit-content;
     position: relative;
     border-radius: 100px;
-      margin: 10px clamp(20px, 8vw, 120px);
+    margin: 10px clamp(20px, 8vw, 120px);
 
     .tab-button {
-      
       padding: 0.6rem 1.4rem;
       border: none;
       border-radius: 999px;
@@ -72,11 +71,7 @@ border-bottom: 1px solid #E8E8E8;
         color: #fff;
         border: 2px solid;
 
-        background: linear-gradient(
-          360deg,
-          #ffffff 16.67%,
-          #458fff 100%
-        );
+        background: linear-gradient(360deg, #ffffff 16.67%, #458fff 100%);
 
         background-repeat: no-repeat;
         background-size: cover;
@@ -400,6 +395,108 @@ border-bottom: 1px solid #E8E8E8;
           }
         }
       }
+    }
+  }
+  .card_is_1 {
+    padding: 40px 120px;
+    @media only screen and (max-width: 1400px) {
+      padding: 40px 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      padding: 30px 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 30px 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding: 30px 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 40px 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: 30px 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 30px 10px;
+    }
+
+    .service-card {
+      width: 100%;
+      margin-left: -20px;
+    }
+  }
+  .card_is_2 {
+    padding: 40px 120px;
+
+    @media only screen and (max-width: 1400px) {
+      padding: 40px 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      padding: 30px 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 30px 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding: 30px 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 40px 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: 30px 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 30px 10px;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .service-card {
+      width: 100%;
+      margin-left: -20px;
+    }
+  }
+  .card_is_3 {
+    padding: 40px 120px;
+
+    @media only screen and (max-width: 1400px) {
+      padding: 40px 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      padding: 30px 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 30px 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding: 30px 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 40px 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 40px 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: 30px 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 30px 10px;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .service-card {
+      width: 100%;
+      margin-left: -20px;
     }
   }
   .btn_slider {

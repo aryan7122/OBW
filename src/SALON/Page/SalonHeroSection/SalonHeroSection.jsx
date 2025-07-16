@@ -22,7 +22,8 @@ const SalonHeroSection = () => {
            
             {/* <div className="overlay-blur"> */}
             <div className="hero-content overlay-blur">
-                    <div className="trust-card">
+                 <div>
+                       <div className="trust-card">
                         <div className="profiles">
                             <img src={profile1} alt="Client 1" />
                             <img src={profile2} alt="Client 2" />
@@ -32,14 +33,14 @@ const SalonHeroSection = () => {
                     </div>
 
                     <h1>
-                        Tailored Self-Care That Honors You,<br />
-                        <span>Every Single Moment </span>
+                        Tailored Self-Care That Honors You, Every Single Moment
                     </h1>
+                 </div>
 
-                    <p className="subline">
-                        At OBW salon, we combine luxury and personalized<br />
-                        skincare to enhance your beauty.
-                    </p>
+                    <div className="subline">
+                       <p> At OBW salon, we combine luxury and personalized
+                        skincare to enhance your beauty.</p>
+                    </div>
                 </div>
             {/* </div> */}
 

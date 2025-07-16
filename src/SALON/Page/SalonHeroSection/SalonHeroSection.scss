@@ -1,20 +1,19 @@
-
 .salon-hero {
   margin-top: -90px;
   width: 100%;
   position: relative;
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
   overflow: hidden;
   height: clamp(500px, 95vh, 810px);
   background: #00000026;
-  background-image: url('../../../assets/salon/hero/hero-image.png');
+  background-image: url("../../../assets/salon/hero/hero-image.png");
   background-position: 0% 65% !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-    // background-size: 110%; 
+  // background-size: 110%;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -23,7 +22,6 @@
     // background: linear-gradient(0deg, #20000026 0%, rgba(171, 1, 1, 0.223) 100%);
     z-index: 1;
   }
- 
 
   .hero-content {
     margin-top: 30%;
@@ -31,25 +29,70 @@
     z-index: 2;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    // align-items: flex-start;
-    padding-left: clamp(20px, 8vw, 120px);
-    padding-right: clamp(20px, 8vw, 120px);
+    // flex-direction: column;
+    justify-content: space-between;
+    
     color: white;
+    @media (max-width: 1500px) {
+      margin-top: 32%;
+    }
+    @media (max-width: 1400px) {
+      margin-top: 35%;
+    }
+    @media (max-width: 1350px) {
+      margin-top: 38%;
+    }
+     @media (max-width: 1300px){
+      margin-top: 40%;
+     }
+     @media (max-width: 1150px){
+      margin-top: 45%;
+     }
+     @media (max-width: 1000px){
+      margin-top: 50%;
+     }
+     padding: 0px 120px;
+  @media only screen and (max-width: 1400px) {
+    padding: 0px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 0px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 0px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 0px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 0px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 0px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0px 10px;
+  }
+
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       z-index: -1;
-      
       width: 100%;
       height: 100%;
       bottom: 0;
       left: 0;
       backdrop-filter: blur(4px);
-      background: linear-gradient(0deg, rgba(255, 255, 255, 0.041) -16.81%, rgba(255, 255, 255, 0) 75.03%);
-      
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.041) -16.81%,
+        rgba(255, 255, 255, 0) 75.03%
+      );
     }
-    
+
     .trust-card {
       display: flex;
       align-items: center;
@@ -61,7 +104,8 @@
       border-radius: 40px;
       max-width: fit-content;
       margin-bottom: 1.5rem;
-
+      @media (max-width: 1500px) {
+      }
       .profiles {
         display: flex;
 
@@ -71,21 +115,21 @@
           border-radius: 50%;
           border: 2px solid white;
           margin-left: -10px;
-          
+
           &:first-child {
             margin-left: 0;
           }
         }
       }
-      
+
       span {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 16px;
         font-weight: 500;
         color: white;
       }
     }
-    
+
     h1 {
       font-size: clamp(30px, 5vw, 50px);
       font-weight: 600;
@@ -93,10 +137,11 @@
       letter-spacing: -2px;
       text-transform: capitalize;
       margin-bottom: 0.8rem;
+      width: 910px;
       // border: 1px solid red;
-      &::after{
-        content: '';
-        background-image: url('../../../assets/SALON/hero/line.svg');
+      &::after {
+        content: "";
+        background-image: url("../../../assets/SALON/hero/line.svg");
         background-repeat: no-repeat;
         display: inline-block;
         // transform: rotate(-200deg);
@@ -105,20 +150,34 @@
         width: 35px;
         font-weight: 300;
         font-size: 22px;
-        color: #9DFF00;
+        // color: #9dff00;
       }
+        @media (max-width: 1400px){
+            width: 700px;
+        }
       span {
         // color: #00c2ff;
       }
     }
 
     .subline {
-      font-size: clamp(13px, 3vw, 14px);
-      line-height: 24px;
-      font-weight: 300 !important;
-      text-align: right;
-      margin-top: -100px;
-      // color: #2cff00;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // border: 1px solid red;
+      // height: 100%;
+      p{
+        font-size: clamp(13px, 3vw, 14px);
+        line-height: 24px;
+        font-weight: 300 !important;
+        text-align: right;
+        margin-top: 80px;
+        // color: #2cff00;
+        width: 360px;
+        @media (max-width: 1300px){
+          width: 310px;
+        }
+      }
     }
   }
 
@@ -127,7 +186,7 @@
     bottom: 0;
     width: 100%;
     height: 88px;
-    background-color: #5B2F2F;
+    background-color: #5b2f2f;
     overflow: hidden;
     display: flex;
     z-index: 3;
@@ -147,7 +206,7 @@
         gap: 0.5rem;
 
         span {
-          img{
+          img {
             animation: rotate306 10s linear infinite;
           }
         }
