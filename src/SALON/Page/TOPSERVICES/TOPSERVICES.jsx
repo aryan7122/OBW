@@ -42,13 +42,13 @@ const TopServices = () => {
                     centeredSlides={true}
                     slidesPerView="auto"
                     loop={true}
-                    spaceBetween={30}
-                    loopedSlides={8}
+                    spaceBetween={20}
+                    // loopedSlides={9}
                     coverflowEffect={{
                         rotate: 80,
-                        depth: -320,
+                        depth: -450,
                         modifier: 0.1,
-                        scale: 1.2,
+                        scale: 1,
                     }}
                     pagination={{ el: ".swiper-pagination", clickable: true }}
                     modules={[EffectCoverflow, Pagination]}

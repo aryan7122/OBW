@@ -100,11 +100,30 @@
       height: 410px;
       // max-width: 640px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 0, 0, 0);
       .location-card-content {
         display: flex;
         align-items: start;
         justify-content: space-between;
         gap: 15px;
+        .right_tex {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          height: 380px;
+          .dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: 10px;
+            left: 50%;
+            transform: rotate(180deg);
+          }
+        }
         h3 {
           writing-mode: vertical-lr;
           text-orientation: mixed;
@@ -117,6 +136,7 @@
           line-height: 31.2px;
           letter-spacing: -0.8px;
           // width: 100px;
+          transform: rotate(180deg);
         }
         .location-image {
           width: 100%;
@@ -211,13 +231,15 @@
         transition: all 0.3s ease-in-out;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
         font-family: Bricolage Grotesque;
-
-        font-weight: 400;
-        font-style: Regular;
-        font-size: 24px;
-        leading-trim: NONE;
-        line-height: 31.2px;
-        letter-spacing: -0.8px;
+        h3 {
+          transform: rotate(180deg);
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 24px;
+          leading-trim: NONE;
+          line-height: 31.2px;
+          letter-spacing: -0.8px;
+        }
 
         .dot {
           width: 30px;

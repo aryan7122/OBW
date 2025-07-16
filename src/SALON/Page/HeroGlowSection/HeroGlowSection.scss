@@ -1,6 +1,6 @@
 .hero-glow-section {
   width: 100%;
-background: linear-gradient(180deg, #FFF3E4 47.06%, #FFDEB2 120.4%);
+  background: linear-gradient(180deg, #fff3e4 47.06%, #ffdeb2 120.4%);
   position: relative;
   text-align: center;
   //   overflow: hidden;
@@ -9,7 +9,7 @@ background: linear-gradient(180deg, #FFF3E4 47.06%, #FFDEB2 120.4%);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-padding: 40px 120px;
+  padding: 40px 120px;
 
   @media only screen and (max-width: 1400px) {
     padding: 40px 100px;
@@ -54,27 +54,26 @@ padding: 40px 120px;
       top: 20%;
       left: 10%;
     }
-  
-   
+
     &.image-bottom-right {
       width: 182px;
       height: 249px;
-       right:13%;
+      right: 13%;
       bottom: 8%;
     }
-  
+
     &.image-top-right {
       width: 169px;
       height: 211px;
       right: 8%;
       top: 10%;
     }
-   
+
     &.image-bottom-left {
       width: 172px;
       height: 193px;
-      bottom: 6%;
-      left: 24%;
+      bottom: 10%;
+      left: 18%;
     }
   }
 
@@ -152,9 +151,9 @@ padding: 40px 120px;
     justify-content: center;
     // justify-content: space-between;
     gap: 40px;
-  
+
     width: 100%;
-  
+
     .btn-primary {
       bottom: 20px;
       padding: 5px 5px 5px 20px;
@@ -182,19 +181,19 @@ padding: 40px 120px;
         padding: 5px;
         transition: 0.3s linear;
       }
-  
+
       &:hover {
         background: #fff !important;
         color: #472525;
         border: 1px solid #0056b3;
-  
+
         .arrow-icon {
           background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
           color: #fff;
         }
       }
     }
-  
+
     .btn-link {
       color: #3f1f1d;
       background: transparent;
@@ -205,7 +204,8 @@ padding: 40px 120px;
       align-items: center;
       gap: 0.4rem;
       transition: text-decoration 0.2s;
-        margin-top: -40px;
+      margin-top: -40px;
+      cursor: pointer;
       &:hover {
         text-decoration: underline;
       }

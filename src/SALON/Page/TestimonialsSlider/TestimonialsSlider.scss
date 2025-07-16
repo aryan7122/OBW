@@ -77,7 +77,7 @@
       );
       width: 100%;
       height: 30 0px;
-      padding: 70px 50px 0px 40px;
+      padding: 70px 30px 20px 30px;
       background-color: #f5f5f5;
 
       border-radius: 20px;
@@ -85,12 +85,15 @@
       text-align: center;
       transition: all 0.3s ease;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
       .review {
         font-size: 0.95rem;
         line-height: 1.5;
         color: #333;
         margin-bottom: 20px;
         height: 100px;
+        width: 85%;
+        margin: 0 auto;
     }
     
     .meta {
@@ -216,10 +219,40 @@
        
       }
 
-      .swiper-pagination-bullet-active {
-        background: #3032B6;
-        border: 1px solid #3032B6;
-      }
+     /* Sabhi bullets ke liye base style */
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc; /* Inactive bullet ka rang */
+  border-radius: 50%;     /* Bullet ko gol banane ke liye */
+  opacity: 1;             /* Swiper ke default styles ko override karne ke liye */
+  border: 2px solid transparent; /* Size maintain karne ke liye transparent border */
+  box-sizing: border-box;        /* Border aur padding ko width/height me include karne ke liye */
+}
+
+/* Active bullet ke liye style */
+.swiper-pagination-bullet-active {
+  background-color: #fff;         /* Active bullet ka background safed */
+  border: 2px solid #3032B6;      /* Active bullet par border */
+  position: relative;             /* Inner dot ko position dene ke liye */
+  width: 16px;
+  height: 16px;
+  /* Active bullet ke andar wala dot (pseudo-element) */
+  &::before {
+    content: '';                  /* 'contain' ki jagah 'content' hoga (ZAROORI) */
+    position: absolute;
+    
+    /* Dot ko bilkul center me lane ke liye */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 10px;
+    height: 10px;
+    background-color: #3032B6; 
+    border-radius: 50%;      
+  }
+}
     }
   }
 }

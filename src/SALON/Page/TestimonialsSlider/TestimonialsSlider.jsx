@@ -24,7 +24,7 @@ const testimonials = [
         rating: 5.0,
         text: "I recently visited OBW Salon and was blown away by the atmosphere and the staff's professionalism. They really took the time to understand what I wanted and the results were fantastic!",
         image:
-            "https://lh3.googleusercontent.com/proxy/3QxvOoGFYnR17Oc_K1jOncMLiNQldN0egZWT-PM4yHqekZqRZaSegFY8aSFVwnfpBgfpRQg8GmXAOMQoIIS6q-bW4xtE8dfBGKYQGDIXkJO28ygUeBrAHw",
+            "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
         bgColor: "#FFF8CC",
     },
     {

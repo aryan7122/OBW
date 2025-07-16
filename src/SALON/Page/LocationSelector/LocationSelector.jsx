@@ -12,7 +12,7 @@ const locations = [
             "203, 100 Feet Rd, near Polar Bear Ice Cream, Banashankari 6th Stage 3rd Block, Chikkegowdanapalya, Bengaluru, Karnataka",
         image:
             LocationImg1,
-        color: "#c7bfff", 
+        color: "#c7bfff",
     },
     {
         id: 2,
@@ -78,7 +78,9 @@ const LocationSelector = () => {
             <div className="location-content">
                 {locations.map((loc, i) => (
                     <>
-                        <div className={`location-card ${active.id === loc.id ? "active" : ""}`} key={i} style={{ backgroundColor: active.id === loc.id ? loc.color : "#fff" }}>
+                        <div className={`location-card ${active.id === loc.id ? "active" : ""}`} key={i}
+                        //  style={{ backgroundColor: active.id === loc.id ? loc.color : "#fff" }}
+                        >
                             {/* {loc.id} */}
                             <div className="location-card-content">
                                 <div className="location-image">
@@ -92,7 +94,17 @@ const LocationSelector = () => {
                                         </a>
                                     </div>
                                 </div>
-                                <h3>{loc.name}</h3>
+                                <div className="right_tex">
+                                    <h3>
+                                        {loc.name}
+                                    </h3>
+                                    {active.id !== loc.i && (
+                                        <div className="dot" style={{ backgroundColor: loc.color }} >
+                                            <ArrowLeft size={16} className="active-arrow" />
+                                        </div>
+
+                                    )}
+                                </div>
                             </div>
                         </div>
                         <div className={`location-tabs ${active.id === loc.id ? "active_tab" : ""}`} >
@@ -102,7 +114,7 @@ const LocationSelector = () => {
                                 style={{ backgroundColor: active.id === loc.id ? loc.color : "#fff" }}
                                 onClick={() => setActive(loc)}
                             >
-                                <span>{loc.name}</span>
+                                <h3>{loc.name}</h3>
                                 {active.id !== loc.id && (
                                     <div className="dot" style={{ backgroundColor: loc.color }} >
                                         <ArrowLeft size={16} className="active-arrow" />

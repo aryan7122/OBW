@@ -1,12 +1,13 @@
 // File: ServicesSection.scss
 .services-section {
-  padding: 50px clamp(20px, 8vw, 120px);
   background: #fff6ea;
   padding-right: 0;
+border-bottom: 1px solid #E8E8E8;
 
   .section-header {
     text-align: left;
     margin-bottom: 2rem;
+  padding: 10px clamp(20px, 8vw, 120px);
 
     .small-title {
       // font-size: clamp(0.8rem, 2vw, 1rem);
@@ -45,7 +46,10 @@
     width: fit-content;
     position: relative;
     border-radius: 100px;
+      margin: 10px clamp(20px, 8vw, 120px);
+
     .tab-button {
+      
       padding: 0.6rem 1.4rem;
       border: none;
       border-radius: 999px;
@@ -55,13 +59,43 @@
       transition: all 0.3s ease;
       border: 2px solid transparent;
       background: transparent;
+      font-weight: 500;
       &:hover {
         color: #371d1d;
       }
       &.active {
         background: #371d1d;
         color: #fff;
-        font-weight: 600;
+        // font-weight: 600;
+      }
+      &.active {
+        color: #fff;
+        border: 2px solid;
+
+        background: linear-gradient(
+          360deg,
+          #ffffff 16.67%,
+          #458fff 100%
+        );
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        border-radius: 99px;
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          right: 2px;
+          bottom: 2px;
+          background: #371d1d;
+          border-radius: 999px;
+          z-index: -1;
+        }
       }
     }
 
@@ -173,7 +207,7 @@
   position: relative;
   width: 100%;
   margin-top: 3rem;
-
+  padding-left: 20px;
   .services-slider {
     display: flex;
     overflow-x: auto;
@@ -306,7 +340,7 @@
         overflow: hidden;
         transform: translateY(-4px);
         transition: transform 0.3s ease-in-out;
-        .service-blur{
+        .service-blur {
           // border: 1px solid red !important;
           height: 100%;
           &::before {
@@ -320,32 +354,36 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            -webkit-mask-image:none;
+            -webkit-mask-image: none;
             backdrop-filter: blur(20px);
             z-index: 1;
           }
-          .service-title{
+          .service-title {
             display: none;
           }
-          .divider{
+          .divider {
             display: none;
           }
-          .bottom-info{
+          .bottom-info {
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            .price{
+            .price {
               display: none;
             }
             animation-delay: 0.06s;
             animation: scaleSlideFade 0.4s ease-in-out both;
-            .book-btn{
+            .book-btn {
               animation: rotate624 0.4s ease-in-out both;
               // position: absolute;
               padding: 1.1rem 2.5rem;
-              background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%);
+              background: linear-gradient(
+                90.15deg,
+                #2463eb 0.13%,
+                #1c4eb8 103.2%
+              );
               color: #fff;
               border: none;
               border-radius: 999px;
@@ -363,7 +401,6 @@
         }
       }
     }
-    
   }
   .btn_slider {
     display: flex;

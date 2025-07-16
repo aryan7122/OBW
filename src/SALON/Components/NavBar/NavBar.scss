@@ -93,8 +93,6 @@
       .NavBar-logo {
         img {
           // filter: sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0);
-          // border: 1px solid red !important;
-          
         }
       }
       .NavBar-links {
@@ -165,8 +163,8 @@
       color: white;
       // font-size: 1.2rem;
       img {
-        max-width: 60px;
-        max-height: 60px;
+        max-width: 85px;
+        max-height: 85px;
         margin-top: 4px;
         // filter: brightness(0) invert(1);
       }
@@ -183,14 +181,16 @@
         color: #fff;
         opacity: 0.8;
         // font-family: 'Supreme-Medium';
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         line-height: 19.2px;
         text-align: left;
+        letter-spacing: 0;
         text-decoration-line: underline;
         text-decoration-style: solid;
         text-decoration: none;
         color: white;
+        text-transform: uppercase;
         border-bottom: 1px solid transparent;
         transition: 0.3s linear;
         &:hover {
@@ -238,7 +238,7 @@
         background: #fff;
         color: #2463EB;
         .arrow-icon {
-          background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%);
+          background: #00575d;
           color: #fff;
         }
       }
@@ -246,13 +246,13 @@
         scale: 0.9;
       }
       .arrow-icon {
-        color: #fff;
+        color: #00575d;
         width: 26.67px;
         height: 26.67px;
         padding: 5px;
         border-radius: 100px;
         margin-left: 8px;
-        background: #00575d;
+        background: #fff;
       }
     }
 
