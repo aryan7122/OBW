@@ -7,8 +7,31 @@
   .section-header {
     text-align: left;
     margin-bottom: 2rem;
-    padding: 10px clamp(20px, 8vw, 120px);
-
+         padding-left:120px;
+      @media only screen and (max-width: 1400px) {
+        padding-left: 100px;
+      }
+      @media only screen and (max-width: 1300px) {
+        padding-left: 80px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding-left:  70px;
+      }
+      @media only screen and (max-width: 1100px) {
+        padding-left:  60px;
+      }
+      @media only screen and (max-width: 1000px) {
+        padding-left:  40px;
+      }
+      @media only screen and (max-width: 600px) {
+        padding-left:  30px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding-left:  20px;
+      }
+      @media only screen and (max-width: 400px) {
+        padding-left:  10px;
+      }
     .small-title {
       // font-size: clamp(0.8rem, 2vw, 1rem);
       color: #3032b6;
@@ -46,7 +69,32 @@
     width: fit-content;
     position: relative;
     border-radius: 100px;
-    margin: 10px clamp(20px, 8vw, 120px);
+    // margin: 10px clamp(20px, 8vw, 120px);
+         margin-left:120px;
+      @media only screen and (max-width: 1400px) {
+        margin-left: 100px;
+      }
+      @media only screen and (max-width: 1300px) {
+        margin-left: 80px;
+      }
+      @media only screen and (max-width: 1200px) {
+        margin-left:  70px;
+      }
+      @media only screen and (max-width: 1100px) {
+        margin-left:  60px;
+      }
+      @media only screen and (max-width: 1000px) {
+        margin-left:  40px;
+      }
+      @media only screen and (max-width: 600px) {
+        margin-left:  30px;
+      }
+      @media only screen and (max-width: 500px) {
+        margin-left:  20px;
+      }
+      @media only screen and (max-width: 400px) {
+        margin-left:  10px;
+      }
 
     .tab-button {
       padding: 0.6rem 1.4rem;

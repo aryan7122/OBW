@@ -52,35 +52,44 @@ export default function TestimonialsSlider() {
         <section className="testimonials-section">
             <div className="header">
                 <div className="badge">
-                <h3> <img src={str3} />
-                TESTIMONIALS
-                 <img src={str3} /></h3>
+                    <h3> <img src={str3} />
+                        TESTIMONIALS
+                        <img src={str3} /></h3>
                 </div>
                 <h2>Our Success Stories</h2>
             </div>
             <Swiper
-                // spaceBetween={20}
-                // slidesPerView={2.55}
+                modules={[Navigation, Pagination]}
                 pagination={{ clickable: true }}
                 navigation={{ prevEl: ".prev-arrow", nextEl: ".next-arrow" }}
-                modules={[Navigation, Pagination]}
-                // breakpoints={{
-                //   768: { slidesPerView: 1 },
-                //   1024: { slidesPerView: 3 },
-                // }}
-                spaceBetween={10}
-                slidesPerView={{
-                      600: { slidesPerView: 1 },
-                    800: { slidesPerView: 2 },
-                    1024: { slidesPerView: 2.5 },
-                    1400: { slidesPerView: 2.8 },
-                }}
+                spaceBetween={40}
+
+                // Mobile se desktop tak ke liye responsive settings
                 breakpoints={{
-                    600: { slidesPerView: 1 },
-                    800: { slidesPerView: 2 },
-                    1024: { slidesPerView: 2.5 },
-                    1400: { slidesPerView: 2.8 },
+                    // Mobile (300px se upar)
+                    60: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    // Tablet (800px se upar)
+                    660: {
+                        slidesPerView: 1.1,
+                    },
+                    777: {
+                        slidesPerView: 1.3,
+                    },
+                    // Chhota Desktop (1024px se upar)
+                    1024: {
+                        slidesPerView: 1.9,
+                    },
+                    1200: {
+                        slidesPerView: 2.2,
+                    },
+                    1400: {
+                        slidesPerView: 2.5,
+                    },
                 }}
+                // slidesPerView='auto'
                 className="testimonial-swiper"
             >
                 {testimonials.map((item, idx) => (
@@ -95,6 +104,11 @@ export default function TestimonialsSlider() {
                             className="testimonial-card"
                             style={{ backgroundColor: item.bgColor }}
                         >
+                            <svg width="0" height="0" >
+                                <clipPath id="myCardShape" clipPathUnits="objectBoundingBox">
+                                    <path d="M 0.035 0 H 0.357 C 0.392 0, 0.410 0, 0.428 0.067 C 0.446 0.121, 0.476 0.165, 0.514 0.168 C 0.551 0.168, 0.582 0.118, 0.600 0.067 C 0.617 0, 0.635 0, 0.671 0 H 0.964 C 0.982 0, 1 0.033, 1 0.067 V 0.932 C 1 0.966, 0.982 1, 0.964 1 H 0.035 C 0.017 1, 0 0.966, 0 0.932 V 0.067 C 0 0.033, 0.017 0, 0.035 0 Z"></path>
+                                </clipPath>
+                            </svg>
                             <div className="testimonial-content">
                                 <p className="review">{item.text}</p>
                                 <div className="meta">

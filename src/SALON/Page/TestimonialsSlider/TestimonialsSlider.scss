@@ -17,16 +17,16 @@
       gap: 5px;
       align-items: center;
       text-align: center;
-      margin: 0 auto ;
-      h3{
+      margin: 0 auto;
+      h3 {
         display: flex;
         gap: 5px;
-        color: #3032B6;
+        color: #3032b6;
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
         font-size: 14px;
-        img{
+        img {
           width: 16px;
         }
       }
@@ -44,11 +44,17 @@
     padding-bottom: 40px;
     width: 100%;
     overflow: visible;
+    .swiper-slide {
+      // Parent
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
     .avatar-wrapper {
       padding: 10px;
       position: absolute;
-      top: -13%;
-      left: 250px;
+      top: -15%;
+      left: 50%;
       //   transform: translateX(-50%);
       width: 80px;
       height: 80px;
@@ -57,6 +63,7 @@
       overflow: hidden;
       //   background: #fff;
       z-index: 9;
+      transform: translateX(-42%);
 
       .avatar {
         width: 100%;
@@ -66,18 +73,45 @@
       }
     }
     .swiper-slide {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      overflow: visible;
+      // position: relative;
+      // display: flex;
+      // justify-content: center;
+      // overflow: visible;
+    }
+    .swiper-slide {
+      
+      min-width: 560px;
+      @media (max-width: 600px) {
+        min-width: 100% !important;
+        width: 100% !important;
+      }
+
+      
     }
 
     .testimonial-card {
-      clip-path: path(
-        "M 20 0 H 200 C 220 0 230 0 240 20 C 250 36 267 49 288 50 C 309 50 326 35 336 20 C 346 0 356 0 376 0 H 540 C 550 0 560 10 560 20 V 276 C 560 286 550 296 540 296 H 20 C 10 296 0 286 0 276 V 20 C 0 10 10 0 20 0 Z"
-      );
+      // clip-path: polygon(
+      //   0% 10%,
+      //   35% 10%,
+      //   50% 0%,
+      //   65% 10%,
+      //   100% 10%,
+      //   100% 100%,
+      //   0% 100%
+      // );
+      // clip-path: path(
+      //   "M 20 0 H 200 C 220 0 230 0 240 20 C 250 36 267 49 288 50 C 309 50 326 35 336 20 C 346 0 356 0 376 0 H 540 C 550 0 560 10 560 20 V 276 C 560 286 550 296 540 296 H 20 C 10 296 0 286 0 276 V 20 C 0 10 10 0 20 0 Z"
+      // );
+      clip-path: url(#myCardShape);
+      #myCardShape{
+       
+      }
+      // width: 560px;
       width: 100%;
-      height: 30 0px;
+      min-height: 280px;
+      height: auto;
+      // max-width: 100%;
+      // height: 30 0px;
       padding: 70px 30px 20px 30px;
       background-color: #f5f5f5;
 
@@ -91,20 +125,24 @@
         font-size: 0.95rem;
         line-height: 1.5;
         color: #333;
-        margin-bottom: 20px;
-        height: 100px;
+        padding-bottom: 20px;
+        // height: 100px;
         width: 85%;
         margin: 0 auto;
-    }
-    
-    .meta {
+      }
+
+      .meta {
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 60px);
         display: flex;
         justify-content: space-between;
         align-items: start;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 15px;
-        height: 70px;
-        
+
+        height: 74px;
+
         h4 {
           font-size: 18px;
           font-weight: 600;
@@ -135,36 +173,35 @@
     }
 
     .arrows {
-      
       display: flex;
       gap: 15px;
       align-items: center;
       justify-content: end;
       padding-right: 120px;
       margin-top: -30px;
-         @media only screen and (max-width: 1400px) {
+      @media only screen and (max-width: 1400px) {
         padding-right: 100px;
       }
       @media only screen and (max-width: 1300px) {
         padding-right: 80px;
       }
       @media only screen and (max-width: 1200px) {
-        padding-right:  70px;
+        padding-right: 70px;
       }
       @media only screen and (max-width: 1100px) {
-        padding-right:  60px;
+        padding-right: 60px;
       }
       @media only screen and (max-width: 1000px) {
-        padding-right:  40px;
+        padding-right: 40px;
       }
       @media only screen and (max-width: 600px) {
-        padding-right:  30px;
+        padding-right: 30px;
       }
       @media only screen and (max-width: 500px) {
-        padding-right:  20px;
+        padding-right: 20px;
       }
       @media only screen and (max-width: 400px) {
-        padding-right:  10px;
+        padding-right: 10px;
       }
       button {
         background: #fff;
@@ -188,72 +225,71 @@
     .swiper-pagination {
       position: relative;
       margin-top: 50px;
-        width: fit-content;
-        padding-left: 120px;
-         @media only screen and (max-width: 1400px) {
+      width: fit-content;
+      padding-left: 120px;
+      @media only screen and (max-width: 1400px) {
         padding-left: 100px;
       }
       @media only screen and (max-width: 1300px) {
         padding-left: 80px;
       }
       @media only screen and (max-width: 1200px) {
-        padding-left:  70px;
+        padding-left: 70px;
       }
       @media only screen and (max-width: 1100px) {
-        padding-left:  60px;
+        padding-left: 60px;
       }
       @media only screen and (max-width: 1000px) {
-        padding-left:  40px;
+        padding-left: 40px;
       }
       @media only screen and (max-width: 600px) {
-        padding-left:  30px;
+        padding-left: 30px;
       }
       @media only screen and (max-width: 500px) {
-        padding-left:  20px;
+        padding-left: 20px;
       }
       @media only screen and (max-width: 400px) {
-        padding-left:  10px;
+        padding-left: 10px;
       }
       .swiper-pagination-bullet {
         background: #ccc;
         opacity: 1;
-       
       }
 
-     /* Sabhi bullets ke liye base style */
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #ccc; /* Inactive bullet ka rang */
-  border-radius: 50%;     /* Bullet ko gol banane ke liye */
-  opacity: 1;             /* Swiper ke default styles ko override karne ke liye */
-  border: 2px solid transparent; /* Size maintain karne ke liye transparent border */
-  box-sizing: border-box;        /* Border aur padding ko width/height me include karne ke liye */
-}
+      /* Sabhi bullets ke liye base style */
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #ccc; /* Inactive bullet ka rang */
+        border-radius: 50%; /* Bullet ko gol banane ke liye */
+        opacity: 1; /* Swiper ke default styles ko override karne ke liye */
+        border: 2px solid transparent; /* Size maintain karne ke liye transparent border */
+        box-sizing: border-box; /* Border aur padding ko width/height me include karne ke liye */
+      }
 
-/* Active bullet ke liye style */
-.swiper-pagination-bullet-active {
-  background-color: #fff;         /* Active bullet ka background safed */
-  border: 2px solid #3032B6;      /* Active bullet par border */
-  position: relative;             /* Inner dot ko position dene ke liye */
-  width: 16px;
-  height: 16px;
-  /* Active bullet ke andar wala dot (pseudo-element) */
-  &::before {
-    content: '';                  /* 'contain' ki jagah 'content' hoga (ZAROORI) */
-    position: absolute;
-    
-    /* Dot ko bilkul center me lane ke liye */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+      /* Active bullet ke liye style */
+      .swiper-pagination-bullet-active {
+        background-color: #fff; /* Active bullet ka background safed */
+        border: 2px solid #3032b6; /* Active bullet par border */
+        position: relative; /* Inner dot ko position dene ke liye */
+        width: 16px;
+        height: 16px;
+        /* Active bullet ke andar wala dot (pseudo-element) */
+        &::before {
+          content: ""; /* 'contain' ki jagah 'content' hoga (ZAROORI) */
+          position: absolute;
 
-    width: 10px;
-    height: 10px;
-    background-color: #3032B6; 
-    border-radius: 50%;      
-  }
-}
+          /* Dot ko bilkul center me lane ke liye */
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          width: 10px;
+          height: 10px;
+          background-color: #3032b6;
+          border-radius: 50%;
+        }
+      }
     }
   }
 }

@@ -58,7 +58,7 @@ const LocationSelector = () => {
 
     return (
         <section className="location-section">
-            <div className="location-header">
+            <div className="locations-header">
                 <div>
                     <h2>Find a Location Near You</h2>
                     <p>

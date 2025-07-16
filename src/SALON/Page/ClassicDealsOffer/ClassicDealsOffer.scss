@@ -9,9 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 1.5rem;
      padding-left:120px;
+     margin-bottom: -30px;
+     @media only screen and (max-width: 720px){
+       flex-direction: column;
+       align-items: start;
+       gap: 0;
+     }
       @media only screen and (max-width: 1400px) {
         padding-left: 100px;
       }
@@ -149,14 +155,26 @@
     background: transparent;
     border-radius: 12px;
     overflow: hidden;
-    padding: 1.5rem;
-    min-height: 212px;
+    padding: 1rem;
+    min-height: 222px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     color: white;
+    width: 520px !important; /* Badi screens par aapki original width */
+  //    width: 85% !important; /* Mobile par default width */
 
+  // @media (min-width: 500px) {
+  //   width: 380px !important; /* Tablet par fixed width */
+  // }
+
+  // @media (min-width: 1024px) {
+  //   width: 450px !important; /* Desktop par fixed width */
+  // }
+
+  @media (min-width: 1400px) {
+  }
     .text-content {
       z-index: 2;
 
@@ -192,9 +210,10 @@
     color: white;
     min-height: 212px;
     position: relative;
-    width: 520px;
-
-    margin-top: -20px;
+    // width: 520px !important;
+      width: 100%;
+    
+    // 
     h3 {
       font-size: clamp(1.5rem, 4vw, 2.5rem); // 40px
       font-weight: 500;

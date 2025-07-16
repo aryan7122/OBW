@@ -80,6 +80,15 @@ const WhyChooseUs = () => {
       </div>
     </div>
       </div>
+      <div className="card_boax">
+         {cards.map((card, idx) => (
+          <div className={`info-card-2 card-${idx + 1}`} key={idx}>
+            <div className="icon">{card.icon}</div>
+            <h3>{card.title}</h3>
+            <p>{card.desc}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

@@ -51,7 +51,8 @@ const TopServices = () => {
                         scale: 1,
                     }}
                     pagination={{ el: ".swiper-pagination", clickable: true }}
-                    modules={[EffectCoverflow, Pagination]}
+                    // modules={[EffectCoverflow, Pagination]}
+                     modules={[EffectCoverflow]} 
                     className="swiper-container"
                 >
                     {services.map((service, index) => (

@@ -1,6 +1,6 @@
 // File: AboutUsSection.scss
 .about-us-section {
- padding: 40px 120px;
+  padding: 40px 120px;
   @media only screen and (max-width: 1400px) {
     padding: 40px 100px;
   }
@@ -26,7 +26,7 @@
     padding: 30px 10px;
   }
 
-  background: #FFF6EA;
+  background: #fff6ea;
   display: flex;
   justify-content: center;
 
@@ -37,6 +37,9 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+    }
   }
 
   .about-us-left {
@@ -59,10 +62,10 @@
         object-fit: cover;
       }
     }
-    .str3{
-        position: absolute;
-        right: 14%;
-        top: 10%;
+    .str3 {
+      position: absolute;
+      right: 14%;
+      top: 10%;
     }
     .about-us-product-img {
       width: 170px;
@@ -76,25 +79,26 @@
         object-fit: cover;
       }
     }
-
   }
 
   .about-us-right {
     flex: 1;
     max-width: 600px;
-
+    @media only screen and (max-width: 1000px) {
+      max-width: 100%;
+    }
     .about-us-subhead {
       font-size: 14px;
       font-weight: 600;
       letter-spacing: 10%;
       margin-bottom: 10px;
-      color: #3032B6 ;
+      color: #3032b6;
       display: flex;
       gap: 7px;
       .about-us-spark {
-       img{
-        width: 16px;
-       }
+        img {
+          width: 16px;
+        }
       }
     }
 
@@ -114,10 +118,13 @@
       color: #555;
       margin-bottom: 70px;
       max-width: 500px;
-
+      @media only screen and (max-width: 1000px) {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
     }
 
-    .about-us-cta-btn{
+    .about-us-cta-btn {
       padding: 1.1rem 2.5rem;
       background-color: #5e2a2a;
       color: #fff;

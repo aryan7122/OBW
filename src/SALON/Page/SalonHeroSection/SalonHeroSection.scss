@@ -1,13 +1,13 @@
 .salon-hero {
   margin-top: -90px;
   width: 100%;
+  height: 800px;
   position: relative;
   font-family: "Bricolage Grotesque", sans-serif;
   overflow: hidden;
-  height: clamp(500px, 95vh, 810px);
   background: #00000026;
   background-image: url("../../../assets/salon/hero/hero-image.png");
-  background-position: 0% 65% !important;
+  background-position: 0% 65% ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -24,66 +24,74 @@
   }
 
   .hero-content {
-    margin-top: 30%;
-    position: relative;
+    // margin-top: 30%;
+    position: absolute;
+    bottom: 150px;
+    width: 100%;
     z-index: 2;
-    height: 100%;
+    // height: 100%;
     display: flex;
     // flex-direction: column;
     justify-content: space-between;
-    
+    @media (max-width: 1131px) {
+      flex-direction: column;
+    }
+
     color: white;
-    @media (max-width: 1500px) {
-      margin-top: 32%;
+    // @media (max-width: 1500px) {
+    //   margin-top: 32%;
+    // }
+    // @media (max-width: 1400px) {
+    //   margin-top: 35%;
+    // }
+    // @media (max-width: 1350px) {
+    //   margin-top: 38%;
+    // }
+    // @media (max-width: 1300px) {
+    //   margin-top: 40%;
+    // }
+    // @media (max-width: 1150px) {
+    //   margin-top: 45%;
+    // }
+    // @media (max-width: 1000px) {
+    // }
+    // @media (max-width: 1131px){
+    //     margin-top: 40%;
+
+    //   }
+    padding: 0px 120px;
+    @media only screen and (max-width: 1400px) {
+      padding: 0px 100px;
     }
-    @media (max-width: 1400px) {
-      margin-top: 35%;
+    @media only screen and (max-width: 1300px) {
+      padding: 0px 80px;
     }
-    @media (max-width: 1350px) {
-      margin-top: 38%;
+    @media only screen and (max-width: 1200px) {
+      padding: 0px 70px;
     }
-     @media (max-width: 1300px){
-      margin-top: 40%;
-     }
-     @media (max-width: 1150px){
-      margin-top: 45%;
-     }
-     @media (max-width: 1000px){
-      margin-top: 50%;
-     }
-     padding: 0px 120px;
-  @media only screen and (max-width: 1400px) {
-    padding: 0px 100px;
-  }
-  @media only screen and (max-width: 1300px) {
-    padding: 0px 80px;
-  }
-  @media only screen and (max-width: 1200px) {
-    padding: 0px 70px;
-  }
-  @media only screen and (max-width: 1100px) {
-    padding: 0px 60px;
-  }
-  @media only screen and (max-width: 1000px) {
-    padding: 0px 40px;
-  }
-  @media only screen and (max-width: 600px) {
-    padding: 0px 30px;
-  }
-  @media only screen and (max-width: 500px) {
-    padding: 0px 20px;
-  }
-  @media only screen and (max-width: 400px) {
-    padding: 0px 10px;
-  }
+    @media only screen and (max-width: 1100px) {
+      padding: 0px 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding: 0px 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding: 0px 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      padding: 0px 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 0px 10px;
+    }
 
     &::before {
       content: "";
       position: absolute;
       z-index: -1;
       width: 100%;
-      height: 100%;
-      bottom: 0;
+      height: 350px;
+      // bottom: 0;
       left: 0;
       backdrop-filter: blur(4px);
       background: linear-gradient(
@@ -104,8 +112,7 @@
       border-radius: 40px;
       max-width: fit-content;
       margin-bottom: 1.5rem;
-      @media (max-width: 1500px) {
-      }
+      
       .profiles {
         display: flex;
 
@@ -138,7 +145,7 @@
       text-transform: capitalize;
       margin-bottom: 0.8rem;
       width: 910px;
-      // border: 1px solid red;
+      
       &::after {
         content: "";
         background-image: url("../../../assets/SALON/hero/line.svg");
@@ -152,9 +159,16 @@
         font-size: 22px;
         // color: #9dff00;
       }
-        @media (max-width: 1400px){
-            width: 700px;
-        }
+      @media (max-width: 1400px) {
+        width: 700px;
+      }
+      @media (max-width: 801px){
+        width: 100%;
+        letter-spacing: -1px;
+      }
+      @media (max-width: 501px){
+        letter-spacing: -0.5px;
+      }
       span {
         // color: #00c2ff;
       }
@@ -163,10 +177,8 @@
     .subline {
       // display: flex;
       // align-items: center;
-      // justify-content: center;
-      // border: 1px solid red;
-      // height: 100%;
-      p{
+      // justify-content: center;     
+      p {
         font-size: clamp(13px, 3vw, 14px);
         line-height: 24px;
         font-weight: 300 !important;
@@ -174,8 +186,14 @@
         margin-top: 80px;
         // color: #2cff00;
         width: 360px;
-        @media (max-width: 1300px){
+        @media (max-width: 1300px) {
           width: 310px;
+        }
+        @media (max-width: 1131px){
+          width: 100%;
+          // margin-top: -63%;
+          margin-top: 0;
+          text-align: left;
         }
       }
     }

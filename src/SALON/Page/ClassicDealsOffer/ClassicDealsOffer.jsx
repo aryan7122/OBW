@@ -79,13 +79,16 @@ const ClassicDealsOffer = () => {
             prevEl: '.swiper-prev',
           }}
           spaceBetween={0}
+                    slidesPerView={'auto'} 
+
           // slidesPerView={2.8}
-          breakpoints={{
-            600: { slidesPerView: 1.5 },
-            800: { slidesPerView: 2 },
-            1024: { slidesPerView: 2.5 },
-            1400: { slidesPerView: 2.8 },
-          }}
+          // breakpoints={{
+          //   600: { slidesPerView: 1.5 },
+          //   800: { slidesPerView: 2 },
+          //   1024: { slidesPerView: 2.5 },
+          //   1400: { slidesPerView: 2.8 },
+          //   1530: { slidesPerView: 2.1 },
+          // }}
         >
           {offers.map((offer, idx) => (
             <SwiperSlide key={idx}>
