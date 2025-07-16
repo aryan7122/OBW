@@ -61,6 +61,7 @@ import SalonBlogDetail from "./SALON/Page/SalonBlog/SalonBlogDetail/SalonBlogDet
 import SalonContactUs from "./SALON/Page/SalonContactUs/SalonContactUs.jsx";
 import SalonFaq from "./SALON/Page/SalonFaq/SalonFaq.jsx";
 import SalonLocationSection from "./SALON/Page/SalonLocationSection/SalonLocationSection.jsx";
+import SalonAboutPage from "./SALON/Page/SalonAbout/SalonAboutPage.jsx";
 
 function Loader2() {
   return (
@@ -210,7 +211,7 @@ function App() {
                 />
                 <Route
                   // path="/blog-detail/:id"
-                 path="/blog-detail/:slug"
+                  path="/blog-detail/:slug"
                   element={
                     <>
                       <SalonBlogDetail />
@@ -219,15 +220,27 @@ function App() {
                     </>
                   }
                 />
-                  <Route
+                <Route
                   path="/contact"
                   element={
                     <>
                       <SalonContactUs />
                       <SalonFaq />
-                        <SalonLocationSection />
+                      <SalonLocationSection />
                       <SalonFooter />
                     </>
+                  }
+                />
+                <Route
+                  path="/about"
+                  element={
+                    <>
+                      <SalonAboutPage />
+                      <SalonLocationSection />
+                      <HeroGlowSection />
+                      <SalonFooter />
+                    </>
+
                   }
                 />
               </Routes>

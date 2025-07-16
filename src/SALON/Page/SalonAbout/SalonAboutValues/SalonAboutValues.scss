@@ -1,0 +1,106 @@
+/* --- Variables & General Setup --- */
+$font-sans: 'Inter', sans-serif;
+$color-text-heading: #472525;
+$color-text-body: #475467;
+$color-accent: #4338CA;
+$color-yellow-bg: #FEFFA8;
+$color-yellow-icon: #A16207;
+$color-beige-bg: #FFF4DB;
+$color-beige-icon: #A16207;
+$color-lavender-bg: #EFECFF;
+$color-lavender-icon: #4338CA;
+
+/* --- Main Values Section --- */
+.salon-about-values {
+    background-color: #FFF3E4;
+    padding: 80px 20px;
+}
+
+.values-header {
+    text-align: center;
+    // max-width: 600px;
+    margin: 0 auto 50px;
+    .label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-accent;
+        margin-bottom: 12px;
+        img{
+            width: 14px;
+            height: 14px;
+        }
+    }
+    h2 {
+        font-size: 48px;
+        letter-spacing: -2.2px;
+        font-weight: 600;
+        color: #000000;
+        margin: 0;
+    }
+}
+
+/* --- Values Grid & Cards --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+
+    &__icon {
+        display: inline-flex;
+        padding: 12px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: $color-text-heading;
+        margin: 0 0 12px 0;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $color-text-body;
+        margin: 0;
+    }
+    
+    // Color variants from the design
+    &--yellow {
+        background-color: $color-yellow-bg;
+        .value-card__icon { background-color: #FEF0C7; color: $color-yellow-icon; }
+    }
+    &--beige {
+        background-color: $color-beige-bg;
+        .value-card__icon { background-color: #E7E5E4; color: $color-beige-icon; }
+    }
+    &--lavender {
+        background-color: $color-lavender-bg;
+        .value-card__icon { background-color: #E0E7FF; color: $color-lavender-icon; }
+    }
+}
+
+// --- Responsive Adjustments ---
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .values-header h2 {
+        font-size: 30px;
+    }
+}

@@ -2,32 +2,7 @@
 
 .ClassicDealsOffer-deals {
   background-color: #fff6ea;
-  padding: 40px 120px;
 
-  @media only screen and (max-width: 1400px) {
-    padding: 40px 100px;
-  }
-  @media only screen and (max-width: 1300px) {
-    padding: 30px 80px;
-  }
-  @media only screen and (max-width: 1200px) {
-    padding: 30px 70px;
-  }
-  @media only screen and (max-width: 1100px) {
-    padding: 30px 60px;
-  }
-  @media only screen and (max-width: 1000px) {
-    padding: 40px 40px;
-  }
-  @media only screen and (max-width: 600px) {
-    padding: 40px 30px;
-  }
-  @media only screen and (max-width: 500px) {
-    padding: 30px 20px;
-  }
-  @media only screen and (max-width: 400px) {
-    padding: 30px 10px;
-  }
   padding-right: 0;
 
   .ClassicDealsOffer-heading {
@@ -36,7 +11,31 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-
+     padding-left:120px;
+      @media only screen and (max-width: 1400px) {
+        padding-left: 100px;
+      }
+      @media only screen and (max-width: 1300px) {
+        padding-left: 80px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding-left:  70px;
+      }
+      @media only screen and (max-width: 1100px) {
+        padding-left:  60px;
+      }
+      @media only screen and (max-width: 1000px) {
+        padding-left:  40px;
+      }
+      @media only screen and (max-width: 600px) {
+        padding-left:  30px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding-left:  20px;
+      }
+      @media only screen and (max-width: 400px) {
+        padding-left:  10px;
+      }
     .badge {
       display: inline-block;
       padding: 4px 10px;
@@ -192,7 +191,6 @@
     color: white;
     min-height: 212px;
     position: relative;
-    border: 1px solid red;
     min-width: 520px;
 
     h3 {

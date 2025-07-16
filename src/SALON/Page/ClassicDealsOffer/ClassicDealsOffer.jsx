@@ -78,13 +78,20 @@ const ClassicDealsOffer = () => {
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
           }}
-          spaceBetween={5}
-          slidesPerView={2.3}
+          spaceBetween={0}
+          slidesPerView={
+            {
+            600: 1 ,
+            800:  1.5 ,
+            1024: 2,
+            1400:  2.5 ,
+          }
+          }
           breakpoints={{
             600: { slidesPerView: 1.5 },
             800: { slidesPerView: 2 },
             1024: { slidesPerView: 2.5 },
-            1400: { slidesPerView: 3 },
+            1400: { slidesPerView: 2 },
           }}
         >
           {offers.map((offer, idx) => (

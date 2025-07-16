@@ -1,0 +1,357 @@
+/* --- Variables & General Setup --- */
+$font-sans: "Inter", sans-serif;
+$color-text-heading: #101828;
+$color-text-body: #475467;
+$color-border: #eaecf0;
+$color-accent: #5b2f2f;
+
+/* --- Main Tabs Section --- */
+.salon-about-tabs {
+  margin: 0 auto;
+  background: #fff3e4;
+  position: relative;
+}
+
+.tabs-header {
+  text-align: center;
+  padding: 0px 120px;
+  padding-top: 40px !important;
+  @media only screen and (max-width: 1400px) {
+    padding: 0px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 0px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 0px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 0px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 0px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 0px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0px 10px;
+  }
+  .label {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-accent;
+    margin-bottom: 12px;
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  h2 {
+    font-size: clamp(26px, 5vw, 40px);
+    font-weight: 600;
+    letter-spacing: -1.8px;
+    color: $color-text-heading;
+    margin: 0 0 40px 0;
+    text-align: left;
+  }
+}
+
+/* --- Navigation Buttons --- */
+.tabs-nav {
+  display: flex;
+  justify-content: left;
+  gap: 32px;
+  border-bottom: 1px solid $color-border;
+  //   margin-bottom: 60px;
+  padding: 0px 120px;
+
+  @media only screen and (max-width: 1400px) {
+    padding: 0px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 0px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 0px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 0px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 0px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 0px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0px 10px;
+  }
+
+  .tab-button {
+    font-family: $font-sans;
+    font-size: 24px;
+    letter-spacing: -0.9px;
+    font-weight: 500;
+    color: $color-text-body;
+    background: none;
+    border: none;
+    padding: 0 4px 10px 4px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: $color-accent;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: $color-text-heading;
+    }
+
+    &.active {
+      color: $color-accent;
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+.P_L {
+  padding: 0px 120px;
+  @media only screen and (max-width: 1400px) {
+    padding: 0px 100px;
+  }
+  @media only screen and (max-width: 1300px) {
+    padding: 0px 80px;
+  }
+  @media only screen and (max-width: 1200px) {
+    padding: 0px 70px;
+  }
+  @media only screen and (max-width: 1100px) {
+    padding: 0px 60px;
+  }
+  @media only screen and (max-width: 1000px) {
+    padding: 0px 40px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 0px 30px;
+  }
+  @media only screen and (max-width: 500px) {
+    padding: 0px 20px;
+  }
+  @media only screen and (max-width: 400px) {
+    padding: 0px 10px;
+  }
+
+  .text-content {
+    h3 {
+      text-align: left !important;
+      margin-top: -50px !important;
+    }
+  }
+  .image-content img {
+    border-radius: 16px;
+  }
+}
+/* --- Content Styling --- */
+
+.three-cols::before {
+  content: ""; /* Pseudo-element ke liye hamesha zaroori hai */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  /* Background properties ab yahan apply karein */
+  // background: url('../../../../assets/SALON/hero/About/Clip path group.png');
+  background-repeat: no-repeat;
+  background-position: 100% 10%;
+
+  /* Opacity sirf is background layer par lagegi */
+  opacity: 0.5;
+
+  /* Isse yeh layer content ke peeche chali jayegi */
+  z-index: -1;
+}
+.tab-content-grid {
+  z-index: 1;
+  padding-top: 50px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+
+  &.two-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+  &.three-cols {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+
+  .text-content {
+    margin-top: -60px;
+    h3 {
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: -1.8px;
+      font-weight: 600;
+      color: $color-text-heading;
+      margin: 0 0 20px 0;
+      max-width: 700px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #454545;
+      margin-bottom: 16px;
+    }
+  }
+
+  .image-content img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.image-content {
+  .what-we-do-img-left {
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+  .what-we-do-img-right {
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+  }
+}
+
+.MissionVisionContent{
+        border: 1px solid rgba(255, 0, 0, 0);
+}
+/* Specific styling for 'What We Do' tab */
+.what-we-do-img-left {
+  height: 450px;
+}
+.what-we-do-img-right {
+  height: 350px;
+  align-self: flex-start; // Align to top of grid cell
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.stat-card {
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 16px;
+    color: #0a0a0a;
+  }
+  // Color variants
+  &--blue {
+    background-color: #cbedff;
+    strong,
+    span {
+      color: #00575d;
+    }
+  }
+  &--yellow {
+    background-color: #feffa8;
+    strong,
+    span {
+      color: #00575d;
+    }
+  }
+  &--pink {
+    background-color: #ffc0df;
+    strong,
+    span {
+      color: #00575d;
+    }
+  }
+  &--grey {
+    background-color: #dfdfdc;
+    strong,
+    span {
+      color: #00575d;
+    }
+  }
+}
+
+/* Specific styling for 'Mission & Vision' tab */
+.tab-content-single-col {
+  margin: 0 auto;
+  padding-top: 40px;
+  .mission-item {
+    display: flex;
+    margin-bottom: 40px;
+    a {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: $color-text-heading;
+      text-decoration: none;
+      margin-bottom: 12px;
+      width:480px;
+      opacity: 0.6;
+      text-decoration: 1px underline;
+    }
+    p {
+      font-size: 24px;
+      line-height: 1.3;
+      color: $color-text-body;
+      margin: 0;
+      letter-spacing: -0.8px;
+    }
+  }
+}
+
+// --- Responsive Adjustments ---
+@media (max-width: 992px) {
+  .tab-content-grid {
+    grid-template-columns: 1fr !important; // Force single column
+    .what-we-do-img-right,
+    .what-we-do-img-left {
+      display: none; // Hide side images on smaller screens for simplicity
+    }
+  }
+}
+@media (max-width: 768px) {
+  .tabs-header h2 {
+    font-size: 30px;
+  }
+  .tabs-nav {
+    gap: 20px;
+    .tab-button {
+      font-size: 14px;
+    }
+  }
+}
