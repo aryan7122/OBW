@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./PrivacyPolicy.scss";
+import { TabContext } from "../../util/TabContext";
 
 const TermsOfService = () => {
+      const { pageTab, changeTab } = useContext(TabContext);
+    
     return (
-        <div className="privacy-policy">
+        <div className={`privacy-policy ${pageTab === "SALON" ? 'SALON-privacy-policy' :""}`}>
             <header>
                 <h1>Terms of Service</h1>
                 <p>

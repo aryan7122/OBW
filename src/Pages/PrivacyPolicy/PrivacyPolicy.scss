@@ -59,7 +59,7 @@
     section {
       margin: 20px 0;
       padding: 20px;
-      background-color: #fafafa;
+      // background-color: #fafafa;
       border-bottom: 2px solid #e0e0e0;
 
       h2 {
@@ -117,11 +117,17 @@
     font-weight: 500;
         font-size: 20px;
         width: 770px;
-        margin: 40px auto;
+        margin: 0 auto;
         line-height: 24px;
         letter-spacing: 0%;
         color: #454545;
         border-bottom: 2px solid #e0dede;
         padding-bottom: 20px;
+        padding-bottom: 50px !important;
   }
+}
+
+
+.SALON-privacy-policy{
+  background: #FFEFDB;
 }
