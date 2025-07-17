@@ -29,11 +29,11 @@ const WhatWeDoContent = () => {
         { number: '20+', label: 'Certified Professionals', color: 'grey' }
     ];
     return (
-        <div className="tab-content-grid three-cols ">
-            <div className="image-content">
+        <div className="tab_content_grid three-cols ">
+            <div className="image_content">
                 <img src={whatWeDoLeftImage} alt="Interior of a modern salon" className="what-we-do-img-left"/>
             </div>
-            <div className="text-content">
+            <div className="text_content">
                  <h3>We provide special care for your appearance and beauty</h3>
                  <div className="stats-grid">
                     {stats.map(stat => (
@@ -44,7 +44,7 @@ const WhatWeDoContent = () => {
                     ))}
                  </div>
             </div>
-            <div className="image-content">
+            <div className="image_content">
                 <img src={whatWeDoRightImage} alt="Artistic display of hair coloring" className="what-we-do-img-right"/>
             </div>
         </div>
