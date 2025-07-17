@@ -40,7 +40,7 @@
     background: #FFFFFF03;
     /* LEFT 80% blur, RIGHT 20% light blur */
     
-    // // border: 1px solid red;
+    // border: 1px solid red;
     
     -webkit-mask-image: linear-gradient(
       to right,
@@ -432,6 +432,7 @@
     gap: 1.5rem;
     list-style: none;
     animation: slideDown 0.3s ease forwards;
+    
     li {
       a {
         text-decoration: none;

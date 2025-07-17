@@ -113,7 +113,6 @@ function App() {
               <Navbar />
               <Routes>
                 <Route path="*" element={<NotFound />} />
-
                 <Route
                   path="/"
                   element={
