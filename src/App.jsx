@@ -194,7 +194,7 @@ function App() {
                       <TestimonialsSlider />
                       <NewsArticles />
                       <HeroGlowSection />
-                     
+
                     </>
                   }
                 />
@@ -204,7 +204,7 @@ function App() {
                     <>
                       <SalonBlog />
                       <HeroGlowSection />
-                    
+
                     </>
                   }
                 />
@@ -215,7 +215,7 @@ function App() {
                     <>
                       <SalonBlogDetail />
                       {/* <HeroGlowSection /> */}
-                  
+
                     </>
                   }
                 />
@@ -226,7 +226,7 @@ function App() {
                       <SalonContactUs />
                       <SalonFaq />
                       <SalonLocationSection />
-                    
+
                     </>
                   }
                 />
@@ -237,15 +237,15 @@ function App() {
                       <SalonAboutPage />
                       <SalonLocationSection />
                       <HeroGlowSection />
-                    
+
                     </>
 
                   }
                 />
-                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
               </Routes>
-                    <SalonFooter />
+              <SalonFooter />
             </div>
           )}
         </PageWrapper>

@@ -23,8 +23,12 @@ const SalonBlog = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("View all");
     const [currentPage, setCurrentPage] = useState(1);
-    const blogsPerPage = 9; // Display 9 blogs per page in a 3x3 grid
+    // const blogsPerPage = 9; // Display 9 blogs per page in a 3x3 grid
+ const [blogsPerPage, setBlogsPerPage] = useState(getBlogsPerPage());
 
+  function getBlogsPerPage() {
+    return window.innerWidth <= 992 ? 8 : 9;
+  }
     // --- DATA ---
     // (You would typically fetch this data from an API)
     const allBlogs = [
