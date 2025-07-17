@@ -147,8 +147,7 @@ $brand-color: #3032b6; // A nice purple for accents
   margin: 0 auto;
   padding: 20px 0px;
   gap: 60px;
-      border-bottom: 1px solid #E8E8E8;
-
+  border-bottom: 1px solid #e8e8e8;
 }
 
 /* --- Sidebar (Sticky Newsletter) --- */
@@ -357,11 +356,18 @@ $brand-color: #3032b6; // A nice purple for accents
   padding: 15px;
   border: 1px solid #b0f0f5;
   border-radius: 20px;
-
+  @media (max-width: 710px){
+    flex-direction: column;
+  }
   img {
     width: 231px;
     height: 180px;
     border-radius: 16px;
+   @media (max-width: 710px){
+    width: 100%;
+    object-fit: cover;
+    height: 220px;
+   }
   }
   h3 {
     font-weight: 500;
@@ -372,6 +378,12 @@ $brand-color: #3032b6; // A nice purple for accents
     letter-spacing: -1.5px;
 
     margin: 0;
+    @media (max-width: 1250px){
+      max-width: 100%;
+       font-size: 30px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    }
   }
   .tags_page_Next {
     display: flex;
@@ -384,17 +396,24 @@ $brand-color: #3032b6; // A nice purple for accents
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    @media (max-width: 1250px) {
+      flex-direction: column;
+      align-items: start;
+    }
   }
   .next-article-nav {
     display: flex;
     gap: 12px;
     align-items: center;
-   .read_ {
+    @media (max-width: 350px){
+      flex-direction: column;
+    }
+    .read_ {
       bottom: 20px;
       padding: 5px 5px 5px 20px;
       color: #643434;
       background: transparent;
-      border: 1px solid #2463EB;
+      border: 1px solid #2463eb;
       border-radius: 100px;
       font-size: 16px; // 20px
       display: flex;
@@ -409,7 +428,7 @@ $brand-color: #3032b6; // A nice purple for accents
       margin-top: 36px;
       height: 58px;
       .arrow-icon {
-            background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+        background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
 
         color: #fff;
         border-radius: 100px;
@@ -417,6 +436,9 @@ $brand-color: #3032b6; // A nice purple for accents
         height: 30px;
         padding: 5px;
         transition: 0.3s linear;
+      }
+      @media (max-width: 710px){
+        height: 100%;
       }
 
       &:hover {
@@ -430,7 +452,7 @@ $brand-color: #3032b6; // A nice purple for accents
         }
       }
     }
-   .next_ {
+    .next_ {
       bottom: 20px;
       padding: 5px 5px 5px 20px;
       background: transparent;
@@ -451,21 +473,25 @@ $brand-color: #3032b6; // A nice purple for accents
       text-decoration: underline;
       .arrow-icon {
         background: #fff;
-        color: #00727A;
+        color: #00727a;
         border-radius: 100px;
         width: 30px;
         height: 30px;
         padding: 5px;
         transition: 0.3s linear;
-        
       }
+       @media (max-width: 350px){
+        margin-top: 0;
+        align-items: start;
+        justify-content: start;
+        margin-left: -60px;
+       }
 
       &:hover {
         background: transparent !important;
         color: #472525;
         border: 1px solid transparent;
         box-shadow: none;
-       
       }
     }
   }
@@ -474,11 +500,16 @@ $brand-color: #3032b6; // A nice purple for accents
 /* --- Responsive Adjustments --- */
 @media (max-width: 992px) {
   .blog-detail-layout {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 40px;
   }
   .sidebar {
-    width: 100%;
+    // width: 100%;
+    margin: 0 auto;
+    @media (max-width: 400px){
+      width: 100%;
+
+    }
     .newsletter-card {
       position: static; // Un-stick the sidebar
     }
@@ -493,7 +524,7 @@ $brand-color: #3032b6; // A nice purple for accents
     font-size: 24px;
   }
   .read-next-footer {
-    flex-direction: column;
-    align-items: flex-start;
+    // flex-direction: column;
+    // align-items: flex-start;
   }
 }
