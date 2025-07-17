@@ -49,7 +49,7 @@ import Reflexology from '../../../assets/SALON/hero/services/Reflexology.jpg';
 // 
 import ServicesSlider from './ServicesSlider';
 
-const tabs = [
+export const tabs = [
     'Styling',
     'Coloring',
     'Hair Treatment',

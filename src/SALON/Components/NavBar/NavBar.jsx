@@ -6,6 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { TabContext } from '../../../util/TabContext';
 import BookAppointment from '../../../Components/BookAppointment/BookAppointment';
+import SalonBookAppointment from '../SalonBookAppointment/SalonBookAppointment';
 
 function NavBar() {
     const [scrolled, setScrolled] = useState(false);
@@ -14,6 +15,7 @@ function NavBar() {
     const location = useLocation(); // Get current location
     // const [isWhite, setIsWhite] = useState(false);
     const { pageTab, changeTab } = useContext(TabContext);
+ 
 
     useEffect(() => {
         const handleScroll = () => {
@@ -127,7 +129,7 @@ function NavBar() {
                 }
 
             </motion.nav>
-            {showModal && <BookAppointment onClose={closeModal} />}
+            {showModal && <SalonBookAppointment onClose={closeModal} />}
 
         </header >
     );
