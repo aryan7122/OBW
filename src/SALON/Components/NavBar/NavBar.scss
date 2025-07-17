@@ -73,7 +73,7 @@
     padding: 0 20px;
   }
   @media only screen and (max-width: 400px) {
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .NavBar-links {
     // border: 1px solid #e8e8e8;
@@ -505,6 +505,7 @@
     @media (max-width: 950px) {
       display: block;
       color: #000 !important;
+      margin-right: 0;
     }
   }
   .NavBar-actions {

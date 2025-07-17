@@ -124,6 +124,9 @@
     @media only screen and (max-width: 900px) {
       margin-top: 50px;
     }
+     @media (max-width: 400px){
+      display: none;
+     }
     // height: ;
     &::before {
       content: "";
@@ -172,7 +175,7 @@
       }
       @media only screen and (max-width: 700px) {
         top: -100px;
-        left: 80%;
+        left: 70%;
         rotate: -20deg;
         width: 150px;
         height: 150px;
@@ -440,6 +443,9 @@
     @media only screen and (max-width: 500px) {
       grid-template-columns: 1fr;
       gap: 30px;
+    }
+    @media (max-width: 400px){
+      margin-top: 40px;
     }
   }
   .info-card-2 {
