@@ -93,7 +93,7 @@ const ClassicDealsOffer = () => {
           {offers.map((offer, idx) => (
             <SwiperSlide key={idx}>
               <div
-                className="offer-card"
+                className="offers-cards"
                 style={{ backgroundColor: offer.bgColor }}
               >
                 <div className="text-content">
