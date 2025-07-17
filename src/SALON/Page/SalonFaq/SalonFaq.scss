@@ -39,6 +39,10 @@ $color-label-icon: #16a34a; // Green icon for the label
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: start;
+    }
     .badge {
       display: inline-block;
       padding: 4px 10px;
@@ -50,6 +54,7 @@ $color-label-icon: #16a34a; // Green icon for the label
       display: flex;
       align-items: center;
       gap: 6px;
+
       img {
         width: 14px;
       }
@@ -63,17 +68,25 @@ $color-label-icon: #16a34a; // Green icon for the label
       letter-spacing: 0%;
       text-align: right;
       vertical-align: middle;
+      @media (max-width: 800px) {
+        align-items: start;
+        text-align: left;
+        width: 100%;
+      }
     }
     h1 {
       font-weight: 500;
       font-style: Medium;
-      font-size: 40px;
+      font-size: clamp(26px, 4vw, 40px);
       leading-trim: NONE;
       line-height: 48px;
       letter-spacing: -1.8px;
       vertical-align: middle;
       text-transform: capitalize;
       margin-top: -10px;
+      @media (max-width: 800px) {
+        align-items: start;
+      }
     }
   }
 }
@@ -175,6 +188,10 @@ $color-label-icon: #16a34a; // Green icon for the label
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0%;
+      @media (max-width: 830px) {
+        align-items: start;
+        padding-right: 0;
+      }
     }
   }
 
@@ -188,37 +205,35 @@ $color-label-icon: #16a34a; // Green icon for the label
 
 /* --- Right Column: Sidebar --- */
 .salon-faq-sidebar {
-  
-        margin-bottom: 130px;
-    .image-stack {
-        
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: end;
-        gap: 24px;
-        
-        position: relative !important;
-        .img_f_1 {
-            width: 354px;
-            height: 500px;
-            border-radius: 16px;
-            
-            border-radius: 16px;
-            object-fit: cover;
-        }
-        .img_f_2{
-            position: absolute !important;
-            width: 214px;
-            height: 267px;
-            border-radius: 10px;
-            position: relative;
-            bottom: -20% !important;
-            right: 50%;
-            object-fit: cover;
+  margin-bottom: 130px;
+  @media (max-width: 992px) {
+    display: none;
+  }
+  .image-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 24px;
 
+    position: relative !important;
+    .img_f_1 {
+      width: 354px;
+      height: 500px;
+      border-radius: 16px;
 
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    .img_f_2 {
+      position: absolute !important;
+      width: 214px;
+      height: 267px;
+      border-radius: 10px;
+      position: relative;
+      bottom: -20% !important;
+      right: 50%;
+      object-fit: cover;
     }
   }
 }

@@ -57,12 +57,12 @@ $color-accent: #2563eb;
     text-decoration-style: wavy;
     text-decoration-thickness: 3%;
     text-decoration-skip-ink: auto;
-
+color: #2A1616;
     margin-bottom: 16px;
-    background: linear-gradient(0deg, #2a1616, #2a1616),
-      linear-gradient(0deg, #0c0c0c, #0c0c0c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(0deg, #2a1616, #2a1616),
+    //   linear-gradient(0deg, #0c0c0c, #0c0c0c);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
   }
 
   .subtitle {
@@ -89,18 +89,18 @@ $color-accent: #2563eb;
     align-items: center;
     gap: 8px;
     padding: 10px 16px;
-    border: 1px solid #B0F0F5;
+    border: 1px solid #b0f0f5;
     border-radius: 20px;
     background-color: #fff;
     font-size: 14px;
     font-weight: 500;
     color: #000000;
-    svg{
-        color: #fff;
-        fill: #3032B6;
-        font-size: 20px;
-        width: 20px;
-        height: 20px;
+    svg {
+      color: #fff;
+      fill: #3032b6;
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
@@ -112,24 +112,30 @@ $color-accent: #2563eb;
   gap: 70px;
   margin: 0 auto;
   padding: 48px;
-  border: 1px solid #B0F0F5;
+  border: 1px solid #b0f0f5;
   border-radius: 24px;
+  @media (max-width: 500px){
+    padding: 30px;
+  }
 }
 
 /* --- Form Section (Left) --- */
 .form-section {
   h2 {
-    font-size: 36px;
-    font-weight: 600;
+    font-size: clamp(28px, 4vw,48px);
+    font-weight: 400;
     color: $color-text-dark;
     margin: 0 0 8px 0;
   }
+  @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
   .handwritten-text {
-    font-weight: 700;
+    font-weight: 400;
     position: relative;
+    letter-spacing: 0;
     color: $color-text-dark;
-
+    font-family: "Great Vibes", cursive;
+    font-style: italic;
     // Creates the decorative underline
     &::after {
       content: "";
@@ -138,7 +144,7 @@ $color-accent: #2563eb;
       left: 0;
       right: 0;
       height: 3px;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='5' viewBox='0 0 100 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C20.2 1.83333 69.2 -1.4 99 3.5' stroke='%23101828' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+      // background-image: url("data:image/svg+xml,%3Csvg width='100' height='5' viewBox='0 0 100 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C20.2 1.83333 69.2 -1.4 99 3.5' stroke='%23101828' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-size: 100% 100%;
     }
@@ -173,7 +179,7 @@ $color-accent: #2563eb;
       padding: 10px 12px;
       font-size: 16px;
       background-color: transparent;
-      border: 1px solid #0000001A;
+      border: 1px solid #0000001a;
       border-radius: 8px;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
@@ -206,14 +212,14 @@ $color-accent: #2563eb;
     font-size: 16px;
     font-weight: 500;
     border-radius: 38px;
-    border: 1px solid #3032B6;
+    border: 1px solid #3032b6;
     background-color: transparent;
     color: $color-text-dark;
     cursor: pointer;
     transition: all 0.4s ease;
 
     &:hover {
-      background-color: #3032B6;
+      background-color: #3032b6;
       color: #fff;
     }
   }
@@ -225,23 +231,19 @@ $color-accent: #2563eb;
   flex-direction: column;
   gap: 24px;
   .image-wrapper {
-     
-      img {
-          width: 100%;
-          border-radius: 12px;
-        }
-        
-        
+    img {
+      width: 100%;
+      border-radius: 12px;
     }
-    
-    .contact-details-box {
-        background: #FFEFE1;
+  }
+
+  .contact-details-box {
+    background: #ffefe1;
     border-radius: 16px;
     padding: 24px;
     display: flex;
     gap: 20px;
     align-items: center;
-    
 
     .contact-detail-item {
       display: flex;
@@ -253,7 +255,7 @@ $color-accent: #2563eb;
         color: $color-text-light;
         flex-shrink: 0;
         margin-top: 2px;
-        border: 1px solid #0000001A;
+        border: 1px solid #0000001a;
         width: 40px;
         height: 40px;
         border-radius: 20px;
@@ -282,12 +284,41 @@ $color-accent: #2563eb;
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
   .contact-main-container {
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
     gap: 40px;
+    .form-section{
+
+      .form-row{
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      @media (max-width: 768px){
+        h2{
+          text-align: center;
+        }
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
+  .info-section .image-wrapper{
+
+    height: 100%;
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 768px){
+      display: none;
+    }
   }
 }
 
 @media (max-width: 768px) {
+  .contact-main-container {
+    grid-template-columns: 1fr;
+  }
   .salon-contact-page {
     padding: 40px 15px;
   }
