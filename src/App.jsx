@@ -62,6 +62,7 @@ import SalonContactUs from "./SALON/Page/SalonContactUs/SalonContactUs.jsx";
 import SalonFaq from "./SALON/Page/SalonFaq/SalonFaq.jsx";
 import SalonLocationSection from "./SALON/Page/SalonLocationSection/SalonLocationSection.jsx";
 import SalonAboutPage from "./SALON/Page/SalonAbout/SalonAboutPage.jsx";
+import LoaderPage from "./util/Loader/LoaderPage.jsx";
 
 function Loader2() {
   return (
@@ -102,154 +103,190 @@ function App() {
         : "'Bricolage Grotesque', sans-serif",
   };
 
+  // loding
+
+  const [loading, setLoading] = useState(true);
+
+
+
+  useEffect(() => {
+    const handleLoad = () => setLoading(false);
+
+    if (document.readyState === 'complete') {
+      // Page already fully loaded (may happen in fast network)
+      setLoading(false);
+    } else {
+      // Attach listener for slower 3G/network
+      window.addEventListener('load', handleLoad);
+
+      // Fallback: In case load fails or delays (max 15s)
+      const timeout = setTimeout(() => {
+        setLoading(false);
+      }, 15000);
+
+      // Cleanup
+      return () => {
+        window.removeEventListener('load', handleLoad);
+        clearTimeout(timeout);
+      };
+    }
+  }, []);
+
+  // loding
+  // 
+
   return (
     <div className="App" style={dynamicFontStyle}>
-      <Router>
-        <Toaster position="top-center" reverseOrder={true} />
-        <PageWrapper>
-          <WebTabs />
-          {pageTab === "CLINIC" && (
-            <>
-              <Navbar />
-              <Routes>
-                <Route path="*" element={<NotFound />} />
-                <Route
-                  path="/"
-                  element={
-                    <div className="CLINIC">
-                      <HeroSection />
-                      <ClinicalConcerns />
-                      <TeamSection />
-                      <WhyChooseSection />
-                      <TrendingTreatments />
-                      <FabulousSection />
-                      <ClassicDeals />
-                      <BlogSlider />
-                      <HappyClients />
-                      {/* <FAQSection /> */}
-                      {/* <FirstStep /> */}
-                      <BannerSectionSalon />
-                    </div>
-                  }
-                />
-                <Route
-                  path="/about"
-                  element={
-                    <>
-                      <AboutUsHero />
-                      <OurValue />
-                      {/* <OurTeam /> */}
-                      <MissionVision />
-                      <LocationSection />
-                      {/* <FirstStep /> */}
-                    </>
-                  }
-                />
-                <Route
-                  path="/contact"
-                  element={
-                    <>
-                      <ContactForm />
-                      <LocationSection />
-                      <FaqC />
-                    </>
-                  }
-                />
-                <Route path="/blogs" element={<Blog />} />
-                <Route path="/blog-detail/:id" element={<ArticleDetail />} />
-                <Route
-                  path="/locations"
-                  element={
-                    <>
-                      <Location />
-                      <Kankpur />
-                      <Team />
-                      <RR />
-                    </>
-                  }
-                />
-                <Route path="/treatment" element={<AllTreatments />} />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/terms-of-service" element={<TermsOfService />} />
-              </Routes>
-              <Footer />
-            </>
-          )}
-          {pageTab === "SALON" && (
-            <div className="SALON">
-              <NavBar />
-              <Routes>
-                <Route path="*" element={<NotFound />} />
-                <Route
-                  path="/"
-                  element={
-                    <>
-                      <SalonHeroSection />
-                      <AboutUsSection />
-                      <ServicesSection />
-                      <TOPSERVICES />
-                      <LocationSelector />
-                      <ClassicDealsOffer />
-                      <WhyChooseUs />
-                      <TestimonialsSlider />
-                      <NewsArticles />
-                      <HeroGlowSection />
+      {loading ? (
+        <LoaderPage loading={loading} />
+      ) : (
+        <Router>
+          <Toaster position="top-center" reverseOrder={true} />
+          <PageWrapper>
+            <WebTabs />
+            {pageTab === "CLINIC" && (
+              <>
+                <Navbar />
+                <Routes>
+                  <Route path="*" element={<NotFound />} />
+                  <Route
+                    path="/"
+                    element={
+                      <div className="CLINIC">
+                        <HeroSection />
+                        <ClinicalConcerns />
+                        <TeamSection />
+                        <WhyChooseSection />
+                        <TrendingTreatments />
+                        <FabulousSection />
+                        <ClassicDeals />
+                        <BlogSlider />
+                        <HappyClients />
+                        {/* <FAQSection /> */}
+                        {/* <FirstStep /> */}
+                        <BannerSectionSalon />
+                      </div>
+                    }
+                  />
+                  <Route
+                    path="/about"
+                    element={
+                      <>
+                        <AboutUsHero />
+                        <OurValue />
+                        {/* <OurTeam /> */}
+                        <MissionVision />
+                        <LocationSection />
+                        {/* <FirstStep /> */}
+                      </>
+                    }
+                  />
+                  <Route
+                    path="/contact"
+                    element={
+                      <>
+                        <ContactForm />
+                        <LocationSection />
+                        <FaqC />
+                      </>
+                    }
+                  />
+                  <Route path="/blogs" element={<Blog />} />
+                  <Route path="/blog-detail/:id" element={<ArticleDetail />} />
+                  <Route
+                    path="/locations"
+                    element={
+                      <>
+                        <Location />
+                        <Kankpur />
+                        <Team />
+                        <RR />
+                      </>
+                    }
+                  />
+                  <Route path="/treatment" element={<AllTreatments />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                </Routes>
+                <Footer />
+              </>
+            )}
+            {pageTab === "SALON" && (
+              <div className="SALON">
+                <NavBar />
+                <Routes>
+                  <Route path="*" element={<NotFound />} />
+                  <Route
+                    path="/"
+                    element={
+                      <>
+                        <SalonHeroSection />
+                        <AboutUsSection />
+                        <ServicesSection />
+                        <TOPSERVICES />
+                        <LocationSelector />
+                        <ClassicDealsOffer />
+                        <WhyChooseUs />
+                        <TestimonialsSlider />
+                        <NewsArticles />
+                        <HeroGlowSection />
 
-                    </>
-                  }
-                />
-                <Route
-                  path="/blogs"
-                  element={
-                    <>
-                      <SalonBlog />
-                      <HeroGlowSection />
+                      </>
+                    }
+                  />
+                  <Route
+                    path="/blogs"
+                    element={
+                      <>
+                        <SalonBlog />
+                        <HeroGlowSection />
 
-                    </>
-                  }
-                />
-                <Route
-                  // path="/blog-detail/:id"
-                  path="/blog-detail/:slug"
-                  element={
-                    <>
-                      <SalonBlogDetail />
-                      {/* <HeroGlowSection /> */}
+                      </>
+                    }
+                  />
+                  <Route
+                    // path="/blog-detail/:id"
+                    path="/blog-detail/:slug"
+                    element={
+                      <>
+                        <SalonBlogDetail />
+                        {/* <HeroGlowSection /> */}
 
-                    </>
-                  }
-                />
-                <Route
-                  path="/contact"
-                  element={
-                    <>
-                      <SalonContactUs />
-                      <SalonFaq />
-                      <SalonLocationSection />
+                      </>
+                    }
+                  />
+                  <Route
+                    path="/contact"
+                    element={
+                      <>
+                        <SalonContactUs />
+                        <SalonFaq />
+                        <SalonLocationSection />
 
-                    </>
-                  }
-                />
-                <Route
-                  path="/about"
-                  element={
-                    <>
-                      <SalonAboutPage />
-                      <SalonLocationSection />
-                      <HeroGlowSection />
+                      </>
+                    }
+                  />
+                  <Route
+                    path="/about"
+                    element={
+                      <>
+                        <SalonAboutPage />
+                        <SalonLocationSection />
+                        <HeroGlowSection />
 
-                    </>
+                      </>
 
-                  }
-                />
-                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="/terms-of-service" element={<TermsOfService />} />
-              </Routes>
-              <SalonFooter />
-            </div>
-          )}
-        </PageWrapper>
-      </Router>
+                    }
+                  />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                </Routes>
+                <SalonFooter />
+              </div>
+            )}
+          </PageWrapper>
+        </Router>
+      )}
     </div>
   );
 }
