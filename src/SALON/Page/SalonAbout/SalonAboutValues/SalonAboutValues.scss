@@ -14,6 +14,10 @@ $color-lavender-icon: #4338CA;
 .salon-about-values {
     background-color: #FFF3E4;
     padding: 80px 20px;
+    @media (max-width: 566px){
+         padding: 50px 20px;
+
+     }
 }
 
 .values-header {
@@ -102,5 +106,6 @@ $color-lavender-icon: #4338CA;
 @media (max-width: 768px) {
     .values-header h2 {
         font-size: 30px;
+        letter-spacing: -1px;
     }
 }

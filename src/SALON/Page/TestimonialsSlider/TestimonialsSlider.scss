@@ -33,7 +33,7 @@
     }
 
     h2 {
-      font-size: clamp(24px ,4vw,40px);
+      font-size: clamp(24px, 4vw, 40px);
       font-weight: 600;
       margin-top: 10px;
       padding-bottom: 30px;
@@ -59,12 +59,12 @@
       //   transform: translateX(-50%);
       width: 80px;
       height: 80px;
-      //   border: 5px solid white;
+        border: 8px solid white;
       border-radius: 50%;
       overflow: hidden;
       //   background: #fff;
       z-index: 9;
-      transform: translateX(-42%);
+      transform: translateX(-41%);
 
       .avatar {
         width: 100%;
@@ -80,14 +80,11 @@
       // overflow: visible;
     }
     .swiper-slide {
-      
       min-width: 560px;
       @media (max-width: 600px) {
         min-width: 100% !important;
         width: 100% !important;
       }
-
-      
     }
 
     .testimonial-card {
@@ -103,10 +100,10 @@
       // clip-path: path(
       //   "M 20 0 H 200 C 220 0 230 0 240 20 C 250 36 267 49 288 50 C 309 50 326 35 336 20 C 346 0 356 0 376 0 H 540 C 550 0 560 10 560 20 V 276 C 560 286 550 296 540 296 H 20 C 10 296 0 286 0 276 V 20 C 0 10 10 0 20 0 Z"
       // );
-      clip-path: url(#myCardShape);
-      #myCardShape{
-       
-      }
+@media (max-width: 1600px) and (min-width: 550px) {
+             clip-path: url(#myCardShape);
+           }
+      
       // width: 560px;
       width: 100%;
       min-height: 280px;

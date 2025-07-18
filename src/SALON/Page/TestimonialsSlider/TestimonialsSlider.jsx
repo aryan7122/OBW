@@ -103,12 +103,13 @@ export default function TestimonialsSlider() {
                         <div
                             className="testimonial-card"
                             style={{ backgroundColor: item.bgColor }}
-                        >
-                            <svg width="0" height="0" >
+                        >   
+                              <svg width="0" height="0"  className="clipPath">
                                 <clipPath id="myCardShape" clipPathUnits="objectBoundingBox">
                                     <path d="M 0.035 0 H 0.357 C 0.392 0, 0.410 0, 0.428 0.067 C 0.446 0.121, 0.476 0.165, 0.514 0.168 C 0.551 0.168, 0.582 0.118, 0.600 0.067 C 0.617 0, 0.635 0, 0.671 0 H 0.964 C 0.982 0, 1 0.033, 1 0.067 V 0.932 C 1 0.966, 0.982 1, 0.964 1 H 0.035 C 0.017 1, 0 0.966, 0 0.932 V 0.067 C 0 0.033, 0.017 0, 0.035 0 Z"></path>
                                 </clipPath>
                             </svg>
+                          
                             <div className="testimonial-content">
                                 <p className="review">{item.text}</p>
                                 <div className="meta">

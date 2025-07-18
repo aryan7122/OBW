@@ -115,6 +115,10 @@
       border-radius: 40px;
       max-width: fit-content;
       margin-bottom: 1.5rem;
+        @media (max-width: 350px) {
+            scale: 0.89;
+            margin-left: -14px;
+           }
       
       .profiles {
         display: flex;

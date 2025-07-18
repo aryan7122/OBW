@@ -231,9 +231,9 @@ $color-accent: #5b2f2f;
       margin-top: 30px;
     }
     h3 {
-      font-size: 40px;
+      font-size: clamp(24px,4vw,40px);
       text-align: center;
-      letter-spacing: -1.8px;
+      letter-spacing: clamp(-1px,4vw,-1.8px);
       font-weight: 600;
       color: $color-text-heading;
       margin: 0 0 20px 0;
@@ -472,7 +472,31 @@ $color-accent: #5b2f2f;
   .tabs-nav {
     gap: 20px;
     .tab-button {
-      font-size: 14px;
+      font-size: 20px;
+      @media (max-width: 466px){
+        font-size: 18px;
+        
+
+      }
     }
   }
+   @media (max-width: 466px){
+    .tabs-nav{
+      gap: 10px;
+    }
+   }
+   @media (max-width: 410px){
+    .tabs-nav{
+      gap: 5px;
+      overflow: auto;
+      .tab-button {
+        min-width: 100px;
+        padding-bottom: 0;
+        font-size: 17px;
+      }
+      .tab-button:last-child{
+        min-width: 150px;
+      }
+    }
+   }
 }

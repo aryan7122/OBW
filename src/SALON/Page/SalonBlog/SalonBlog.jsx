@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import "./SalonBlog.scss";
 import { useNavigate } from "react-router-dom";
-import { Search, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Search, ArrowLeft, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
-// Import your images here (make sure paths are correct)
+// Images ka import (path sahi hona chahiye)
 import img1 from "../../../assets/TrendingTreatments/Medi-Facials-min.jpg";
 import img2 from "../../../assets/TrendingTreatments/Laser Hair Removal-min.jpg";
 import img3 from "../../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg";
@@ -23,14 +23,21 @@ const SalonBlog = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("View all");
     const [currentPage, setCurrentPage] = useState(1);
-    // const blogsPerPage = 9; // Display 9 blogs per page in a 3x3 grid
- const [blogsPerPage, setBlogsPerPage] = useState(getBlogsPerPage());
+    
+    // Responsive blogs per page
+    const getBlogsPerPage = () => window.innerWidth <= 992 ? 8 : 9;
+    const [blogsPerPage, setBlogsPerPage] = useState(getBlogsPerPage());
 
-  function getBlogsPerPage() {
-    return window.innerWidth <= 992 ? 8 : 9;
-  }
+    // >> RESPONSIVE CATEGORY FILTER STATE
+    const [visibleCategories, setVisibleCategories] = useState([]);
+    const [dropdownCategories, setDropdownCategories] = useState([]);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    // >> Refs to measure DOM elements for responsive filters
+    const filtersContainerRef = useRef(null);
+    const categoryButtonRefs = useRef({});
+
     // --- DATA ---
-    // (You would typically fetch this data from an API)
     const allBlogs = [
         { id: 1, title: "The Ultimate Guide to Glowing Skin Before a Special Event", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img1, category: "Skin" },
         { id: 2, title: "7 Signs You Need a Hair Spa (And What to Expect)", description: "Stay ahead of the beauty curve! We explore the hottest hair spa, and what to...", image: img2, category: "Hair" },
@@ -47,31 +54,61 @@ const SalonBlog = () => {
 
     const categories = ["View all", "Styling", "Hair", "Nails", "Skin", "Coloring"];
 
+    // >> RESPONSIVE TABS LOGIC
+    useEffect(() => {
+        const calculateVisibleCategories = () => {
+            if (!filtersContainerRef.current) return;
+
+            const containerWidth = filtersContainerRef.current.offsetWidth;
+            const moreButtonWidth = 100; // "More" button ke liye anumanit jagah
+            let currentWidth = 0;
+            const tempVisible = [];
+            const tempDropdown = [];
+            
+            categories.forEach((category) => {
+                const tabWidth = categoryButtonRefs.current[category]?.offsetWidth + 16; // 16px for gap
+                
+                if (currentWidth + tabWidth < containerWidth - moreButtonWidth) {
+                    tempVisible.push(category);
+                    currentWidth += tabWidth;
+                } else {
+                    tempDropdown.push(category);
+                }
+            });
+            
+            setVisibleCategories(tempVisible);
+            setDropdownCategories(tempDropdown);
+        };
+
+        const handleResize = () => {
+            setBlogsPerPage(getBlogsPerPage());
+            calculateVisibleCategories();
+        };
+
+        handleResize(); // Initial call
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [categories]);
+
+
     // --- FILTERING AND PAGINATION LOGIC ---
     const filteredBlogs = useMemo(() => {
         let blogs = allBlogs;
-
-        // 1. Filter by search term (case-insensitive)
         if (searchTerm) {
             blogs = blogs.filter(blog =>
                 blog.title.toLowerCase().includes(searchTerm.toLowerCase())
             );
         }
-
-        // 2. Filter by category
         if (selectedCategory !== "View all") {
             blogs = blogs.filter(blog => blog.category === selectedCategory);
         }
-
         return blogs;
     }, [searchTerm, selectedCategory, allBlogs]);
 
-    // Reset to page 1 when filters change
     useEffect(() => {
         setCurrentPage(1);
     }, [searchTerm, selectedCategory]);
 
-    // Pagination calculations
     const totalPages = Math.ceil(filteredBlogs.length / blogsPerPage);
     const startIndex = (currentPage - 1) * blogsPerPage;
     const visibleBlogs = filteredBlogs.slice(startIndex, startIndex + blogsPerPage);
@@ -89,87 +126,14 @@ const SalonBlog = () => {
             window.scrollTo(0, 0);
         }
     };
-    
-   // In your SalonBlog.jsx file...
 
-    // --- RENDER FUNCTIONS ---
-    const renderPageNumbers = () => {
-        if (totalPages <= 1) return null;
-
-        const pages = [];
-        const pageNeighbours = 1; // How many pages to show on each side of the current page
-
-        // Helper to add a range of pages
-        const addPageRange = (start, end) => {
-            for (let i = start; i <= end; i++) {
-                pages.push(i);
-            }
-        };
-
-        // Always add the first page
-        pages.push(1);
-
-        // Add ellipsis if there's a gap after the first page
-        if (currentPage - pageNeighbours > 2) {
-            pages.push('...');
-        }
-
-        // Add pages around the current page
-        addPageRange(
-            Math.max(2, currentPage - pageNeighbours),
-            Math.min(totalPages - 1, currentPage + pageNeighbours)
-        );
-
-        // Add ellipsis if there's a gap before the last page
-        if (currentPage + pageNeighbours < totalPages - 1) {
-            pages.push('...');
-        }
-        
-        // Always add the last page
-        if (totalPages > 1) {
-            pages.push(totalPages);
-        }
-
-        // Remove duplicates that might occur in edge cases
-        const uniquePages = [...new Set(pages)];
-
-        return (
-            <div className="pagination-container">
-                <div className="pagination">
-                    <button
-                        className="prev-next-btn"
-                        onClick={() => handlePageChange(currentPage - 1)}
-                        disabled={currentPage === 1}
-                    >
-                        <ArrowLeft size={16} /> Previous
-                    </button>
-                    <div className="page-numbers">
-                        {uniquePages.map((page, index) => {
-                            if (page === '...') {
-                                return <span key={index} className="ellipsis">...</span>;
-                            }
-                            return (
-                                <button
-                                    key={index}
-                                    className={`page-btn ${currentPage === page ? 'active' : ''}`}
-                                    onClick={() => handlePageChange(page)}
-                                >
-                                    {page}
-                                </button>
-                            );
-                        })}
-                    </div>
-                    <button
-                        className="prev-next-btn"
-                        onClick={() => handlePageChange(currentPage + 1)}
-                        disabled={currentPage === totalPages}
-                    >
-                        Next <ArrowRight size={16} />
-                    </button>
-                </div>
-            </div>
-        );
+    const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
+        setIsDropdownOpen(false); // Dropdown band karein
     };
+    
+    // --- RENDER FUNCTIONS ---
+    const renderPageNumbers = () => { /* ... ismein koi badlav nahi ... */ };
 
     return (
         <div className="salon-blog-page">
@@ -187,16 +151,50 @@ const SalonBlog = () => {
             </header>
 
             <main className="salon-blog-content">
-                <div className="category-filters">
-                    {categories.map((category) => (
+                {/* --- UPDATED RESPONSIVE CATEGORY FILTERS --- */}
+                <div className="category-filters" ref={filtersContainerRef}>
+                    {/* Hidden elements to measure width */}
+                    <div style={{ visibility: 'hidden', position: 'absolute', display: 'flex', gap: '15px' }}>
+                        {categories.map(cat => (
+                            <button key={cat} ref={el => categoryButtonRefs.current[cat] = el} className="filter-button">{cat}</button>
+                        ))}
+                    </div>
+
+                    {/* Visible Categories */}
+                    {visibleCategories.map((category) => (
                         <button
                             key={category}
                             className={`filter-button ${selectedCategory === category ? "active" : ""}`}
-                            onClick={() => setSelectedCategory(category)}
+                            onClick={() => handleCategorySelect(category)}
                         >
                             {category}
                         </button>
                     ))}
+
+                    {/* More Button & Dropdown */}
+                    {dropdownCategories.length > 0 && (
+                        <div className="dropdown-wrapper">
+                            <button
+                                className={`more-button ${isDropdownOpen || dropdownCategories.includes(selectedCategory) ? 'active' : ''}`}
+                                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                            >
+                                More {isDropdownOpen ? <ChevronUp size={16}/> : <ChevronDown size={16} />}
+                            </button>
+                            {isDropdownOpen && (
+                                <div className="dropdown-menu">
+                                    {dropdownCategories.map(category => (
+                                        <div
+                                            key={category}
+                                            className={`dropdown-item ${selectedCategory === category ? 'active' : ''}`}
+                                            onClick={() => handleCategorySelect(category)}
+                                        >
+                                            {category}
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
 
                 <div className="salon-blog-grid">

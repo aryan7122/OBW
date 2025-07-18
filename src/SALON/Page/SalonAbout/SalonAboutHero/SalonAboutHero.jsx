@@ -1,7 +1,7 @@
 import React from 'react';
 import './SalonAboutHero.scss';
 // Make sure this image path is correct for your project
-import heroImage from '../../../../assets/SALON/hero/About/heroImg.jpg';
+import heroImage from '../../../../assets/SALON/hero/About/heroImg.webp';
 
 const SalonAboutHero = () => {
     return (

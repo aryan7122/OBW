@@ -4,8 +4,8 @@ import './SalonAboutTabs.scss';
 
 // Import images for the tabs - adjust paths as needed
 import whoWeAreImage from '../../../../assets/SALON/hero/About/Who we are.jpg';
-import whatWeDoLeftImage from '../../../../assets/SALON/hero/About/What we do-left.png';
-import whatWeDoRightImage from '../../../../assets/SALON/hero/About/What we do-right.png';
+import whatWeDoLeftImage from '../../../../assets/SALON/hero/About/What we do-left.webp';
+import whatWeDoRightImage from '../../../../assets/SALON/hero/About/What we do-right.webp';
 import str3 from "../../../../assets/SALON/hero/str.png";
 
 const WhoWeAreContent = () => (

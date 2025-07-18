@@ -121,10 +121,10 @@
     // font-family: 'Cabin';
     font-weight: 500;
     font-style: Medium;
-    font-size: clamp(20px, 4vw, 64px);
+    font-size: clamp(30px, 4vw, 64px);
     leading-trim: NONE;
-    line-height: clamp(20px, 4vw, 64px);
-    letter-spacing: -2.2px;
+    line-height: clamp(34px, 4vw, 64px);
+    letter-spacing: clamp(-1px,4vw,-2.2px);
     text-transform: capitalize;
     @media only screen and (max-width: 1310px) {
       width: 40%;
@@ -268,8 +268,8 @@
     // 1. Fixed height ko hata kar flexible banaya
     height: fit-content;
     min-height: 90vh; // Kam se kam screen ki 90% height lega
-    padding-top: 80px; // Upar se extra space
-    padding-bottom: 80px; // Neeche se extra space
+    padding-top: 40px; // Upar se extra space
+    padding-bottom: 40px; // Neeche se extra space
     min-height: 100%;
     // 2. Decorative images ko mobile par hide kar diya
     .image {

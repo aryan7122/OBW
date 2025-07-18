@@ -9,6 +9,7 @@ $link-color: #3032b6;
 /* Main Page Container */
 .salon-blog-page {
   background-color: $background-color;
+  overflow: hidden;
 }
 
 /* Header Section */
@@ -122,38 +123,112 @@ $link-color: #3032b6;
   }
 }
 
-/* Category Filter Buttons */
+// File: SalonBlog.scss
+
+// Maan lijiye yeh variables aapki project ki doosri file mein defined hain
+// $accent-color: #007bff; // Example color
+// $secondary-text: #555; // Example color
+
 .category-filters {
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    position: relative; // Measurement div ke liye zaroori
+    flex-wrap: nowrap; // Yeh zaroori hai taki items wrap na hon
 
-  .filter-button {
-    padding: 8px 18px;
-    font-size: 14px;
-    font-weight: 500;
-    color: $secondary-text;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-
-    &:hover {
-      //   background-color: #ffffff;
-      border-color: $accent-color;
+    .filter-button {
+      padding: 8px 18px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $secondary-text;
+      background-color: transparent;
+      border: 1px solid #ddd; // Initial border for structure
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      white-space: nowrap;
+      
+      &:hover {
+        border-color: $accent-color;
+        color: $accent-color;
+      }
+      
+      &.active {
+        background-color: $accent-color;
+        color: white;
+        border-color: $accent-color;
+      }
     }
-
-    &.active {
-      background-color: $accent-color;
-      color: white;
-      border-color: $accent-color;
+    
+    .dropdown-wrapper {
+      position: relative;
+      
+      .more-button {
+        padding: 8px 18px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $secondary-text;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        white-space: nowrap;
+        
+        &.active {
+          background-color: $accent-color;
+          color: white;
+          border-color: $accent-color;
+        }
+      }
+      
+      .dropdown-menu {
+        position: absolute;
+        top: 120%;
+        right: 0;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 8px;
+        z-index: 100;
+        min-width: 180px;
+        
+        .dropdown-item {
+          padding: 8px 12px;
+          cursor: pointer;
+          border-radius: 6px;
+          font-size: 14px;
+          color: $secondary-text;
+          
+          &:hover {
+            background-color: #f5f5f5;
+          }
+          &.active {
+            background-color: $accent-color;
+            color: white;
+          }
+        }
+      }
     }
-  }
+    
+    // --- Chhoti Screens ke liye Adjustments ---
+    @media (max-width: 400px) {
+      gap: 8px; // Buttons ke beech ka gap kam karein
+      
+      .filter-button, .more-button {
+            padding: 6px 12px; // Padding kam karein
+            font-size: 13px;   // Font size halka sa chhota karein
+        }
+
+        .dropdown-menu {
+            min-width: 150px; // Dropdown ka size bhi kam karein
+        }
+    }
+    
 }
-
 /* Blog Grid Layout */
 .salon-blog-grid {
   display: grid;
