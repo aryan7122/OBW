@@ -6,7 +6,6 @@ import profile1 from '../../../assets/SALON/hero/profile1.png';
 import profile2 from '../../../assets/SALON/hero/profile2.png';
 import profile3 from '../../../assets/SALON/hero/profile3.png';
 import str from '../../../assets/SALON/hero/str.png';
-import heroImage from '../../../assets/salon/hero/hero-image.png';
 import heroImageMobile from '../../../assets/salon/hero/hero-image-mobile.png';
 
 const featureItems = [
