@@ -261,7 +261,6 @@ const ServicesSection = () => {
     const [dropdownTabs, setDropdownTabs] = useState([]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const containerRef = useRef(null);
-
     const calculateVisibleTabs = () => {
         const screenWidth = window.innerWidth;
         let visibleCount = 6; // default for >= 1400px
@@ -353,8 +352,7 @@ const ServicesSection = () => {
                 )}
             </div>
 
-            <ServicesSlider services={services
-                .filter(service => service.category === activeTab)} />
+            <ServicesSlider services={services.filter(service => service.category === activeTab)} />
 
         </section>
     );

@@ -7,31 +7,31 @@
   .section-header {
     text-align: left;
     margin-bottom: 2rem;
-         padding-left:120px;
-      @media only screen and (max-width: 1400px) {
-        padding-left: 100px;
-      }
-      @media only screen and (max-width: 1300px) {
-        padding-left: 80px;
-      }
-      @media only screen and (max-width: 1200px) {
-        padding-left:  70px;
-      }
-      @media only screen and (max-width: 1100px) {
-        padding-left:  60px;
-      }
-      @media only screen and (max-width: 1000px) {
-        padding-left:  40px;
-      }
-      @media only screen and (max-width: 600px) {
-        padding-left:  30px;
-      }
-      @media only screen and (max-width: 500px) {
-        padding-left:  20px;
-      }
-      @media only screen and (max-width: 400px) {
-        padding-left:  10px;
-      }
+    padding-left: 120px;
+    @media only screen and (max-width: 1400px) {
+      padding-left: 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      padding-left: 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding-left: 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding-left: 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      padding-left: 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      padding-left: 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      padding-left: 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding-left: 10px;
+    }
     .small-title {
       // font-size: clamp(0.8rem, 2vw, 1rem);
       color: #3032b6;
@@ -70,31 +70,31 @@
     position: relative;
     border-radius: 100px;
     // margin: 10px clamp(20px, 8vw, 120px);
-         margin-left:120px;
-      @media only screen and (max-width: 1400px) {
-        margin-left: 100px;
-      }
-      @media only screen and (max-width: 1300px) {
-        margin-left: 80px;
-      }
-      @media only screen and (max-width: 1200px) {
-        margin-left:  70px;
-      }
-      @media only screen and (max-width: 1100px) {
-        margin-left:  60px;
-      }
-      @media only screen and (max-width: 1000px) {
-        margin-left:  40px;
-      }
-      @media only screen and (max-width: 600px) {
-        margin-left:  30px;
-      }
-      @media only screen and (max-width: 500px) {
-        margin-left:  20px;
-      }
-      @media only screen and (max-width: 400px) {
-        margin-left:  10px;
-      }
+    margin-left: 120px;
+    @media only screen and (max-width: 1400px) {
+      margin-left: 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      margin-left: 80px;
+    }
+    @media only screen and (max-width: 1200px) {
+      margin-left: 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      margin-left: 60px;
+    }
+    @media only screen and (max-width: 1000px) {
+      margin-left: 40px;
+    }
+    @media only screen and (max-width: 600px) {
+      margin-left: 30px;
+    }
+    @media only screen and (max-width: 500px) {
+      margin-left: 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      margin-left: 10px;
+    }
 
     .tab-button {
       padding: 0.6rem 1.4rem;
@@ -268,9 +268,9 @@
       height: 465px;
       border-radius: 20px;
       overflow: hidden;
-       @media (max-width: 430px) {
+      @media (max-width: 430px) {
         max-width: 95%;
-       }
+      }
     }
     .service-card {
       scroll-snap-align: start;
@@ -514,34 +514,44 @@
       width: 100%;
       margin-left: -20px;
     }
+    @media (max-width: 1230px) {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      display: flex;
+      .service-card {
+        margin-left: 0 !important;
+        width: 387px;
+        height: 465px;
+      }
+    }
   }
   .card_is_3 {
-    padding: 40px 120px;
+      padding: 40px 120px;
 
-    @media only screen and (max-width: 1400px) {
-      padding: 40px 100px;
-    }
-    @media only screen and (max-width: 1300px) {
-      padding: 30px 80px;
-    }
-    @media only screen and (max-width: 1200px) {
-      padding: 30px 70px;
-    }
-    @media only screen and (max-width: 1100px) {
-      padding: 30px 60px;
-    }
-    @media only screen and (max-width: 1000px) {
-      padding: 40px 40px;
-    }
-    @media only screen and (max-width: 600px) {
-      padding: 40px 30px;
-    }
-    @media only screen and (max-width: 500px) {
-      padding: 30px 20px;
-    }
-    @media only screen and (max-width: 400px) {
-      padding: 30px 10px;
-    }
+      @media only screen and (max-width: 1400px) {
+        padding: 40px 100px;
+      }
+      @media only screen and (max-width: 1300px) {
+        padding: 30px 80px;
+      }
+      @media only screen and (max-width: 1200px) {
+        padding: 30px 70px;
+      }
+      @media only screen and (max-width: 1100px) {
+        padding: 30px 60px;
+      }
+      @media only screen and (max-width: 1000px) {
+        padding: 40px 40px;
+      }
+      @media only screen and (max-width: 600px) {
+        padding: 40px 30px;
+      }
+      @media only screen and (max-width: 500px) {
+        padding: 30px 20px;
+      }
+      @media only screen and (max-width: 400px) {
+        padding: 30px 10px;
+      }
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
@@ -549,7 +559,19 @@
       width: 100%;
       margin-left: -20px;
     }
+    @media (max-width: 1230px) {
+      scroll-snap-align: start;
+      flex: 0 0 auto;
+      display: flex;
+      .service-card {
+        width: 387px;
+        margin-left: 0 !important;
+
+        height: 465px;
+      }
+    }
   }
+
   .btn_slider {
     display: flex;
     align-items: center;
@@ -585,4 +607,39 @@
       background: #ddd;
     }
   }
+  // 
+  .services-slider {
+  
+
+  // First card – left margin (simulate padding-left)
+  // .service-card:first-child {
+  //   margin-left: 120px;
+
+  //   @media (max-width: 1400px) {
+  //     margin-left: 100px;
+  //   }
+  //   @media (max-width: 1000px) {
+  //     margin-left: 20px;
+  //   }
+  //   @media (max-width: 600px) {
+  //     margin-left: 10px;
+  //   }
+  // }
+
+  // Last card – right margin (simulate padding-right)
+  .service-card:last-child {
+    margin-right: 120px;
+
+    @media (max-width: 1400px) {
+      margin-right: 100px;
+    }
+    @media (max-width: 1000px) {
+      margin-right: 20px;
+    }
+    @media (max-width: 600px) {
+      margin-right: 10px;
+    }
+  }
+}
+
 }
