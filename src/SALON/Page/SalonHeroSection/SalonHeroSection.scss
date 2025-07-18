@@ -12,6 +12,9 @@
   background-size: cover;
   background-position: center;
   // background-size: 110%;
+    @media (max-width: 600px) {
+        background-image: url("../../../assets/salon/hero/hero-image-mobile.png") !important;
+    }
   &::before {
     content: "";
     position: absolute;
