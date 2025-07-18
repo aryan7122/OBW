@@ -6,6 +6,8 @@ import profile1 from '../../../assets/SALON/hero/profile1.png';
 import profile2 from '../../../assets/SALON/hero/profile2.png';
 import profile3 from '../../../assets/SALON/hero/profile3.png';
 import str from '../../../assets/SALON/hero/str.png';
+import heroImage from '../../../assets/salon/hero/hero-image.png';
+import heroImageMobile from '../../../assets/salon/hero/hero-image-mobile.png';
 
 const featureItems = [
     'Calm & Hygienic',
@@ -18,7 +20,13 @@ const featureItems = [
 
 const SalonHeroSection = () => {
     return (
-        <section className="salon-hero">
+        <section className="salon-hero"
+          style={{
+    backgroundImage: `url(${window.innerWidth <= 600 ? heroImageMobile : heroImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+        >
            
             {/* <div className="overlay-blur"> */}
             <div className="hero-content overlay-blur">
