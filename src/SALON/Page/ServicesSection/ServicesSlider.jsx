@@ -60,36 +60,36 @@ const ServicesSlider = ({ services }) => {
         const el = containerRef.current;
         if (el) el.scrollBy({ left: 300, behavior: 'smooth' });
     };
-const updateScrollButtons = () => {
-    const el = containerRef.current;
-    if (!el) return;
+    const updateScrollButtons = () => {
+        const el = containerRef.current;
+        if (!el) return;
 
-    const scrollLeft = el.scrollLeft;
-    const maxScrollLeft = el.scrollWidth - el.clientWidth;
+        const scrollLeft = el.scrollLeft;
+        const maxScrollLeft = el.scrollWidth - el.clientWidth;
 
-    setCanScrollLeft(scrollLeft > 10);
-    setCanScrollRight(scrollLeft < maxScrollLeft - 10);
-};
-useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+        setCanScrollLeft(scrollLeft > 10);
+        setCanScrollRight(scrollLeft < maxScrollLeft - 10);
+    };
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
 
-    const handleResizeOrScroll = () => {
+        const handleResizeOrScroll = () => {
+            updateScrollButtons();
+        };
+
+        // Initial check
         updateScrollButtons();
-    };
 
-    // Initial check
-    updateScrollButtons();
+        // Scroll & resize listeners
+        el.addEventListener('scroll', handleResizeOrScroll);
+        window.addEventListener('resize', handleResizeOrScroll);
 
-    // Scroll & resize listeners
-    el.addEventListener('scroll', handleResizeOrScroll);
-    window.addEventListener('resize', handleResizeOrScroll);
-
-    return () => {
-        el.removeEventListener('scroll', handleResizeOrScroll);
-        window.removeEventListener('resize', handleResizeOrScroll);
-    };
-}, [services]);
+        return () => {
+            el.removeEventListener('scroll', handleResizeOrScroll);
+            window.removeEventListener('resize', handleResizeOrScroll);
+        };
+    }, [services]);
 
 
     console.log('😒😒😒😒😒', containerRef)
@@ -118,18 +118,18 @@ useEffect(() => {
             <div className="btn_slider">
                 {showControls && (
                     <button
-  className={`slider-arrow left ${!canScrollLeft ? 'disabled' : ''}`}
-        onClick={scrollLeft}
-        disabled={!canScrollLeft}                     >
+                        className={`slider-arrow left ${!canScrollLeft ? 'disabled' : ''}`}
+                        onClick={scrollLeft}
+                        disabled={!canScrollLeft}                     >
                         <ArrowLeft size={34} />
                     </button>
                 )}
                 {showControls && (
-                    <button 
-                   className={`slider-arrow right ${!canScrollRight ? 'disabled' : ''}`}
-        onClick={scrollRight}
-        disabled={!canScrollRight}
-                     >
+                    <button
+                        className={`slider-arrow right ${!canScrollRight ? 'disabled' : ''}`}
+                        onClick={scrollRight}
+                        disabled={!canScrollRight}
+                    >
                         <ArrowRight size={34} />
                     </button>
                 )}
