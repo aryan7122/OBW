@@ -1,7 +1,7 @@
 // File: SalonHeroSection.jsx
 import React from 'react';
 import './SalonHeroSection.scss';
-import heroImage from '../../../assets/SALON/hero/hero-image.png';
+import heroImage from '../../../assets/SALON/hero/hero-image.webp';
 import profile1 from '../../../assets/SALON/hero/profile1.png';
 import profile2 from '../../../assets/SALON/hero/profile2.png';
 import profile3 from '../../../assets/SALON/hero/profile3.png';
