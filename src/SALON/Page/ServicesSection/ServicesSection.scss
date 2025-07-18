@@ -474,11 +474,12 @@
     @media only screen and (max-width: 400px) {
       padding: 30px 10px;
     }
-
+    margin: 0 auto;
     .service-card {
       width: 100%;
-      margin-left: -20px;
+      // margin-left: -20px;
     }
+   
   }
   .card_is_2 {
     padding: 40px 120px;
@@ -607,6 +608,12 @@
       background: #ddd;
     }
   }
+  .slider-arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
   // 
   .services-slider {
   
@@ -642,4 +649,12 @@
   }
 }
 
+}
+
+
+
+.slider-card_is_1{
+  .btn_slider{
+    display: none;
+  }
 }

@@ -10,19 +10,6 @@ const ServicesSlider = ({ services }) => {
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
 
-    // useEffect(() => {
-    //     const checkScroll = () => {
-    //         const el = containerRef.current;
-    //         if (el && el.scrollWidth > el.clientWidth + 10) {
-    //             setShowControls(true);
-    //         } else {
-    //             setShowControls(false);
-    //         }
-    //     };
-    //     checkScroll();
-    //     window.addEventListener('resize', checkScroll);
-    //     return () => window.removeEventListener('resize', checkScroll);
-    // }, [services]);
 
     useEffect(() => {
         const checkScroll = () => {
@@ -94,7 +81,7 @@ const ServicesSlider = ({ services }) => {
 
     console.log('😒😒😒😒😒', containerRef)
     return (
-        <div className="slider-wrapper">
+        <div className={`slider-wrapper slider-card_is_${services.length}`}>
 
             <div className={`services-slider card_is_${services.length}`} ref={containerRef}>
                 {services.map((service, index) => (
@@ -120,7 +107,8 @@ const ServicesSlider = ({ services }) => {
                     <button
                         className={`slider-arrow left ${!canScrollLeft ? 'disabled' : ''}`}
                         onClick={scrollLeft}
-                        disabled={!canScrollLeft}                     >
+                        disabled={!canScrollLeft}
+                    >
                         <ArrowLeft size={34} />
                     </button>
                 )}
