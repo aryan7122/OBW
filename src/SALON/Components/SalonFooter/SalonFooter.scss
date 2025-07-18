@@ -192,8 +192,10 @@ border-top: 1px solid #FFFFFF;
   // Legal links container
   &__legal-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     font-size: 14px;
+     
     
     a {
       color: #a0a0a0;
