@@ -22,23 +22,22 @@ const FabulousSection = () => {
                 </div>
                 <div className="content-container">
                     <span className="label">VALUES</span>
-                    <h2 className="title">Ready to embrace your fabulous side?</h2>
+                    <h2 className="title">Step Into Your Most Confident Self </h2>
                     <p className="description">
-                        Are you ready to unleash your fabulous side? Dive into a world where
-                        style meets confidence, and let your true colors shine!
+                        More than a space, it’s a feeling. At OBW, we celebrate individuality, elegance, and the power of feeling truly you
                     </p>
                     <ul className="features">
                         <li>
-                            <span className="arrow"><MoveRight /></span> Contemporary and roomy spaces
+                            <span className="arrow"><MoveRight /></span> Thoughtfully designed, calming interiors 
                         </li>
                         <li>
-                            <span className="arrow"><MoveRight /></span> Clean and tidy space
+                            <span className="arrow"><MoveRight /></span> Impeccable hygiene standards you can trust
                         </li>
                         <li>
-                            <span className="arrow"><MoveRight /></span> Situated in top-rated areas
+                            <span className="arrow"><MoveRight /></span> Located in premium, well-connected areas 
                         </li>
                         <li>
-                            <span className="arrow"><MoveRight /></span> Unique and opulent atmosphere
+                            <span className="arrow"><MoveRight /></span> A luxurious vibe that feels like home
                         </li>
                     </ul>
                 </div>

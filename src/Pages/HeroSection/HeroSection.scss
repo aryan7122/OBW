@@ -112,7 +112,7 @@
       }
     }
     h1 {
-      width: 667px;
+      width: 627px;
       // font-family: "Ubuntu Condensed", serif;
       // font-family: "Unbounded", serif;
       font-optical-sizing: auto;
@@ -218,7 +218,7 @@
     }
 
     p {
-      width: 514px;
+      width: 544px;
       font-family: "Geist";
       font-weight: 400;
       font-size: 16px;
@@ -298,8 +298,8 @@
         transition: 0.3s ease-in-out;
 
         &:hover {
-          background: #00575d;
-          color: #fff;
+          background: #fff;
+          color: #5b2f2f;
 
           .arrow-icon {
             background: #5b2f2f;
@@ -312,13 +312,13 @@
         }
 
         .arrow-icon {
-          color: #fff;
+          color: #000;
           width: 35.67px;
           height: 35.67px;
           padding: 5px;
           border-radius: 100px;
           margin-left: 8px;
-          background: #00575d;
+          background: #fff;
         }
       }
 

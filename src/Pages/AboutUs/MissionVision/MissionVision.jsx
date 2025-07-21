@@ -25,7 +25,9 @@ const MissionVision = () => {
                 </div>
                 <div className="content-wrapper">
                     <div className="left-content">
-                        <p>We’re here to lead the shift from beauty trends to true skin wellness, where results are real, care is personal, and confidence is rooted in clarity. At OBW Clinic, our purpose is simple: to help every individual feel at home in their skin through honest guidance, science-backed treatments, and an experience that feels as good as it works.</p>
+                        <p>
+                            We’re here to lead the shift from beauty trends to true skin wellness, where results are real, care is personal, and confidence is rooted in clarity. At OBW Clinic, our purpose is simple: to help every individual feel at home in their skin through honest guidance, science-backed treatments, and an experience that feels as good as it works.
+                        </p>
                         <div className="stats">
 
                             <div className="cards">

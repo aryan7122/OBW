@@ -41,8 +41,8 @@ const LocationSection = () => {
                     Our Salon <img src={icon1} /> Locations
                 </h2>
                 <p>
-                    Welcome to our salon! With multiple locations, we provide a relaxing experience with expert care. From haircuts to spa services, our skilled team is here to make you look and feel your best.
-                </p>
+ Whether it's a body or haircare, we’re here to help you feel great!
+                 </p>
             </div>
             <div className="mapCard">
                 <div className="location-list">
@@ -54,7 +54,7 @@ const LocationSection = () => {
                         >
                             <h3>{location.name}</h3>
                             <p>{location.address}</p>
-                            <button>View Location</button>
+                            <button>View Map</button>
                         </div>
                     ))}
                 </div>

@@ -147,17 +147,15 @@ const TeamSection = () => {
         <div className="teams-header">
           <div className="head-title-team">
             <h2>
-              Our
+            The Experts    
               {'  '}
               <img src={icon7} alt=""
                 /> {' '}
-              qualified & experienced team
+            Behind Your Glow 
             </h2>
             <p>
-              At OBW Clinic, our team provides compassionate mental health support tailored to you.
-              {/* At OBW, we have a diverse team with a broad range of expertise. We
-              are committed to providing high quality and compassionate mental
-              health support to meet your needs. */}
+             Our team is skilled, caring, and focused on giving you results that look great and feel even better
+             
             </p>
           </div>
           {/* <button className="view-all"

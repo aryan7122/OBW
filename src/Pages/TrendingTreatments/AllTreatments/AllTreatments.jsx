@@ -46,7 +46,7 @@ import imgLipolyticInjection2 from '../../../assets/TrendingTreatments/Laser lip
 
 import imgLaserLipolysis from '../../../assets/TrendingTreatments/img (6).jpg';
 import imgOzempicInjections from '../../../assets/TrendingTreatments/Ozempic injections.jpg';
-import imgBotoxForSweating from '../../../assets/TrendingTreatments/Botox for sweating.png';
+import imgBotoxForSweating from '../../../assets/TrendingTreatments/Botox for sweating.webp';
 import imgRFCautery from '../../../assets/TrendingTreatments/RF Cautery.jpg';
 import imgDermapenMicroneedling2 from '../../../assets/TrendingTreatments/DermapenMicroneedling.jpg';
 import imgTCACross from '../../../assets/TrendingTreatments/TCA Cross.png';

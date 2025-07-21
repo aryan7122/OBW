@@ -46,14 +46,15 @@ const HeroSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
-                        >Experience true elegance & indulge in  <span>sophistication</span></motion.h1>
+                        >Redefining Beauty with <span>Heart & Science </span></motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             viewport={{ once: true, amount: 0.5 }}
                         >
-                            At OBW, we blend luxury and personalized skincare to rejuvenate your beauty. Discover the artistry of our expert team dedicated to your unique needs.
+                           At OBW Clinic, we don’t just treat skin; we also heal self-doubt, nurture confidence, and help you fall in love with yourself all over again. 
+                           
                         </motion.p>
                         <motion.div className="buttons"
                             initial={{ opacity: 0, y: 30 }}

@@ -26,12 +26,12 @@ const iconsMap = {
 
 
 import Anti_Aging_img from '../../assets/TrendingTreatments/fliii.jpg'
-import Dark_circles_img from '../../assets/TrendingTreatments/Dark circles.jpg'
-import active_anc_img from '../../assets/TrendingTreatments/active-anc.jpg'
-import Lip_pegmentation_img from '../../assets/TrendingTreatments/Lip pegmentation.jpg'
-import Dehydration_img from '../../assets/TrendingTreatments/Dehydration.jpg'
-import Enlarged_pores_img from '../../assets/TrendingTreatments/Enlarged pores & uneven texture.jpg'
-import Dark_spots_img from '../../assets/TrendingTreatments/Dark spots.jpg'
+import Dark_circles_img from '../../assets/TrendingTreatments/Dark circles.webp'
+import active_anc_img from '../../assets/TrendingTreatments/active-anc.webp'
+import Lip_pegmentation_img from '../../assets/TrendingTreatments/Lip pegmentation.webp'
+import Dehydration_img from '../../assets/TrendingTreatments/Dehydration.webp'
+import Enlarged_pores_img from '../../assets/TrendingTreatments/Enlarged pores & uneven texture.webp'
+import Dark_spots_img from '../../assets/TrendingTreatments/Dark spots.webp'
 import Saggy_skin_img from '../../assets/TrendingTreatments/Saggy skin.jpg'
 import Scar_reduction_img from '../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg'
 
@@ -39,7 +39,7 @@ import Scar_reduction_img from '../../assets/TrendingTreatments/Scar Revision or
 
 import Hair_fall_img from '../../assets/TrendingTreatments/Scalp and hair concerns/Rectangle 3463672.png'
 import hair_loss_img from '../../assets/TrendingTreatments/Scalp and hair concerns/2149106294 (Small).jpg'
-import Baldness_img from '../../assets/TrendingTreatments/Scalp and hair concerns/man-with-hair-loss-problems-derma-roller-hair-loss-stop-balding-alopecia-isolated-white.jpg'
+import Baldness_img from '../../assets/TrendingTreatments/Scalp and hair concerns/man-with-hair-loss-problems-derma-roller-hair-loss-stop-balding-alopecia-isolated-white.webp'
 import alopecia_img from '../../assets/TrendingTreatments/Scalp and hair concerns/alopecia.jpg'
 import dandruff_img from '../../assets/TrendingTreatments/Scalp and hair concerns/dandruff-woman-s-dark-hair (Small).jpg'
 import psoriasis_img from '../../assets/TrendingTreatments/Scalp and hair concerns/closeup_psoriasis_on_nape_1604751312 (Small).jpg'
@@ -444,7 +444,7 @@ function ClinicalConcerns() {
         <span className="concerns-label">CONCERNS</span>
         <h2 className="section-title">
           {/* Top Options To Concerns <span className="highlight-text">Meet All Your Requirements</span> */}
-          Top Treatments to  <img src={IconAdd} alt="add-icon" />     meet all your requirements
+        Crafted Care for  <img src={IconAdd} alt="add-icon" />      Every Part of You     
         </h2>
       </div>
       <div className="tabs_main">

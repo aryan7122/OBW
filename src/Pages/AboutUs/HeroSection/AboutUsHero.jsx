@@ -24,14 +24,10 @@ const AboutUsHero = () => {
         <div className="element5"></div>
         <div className="content_box">
           <div className="content">
-            <h1>Transforming Your Skin,<span> Elevating Your Confidence</span></h1>
+            <h1>Our Story: Excellence in 
+<span> Beauty and Wellness</span></h1>
             <p>
-              OBW Clinic enhances natural beauty and well-being through advanced
-              aesthetic and skin care solutions. Founded with a vision to provide
-              premium, result-driven treatments, our clinic offers a comprehensive
-              range of services, including skin brightening, anti-aging solutions,
-              laser treatments, chemical peels, PRP therapy, HydraFacial, body
-              contouring, and much more.
+             We are revolutionizing the world of skin and hair care by offering personalized solutions that cater to individual needs, all while harnessing the power of advanced technology to ensure optimal results.
             </p>
             {/* <button></button> */}
           </div>

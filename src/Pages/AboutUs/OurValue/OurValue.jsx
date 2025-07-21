@@ -5,22 +5,23 @@ import "./OurValue.scss";
 import { useNavigate } from "react-router-dom";
 import fallStr from '../../../assets/about/fallStr.svg';
 import WebPImage from "../../../util/WebPImage";
-import img2 from '../../../assets/TrendingTreatments/Personalized & Holistic Approach-min.jpg'
-import img3 from '../../../assets/TrendingTreatments/Commitment to Safety & Quality-min.jpg'
+import img1 from '../../../assets/about/Stylized Portrait of a Woman with Flowers.webp'
+import img2 from '../../../assets/about/Serene Woman with Flower.webp'
+import img3 from '../../../assets/about/Serene Woman with Flower (1).webp'
 const treatments = [
     {
-        title: "Excellence in Aesthetics",
-        description: "We combine advanced technology with expert care to deliver high-quality, result-driven treatments. ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Exosome_Therapy_for_Skin_Scalp-min_yykqhj",
+        title: "More Than Skin Deep ",
+        description: "We combine advanced technology with caring, skilled professionals. It’s not just about results, it’s about making sure you feel safe, relaxed, and supported throughout your journey. ",
+        image: img1,
     },
     {
-        title: "Personalized & Holistic Approach",
-        description: "Every client is unique, and we customize our treatments to meet individual beauty and wellness goals. ",
+        title: "Honest Beauty, Real Results ",
+        description: "We don’t chase trends. We focus on what’s right for your skin using expert knowledge and the latest methods to give you visible, lasting results. ",
         image: img2,
     },
     {
-        title: "Commitment to Safety & Quality ",
-        description: "We use only clinically tested, dermatologically safe products and FDA-approved procedures to ensure the best care.",
+        title: "Safety Comes First ",
+        description: "We never take shortcuts. All our products are tested, all our machines are certified, and all our treatments are done by trained experts because your trust matters to us. ",
         image: img3,
     },
 ];
@@ -36,11 +37,10 @@ const OurValue = () => {
             <div className="title-sbt">Our Values</div>
             <header className="heading-section">
                 <h1 className="trending-title">
-                    What We  <span className="heart"><img src={fallStr} alt="" /></span>      Stand For
+                  What OBW    <span className="heart"><img src={fallStr} alt="" /></span>      Clinic Truly Believes In  
                 </h1>
                 <p className="description">
-                    At OBW Clinic, we believe in delivering exceptional care, transformative results, and a holistic approach to beauty and wellness. Our mission is to provide safe, effective, and personalized treatments that enhance confidence and well-being.
-                </p>
+At OBW Clinic, we don’t just care for your skin; we care for your confidence, self-worth, and overall well-being. Every appointment, every conversation, and every result are centered around you, your story, your goals, and your comfort.                 </p>
             </header>
 
             <div className="cards-container">

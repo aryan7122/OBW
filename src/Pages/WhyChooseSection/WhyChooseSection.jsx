@@ -17,10 +17,10 @@ const WhyChooseSection = () => {
         <section className="why-choose-section">
             <div className="content-container">
                 <h2 className="title">
-                    Why Choose
+                Why OBW is      
                     {' '}
                     <img src={icon1}
-                       />  {' '} OBW?
+                       />  {' '}the Right Choice
                 </h2>
                 <p className="description">
                     {/* At OBW Clinic, we are committed to providing expert-driven, result-oriented aesthetic treatments tailored to your unique needs. Our team of skilled dermatologists and specialists uses cutting-edge technology to ensure safe, effective, and long-lasting results. We believe in a holistic approach to beauty and wellness, combining science-backed treatments with personalized care. Our clinic uses premium, dermatologically tested products, ensuring the highest quality standards for your skin and body. With a luxurious and comfortable ambiance, we strive to make every visit a rejuvenating experience.

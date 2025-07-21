@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.scss";
-import { FaFacebook, FaInstagram } from "react-icons/fa"; // Keep only used icons
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Keep only used icons
 import logo from '../../assets/footer/logo.png';
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from 'lucide-react'; // Assuming you use lucide-react for ArrowRight
@@ -46,7 +46,7 @@ const Footer = () => {
                     <h4>COMPANY:</h4>
                     <ul>
                         <li><a onClick={() => HandleNavigation("/about")}>About us</a></li>
-                        <li><a onClick={() => HandleNavigation("/treatments")}>Treatments</a></li>
+                        <li><a onClick={() => HandleNavigation("/treatment")}>Treatments</a></li>
                         <li><a onClick={() => HandleNavigation("/contact")}>Contact US</a></li>
                         <li><a onClick={() => HandleNavigation("/blogs")}>Blogs</a></li>
                     </ul>
@@ -85,6 +85,9 @@ const Footer = () => {
                         </a>
                         <a href="https://www.instagram.com/obwclinic?igsh=MTQxM2phdWZoZTRreA==" target="_blank" rel="noopener noreferrer">
                             <FaInstagram className="icon" />
+                        </a>
+                        <a href="https://www.youtube.com/@ObwSalon" target="_blank" rel="noopener noreferrer">
+                            <FaYoutube className="icon" />
                         </a>
                     </div>
                </div>

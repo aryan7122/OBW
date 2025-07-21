@@ -10,14 +10,14 @@ import img5 from '../../assets/ClassicDeals/Luxury Cosmetic Arrangement 1.png'
 
 const offers = [
   {
-    title: 'Upto 25% OFF',
+    title: 'Upto 50% OFF',
     subtitle: 'on all services',
     bgColor: '#2f2f2f',
     image: img1,
   },
   {
-    title: 'BUY 1 GET 1 FREE',
-    subtitle: 'Dull skin worries\nTry our beauty facial',
+    title: 'BUY 5 GET 2 FREE',
+    subtitle: 'any iv therapy drips\nTry our beauty facial',
     bgColor: '#7b4440',
     image: img2,
   },
@@ -28,16 +28,16 @@ const offers = [
     image: img3,
   },
   {
-    title: 'Flat 50% OFF',
-    subtitle: 'Clinical products',
+    title: 'Flat 35% off',
+    subtitle: '4. full body laser hair reduction',
     bgColor: '#081361',
-    image: img4,
+    image: img5,
   },
   {
-    title: 'Hairfall problem?',
-    subtitle: 'Flat 30% off\nOn hair care services',
+    title: 'Buy 2 hydra facial',
+    subtitle: 'just  Rs. 4999',
     bgColor: '#892245',
-    image: img5,
+    image: img4,
   },
 ];
 
