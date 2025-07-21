@@ -290,7 +290,7 @@
           width: 100%;
         }
         img {
-          width: clamp(20px, 4vw, 35px);
+          width: clamp(18px, 4vw, 30px);
           
         }
     
@@ -309,6 +309,7 @@
         max-width: clamp(320px, 50vw, 480px);
         text-align: right;
         // padding-top: clamp(1rem, 2vw, 1.5rem);
+          text-transform:  initial;
     
         @media (max-width: 1240px) {
           text-align: left !important;
@@ -375,6 +376,7 @@
   }
 
   .team-stats {
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
@@ -384,6 +386,7 @@
     }
     @media only screen and (max-width: 800px) {
       grid-template-columns: 1fr;
+      margin-top: 35px;
     }
     .stat-item {
       background-color: #fff;
