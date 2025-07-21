@@ -166,7 +166,6 @@
       justify-content: flex-start;
       align-items: center;
       gap: 20px;
-
       @media (max-width: 768px) {
         flex-direction: column;
         align-items: stretch;
@@ -206,19 +205,24 @@
       .filter-dropdown-wrapper {
         display: flex;
         gap: 15px;
-
         @media (max-width: 768px) {
           width: 100%;
-          justify-content: flex-start;
+          min-width: 400px;
+          max-width: 400px;
+          justify-content: space-between;
         }
-        @media (max-width: 400px) {
+         @media (max-width: 445px) {
           flex-direction: column;
+          min-width: 100%;
+          max-width: 100%;
         }
 
         .filter-dropdown {
           position: relative;
           width: 180px;
-
+          @media (max-width: 768px) {
+            width: 100%;
+          }
           @media (max-width: 400px) {
             width: 100%;
           }
@@ -278,14 +282,14 @@
             line-height: 16px;
             letter-spacing: 0%;
             @media (max-width: 480px) {
-            @media (max-width: 480px) {
-              margin-left: -15px;
+              @media (max-width: 480px) {
+                margin-left: -15px;
+              }
+              @media (max-width: 480px) {
+                margin-left: 0;
+                width: 100%;
+              }
             }
-            @media (max-width: 480px) {
-              margin-left: 0;
-              width: 100%;
-            }
-          }
             .dropdown-item {
               display: flex !important;
               flex-direction: row-reverse;
@@ -344,7 +348,7 @@
 
   //
   .navtab {
-    border-bottom: 1px solid #E8E8E8;
+    border-bottom: 1px solid #e8e8e8;
     margin-top: 20px;
     overflow-x: scroll !important;
     @media only screen and (max-width: 840px) {
