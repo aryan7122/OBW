@@ -27,7 +27,7 @@ const Location = () => {
                     </p>
                 </div>
                 <button className="get-in-touch" onClick={() => HandleNavigation("/contact")}>
-                    Get In Touch <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                    Get In Touch <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                 </button>
             </header>
             <div className="breadcrumb">

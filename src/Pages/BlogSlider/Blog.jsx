@@ -304,7 +304,7 @@ function Blog() {
     setCurrentPage(1);
   }, [selectedCategory]);
   return (
-    <>
+    <div className="clinic_blog_p">
       <div className="blog-page">
         <div className="content_top">
           <div>
@@ -312,11 +312,11 @@ function Blog() {
             <h2 className="slider-heading">
               Latest <WebPImage src={Frame} alt="" /> Insights
             </h2>
-            <p className="slider-subheading">
+            {/* <p className="slider-subheading">
               Explore in-depth expert advice, insightful tips, and the most
               current trends in skincare, haircare, and a variety of aesthetic
               treatments to enhance your beauty routine.
-            </p>
+            </p> */}
           </div>
         </div>
         {/* Category Filter */}
@@ -415,7 +415,7 @@ function Blog() {
           </button>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

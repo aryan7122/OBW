@@ -16,7 +16,7 @@ const FirstStep = () => {
                 </h1>
             </div>
             <p>Contact us today to enquire about our services or to book an appointment</p>
-            <button className="view-all" onClick={() => HandleNavigation("/contact")} >Contact us  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+            <button className="view-all" onClick={() => HandleNavigation("/contact")} >Contact us  <ArrowRight className="arrow-icon" size={20} strokeWidth={2} /></button>
 
         </div>
     )

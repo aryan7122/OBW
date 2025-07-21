@@ -2,18 +2,18 @@
 import React from 'react';
 
 import './InfinityScrollGallery.scss';
-import img1 from '../../../assets/InfinityScrollGallery/img (1).jpg'
-import img2 from '../../../assets/InfinityScrollGallery/img (2).png'
-import img3 from '../../../assets/InfinityScrollGallery/img (3).jpg'
-import img4 from '../../../assets/InfinityScrollGallery/img (4).png'
-import img5 from '../../../assets/InfinityScrollGallery/img (5).png'
-import img6 from '../../../assets/InfinityScrollGallery/img (6).png'
-import img7 from '../../../assets/InfinityScrollGallery/img (7).png'
-import img8 from '../../../assets/InfinityScrollGallery/img (8).png'
-import img9 from '../../../assets/InfinityScrollGallery/img (9).jpg'
-import img10 from '../../../assets/InfinityScrollGallery/img (10).png'
-import img11 from '../../../assets/InfinityScrollGallery/img (11).png'
-import img12 from '../../../assets/InfinityScrollGallery/img (12).png'
+import img1 from '../../../assets/InfinityScrollGallery/img (1).webp'
+import img2 from '../../../assets/InfinityScrollGallery/img (2).webp'
+import img3 from '../../../assets/InfinityScrollGallery/img (3).webp'
+import img4 from '../../../assets/InfinityScrollGallery/img (4).webp'
+import img5 from '../../../assets/InfinityScrollGallery/img (5).webp'
+import img6 from '../../../assets/InfinityScrollGallery/img (6).webp'
+import img7 from '../../../assets/InfinityScrollGallery/img (7).webp'
+import img8 from '../../../assets/InfinityScrollGallery/img (8).webp'
+import img9 from '../../../assets/InfinityScrollGallery/img (9).webp'
+import img10 from '../../../assets/InfinityScrollGallery/img (10).webp'
+import img11 from '../../../assets/InfinityScrollGallery/img (11).webp'
+import img12 from '../../../assets/InfinityScrollGallery/img (12).webp'
 
 const imageUrls = [
     img1, img2, img3,img4,img5,img6,img7,img8,img9,img10,img11,img12

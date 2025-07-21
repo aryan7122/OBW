@@ -177,7 +177,7 @@ const ContactForm = () => {
                                 
                             Book Now
                         </span>
-                            {/* <ArrowRight className="arrow-icon" size={16} strokeWidth={3} /> */}
+                            {/* <ArrowRight className="arrow-icon" size={16} strokeWidth={2} /> */}
                         </button>
                     </form>
                 </div>

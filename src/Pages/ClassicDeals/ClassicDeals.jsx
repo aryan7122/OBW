@@ -70,7 +70,7 @@ const ClassicDeals = () => {
               <h3>{offer.title}</h3>
               {offer.subtitle && <p>{offer.subtitle}</p>}
               <button className="Book-Now btn">
-                Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
               </button>
             </div>
             <img src={offer.image} alt="deal" className="deal-img" />
@@ -93,7 +93,7 @@ const ClassicDeals = () => {
               }
               <button className="Book-Now btn">
                 <span>
-                  Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                  Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                 </span>
               </button>
             </div>
@@ -107,7 +107,7 @@ const ClassicDeals = () => {
       {/* <div className="see-all">
         <button className="see-all-btn btn">
           <span>
-          See All Offers <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+          See All Offers <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
           </span>
         </button>
       </div> */}

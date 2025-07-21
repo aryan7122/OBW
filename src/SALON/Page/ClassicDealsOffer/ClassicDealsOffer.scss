@@ -250,10 +250,10 @@
       z-index: 2;
     }
 
-    .Book-Now {
+    .Book__Now {
       position: absolute;
       bottom: 20px;
-      padding: 5px 5px 5px 20px;
+      padding: 3px 3px 3px 15px !important;
       background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
       color: #fff;
       border: 1px solid transparent;
@@ -267,14 +267,15 @@
       line-height: 24px;
       cursor: pointer;
       transition: 0.3s linear;
-      height: 40px;
+      height: 28px !important;
       z-index: 1;
+      width: fit-content;
       .arrow-icon {
         background: #fff;
         color: #0056b3;
         border-radius: 100px;
-        width: 30px;
-        height: 30px;
+        width: 20px !important;
+        height: 20px !important;
         padding: 5px;
         transition: 0.3s linear;
       }

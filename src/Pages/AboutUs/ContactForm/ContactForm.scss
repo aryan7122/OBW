@@ -237,6 +237,7 @@
         }
 
         .radio-section {
+         
           .radio-options {
             width: 10px !important;
             height: 10px !important;
@@ -244,7 +245,8 @@
             align-items: center;
             gap: 1rem;
             .radio1{
-              
+              border-radius: 100px !important;
+              // background: red;
             }
           }
         }
@@ -277,6 +279,9 @@
       .submit-btn {
         margin-top: 2rem;
         padding: 8px 30px 8px 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center !important;
         margin-top: 40px;
         background-color: #007bff;
         color: #fff;

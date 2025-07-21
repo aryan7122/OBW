@@ -6,11 +6,12 @@ import WebPImage from "../../util/WebPImage";
 import img1 from '../../assets/WhyChooseSection/007A0853_11zon.jpg'
 import img2 from '../../assets/WhyChooseSection/Personalized Solutions_11zon.jpg'
 import img3 from '../../assets/WhyChooseSection/0K6A5904_11zon.jpg'
+import icon1 from '../../assets/WhyChooseSection/ok.svg'
 const WhyChooseSection = () => {
     // const img2= "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/eimccgamvas1fxy1vy"
     // const img1="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/upimjxgdcs7vitbylan9"
     // const img3="https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/xir8lh6mqwa8q1iwjukk"
-    const icon1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/cwlr9yev7jiiwy7575u0"
+    // const icon1 = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/cwlr9yev7jiiwy7575u0"
 
     return (
         <section className="why-choose-section">
@@ -19,10 +20,7 @@ const WhyChooseSection = () => {
                     Why Choose
                     {' '}
                     <img src={icon1}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true, amount: 0.2 }} />  {' '} OBW?
+                       />  {' '} OBW?
                 </h2>
                 <p className="description">
                     {/* At OBW Clinic, we are committed to providing expert-driven, result-oriented aesthetic treatments tailored to your unique needs. Our team of skilled dermatologists and specialists uses cutting-edge technology to ensure safe, effective, and long-lasting results. We believe in a holistic approach to beauty and wellness, combining science-backed treatments with personalized care. Our clinic uses premium, dermatologically tested products, ensuring the highest quality standards for your skin and body. With a luxurious and comfortable ambiance, we strive to make every visit a rejuvenating experience.

@@ -18,7 +18,7 @@ function Navbar() {
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 650) {
-                setScrolled(true);
+                // setScrolled(true);
 
             } else {
                 setScrolled(false);
@@ -49,7 +49,8 @@ function Navbar() {
     // white bg
     const bgBlur = ['treatment'];
     const isbgBlur = bgBlur.some((path) => location.pathname.includes(path));
-    const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service'];
+    // const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service'];
+    const whiteBg =[]
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
     const [showModal, setShowModal] = useState(false);
     const handleBookNowClick = () => {
@@ -91,7 +92,7 @@ function Navbar() {
                         ? <>
                             <button className="appointment-button btn" onClick={handleBookNowClick}>
                                 <span>
-                                    Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                    Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                                 </span>
                             </button>
                             {/* <Search className="search-icon" size={24} onClick={toggleSearchBar} /> */}

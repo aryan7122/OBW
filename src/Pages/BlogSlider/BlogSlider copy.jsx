@@ -113,7 +113,7 @@ const BlogSlider = () => {
                     </div>
                     <button className="view-all btn" onClick={() => HandleNavigation('/blogs')}>
                         <span>
-                            See All Blogs <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                            See All Blogs <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                         </span>
                     </button>
                 </div>
@@ -148,13 +148,13 @@ const BlogSlider = () => {
                         <div className="progress-bar" style={{ width: `${progressWidth}%` }}></div>
                     </div>
                     <button className="nav-btn left" onClick={() => setCurrentIndex(Math.max(currentIndex - 1, 0))}>
-                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                     <button
                         className="nav-btn right"
                         onClick={() => setCurrentIndex(Math.min(currentIndex + 1, blogs.length - Math.floor(cardsToShow)))}
                     >
-                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 </div>
             </div>

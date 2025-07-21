@@ -178,7 +178,7 @@ const AllTreatments = () => {
                                 <button onClick={handleBookNowClick} className="book-now btn">
                                     <span> 
                                     Book Now
-                                    {/* <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /> */}
+                                    {/* <ArrowRight className="arrow-icon" size={20} strokeWidth={2} /> */}
                                 </span>
                                 </button>
                             </div>
@@ -187,7 +187,7 @@ const AllTreatments = () => {
                 </div>
                 <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < filteredData.length ? handleLoadMore : handleLoadLess}>
                     {visibleCount < filteredData.length ? "Load More" : "Load Less"}
-                    <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                    <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                 </button>
             </div>
             {showModal && <BookAppointment onClose={closeModal} />}

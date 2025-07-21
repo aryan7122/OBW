@@ -99,8 +99,8 @@ const ClassicDealsOffer = () => {
                 <div className="text-content">
                   <h3>{offer.title}</h3>
                   {offer.subtitle && <p>{offer.subtitle}</p>}
-                  <button className="Book-Now btn">
-                    Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                  <button className="Book__Now btn">
+                    Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                   </button>
                 </div>
                 <img src={offer.image} alt="deal" className="deal-img" />

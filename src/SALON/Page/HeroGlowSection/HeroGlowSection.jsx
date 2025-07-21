@@ -41,7 +41,7 @@ export default function HeroGlowSection() {
             <div className="hero-buttons">
                 <button className="btn-primary btn">
                     <span>
-                        Book Appointment  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        Book Appointment  <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </span>
                 </button>
                 <a className="btn-link">

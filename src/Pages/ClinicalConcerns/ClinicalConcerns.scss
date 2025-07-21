@@ -3,7 +3,17 @@
   background: linear-gradient(179.02deg, #fff0df 60.94%, #f3feff 104.22%);
   // padding: clamp(0rem, 0vw, 8rem);
   padding: 60px 120px;
+ min-height: 1700px;
  
+//  border: 1px solid red !important;
+ @media only screen and (max-width: 870px){
+   min-height: 1750px;
+
+ }
+ @media only screen and (max-width: 700px){
+   min-height: 1800px;
+
+ }
 @media only screen and (max-width: 1400px) {
   padding: 40px 100px;
 }
@@ -56,10 +66,11 @@
       letter-spacing: -2.5px;
       text-transform: capitalize;
       text-align: left;
-      background: linear-gradient(135.34deg, #643434 5.18%, #010066 74.19%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      // background: linear-gradient(135.34deg, #643434 5.18%, #010066 74.19%);
+      // -webkit-background-clip: text;
+      // -webkit-text-fill-color: transparent;
       display: flex;
+      color: #171717;
       gap: 10px;
       margin-top: 10px;
       @media (max-width: 1050px) {
@@ -81,6 +92,12 @@
     margin-bottom: 40px;
     overflow-x: auto;
     overflow-y: hidden !important ;
+      @media only screen and (max-width: 1170px){
+        height: 45px;
+      }
+      @media only screen and (max-width: 900px){
+        height: 40px;
+      }
   }
   .tabs-navigation {
     display: flex;
@@ -121,7 +138,7 @@
 
       &.active {
         color: #5b2f2f;
-        border-bottom: 2px solid #5b2f2f;
+        border-bottom: 2px solid #5b2f2f !important;
         // box-shadow: 0px 12px 20px -8px rgba(0, 0, 0, 0.1);
         box-shadow: 0px 10px 25px -10px #5b2f2f1c;
         font-weight: 500;
@@ -259,9 +276,22 @@
             transition: 0.3s linear;
             white-space: nowrap; // Prevent button text from wrapping
             // width: fit-content;
+            @media only screen and (max-width: 870px) {
+              right: -35%;
+            }
+            @media only screen and (max-width: 700px) {
+              right: -32%;
+            }
+            @media only screen and (max-width: 600px) {
+              right: -30%;
+            }
+            @media only screen and (max-width: 550px) {
+              right: -28%;
+            }
             @media only screen and (max-width: 500px) {
               padding: 5px 6px 5px 15px;
               font-size: 14px;
+              right: -25%;
               // bottom: 10px; // Adjust for smaller screens
               // right: 10px; // Adjust for smaller screens
             }

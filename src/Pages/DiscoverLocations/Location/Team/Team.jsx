@@ -51,7 +51,7 @@ const Team = () => {
                         Step into our salon for a rejuvenating experience! With multiple locations, our skilled professionals are committed to enhancing your beauty and confidence. Whether it’s a haircut, color treatment, or spa service, our team ensures top-notch care. Treat yourself today!
                     </p>
                 </div>
-                {/* <button className="view-all">Get In touch  <ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button> */}
+                {/* <button className="view-all">Get In touch  <ArrowRight className="arrow-icon" size={20} strokeWidth={2} /></button> */}
             </div>
 
 
@@ -87,10 +87,10 @@ const Team = () => {
 
                 <div className="progress">
                     <button className="nav-btn left" onClick={handlePrevious} disabled={currentIndex === 0}>
-                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                     <button className="nav-btn right" onClick={handleNext} disabled={currentIndex >= data.length - visibleCards}>
-                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 </div>
             </div>

@@ -161,7 +161,7 @@ function App() {
                         <FabulousSection />
                         <ClassicDeals />
                         <BlogSlider />
-                        <HappyClients />
+                        {/* <HappyClients /> */}
                         {/* <FAQSection /> */}
                         {/* <FirstStep /> */}
                         <BannerSectionSalon />

@@ -92,7 +92,7 @@ const ServicesSlider = ({ services }) => {
                             <hr className="divider" />
                             <div className="bottom-info">
                                 <span className="price">Rs.{service.price} <p>Onwards</p></span>
-                                <button className="book-btn btn">
+                                <button className="book-btn ">
                                     <span>
                                         Book Appointment
                                     </span>

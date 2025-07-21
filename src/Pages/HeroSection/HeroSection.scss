@@ -5,11 +5,15 @@
   overflow: hidden;
   background: linear-gradient(
     180deg,
-    #ffffff 0%,      // top pure white
-    #fdf5ec 30%,     // soft center tone
-    #fdf0df 50%,     // hold that peach in middle
-    #504cff66 100%   // bottom slight bluish glow
-  );  background-size: cover;
+    #ffffff 0%,
+    // top pure white
+    #fdf5ec 30%,
+    // soft center tone
+    #fdf0df 50%,
+    // hold that peach in middle
+    #504cff66 100% // bottom slight bluish glow
+  );
+  background-size: cover;
   background-blend-mode: multiply;
 
   .hero_bg {
@@ -47,7 +51,7 @@
       padding-left: 60px;
     }
     @media only screen and (max-width: 1000px) {
-      padding-left: 20px ;
+      padding-left: 20px;
     }
     @media only screen and (max-width: 1200px) {
       padding-left: 40px;
@@ -64,8 +68,48 @@
       margin-top: 100px;
     }
     @media only screen and (max-width: 420px) {
-     
       margin-top: 170px;
+    }
+    .social_media_icon {
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(
+          128.1% 243.86% at 115.57% 146.38%,
+          rgba(255, 255, 255, 0.08) 24.26%,
+          rgba(153, 153, 153, 0.08) 62.72%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      width: fit-content;
+      padding: 10px;
+      border-radius: 20px;
+      gap: 15px;
+      position: absolute;
+      margin-left: -6%;
+      margin-top: 10%;
+      transition: 0.3s linear;
+      @media only screen and (max-width: 1200px){
+        margin-left: 0;
+        flex-direction: row;
+        bottom: 20px;
+          background: radial-gradient(
+          128.1% 243.86% at 115.57% 146.38%,
+          rgba(255, 255, 255, 0.179) 24.26%,
+          rgba(153, 153, 153, 0.178) 62.72%
+        );
+      }
+       @media only screen and (max-width: 770px){
+        margin-bottom: -10px;
+       }
+      svg {
+        color: #00575d;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        &:hover{
+          scale: 1.1;
+                  color: #00474c;
+        }
+      }
     }
     h1 {
       width: 667px;
@@ -73,24 +117,24 @@
       // font-family: "Unbounded", serif;
       font-optical-sizing: auto;
       font-style: normal;
-      font-size: clamp(2.5rem, 6vw + 1rem, 4.125rem);   // ~40px to 66px
-      line-height: clamp(2rem, 6vw + 1rem, 4.5rem);    // ~48px to 76px
-      letter-spacing: clamp(-4px, -0.3vw, -3px);        // smooth between -2px and -3px
-    margin-left: -10px;
+      font-size: clamp(2.5rem, 6vw + 1rem, 4.125rem); // ~40px to 66px
+      line-height: clamp(2rem, 6vw + 1rem, 4.5rem); // ~48px to 76px
+      letter-spacing: clamp(-4px, -0.3vw, -3px); // smooth between -2px and -3px
+      margin-left: -10px;
       font-weight: 500;
-      
+      text-transform: capitalize;
       text-align: left;
       margin-bottom: 1rem;
-      color: #0A0A0A ;
+      color: #0a0a0a;
       span {
         // font-size: 70px;
         // font-size: clamp(2.5rem, 5vw + 1rem, 4.35rem);   // ~40px to 66px
         // line-height: clamp(3rem, 6vw + 1rem, 4.75rem);    // ~48px to 76px
-        // letter-spacing: clamp(-2px, -0.3vw, -3px); 
+        // letter-spacing: clamp(-2px, -0.3vw, -3px);
         font-size: 66px;
         line-height: 76px;
         letter-spacing: -3px;
-       color: #00575D;
+        color: #00575d;
       }
       @media only screen and (max-width: 1445px) {
         font-size: 60px;
@@ -107,22 +151,20 @@
         line-height: 60px;
         width: 457px;
         letter-spacing: -2px;
-        span{
+        span {
           font-size: 60px;
           letter-spacing: -2px;
-
         }
       }
       @media only screen and (max-width: 940px) {
         width: 400px;
-        font-size: 44px ;
+        font-size: 44px;
         line-height: 49px;
         margin-left: 0px;
-        span{
+        span {
           font-size: 50px;
           line-height: 54px;
           letter-spacing: -2px;
-
         }
       }
       @media only screen and (max-width: 840px) {
@@ -134,81 +176,78 @@
         margin: 20px auto;
         align-items: center;
         text-align: center;
-        font-size: 57px ;
+        font-size: 57px;
         line-height: 64px;
         letter-spacing: -2.1px;
-        span{
+        span {
           font-size: 70px;
           line-height: 54px;
           letter-spacing: -2px;
-
         }
       }
-      @media only screen and (max-width: 640px){
+      @media only screen and (max-width: 640px) {
         width: 90%;
         font-size: 47px;
         line-height: 54px;
         letter-spacing: -2.1px;
-        span{
+        span {
           font-size: 50px;
           line-height: 57px;
           letter-spacing: -2px;
-
         }
       }
-      @media only screen and (max-width: 580px){
+      @media only screen and (max-width: 580px) {
         width: 95%;
       }
       @media only screen and (max-width: 410px) {
         font-size: 40px;
         line-height: 48px;
         letter-spacing: -1.8px;
-        span{
+        span {
           font-size: 44px;
           line-height: 50px;
           letter-spacing: -2px;
-
         }
       }
-    
+
       @media only screen and (max-width: 360px) {
-          font-size: 38px;
-            line-height: 44px;
-            letter-spacing: -2px;
+        font-size: 38px;
+        line-height: 44px;
+        letter-spacing: -2px;
       }
     }
 
     p {
       width: 514px;
-      font-family: 'Geist';
+      font-family: "Geist";
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0%;
       vertical-align: middle;
-      
+
       letter-spacing: 0px;
       text-align: left;
       color: #171717;
       // font-style: italic;
-     text-transform: capitalize;
-     text-shadow: 1px 1px 3px #fdfdfd76;
-     @media only screen and (max-width: 1200px) {
-      width: 434px;
-     }
-     @media only screen and (max-width: 940px) {
-      width: 400px;
-     }
+      text-transform: capitalize;
+      text-shadow: 1px 1px 3px #fdfdfd76;
+      @media only screen and (max-width: 1200px) {
+        width: 434px;
+      }
+      @media only screen and (max-width: 940px) {
+        width: 400px;
+      }
       @media only screen and (max-width: 770px) {
         align-items: center;
         text-align: center;
         width: 80%;
         margin: 0 auto;
       }
-      @media only screen and (max-width: 640px){
+      @media only screen and (max-width: 640px) {
         width: 90%;
       }
-      @media only screen and (max-width: 580px){
+      @media only screen and (max-width: 580px) {
         width: 95%;
       }
     }
@@ -242,19 +281,19 @@
         justify-content: right;
         outline: none;
         border: 1px solid transparent;
-        background: #5B2F2F;
+        background: #5b2f2f;
         color: #ffff;
         cursor: pointer;
         font-family: Geist;
-font-weight: 500;
-font-style: Medium;
-font-size: 14.86px;
-leading-trim: NONE;
-line-height: 26px;
-letter-spacing: -0.46px;
-text-align: center;
-vertical-align: middle;
-width: 250px;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 14.86px;
+        leading-trim: NONE;
+        line-height: 26px;
+        letter-spacing: -0.46px;
+        text-align: center;
+        vertical-align: middle;
+        width: 250px;
 
         transition: 0.3s ease-in-out;
 
@@ -263,7 +302,7 @@ width: 250px;
           color: #fff;
 
           .arrow-icon {
-            background: #5B2F2F;
+            background: #5b2f2f;
             color: #ffff;
           }
         }
@@ -285,7 +324,12 @@ width: 250px;
 
       .secondary-btn {
         // width: 242.6px;
-        background: linear-gradient(90.15deg, rgba(36, 99, 235, 0.15) 0.13%, rgba(20, 56, 133, 0.09) 46.74%, rgba(28, 78, 184, 0.15) 103.2%);
+        background: linear-gradient(
+          90.15deg,
+          rgba(36, 99, 235, 0.15) 0.13%,
+          rgba(20, 56, 133, 0.09) 46.74%,
+          rgba(28, 78, 184, 0.15) 103.2%
+        );
         height: 52.8px;
         display: flex;
         align-items: center;
@@ -311,8 +355,8 @@ width: 250px;
         opacity: 0px;
         cursor: pointer;
         transition: 0.3s linear;
-        svg{
-          stroke:#171717;
+        svg {
+          stroke: #171717;
           fill: transparent;
           height: 40px;
           width: 40px;

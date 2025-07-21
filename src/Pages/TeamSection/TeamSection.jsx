@@ -136,10 +136,10 @@ const TeamSection = () => {
         </div>
         <div className="progress">
           <button className="nav-btn left" onClick={handlePrevious} disabled={currentIndex === 0}>
-            <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
+            <ArrowLeft className="arrow-icon" size={20} strokeWidth={2} />
           </button>
           <button className="nav-btn right" onClick={handleNext} disabled={currentIndex >= images.length - visibleCards}>
-            <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+            <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
           </button>
         </div>
       </div> */}
@@ -150,11 +150,8 @@ const TeamSection = () => {
               Our
               {'  '}
               <img src={icon7} alt=""
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true, amount: 0.2 }} /> {' '}
-              qualified and experienced team
+                /> {' '}
+              qualified & experienced team
             </h2>
             <p>
               At OBW Clinic, our team provides compassionate mental health support tailored to you.
@@ -167,7 +164,7 @@ const TeamSection = () => {
             onClick={() => HandleNavigation("/about", "meet-section")}
           >
             Meet The team
-            <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+            <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
           </button> */}
         </div>
 

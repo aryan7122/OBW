@@ -17,7 +17,7 @@ const BannerSectionSalon = () => {
                 </h1>
                 <button className="view-all btn" onClick={() => HandleNavigation("/contact")}>
                     <span>
-                        Get In touch <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        Explore <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </span>
                 </button>
             </div>

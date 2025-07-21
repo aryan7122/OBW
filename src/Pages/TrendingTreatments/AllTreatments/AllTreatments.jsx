@@ -779,7 +779,7 @@ const AllTreatments = () => {
                 {filteredData.length > initialCount && ( // Only show Load More if there are actually more items
                     <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < filteredData.length ? handleLoadMore : handleLoadLess}>
                         {visibleCount < filteredData.length ? "Load More" : "Load Less"}
-                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 )}
             </div>

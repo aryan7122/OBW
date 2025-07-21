@@ -129,7 +129,7 @@ const BookAppointment = ({ onClose }) => {
                     </div>
 
                     <button type="submit" className="book-now">
-                        Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 </form>
                 <Toaster

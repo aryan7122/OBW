@@ -78,7 +78,7 @@ const Locations = () => {
                                 className="button"
                                 onClick={() => handleNavigationOpen(location.mapUrl)}
                             >
-                                Get Directions <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                Get Directions <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                             </button>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ const Locations = () => {
                 className="view-all"
                 onClick={() => handleNavigation("/locations")}
             >
-                View all locations <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                View all locations <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
             </button>
         </div>
     );

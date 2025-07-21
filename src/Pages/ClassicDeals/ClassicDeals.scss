@@ -135,27 +135,27 @@
         .Book-Now {
           position: absolute;
           bottom: 20px;
-          padding: 5px 5px 5px 20px;
-          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
-          color: #fff;
+          padding: 3px 3px 3px 15px !important;
+         background: linear-gradient(90.5deg, #00CFDE -10.96%, #4AEBF6 41.07%, #00CFDE 83.93%);
+          color: #171717;
           border: 1px solid transparent;
           border-radius: 100px;
-          font-size: clamp(1rem, 2vw, 1.1rem); // 20px
+          font-size: 10px !important; // 20px
           display: flex;
           align-items: center;
           gap: 10px;
           font-weight: 500;
-          letter-spacing: -0.5px;
+          // letter-spacing: -0.5px;
           line-height: 24px;
           cursor: pointer;
           transition: 0.3s linear;
-          height: 40px;
+          height: 28px !important;
           .arrow-icon {
             background: #fff;
             color: #0056b3;
             border-radius: 100px;
-            width: 30px;
-            height: 30px;
+            width: 20px !important;
+            height: 20px !important;
             padding: 5px;
             transition: 0.3s linear;
           }

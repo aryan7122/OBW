@@ -274,12 +274,12 @@ const HappyClients = () => {
                 </div>
                 <button className="nav-btn left btn" onClick={handlePrevious} disabled={currentIndex === 0}>
                     <span>
-                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={2} />
                     </span>
                 </button>
                 <button className="nav-btn right btn" onClick={handleNext} disabled={currentIndex >= data.length - visibleCardsCount}>
                     <span>
-                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </span>
                 </button>
             </div>

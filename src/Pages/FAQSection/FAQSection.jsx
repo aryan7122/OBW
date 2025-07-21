@@ -71,7 +71,7 @@ const FAQSection = () => {
                 <h2>Frequently Asked Questions</h2>
                 <p>Got questions? We’re here to help! Chat with our team anytime or check our FAQ for common inquiries.</p>
                 <button className="get-in-touch" onClick={() => HandleNavigation("/contact")}
-                >Get In Touch<ArrowRight className="arrow-icon" size={20} strokeWidth={3} /></button>
+                >Get In Touch<ArrowRight className="arrow-icon" size={20} strokeWidth={2} /></button>
             </div>
 
             <div className="faq-right">

@@ -9,6 +9,7 @@ import img1 from '../../assets/TrendingTreatments/Body Contouring (LipoLaser).jp
 import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.png'
 import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
 import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
+import hert from '../../assets/TrendingTreatments/hert.svg'
 import { useNavigate } from "react-router-dom";
 
 const treatments = [
@@ -165,7 +166,7 @@ const TrendingTreatments = () => {
                 <div className="title-sbt">TRENDING</div>
                 <header className="heading-section">
                     <div>
-                        <h1 className="trending-title">Trending <span className="heart">&#x2764;</span> Treatments</h1>
+                        <h1 className="trending-title">Trending <span className="heart"><img src={hert}/></span> Treatments</h1>
                         <p className="description">
                             Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
                         </p>
@@ -179,7 +180,7 @@ const TrendingTreatments = () => {
                     >
                         <span>
                            View All
-                            <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                            <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                         </span>
                     </button>
                 </header>
@@ -239,21 +240,21 @@ const TrendingTreatments = () => {
                         onClick={() => setCurrentIndex(Math.max(currentIndex - 1, 0))}
                         disabled={currentIndex === 0}
                     >
-                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowLeft className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                     <button className="nav-btn right"
                         // onClick={handleNext} disabled={currentIndex >= treatments.length - visibleCards}
                         onClick={() => setCurrentIndex(Math.min(currentIndex + 1, treatments.length - cardsToShow))}
                         disabled={currentIndex >= treatments.length - cardsToShow}
                     >
-                        <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 </div>
             </div>
 {/* 
             <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < treatments.length ? handleLoadMore : handleLoadLess}>
                 {visibleCount < treatments.length ? "Load More" : "Load Less"}
-                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
             </button> */}
 
 

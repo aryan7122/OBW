@@ -350,8 +350,17 @@
   .navtab {
     border-bottom: 1px solid #e8e8e8;
     margin-top: 20px;
-    overflow-x: scroll !important;
-    @media only screen and (max-width: 840px) {
+    @media only screen and (max-width: 1150px) {
+      overflow-x: scroll ;
+      &::-webkit-scrollbar {    // Chrome, Safari ke liye
+        display: none;
+      }
+      @media only screen and (max-width: 700px) {
+        &::-webkit-scrollbar {    // Chrome, Safari ke liye
+          display: block;
+        }
+
+      }
     }
   }
   .treatment-filters {

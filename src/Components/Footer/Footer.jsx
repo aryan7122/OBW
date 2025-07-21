@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import { FaFacebook, FaInstagram } from "react-icons/fa"; // Keep only used icons
-import logo from '../../assets/footer/logo.svg';
+import logo from '../../assets/footer/logo.png';
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from 'lucide-react'; // Assuming you use lucide-react for ArrowRight
 
@@ -23,22 +23,19 @@ const Footer = () => {
                             <img src={logo} alt="OBW Clinic Logo" />
                         </div>
                         <p className="description-text">
-                            OBW is a pioneering hybrid clinic-salon in India, seamlessly merging
-                            dermatological care with beauty treatments all in one location. We
-                            provide a distinctive and harmonious blend of beauty and wellness
-                            services.
+                           Step into our serene space, where every visit invites you to embark on a tranquil journey filled with beauty and relaxation. Experience the calm atmosphere that surrounds you, making each moment a delightful escape.
                         </p>
                     </div>
                     {/* Section 4: Contact Info and Button */}
                     <div className="grid-item footer-contact-section">
                         <div className="action_bt">
-                            <h4>CONTACT:</h4>
+                            <h4 className="a4">CONTACT:</h4>
                             <p className="phone-number">+91-9764310135</p>
                             <p className="email">contact@obw.com</p>
                         </div>
                         <button className="book-appointment-btn btn" onClick={() => HandleNavigation("/book-appointment")}>
                             <span>
-                                Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                             </span>
                         </button>
                     </div>

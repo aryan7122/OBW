@@ -200,7 +200,7 @@ const SalonBlogDetail = () => {
                             <button onClick={() => navigate(article.callToAction.link)} className="cta-button btn">
                                 <span>
                                     {article.callToAction.buttonText}
-                                    <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                    <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                                 </span>
                             </button>
                         </div>
@@ -225,13 +225,13 @@ const SalonBlogDetail = () => {
                             <span>
 
                                 Read full blog
-                                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                             </span>
                             </button>
                             <button className='next_ btn' onClick={() => navigate(`/blog-detail/${nextArticle.slug}`)}>
                             <span>
                                 Next Post
-                                <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                             </span>
                             </button>
                         </div>

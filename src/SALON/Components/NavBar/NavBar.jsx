@@ -94,7 +94,7 @@ function NavBar() {
                         ? <>
                             <button className="appointment-button btn" onClick={handleBookNowClick}>
                                 <span>
-                                    Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                    Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                                 </span>
                             </button>
                             {/* <Search className="search-icon" size={24} onClick={toggleSearchBar} /> */}
