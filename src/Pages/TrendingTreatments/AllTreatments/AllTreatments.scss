@@ -698,7 +698,8 @@
 
 //
 /* Custom Checkbox */
-input[type="checkbox"] {
+// input[type="checkbox"] {
+.checkbox-input {
   appearance: none;
   -webkit-appearance: none;
   width: 19px;
@@ -741,8 +742,9 @@ input[type="checkbox"] {
   color: #333;
 }
 
-/* Custom Radio */
-input[type="radio"] {
+// /* Custom Radio */
+// input[type="radio"] {
+.radio-input {
   appearance: none;
   -webkit-appearance: none;
   width: 19px;

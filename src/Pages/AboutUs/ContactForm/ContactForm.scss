@@ -238,8 +238,14 @@
 
         .radio-section {
           .radio-options {
+            width: 10px !important;
+            height: 10px !important;
             display: flex;
+            align-items: center;
             gap: 1rem;
+            .radio1{
+              
+            }
           }
         }
       }
@@ -247,12 +253,16 @@
         .radio-options {
           display: grid;
           grid-template-columns: 1fr 1fr;
+            gap: 5px;
+            .radio1{
+            }
           @media only screen and (max-width: 440px) {
                   grid-template-columns: 1fr ;
                   margin-left: 5px;
 
                 }
         }
+
       }
       .date-group {
         position: relative;

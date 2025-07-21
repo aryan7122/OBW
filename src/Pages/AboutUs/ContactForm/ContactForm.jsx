@@ -154,11 +154,13 @@ const ContactForm = () => {
                                 {["Banashankari", "Kanakapura Main Road", "Rajarajeshwari Nagar", "Kodipalya"].map((loc) => (
                                     <label key={loc}>
                                         <input
+                                        className="radio1"
                                             type="radio"
                                             name="location"
                                             value={loc}
                                             checked={formData.location === loc}
                                             onChange={handleChange}
+                                            style={{width:'17px',padding:'0',height:'17px'}}
                                         /> {loc}
                                     </label>
                                 ))}

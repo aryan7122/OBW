@@ -117,6 +117,9 @@ color: #2A1616;
   @media (max-width: 500px){
     padding: 30px;
   }
+  @media (max-width: 400px){
+    padding: 20px;
+  }
 }
 
 /* --- Form Section (Left) --- */
@@ -244,6 +247,10 @@ color: #2A1616;
     display: flex;
     gap: 20px;
     align-items: center;
+        @media only screen and (max-width: 450px) {
+          flex-direction: column;
+          align-items: start;
+        }
 
     .contact-detail-item {
       display: flex;
@@ -318,6 +325,7 @@ color: #2A1616;
 @media (max-width: 768px) {
   .contact-main-container {
     grid-template-columns: 1fr;
+    gap: 30px ;
   }
   .salon-contact-page {
     padding: 40px 15px;

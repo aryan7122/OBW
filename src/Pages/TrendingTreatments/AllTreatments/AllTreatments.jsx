@@ -731,6 +731,7 @@ const AllTreatments = () => {
                                     {allSkinTypes.map((skinType, index) => (
                                         <label key={index} className="dropdown-item radio-item">
                                             <input
+                                            className='radio-input'
                                                 type="radio"
                                                 name="skinType"
                                                 value={skinType}
