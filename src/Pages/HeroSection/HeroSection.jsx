@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./HeroSection.scss";
-import { ArrowRight, CirclePlay, Facebook, Instagram } from "lucide-react";
+import { ArrowRight, CirclePlay, Facebook, Instagram, MoveRight } from "lucide-react";
 import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 import { motion } from 'framer-motion';
 import img1 from '../../assets/firststep/hero2.jpg'
@@ -64,7 +64,8 @@ const HeroSection = () => {
                         >
                             <button className="appointment-button btn2" onClick={handleBookNowClick} >
                                 <span>
-                                    Book Appointment Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
+                                    Book Appointment Now <MoveRight className="arrow-icon" size={16} strokeWidth={1.9} />
+                                    
                                 </span>
                             </button>
                             {/* <button className="secondary-btn  btn">

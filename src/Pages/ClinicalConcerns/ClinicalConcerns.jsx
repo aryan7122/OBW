@@ -522,11 +522,13 @@ function ClinicalConcerns() {
               > {/* No more card-media-active class here */}
                 {/* Image dikhana only when card selected */}
                 {selectedCardIndex === cardIdx && card.imageUrl && (
-                  <img
+                 <div className="img_img">
+                   <img
                     src={card.imageUrl}
                     alt={card.title}
                     className={`card-image ${selectedCardIndex === cardIdx ? "large-image" : "small-image"}`}
                   />
+                 </div>
                 )}
 
                 {/* Book Appointment Button - only if card and tag are selected */}

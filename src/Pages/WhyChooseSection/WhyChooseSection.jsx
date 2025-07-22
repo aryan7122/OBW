@@ -3,9 +3,9 @@ import "./WhyChooseSection.scss";
 import { motion } from 'framer-motion';
 // import 'react-lazy-load-image-component/src/effects/blur.css';
 import WebPImage from "../../util/WebPImage";
-import img1 from '../../assets/WhyChooseSection/007A0853_11zon.jpg'
-import img2 from '../../assets/WhyChooseSection/Personalized Solutions_11zon.jpg'
-import img3 from '../../assets/WhyChooseSection/0K6A5904_11zon.jpg'
+import img1 from '../../assets/WhyChooseSection/img (2).webp'
+import img2 from '../../assets/WhyChooseSection/img (1).webp'
+import img3 from '../../assets/WhyChooseSection/img (3).webp'
 import icon1 from '../../assets/WhyChooseSection/ok.svg'
 const WhyChooseSection = () => {
     // const img2= "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/WhyChooseSection/eimccgamvas1fxy1vy"

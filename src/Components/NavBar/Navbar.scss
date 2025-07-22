@@ -205,9 +205,10 @@
       outline: none;
       border: 1px solid transparent;
       // background: #8ae9f0;
-      background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%);
+     background: linear-gradient(90.5deg, #00CFDE -10.96%, #4AEBF6 41.07%, #00CFDE 83.93%) !important;
+
       border: 0.99px solid #2463EB;
-      color: #fff;
+      color: #171717;
       cursor: pointer;
       font-size: 16px;
       font-weight: 400;
@@ -215,7 +216,7 @@
       text-align: center;
       transition: 0.3s ease-in-out;
       &:hover {
-        background: #fff;
+        background: #fff !important;
         color: #2463EB;
         .arrow-icon {
           background: linear-gradient(90.15deg, #2463EB 0.13%, #1C4EB8 103.2%);

@@ -6,7 +6,7 @@ import "./TrendingTreatments.scss";
 import WebPImage from "../../util/WebPImage";
 // import { image } from "motion/react-client";
 import img1 from '../../assets/TrendingTreatments/Body Contouring (LipoLaser).jpg'
-import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.png'
+import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.webp'
 import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
 import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
 import hert from '../../assets/TrendingTreatments/hert.svg'
@@ -134,7 +134,7 @@ const TrendingTreatments = () => {
             else if (width < 900) setCardsToShow(2); // On tablets
             else if (width < 980) setCardsToShow(2.5); // On tablets
             else if (width < 1150) setCardsToShow(3); // On tablets
-            else setCardsToShow(3.5); 
+            else setCardsToShow(4); 
         };
         updateCards();
         window.addEventListener("resize", updateCards);

@@ -1,56 +1,71 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ArticleDetail.scss";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaLinkedin, FaFacebook, FaTwitter, FaLink } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
-import img1 from '../../assets/TrendingTreatments/Medi-Facials-min.jpg'
-import img3 from '../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg'
-import img4 from '../../assets/TrendingTreatments/girl-with-black-mask-lies-table-spa-saloon (1).jpg'
+import img1 from '../../assets/blog/Hair Transplant Surgery for Men What You Need to Know.webp'
+import img2 from '../../assets/blog/Q-Switch Laser Glow Without Filters.webp'
+import img3 from '../../assets/blog/Laser Hair Reduction for Men A Smarter Way to Stay Groomed.webp'
+import img4 from '../../assets/blog/IV Therapy Instant Wellness, Inside Out.webp'
 
-import img6 from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
-import img8 from '../../assets/TrendingTreatments/Hair Transplantation-min.jpg'
-import img9 from '../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg'
-import img11 from '../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg'
-import img2 from '../../assets/TrendingTreatments/Laser Hair Removal-min.jpg'
-import img7 from '../../assets/TrendingTreatments/Skin Brightening-min.jpg'
-import img10 from '../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg'
-import img5 from '../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg'
 import WebPImage from "../../util/WebPImage";
+import { blogs } from "./Blog";
+import { ChevronLeft } from "lucide-react";
 const ArticleDetail = () => {
+
+    // Assuming img1, img2, img3, img4 are imported at the top of your file
+    // e.g., import img1 from './path/to/image1.jpg';
+
     const data1 = {
-        title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
-        category: "Skin",
-        author: "Anjali Verma",
-        date: "Feb 10, 2025",
+        title: "Hair Transplant Surgery for Men: What You Need to Know",
+        category: "Hair",
+        author: "Dr. Vikram Singh",
+        date: "Jul 22, 2025",
         coverImage: img1,
         sections: [
             {
                 heading: "Introduction",
-                content: "In today’s fast-paced world, our skin is constantly exposed to pollution, stress, and harsh weather conditions, leading to dullness, breakouts, and premature aging. Medi-facials are an advanced skincare treatment designed to address specific skin concerns using medical-grade ingredients and cutting-edge technology. At OBW Clinic, our medi-facials are customized to rejuvenate, hydrate, and restore your skin’s natural glow."
+                content: "Hair loss can feel frustrating, especially when it starts to affect your confidence. If you're someone who's tried everything, oils, shampoos, even hair masks, with little to no success, hair transplant surgery might be a solution worth exploring. \n \n It's more common (and safer) than you might think! Let's break down how it works, what the process involves, and what you should know before making a decision."
             },
             {
-                heading: "How Do Medi-Facials Work?",
-                content: "Unlike regular facials, medi-facials penetrate deeper into the skin using advanced technology like LED therapy, microdermabrasion, oxygen infusion, and chemical peels. These treatments stimulate collagen production, promote cell renewal, and deeply hydrate the skin."
+                heading: "What is Hair Transplant Surgery?",
+                content: "Hair transplant is a minor surgical procedure that moves healthy hair follicles from one part of your scalp (usually the back or sides) to the area where you’re losing hair, most often the front or top."
             },
             {
-                heading: "Benefits of Medi-Facials",
+                heading: "There are two common types:",
                 list: [
-                    "Deeply hydrates & nourishes skin",
-                    "Reduces acne, pigmentation & fine lines",
-                    "Boosts collagen production for firmer skin",
-                    "Removes dead skin cells, leaving a radiant glow",
-                    "Customizable for all skin types & concerns"
+                    "FUE (Follicular Unit Extraction): Individual hair follicles are taken out and transplanted.",
+                    "FUT (Follicular Unit Transplantation): A strip of scalp with healthy hair is removed, and follicles are separated and implanted."
+                ],
+                content_after: "Both methods are safe and effective when done by experienced doctors."
+            },
+            {
+                heading: "Who is it for?",
+                content: "Hair transplant is ideal for men who:",
+                list: [
+                    "Have male-pattern baldness",
+                    "Have thinning or receding hairlines",
+                    "Want a long-term solution instead of temporary fixes"
+                ],
+                content_after: "It's important to have enough healthy hair on your scalp for the doctor to work with."
+            },
+            {
+                heading: "What Happens During the Procedure?",
+                content: "You'll first have a consultation where the doctor checks your hair loss pattern and scalp condition. On the day of the procedure, your scalp is numbed so you won't feel pain. The doctor then carefully removes hair from the donor area and places it into the thinning/bald areas. It takes several hours and is usually done in a single day. You can go home the same day."
+            },
+            {
+                heading: "Recovery & Results",
+                list: [
+                    "You may have mild swelling or redness for a few days.",
+                    "Hair will start to shed (this is normal!) and then regrow naturally over 3-6 months.",
+                    "Final results usually appear around 9-12 months after surgery."
                 ]
             },
             {
-                heading: "What to Expect During a Medi-Facial Treatment at OBW Clinic?",
-                content: "Your medi-facial session will begin with a skin analysis, followed by a deep cleanse, exfoliation, and treatment using customized serums and advanced technology. The session is relaxing, painless, and takes around 45-60 minutes."
-            },
-            {
                 heading: "Conclusion",
-                content: "If you’re looking for a safe, effective way to maintain healthy, youthful skin, book a Medi-Facial at OBW Clinic today!"
+                content: "Hair transplant surgery isn't just about getting hair back it's about getting your confidence back. If you're tired of hiding under caps or avoiding the mirror, this could be the moment to make a real change. At OBW Clinic, our experienced team uses safe, proven techniques to give you natural-looking results and long-term satisfaction. Book a consultation today and let's bring your hair and confidence back to life."
             }
         ],
         newsletter: {
@@ -62,123 +77,88 @@ const ArticleDetail = () => {
     };
 
     const data2 = {
-        title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
-        category: "Hair",
-        author: "Riya Mehta",
-        date: "Feb 15, 2025",
-        coverImage: img2, // Replace with actual image URL
+        title: "Laser Hair Reduction for Men: A Smarter Way to Stay Groomed",
+        category: "Grooming",
+        author: "Dr. Priya Sharma",
+        date: "Jul 25, 2025",
+        coverImage: img3,
         sections: [
             {
                 heading: "Introduction",
-                content: "Tired of shaving, waxing, and threading? Laser Hair Removal is a game-changing treatment that offers long-term hair reduction by targeting hair follicles with laser energy. At OBW Clinic, we use advanced laser technology to provide safe and effective results for all skin types."
+                content: "Let's face it, dealing with unwanted body hair isn't fun. Shaving causes razor burns, waxing is painful, and the results never last. That's why more men are turning to laser hair reduction. It's clean, effective, and gives long-term results with minimal effort. \n\n If you're tired of constant grooming or just want a neater, more defined look, this treatment might be exactly what you need. And yes, it works wonders at OBW Clinic."
             },
             {
-                heading: "How Does Laser Hair Removal Work?",
-                content: "Laser energy is absorbed by the melanin (pigment) in hair follicles, heating them to disable future growth. Multiple sessions ensure that all hair cycles are treated for the best results."
+                heading: "How It Works",
+                content: "Laser hair reduction targets the roots of your hair using light energy. Over time, it reduces the thickness and growth of hair, making your skin feel smoother and cleaner with far less maintenance. It's not a one-time fix, but with a few sessions, the results are noticeable and lasting. At OBW Clinic, we use advanced technology to make sure the procedure is safe, quick, and comfortable for men of all skin types."
             },
             {
-                heading: "Benefits of Laser Hair Removal",
+                heading: "Common Areas Men Treat",
+                content: "Every man is different, but here are a few areas where laser hair reduction is often requested:",
                 list: [
-                    "Permanent hair reduction",
-                    "No more ingrown hairs",
-                    "Smooth, silky skin with minimal effort",
-                    "Safe & effective for all areas",
-                    "Saves time & money in the long run"
+                    "Beard shaping for a clean jawline",
+                    "Chest and stomach for a groomed, even look",
+                    "Back and shoulders for a smooth finish",
+                    "Neck to avoid frequent shaving and irritation"
                 ]
             },
             {
-                heading: "What to Expect During Laser Hair Removal at OBW Clinic?",
-                list: [
-                    "Consultation & Patch Test to determine skin suitability",
-                    "Laser Treatment with minimal discomfort",
-                    "Post-Treatment Care including sun protection"
-                ]
+                heading: "What Makes OBW Different",
+                content: "At OBW Clinic, we don't just offer treatment, we offer guidance. You'll get a personal consultation, a clear treatment plan, and expert care throughout the journey. Our laser systems are safe, precise, and designed to minimize discomfort. Most importantly, we focus on natural-looking results that feel right for you."
             },
             {
                 heading: "Conclusion",
-                content: "Ditch the razors and book your Laser Hair Removal sessions at OBW Clinic for smooth, hair-free skin!"
+                content: "Laser hair reduction is more than just a grooming upgrade; it's a confidence boost that saves time, effort, and stress. Whether you're after a sharper look or just want to feel better in your skin, we're here to help. Start your journey to smoother skin at OBW Clinic today and experience the difference for yourself."
             }
         ],
         newsletter: {
             heading: "Subscribe to Newsletter",
-            description: "Stay up-to-date with the latest skincare tips and articles by subscribing to our newsletter.",
+            description: "Stay up-to-date with the latest grooming tips and articles by subscribing to our newsletter.",
             placeholder: "Enter your email",
             buttonText: "Subscribe"
         }
     };
 
     const data3 = {
-        title: "IV Therapy for Skin, Hair & Body Wellness",
-        category: "Wellness",
-        author: "Aarav Sharma",
-        date: "Feb 20, 2025",
-        coverImage: img3,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Feeling drained, dehydrated, or struggling with dull skin? IV Therapy at OBW Clinic replenishes essential vitamins, minerals, and hydration directly into your bloodstream for instant rejuvenation."
-            },
-            {
-                heading: "How Does IV Therapy Work?",
-                content: "Unlike oral supplements, IV therapy ensures 100% absorption of nutrients, delivering them directly to your cells for maximum effectiveness."
-            },
-            {
-                heading: "Benefits of IV Therapy",
-                list: [
-                    "Glowing, hydrated skin",
-                    "Stronger hair & nails",
-                    "Boosted immunity & energy levels",
-                    "Detoxification & anti-aging benefits"
-                ]
-            },
-            {
-                heading: "What to Expect During IV Therapy at OBW Clinic?",
-                content: "A relaxing 30-60 minute session where you receive a customized IV drip while comfortably seated."
-            },
-            {
-                heading: "Conclusion",
-                content: "Recharge your skin, hair, and body with IV Therapy at OBW Clinic!"
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Stay informed about the latest health and wellness trends by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-
-    const data4 = {
-        title: "Carbon Laser Peel: The Secret to Flawless Skin",
+        title: "Q-Switch Laser: Glow Without Filters",
         category: "Skin",
         author: "Nikita Soni",
-        date: "Feb 25, 2025",
-        coverImage: img4,
+        date: "Jul 28, 2025",
+        coverImage: img2,
         sections: [
             {
                 heading: "Introduction",
-                content: "Struggling with acne, enlarged pores, or oily skin? The Carbon Laser Peel, also known as the Hollywood Peel, deeply cleanses, exfoliates, and brightens your skin. At OBW Clinic, we offer this advanced treatment to enhance your natural glow."
+                content: "Dark spots, tanning, dull skin, or acne marks can sometimes make you feel less like yourself. That's where Q-Switch Laser treatment comes in a gentle, effective way to revive your natural glow and even out your skin tone without damaging your skin. \n \n At OBW Clinic, we customize every Q-Switch Laser session to suit your skin's unique needs because you deserve clear, radiant skin that feels as good as it looks.",
+                
             },
             {
-                heading: "How Does Carbon Laser Peel Work?",
-                content: "A layer of activated carbon is applied to your skin, absorbing dirt and oil. A laser then vaporizes the carbon, removing impurities and dead skin cells."
+                heading: "What Is a Q-Switch Laser?",
+                content: "Q-Switch Laser is a non-invasive treatment that uses short bursts of laser light to break down pigmentation and dark spots deep within the skin. Your body then naturally clears out this pigment, revealing smoother, brighter skin underneath."
             },
             {
-                heading: "Benefits of Carbon Laser Peel",
+                heading: "Perfect for treating:",
                 list: [
-                    "Deep cleans pores & controls acne",
-                    "Reduces oil production",
-                    "Brightens skin & evens tone",
-                    "No downtime – walk out glowing!"
+                    "Sun damage and tanning",
+                    "Acne marks and scars",
+                    "Uneven skin tone",
+                    "Freckles and pigmentation"
                 ]
             },
             {
-                heading: "What to Expect During Carbon Laser Peel at OBW Clinic?",
-                content: "A quick 30-minute treatment that feels warm but painless."
+                heading: "Why Women Love Q-Switch Laser",
+                list: [
+                    "Gentle Yet Powerful: Clears pigmentation without harming your skin",
+                    "No Downtime: Go back to your routine right after",
+                    "Quick Sessions: Takes just 15-30 minutes",
+                    "Visible Glow: See real improvements in a few sittings"
+                ]
             },
             {
-                heading: "Conclusion",
-                content: "Get flawless, radiant skin with a Carbon Laser Peel at OBW Clinic!"
+                heading: "What to Expect",
+                content: "Your treatment begins with a skin analysis by our expert. We'll cleanse your skin, and then gently apply the laser. You might feel a soft snapping sensation; it's quick and easy to handle. After the session, there may be slight redness for a few hours, but nothing major. With simple aftercare and good sun protection, you'll be glowing in no time."
+            },
+            {
+                heading: "Feel Confident in Your Skin",
+                content: "Q-Switch Laser isn't just about brighter skin it's about feeling confident and refreshed, every time you look in the mirror. At OBW Clinic, we make skincare simple, effective, and something to look forward to."
             }
         ],
         newsletter: {
@@ -189,339 +169,39 @@ const ArticleDetail = () => {
         }
     };
 
-    const data5 = {
-        title: "Hair GFC & PRP: The Most Effective Hair Growth Solutions",
-        category: "Hair",
-        author: "Sanya Mehta",
-        date: "Mar 1, 2025",
-        coverImage: img5,
+    const data4 = {
+        title: "IV Therapy: Instant Wellness, Inside Out",
+        category: "Wellness",
+        author: "Aarav Sharma",
+        date: "Aug 01, 2025",
+        coverImage: img4,
         sections: [
             {
-                heading: "Introduction",
-                content: "Hair loss can be stressful and frustrating. At OBW Clinic, we offer Hair GFC (Growth Factor Concentrate) & PRP (Platelet-Rich Plasma) Therapy, the latest innovations for natural hair regrowth."
+                heading: "Feel Energized. Look Refreshed.",
+                content: "IV Therapy is a fast and effective way to give your body exactly what it needs vitamins, minerals, and hydration directly into your bloodstream for quicker absorption and better results. \n\n Whether you're feeling low on energy, battling dull skin, recovering from stress, or just want an immunity boost, IV Therapy helps you feel better, faster."
             },
             {
-                heading: "How Do Hair GFC & PRP Work?",
-                content: "These treatments use growth factors from your blood to stimulate hair follicles and improve scalp health."
-            },
-            {
-                heading: "Benefits of Hair GFC & PRP",
+                heading: "Why Try IV Therapy at OBW Clinic?",
                 list: [
-                    "Stimulates hair regrowth",
-                    "Strengthens weak hair follicles",
-                    "Reduces hair thinning & shedding",
-                    "Non-surgical & safe"
-                ]
+                    "Boosts energy levels naturally",
+                    "Improves skin hydration and glow",
+                    "Strengthens immunity and recovery",
+                    "Reduces fatigue, stress, and brain fog"
+                ],
+                content_after: "Each drip is tailored to your body's needs because wellness isn't one-size-fits-all. Our experts assess your goals and create a custom infusion designed to help you feel your best."
             },
             {
-                heading: "What to Expect During Hair GFC & PRP at OBW Clinic?",
-                content: "Blood is drawn & processed to extract growth factors. The serum is injected into the scalp. Mild redness may occur but fades quickly."
+                heading: "Simple, Safe, and Effective",
+                content: "In just 30-45 minutes, you'll feel revitalized from within. No downtime. Just deep hydration and essential nutrients delivered directly where your body needs them most."
             },
             {
-                heading: "Conclusion",
-                content: "Restore your hair’s thickness & strength with GFC & PRP Therapy at OBW Clinic!"
+                heading: "Let Your Body Thank You",
+                content: "Your body does a lot for you. Give it back the support it deserves with IV Therapy that works from the inside out."
             }
         ],
         newsletter: {
             heading: "Subscribe to Newsletter",
-            description: "Stay informed about the latest hair care treatments and tips by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-
-    const data6 = {
-        title: "PMU (Permanent Makeup): Enhancing Natural Beauty with Long-Lasting Results",
-        category: "Beauty",
-        author: "Pooja Gupta",
-        date: "Mar 5, 2025",
-        coverImage: img6,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Imagine waking up every day with perfectly shaped brows, defined eyes, and beautifully tinted lips—without spending hours in front of the mirror! Permanent Makeup (PMU) is an advanced cosmetic tattooing technique that enhances facial features by replicating the look of makeup with natural pigments. At OBW Clinic, we specialize in safe, high-quality PMU procedures to help you achieve effortless beauty that lasts for years."
-            },
-            {
-                heading: "How Does PMU Work?",
-                content: "PMU involves implanting semi-permanent pigments into the skin using a fine needle or microblade. Unlike traditional tattoos, PMU pigments are designed to fade gradually over time, ensuring a soft, natural appearance."
-            },
-            {
-                heading: "PMU Treatments Offered at OBW Clinic",
-                content: "At OBW Clinic, we offer a variety of PMU treatments:",
-                list: [
-                    "Microblading & Powder Brows – Creates natural, fuller brows",
-                    "Eyeliner Tattoo – Defines your eyes with a subtle or bold line",
-                    "Lip Blush Tattoo – Enhances lip color & shape for a soft tint",
-                    "Scalp Micropigmentation (SMP) – Fills in thinning hair for a denser look"
-                ]
-            },
-            {
-                heading: "Benefits of PMU",
-                content: "PMU provides several advantages for those seeking long-lasting beauty:",
-                list: [
-                    "Saves time – No more daily makeup application",
-                    "Smudge-proof & waterproof – Always look your best",
-                    "Natural-looking results – Enhances your facial features subtly",
-                    "Long-lasting – Enjoy 1-3 years of flawless beauty",
-                    "Customizable – Choose the shape, color, and style that suits you"
-                ]
-            },
-            {
-                heading: "What to Expect During a PMU Session at OBW Clinic?",
-                content: "Here's what you can expect during your PMU procedure at OBW Clinic:",
-                list: [
-                    "Consultation: Our experts assess your facial structure and discuss your desired look.",
-                    "Prepping & Numbing: A numbing cream is applied for a comfortable experience.",
-                    "Pigment Application: The selected pigment is carefully applied to create a natural effect.",
-                    "Healing Process: Mild redness or swelling may occur, but it fades within a few days. A touch-up session may be needed for optimal results."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: "Say goodbye to smudged eyeliner, faded brows, and pale lips! PMU at OBW Clinic is your go-to solution for natural, long-lasting beauty."
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Stay informed about the latest beauty and PMU treatments by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-
-    const data7 = {
-        title: "Skin Brightening: Achieve a Radiant and Even Complexion",
-        category: "Skin",
-        author: "Rashi Kapoor",
-        authorImg: "https://s3-alpha-sig.figma.com/img/fd3d/4c48/a8b689cbbfb343fe22651fcb4dc1c2e0?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Uwb09X8QnrTuT06L7dJd8u5sxBw3oHbOIAU1g1pI~9ECmNkSoBykaf-BY4qOo-WgI0rXokuLYqDaZmAsw3CjcanoV~be1rMIqzpGOdpI8LiMTi9FKiBoXoDHnw5zsIk2qxYEQoHcXzQeqfshBjnb02-DykjfD1VhShrvhcA-1xaLGibRv9qWGsvxEhjP3ppdWTILsUydlP~oMKTSzto~2~tEpiMC6BwjcHP9cyNtKz3g3bEalvUj2hnVZzgT4x6N0X8NWZ9D9J5x4cytjmtB44WXr9qHLgqeUIwtR27m9N0MXTRXybVpOPVQqbfK0K5x-OtGZq9tff6V6Yjc-SA6Wg__",
-        date: "Mar 10, 2025",
-        coverImage: img7,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Dull, uneven skin tone and dark spots can affect your confidence and make you feel less radiant. Skin brightening treatments at OBW Clinic are designed to target hyperpigmentation, dark spots, and uneven skin tone, helping you achieve a clear, luminous complexion. We use advanced technologies and products to revitalize your skin and restore its natural glow."
-            },
-            {
-                heading: "How Does Skin Brightening Work?",
-                content: "Skin brightening treatments work by exfoliating dead skin cells, boosting collagen production, and targeting melanin production to reduce dark spots and uneven tone. At OBW Clinic, we offer a variety of skin-brightening treatments, including chemical peels, mesotherapy, and laser therapy, each customized to address your skin’s specific needs."
-            },
-            {
-                heading: "Benefits of Skin Brightening",
-                content: "Skin brightening treatments provide numerous benefits, including:",
-                list: [
-                    "Even skin tone",
-                    "Reduced dark spots and pigmentation",
-                    "Enhanced skin radiance and glow",
-                    "Stimulates collagen for firmer skin",
-                    "Safe and effective for all skin types"
-                ]
-            },
-            {
-                heading: "What to Expect During Treatment at OBW Clinic?",
-                content: "During your treatment, our experts will assess your skin and guide you through the following steps:",
-                list: [
-                    "Consultation: Our experts assess your skin and recommend the most suitable treatment.",
-                    "Procedure: Depending on the treatment, we’ll perform a gentle exfoliation, laser treatment, or mesotherapy.",
-                    "Post-Treatment Care: You may experience mild redness, which fades within a few hours. Regular sun protection is essential during and after treatment."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: "Achieving glowing, even skin has never been easier! Book your skin brightening treatment at OBW Clinic today and let us help you reveal your natural radiance."
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Our Newsletter",
-            description: "Stay updated on the latest anti-aging treatments and skincare tips by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-
-    const data8 = {
-        title: "Hair Transplant: Restore Your Hair, Restore Your Confidence",
-        category: "Hair",
-        author: "Anjali Sinha",
-        date: "Mar 15, 2025",
-        coverImage: img8,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Hair loss can significantly impact your confidence and self-esteem. At OBW Clinic, we offer hair transplant solutions to help you regain a fuller, natural-looking head of hair. Whether you’re experiencing male or female pattern baldness, our experienced specialists use advanced techniques to provide you with permanent, natural results."
-            },
-            {
-                heading: "How Does Hair Transplant Work?",
-                content: "Hair transplant involves transferring hair follicles from a donor area (usually the back or sides of your head) to areas with thinning or no hair. We offer FUE (Follicular Unit Extraction) and FUT (Follicular Unit Transplantation) methods, depending on your condition and preferences."
-            },
-            {
-                heading: "Benefits of Hair Transplant",
-                content: "Hair transplants offer numerous benefits, including:",
-                list: [
-                    "Permanent hair restoration",
-                    "Natural-looking results",
-                    "Minimal scarring",
-                    "Boosts self-confidence",
-                    "Low maintenance once healed"
-                ]
-            },
-            {
-                heading: "What to Expect During Treatment at OBW Clinic?",
-                content: "Here’s what you can expect during a typical hair transplant session at OBW Clinic:",
-                list: [
-                    "Consultation & Assessment: Our experts evaluate your hair loss pattern and determine the best treatment plan.",
-                    "Procedure: The procedure takes about 6-8 hours and is performed under local anesthesia for your comfort.",
-                    "Post-Treatment Care: You may experience some swelling or redness, but this will subside within a few days. The results will gradually show in 3-6 months."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: "Don’t let hair loss hold you back. OBW Clinic’s hair transplant treatments can help you achieve the fuller, healthier hair you’ve always wanted."
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Stay updated with the latest beauty and skincare trends by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-    const data9 = {
-        title: "Anti-DHT Mesotherapy: Prevent Hair Loss and Promote Hair Growth",
-        category: "Hair",
-        author: "Sanya Mehta",
-        date: "Mar 20, 2025",
-        coverImage: img9,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Hair thinning and hair loss can occur due to DHT (dihydrotestosterone), a hormone responsible for weakening hair follicles. At OBW Clinic, we offer Anti-DHT Mesotherapy to block DHT production, stimulate hair follicles, and prevent further hair loss. This treatment is an effective solution for both men and women experiencing thinning hair or pattern baldness."
-            },
-            {
-                heading: "How Does Anti-DHT Mesotherapy Work?",
-                content: "Anti-DHT mesotherapy involves injecting micronutrients, vitamins, and DHT blockers directly into the scalp. These injections target the root cause of hair loss and encourage hair regeneration by improving circulation and nourishing hair follicles."
-            },
-            {
-                heading: "Benefits of Anti-DHT Mesotherapy",
-                content: "Anti-DHT Mesotherapy offers several benefits, including:",
-                list: [
-                    "Prevents hair loss",
-                    "Stimulates new hair growth",
-                    "Strengthens weak hair follicles",
-                    "Improves scalp health",
-                    "Safe, non-surgical treatment"
-                ]
-            },
-            {
-                heading: "What to Expect During Treatment",
-                content: "The treatment process includes:",
-                list: [
-                    "Consultation & Evaluation: We will assess your scalp condition to create a personalized treatment plan.",
-                    "Injection Procedure: The procedure takes about 30 minutes and involves minimal discomfort.",
-                    "Post-Treatment Care: Mild redness or tenderness may occur, but this usually subsides within a few hours."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: "Take control of your hair growth with Anti-DHT Mesotherapy at OBW Clinic. Let us help you prevent hair loss and restore a healthy scalp for thicker, stronger hair."
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Stay updated with the latest hair care tips and treatments by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-    const data10 = {
-        title: "Scar Revision or Reduction Treatments: Smooth and Refined Skin",
-        category: "Skin",
-        author: "Tanya Sharma",
-        date: "Mar 25, 2025",
-        coverImage: img10,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Scars from acne, surgery, or injury can often leave behind unwanted marks on your skin. At OBW Clinic, we offer advanced scar revision and reduction treatments to help you achieve smooth, flawless skin. Using the latest techniques, we aim to reduce the appearance of scars and improve your skin’s texture."
-            },
-            {
-                heading: "How Do Scar Revision Treatments Work?",
-                content: "We use a combination of laser therapies, microneedling, and dermal fillers to break down scar tissue, promote collagen production, and smoothen the skin. The type of treatment varies depending on the size, depth, and age of the scar."
-            },
-            {
-                heading: "Benefits of Scar Revision Treatments",
-                content: "These treatments offer the following benefits:",
-                list: [
-                    "Reduces the appearance of scars",
-                    "Improves skin texture and tone",
-                    "Promotes natural collagen production",
-                    "Boosts skin regeneration",
-                    "Minimally invasive with little downtime"
-                ]
-            },
-            {
-                heading: "What to Expect During Scar Revision Treatments at OBW Clinic?",
-                content: "Here’s what you can expect during your treatment:",
-                list: [
-                    "Consultation & Assessment: We’ll evaluate your scars and suggest the most suitable treatment.",
-                    "Procedure: Depending on the scar type, we may use lasers or microneedling to treat the area.",
-                    "Post-Treatment Care: Some redness and swelling may occur, but this will subside within a few days."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: "Say goodbye to visible scars with scar revision treatments at OBW Clinic. Achieve smooth, even skin and boost your confidence today!"
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Stay updated with the latest skincare tips and treatments by subscribing to our newsletter.",
-            placeholder: "Enter your email",
-            buttonText: "Subscribe"
-        }
-    };
-    const data11 = {
-        title: "Laser Resurfacing Treatments: Smooth, Youthful Skin in No Time",
-        category: "Skin",
-        author: "Sanya Mehta",
-        date: "Apr 1, 2025",
-        coverImage: img11,
-        sections: [
-            {
-                heading: "Introduction",
-                content: "Laser resurfacing is one of the most effective treatments for reducing wrinkles, fine lines, and skin blemishes. At OBW Clinic, we use fractional CO2 laser technology to target damaged skin layers, stimulate collagen production, and reveal smoother, more youthful skin."
-            },
-            {
-                heading: "How Does Laser Resurfacing Work?",
-                content: "Laser resurfacing involves using a focused beam of light to remove damaged skin layers, stimulating the body’s natural healing process to produce fresh, rejuvenated skin. This treatment can be customized to address various concerns, including wrinkles, pigmentation, and acne scars."
-            },
-            {
-                heading: "Benefits of Laser Resurfacing Treatments",
-                content: "These treatments offer the following benefits:",
-                list: [
-                    "Reduces wrinkles, fine lines, and blemishes",
-                    "Improves skin texture and tone",
-                    "Stimulates collagen production",
-                    "Minimally invasive with quick recovery time",
-                    "Safe and effective for all skin types"
-                ]
-            },
-            {
-                heading: "What to Expect During Laser Resurfacing at OBW Clinic?",
-                content: "Here’s what you can expect during your treatment:",
-                list: [
-                    "Consultation & Evaluation: We’ll assess your skin concerns and recommend the appropriate treatment.",
-                    "Procedure: The treatment typically takes 30-60 minutes, with a mild sensation of warmth.",
-                    "Post-Treatment Care: Mild redness and peeling may occur, but this will subside within a few days. Results will improve gradually over 2-4 weeks."
-                ]
-            },
-            {
-                heading: "Conclusion",
-                content: "For smoother, younger-looking skin, choose Laser Resurfacing at OBW Clinic. Book your treatment today and reveal a fresher, radiant complexion!"
-            }
-        ],
-        newsletter: {
-            heading: "Subscribe to Newsletter",
-            description: "Stay updated with the latest skincare tips and treatments by subscribing to our newsletter.",
+            description: "Stay informed about the latest health and wellness trends by subscribing to our newsletter.",
             placeholder: "Enter your email",
             buttonText: "Subscribe"
         }
@@ -566,28 +246,14 @@ const ArticleDetail = () => {
     console.log("Formatted articleId:", formattedId);
 
     const getArticleData = () => {
-        if (formattedId === "medi-facials:-the-ultimate-skin-rejuvenation-treatment") {
+        if (formattedId === "hair-transplant-surgery-for-men:-what-you-need-to-know") {
             return data1;
-        } else if (formattedId === "laser-hair-removal:-the-hassle-free-solution-for-smooth-skin") {
+        } else if (formattedId === "laser-hair-reduction-for-men:-a-smarter-way-to-stay-groomed") {
             return data2;
-        } else if (formattedId === "iv-therapy-for-skin,-hair-&-body-wellness") {
+        } else if (formattedId === "q-switch-laser:-glow-without-filters") {
             return data3;
-        } else if (formattedId === "carbon-laser-peel:-the-secret-to-flawless-skin") {
+        } else if (formattedId === "iv-therapy:-instant-wellness,-inside-out") {
             return data4;
-        } else if (formattedId === "hair-gfc-&-prp:-the-most-effective-hair-growth-solutions") {
-            return data5;
-        } else if (formattedId === "pmu-(permanent-makeup):-enhancing-natural-beauty-with-long-lasting-results") {
-            return data6;
-        } else if (formattedId === "skin-brightening:-achieve-a-radiant-and-even-complexion") {
-            return data7;
-        } else if (formattedId === "hair-transplant:-restore-your-hair,-restore-your-confidence") {
-            return data8;
-        } else if (formattedId === "anti-dht-mesotherapy:-prevent-hair-loss-and-promote-hair-growth") {
-            return data9;
-        } else if (formattedId === "scar-revision-or-reduction-treatments:-smooth-and-refined-skin") {
-            return data10;
-        } else if (formattedId === "laser-resurfacing-treatments:-smooth,-youthful-skin-in-no-time") {
-            return data11;
         } else {
             return data0;
         }
@@ -595,44 +261,61 @@ const ArticleDetail = () => {
 
     const article = getArticleData();
 
-    const blogs = [
-        {
-            title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
-            p: "Discover how medi-facials provide effective skin rejuvenation, leaving your skin glowing and refreshed.",
-            author: "Anjali Verma",
-            authorImg: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg?w=1060",
-            date: "Feb 10, 2025",
-            image: img1,
-            category: "Skin"
-        },
-        {
-            title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
-            p: "Say goodbye to shaving and waxing with laser hair removal, a long-lasting solution for smooth, hair-free skin.",
-            author: "Riya Mehta",
-            authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
-            date: "Feb 15, 2025",
-            image: img2,
-            category: "Hair"
-        },
-        {
-            title: "IV Therapy for Skin, Hair & Body Wellness",
-            p: "Experience the rejuvenating benefits of IV therapy for enhancing your skin, hair, and overall wellness.",
-            author: "Aarav Sharma",
-            authorImg: "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
-            date: "Feb 20, 2025",
-            image: img3,
-            category: "Wellness"
-        },
-    ];
+    // const blogs = [
+    //     {
+    //         title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
+    //         p: "Discover how medi-facials provide effective skin rejuvenation, leaving your skin glowing and refreshed.",
+    //         author: "Anjali Verma",
+    //         authorImg: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg?w=1060",
+    //         date: "Feb 10, 2025",
+    //         image: img1,
+    //         category: "Skin"
+    //     },
+    //     {
+    //         title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
+    //         p: "Say goodbye to shaving and waxing with laser hair removal, a long-lasting solution for smooth, hair-free skin.",
+    //         author: "Riya Mehta",
+    //         authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg?w=1060",
+    //         date: "Feb 15, 2025",
+    //         image: img2,
+    //         category: "Hair"
+    //     },
+    //     {
+    //         title: "IV Therapy for Skin, Hair & Body Wellness",
+    //         p: "Experience the rejuvenating benefits of IV therapy for enhancing your skin, hair, and overall wellness.",
+    //         author: "Aarav Sharma",
+    //         authorImg: "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg?w=1060",
+    //         date: "Feb 20, 2025",
+    //         image: img3,
+    //         category: "Wellness"
+    //     },
+    // ];
 
 
+    const [pageUrl, setPageUrl] = useState('');
+
+    // 3. Set the URL after the component mounts on the client-side
+    useEffect(() => {
+        setPageUrl(window.location.href);
+    }, []);
+
+    // 4. Update the handleCopyUrl function
     const handleCopyUrl = () => {
-        navigator.clipboard.writeText(url);
-        alert("URL copied to clipboard!");
+        if (!pageUrl) return; // Guard clause for safety
+
+        navigator.clipboard.writeText(pageUrl).then(() => {
+            toast.success("URL copied to clipboard!");
+        }).catch(err => {
+            toast.error("Failed to copy URL.");
+            console.error("Copy failed: ", err);
+        });
     };
 
+    // 5. Update the handleShare function
     const handleShare = (platform) => {
-        const encodedUrl = encodeURIComponent(url);
+        if (!pageUrl) return; // Guard clause for safety
+
+        const encodedUrl = encodeURIComponent(pageUrl);
         let shareUrl = "";
 
         switch (platform) {
@@ -640,7 +323,9 @@ const ArticleDetail = () => {
                 shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
                 break;
             case "twitter":
-                shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}`;
+                // You can also add text to the tweet
+                const text = encodeURIComponent("Check out this amazing blog!");
+                shareUrl = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${text}`;
                 break;
             case "facebook":
                 shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
@@ -649,8 +334,9 @@ const ArticleDetail = () => {
                 return;
         }
 
-        window.open(shareUrl, "_blank");
+        window.open(shareUrl, "_blank", "noopener,noreferrer"); // Added for security
     };
+
     const navigate = useNavigate();
     const HandleNavigation = (path) => {
         navigate(path);
@@ -699,50 +385,65 @@ const ArticleDetail = () => {
         <>
             <Toaster position="top-center" />
             <div className="article-detail">
-                <button onClick={() => HandleNavigation('/blogs')} className="allBlg"> <FaAngleLeft />All Posts</button>
-                <div className="ct-tm">
-                    <h3>{article?.category}</h3>
-                    <h4>{article?.category ? '5 min read' : ''}</h4>
-                </div>
                 <div className="header">
-                    <h1>{article.title}</h1>
-
                     <div className="cover-image">
                         <img src={article.coverImage} alt="Cover image" />
                     </div>
-                    <div className="meta">
-                        <div className="meta-info">
-                            <p>
-                                Written by <strong>{article.author}</strong>
-                            </p>
-                            <p>
-                                Published on <strong>{article.date}</strong>
-                            </p>
-                        </div>
-                        <div className="meta-icons">
-                            <FaLink
-                                onClick={handleCopyUrl}
-                                className="icon"
-                                title="Copy URL"
-                            />
-                            <FaLinkedin
-                                onClick={() => handleShare("linkedin")}
-                                className="icon"
-                                title="Share on LinkedIn"
-                            />
-                            <FaTwitter
-                                onClick={() => handleShare("twitter")}
-                                className="icon"
-                                title="Share on Twitter"
-                            />
-                            <FaFacebook
-                                onClick={() => handleShare("facebook")}
-                                className="icon"
-                                title="Share on Facebook"
-                            />
-                        </div>
-                    </div>
+                    <div className="right_content">
+                        <button onClick={() => HandleNavigation('/blogs')} className="allBlg"><ChevronLeft size={16} strokeWidth={2} /> All Posts</button>
+                        <div>
 
+                            <div className="ct-tm">
+                                <h3>{article?.category}</h3>
+                                <h4>{article?.category ? '5 min read' : ''}</h4>
+                            </div>
+                            <h1>{article.title}</h1>
+                        </div>
+
+
+                        <div className="meta">
+                            <div className="meta-info">
+                                <p>
+                                    Published on
+                                </p>
+                                <p>
+                                    <strong>{article.date}</strong>
+                                </p>
+                            </div>
+
+                            <div className="meta-icons">
+                                Share:
+                                <div className="icons_">
+                                    <span className="icon">
+                                        <FaLink
+                                            onClick={handleCopyUrl}
+
+                                            title="Copy URL"
+                                        />
+                                    </span>
+                                    <span className="icon">
+                                        <FaLinkedin
+                                            onClick={() => handleShare("linkedin")}
+                                            title="Share on LinkedIn"
+                                        />
+                                    </span>
+                                    <span className="icon">
+                                        <FaTwitter
+                                            onClick={() => handleShare("twitter")}
+                                            title="Share on Twitter"
+                                        />
+                                    </span>
+                                    <span className="icon">
+                                        <FaFacebook
+                                            onClick={() => handleShare("facebook")}
+                                            title="Share on Facebook"
+                                        />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
                 <div className="blog-data-detail">
                     <div className="content">
@@ -763,23 +464,17 @@ const ArticleDetail = () => {
                                         ))}
                                     </ul>
                                 )}
+                                <p>{section.content_after}</p>
+                                
                             </section>
                         ))}
                     </div>
 
-                    {/* <aside className="sidebar">
-                        <div className="newsletter">
-                            <h3>{article.newsletter.heading}</h3>
-                            <p>{article.newsletter.description}</p>
-                            <input type="email" placeholder={article.newsletter.placeholder} />
-                            <button>{article.newsletter.buttonText}</button>
-                            <p>By subscribing you agree to with our <a href="">Privacy Policy</a>.</p>
-                        </div>
-                    </aside> */}
+
                     <aside className="sidebar">
                         <div className="newsletter">
                             <h3>{article.newsletter.heading}</h3>
-                            <p>{article.newsletter.description}</p>
+                            <p>Subscribe to receive the latest blog posts to your inbox every week.</p>
 
                             <form onSubmit={handleSubscribe}>
                                 <input
@@ -788,13 +483,13 @@ const ArticleDetail = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
-                                <button type="submit">{article.newsletter.buttonText}</button>
+                                <button className="blog_subscribing" type="submit">{article.newsletter.buttonText}</button>
                             </form>
 
-                            <p>
-                                By subscribing you agree to our{" "}
+                            <h4 className="link_P">
+                                By subscribing you agree to with our{" "}
                                 <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
-                            </p>
+                            </h4>
                         </div>
                     </aside>
                 </div>
@@ -806,18 +501,20 @@ const ArticleDetail = () => {
                         className="btn-view-all">View all</button>
                 </div>
                 <div className="article-cards">
-                    {blogs.map((blog, index) => (
+                    {blogs.slice(0, 3).map((blog, index) => (
                         <div key={index} className="article-card">
                             <img
                                 src={blog.image}
                                 alt={blog?.title}
                                 className="card-image"
+                                onClick={() => HandleNavigation2(`${blog?.title}`)}
                             />
-                            <div className="ct-tm">
+                         <div className="content_card_">
+                               <div className="ct-tm">
                                 <h3>{blog?.category}</h3>
                                 <h4>5 min read</h4>
                             </div>
-                            <h3 className="card-title">{blog?.title}</h3>
+                            <h3 className="card-title" onClick={() => HandleNavigation2(`${blog?.title}`)}>{blog?.title}</h3>
                             <h3 className="card-p">{blog?.p}</h3>
                             <div className="author">
                                 {/* <div className="aut_text-img">
@@ -833,6 +530,7 @@ const ArticleDetail = () => {
                                     Read more {'>'}
                                 </button>
                             </div>
+                         </div>
                         </div>
                     ))}
                 </div>

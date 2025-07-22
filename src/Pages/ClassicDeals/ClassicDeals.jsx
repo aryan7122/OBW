@@ -29,7 +29,7 @@ const offers = [
   },
   {
     title: 'Flat 35% off',
-    subtitle: '4. full body laser hair reduction',
+    subtitle: ' full body laser hair reduction',
     bgColor: '#081361',
     image: img5,
   },

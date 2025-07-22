@@ -5,54 +5,9 @@ import WebPImage from '../../util/WebPImage';
 import img11 from "../../assets/TrendingTreatments/Laser Resurfacing Treatments-min.jpg";
 import img10 from "../../assets/TrendingTreatments/Scar Revision or Reduction-min.jpg";
 import { useNavigate } from 'react-router-dom';
+import { blogs } from './Blog';
 
-const blogs = [
-    {
-        title: "Medi-Facials: The Ultimate Skin Rejuvenation Treatment",
-        p: "Discover how medi-facials provide deep skin nourishment and rejuvenation...",
-        author: "Anjali Verma",
-        authorImg: "https://img.freepik.com/free-photo/portrait-beautiful-young-woman-having-facial-treatment_1157-14194.jpg",
-        date: "Feb 10, 2025",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Medi-Facials-min_xn8znv",
-        category: "Skin"
-    },
-    {
-        title: "Laser Hair Removal: The Hassle-Free Solution for Smooth Skin",
-        p: "Say goodbye to shaving, waxing, and plucking!...",
-        author: "Riya Mehta",
-        authorImg: "https://img.freepik.com/free-photo/portrait-woman-getting-laser-hair-removal-treatment-skin-care_1157-14225.jpg",
-        date: "Feb 15, 2025",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Laser_Hair_Removal-min_u7vpue",
-        category: "Hair"
-    },
-    {
-        title: "IV Therapy for Skin, Hair & Body Wellness",
-        p: "IV therapy is a treatment designed to nourish your body from within...",
-        author: "Aarav Sharma",
-        authorImg: "https://img.freepik.com/free-photo/young-woman-getting-iv-therapy-treatment-skin-care-health_1157-13747.jpg",
-        date: "Feb 20, 2025",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/IV_Therapy_for_Skin_Hair_Body_Care-min_w5xd4u",
-        category: "Wellness"
-    },
-    {
-        title: "Scar Revision or Reduction Treatments: Smooth and Refined Skin",
-        p: "Get smoother skin and reduce the appearance of scars...",
-        author: "Tanya Sharma",
-        authorImg: "https://img.freepik.com/free-photo/young-woman-face-scar-revision-treatment_1157-14209.jpg",
-        date: "Mar 25, 2025",
-        image: img10,
-        category: "Skin"
-    },
-    {
-        title: "Laser Resurfacing Treatments: Smooth, Youthful Skin in No Time",
-        p: "Achieve youthful, radiant skin quickly with laser resurfacing treatments...",
-        author: "Sanya Mehta",
-        authorImg: "https://img.freepik.com/free-photo/close-up-woman-laser-skin-resurfacing-treatment_1157-15163.jpg",
-        date: "Apr 1, 2025",
-        image: img11,
-        category: "Skin"
-    }
-];
+
 
 const BlogSlider = () => {
     const navigate = useNavigate();

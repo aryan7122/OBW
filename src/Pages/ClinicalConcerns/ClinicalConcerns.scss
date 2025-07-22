@@ -333,6 +333,13 @@
           .iconDown{
             opacity: 0.5;
           }
+          .img_img{
+            overflow: hidden;
+            border-radius: 10px;
+            background: transparent;
+            height: fit-content;
+            height: 176px;
+          }
           .card-image.large-image {
             // width: clamp(200px, 30vw, 360px);
             // height: clamp(120px, 20vw, 175px);
@@ -344,6 +351,10 @@
             transition: transform 0.3s ease-in-out;
             animation: smoothFadeUp 0.3s ease forwards;
             box-shadow: 1px 2px 15px 0px #00000033;
+            &:hover{
+              transition: 2s ease-in-out;
+              scale: 1.2;
+            }
           }
         }
         .card-media-active {
@@ -400,6 +411,9 @@
                 margin-left: 20px;
                 margin-top: -20px;
               }
+            }
+            .img_img{
+              height: 120%;
             }
             .card-media {
               width: 95%;

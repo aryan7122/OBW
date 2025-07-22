@@ -1,7 +1,8 @@
 .hero-section {
   color: white;
   margin-top: -90px;
-  height: 670px;
+  height: 90vh;
+  max-height: 750px;
   overflow: hidden;
   background: linear-gradient(
     180deg,
@@ -320,6 +321,7 @@
           margin-left: 8px;
           background: #fff;
         }
+       
       }
 
       .secondary-btn {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './Navbar.scss';
 import logo from '../../assets/footer/logo.svg'
-import { Menu, X, Search, ArrowRight } from 'lucide-react';
+import { Menu, X, Search, ArrowRight, MoveRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import BookAppointment from '../BookAppointment/BookAppointment';
 import { motion } from 'framer-motion';
@@ -91,7 +91,8 @@ function Navbar() {
                         ? <>
                             <button className="appointment-button btn" onClick={handleBookNowClick}>
                                 <span>
-                                    Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={3} />
+                                    Book Appointment   <MoveRight className="arrow-icon" size={16} strokeWidth={1.7} />
+                                 
                                 </span>
                             </button>
                             {/* <Search className="search-icon" size={24} onClick={toggleSearchBar} /> */}
