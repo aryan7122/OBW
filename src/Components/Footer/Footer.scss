@@ -147,6 +147,8 @@
         }
         p {
           opacity: 1;
+          font-weight: 500;
+          font-size: 18px;
         }
       }
     }
@@ -182,7 +184,7 @@
       }
 
       .book-appointment-btn {
-        padding: 3px 10px 3px 25px; // Your exact button padding
+        padding: 3px 3px 3px 25px; // Your exact button padding
       background: linear-gradient(90.5deg, #00CFDE -10.96%, #4AEBF6 41.07%, #00CFDE 83.93%) !important;
 
         color: #171717;
@@ -192,12 +194,13 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        max-height: 42px;
         font-weight: 500; // Your exact font weight
         line-height: 24px;
         letter-spacing: -0.5px;
         cursor: pointer;
         transition: 0.3s linear; // Your exact transition
-        height: 40px;
+        // height: 44px;
         min-width: 170px;
         @media only screen and (max-width: 550px) {
           margin-top: 15px; // Add margin when stacked

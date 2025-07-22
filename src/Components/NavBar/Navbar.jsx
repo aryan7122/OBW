@@ -47,9 +47,18 @@ function Navbar() {
 
     };
     // white bg
+    const bgBlurPaths = ['treatment'];
+
+      const [isbgBlur, setIsBgBlur] = useState(false);
+
+  useEffect(() => {
+    const checkBlur = bgBlurPaths.some((path) => location.pathname.includes(path));
+    setIsBgBlur(checkBlur);
+  }, [location.pathname]);
+
     const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service',];
-    const bgBlur = ['treatment'];
-    const isbgBlur = bgBlur.some((path) => location.pathname.includes(path));
+    // const bgBlur = ['treatment'];
+    // const isbgBlur = bgBlur.some((path) => location.pathname.includes(path));
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
     const [showModal, setShowModal] = useState(false);
     const handleBookNowClick = () => {
