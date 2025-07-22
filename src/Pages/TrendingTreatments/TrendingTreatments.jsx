@@ -9,6 +9,7 @@ import img1 from '../../assets/TrendingTreatments/Body Contouring (LipoLaser).jp
 import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.webp'
 import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
 import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
+import img5 from '../../assets/TrendingTreatments/chemical peelGlow peel.webp'
 import hert from '../../assets/TrendingTreatments/hert.svg'
 import { useNavigate } from "react-router-dom";
 
@@ -31,6 +32,12 @@ const treatments = [
         description: "Experience advanced Medi-facials tailored to your skin’s needs, combining medical-grade ingredients for instant radiance and skin health.   ",
         // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Medi-Facials-min_xn8znv",
         image: img3,
+    },
+    {
+        title: "Chemical peelGlow peel",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. ",
+        // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Skin_Boosters-min_rcxqeq",
+        image: img5,
     },
     {
         title: "Laser Hair reduction",

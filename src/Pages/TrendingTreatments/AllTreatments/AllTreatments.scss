@@ -2,7 +2,7 @@
   // padding: 20px;
 
   .treatment-header {
-    background-image: url("../../../assets//TrendingTreatments/bannner0.webp");
+    background-image: url("../../../assets/about/bannner0\ \(2\).webp");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: left;
@@ -10,20 +10,40 @@
     background-position: 0% 82%;
     padding: 170px 100px 60px 120px;
     margin-top: -120px;
-
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
     @media only screen and (max-width: 1400px) {
-      padding: 170px 40px 40px 100px;
+      padding: 40px 100px;
+    }
+    @media only screen and (max-width: 1300px) {
+      padding: 40px 80px;
     }
     @media only screen and (max-width: 1200px) {
-      background-position: 50% 92%;
+      padding: 40px 70px;
+    }
+    @media only screen and (max-width: 1100px) {
+      padding: 40px 60px;
     }
     @media only screen and (max-width: 1000px) {
-      padding: 170px 20px 40px 50px;
-      background-position: 70% 92%;
+      padding: 40px 40px;
+    }
+    @media only screen and (max-width: 900px) {
+      padding: 40px 40px;
     }
 
+    @media only screen and (max-width: 1170px) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: 900px) {
+      padding: 20px 30px;
+      // margin-top: 0;
+    }
     @media only screen and (max-width: 400px) {
-      padding: 170px 10px 40px 20px;
+      padding: 10px 20px;
+    }
+    @media only screen and (max-width: 400px) {
+      padding: 10px;
     }
     .card-Treatments {
       background: #b0f0f566;
@@ -32,23 +52,24 @@
       color: #000;
     }
     h1 {
-      margin-top: 160px;
-      width: 770px;
+      // width: 770px;
       font-weight: 500;
       color: #fff;
-      font-size: 48px;
+      font-size: 64px;
       line-height: 57.6px;
       letter-spacing: -2.2px;
-      text-shadow: 0px 2px 10px black;
-      @media only screen and (max-width: 8100px) {
+      text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.503);
+      @media only screen and (max-width: 810px) {
         width: 100%;
+        font-size: 48px;
+        line-height: 57.6px;
       }
       @media only screen and (max-width: 400px) {
         font-size: 40px;
         line-height: 50.6px;
       }
     }
-
+    
     p {
       margin-top: 10px;
       color: #fff;
@@ -60,7 +81,9 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.3px;
-      @media only screen and (max-width: 8100px) {
+      border-bottom: 1px dashed #B4B4B4;
+      padding-bottom: 20px;
+      @media only screen and (max-width: 810px) {
         width: 100%;
       }
     }
@@ -603,7 +626,7 @@
 
         .book-now {
           margin-top: 2rem;
-          padding: 5px 8px 5px 15px;
+          // padding: 5px 8px 5px 15px;
           margin-top: 10px;
           background-color: #007bff;
           color: #fff;
@@ -612,7 +635,10 @@
           border-radius: 100px;
           display: flex;
           align-items: center;
+          justify-content: center;
           gap: 10px;
+          width: 80%;
+          max-height: 44px;
           font-weight: 500;
           line-height: 24px;
           letter-spacing: -0.5px;
@@ -665,7 +691,7 @@
     padding: 7px 10px 7px 25px;
     margin: 50px auto 0px auto;
 
-    color: #643434;
+    color: #171717;
     border: none;
     font-size: 20px;
     border-radius: 100px;
@@ -679,7 +705,7 @@
 
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border: 1px solid #2463eb;
+    border: 1px solid #00CFDE;
     transition: 0.3s linear;
 
     @media only screen and (max-width: 500px) {
@@ -690,7 +716,7 @@
     .arrow-icon {
       transition: 0.3s linear;
       color: #fff;
-      background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+      background: linear-gradient(90.15deg, #01d5e4 0.13%, #00CFDE 103.2%);
       border-radius: 100px;
       width: 30px;
       height: 30px;
@@ -698,12 +724,12 @@
     }
 
     &:hover {
-      border: 1px solid #0056b3;
+      border: 1px solid #00CFDE;
       color: #fff;
-      background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+      background: linear-gradient(90.15deg, #00CFDE 0.13%, #00CFDE 103.2%);
       .arrow-icon {
-        background: #643434;
-        color: #fff;
+        background: #fff;
+        color: #00CFDE;
       }
     }
   }

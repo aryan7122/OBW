@@ -656,7 +656,9 @@ const AllTreatments = () => {
         <div className="treatments-page">
             <header className="treatment-header">
                 <h1>All Treatments</h1>
-                <p>Explore in-depth expert advice, insightful tips, and the most current trends in skincare, haircare, and a variety of aesthetic treatments to enhance your beauty routine.</p>
+                <p>
+                    Get personalized treatments tailored to your unique needs.
+                </p>
             </header>
 
             <div className="sectionCard">
@@ -778,7 +780,7 @@ const AllTreatments = () => {
                 </div>
                 {filteredData.length > initialCount && ( // Only show Load More if there are actually more items
                     <button ref={buttonRef} className="LoadMoreTreatments" onClick={visibleCount < filteredData.length ? handleLoadMore : handleLoadLess}>
-                        {visibleCount < filteredData.length ? "Load More" : "Load Less"}
+                        {visibleCount < filteredData.length ? "Load More Treatments" : "Load Less Treatments"}
                         <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 )}

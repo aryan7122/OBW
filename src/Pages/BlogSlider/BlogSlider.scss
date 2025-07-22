@@ -70,7 +70,7 @@
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.5px;
-      height: 48px;
+      max-height: 44px;
       cursor: pointer;
       transition: background-color 0.3s ease;
       background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
@@ -156,7 +156,7 @@
   }
 
   .slider-cards {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     gap: 20px;
     transition: transform 0.5s ease;

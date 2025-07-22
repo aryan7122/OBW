@@ -190,6 +190,7 @@
       }
 
       .card-description {
+        padding-top: 20px;
         color: #454545;
         margin-top: 10px;
         font-size: 16px;
@@ -201,8 +202,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         text-align: left;
-        // border: 1px solid red;
-        margin-top: 0px;
+      
         @media only screen and (max-width: 950px) {
           margin-top: 0;
           margin-bottom: 20px;
