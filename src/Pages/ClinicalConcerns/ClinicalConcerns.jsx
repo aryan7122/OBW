@@ -5,7 +5,7 @@ import "./ClinicalConcerns.scss";
 import SkinIcon from "../../assets/Clinical Concerns/icon/skin-care.svg";
 import ScalpIcon from "../../assets/Clinical Concerns/icon/like_5498753 1.svg";
 import BodyIcon from "../../assets/Clinical Concerns/icon/slim_6381900.svg";
-import BeautifyingIcon from "../../assets/Clinical Concerns/icon/cosmetic-surgery_5506893.png";
+import BeautifyingIcon from "../../assets/Clinical Concerns/icon/pedicure_3461923.svg";
 import IconAdd from "../../assets/Clinical Concerns/icon/add.svg";
 
 // Assuming you have BookAppointment modal and toast setup
@@ -16,10 +16,10 @@ import BookAppointment from "../../Components/BookAppointment/BookAppointment";
 
 // This map is good as is for tab icons
 const iconsMap = {
-  "Skin/Face Care": <img src={SkinIcon} alt="Skin Care" />,
-  "Scalp/Hair Care": <img src={ScalpIcon} alt="Scalp Care" />,
-  "Body Care": <img src={BodyIcon} alt="Body Care" />,
-  "Beautifying/Cosmetic Surgery": (
+  "Glow Skin Therapy ": <img src={SkinIcon} alt="Skin Care" />,
+  "Hair & Scalp Revival ": <img src={ScalpIcon} alt="Scalp Care" />,
+  "Body Shaping Solutions": <img src={BodyIcon} alt="Body Shaping Solutions" />,
+  "Cosmetic Enhancements ": (
     <img src={BeautifyingIcon} alt="Beautifying Care" />
   ),
 };
@@ -46,7 +46,7 @@ import psoriasis_img from '../../assets/TrendingTreatments/Scalp and hair concer
 import scalp_irraition_img from '../../assets/TrendingTreatments/Scalp and hair concerns/scalp irraition  (Small).jpg'
 import preterm_greyiong_img from '../../assets/TrendingTreatments/Scalp and hair concerns/preterm greyiong  (Small).jpg'
 import Frizzy_img from '../../assets/TrendingTreatments/Scalp and hair concerns/frizzy  (Small).jpg'
-// body care
+// Body Shaping Solutions
 import Body_r_img from '../../assets/TrendingTreatments/Body concerns/img1.jpg'
 import tattoo_removal_img from '../../assets/TrendingTreatments/Body concerns/young-woman-undergoing-laser-tattoo-removal-procedure-salon-closeup (1).bak.jpg'
 import sun_te_img from '../../assets/TrendingTreatments/Body concerns/img2.jpg'
@@ -63,7 +63,7 @@ import Melasma_img from '../../assets/TrendingTreatments/Melesma.jpg'
 
 
 export  const clinicalData = {
-  "Skin/Face Care": [
+  "Glow Skin Therapy ": [
     {
       type: "detailed",
       title: "Fine Lines & Wrinkles",
@@ -183,7 +183,7 @@ export  const clinicalData = {
   ]
   ,
 
-  "Scalp/Hair Care": [
+  "Hair & Scalp Revival ": [
     {
       type: "simple",
       title: "Hair fall",
@@ -285,7 +285,7 @@ export  const clinicalData = {
     },
   ],
 
-  "Body Care": [
+  "Body Shaping Solutions": [
     {
       type: "simple",
       title: "Body fat reduction",
@@ -351,7 +351,7 @@ export  const clinicalData = {
     },
   ],
 
-  "Beautifying/Cosmetic Surgery": [
+  "Cosmetic Enhancements ": [
     {
       type: "simple",
       title: "Face & scalp cyst removal",
@@ -391,7 +391,7 @@ export  const clinicalData = {
 
 
 function ClinicalConcerns() {
-  const [selectedTab, setSelectedTab] = useState("Skin/Face Care");
+  const [selectedTab, setSelectedTab] = useState("Glow Skin Therapy ");
   const [selectedCardIndex, setSelectedCardIndex] = useState(null); // Which card is active/expanded
   // New state to track the *specific tag* selected within the active card
   const [selectedTagIndex, setSelectedTagIndex] = useState(null);

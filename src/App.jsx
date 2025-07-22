@@ -102,7 +102,6 @@ function App() {
         ? "'Geist', sans-serif"
         : "'Bricolage Grotesque', sans-serif",
   };
-
   // loding
 
   const [loading, setLoading] = useState(true);

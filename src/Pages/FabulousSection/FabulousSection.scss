@@ -175,6 +175,9 @@
           width: 100%;
           border-bottom: 1px solid #e8e8e8;
           padding-bottom: 10px;
+            @media (max-width:470px) {
+              text-align: left;
+    }
           .arrow {
             display: flex;
             align-items: center;
@@ -189,4 +192,167 @@
       }
     }
   }
+}
+
+
+
+
+
+
+// 
+
+// FabulousSection.scss
+
+// This file should contain all styles for the FabulousSection component,
+// including the original layout and the new video player styles.
+
+// --- Original FabulousSection Styles (for context) ---
+.fabulous-section {
+    // Add your existing section styles here...
+    padding: 60px 20px;
+    background-color: #fdf8f8;
+
+    .cont-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+
+        .content-container {
+           flex: 1;
+            // Your existing content styles...
+        }
+    }
+}
+
+
+// --- Video Player Styles for .media-container ---
+.media-container {
+    position: relative;
+    flex: 1;
+    min-width: 350px;
+    max-width: 550px; // Adjusted max-width
+    width: 100%;
+    border-radius: 20px; // Rounded corners
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    cursor: pointer;
+
+    .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+    }
+
+    .video-thumbnail, video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // border-radius: 20px;
+    }
+
+    .video-loader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    }
+
+    .play-button {
+        position: absolute;
+        z-index: 3;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 16px;
+        width: 128px;
+        height: 102px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        &.center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .progress-bar-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.2);
+        z-index: 4;
+    }
+    
+    .progress-bar {
+        height: 100%;
+        background: #02d2e1;
+        transition: width 0.1s linear;
+    }
+
+    .mute-toggle {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 4;
+        transition: background 0.3s ease;
+        display: none; // Hidden by default
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    // Show mute button on hover
+    &:hover .mute-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// --- Keyframes ---
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }

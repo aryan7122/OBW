@@ -17,10 +17,10 @@ const WhyChooseSection = () => {
         <section className="why-choose-section">
             <div className="content-container">
                 <h2 className="title">
-                Why OBW is      
+                    Why OBW is
                     {' '}
                     <img src={icon1}
-                       />  {' '}the Right Choice
+                    />  {' '}the Right Choice
                 </h2>
                 <p className="description">
                     {/* At OBW Clinic, we are committed to providing expert-driven, result-oriented aesthetic treatments tailored to your unique needs. Our team of skilled dermatologists and specialists uses cutting-edge technology to ensure safe, effective, and long-lasting results. We believe in a holistic approach to beauty and wellness, combining science-backed treatments with personalized care. Our clinic uses premium, dermatologically tested products, ensuring the highest quality standards for your skin and body. With a luxurious and comfortable ambiance, we strive to make every visit a rejuvenating experience.
@@ -77,9 +77,9 @@ const WhyChooseSection = () => {
                             <path d="M6.98053 13.0156H10.9805" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                             <path d="M6.98053 17.0156H14.9805" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                         </svg>
-                        <h3>Recognized and Certified Clinic</h3>
+                        <h3>Skilled Hands, Gentle Touch</h3>
                         <p>
-                            OBW Clinical Services is certified by leading dermatology and cosmetic boards, ensuring that we meet the highest standards in the industry
+                            Experienced experts who treat with precision, patience, and personalized care
                         </p>
                     </div>
                     <div className="info-card purple"
@@ -95,9 +95,9 @@ const WhyChooseSection = () => {
                             <path d="M14.5 18L18 18" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M2.5 11H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <h3>Flexible Payment Options</h3>
+                        <h3>Science Meets Self-Care</h3>
                         <p>
-                            To make our treatments accessible to everyone, we offer flexible payment plans and options, ensuring affordability without compromising quality.
+                            We use advanced technology with a soft, human touch for lasting, natural-looking results.
                         </p>
                     </div>
                     <div className="info-card pink"
@@ -110,9 +110,9 @@ const WhyChooseSection = () => {
                             <path d="M8 15C8.91212 16.2144 10.3643 17 12 17C13.6357 17 15.0879 16.2144 16 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M8.00897 9L8 9M16 9L15.991 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-                        <h3>Post-Service Support</h3>
+                        <h3>Support Beyond the Session</h3>
                         <p>
-                            Our commitment doesn’t end with the treatment. We provide post-treatment care and guidance to ensure long-lasting results &address any concerns you
+                            We’re with you before, during, and after because real beauty needs real care
                         </p>
                     </div>
                 </div>

@@ -168,7 +168,7 @@ const TrendingTreatments = () => {
                     <div>
                         <h1 className="trending-title">Trending <span className="heart"><img src={hert}/></span> Treatments</h1>
                         <p className="description">
-                            Explore the latest treatments reshaping healthcare, from innovative therapies for chronic pain to advanced skincare solutions. Discover options like regenerative medicine that taps into the body's healing abilities and personalized nutrition plans tailored to your health needs. Stay informed with treatments that prioritize results and patient comfort.
+Explore the latest in healthcare, including innovative therapies for chronic pain and personalized nutrition plans. Stay updated on effective treatment options!
                         </p>
                     </div>
                     <button
