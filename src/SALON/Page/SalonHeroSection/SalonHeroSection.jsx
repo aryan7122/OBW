@@ -6,7 +6,7 @@ import profile1 from '../../../assets/SALON/hero/profile1.png';
 import profile2 from '../../../assets/SALON/hero/profile2.png';
 import profile3 from '../../../assets/SALON/hero/profile3.png';
 import str from '../../../assets/SALON/hero/str.png';
-import heroImageMobile from '../../../assets/SALON/hero/hero-image-mobile.png';
+import heroImageMobile from '../../../assets/SALON/hero/hero-image-mobile.webp';
 
 const featureItems = [
     'Calm & Hygienic',
@@ -40,13 +40,12 @@ const SalonHeroSection = () => {
                     </div>
 
                     <h1>
-                        Tailored Self-Care That Honors You, Every Single Moment
+                      Where Your Beauty Journey Feels Personal, Every Step of the Way 
                     </h1>
                  </div>
 
                     <div className="subline">
-                       <p> At OBW salon, we combine luxury and personalized
-                        skincare to enhance your beauty.</p>
+                       <p>At OBW Salon, we blend indulgent care with customized treatments designed to celebrate your unique glow and style. </p>
                     </div>
                 </div>
             {/* </div> */}

@@ -79,7 +79,7 @@ const ServicesSlider = ({ services }) => {
     }, [services]);
 
 
-    console.log('😒😒😒😒😒', containerRef)
+    // console.log('😒😒😒😒😒', containerRef)
     return (
         <div className={`slider-wrapper slider-card_is_${services.length}`}>
 

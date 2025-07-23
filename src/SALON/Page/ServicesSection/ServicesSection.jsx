@@ -301,7 +301,7 @@ const ServicesSection = () => {
                     SERVICES <img src={str3} alt="icon" />
                 </h5>
                 <h2 className="main-title">
-                    Explore Our Complete Range Of Offerings
+                   Take a look at everything we offer
                 </h2>
             </div>
 

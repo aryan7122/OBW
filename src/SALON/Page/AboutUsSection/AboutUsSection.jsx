@@ -1,8 +1,8 @@
 // File: AboutUsSection.jsx
 import React from 'react';
 import './AboutUsSection.scss';
-import faceCareImg from '../../../assets/SALON/hero/faceCareImg.png';
-import productImg from '../../../assets/SALON/hero/productImg.png';
+import faceCareImg from '../../../assets/SALON/hero/faceCareImg.webp';
+import productImg from '../../../assets/SALON/hero/productImg.webp';
 import str from '../../../assets/SALON/hero/str.png';
 import str3 from '../../../assets/SALON/hero/str3.png';
 
@@ -25,11 +25,10 @@ const AboutUsSection = () => {
                         ABOUT US <span className="about-us-spark"><img src={str} /></span>
                     </h4>
                     <h2 className="about-us-headline">
-                        We Provide Special Care For Your
-                        Appearance And Beauty
+                      We Care About How You Look and Feel
                     </h2>
                     <p className="about-us-description">
-                        At OBW, we believe beauty isn’t just about how you look — it’s how you feel. With a passion for transformation and precision, OBW has grown into a trusted destination for salon and clinical beauty services in Bangalore. Whether you want to refresh your style or rejuvenate your skin, we’re here to bring out the best in you.
+At OBW, we believe beauty is not just about your looks, it’s about how you feel inside. Our team is here to help you feel confident and refreshed with every visit. Whether it’s a new hairstyle, glowing skin, or a relaxing session, we make sure every service is done with care and comfort. Located in Bangalore, OBW has become a trusted place for people who want quality beauty care in a friendly, stylish space. 
                     </p>
                     <button className="about-us-cta-btn btn2">
                         <span>
