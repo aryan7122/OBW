@@ -236,7 +236,7 @@ Explore the latest in healthcare, including innovative therapies for chronic pai
                                 </div>
 
                                 <h3 className="card-title">{treatment.title}</h3>
-                                <p className="card-description">{treatment.description}</p>
+                                {/* <p className="card-description">{treatment.description}</p> */}
                             </div>
                         </>
                     ))}

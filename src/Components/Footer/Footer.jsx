@@ -34,8 +34,7 @@ const Footer = () => {
                             <img src={logo} alt="OBW Clinic Logo" />
                         </div>
                         <p className="description-text">
-                           Step into our serene space, where every visit invites you to embark on a tranquil journey filled with beauty and relaxation. Experience the calm atmosphere that surrounds you, making each moment a delightful escape.
-                        </p>
+Step into our advanced clinic, where every visit is a step toward confidence and well-being. With expert care and personalized treatments, we’re here to help you achieve visible results and long-term skin and hair health.                        </p>
                     </div>
                     {/* Section 4: Contact Info and Button */}
                     <div className="grid-item footer-contact-section">

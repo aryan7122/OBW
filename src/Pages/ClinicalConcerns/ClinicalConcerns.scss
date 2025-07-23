@@ -5,7 +5,7 @@
   padding: 60px 120px;
  min-height: 1700px;
  
-//  border: 1px solid red !important;
+ border: 1px solid red !important;
  @media only screen and (max-width: 870px){
    min-height: 1750px;
 
@@ -515,3 +515,15 @@
     }
   }
 
+.tabs_card_Hair{
+   min-height: 1500px;
+
+}
+.tabs_card_Body{
+   min-height: 1130px;
+
+}
+.tabs_card_Cosm{
+   min-height: 800px;
+
+}

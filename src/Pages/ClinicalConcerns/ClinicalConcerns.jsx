@@ -437,7 +437,7 @@ function ClinicalConcerns() {
   };
 
   return (
-    <div className="clinical-concerns-section">
+    <div className={`clinical-concerns-section  tabs_card_${selectedTab.slice(0,4)}`}>
       <Toaster position="top-center" reverseOrder={false} />
 
       <div className="concerns-header">
@@ -466,7 +466,7 @@ function ClinicalConcerns() {
         </div>
       </div>
 
-      <div className="tab-content">
+      <div className={`tab-content `}>
         {clinicalData[selectedTab].map((card, cardIdx) => (
           <div
             className={`concern-card ${selectedCardIndex === cardIdx ? "active" : ""}`}

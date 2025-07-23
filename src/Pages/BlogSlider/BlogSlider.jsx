@@ -24,7 +24,7 @@ const BlogSlider = () => {
             else if (width < 900) setCardsToShow(2); // On tablets
             else if (width < 980) setCardsToShow(2.5); // On tablets
             else if (width < 1150) setCardsToShow(3); // On tablets
-            else setCardsToShow(3.5); // On desktops
+            else setCardsToShow(3.6); // On desktops
         };
         updateCards();
         window.addEventListener('resize', updateCards);
@@ -116,7 +116,7 @@ const BlogSlider = () => {
                                 <div className="rd_mo">
                                     <p className='read-more'>Read More </p>
                                     <p className='category'>{blog?.category}</p>
-                                    <p className='read-time'>5 min</p>
+                                    {/* <p className='read-time'>5 min</p> */}
                                 </div>
                             </div>
                         ))}

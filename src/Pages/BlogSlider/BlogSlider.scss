@@ -2,7 +2,7 @@
   margin: 0 auto;
   text-align: center;
   background: linear-gradient(179.02deg, #fff0df -8.29%, #f3feff 104.22%);
-  
+
   padding: 60px 0px 60px 120px;
   @media only screen and (max-width: 1400px) {
     padding: 40px 0px 40px 100px;
@@ -21,10 +21,10 @@
   }
 
   @media only screen and (max-width: 600px) {
-    padding:20px 0px 20px 30px;
+    padding: 20px 0px 20px 30px;
   }
   @media only screen and (max-width: 500px) {
-    padding:20px 0px 20px 20px;
+    padding: 20px 0px 20px 20px;
   }
   @media only screen and (max-width: 400px) {
     padding: 20px 0px 20px 10px;
@@ -384,7 +384,32 @@
       overflow: hidden;
       border-radius: 20px;
       cursor: pointer;
-      // border:1px solid red;
+      transition: 0.3s ease-in-out;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00000044;
+        z-index: 1;
+      }
+      &:hover {
+      transform: translateY(-1px);
+      scale: 0.99;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #00000055;
+        z-index: 1;
+      }
+      }
+
       .card-image {
         width: 100%;
         height: 380px;
@@ -405,33 +430,32 @@
       .category,
       .read-time,
       .read-more {
-     
         z-index: 2;
         color: #fff;
         &:hover {
-          text-decoration: underline;
+          text-decoration: 1px underline;
         }
       }
 
       .card-title {
-        bottom: 60px;
+        bottom: 65px;
         left: 20px;
         position: absolute;
         max-width: 90%;
         line-height: 1.4;
-        font-family: 'Geist';
-        font-weight: 500;
+        font-family: "Geist";
+        font-weight: 400;
         font-style: Medium;
         font-size: 22px;
         line-height: 28px;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.3px;
         text-align: left;
         display: -webkit-box;
         -webkit-line-clamp: 2; // Show only 3 lines
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        @media (max-width: 470px){
+        @media (max-width: 470px) {
           left: 10px;
           bottom: 40px;
         }
@@ -442,10 +466,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        bottom: 10px;
+        bottom: 15px;
         left: 20px;
         width: 90%;
-        @media (max-width: 470px){
+        @media (max-width: 470px) {
           left: 10px;
         }
       }
@@ -459,13 +483,14 @@
 
       .category {
         position: absolute;
-        right: 75px;
+        right: 10px;
+        bottom: 2px;
       }
 
       .read-time {
         position: relative;
         background: transparent;
-        @media (max-width: 470px){
+        @media (max-width: 470px) {
           display: none;
         }
       }
@@ -499,7 +524,7 @@
       border-radius: 100px;
       cursor: pointer;
       background: transparent;
-      border: 1px solid #00CFDE;
+      border: 1px solid #00cfde;
       @media only screen and (max-width: 400px) {
         min-width: 40px;
         min-height: 40px;
