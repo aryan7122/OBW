@@ -1,20 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.scss";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Keep only used icons
 import logo from '../../assets/footer/logo.png';
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from 'lucide-react'; // Assuming you use lucide-react for ArrowRight
+import BookAppointment from '../BookAppointment/BookAppointment';
 
 const Footer = () => {
     const navigate = useNavigate();
+    const [showModal, setShowModal] = useState(false);
 
     const HandleNavigation = (path) => {
         navigate(path);
         window.scrollTo(0, 0);
     };
 
+      const handleBookNowClick = () => {
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
     return (
         <footer className="footer">
+                    {showModal && <BookAppointment onClose={closeModal} />}
+
             <div className="footer-main-grid">
                 {/* Section 1: Logo and Description */}
                 <div className="grid-item footer-description-section">
@@ -33,7 +44,7 @@ const Footer = () => {
                             <p className="phone-number">+91-9764310135</p>
                             <p className="email">contact@obw.com</p>
                         </div>
-                        <button className="book-appointment-btn btn" onClick={() => HandleNavigation("/book-appointment")}>
+                        <button className="book-appointment-btn btn"  onClick={handleBookNowClick}>
                             <span>
                                 Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                             </span>
@@ -56,11 +67,11 @@ const Footer = () => {
                 <div className="grid-item footer-clinic-services">
                     <h4>CLINIC:</h4>
                     <ul>
-                        <li><a onClick={() => HandleNavigation("/clinic/anti-ageing")}>Anti-ageing</a></li>
-                        <li><a onClick={() => HandleNavigation("/clinic/micro-needling")}>Micro needling</a></li>
-                        <li><a onClick={() => HandleNavigation("/clinic/laser-hair-removal")}>Laser hair removal</a></li>
-                        <li><a onClick={() => HandleNavigation("/clinic/prp-for-hair")}>PRP for hair</a></li>
-                        <li><a onClick={() => HandleNavigation("/clinic/dermal-fillers")}>Dermal Fillers</a></li>
+                        <li><a onClick={() => HandleNavigation("/treatment")}>Anti-ageing</a></li>
+                        <li><a onClick={() => HandleNavigation("/treatment")}>Micro needling</a></li>
+                        <li><a onClick={() => HandleNavigation("/treatment")}>Laser hair removal</a></li>
+                        <li><a onClick={() => HandleNavigation("/treatment")}>PRP for hair</a></li>
+                        <li><a onClick={() => HandleNavigation("/treatment")}>Dermal Fillers</a></li>
                     </ul>
                 </div>
 

@@ -322,10 +322,14 @@
   }
 
   .book-now {
-    width: fit-content;
+    width: 220px;
     margin: 20px auto;
-    padding: 8px 8px 8px 40px;
-    background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
+    padding: 12px;
+   background: linear-gradient(91.38deg, #00BCCA -18.19%, #00939E 121.41%);
+    text-align: center ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #fff;
     border: none;
     font-size: 13px;
@@ -335,35 +339,36 @@
     gap: 10px;
     font-weight: 500;
     line-height: 24px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.1px;
 
     cursor: pointer;
     transition: background-color 0.3s ease;
     // background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
     border: 1px solid transparent;
     transition: 0.3s linear;
-    border: 1px solid #0056b3;
-
+    border: 1px solid transparent;
+    
     @media only screen and (max-width: 500px) {
       padding: 5px 6px 5px 15px;
       font-size: 10px;
     }
-
+    
     .arrow-icon {
       transition: 0.3s linear;
       background: #fff;
-      color: #1c4eb8;
+      color: #00939E;
       border-radius: 100px;
       width: 30px;
       height: 30px;
       padding: 5px;
     }
-
+    
     &:hover {
+      border: 1px solid #00939E;
       background: #ffff !important;
-      color: #0056b3;
+      color: #00939E;
       .arrow-icon {
-        background: #1c4eb8;
+        background: #00939E;
         color: #fff;
       }
     }
