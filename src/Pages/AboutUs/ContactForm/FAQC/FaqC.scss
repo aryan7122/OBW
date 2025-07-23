@@ -44,6 +44,7 @@ $breakpoint-lg: 1024px;
   font-family: $font-geist;
   box-sizing: border-box; // Ensure padding is included in total width/height
   padding: 0px 120px;
+  padding-bottom: 50px !important;
   @media only screen and (max-width: 1400px) {
     padding: 0px 100px;
   }

@@ -10,9 +10,9 @@
     background-position: 0% 82%;
     padding: 170px 100px 60px 120px;
     margin-top: -120px;
-      display: flex;
-      flex-direction: column;
-      justify-content: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     @media only screen and (max-width: 1400px) {
       padding: 40px 100px;
     }
@@ -27,6 +27,7 @@
     }
     @media only screen and (max-width: 1000px) {
       padding: 40px 40px;
+      height: 570px;
     }
     @media only screen and (max-width: 900px) {
       padding: 40px 40px;
@@ -36,14 +37,20 @@
       flex-direction: column;
     }
     @media only screen and (max-width: 900px) {
-      padding: 20px 30px;
+      // padding: 20px 30px;
+      background-position: 30% 0%;
+
       // margin-top: 0;
     }
-    @media only screen and (max-width: 400px) {
+    @media only screen and (max-width: 600px) {
+     height: 500px;
+      background-position: 40% 0%;
+    }
+    @media only screen and (max-width: 500px) {
       padding: 10px 20px;
     }
     @media only screen and (max-width: 400px) {
-      padding: 10px;
+      padding: 15px;
     }
     .card-Treatments {
       background: #b0f0f566;
@@ -69,11 +76,11 @@
         line-height: 50.6px;
       }
     }
-    
+
     p {
       margin-top: 10px;
       color: #fff;
-      text-shadow: 0px 2px 10px black;
+      text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.285);
       max-width: 600px;
       // border: 1px solid red;
       font-weight: 400;
@@ -81,7 +88,7 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.3px;
-      border-bottom: 1px dashed #B4B4B4;
+      border-bottom: 1px dashed #b4b4b4;
       padding-bottom: 20px;
       @media only screen and (max-width: 810px) {
         width: 100%;
@@ -234,7 +241,7 @@
           max-width: 400px;
           justify-content: space-between;
         }
-         @media (max-width: 445px) {
+        @media (max-width: 445px) {
           flex-direction: column;
           min-width: 100%;
           max-width: 100%;
@@ -374,15 +381,16 @@
     border-bottom: 1px solid #e8e8e8;
     margin-top: 20px;
     @media only screen and (max-width: 1150px) {
-      overflow-x: scroll ;
-      &::-webkit-scrollbar {    // Chrome, Safari ke liye
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        // Chrome, Safari ke liye
         display: none;
       }
       @media only screen and (max-width: 700px) {
-        &::-webkit-scrollbar {    // Chrome, Safari ke liye
+        &::-webkit-scrollbar {
+          // Chrome, Safari ke liye
           display: block;
         }
-
       }
     }
   }
@@ -705,7 +713,7 @@
 
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border: 1px solid #00CFDE;
+    border: 1px solid #00cfde;
     transition: 0.3s linear;
 
     @media only screen and (max-width: 500px) {
@@ -716,7 +724,7 @@
     .arrow-icon {
       transition: 0.3s linear;
       color: #fff;
-      background: linear-gradient(90.15deg, #01d5e4 0.13%, #00CFDE 103.2%);
+      background: linear-gradient(90.15deg, #01d5e4 0.13%, #00cfde 103.2%);
       border-radius: 100px;
       width: 30px;
       height: 30px;
@@ -724,12 +732,12 @@
     }
 
     &:hover {
-      border: 1px solid #00CFDE;
+      border: 1px solid #00cfde;
       color: #fff;
-      background: linear-gradient(90.15deg, #00CFDE 0.13%, #00CFDE 103.2%);
+      background: linear-gradient(90.15deg, #00cfde 0.13%, #00cfde 103.2%);
       .arrow-icon {
         background: #fff;
-        color: #00CFDE;
+        color: #00cfde;
       }
     }
   }

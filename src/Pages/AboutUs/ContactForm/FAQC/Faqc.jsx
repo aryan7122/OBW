@@ -59,7 +59,7 @@ const FaqC = () => {
                 <a href="#" className="book-now btn">
                     Contact Us
                     <span className="arrow-icon">
-                         <ArrowRight className="arrow-icon" size={20} strokeWidth={3}/>
+                         <ArrowRight className="" size={20} strokeWidth={2}/>
                     </span>
                 </a>
             </div>

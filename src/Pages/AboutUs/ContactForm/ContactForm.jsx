@@ -175,7 +175,7 @@ const ContactForm = () => {
                         <button type="submit" className="submit-btn btn">
                             <span>
                                 
-                            Book Now
+                           Submit
                         </span>
                             {/* <ArrowRight className="arrow-icon" size={16} strokeWidth={2} /> */}
                         </button>

@@ -6,7 +6,7 @@
   //   justify-content: center;
   padding: 60px 120px 60px 120px;
   height: 503px;
-  background: linear-gradient(106.86deg, #FFFFFF 37.92%, #fff 85.74%);
+  background: linear-gradient(106.86deg, #FFFFFF 37.92%, #fafcf2 85.74%);
   position: relative;
   overflow: hidden;
   // margin-top: -122px;
@@ -45,9 +45,20 @@
     width: 254px;
     height: 254px;
     border-radius: 50%;
-    background: #54DFE9;
+    // background: #54DFE9;
+    background: linear-gradient(106.86deg, #54DFE9 37.92%, #9DFF00 85.74%);
     filter: blur(130px);
-    z-index: 2;
+    z-index: 0;
+  }
+  .element4::before {
+    content: "";
+    position: absolute;
+    width: 254px;
+    height: 254px;
+    border-radius: 50%;
+    background: #9DFF00;
+    filter: blur(230px);
+    z-index: 0;
   }
   .element3::before{
     background: #FF71B5;
@@ -60,7 +71,7 @@
     border-radius: 50%;
     background: #fff;
     filter: blur(140px);
-    z-index: 2;
+    z-index: 0;
   }
 
   .element1::before {
@@ -81,7 +92,7 @@
   }
   .element4::before {
     top: 30%;
-    left: 70%;
+    left: 40%;
     animation: float 20s ease-in-out infinite;
   }
   .element5::before {
@@ -118,7 +129,11 @@
       font-weight: 500;
       line-height: 24px;
       letter-spacing: -0.5px;
-      // width: 215px;
+      width: 160px;
+      display: flex;
+      align-items: center;
+      text-align: center ;
+      justify-content:center;
       cursor: pointer; 
       transition: background-color 0.3s ease;
       background: linear-gradient(90.15deg, #f2f3f4 0.13%, #ffffff 103.2%);
@@ -166,12 +181,12 @@
     z-index: 3;
     text-align: center;
     color: #000;
-    max-width: 900px;
+    max-width: 880px;
     
     h1 {
       margin-top: 0px;
       text-align: left;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 64px;
       line-height: 70px;
       letter-spacing: -3px;
