@@ -2,7 +2,7 @@
 import React from 'react';
 
 import './InfinityScrollGallery.scss';
-import img1 from '../../../assets/InfinityScrollGallery/img (1).webp'
+// import img1 from '../../../assets/InfinityScrollGallery/img (1).webp'
 import img2 from '../../../assets/InfinityScrollGallery/img (2).webp'
 import img3 from '../../../assets/InfinityScrollGallery/img (3).webp'
 import img4 from '../../../assets/InfinityScrollGallery/img (4).webp'
@@ -16,7 +16,7 @@ import img10 from '../../../assets/InfinityScrollGallery/img (10).webp'
 // import img12 from '../../../assets/InfinityScrollGallery/img (12).webp'
 
 const imageUrls = [
-    img1, img2, img3,img4,img5,img6,img7,img8,img9,img10
+   img2, img3,img4,img5,img6,img7,img8,img9,img10
 ];
 
 const InfinityScrollGallery = () => {

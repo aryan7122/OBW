@@ -635,16 +635,16 @@
 
   // Last card – right margin (simulate padding-right)
   .service-card:last-child {
-    margin-right: 120px;
+    // margin-right: 120px;
 
     @media (max-width: 1400px) {
-      margin-right: 100px;
+      // margin-right: 100px;
     }
     @media (max-width: 1000px) {
-      margin-right: 20px;
+      // margin-right: 20px;
     }
     @media (max-width: 600px) {
-      margin-right: 10px;
+      // margin-right: 10px;
     }
   }
 }

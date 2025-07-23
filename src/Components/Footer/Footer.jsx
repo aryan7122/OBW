@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Footer.scss";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Keep only used icons
-import logo from '../../assets/footer/logo.png';
+import logo from '../../assets/footer/logo.svg';
 import { useNavigate } from "react-router-dom";
 import { ArrowRight } from 'lucide-react'; // Assuming you use lucide-react for ArrowRight
 import BookAppointment from '../BookAppointment/BookAppointment';

@@ -13,7 +13,7 @@ function Navbar() {
     const [isVisible, setIsVisible] = useState(false);
     const location = useLocation(); // Get current location
     // const [isWhite, setIsWhite] = useState(false);
-  const { pageTab, changeTab } = useContext(TabContext);
+    const { pageTab, changeTab } = useContext(TabContext);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,12 +49,12 @@ function Navbar() {
     // white bg
     const bgBlurPaths = ['treatment'];
 
-      const [isbgBlur, setIsBgBlur] = useState(false);
+    const [isbgBlur, setIsBgBlur] = useState(false);
 
-  useEffect(() => {
-    const checkBlur = bgBlurPaths.some((path) => location.pathname.includes(path));
-    setIsBgBlur(checkBlur);
-  }, [location.pathname]);
+    useEffect(() => {
+        const checkBlur = bgBlurPaths.some((path) => location.pathname.includes(path));
+        setIsBgBlur(checkBlur);
+    }, [location.pathname]);
 
     const whiteBg = ['contact', 'blogs', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service',];
     // const bgBlur = ['treatment'];
@@ -67,6 +67,22 @@ function Navbar() {
     const closeModal = () => {
         setShowModal(false);
     };
+
+    // Add this inside your Navbar component
+    useEffect(() => {
+        // If the menu is open, add a class to the body to prevent scrolling
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            // When the menu is closed, remove the style
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cleanup function to ensure the style is removed when the component unmounts
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [menuOpen]); // This effect runs whenever `menuOpen` changes
 
     return (
         <header className={`navbar ${pageTab === "SALON" ? 'SALON' : ''} ${scrolled ? 'navbar-scrolled' : ''} ${isbgBlur ? 'isbgBlur' : ''}  ${isWhite ? 'navbar-scrolled' : ''} ${menuOpen ? 'navbar-scrolled' : ''}`}>
@@ -83,7 +99,7 @@ function Navbar() {
                 </div>
 
                 {/* Navigation Links */}
-                {!isVisible &&
+                {!isVisible && !menuOpen &&
                     <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
                         <li onClick={() => toggleMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
                         <li ><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
@@ -101,7 +117,7 @@ function Navbar() {
                             <button className="appointment-button btn" onClick={handleBookNowClick}>
                                 <span>
                                     Book Appointment   <MoveRight className="arrow-icon" size={16} strokeWidth={1.7} />
-                                 
+
                                 </span>
                             </button>
                             {/* <Search className="search-icon" size={24} onClick={toggleSearchBar} /> */}
@@ -137,7 +153,18 @@ function Navbar() {
 
             </motion.nav>
             {showModal && <BookAppointment onClose={closeModal} />}
+            {!isVisible && menuOpen &&
+                <ul className={` ${menuOpen ? 'mobile-menu-active' : ''}`}>
+                    {/* Your existing navigation links */}
+                    <li onClick={() => toggleMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
+                    <li onClick={() => toggleMenu()}> <Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
+                    <li onClick={() => toggleMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                    <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                    <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
 
+                  
+                </ul>
+            }
         </header >
     );
 }

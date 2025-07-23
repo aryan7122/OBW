@@ -410,6 +410,8 @@
     transition: 0.2s linear;
   }
   .menu-active {
+    position: absolute;
+    background: #000;
     li {
       .active-link {
         // color: rgb(5, 76, 101) !important;
@@ -450,10 +452,10 @@
       flex-direction: column;
       position: absolute;
       top: 100%;
-      left: -4.5vw;
+      // left: -4.5vw;
       margin-top: -1px;
       background-color: #472525;
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       /* Safari Support */
@@ -702,6 +704,12 @@
   }
 }
 
+
+
+
+
+
+
 @media only screen and (max-width: 440px) {
   .navbar-container .navbar-actions .search-bar .card_search {
     transform: translateX(-78.6vw) !important;
@@ -772,3 +780,100 @@
     width: 94vw;
   }
 }
+
+
+
+
+
+
+// 
+  /* --- MOBILE MENU DESIGN --- */
+
+// This is the main container for your links (the <ul>)
+.mobile-menu-active {
+
+  // This media query targets mobile devices
+  @media (max-width: 950px) {
+    // --- Menu Overlay Styles ---
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    
+    // Positioning: Creates the full-screen overlay below the navbar
+    position: fixed;
+    top: 120px; // Assumes navbar height is 90px
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 90px);
+    
+    // Appearance
+    background-color: #472525; // Dark background from your theme
+    z-index: 1000; // Ensures it's on top of other content
+    
+    // Animation: Smooth slide-in effect
+    transform: translateX(100%); // Start off-screen to the right
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    // --- Link Styles ---
+    li {
+      width: 100%;
+      list-style: none;
+      
+      a {
+        display: block;
+        width: 100%;
+        padding: 18px 0;
+        color: #ffffff !important;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 500 !important;
+        opacity: 0.8;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        border-radius: 10px;
+
+        // Hover effect for links
+        &:hover {
+          opacity: 1;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        // Style for the currently active page link
+        &.active {
+          opacity: 1;
+          font-weight: 700;
+          color: #00CFDE; // Highlight color
+        }
+      }
+    }
+  }
+
+  // When the menu is open, slide it into view
+  &.mobile-menu-active{
+    @media (max-width: 950px) {
+      transform: translateX(0%);
+    }
+  }
+}
+
+// Hide the desktop links on mobile
+@media (max-width: 950px) {
+  .navbar-links {
+    // This empty block with the @media query ensures the mobile styles above apply correctly
+  }
+}
+
+// Ensure desktop links are visible and mobile menu is hidden
+@media (min-width: 951px) {
+    .navbar-links {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 10px 20px;
+    }
+}
+// 
