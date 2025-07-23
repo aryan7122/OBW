@@ -512,7 +512,7 @@ const ArticleDetail = () => {
                          <div className="content_card_">
                                <div className="ct-tm">
                                 <h3>{blog?.category}</h3>
-                                <h4>5 min read</h4>
+                                {/* <h4>5 min read</h4> */}
                             </div>
                             <h3 className="card-title" onClick={() => HandleNavigation2(`${blog?.title}`)}>{blog?.title}</h3>
                             <h3 className="card-p">{blog?.p}</h3>

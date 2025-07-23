@@ -3,17 +3,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 48px;
+    height: 44px !important;
+    height: 44px;
     width: 100%;
     background-color: #f0f0f0;
-
+z-index: 9;
     .left_tab,
     .Right_tab {
         width: 50%;
 
         .btn_wt {
             display: flex;
-            align-items: center;
+            // align-items: center;
             justify-content: center;
             gap: 8px;
             width: 100%;
@@ -27,8 +28,7 @@
             line-height: 27.57px;
             letter-spacing: -0.76px;
             text-align: center;
-            padding: 9px;
-            // margin-top: -5px;
+            padding: 9px !important;
             
             color: #472525;
             transition: background-color 0.3s;

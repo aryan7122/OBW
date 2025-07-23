@@ -9,14 +9,14 @@
 }
 
 .NavBar {
-  height: 90px;
+  height: 80px;
   position: sticky;
   top: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  background: #371D1D;
   transition: background-color 0.3s ease;
   padding: 0 120px;
   user-select: none;
@@ -27,29 +27,29 @@
   /* Firefox */
   -ms-user-select: none;
   // backdrop-filter: blur(1px);
-  &::before {
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #ffffff26;
-    backdrop-filter: blur(5px); /* adjust strength */
-    -webkit-backdrop-filter: blur(10px);
-    background: #FFFFFF03;
-    /* LEFT 80% blur, RIGHT 20% light blur */
+  // &::before {
+  //   content: "";
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   position: absolute;
+  //   background: #ffffff26;
+  //   backdrop-filter: blur(5px); /* adjust strength */
+  //   -webkit-backdrop-filter: blur(10px);
+  //   background: #FFFFFF03;
+  //   /* LEFT 80% blur, RIGHT 20% light blur */
     
-    // // border: 1px solid red;
+  //   // // border: 1px solid red;
     
-    -webkit-mask-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 60%,
-      rgba(0, 0, 0, 0)100%,
-      rgba(0, 0, 0, 0.1) 70%,
-      rgba(0, 0, 0, 0) 100%
-      );
-  }
+  //   -webkit-mask-image: linear-gradient(
+  //     to right,
+  //     rgba(0, 0, 0, 1) 60%,
+  //     rgba(0, 0, 0, 0)100%,
+  //     rgba(0, 0, 0, 0.1) 70%,
+  //     rgba(0, 0, 0, 0) 100%
+  //     );
+  // }
  
   @media only screen and (max-width: 1400px) {
     padding: 0 100px;
@@ -87,7 +87,8 @@
   }
 
   &.NavBar-scrolled {
-    background-color: #ffffff;
+    background-color: #371D1D;
+    color: #fff;
     .NavBar-container {
       // background: #fff;
       .NavBar-logo {
@@ -99,7 +100,7 @@
         li {
           a {
             // color: #00575D ;
-            color: #171717;
+            color: #fff;
           }
         }
       }
@@ -387,12 +388,12 @@
 .NavBar-scrolled {
   li{
     a{
-      color: #000 !important;
+      color: #fff !important;
     }
   }
   .NavBar-container {
     .mobile-menu-icon {
-      color: #171717;
+      color: #fff;
     }
   }
 }
@@ -449,10 +450,9 @@
       top: 100%;
       left: -4.5vw;
       margin-top: -1px;
-      background-color: #ffffff;
+      background-color: #371D1D;
       width: 100vw;
       height: 100vh;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       /* Safari Support */
       padding: 30px;
       z-index: 100;
@@ -513,7 +513,7 @@
     margin-right: 10px;
     @media (max-width: 950px) {
       display: block;
-      color: #000 !important;
+      color: #fff !important;
       margin-right: 0;
     }
   }
@@ -726,5 +726,103 @@
     transform: translateX(-77.2vw) !important;
     width: 94vw;
   }
+}
+// 
+
+
+
+
+
+
+
+// 
+  /* --- MOBILE MENU DESIGN --- */
+
+// This is the main container for your links (the <ul>)
+.mobile-menu-active2 {
+  z-index: -1;
+  // This media query targets mobile devices
+  @media (max-width: 950px) {
+    // --- Menu Overlay Styles ---
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    
+    // Positioning: Creates the full-screen overlay below the navbar
+    position: fixed;
+    top: 120px; // Assumes navbar height is 90px
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 90px);
+    
+    // Appearance
+    background-color: #371D1D; // Dark background from your theme
+    z-index: 1000; // Ensures it's on top of other content
+    
+    // Animation: Smooth slide-in effect
+    transform: translateX(100%); // Start off-screen to the right
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    // --- Link Styles ---
+    li {
+      width: 100%;
+      list-style: none;
+      
+      a {
+        display: block;
+        width: 100%;
+        padding: 18px 0;
+        color: #ffffff !important;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 500 !important;
+        opacity: 0.8;
+        transition: opacity 0.3s ease, background-color 0.3s ease;
+        border-radius: 10px;
+
+        // Hover effect for links
+        &:hover {
+          opacity: 1;
+          // background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        // Style for the currently active page link
+        &.active {
+          opacity: 1;
+          font-weight: 700;
+          color: #00CFDE; // Highlight color
+        }
+      }
+    }
+  }
+
+  // When the menu is open, slide it into view
+  &.mobile-menu-active2{
+    @media (max-width: 950px) {
+      transform: translateX(0%);
+    }
+  }
+}
+
+// Hide the desktop links on mobile
+@media (max-width: 950px) {
+  .navbar-links {
+    // This empty block with the @media query ensures the mobile styles above apply correctly
+  }
+}
+
+// Ensure desktop links are visible and mobile menu is hidden
+@media (min-width: 951px) {
+    .navbar-links {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 10px 20px;
+    }
 }
 // 

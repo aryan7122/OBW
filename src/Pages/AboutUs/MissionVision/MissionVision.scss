@@ -1,8 +1,8 @@
 .mission-vision {
   // font-family: 'Poppins', sans-serif;
-  background-color: #F3FFF1;
+  background-color: #f3fff1;
   padding: 60px 120px;
- 
+
   @media only screen and (max-width: 1400px) {
     padding: 40px 100px;
   }
@@ -33,7 +33,7 @@
       gap: 40px;
     }
     @media only screen and (max-width: 1070px) {
-      grid-template-columns: 1fr ;
+      grid-template-columns: 1fr;
       flex-direction: column;
     }
   }
@@ -60,6 +60,7 @@
       font-size: 48px;
       line-height: 57.6px;
       letter-spacing: -2.2px;
+      width: 100%;
       @media only screen and (max-width: 1299px) {
         width: 100%;
         font-size: 40px;
@@ -69,7 +70,7 @@
         width: 100%;
         font-size: 38px;
         line-height: 42px;
-        img{
+        img {
           width: 30px !important;
         }
       }
@@ -96,7 +97,7 @@
     p {
       width: 616px;
       font-weight: 400;
-      font-family: 'Supreme-Regular', sans-serif;
+      font-family: "Supreme-Regular", sans-serif;
 
       font-size: 18px;
       line-height: 27px;
@@ -127,25 +128,23 @@
         flex-direction: column;
         gap: 30px;
       }
-             @media only screen and (max-width: 400px) {
-               flex-direction: column;
-               gap: 20px;
-             }
+      @media only screen and (max-width: 400px) {
+        flex-direction: column;
+        gap: 20px;
+      }
 
-     
-
-             .stats {
-               .cards {
-          width: 630px;
+      .stats {
+        .cards {
+          // width: 630px;
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
-          margin-top: 1.5rem;
+          margin-top: 100px;
           @media only screen and (max-width: 1170px) {
             width: 500px;
-
+            margin-top: 20px;
           }
-          @media only screen and (max-width: 1070px){
+          @media only screen and (max-width: 1070px) {
             width: 100%;
           }
           @media only screen and (max-width: 940px) {
@@ -182,7 +181,6 @@
         }
       }
     }
-
   }
   .right-content {
     border-top: 1px solid #eeeeee !important;
@@ -219,7 +217,7 @@
 
     .description {
       font-weight: 400;
-      background: linear-gradient(154.67deg, #2A1616 3.63%, #904B4B 96.35%);
+      background: linear-gradient(154.67deg, #2a1616 3.63%, #904b4b 96.35%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       width: 1184px;
@@ -284,7 +282,6 @@
         margin-top: 20px;
       }
 
-      
       .arrow-icon {
         transition: 0.3s linear;
         background: #fff;
@@ -295,7 +292,7 @@
         padding: 5px;
         @media only screen and (max-width: 400px) {
           width: 35px;
-            height: 35px;
+          height: 35px;
         }
       }
 
@@ -305,11 +302,7 @@
         color: #2463eb;
 
         .arrow-icon {
-          background: linear-gradient(
-            90.15deg,
-            #2463eb 0.13%,
-            #1c4eb8 103.2%
-          );
+          background: linear-gradient(90.15deg, #2463eb 0.13%, #1c4eb8 103.2%);
           color: #fff;
         }
       }

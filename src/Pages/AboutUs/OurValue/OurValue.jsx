@@ -5,8 +5,8 @@ import "./OurValue.scss";
 import { useNavigate } from "react-router-dom";
 import fallStr from '../../../assets/about/fallStr.svg';
 import WebPImage from "../../../util/WebPImage";
-import img1 from '../../../assets/about/Stylized Portrait of a Woman with Flowers.webp'
-import img2 from '../../../assets/about/Serene Woman with Flower.webp'
+import img2 from '../../../assets/about/Stylized Portrait of a Woman with Flowers.webp'
+import img1 from '../../../assets/about/Serene Woman with Flower.webp'
 import img3 from '../../../assets/about/Serene Woman with Flower (1).webp'
 const treatments = [
     {

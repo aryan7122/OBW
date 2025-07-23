@@ -39,6 +39,8 @@ function Navbar() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
         window.scrollTo(0, 0);
+    };  const CloseMenu = () => {
+        setMenuOpen(false);
     };
 
     const isActive = (path) => {
@@ -101,12 +103,12 @@ function Navbar() {
                 {/* Navigation Links */}
                 {!isVisible && !menuOpen &&
                     <ul className={`navbar-links ${menuOpen ? 'menu-active' : ''}`}>
-                        <li ><Link to="/" className={isActive('/')}>HOME</Link></li>
-                        <li ><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
-                        <li><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                        <li onClick={() => CloseMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
+                        <li onClick={() => CloseMenu()}><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
+                        <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                         {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
-                        <li><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
-                        <li ><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                        <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                        <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                     </ul>
                 }
 
@@ -156,11 +158,11 @@ function Navbar() {
             {!isVisible && menuOpen &&
                 <ul className={` ${menuOpen ? 'mobile-menu-active' : ''}`}>
                     {/* Your existing navigation links */}
-                    <li ><Link to="/" className={isActive('/')}>HOME</Link></li>
-                    <li > <Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
-                    <li ><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
-                    <li><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
-                    <li><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
+                    <li onClick={() => CloseMenu()} > <Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
+                    <li  onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
 
                   
                 </ul>

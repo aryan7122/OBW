@@ -16,7 +16,7 @@ const MissionVision = () => {
         <section className="mission-vision">
             <div className="container">
                 <div className="title0101">
-                    <h2 className="section-title">Our Mission and <span className="icon"><img src={icon1} alt="" /></span> Vision</h2>
+                    <h2 className="section-title">Behind Every Treatment, A Clear <span className="icon"><img src={icon1} alt="" /></span> Vision</h2>
                     <img
                         src={img1}
                         alt="Meeting discussion"
@@ -25,8 +25,7 @@ const MissionVision = () => {
                 </div>
                 <div className="content-wrapper">
                     <div className="left-content">
-                        <p>
-                            We’re here to lead the shift from beauty trends to true skin wellness, where results are real, care is personal, and confidence is rooted in clarity. At OBW Clinic, our purpose is simple: to help every individual feel at home in their skin through honest guidance, science-backed treatments, and an experience that feels as good as it works.
+                        <p>'At OBW Clinic, we turn beauty trends into real skin wellness, empowering everyone with honest advice and effective treatments.'
                         </p>
                         <div className="stats">
 
@@ -52,22 +51,21 @@ const MissionVision = () => {
                     </div>
                 </div>
             </div>
-                    <div className="right-content">
-                        {/* <img
+            <div className="right-content">
+                {/* <img
                             src={img2}
                             alt="Skincare model closeup"
                             className="image-feature"
                         /> */}
-                        <p className="description">
-                            We are dedicated to creating safe and affirming environments. We believe in respect, inclusivity, and accessibility of skin healthcare for all.
-                        </p>
+                <p className="description">
+                    We are committed to providing safe, ethical, and inclusive skin healthcare. Our approach is rooted in respect, evidence-based care, and accessibility for individuals of all skin types and backgrounds.                        </p>
                 <button className="BookAppointmentNow btn" onClick={() => HandleNavigation("/treatment")}>
-                    <span> 
-                    See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
-                </span>
+                    <span>
+                        See all services we provide<ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
+                    </span>
                 </button>
 
-                    </div>
+            </div>
         </section>
     );
 };

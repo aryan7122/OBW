@@ -15,7 +15,7 @@ function NavBar() {
     const location = useLocation(); // Get current location
     // const [isWhite, setIsWhite] = useState(false);
     const { pageTab, changeTab } = useContext(TabContext);
- 
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,6 +41,9 @@ function NavBar() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
         window.scrollTo(0, 0);
+    };
+    const CloseMenu = () => {
+        setMenuOpen(false);
     };
 
     const isActive = (path) => {
@@ -76,18 +79,18 @@ function NavBar() {
                 </div>
 
                 {/* Navigation Links */}
-              
+
 
                 {/* Book Appointment and Search Section */}
                 <div className={`NavBar-actions ${menuOpen ? 'menu-active' : ''}`}>
-                    {!isVisible &&
+                    {!isVisible && !menuOpen &&
                         <ul className={`NavBar-links ${menuOpen ? 'menu-active' : ''}`}>
-                            <li onClick={() => toggleMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
-                            {/* <li onClick={() => toggleMenu()}><Link to="" className={isActive('/Services')}>Services</Link></li> */}
-                            <li onClick={() => toggleMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                            <li onClick={() => CloseMenu()} ><Link to="/" className={isActive('/')}>HOME</Link></li>
+                            <li onClick={() => CloseMenu()}><Link to="" className={isActive('/Services')}>Services</Link></li>
+                            <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                             {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
-                            <li onClick={() => toggleMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
-                            <li onClick={() => toggleMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
+                            <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                            <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                         </ul>
                     }
                     {!isVisible
@@ -130,7 +133,17 @@ function NavBar() {
 
             </motion.nav>
             {showModal && <SalonBookAppointment onClose={closeModal} />}
+            {!isVisible && menuOpen &&
+                <ul className={` ${menuOpen ? 'mobile-menu-active2' : ''}`}>
+                    {/* Your existing navigation links */}
+                    <li onClick={() => CloseMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
 
+
+                </ul>
+            }
         </header >
     );
 }
