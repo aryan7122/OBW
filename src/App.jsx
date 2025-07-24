@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   useLocation,
+  useNavigate,
 } from "react-router-dom";
 
 import "./App.scss";
@@ -94,14 +95,15 @@ function PageWrapper({ children }) {
 }
 
 function App() {
-  const { pageTab, changeTab } = useContext(TabContext);
 
+  const { pageTab, changeTab } = useContext(TabContext);
   const dynamicFontStyle = {
     fontFamily:
       pageTab === "CLINIC"
         ? "'Geist', sans-serif"
         : "'Bricolage Grotesque', sans-serif",
   };
+  console.log('✅🎙️🌺🤞',pageTab)
   // loding
 
   const [loading, setLoading] = useState(true);

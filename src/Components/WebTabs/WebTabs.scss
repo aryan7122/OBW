@@ -1,47 +1,50 @@
 .WebTabs {
-    position: sticky;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 44px !important;
-    height: 44px;
-    width: 100%;
-    background-color: #f0f0f0;
-z-index: 9;
-    .left_tab,
-    .Right_tab {
-        width: 50%;
-
-        .btn_wt {
-            display: flex;
-            // align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-            height: 100%;
-            background-color: #e5e5e5;
-            box-shadow: 0px 2.29px 13.71px 0px #00000014;
-            border: none;
-            cursor: pointer;
-            font-weight: 400;
-            font-size: 21.21px;
-            line-height: 27.57px;
-            letter-spacing: -0.76px;
-            text-align: center;
-            padding: 9px !important;
-            
-            color: #472525;
-            transition: background-color 0.3s;
-
-            .img_wt {
-                width: 27px;
-                height: 27px;
-            }
-
-            &.active {
-                background-color: white;
-                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            }
-        }
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px !important;
+  height: 44px;
+  width: 100%;
+  background-color: #f0f0f0;
+  z-index: 9;
+  .left_tab,
+  .Right_tab {
+    width: 50%;
+    a {
+      text-decoration: none !important;
     }
+
+    .btn_wt {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 100%;
+      background-color: #e5e5e5;
+      box-shadow: 0px 2.29px 13.71px 0px #00000014;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 21.21px;
+      line-height: 27.57px;
+      letter-spacing: -0.76px;
+      text-align: center;
+      padding: 9px !important;
+
+      color: #472525;
+      transition: background-color 0.3s;
+
+      .img_wt {
+        width: 27px;
+        height: 27px;
+      }
+
+      &.active {
+        background-color: white;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
 }

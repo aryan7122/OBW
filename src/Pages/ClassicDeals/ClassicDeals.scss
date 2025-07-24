@@ -119,9 +119,9 @@
         z-index: 2;
 
         h3 {
-          font-size: clamp(1.5rem, 4vw, 2.5rem); // 40px
+          font-size: clamp(1.5rem, 4vw, 2rem); // 40px
           font-weight: 500;
-          line-height: 1.2;
+          line-height: 1;
           margin-bottom: 0.5rem;
         }
 
@@ -136,7 +136,12 @@
           position: absolute;
           bottom: 20px;
           padding: 3px 3px 3px 15px !important;
-         background: linear-gradient(90.5deg, #00CFDE -10.96%, #4AEBF6 41.07%, #00CFDE 83.93%);
+          background: linear-gradient(
+            90.5deg,
+            #00cfde -10.96%,
+            #4aebf6 41.07%,
+            #00cfde 83.93%
+          );
           color: #171717;
           border: 1px solid transparent;
           border-radius: 100px;
@@ -186,9 +191,33 @@
         object-fit: cover;
       }
     }
-   
   }
+  .grid-2 {
+    .offer-card:nth-child(1) {
+      .deal-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .offer-card:nth-child(2) {
+      border: 1px solid #E8E8E8;
+      .text-content {
+        display: flex;
+        flex-direction: column-reverse;
+        p {
+          color: #00727a;
+          text-transform: capitalize;
+                    font-size: clamp(1rem, 2vw, 1.5rem);
 
+        }
+        h3 {
+          color: #000000;
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
   .grid-3 {
     grid-template-columns: 1fr 1fr 1fr;
     @media (max-width: 1140px) {
@@ -212,14 +241,37 @@
     .offer-card:nth-child(1) {
       .text-content {
         h3 {
-          font-size: clamp(1rem, 2vw, 2.5rem) !important;
-          width: 150px;
-          
+          font-size: clamp(1rem, 2vw, 2rem) !important;
+          // width: 150px;
+          text-transform: capitalize;
+        }
+        p {
+          text-transform: capitalize;
         }
       }
     }
-    @media (max-width: 1140px) {
-      .offer-card:nth-child(3) {
+    .offer-card:nth-child(2) {
+      .deal-img {
+        width: 100%;
+        height: 100%;
+      }
+      p {
+        text-transform: capitalize;
+      }
+      h3 {
+        text-transform: capitalize;
+      }
+    }
+    .offer-card:nth-child(3) {
+      p {
+        text-transform: capitalize;
+        
+      }
+      h3 {
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+        @media (max-width: 1140px) {
         grid-column: 1;
         width: 203.5%;
         @media (max-width: 800px) {

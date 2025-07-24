@@ -11,7 +11,7 @@ import { toast, Toaster } from "react-hot-toast"; // Import toast
 import emailjs from "@emailjs/browser";
 
 // const img = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
-import img from '../../../assets/about/Radiant South Asian Woman with Circular Glasses.png'
+import img from '../../../assets/about/ContactForm.webp'
 
 const ContactForm = () => {
     const [phone, setPhone] = useState("");

@@ -54,6 +54,7 @@ import imgScarCross from '../../../assets/TrendingTreatments/Scar excision.jpg';
 import imgKeloidTreatments from '../../../assets/TrendingTreatments/Keloid Treatments.png';
 import imgHydratingPeels from '../../../assets/TrendingTreatments/Hydrating Peels.jpg';
 import imgLipPeel from '../../../assets/TrendingTreatments/Lip Peel.jpg';
+import imgSkinpeels from '../../../assets/TrendingTreatments/Skin peels.png';
 import imgHydratingtreatments from '../../../assets/TrendingTreatments/img (11).jpg';
 import imgSkinBooster from '../../../assets/TrendingTreatments/Skin Boosters.jpg';
 import imgUnderpeels from '../../../assets/TrendingTreatments/Under Eye peels.jpg';
@@ -184,6 +185,14 @@ const treatmentData = [
         Concerns: ['Dark spots', 'Melasma'],
         SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
         imgUrl: imgLipPeel,
+    },
+    {
+        category: 'Skin care', // Changed to Skin care as per image
+        title: 'Skin peels', // Matched image text
+        des: '',
+        Concerns: ['Dark spots', 'Melasma'],
+        SkinType: ['Oily Skin', 'Dry Skin', 'Combination Skin'],
+        imgUrl: imgSkinpeels,
     },
     {
         category: 'Skin care', // Changed to Skin care as per image

@@ -87,7 +87,7 @@ const FabulousSection = () => {
 
                         <video
                             ref={videoRef}
-                            src='https://asset.cloudinary.com/dvu9zrnsp/7bb0a3208e606ab47c1bd548b4bd68ff' // Using placeholder video URL
+                            src='https://res.cloudinary.com/dvu9zrnsp/video/upload/v1753162995/Step_Into_Your_Most_Confident_Self_gbilms.mp4' // Using placeholder video URL
                             muted={isMuted}
                             playsInline
                             controls={false}

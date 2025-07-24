@@ -1,49 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ClassicDeals.scss';
 import { ArrowRight } from 'lucide-react';
 import icon from '../../assets/ClassicDeals/icon.svg'
-import img1 from '../../assets/ClassicDeals/82d0ed43325b491b68f8e16e982cedc2cbc5127d.png'
-import img2 from '../../assets/ClassicDeals/0506f37ac2788613bae09e7506c000c6d1eb2031.png'
-import img3 from '../../assets/ClassicDeals/woman-beauty-clinic-face-treatment 1.png'
-import img4 from '../../assets/ClassicDeals/Beauty Oil Portrait 1.png'
-import img5 from '../../assets/ClassicDeals/Luxury Cosmetic Arrangement 1.png'
+import img1 from '../../assets/ClassicDeals/img.png'
+import img2 from '../../assets/ClassicDeals/img (0).jpg'
+import img3 from '../../assets/ClassicDeals/img (2).webp'
+import img4 from '../../assets/ClassicDeals/img (1).png'
+import img5 from '../../assets/ClassicDeals/img (3).png'
+import BookAppointment from '../../Components/BookAppointment/BookAppointment';
 
 const offers = [
   {
     title: 'Upto 50% OFF',
-    subtitle: 'on all services',
-    bgColor: '#2f2f2f',
+    subtitle: 'on all clinical services',
+    bgColor: '#3C0000',
     image: img1,
   },
   {
-    title: 'BUY 5 GET 2 FREE',
-    subtitle: 'any iv therapy drips\nTry our beauty facial',
-    bgColor: '#7b4440',
+    title: 'Buy 5 get 2 Free',
+    subtitle: 'Any iv therapy drips',
+    bgColor: '#F7F7F7',
     image: img2,
   },
   {
-    title: 'Upto 25% OFF',
-    subtitle: '',
-    bgColor: '#060606',
+    title: 'Flat 30% Off',
+    subtitle: 'on Dermal fillers',
+    bgColor: '#716A60',
     image: img3,
   },
   {
     title: 'Flat 35% off',
     subtitle: ' full body laser hair reduction',
-    bgColor: '#081361',
+    dc:"Hair-free, anytime, anyware",
+    bgColor: '#00131C',
     image: img5,
   },
   {
     title: 'Buy 2 hydra facial',
     subtitle: 'just  Rs. 4999',
-    bgColor: '#892245',
+    bgColor: '#791D4A',
     image: img4,
   },
 ];
 
 const ClassicDeals = () => {
+    const [showModal, setShowModal] = useState(false);
+      const handleBookNowClick = () => {
+          setShowModal(true);
+      };
+      const closeModal = () => {
+          setShowModal(false);
+      };
   return (
     <section className="classic-deals">
+                {showModal && <BookAppointment onClose={closeModal} />}
+
       <div className="top-heading">
         <div>
           <span className="badge">TOP OFFERS</span>
@@ -59,7 +70,7 @@ const ClassicDeals = () => {
         </p>
       </div>
 
-      <div className="offers-grid">
+      <div className="offers-grid grid-2">
         {offers.slice(0, 2).map((offer, idx) => (
           <div
             key={idx}
@@ -69,7 +80,7 @@ const ClassicDeals = () => {
             <div className="text-content">
               <h3>{offer.title}</h3>
               {offer.subtitle && <p>{offer.subtitle}</p>}
-              <button className="Book-Now btn">
+              <button className="Book-Now btn" onClick={handleBookNowClick}>
                 Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
               </button>
             </div>
@@ -91,7 +102,7 @@ const ClassicDeals = () => {
                 <p>{offer.subtitle}</p>
 
               }
-              <button className="Book-Now btn">
+              <button className="Book-Now btn" onClick={handleBookNowClick}>
                 <span>
                   Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                 </span>
