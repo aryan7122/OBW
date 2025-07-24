@@ -104,30 +104,32 @@
     }
 
     .image-grid {
-      display: flex;
-      // justify-content: space-around;
+       margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
       gap: 20px;
-      margin: 2rem 0;
-      //  align-items: c;
-      justify-content: center;
-      margin: 0 auto;
-      @media only screen and (max-width: 500px) {
-        gap: 15px;
-      }
-      @media only screen and (max-width: 1060px) {
-        display: grid;
+        transition: box-shadow 0.3s ease-in-out;
+
+      @media only screen and (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
       }
       @media only screen and (max-width: 500px) {
-        display: flex;
-        flex-direction: column;
+        gap: 15px;
       }
+      @media only screen and (max-width: 540px) {
+        grid-template-columns: 1fr;
+        margin-top: 15px;
+        gap: 15px;
+      }
+
       .image-card {
         // position: relative;
         img {
-          height: 430px;
-          min-width: 300px;
-
+         
+          width: 100%;
+          height: 420px;
           // min-width: 580px;
           object-fit: cover;
           border-radius: 1rem;
@@ -135,9 +137,7 @@
           background: linear-gradient(175.33deg, rgba(255, 255, 255, 0) 61.83%, rgba(0, 0, 0, 0.5) 83.22%);
 
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            @media (max-width: 640px){
-              min-width: 100%;
-            }
+           
         }
 
         p {
@@ -169,58 +169,7 @@
         }
       }
 
-      .image-card:nth-child(1) {
-        width: 100%;
-        
-        img {
-          height: 430px;
-          width: 100%;
-          // height: 100%;
-        }
-
-        @media only screen and (max-width: 1060px) {    
-              grid-column:  span 2 ;
-          }
-        @media only screen and (max-width: 950px) {
-          // width: 40%;
-          @media only screen and (max-width: 500px) {
-            width: 100%;
-          }
-          // min-height: 427px !important;
-          img {
-            height: 99%;
-            object-fit: cover;
-          }
-        }
-      }
-
-      .image-card:nth-child(2) {
-        width: 50%;
-                @media only screen and (max-width: 1060px) {
-                  width: 100%;
-                }
-        @media only screen and (max-width: 500px) {
-          width: 100%;
-        }
-        img {
-          width: 100%;
-          //    height: 100%;
-        }
-      }
-
-      .image-card:nth-child(3) {
-        width: 50%;
-        @media only screen and (max-width: 1060px) {
-            width: 100%;
-          }
-        @media only screen and (max-width: 500px) {
-          width: 100%;
-        }
-        img {
-          width: 100%;
-          // height: 100%;
-        }
-      }
+     
     }
 
     .info-grid {

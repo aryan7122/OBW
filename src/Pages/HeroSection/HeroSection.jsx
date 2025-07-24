@@ -52,7 +52,7 @@ const HeroSection = () => {
                             viewport={{ once: true, amount: 0.5 }}
                         >
                             <div className="social_media_icon">
-                                <a href="https://www.facebook.com/share/1CpRx6vUJB/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/profile.php?id=61566358426205" target="_blank" rel="noopener noreferrer">
                                     <FaFacebook />
                                 </a>
                                 <a href="https://www.instagram.com/obwclinic" target="_blank" rel="noopener noreferrer">

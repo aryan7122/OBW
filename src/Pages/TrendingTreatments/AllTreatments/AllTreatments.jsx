@@ -17,7 +17,7 @@ import imgAcneregime from '../../../assets/TrendingTreatments/Anti acne facials.
 import imgskinregime from '../../../assets/TrendingTreatments/Acne skin care  regime.jpg';
 import imgCarbonLasers from '../../../assets/TrendingTreatments/Carbon Laser.png';
 import imgOxygenjet from '../../../assets/TrendingTreatments/Oxygen jet peel.jpg';
-import imgDermapen from '../../../assets/TrendingTreatments/Dermapen.jpg';
+import imgDermapen from '../../../assets/TrendingTreatments/Dermapen.png';
 
 import imgMesobotox from '../../../assets/TrendingTreatments/Meso botox.jpg';
 import imgAcneSkincareRegime from '../../../assets/TrendingTreatments/img (8).jpg';
@@ -48,7 +48,7 @@ import imgLaserLipolysis from '../../../assets/TrendingTreatments/img (6).jpg';
 import imgOzempicInjections from '../../../assets/TrendingTreatments/Ozempic injections.jpg';
 import imgBotoxForSweating from '../../../assets/TrendingTreatments/Botox for sweating.webp';
 import imgRFCautery from '../../../assets/TrendingTreatments/RF Cautery.jpg';
-import imgDermapenMicroneedling2 from '../../../assets/TrendingTreatments/DermapenMicroneedling.jpg';
+import imgDermapenMicroneedling2 from '../../../assets/TrendingTreatments/DermapenMicroneedling.png';
 import imgTCACross from '../../../assets/TrendingTreatments/TCA Cross.png';
 import imgScarCross from '../../../assets/TrendingTreatments/Scar excision.jpg';
 import imgKeloidTreatments from '../../../assets/TrendingTreatments/Keloid Treatments.png';
@@ -77,7 +77,7 @@ import imgQR678Treatment from '../../../assets/TrendingTreatments/QR 678 Treatme
 import imgHairRegrowthIVTherapy from '../../../assets/TrendingTreatments/Hair regrowth IV Therapy.jpg';
 import imgExosomeTherapy from '../../../assets/TrendingTreatments/Exosome therapy.png';
 import imgCosmeticHairTransplantation from '../../../assets/TrendingTreatments/Cosmetic hair transplantation.jpg';
-import imgScalpMesotherapy from '../../../assets/TrendingTreatments/img (10).jpg';
+import imgScalpMesotherapy from '../../../assets/TrendingTreatments/imgScalpMesotherapy.jpg';
 import imgScalpMicropigmentation from '../../../assets/TrendingTreatments/img (5).jpg';
 
 
@@ -229,7 +229,6 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Micro-Needling',
-        des: 'A Powerful Treatment For Signs Of Aging, Fine Lines, Pigmentation, And Scars. It Boosts Collagen Production For Youthful, Radiant Skin.',
         Concerns: ['Fine Lines & Wrinkles', 'Saggy skin', 'Enlarged pores'],
         SkinType: [],
         imgUrl: imgMicroNeedling,
@@ -238,7 +237,6 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Chemical Peel',
-        des: 'A Chemical Peel Treats Aging Signs, Improves Stretch Marks And Acne Scars, And Boosts Collagen For Smoother Skin.',
         Concerns: ['Dark spots', 'Melasma'],
         SkinType: ['Oily Skin', 'Dry Skin'],
         imgUrl: imgChemicalPeel,
@@ -247,7 +245,6 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Micro-Botox Therapy',
-        des: 'A Diluted Botox Injection Smoothing Fine Lines And Enlarged Pores For An Airbrushed Look Without Freezing Your Expressions.',
         Concerns: ['Fine Lines & Wrinkles', 'Enlarged pores'],
         SkinType: [],
         imgUrl: imgMicroBotoxTherapy,
@@ -255,7 +252,6 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Skin Tightening Lasers',
-        des: 'Non-Invasive Laser Technology That Firms Collagen, Treats And Lifts Sagging Skin For A More Youthful Appearance.',
         Concerns: ['Saggy skin'],
         SkinType: [],
         imgUrl: imgSkinTighteningLasers,
@@ -273,7 +269,6 @@ const treatmentData = [
     {
         category: 'Body care',
         title: 'Laser liplolysis',
-        des: 'An Effective Lipolytic Injection That Reduces Fine Lines, Pigmentation, And Scars While Boosting Collagen For Smoother Skin.',
         Concerns: ['Dryness'],
         SkinType: [],
         imgUrl: imgLipolyticInjection2,
@@ -281,7 +276,6 @@ const treatmentData = [
     {
         category: 'Body care',
         title: 'IV Fat Loss Therapy',
-        des: 'A Drip Infused With Nutrients That Boost Metabolism And Aid In Fat Burning.',
         Concerns: [],
         SkinType: [],
         imgUrl: imgIVFatLossTherapy,
@@ -305,7 +299,6 @@ const treatmentData = [
     {
         category: 'Body care',
         title: 'RF Cautery',
-        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
         Concerns: [],
         SkinType: [],
         imgUrl: imgRFCautery,
@@ -313,7 +306,6 @@ const treatmentData = [
     {
         category: 'Body care',
         title: 'Dermapen/Microneedling',
-        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
         Concerns: [],
         SkinType: [],
         imgUrl: imgDermapenMicroneedling2,
@@ -321,7 +313,6 @@ const treatmentData = [
     {
         category: 'Body care',
         title: 'Deep chemical peels',
-        des: 'A Rejuvenation Treatment Using Concentrated Growth Factors From Your Blood To Enhance Cell Repair.',
         Concerns: [],
         SkinType: [],
         imgUrl: imgDeepChemicalPeels,
@@ -402,23 +393,14 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Carbon Laser',
-        des: 'A Gentle Laser Facial With Activated Carbon That Cleanses, Exfoliates Skin, And Leaves Your Complexion Glowing.',
         Concerns: ['Dark spots', 'Enlarged pores'],
         SkinType: [],
         imgUrl: imgCarbonLaser,
     },
-    {
-        category: 'Skin & Face care',
-        title: 'Dermapen',
-        des: 'A Microneedling Treatment That Boosts Collagen, Treats Fine Lines, And Minimizes Scars And Fine Lines.',
-        Concerns: ['Fine Lines & Wrinkles', 'Dark spots', 'Saggy skin'],
-        SkinType: [],
-        imgUrl: imgDermapen,
-    },
+
     {
         category: 'Skin & Face care',
         title: 'Thread Lifts',
-        des: 'A Non-Surgical Facelift Using Dissolvable Threads To Lift Loose Skin And Boost Collagen For A Natural Look.',
         Concerns: ['Saggy skin'],
         SkinType: [],
         imgUrl: imgThreadLifts,
@@ -427,7 +409,6 @@ const treatmentData = [
     {
         category: 'Skin & Face care',
         title: 'Dermal Fillers',
-        des: 'Injectable Gels Restore Volume, Smooth Wrinkles, And Enhance Features For A Youthful Appearance.',
         Concerns: ['Fine Lines & Wrinkles'],
         SkinType: [],
         imgUrl: imgDermalFillers,
@@ -443,7 +424,6 @@ const treatmentData = [
     {
         category: 'Beautifying/cosmetic surgery',
         title: 'Lobuloplasty',
-        des: 'A Quick Surgery To Fix Torn Earlobes, Restoring Their Shape For Safe Earring Wear.',
         Concerns: [],
         SkinType: [],
         imgUrl: imgLobuloplasty1,
@@ -451,7 +431,6 @@ const treatmentData = [
     {
         category: 'Beautifying/cosmetic surgery',
         title: 'Dimpleplasty',
-        des: 'A Cosmetic Procedure That Creates Natural Dimples By Making A Small Incision In The Mouth.',
         Concerns: [],
         SkinType: [],
         imgUrl: imgDimpleplasty2,

@@ -3,8 +3,8 @@ import "./WhyChooseSection.scss";
 import { motion } from 'framer-motion';
 // import 'react-lazy-load-image-component/src/effects/blur.css';
 import WebPImage from "../../util/WebPImage";
-import img1 from '../../assets/WhyChooseSection/img (2).webp'
-import img2 from '../../assets/WhyChooseSection/img (1).webp'
+import img1 from '../../assets/WhyChooseSection/img (1).webp'
+import img2 from '../../assets/WhyChooseSection/img (2).webp'
 import img3 from '../../assets/WhyChooseSection/img (3).webp'
 import icon1 from '../../assets/WhyChooseSection/ok.svg'
 const WhyChooseSection = () => {
@@ -17,7 +17,7 @@ const WhyChooseSection = () => {
         <section className="why-choose-section">
             <div className="content-container">
                 <h2 className="title">
-                    Why OBW is
+                  Why OBW Clinic is      
                     {' '}
                     <img src={icon1}
                     />  {' '}the Right Choice

@@ -5,9 +5,9 @@ import "./OurValue.scss";
 import { useNavigate } from "react-router-dom";
 import fallStr from '../../../assets/about/fallStr.svg';
 import WebPImage from "../../../util/WebPImage";
-import img2 from '../../../assets/about/Stylized Portrait of a Woman with Flowers.webp'
-import img1 from '../../../assets/about/Serene Woman with Flower.webp'
-import img3 from '../../../assets/about/Serene Woman with Flower (1).webp'
+import img2 from '../../../assets/about/Honest Beaut.jpg'
+import img1 from '../../../assets/about/Serene Woman with Flower.jpg'
+import img3 from '../../../assets/about/Safety Comes First .webp'
 const treatments = [
     {
         title: "More Than Skin Deep ",

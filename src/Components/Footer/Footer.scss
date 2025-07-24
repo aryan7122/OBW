@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    max-width: 470px;
+    max-width: 500px;
     @media only screen and (max-width: 768px) {
       max-width: 100% !important;
     }
@@ -141,6 +141,7 @@
         line-height: 24px;
         opacity: 0.8;
         color: #ffffff;
+
       }
       .action_bt {
         .a4{
@@ -172,6 +173,23 @@
       justify-content: space-between;
 
       .action_bt {
+          .contact-info{
+            margin-top: 15px;
+            display: flex;
+            gap: 30px;
+             @media only screen and (max-width: 408px){
+              flex-direction: column;
+              gap: 15px;
+             }
+          p{
+            a{
+              display: flex;
+              gap: 5px;
+
+            }
+            
+          }
+          }
       }
       @media only screen and (max-width: 348px) {
         flex-direction: column;
@@ -184,60 +202,60 @@
         cursor: pointer;
       }
 
-      .book-appointment-btn {
-        padding: 3px 3px 3px 25px; // Your exact button padding
-      background: linear-gradient(90.5deg, #00CFDE -10.96%, #4AEBF6 41.07%, #00CFDE 83.93%) !important;
+    }
+    .book-appointment-btn {
+      padding: 3px 3px 3px 25px; // Your exact button padding
+    background: linear-gradient(90.5deg, #00CFDE -10.96%, #4AEBF6 41.07%, #00CFDE 83.93%) !important;
+      margin-top: 20px;
+      color: #171717;
+      border: 1px solid transparent; // Transparent border initially
+      font-size: 13.7px; // Your exact font size
+      border-radius: 100px; // Your exact border-radius for pill shape
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-height: 42px;
+      font-weight: 500; // Your exact font weight
+      line-height: 24px;
+      letter-spacing: -0.5px;
+      cursor: pointer;
+      transition: 0.3s linear; // Your exact transition
+      // height: 44px;
+      min-width: 170px;
+      @media only screen and (max-width: 550px) {
+        margin-top: 15px; // Add margin when stacked
+      }
 
-        color: #171717;
-        border: 1px solid transparent; // Transparent border initially
-        font-size: 13.7px; // Your exact font size
-        border-radius: 100px; // Your exact border-radius for pill shape
+      @media only screen and (max-width: 500px) {
+        padding: 5px 6px 5px 15px; // Your exact smaller padding
+        font-size: 16px; // Your exact smaller font size
+      }
+
+      .arrow-icon {
+        transition: 0.3s linear;
+        background: #fff;
+        color: #0056b3; // Darker blue for the arrow inside the white circle
+        border-radius: 100px;
+        width: 20px; // Your exact width
+        height: 20px; // Your exact height
+        padding: 5px; // Your exact padding
         display: flex;
         align-items: center;
-        gap: 10px;
-        max-height: 42px;
-        font-weight: 500; // Your exact font weight
-        line-height: 24px;
-        letter-spacing: -0.5px;
-        cursor: pointer;
-        transition: 0.3s linear; // Your exact transition
-        // height: 44px;
-        min-width: 170px;
-        @media only screen and (max-width: 550px) {
-          margin-top: 15px; // Add margin when stacked
-        }
+        justify-content: center;
+      }
 
-        @media only screen and (max-width: 500px) {
-          padding: 5px 6px 5px 15px; // Your exact smaller padding
-          font-size: 16px; // Your exact smaller font size
-        }
+      &:hover {
+        background: #fff !important; // Override gradient on hover
+        border: 1px solid #0056b3; // Your hover border color
+        color: #472525; // Your hover text color
 
         .arrow-icon {
-          transition: 0.3s linear;
-          background: #fff;
-          color: #0056b3; // Darker blue for the arrow inside the white circle
-          border-radius: 100px;
-          width: 20px; // Your exact width
-          height: 20px; // Your exact height
-          padding: 5px; // Your exact padding
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        &:hover {
-          background: #fff !important; // Override gradient on hover
-          border: 1px solid #0056b3; // Your hover border color
-          color: #472525; // Your hover text color
-
-          .arrow-icon {
-            background: linear-gradient(
-              90.15deg,
-              #2463eb 0.13%,
-              #1c4eb8 103.2%
-            ); // Your hover arrow background
-            color: #fff; // Your hover arrow color
-          }
+          background: linear-gradient(
+            90.15deg,
+            #2463eb 0.13%,
+            #1c4eb8 103.2%
+          ); // Your hover arrow background
+          color: #fff; // Your hover arrow color
         }
       }
     }

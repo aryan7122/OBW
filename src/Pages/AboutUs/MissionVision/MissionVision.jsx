@@ -1,6 +1,6 @@
 import React from 'react';
 import './MissionVision.scss';
-import img1 from '../../../assets/about/1e0dabba7f68f9e31e6835489adf12f7.jpg'
+import img1 from '../../../assets/about/ab_out_b.jpg'
 import img2 from '../../../assets/about/3accd80b7ddfc415aab514c71ade1c85.jpg'
 import icon1 from '../../../assets/about/ida.svg'
 import { ArrowRight } from 'lucide-react';

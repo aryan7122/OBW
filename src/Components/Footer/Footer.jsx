@@ -3,7 +3,7 @@ import "./Footer.scss";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa"; // Keep only used icons
 import logo from '../../assets/footer/logo.svg';
 import { useNavigate } from "react-router-dom";
-import { ArrowRight } from 'lucide-react'; // Assuming you use lucide-react for ArrowRight
+import { ArrowRight, Mail, Phone } from 'lucide-react'; // Assuming you use lucide-react for ArrowRight
 import BookAppointment from '../BookAppointment/BookAppointment';
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
         window.scrollTo(0, 0);
     };
 
-      const handleBookNowClick = () => {
+    const handleBookNowClick = () => {
         setShowModal(true);
     };
     const closeModal = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-                    {showModal && <BookAppointment onClose={closeModal} />}
+            {showModal && <BookAppointment onClose={closeModal} />}
 
             <div className="footer-main-grid">
                 {/* Section 1: Logo and Description */}
@@ -34,20 +34,35 @@ const Footer = () => {
                             <img src={logo} alt="OBW Clinic Logo" />
                         </div>
                         <p className="description-text">
-Step into our advanced clinic, where every visit is a step toward confidence and well-being. With expert care and personalized treatments, we’re here to help you achieve visible results and long-term skin and hair health.                        </p>
+                            Step into our advanced clinic, where every visit is a step toward confidence and well-being. With expert care and personalized treatments, we’re here to help you achieve visible results and long-term skin and hair health.                                               </p>
+                        <button className="book-appointment-btn btn" onClick={handleBookNowClick}>
+                            <span>
+                                Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
+                            </span>
+                        </button>
                     </div>
                     {/* Section 4: Contact Info and Button */}
                     <div className="grid-item footer-contact-section">
                         <div className="action_bt">
                             <h4 className="a4">CONTACT:</h4>
-                            <p className="phone-number">+91-9764310135</p>
-                            <p className="email">contact@obw.com</p>
+                            <div className="contact-info"> {/* Assuming a parent div */}
+                                <p className="phone-number">
+                                    {/* Phone number ko 'tel:' ke saath 'a' tag me daalein */}
+                                    <a href="tel:+919764310135">
+                                        <Phone size={20} />
+                                        +91-9764310135
+                                    </a>
+                                </p>
+                                <p className="email">
+                                    {/* Email ko 'mailto:' ke saath 'a' tag me daalein */}
+                                    <a href="mailto:contact@obw.com">
+                                        <Mail size={20} />
+                                        contact@obw.com
+                                    </a>
+                                </p>
+                            </div>
                         </div>
-                        <button className="book-appointment-btn btn"  onClick={handleBookNowClick}>
-                            <span>
-                                Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
-                            </span>
-                        </button>
+
                     </div>
                 </div>
 
@@ -79,7 +94,7 @@ Step into our advanced clinic, where every visit is a step toward confidence and
 
             {/* Bottom Section */}
             <div className="footer-bottom">
-               
+
                 <div className="footer-policy-links">
                     <a onClick={() => HandleNavigation("/privacy-policy")}>Privacy Policy</a>
                     <a onClick={() => HandleNavigation("/terms-of-service")}>Terms of Service</a>
@@ -90,17 +105,17 @@ Step into our advanced clinic, where every visit is a step toward confidence and
                         <p>© 2025 OBW . All rights reserved.</p>
                     </div>
                     <div className="footer-social-icons">
-                        <a href="https://www.facebook.com/share/1CpRx6vUJB/?mibextid=qi2Omg" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/profile.php?id=61566358426205" target="_blank" rel="noopener noreferrer">
                             <FaFacebook className="icon" />
                         </a>
-                        <a href="https://www.instagram.com/obwclinic?igsh=MTQxM2phdWZoZTRreA==" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/obwclinic?igsh=cHFiNWw2aDN5aG1q" target="_blank" rel="noopener noreferrer">
                             <FaInstagram className="icon" />
                         </a>
-                        <a href="https://www.youtube.com/@ObwSalon" target="_blank" rel="noopener noreferrer">
+                        <a href="" target="" rel="noopener noreferrer">
                             <FaYoutube className="icon" />
                         </a>
                     </div>
-               </div>
+                </div>
             </div>
         </footer>
     );

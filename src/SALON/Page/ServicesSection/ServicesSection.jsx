@@ -5,9 +5,9 @@ import str3 from '../../../assets/SALON/hero/str.png';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 // 
-import mensHairCut from '../../../assets/SALON/hero/services/mens-hair-cut.jpg';
-import shave from '../../../assets/SALON/hero/services/Shave.jpg';
-import blowdry from '../../../assets/SALON/hero/services/blowdry.jpg';
+import mensHairCut from '../../../assets/SALON/hero/services/mens-hair-cut.webp';
+import shave from '../../../assets/SALON/hero/services/Shave.webp';
+import blowdry from '../../../assets/SALON/hero/services/blowdry.webp';
 import womensHairCut from '../../../assets/SALON/hero/services/womens-hair-cut.jpg';
 import ironing from '../../../assets/SALON/hero/services/ironing.jpg';
 import womensBlowdry from '../../../assets/SALON/hero/services/womenblowdry.jpg';
@@ -15,21 +15,21 @@ import tonging from '../../../assets/SALON/hero/services/tonging.jpg';
 // 
 import Manicure from '../../../assets/SALON/hero/services/Manicure.jpg';
 // 
-import menColoring from '../../../assets/SALON/hero/services/menColoring.jpg';
-import womenColoring from '../../../assets/SALON/hero/services/womenColoring.jpg';
+import menColoring from '../../../assets/SALON/hero/services/menColoring.webp';
+import womenColoring from '../../../assets/SALON/hero/services/womenColoring.webp';
 // 
-import Botoxtreatment from '../../../assets/SALON/hero/services/Botoxtreatment.jpg';
-import SmootheningRebounding from '../../../assets/SALON/hero/services/SmootheningRebounding.jpg';
-import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertreatment.jpg';
+import Botoxtreatment from '../../../assets/SALON/hero/services/Botoxtreatment.webp';
+import SmootheningRebounding from '../../../assets/SALON/hero/services/SmootheningRebounding.webp';
+import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertreatment.webp';
 // 
-import Menborntreatment from '../../../assets/SALON/hero/services/Menborntreatment.jpg';
-import Menborentreatment from '../../../assets/SALON/hero/services/Menborntreatment (2).jpg';
-import Menessentialtreatment from '../../../assets/SALON/hero/services/Menessentialtreatment.jpg';
+import Menborntreatment from '../../../assets/SALON/hero/services/Menborntreatment.webp';
+import Menborentreatment from '../../../assets/SALON/hero/services/Menborntreatment (2).webp';
+import Menessentialtreatment from '../../../assets/SALON/hero/services/Menessentialtreatment.webp';
 import Womenessentialtreatment from '../../../assets/SALON/hero/services/Womenessentialtreatment.jpg';
 // 
-import Pedicure from '../../../assets/SALON/hero/services/Pedicure.jpg';
+import Pedicure from '../../../assets/SALON/hero/services/Pedicure.webp';
 // 
-import NailExtension from '../../../assets/SALON/hero/services/NailExtension.jpg';
+import NailExtension from '../../../assets/SALON/hero/services/NailExtension.webp';
 // 
 import Premiumrollon from '../../../assets/SALON/hero/services/Premium roll on.jpg';
 import Brazilianstripples from '../../../assets/SALON/hero/services/Brazilian stripples.jpg';
@@ -39,12 +39,12 @@ import DetanBleach from '../../../assets/SALON/hero/services/DetanBleach.jpg';
 // 
 import Threading from '../../../assets/SALON/hero/services/Threading.jpg';
 // 
-import Refreshingcleanup from '../../../assets/SALON/hero/services/Refreshing clean up.jpg';
-import Premiumfacial from '../../../assets/SALON/hero/services/Premium facial.jpg';
-import Gensyldermasylhydrafacial from '../../../assets/SALON/hero/services/Gensyl & dermasyl hydra facial.jpg';
+import Refreshingcleanup from '../../../assets/SALON/hero/services/Refreshing clean up.webp';
+import Premiumfacial from '../../../assets/SALON/hero/services/Premium facial.webp';
+import Gensyldermasylhydrafacial from '../../../assets/SALON/hero/services/Gensyl & dermasyl hydra facial.webp';
 import Aminusignaturetreatment from '../../../assets/SALON/hero/services/Aminu signature treatment.jpg';
 // Reflexology
-import Reflexology from '../../../assets/SALON/hero/services/Reflexology.jpg';
+import Reflexology from '../../../assets/SALON/hero/services/Reflexology.webp';
 
 // 
 import ServicesSlider from './ServicesSlider';

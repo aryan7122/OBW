@@ -40,6 +40,7 @@ function Navbar() {
         setMenuOpen(!menuOpen);
         window.scrollTo(0, 0);
     };  const CloseMenu = () => {
+                window.scrollTo(0, 0);
         setMenuOpen(false);
     };
 
