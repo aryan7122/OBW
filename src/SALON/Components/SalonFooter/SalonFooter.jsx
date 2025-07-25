@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Facebook, Youtube, Instagram } from 'lucide-react';
+import { Facebook, Youtube, Instagram, Phone, Mail } from 'lucide-react';
 import './SalonFooter.scss';
 import logo from '../../../assets/SALON/hero/flogo.svg'; // Make sure this path to your logo is correct
 
@@ -30,16 +30,15 @@ const SalonFooter = () => {
                         <img src={logo} alt="OBW Salon & Clinic Logo" />
                     </div>
                     <p className="salon-footer__description">
-                        Step into our serene space, where every visit invites you to embark on a tranquil journey filled with beauty and relaxation. Experience the calm atmosphere that surrounds you, making each moment a delightful escape.
-                    </p>
+Step into our peaceful salon, where every visit feels like a break from the busy world. From the moment you arrive, you’ll be surrounded by calm vibes, warm, relaxed, and truly taken care of.                     </p>
                     <div className="salon-footer__socials">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/oceanbluewellness/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <Facebook size={22} />
                         </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                        <a href="https://www.youtube.com/@ObwSalon" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                             <Youtube size={22} />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/obwsalon?igsh=MXRnZ3FraGtiaTBhbg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <Instagram size={22} />
                         </a>
                     </div>
@@ -70,9 +69,9 @@ const SalonFooter = () => {
                     <div className="salon-footer__contact">
                         <h4 className="salon-footer__title">Contact:</h4>
                         <div className="salon-footer__contact-details">
-                            <a href="tel:+919972011222">+91 99720 11222</a>
-                            <span className="salon-footer__separator">,</span>
-                            <a href="mailto:contact@obwsalon.com">contact@obwsalon.com</a>
+                            <a href="tel:+919972011222"><Phone size={20} /> +91 99720 11222</a>
+                            {/* <span className="salon-footer__separator">,</span> */}
+                            <a href="mailto:contact@obwsalon.com"><Mail size={20} /> contact@obwsalon.com</a>
                         </div>
                     </div>
                 </div>

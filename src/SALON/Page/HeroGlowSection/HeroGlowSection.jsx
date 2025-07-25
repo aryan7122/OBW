@@ -1,9 +1,9 @@
 import React from 'react';
 import './HeroGlowSection.scss';
-import img1 from '../../../assets/SALON/hero/HeroGlowSection/img1.png'
-import img2 from '../../../assets/SALON/hero/HeroGlowSection/img2.png'
-import img3 from '../../../assets/SALON/hero/HeroGlowSection/img3.png'
-import img4 from '../../../assets/SALON/hero/HeroGlowSection/img4.png'
+import img1 from '../../../assets/SALON/hero/HeroGlowSection/img (4).png'
+import img2 from '../../../assets/SALON/hero/HeroGlowSection/img (1).png'
+import img3 from '../../../assets/SALON/hero/HeroGlowSection/img (3).png'
+import img4 from '../../../assets/SALON/hero/HeroGlowSection/img (2).png'
 import { ArrowRight } from 'lucide-react';
 
 export default function HeroGlowSection() {
@@ -32,7 +32,7 @@ export default function HeroGlowSection() {
             </div>
 
             <h1 className="hero-title">
-                It’s Time To Put You <span>First</span>
+               Because You Deserve the  <span>Spotlight</span>
             </h1>
             <p className="hero-subtext">
                 From flawless skin to fabulous hair—step into OBW and walk out glowing. Book your personalized appointment today and feel the difference.
