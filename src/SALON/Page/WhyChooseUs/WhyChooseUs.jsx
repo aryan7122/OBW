@@ -34,13 +34,13 @@ const WhyChooseUs = () => {
     <section className="why-choose-us">
       <div className="top-section">
         <span className="badge">
-          WHY CHOOSE US <img src={str3} />{" "}
+          WHY CHOOSE US
+             <img src={str3} />{" "}
         </span>
-        <h2 className="heading">CLEAN, CONCIOUS, PERFORMANCE</h2>
+        <h2 className="heading">Why You'll Love Getting Styled at OBW Salon </h2>
         <div className="bottom_title">
           <p className="desc">
-            Lorem ipsum dolor sit amet consectetur. Mattis sapien amet a
-            egestas.
+            Trusted by Clients, Powered by Creativity.
           </p>
           <p className="elevated">BEAUTY. ELEVATED.</p>
         </div>
