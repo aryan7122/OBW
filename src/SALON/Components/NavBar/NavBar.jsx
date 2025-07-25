@@ -86,7 +86,7 @@ function NavBar() {
                     {!isVisible && !menuOpen &&
                         <ul className={`NavBar-links ${menuOpen ? 'menu-active' : ''}`}>
                             <li onClick={() => CloseMenu()} ><Link to="/" className={isActive('/')}>HOME</Link></li>
-                            <li onClick={() => CloseMenu()}><Link to="" className={isActive('/Services')}>Services</Link></li>
+                            {/* <li onClick={() => CloseMenu()}><Link to="" className={isActive('/Services')}>Services</Link></li> */}
                             <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                             {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
                             <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>

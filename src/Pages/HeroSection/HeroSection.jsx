@@ -23,8 +23,6 @@ const HeroSection = () => {
             <div className="hero-section">
                 <div className="hero_bg">
                     <div className="content">
-
-
                         <div className="content_box_s">
                             <h2 className="h2_tag">
                                 Top specialist for clinical treatments across banglore!
