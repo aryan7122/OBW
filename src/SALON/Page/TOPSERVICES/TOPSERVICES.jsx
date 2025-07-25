@@ -7,14 +7,17 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
 
-import service1 from '../../../assets/SALON/hero/TOP SERVICES/img1.png';
-import service2 from '../../../assets/SALON/hero/TOP SERVICES/img2.jpg';
-import service3 from '../../../assets/about/Radiant South Asian Woman with Circular Glasses.png';
-import service4 from '../../../assets/about/3accd80b7ddfc415aab514c71ade1c85.jpg'
-import service5 from '../../../assets/SALON/hero/TOP SERVICES/img1.png';
-import service6 from '../../../assets/SALON/hero/TOP SERVICES/img3.jpg';
-import service7 from '../../../assets/SALON/hero/TOP SERVICES/img4.png';
-import service8 from '../../../assets/SALON/hero/TOP SERVICES/img5.png';
+import service1 from '../../../assets/SALON/hero/TOP SERVICES/img (1).jpg';
+import service2 from '../../../assets/SALON/hero/TOP SERVICES/img (2).jpg';
+import service3 from '../../../assets/SALON/hero/TOP SERVICES/img (3).jpg';
+import service4 from '../../../assets/SALON/hero/TOP SERVICES/img (4).jpg'
+import service5 from '../../../assets/SALON/hero/TOP SERVICES/img (5).jpg';
+import service6 from '../../../assets/SALON/hero/TOP SERVICES/img (6).jpg';
+import service7 from '../../../assets/SALON/hero/TOP SERVICES/img (7).jpg';
+import service8 from '../../../assets/SALON/hero/TOP SERVICES/img (8).jpg';
+import service9 from '../../../assets/SALON/hero/TOP SERVICES/img (9).jpg';
+import service10 from '../../../assets/SALON/hero/TOP SERVICES/img (10).jpg';
+import service11 from '../../../assets/SALON/hero/TOP SERVICES/img (11).webp';
 
 const services = [
     { id: 1, title: 'Refreshing clean up', image: service1 },
@@ -25,6 +28,9 @@ const services = [
     { id: 6, title: 'Glow Boost', image: service6 },
     { id: 7, title: 'Glow Boost', image: service7 },
     { id: 8, title: 'Glow Boost', image: service8 },
+    { id: 9, title: 'Glow Boost', image: service9},
+    { id: 10, title: 'Glow Boost', image: service10 },
+    { id: 11, title: 'Glow Boost', image: service11 },
 ];
 
 const TopServices = () => {
@@ -58,7 +64,7 @@ const TopServices = () => {
                     {services.map((service, index) => (
                         <SwiperSlide key={index} className="swiper-slide-custom">
                             <img src={service.image} alt={service.title} />
-                            <div className="label">{service.title}</div>
+                            {/* <div className="label">{service.title}</div> */}
                         </SwiperSlide>
                     ))}
 
