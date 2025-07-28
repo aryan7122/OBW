@@ -5,7 +5,7 @@ $color-text-body: #475467;
 $color-accent: #4338CA;
 $color-yellow-bg: #FEFFA8;
 $color-yellow-icon: #A16207;
-$color-beige-bg: #FFF4DB;
+$color-beige-bg: #fdf1d4;
 $color-beige-icon: #A16207;
 $color-lavender-bg: #EFECFF;
 $color-lavender-icon: #4338CA;
@@ -58,7 +58,7 @@ $color-lavender-icon: #4338CA;
 .value-card {
     padding: 32px;
     border-radius: 16px;
-    text-align: center;
+    text-align: left;
 
     &__icon {
         display: inline-flex;
@@ -88,11 +88,14 @@ $color-lavender-icon: #4338CA;
     }
     &--beige {
         background-color: $color-beige-bg;
-        .value-card__icon { background-color: #E7E5E4; color: $color-beige-icon; }
+        .value-card__icon { background-color: #FFF4DB; color: $color-beige-icon; }
     }
     &--lavender {
         background-color: $color-lavender-bg;
         .value-card__icon { background-color: #E0E7FF; color: $color-lavender-icon; }
+    }
+    .value-card__icon{
+        background: transparent;
     }
 }
 

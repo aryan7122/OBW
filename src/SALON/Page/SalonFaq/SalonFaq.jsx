@@ -3,8 +3,8 @@ import { ChevronDown, ChevronUp, Sparkle } from "lucide-react";
 import "./SalonFaq.scss";
 
 // Import your images - make sure the paths are correct
-import faqImage1 from "../../../assets/SALON/hero/faq/faq-image-1.png";
-import faqImage2 from "../../../assets/SALON/hero/faq/faq-image-2.png";
+import faqImage1 from "../../../assets/SALON/hero/faq/faq-image-1.jpg";
+import faqImage2 from "../../../assets/SALON/hero/faq/faq-image-2.jpg";
 import str3 from "../../../assets/SALON/hero/str.png";
 
 // Store FAQ data in an array for easy management

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './NavBar.scss';
-import logo from '../../../assets/SALON/logo.svg'
+import logo from '../../../assets/SALON/logo-.svg'
 import { Menu, X, Search, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';

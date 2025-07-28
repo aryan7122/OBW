@@ -4,7 +4,7 @@ import { CheckCircle2, Mail, Phone } from 'lucide-react';
 import './SalonContactUs.scss';
 
 // Make sure this path is correct for your project structure
-import contactImage from '../../../assets/SALON/hero/contact-image.svg';
+import contactImage from '../../../assets/SALON/hero/contact-image.webp';
 
 const SalonContactUs = () => {
     const [formData, setFormData] = useState({
@@ -36,9 +36,9 @@ const SalonContactUs = () => {
     };
 
     const features = [
-        "Clean, Hygienic, & Relaxing Ambiance",
-        "Transparent Pricing & Trusted Products",
-        "Advanced Technology With Visible Results"
+        "Clean, safe, and peaceful place to relax ",
+        "Clear prices and only trusted products used ",
+        "Modern machines that give real, visible results"
     ];
 
     return (
@@ -46,10 +46,9 @@ const SalonContactUs = () => {
             <Toaster position="top-center" />
 
             <header className="contact-header">
-                <h1>Drop Us A Line!</h1>
+                <h1>We’re Just a Message Away!</h1>
                 <p className="subtitle">
-                    Investing in your beauty is an important step for your self-esteem and well-being. By taking care of
-                    your appearance, you boost your confidence and self-worth, leading to a happier life.
+                   Taking care of your beauty isn’t just about looks; it’s about feeling amazing in your skin. Let’s connect and help you glow from the inside out.
                 </p>
                 <div className="features-bar">
                     {features.map((feature, index) => (

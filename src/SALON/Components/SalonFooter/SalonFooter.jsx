@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Facebook, Youtube, Instagram, Phone, Mail } from 'lucide-react';
 import './SalonFooter.scss';
-import logo from '../../../assets/SALON/hero/flogo.svg'; // Make sure this path to your logo is correct
+import logo from '../../../assets/SALON/logo-.svg'; // Make sure this path to your logo is correct
 
 const SalonFooter = () => {
     const navigate = useNavigate();

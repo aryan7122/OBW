@@ -251,7 +251,6 @@ function App() {
                       <>
                         <SalonBlogDetail />
                         {/* <HeroGlowSection /> */}
-
                       </>
                     }
                   />

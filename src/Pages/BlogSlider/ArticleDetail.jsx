@@ -229,11 +229,6 @@ const ArticleDetail = () => {
         }
     };
 
-
-
-
-
-
     const { id } = useParams();
     console.log("Raw articleId:", id);
     const formattedcaaptionImg = decodeURIComponent(id)

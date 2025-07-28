@@ -14,22 +14,24 @@ import img7 from "../../../assets/TrendingTreatments/Skin Brightening-min.jpg";
 import img8 from "../../../assets/TrendingTreatments/Hair Transplantation-min.jpg";
 import img9 from "../../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg";
 import WebPImage from "../../../util/WebPImage";
+import { blogs } from "./SalonBlogDetail/SalonBlogDetail";
 
 // --- FIX #1: DATA KO COMPONENT KE BAHAR NIKALEIN ---
 // Isse yeh array baar-baar nahi banenge aur loop nahi banega.
-const allBlogs = [
-    { id: 1, title: "The Ultimate Guide to Glowing Skin Before a Special Event", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img1, category: "Skin", date: "10 July" },
-    { id: 2, title: "7 Signs You Need a Hair Spa (And What to Expect)", description: "Stay ahead of the beauty curve! We explore the hottest hair spa, and what to...", image: img2, category: "Hair", date: "11 July" },
-    { id: 3, title: "Top 5 Salon Trends in Bangalore This Year", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img3, category: "Styling", date: "12 July" },
-    { id: 4, title: "Discover the hottest nail colours and styles trending", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img4, category: "Nails", date: "13 July" },
-    { id: 5, title: "Everything you need to know about hair extensions", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img5, category: "Hair", date: "14 July" },
-    { id: 6, title: "Ultimate guide for frizz-free and sleek hair with Obw", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img6, category: "Hair", date: "15 July" },
-    { id: 7, title: "beauty and hair preparation guide for Eid", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img7, category: "Skin", date: "16 July" },
-    { id: 8, title: "ultimate summer haircare guide & Maintenance", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img8, category: "Hair", date: "17 July" },
-    { id: 9, title: "3 Must-try products for radiant skin during this season", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img9, category: "Skin", date: "18 July" },
-    { id: 10, title: "A guide to hair coloring", description: "Explore the world of hair color with our expert tips and trend analysis for the season.", image: img2, category: "Coloring", date: "19 July" },
-    { id: 11, title: "Advanced Skin Treatments", description: "A look into the most advanced skin treatments available today for a youthful glow.", image: img1, category: "Skin", date: "20 July" },
-];
+// const allBlogs = [
+//     { id: 1, title: "The Ultimate Guide to Glowing Skin Before a Special Event", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img1, category: "Skin", date: "10 July" },
+//     { id: 2, title: "7 Signs You Need a Hair Spa (And What to Expect)", description: "Stay ahead of the beauty curve! We explore the hottest hair spa, and what to...", image: img2, category: "Hair", date: "11 July" },
+//     { id: 3, title: "Top 5 Salon Trends in Bangalore This Year", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img3, category: "Styling", date: "12 July" },
+//     { id: 4, title: "Discover the hottest nail colours and styles trending", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img4, category: "Nails", date: "13 July" },
+//     { id: 5, title: "Everything you need to know about hair extensions", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img5, category: "Hair", date: "14 July" },
+//     { id: 6, title: "Ultimate guide for frizz-free and sleek hair with Obw", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img6, category: "Hair", date: "15 July" },
+//     { id: 7, title: "beauty and hair preparation guide for Eid", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img7, category: "Skin", date: "16 July" },
+//     { id: 8, title: "ultimate summer haircare guide & Maintenance", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img8, category: "Hair", date: "17 July" },
+//     { id: 9, title: "3 Must-try products for radiant skin during this season", description: "Discover the perfect pre-event skincare routine including facials, hydrating treatments.", image: img9, category: "Skin", date: "18 July" },
+//     { id: 10, title: "A guide to hair coloring", description: "Explore the world of hair color with our expert tips and trend analysis for the season.", image: img2, category: "Coloring", date: "19 July" },
+//     { id: 11, title: "Advanced Skin Treatments", description: "A look into the most advanced skin treatments available today for a youthful glow.", image: img1, category: "Skin", date: "20 July" },
+// ];
+const allBlogs = blogs;
 
 const categories = ["View all", "Styling", "Hair", "Nails", "Skin", "Coloring"];
 
@@ -58,14 +60,14 @@ const SalonBlog = () => {
             if (!filtersContainerRef.current) return;
 
             const containerWidth = filtersContainerRef.current.offsetWidth;
-            const moreButtonWidth = 100; 
+            const moreButtonWidth = 100;
             let currentWidth = 0;
             const tempVisible = [];
             const tempDropdown = [];
-            
+
             categories.forEach((category) => {
                 const tabWidth = categoryButtonRefs.current[category]?.offsetWidth + 16;
-                
+
                 if (currentWidth + tabWidth < containerWidth - moreButtonWidth) {
                     tempVisible.push(category);
                     currentWidth += tabWidth;
@@ -73,7 +75,7 @@ const SalonBlog = () => {
                     tempDropdown.push(category);
                 }
             });
-            
+
             setVisibleCategories(tempVisible);
             setDropdownCategories(tempDropdown);
         };
@@ -130,13 +132,13 @@ const SalonBlog = () => {
         setSelectedCategory(category);
         setIsDropdownOpen(false);
     };
-    
+
     // --- RENDER FUNCTIONS ---
     const renderPageNumbers = () => {
         if (totalPages <= 1) return null;
         return (
             <div className="pagination">
-                 <button
+                <button
                     onClick={() => handlePageChange(currentPage - 1)}
                     disabled={currentPage === 1}
                     className="pagination-arrow"
@@ -158,6 +160,7 @@ const SalonBlog = () => {
     return (
         <div className="salon-blog-page">
             <header className="salon-blog-header">
+                <h4 className="blog_post">blog post</h4>
                 <h1>Welcome To The Obw Salon Blog</h1>
                 <div className="search-bar">
                     <Search className="search-icon" size={20} />
@@ -194,7 +197,7 @@ const SalonBlog = () => {
                                 className={`more-button ${isDropdownOpen || dropdownCategories.includes(selectedCategory) ? 'active' : ''}`}
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             >
-                                More {isDropdownOpen ? <ChevronUp size={16}/> : <ChevronDown size={16} />}
+                                More {isDropdownOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
                             </button>
                             {isDropdownOpen && (
                                 <div className="dropdown-menu">
@@ -225,8 +228,14 @@ const SalonBlog = () => {
                                     </div>
                                     <h3 className="card-title">{blog.title}</h3>
                                     <p className="card-description">
-                                        {blog.description} <span className="read-more">Read more</span>
+                                        {blog.p.length > 80
+                                            ? blog.p.slice(0, 80) + "..."
+                                            : blog.p}
+                                        {blog.p.length > 80 && (
+                                            <span className="read-more">Read more</span>
+                                        )}
                                     </p>
+
                                 </div>
                             </div>
                         ))
@@ -234,7 +243,7 @@ const SalonBlog = () => {
                         <p className="no-results">No blogs found. Try a different search or category.</p>
                     )}
                 </div>
-                
+
                 {renderPageNumbers()}
             </main>
         </div>

@@ -1,30 +1,36 @@
 import React from "react";
 import "./NewsArticles.scss";
-import img1 from "../../../assets/SALON/hero/NewsArticles/img1.png";
-import img2 from "../../../assets/SALON/hero/NewsArticles/img2.png";
-import img3 from "../../../assets/SALON/hero/NewsArticles/img3.png";
+import img1 from "../../../assets/SALON/hero/NewsArticles/img1.jpg";
+import img2 from "../../../assets/SALON/hero/NewsArticles/img2.jpg";
+import img3 from "../../../assets/SALON/hero/NewsArticles/img3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const articles = [
   {
-    title: "The Ultimate Guide to Glowing Skin Before a Special Event",
+    title: "Why Every Woman Needs a 'Reset Ritual' And How a Salon Visit Can Be Yours",
     description:
-      "Discover the perfect pre-event skincare routine including facials, hydrating treatments, and clinical therapies to look radiant on your big day.",
+      "In today’s fast-paced world, self-care isn’t just a luxury; it’s a necessity. Between work deadlines, personal responsibilities, and life’s everyday demands, women often put themselves last.",
     date: "10July",
     image: img1,
   },
   {
-    title: "7 Signs You Need a Hair Spa (And What to Expect)",
+    title: "Tame the Frizz: Hair Care Tips for the Rainy Season ",
     date: "10July",
     image: img2,
   },
   {
-    title: "Top 5 Salon Trends in Bangalore This Year",
+    title: "Why a Hair Spa Is More Than Just Pampering – It’s Hair Therapy ",
     date: "10July",
     image: img3,
   },
 ];
 
 export default function NewsArticles() {
+      const navigate = useNavigate();
+ const HandleNavigation = (title) => {
+        window.scrollTo(0, 0);
+        navigate(`/blogs`);
+    };
   return (
     <section className="news-section">
       <div className="card">
@@ -74,7 +80,7 @@ export default function NewsArticles() {
         ))}
       </div>
        <div>
-        <div className="circle">
+        <div className="circle" onClick={HandleNavigation}>
           <span className="arrow">↗</span>
         </div>
         <p>See All</p>

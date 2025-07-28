@@ -11,8 +11,8 @@ const SalonAboutHero = () => {
         >
             <div className="salon-about-hero__overlay"></div>
             <div className="salon-about-hero__content">
-                <h1>Our Journey: Commitment to Beauty and Well-being</h1>
-                <p>A Path to Radiance: Embracing Beauty and Wellness Together</p>
+                <h1>Our Story: Dedicated to Helping You Look and Feel Great</h1>
+                <p>Your Journey to Glowing Skin and Good Health, With Us by Your Side</p>
             </div>
         </section>
     );

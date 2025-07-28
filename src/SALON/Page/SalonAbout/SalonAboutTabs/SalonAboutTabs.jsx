@@ -12,8 +12,13 @@ const WhoWeAreContent = () => (
     <div className="tab-content-grid two-cols P_L">
         <div className="text-content">
             <h3>About Obw Salon</h3>
-            <p>At OBW, we believe beauty isn’t just about how you look – it’s how you feel. With a passion for transformation and precision, OBW has grown into a trusted destination for salon and clinical beauty services in Bangalore. Whether you want to refresh your style or rejuvenate your skin, we're here to bring out the best in you.</p>
-            <p>At our three branches in Bangalore, we offer a unique experience where certified skin experts utilize state-of-the-art technology in a calming and tranquil environment. Your skin deserves the best care, and with our dedicated team, you can trust that it is in exceptional hands. We prioritize your comfort and satisfaction, ensuring that every visit leaves you feeling rejuvenated and confident.</p>
+            <p>At OBW, we believe beauty is not just about your looks it’s also about how you feel. We’re passionate about helping people look and feel their best. Over time, OBW has become a trusted place for both salon and skincare services in Bangalore. </p>
+            <p>We have four branches across Bangalore, where you’ll find experienced skin experts using advanced technology in a calm, relaxing space. Your skin is in good hands with our trained team. We focus on your comfort and happiness, making sure you leave feeling refreshed, confident, and well taken care of. </p>
+            <br/>
+            <br/>
+            <br/>
+            <h3>What We Do </h3>
+            <p>At OBW, we provide a complete range of salon and skin clinic services under one roof. From haircuts, styling, and makeup to advanced skin treatments like HydraFacials, laser hair reduction, and CoolSculpting, we help you look and feel your best. With expert professionals, modern technology, and four branches in Bengaluru, every visit is personalized, relaxing, and confidence-boosting. </p>
         </div>
         <div className="image-content">
             <img src={whoWeAreImage} alt="A portrait of a confident woman" />
@@ -55,11 +60,11 @@ const MissionVisionContent = () => (
     <div className="tab-content-single-col MissionVisionContent P_L">
         <div className="mission-item">
             <a href="#mission">Our mission <ArrowRight size={16}/></a>
-            <p>Our vision is to redefine the art of hairdressing, creating a space where beauty, creativity, and wellness converge. We aspire to inspire confidence in every client, offering innovative styles and personalised experiences that reflect individuality.</p>
+            <p>At OBW, our mission is to help people feel confident and beautiful by offering high-quality salon and skincare services. We are committed to expert care, modern treatments, and creating a relaxing experience for every client.</p>
         </div>
         <div className="mission-item">
             <a href="#vision">Our vision <ArrowRight size={16}/></a>
-            <p>Our team is passionate about staying ahead of trends while always prioritising the health and integrity of your hair, nails, skin, lashes and brows. We are dedicated to creating exceptional moments for you, our valued clients.</p>
+            <p>Our vision is to grow as a trusted name in beauty and wellness, known for innovation, care, and customer satisfaction while always making sure each person who walks through our doors feels valued, refreshed, and special. </p>
         </div>
     </div>
 );
@@ -91,12 +96,12 @@ const SalonAboutTabs = () => {
                 >
                     Who we are
                 </button>
-                <button 
+                {/* <button 
                     className={`tab-button ${activeTab === 'what' ? 'active' : ''}`}
                     onClick={() => setActiveTab('what')}
                 >
                     What we do
-                </button>
+                </button> */}
                 <button 
                     className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
                     onClick={() => setActiveTab('mission')}
