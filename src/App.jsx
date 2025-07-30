@@ -119,7 +119,6 @@ function App() {
       // Attach listener for slower 3G/network
       window.addEventListener('load', handleLoad);
 
-      // Fallback: In case load fails or delays (max 15s)
       const timeout = setTimeout(() => {
         setLoading(false);
       }, 15000);
