@@ -195,8 +195,9 @@ const SalonBookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
                         ></textarea>
                     </div>
 
-                    <button type="submit" className="book-now">
-                        Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
+                    <button type="submit" className="book-now-o btn">
+                        <span>Book Now</span> 
+                        <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 </form>
                 <Toaster
