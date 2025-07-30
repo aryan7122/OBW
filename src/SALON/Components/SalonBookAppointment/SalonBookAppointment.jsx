@@ -30,16 +30,34 @@ const SalonBookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
         treatment: preSelectedTreatment,
         message: "",
     });
+     const [errors, setErrors] = useState({
+            name: false,
+            MoNumber: false,
+        });
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+   const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({ ...formData, [name]: value });
+
+    // Reset error on typing
+    if (value.trim() !== "") {
+        setErrors((prev) => ({ ...prev, [name]: false }));
+    }
+
+
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
         const { name, MoNumber, email, date, location, treatment, message } = formData;
+  const newErrors = {
+            name: !name.trim(),
+            MoNumber: !MoNumber.trim(),
+        };
 
+        setErrors(newErrors);
         // Validation Check
         if (!name || !MoNumber) {
             toast.error("Please fill all required fields!");
@@ -117,12 +135,12 @@ const SalonBookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
                     <div className="form-row">
                         <div className="form_group">
                             <label>Name</label>
-                            <input type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} />
+                            <input className={errors.name ? "error-border" : ""} type="text" name="name" placeholder="Enter your name" value={formData.name} onChange={handleChange} />
                         </div>
 
                         <div className="form_group">
-                            <label>Mo. Number</label>
-                            <input type="text" name="MoNumber" placeholder="Enter your Mo. Number" value={formData.MoNumber} onChange={handleChange} />
+                            <label>Contact Number</label>
+                            <input  className={errors.MoNumber ? "error-border" : ""} type="text" name="MoNumber" placeholder="Enter your Mo. Number" value={formData.MoNumber} onChange={handleChange} />
                         </div>
                     </div>
 

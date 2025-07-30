@@ -60,6 +60,7 @@ import dimpleplasty_img from '../../assets/TrendingTreatments/dimpleplasty.jpg'
 import PMUimg from '../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg'
 import IVtherapy_img from '../../assets/TrendingTreatments/IV therapy.jpg'
 import Melasma_img from '../../assets/TrendingTreatments/Melesma.jpg'
+import WebPImage from "../../util/WebPImage";
 
 
 export  const clinicalData = {
@@ -523,11 +524,12 @@ function ClinicalConcerns() {
                 {/* Image dikhana only when card selected */}
                 {selectedCardIndex === cardIdx && card.imageUrl && (
                  <div className="img_img">
-                   <img
+                   <WebPImage
                     src={card.imageUrl}
                     alt={card.title}
                     className={`card-image ${selectedCardIndex === cardIdx ? "large-image" : "small-image"}`}
                   />
+                  
                  </div>
                 )}
 
