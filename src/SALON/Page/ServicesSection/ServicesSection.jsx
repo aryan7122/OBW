@@ -355,7 +355,7 @@ const ServicesSection = () => {
                 )}
             </div>
 
-            <ServicesSlider services={services.filter(service => service.category === activeTab)} />
+            <ServicesSlider tab={activeTab} services={services.filter(service => service.category === activeTab)} />
 
         </section>
     );

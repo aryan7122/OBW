@@ -88,9 +88,15 @@ const SalonBookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
             onClose();
         }, 1500);
     };
+     const handleOverlayClick = (e) => {
+        // Only close if the click is directly on the overlay, not its children
+        if (e.target === e.currentTarget) {
+            onClose();
+        }
+    };
 
     return (
-        <motion.div className="SalonBookAppointment-overlay">
+        <motion.div className="SalonBookAppointment-overlay"  onClick={handleOverlayClick}>
             <motion.div
                 className="SalonBookAppointment-container"
                 initial={{ opacity: 0, scale: 0 }}

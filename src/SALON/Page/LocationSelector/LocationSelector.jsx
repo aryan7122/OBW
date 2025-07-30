@@ -5,6 +5,7 @@ import LocationImg1 from '../../../assets/SALON/hero/Location/Bhanshankari.jpg';
 import LocationImg2 from '../../../assets/SALON/hero/Location/Rajarjeswari nagar.jpg';
 import LocationImg3 from '../../../assets/SALON/hero/Location/Kankapura Main road.jpg';
 import LocationImg4 from '../../../assets/SALON/hero/Location/Kodipalya Road.jpg';
+import SalonBookAppointment from "../../Components/SalonBookAppointment/SalonBookAppointment";
 
 const locations = [
     {
@@ -67,9 +68,18 @@ const locations = [
 
 const LocationSelector = () => {
     const [active, setActive] = useState(locations[0]);
+    const [showModal, setShowModal] = useState(false);
 
+    const handleBookNowClick = () => {
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+    };
     return (
         <section className="location-section">
+            {showModal && <SalonBookAppointment  onClose={closeModal} />}
+
             <div className="locations-header">
                 <div>
                     <h2>Find a Location Near You</h2>
@@ -78,7 +88,7 @@ const LocationSelector = () => {
                         closest to you and get pampered.
                     </p>
                 </div>
-                <button className="book-btn btn">
+                <button className="book-btn btn" onClick={()=>handleBookNowClick()}>
                     <span>
                         Book Appointment <ArrowRight className="arrow-icon" size={16} />
                     </span>
@@ -106,14 +116,14 @@ const LocationSelector = () => {
                                                 <Phone size={18} /> <strong>{active.phone}</strong>
                                             </a>
                                             {active.id !== loc.i && (
-                                               
-                                                    <a className="directions" href={active.googleMapsSearchUrl} target="_blank" rel="noreferrer">
-                                                        Get directions
+
+                                                <a className="directions" href={active.googleMapsSearchUrl} target="_blank" rel="noreferrer">
+                                                    Get directions
                                                     <div className="dot" style={{ backgroundColor: loc.color }} >
                                                         <ArrowLeft size={16} className="active-arrow" />
                                                     </div>
-                                                    </a>
-                                              
+                                                </a>
+
                                             )}
                                         </div>
                                     </div>

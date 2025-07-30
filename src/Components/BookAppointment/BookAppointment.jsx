@@ -10,9 +10,9 @@ import { clinicalData } from "../../Pages/ClinicalConcerns/ClinicalConcerns";
 
 
 
-  
+
 const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
-    
+
     const allTags = [];
 
     Object.values(clinicalData).forEach(category => {
@@ -24,7 +24,7 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
             });
         });
     });
-    
+
     const treatmentOptions = allTags.map(tag => ({ label: tag, value: tag }));
 
 
@@ -95,9 +95,15 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
             onClose();
         }, 1500);
     };
+    const handleOverlayClick = (e) => {
+        // Only close if the click is directly on the overlay, not its children
+        if (e.target === e.currentTarget) {
+            onClose();
+        }
+    };
 
     return (
-        <motion.div className="modal-overlay">
+        <motion.div className="modal-overlay" onClick={handleOverlayClick}>
             <motion.div
                 className="modal-container"
                 initial={{ opacity: 0, scale: 0 }}
@@ -147,7 +153,7 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
                     </div>
 
                     <div className="form-row">
-                    <div className="form_group">
+                        <div className="form_group">
                             <label>Location</label>
                             <select name="location" value={formData.location} onChange={handleChange}>
                                 <option value="">Select Location</option>
@@ -197,7 +203,7 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
                     </div>
 
                     <button type="submit" className="book-now">
-                        Book Now 
+                        Book Now
                         {/* <ArrowRight className="arrow-icon" size={20} strokeWidth={2} /> */}
                     </button>
                 </form>

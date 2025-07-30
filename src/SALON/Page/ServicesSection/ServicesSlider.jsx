@@ -4,8 +4,9 @@ import './ServicesSection.scss';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SalonBookAppointment from '../../Components/SalonBookAppointment/SalonBookAppointment';
 
-const ServicesSlider = ({ services }) => {
+const ServicesSlider = ({ services,tab }) => {
 
+    console.log('object',tab)
     const containerRef = useRef(null);
     const [showControls, setShowControls] = useState(false);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -91,7 +92,7 @@ const ServicesSlider = ({ services }) => {
     };
     return (
         <div className={`slider-wrapper slider-card_is_${services.length}`}>
-            {showModal && <SalonBookAppointment onClose={closeModal} />}
+            {showModal && <SalonBookAppointment preSelectedTreatment={tab} onClose={closeModal}  />}
 
             <div className={`services-slider card_is_${services.length}`} ref={containerRef}>
                 {services.map((service, index) => (
