@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import './ClassicDealsOffer.scss';
 import str3 from '../../../assets/SALON/hero/str.png';
 
-import icon from '../../../assets/ClassicDeals/icon.svg';
+import icon from '../../../assets/SALON/hero/ClassicDeals/icon.svg';
 import img1 from '../../../assets/SALON/hero/ClassicDeals/offer1.jpg';
 import img2 from '../../../assets/SALON/hero/ClassicDeals/offer2.png';
 import img3 from '../../../assets/SALON/hero/ClassicDeals/offer3.png';
