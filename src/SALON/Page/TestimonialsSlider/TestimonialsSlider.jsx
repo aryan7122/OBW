@@ -50,7 +50,7 @@ const testimonials = [
         image:
             "https://photosrush.net/wp-content/uploads/instagram-profile-picture-avatar_39.webp",
         bgColor: "#F4F1FF",
-         link: "Check on google",
+        link: "Check on google",
     },
     {
         type: "testimonial",
@@ -62,7 +62,7 @@ const testimonials = [
         image:
             "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
         bgColor: "#FFF8CC",
-         link: "Check on google",
+        link: "Check on google",
     },
 ];
 
@@ -119,24 +119,24 @@ export default function TestimonialsSlider() {
                             <div >
                                 {/* <div className="avatar-wrapper google-logo-wrapper">
                   <img src={item.image} alt="Google" className="avatar" />
-                </div> */}  
-                               
+                </div> */}
+
                                 <div
                                     className="avatar-wrapper avatar-wrapper-G"
-                                  
+
                                 >
-                                 <div className="bgImg "   style={{ backgroundColor: item.bgColor }}>
-                                    {item.image ? (
-                                        <div className="googlrLogo">
-                                            <img
-                                                src={item.image}
-                                                alt={item.name}
-                                                className="avatarG"
-                                            />
-                                        </div>
-                                    ) : (
-                                        <div className="avatar-initial">{item.initial}</div>
-                                    )}
+                                    <div className="bgImg " style={{ backgroundColor: item.bgColor }}>
+                                        {item.image ? (
+                                            <div className="googlrLogo">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                    className="avatarG"
+                                                />
+                                            </div>
+                                        ) : (
+                                            <div className="avatar-initial">{item.initial}</div>
+                                        )}
                                     </div>
                                 </div>
                                 <div
@@ -169,20 +169,20 @@ export default function TestimonialsSlider() {
                             <>
                                 <div
                                     className="avatar-wrapper"
-                                    // style={{ backgroundColor: item.bgColor }}
+                                // style={{ backgroundColor: item.bgColor }}
                                 >
-                                                                 <div className="bgImg "   style={{ backgroundColor: item.bgColor }}>
+                                    <div className="bgImg " style={{ backgroundColor: item.bgColor }}>
 
-                                    {item.image ? (
-                                        <img
-                                            src={item.image}
-                                            alt={item.name}
-                                            className="avatar"
-                                        />
-                                    ) : (
-                                        <div className="avatar_initial ">{item.initial}</div>
-                                    )}
-                                                                 </div>
+                                        {item.image ? (
+                                            <img
+                                                src={item.image}
+                                                alt={item.name}
+                                                className="avatar"
+                                            />
+                                        ) : (
+                                            <div className="avatar_initial ">{item.initial}</div>
+                                        )}
+                                    </div>
                                 </div>
 
                                 <div
@@ -205,7 +205,7 @@ export default function TestimonialsSlider() {
                                         </div>
                                         <p className="review">{item.text}</p>
                                         <div className="meta">
-                                            <div>
+                                            <div className="user_d_i">
                                                 <h4>{item.name}</h4>
                                                 <p>{item.role}</p>
                                             </div>

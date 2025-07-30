@@ -46,7 +46,7 @@
     }
     .badge {
       display: inline-block;
-      padding: 4px 10px;
+      // padding: 4px 10px;
       font-size: 14px;
       color: #3032b6;
       font-weight: 500;
@@ -54,7 +54,7 @@
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
       img {
         width: 16px;
       }
@@ -63,16 +63,16 @@
     h2 {
       font-size: clamp(1.75rem, 5vw, 2.5rem);
       color: #002092;
-      margin-bottom: 1rem;
+      margin-bottom: 30px;
       font-weight: 500;
-      line-height: 1.2;
-      letter-spacing: -1.8px;
-      display: flex;
+      // line-height: clamp(1, 5vw, 1.1);
+      letter-spacing: clamp(-1px, 5vw, -1.8px);
+      // display: flex;
       gap: 10px;
       flex-wrap: wrap;
       align-items: center;
       @media (max-width: 400px) {
-        line-height: 0.7;
+        // line-height: 0.7;
       }
       img {
         width: clamp(1.75rem, 5vw, 2.5rem);
