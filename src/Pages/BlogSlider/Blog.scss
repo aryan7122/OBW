@@ -143,6 +143,9 @@
       padding: 20px 30px;
       margin-top: 0;
     }
+    @media only screen and (max-width: 500px) {
+      padding: 10px 20px;
+    }
     @media only screen and (max-width: 400px) {
       padding: 10px 20px;
     }
@@ -184,7 +187,9 @@
       }
       @media only screen and (max-width: 1170px) {
         text-align: center;
+        margin-top: 20px;
       }
+      
     }
     ul {
       list-style: none;
