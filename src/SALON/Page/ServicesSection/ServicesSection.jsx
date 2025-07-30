@@ -48,6 +48,7 @@ import Reflexology from '../../../assets/SALON/hero/services/Reflexology.webp';
 
 // 
 import ServicesSlider from './ServicesSlider';
+import SalonBookAppointment from '../../Components/SalonBookAppointment/SalonBookAppointment';
 
 export const tabs = [
     'Styling',
@@ -260,11 +261,12 @@ const ServicesSection = () => {
     const [visibleTabs, setVisibleTabs] = useState([]);
     const [dropdownTabs, setDropdownTabs] = useState([]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+
     const containerRef = useRef(null);
     const calculateVisibleTabs = () => {
         const screenWidth = window.innerWidth;
         let visibleCount = 6; // default for >= 1400px
-
+        
         if (screenWidth < 400) {
             visibleCount = 2;
         } else if (screenWidth < 600) {
@@ -292,9 +294,10 @@ const ServicesSection = () => {
         return () => window.removeEventListener('resize', calculateVisibleTabs);
     }, []);
 
+  
 
     return (
-        <section className="services-section">
+        <section className="services-section" id='Services'>
 
             <div className="section-header">
                 <h5 className="small-title">

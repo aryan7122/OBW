@@ -3,7 +3,7 @@
 //   position: relative;
 margin-top: 30px;
   width: 100%;
-  height: 263px; /* Adjust height as needed */
+  height: 310px; /* Adjust height as needed */
   display: flex;
   align-items: center;
   justify-content: flex-start; // Align content to the left
@@ -86,8 +86,8 @@ margin-top: 30px;
 
     }
 
-    .view-all {
-      padding: 8px 10px 8px 35px;
+    .view--all {
+      padding: 8px 10px 8px 30px  !important;
       background-color: #007bff;
       color: #fff;
       border: none;
@@ -106,6 +106,9 @@ margin-top: 30px;
       border: 1px solid #00CFDE !important;
       transition: 0.3s linear;
       background: transparent !important;
+      span{
+        padding: 5px;
+      }
       @media only screen and (max-width: 1051px) {
         margin-top: 30px;
       }

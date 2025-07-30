@@ -49,9 +49,15 @@ function NavBar() {
 
     const isActive = (path) => {
         return location.pathname === path ? 'active' : '';
-        // return location.pathname.includes(path) ? "active-link" : "";
 
     };
+ const getActiveClass = () => {
+        return (
+            location.pathname.startsWith('/blogs') ||
+            location.pathname.startsWith('/blog-detail')
+        ) ? 'active' : '';
+    };
+
     // white bg
     const bgBlur = ['treatment'];
     const isbgBlur = bgBlur.some((path) => location.pathname.includes(path));
@@ -87,16 +93,16 @@ function NavBar() {
                     {!isVisible && !menuOpen &&
                         <ul className={`NavBar-links ${menuOpen ? 'menu-active' : ''}`}>
                             <li onClick={() => CloseMenu()} ><Link to="/" className={isActive('/')}>HOME</Link></li>
-                            {/* <li onClick={() => CloseMenu()}><Link to="" className={isActive('/Services')}>Services</Link></li> */}
+                            {/* <li onClick={() => CloseMenu()}><Link to="" >Services</Link></li> */}
                             <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                             {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
-                            <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                            <li onClick={() => CloseMenu()}><Link to="/blogs" className={getActiveClass()}>BLOGS</Link></li>
                             <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                         </ul>
                     }
                     {!isVisible
                         ? <>
-                            <button className="appointment-button btn" onClick={handleBookNowClick}>
+                            <button className="appointment-button_s btn" onClick={handleBookNowClick}>
                                 <span>
                                     Book Appointment <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                                 </span>

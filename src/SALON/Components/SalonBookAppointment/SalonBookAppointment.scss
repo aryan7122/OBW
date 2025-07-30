@@ -19,7 +19,8 @@
   width: 900px;
   // padding: 10px 60px;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
+ 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
   @media only screen and (max-width: 1040px) {
@@ -113,6 +114,8 @@
    background: #FFF6EA;
    padding: 20px;
   color: #371d1d;
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
   text-align: center;
   @media only screen and (max-width: 670px) {
     font-size: 40px;

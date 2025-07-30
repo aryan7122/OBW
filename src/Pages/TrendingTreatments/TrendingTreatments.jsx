@@ -123,9 +123,6 @@ const TrendingTreatments = () => {
         }, 100);
     };
 
-    console.log('treatments', treatments.length
-    )
-
     //  sliders
     const [currentIndex, setCurrentIndex] = useState(0);
     const [cardsToShow, setCardsToShow] = useState(1);

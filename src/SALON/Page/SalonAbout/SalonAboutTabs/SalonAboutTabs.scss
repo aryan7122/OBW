@@ -2,7 +2,7 @@
 $font-sans: "Inter", sans-serif;
 $color-text-heading: #101828;
 $color-text-body: #475467;
-$color-border: #eaecf0;
+$color-border: #B7B7B7;
 $color-accent: #5b2f2f;
 
 /* --- Main Tabs Section --- */
@@ -10,11 +10,7 @@ $color-accent: #5b2f2f;
   margin: 0 auto;
   background: #fff3e4;
   position: relative;
-}
-
-.tabs-header {
-  text-align: center;
-  padding: 0px 120px;
+    padding: 0px 120px;
   padding-top: 40px !important;
   @media only screen and (max-width: 1400px) {
     padding: 0px 100px;
@@ -40,6 +36,36 @@ $color-accent: #5b2f2f;
   @media only screen and (max-width: 400px) {
     padding: 0px 10px;
   }
+}
+
+.tabs-header {
+  text-align: center;
+  // padding: 0px 120px;
+  padding-top: 40px !important;
+  // @media only screen and (max-width: 1400px) {
+  //   padding: 0px 100px;
+  // }
+  // @media only screen and (max-width: 1300px) {
+  //   padding: 0px 80px;
+  // }
+  // @media only screen and (max-width: 1200px) {
+  //   padding: 0px 70px;
+  // }
+  // @media only screen and (max-width: 1100px) {
+  //   padding: 0px 60px;
+  // }
+  // @media only screen and (max-width: 1000px) {
+  //   padding: 0px 40px;
+  // }
+  // @media only screen and (max-width: 600px) {
+  //   padding: 0px 30px;
+  // }
+  // @media only screen and (max-width: 500px) {
+  //   padding: 0px 20px;
+  // }
+  // @media only screen and (max-width: 400px) {
+  //   padding: 0px 10px;
+  // }
   .label {
     display: flex;
     align-items: center;
@@ -71,32 +97,32 @@ $color-accent: #5b2f2f;
   gap: 32px;
   border-bottom: 1px solid $color-border;
   //   margin-bottom: 60px;
-  padding: 0px 120px;
+  // padding: 0px 120px;
 
-  @media only screen and (max-width: 1400px) {
-    padding: 0px 100px;
-  }
-  @media only screen and (max-width: 1300px) {
-    padding: 0px 80px;
-  }
-  @media only screen and (max-width: 1200px) {
-    padding: 0px 70px;
-  }
-  @media only screen and (max-width: 1100px) {
-    padding: 0px 60px;
-  }
-  @media only screen and (max-width: 1000px) {
-    padding: 0px 40px;
-  }
-  @media only screen and (max-width: 600px) {
-    padding: 0px 30px;
-  }
-  @media only screen and (max-width: 500px) {
-    padding: 0px 20px;
-  }
-  @media only screen and (max-width: 400px) {
-    padding: 0px 10px;
-  }
+  // @media only screen and (max-width: 1400px) {
+  //   padding: 0px 100px;
+  // }
+  // @media only screen and (max-width: 1300px) {
+  //   padding: 0px 80px;
+  // }
+  // @media only screen and (max-width: 1200px) {
+  //   padding: 0px 70px;
+  // }
+  // @media only screen and (max-width: 1100px) {
+  //   padding: 0px 60px;
+  // }
+  // @media only screen and (max-width: 1000px) {
+  //   padding: 0px 40px;
+  // }
+  // @media only screen and (max-width: 600px) {
+  //   padding: 0px 30px;
+  // }
+  // @media only screen and (max-width: 500px) {
+  //   padding: 0px 20px;
+  // }
+  // @media only screen and (max-width: 400px) {
+  //   padding: 0px 10px;
+  // }
 
   .tab-button {
     font-family: $font-sans;
@@ -136,31 +162,31 @@ $color-accent: #5b2f2f;
   }
 }
 .P_L {
-  padding: 0px 120px;
-  @media only screen and (max-width: 1400px) {
-    padding: 0px 100px;
-  }
-  @media only screen and (max-width: 1300px) {
-    padding: 0px 80px;
-  }
-  @media only screen and (max-width: 1200px) {
-    padding: 0px 70px;
-  }
-  @media only screen and (max-width: 1100px) {
-    padding: 0px 60px;
-  }
-  @media only screen and (max-width: 1000px) {
-    padding: 0px 40px;
-  }
-  @media only screen and (max-width: 600px) {
-    padding: 0px 30px;
-  }
-  @media only screen and (max-width: 500px) {
-    padding: 0px 20px;
-  }
-  @media only screen and (max-width: 400px) {
-    padding: 0px 10px;
-  }
+  // padding: 0px 120px;
+  // @media only screen and (max-width: 1400px) {
+  //   padding: 0px 100px;
+  // }
+  // @media only screen and (max-width: 1300px) {
+  //   padding: 0px 80px;
+  // }
+  // @media only screen and (max-width: 1200px) {
+  //   padding: 0px 70px;
+  // }
+  // @media only screen and (max-width: 1100px) {
+  //   padding: 0px 60px;
+  // }
+  // @media only screen and (max-width: 1000px) {
+  //   padding: 0px 40px;
+  // }
+  // @media only screen and (max-width: 600px) {
+  //   padding: 0px 30px;
+  // }
+  // @media only screen and (max-width: 500px) {
+  //   padding: 0px 20px;
+  // }
+  // @media only screen and (max-width: 400px) {
+  //   padding: 0px 10px;
+  // }
 
   .text-content {
     h3 {

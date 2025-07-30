@@ -31,7 +31,7 @@ const AboutUsHero = () => {
             </p>
             {/* <button></button> */}
           </div>
-          <button onClick={handleBookNowClick} className="BookAppointmentNow btn">
+          <button onClick={handleBookNowClick} className="BookAppointmentNow_ab btn">
             <span>
 
             Contact Us {" "}

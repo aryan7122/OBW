@@ -128,7 +128,7 @@
 
       /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
       width: fit-content;
-      padding: 5px 7px 1px 7px;
+      padding: 9px 12px 6px 12px;
       border-radius: 100px;
       gap: 15px;
       // position: absolute;
@@ -172,7 +172,7 @@
       letter-spacing: 0%;
       text-align: center;
       text-transform: capitalize;
-      border: 0.1px solid #ffffff;
+      border: 1px solid #ffffff;
       backdrop-filter: blur(20px);
       width: fit-content;
       padding: 4px 10px;
@@ -195,7 +195,7 @@
       font-optical-sizing: auto;
       font-style: normal;
       font-size: clamp(26px, 4vw, 44px); // ~40px to 66px
-      line-height: clamp(30px, 4vw, 44px); // ~48px to 76px
+      line-height: clamp(30px, 4vw, 68px); // ~48px to 76px
       letter-spacing: clamp(-1px, -0.3vw, -2px); // smooth between -2px and -3px
       font-weight: 500;
       text-transform: capitalize;
@@ -235,7 +235,7 @@
       font-family: "Geist";
       font-weight: 400;
       font-size: clamp(28px, 4vw, 56px); // ~40px to 66px
-      line-height: clamp(32px, 4vw, 68px); // ~48px to 76px
+      line-height: clamp(34px, 4vw, 68px); // ~48px to 76px
       letter-spacing: clamp(-1px, -0.3vw, -3.5px);
       // letter-spacing: 0%;
       vertical-align: middle;

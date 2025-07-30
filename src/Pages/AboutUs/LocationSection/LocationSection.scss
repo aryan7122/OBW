@@ -1,10 +1,10 @@
-.location-section {
+.location-section- {
   // display: grid;
   // grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 60px 120px 60px 120px;
+  // background-color: #F3FEFF !important;
   background-color: #F3FEFF !important;
-  // background-color: #f7f7f7;
   @media only screen and (max-width: 1400px) {
     padding: 40px 100px;
   }
@@ -168,7 +168,7 @@
       }
       .location-card:hover {
         position: relative;
-        background: #e6f7ff2e;
+        // backgr ound: #e6f7ff2e;
         transition: 0.4s linear;
         &::before {
           content: "";

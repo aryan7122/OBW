@@ -457,12 +457,12 @@ const SalonBlogDetail = () => {
                     {article.sections.map((section, index) => {
                         switch (section.type) {
                             case 'Introduction':
-                                return <section>
+                                return <section  key={index}>
                                     <h1 className='Introduction'>Introduction</h1>
                                     <p key={index}>{section.content}</p>
                                 </section>
                             case 'paragraph':
-                                return <section>
+                                return <section  key={index}>
                                     <p key={index}>{section.content}</p>
                                 </section>
                             case 'heading_paragraph':

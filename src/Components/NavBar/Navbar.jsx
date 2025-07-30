@@ -8,10 +8,10 @@ import { motion } from 'framer-motion';
 import { TabContext } from '../../util/TabContext';
 
 function Navbar() {
+    const location = useLocation();
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const location = useLocation(); // Get current location
     // const [isWhite, setIsWhite] = useState(false);
     const { pageTab, changeTab } = useContext(TabContext);
 
@@ -39,16 +39,24 @@ function Navbar() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
         window.scrollTo(0, 0);
-    };  const CloseMenu = () => {
-                window.scrollTo(0, 0);
+    }; const CloseMenu = () => {
+        window.scrollTo(0, 0);
         setMenuOpen(false);
     };
 
     const isActive = (path) => {
         return location.pathname === path ? 'active' : '';
+        // console.log('object',location.pathname.includes(path))
         // return location.pathname.includes(path) ? "active-link" : "";
 
     };
+    const getActiveClass = () => {
+        return (
+            location.pathname.startsWith('/blogs') ||
+            location.pathname.startsWith('/blog-detail')
+        ) ? 'active' : '';
+    };
+
     // white bg
     const bgBlurPaths = ['treatment'];
 
@@ -59,7 +67,7 @@ function Navbar() {
         setIsBgBlur(checkBlur);
     }, [location.pathname]);
 
-    const whiteBg = ['contact', 'blogs','about', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service',];
+    const whiteBg = ['contact', 'blogs', 'about', 'blog-detail', 'locations', 'privacy-policy', 'terms-of-service',];
     // const bgBlur = ['treatment'];
     // const isbgBlur = bgBlur.some((path) => location.pathname.includes(path));
     const isWhite = whiteBg.some((path) => location.pathname.includes(path));
@@ -108,7 +116,7 @@ function Navbar() {
                         <li onClick={() => CloseMenu()}><Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
                         <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                         {/* <li onClick={() => toggleMenu()}><Link to="/locations" className={isActive('/locations')}>LOCATIONS</Link></li> */}
-                        <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
+                        <li onClick={() => CloseMenu()}><Link to="/blogs" className={getActiveClass()}>BLOGS</Link></li>
                         <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
                     </ul>
                 }
@@ -161,11 +169,11 @@ function Navbar() {
                     {/* Your existing navigation links */}
                     <li onClick={() => CloseMenu()}><Link to="/" className={isActive('/')}>HOME</Link></li>
                     <li onClick={() => CloseMenu()} > <Link to="/treatment" className={isActive('/treatment')}>TREATMENT</Link></li>
-                    <li  onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
+                    <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                     <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
                     <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
 
-                  
+
                 </ul>
             }
         </header >

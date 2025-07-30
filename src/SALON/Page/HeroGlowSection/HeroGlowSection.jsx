@@ -35,7 +35,7 @@ export default function HeroGlowSection() {
                Because You Deserve the  <span>Spotlight</span>
             </h1>
             <p className="hero-subtext">
-                From flawless skin to fabulous hair—step into OBW and walk out glowing. Book your personalized appointment today and feel the difference.
+Let your beauty shine at OBW, where you can feel pampered and confident. Book your appointment now and treat yourself!
             </p>
 
             <div className="hero-buttons">

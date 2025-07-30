@@ -371,6 +371,7 @@ $brand-color: #3032b6; // A nice purple for accents
     width: 231px;
     height: 180px;
     border-radius: 16px;
+    object-fit: cover;
    @media (max-width: 710px){
     width: 100%;
     object-fit: cover;

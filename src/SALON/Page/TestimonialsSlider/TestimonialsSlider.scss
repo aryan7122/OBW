@@ -31,7 +31,7 @@
         }
       }
     }
-
+    
     h2 {
       font-size: clamp(24px, 4vw, 40px);
       font-weight: 600;
@@ -42,6 +42,7 @@
   }
 
   .testimonial-swiper {
+    margin-top: 80px;
     padding-bottom: 40px;
     width: 100%;
     overflow: visible;

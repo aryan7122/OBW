@@ -38,7 +38,7 @@ const TopServices = () => {
         <section className="top-services">
             <p className="subtitle"> <span>✳</span>  TOP SERVICES <span>✳</span></p>
             <h2 className="title">
-                Discover The Exceptional Services <br /> We Have In Store For You!
+              Check Out the Amazing Services We’ve Got Just for You!
             </h2>
 
             <div className="ellipse-carousel">

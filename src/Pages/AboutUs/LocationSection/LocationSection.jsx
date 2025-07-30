@@ -34,7 +34,7 @@ const LocationSection = () => {
     };
 
     return (
-        <section className="location-section">
+        <section className="location-section-">
             <div className="text-content">
                 <h5>Location</h5>
                 <h2>

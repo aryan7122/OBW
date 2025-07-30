@@ -25,7 +25,7 @@ const MissionVision = () => {
                 </div>
                 <div className="content-wrapper">
                     <div className="left-content">
-                        <p>'At OBW Clinic, we turn beauty trends into real skin wellness, empowering everyone with honest advice and effective treatments.'
+                        <p>At OBW Clinic, we turn beauty trends into real skin wellness, empowering everyone with honest advice and effective treatments.
                         </p>
                         <div className="stats">
 

@@ -1,11 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Facebook, Youtube, Instagram, Phone, Mail } from 'lucide-react';
 import './SalonFooter.scss';
 import logo from '../../../assets/SALON/logo-.svg'; // Make sure this path to your logo is correct
 
 const SalonFooter = () => {
     const navigate = useNavigate();
+    const location = useLocation(); // Get current location
 
     const handleNavigation = (path) => {
         navigate(path);
@@ -20,6 +21,26 @@ const SalonFooter = () => {
         "Keratin treatment",
         "Frizz control hair spa"
     ];
+     const isActive = (path) => {
+        return location.pathname === path ? 'active' : '';
+
+    };
+ const getActiveClass = () => {
+        return (
+            location.pathname.startsWith('/blogs') ||
+            location.pathname.startsWith('/blog-detail')
+        ) ? 'active' : '';
+    };
+ const handleNavigationId = (navigate, targetId) => {
+  navigate('/', { replace: false }); // Ya jis page pe vo ID hai usme
+  setTimeout(() => {
+    const section = document.getElementById(targetId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, 100); // Delay so DOM loads before scroll
+};
+
 
     return (
         <footer className="salon-footer">
@@ -47,10 +68,10 @@ Step into our peaceful salon, where every visit feels like a break from the busy
                 {/* Right side of the footer with navigation, services, and contact info */}
                 <div className="salon-footer__right">
                     <nav className="salon-footer__nav">
-                        <a onClick={() => handleNavigation('/services')}>Services</a>
-                        <a onClick={() => handleNavigation('/about')}>About us</a>
-                        <a onClick={() => handleNavigation('/blogs')}>Blogs</a>
-                        <a onClick={() => handleNavigation('/contact')}>Contact</a>
+                        <a onClick={() => handleNavigationId(navigate, 'Services')} >Services</a>
+                        <a onClick={() => handleNavigation('/about')} className={isActive('/about')}>About us</a>
+                        <a onClick={() => handleNavigation('/blogs')} className={getActiveClass()}>Blogs</a>
+                        <a onClick={() => handleNavigation('/contact')} className={isActive('/contact')}>Contact</a>
                     </nav>
                     <div className="salon-footer__trending">
                         <h4 className="salon-footer__title">TRENDING SERVICES</h4>

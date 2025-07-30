@@ -12,8 +12,8 @@ const SalonContactUs = () => {
         lastName: '',
         email: '',
         mobileNumber: '',
-        outlet: 'Kodipalya road',
-        message: 'I’d love to learn more about your services',
+        outlet: '',
+        message: '',
     });
 
     const handleChange = (e) => {

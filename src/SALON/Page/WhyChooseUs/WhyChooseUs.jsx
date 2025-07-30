@@ -9,23 +9,23 @@ import { BadgePercent, Gem, ShieldCheck, Sparkle } from "lucide-react";
 const cards = [
   {
     icon: <Gem size={36} strokeWidth={1} />,
-    title: "Certified Products",
-    desc: "Lorem ipsum dolor sit amet consectetur. Eleifend ipsum aliquam ullamcorper justo augue.",
+    title: "Skilled Hands, Friendly Hearts",
+    desc: "Our stylists are trained, talented, and care deeply about your look",
   },
   {
     icon: <BadgePercent size={36} strokeWidth={1} />,
-    title: "Affordable Pricing",
-    desc: "Lorem ipsum dolor sit amet consectetur. Eleifend ipsum aliquam ullamcorper justo augue.",
+    title: "Beauty That’s Budget-Friendly ",
+    desc: "Get expert care and luxury styling without breaking the bank",
   },
   {
     icon: <ShieldCheck size={36} strokeWidth={1} />,
-    title: "Hygiene & Safety Standards",
-    desc: "Lorem ipsum dolor sit amet consectetur. Eleifend ipsum aliquam ullamcorper justo augue.",
+    title: "Salon Clean, Always Safe ",
+    desc: "We follow strict hygiene steps to ensure every visit is spotless",
   },
   {
     icon: <Sparkle size={36} strokeWidth={1} />,
-    title: "Trained Professionals",
-    desc: "Lorem ipsum dolor sit amet consectetur. Eleifend ipsum aliquam ullamcorper justo augue.",
+    title: "Only Trusted, Salon-Grade Products",
+    desc: "We use premium hair and skin products your beauty truly deserves.",
   },
 ];
 

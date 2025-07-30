@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './ServicesSection.scss';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import SalonBookAppointment from '../../Components/SalonBookAppointment/SalonBookAppointment';
 
 const ServicesSlider = ({ services }) => {
 
@@ -9,6 +10,7 @@ const ServicesSlider = ({ services }) => {
     const [showControls, setShowControls] = useState(false);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
+      const [showModal, setShowModal] = useState(false);
 
 
     useEffect(() => {
@@ -80,8 +82,16 @@ const ServicesSlider = ({ services }) => {
 
 
     // console.log('😒😒😒😒😒', containerRef)
+
+      const handleBookNowClick = () => {
+        setShowModal(true);
+    };
+    const closeModal = () => {
+        setShowModal(false);
+    };
     return (
         <div className={`slider-wrapper slider-card_is_${services.length}`}>
+            {showModal && <SalonBookAppointment onClose={closeModal} />}
 
             <div className={`services-slider card_is_${services.length}`} ref={containerRef}>
                 {services.map((service, index) => (
@@ -92,7 +102,7 @@ const ServicesSlider = ({ services }) => {
                             <hr className="divider" />
                             <div className="bottom-info">
                                 <span className="price">Rs.{service.price} <p>Onwards</p></span>
-                                <button className="book-btn ">
+                                <button className="book-btn " onClick={handleBookNowClick}>
                                     <span>
                                         Book Appointment
                                     </span>

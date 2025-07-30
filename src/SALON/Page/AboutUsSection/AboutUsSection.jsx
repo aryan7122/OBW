@@ -5,8 +5,17 @@ import faceCareImg from '../../../assets/SALON/hero/faceCareImg.webp';
 import productImg from '../../../assets/SALON/hero/productImg.webp';
 import str from '../../../assets/SALON/hero/str.png';
 import str3 from '../../../assets/SALON/hero/str3.png';
+import { useNavigate } from 'react-router-dom';
 
 const AboutUsSection = () => {
+      const navigate = useNavigate();
+
+    const HandleNavigation = (path) => {
+          window.scrollTo(0, 0);
+
+        navigate(`/${path}`);
+    };
+    
     return (
         <section className="about-us-section">
             <div className="about-us-container">
@@ -30,7 +39,7 @@ const AboutUsSection = () => {
                     <p className="about-us-description">
                         At OBW, we believe beauty is not just about your looks, it’s about how you feel inside. Our team is here to help you feel confident and refreshed with every visit. Whether it’s a new hairstyle, glowing skin, or a relaxing session, we make sure every service is done with care and comfort. Located in Bangalore, OBW has become a trusted place for people who want quality beauty care in a friendly, stylish space.
                     </p>
-                    <button className="about-us-cta-btn btn2">
+                    <button className="about-us-cta-btn btn2" onClick={()=> HandleNavigation('about')}>
                         <span>
                             LEARN MORE
                         </span>

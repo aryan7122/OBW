@@ -1,11 +1,17 @@
 import React from 'react';
 import './BannerSectionSalon.scss';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BannerSectionSalon = () => {
+        const navigate = useNavigate();
+
     const HandleNavigation = (path) => {
-        console.log(`Navigating to: ${path}`);
+          window.scrollTo(0, 0);
+
+        navigate(`/${path}`);
     };
+    
 
     return (
         <div className="BannerSectionSalon-section">
@@ -15,10 +21,12 @@ const BannerSectionSalon = () => {
                     Elevate Your Beauty<br />Experience At Our Salon!
                     <span className="title-clam-eraser"></span>
                 </h1>
-                <button className="view-all btn" onClick={() => HandleNavigation("/contact")}>
+                <button className="view--all btn" onClick={() => HandleNavigation("contact")}>
+                  
                     <span>
-                        Explore <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
+                       Explore
                     </span>
+                       <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                 </button>
             </div>
 
