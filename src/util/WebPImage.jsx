@@ -2,13 +2,13 @@ import { useState } from "react";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
 import placeholderImg from "../assets/TrendingTreatments/LazyLoadImage.png";
-
+import "./WebPImage.scss";
 const WebPImage = ({ src, alt, className }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
         <div className="image-wrapper" style={{ position: "relative" }}>
-            {!imageLoaded && (
+            {/* {!imageLoaded && (
                 <img
                     src={placeholderImg}
                     alt="Loading..."
@@ -23,7 +23,8 @@ const WebPImage = ({ src, alt, className }) => {
                         opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
                     }}
                 />
-            )}
+            )} */}
+            {!imageLoaded && <div className="shimmer-loader"></div>}
 
             <img
                 effect="blur"
