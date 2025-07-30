@@ -140,7 +140,7 @@ background: #F3FEFF;
 
       .card-description {
         color: #454545;
-        margin-top: 14px;
+        margin-top: 10px;
         font-size: 14px;
         font-weight: 300;
         line-height: 22px;
@@ -152,6 +152,7 @@ background: #F3FEFF;
         @media only screen and (max-width: 500px) {
           // font-size: 13px;
           // line-height: 19px;
+          margin-top: 0;
         }
       }
     }
