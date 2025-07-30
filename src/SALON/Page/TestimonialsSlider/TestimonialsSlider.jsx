@@ -211,7 +211,7 @@ export default function TestimonialsSlider() {
                                             </div>
 
                                             {item.link && (
-                                                <a href="#" className="check-on-google">
+                                                <a href="https://g.page/r/CcIzjcohVtWsEBM/review"  target='_blank' className="check-on-google">
                                                     {item.link}
                                                     <span className="g-icon"><ArrowRight size={16} /></span>
                                                 </a>

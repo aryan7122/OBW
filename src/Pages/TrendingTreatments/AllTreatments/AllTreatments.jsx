@@ -678,7 +678,7 @@ const AllTreatments = () => {
                         />
                     </div>
 
-                    <div className="filter-dropdown-wrapper">
+                    {/* <div className="filter-dropdown-wrapper">
                         <div className="filter-dropdown" ref={concernsRef}>
                             <button className="dropdown-button" onClick={() => setShowConcernsDropdown(!showConcernsDropdown)}>
                                 Concerns {selectedConcerns.length > 0 && `(${selectedConcerns.length})`}
@@ -708,8 +708,7 @@ const AllTreatments = () => {
                         <div className="filter-dropdown" ref={skinTypeRef}>
                             <button className="dropdown-button" onClick={() => setShowSkinTypeDropdown(!showSkinTypeDropdown)}>
                                 Skin type
-                                {/* {selectedSkinTypes.length > 0 && `(${selectedSkinTypes[0]})`} */}
-                                {/* Display selected skin type */}
+                               
                                 <span className="arrow">{showSkinTypeDropdown ?
                                     <ChevronUp strokeWidth={1.25} />
                                     :
@@ -737,7 +736,7 @@ const AllTreatments = () => {
                                 </div>
                             )}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="treatment-cards">

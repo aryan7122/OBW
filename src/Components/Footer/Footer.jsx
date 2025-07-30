@@ -48,16 +48,16 @@ const Footer = () => {
                             <div className="contact-info"> {/* Assuming a parent div */}
                                 <p className="phone-number">
                                     {/* Phone number ko 'tel:' ke saath 'a' tag me daalein */}
-                                    <a href="tel:+919764310135">
+                                    <a href="tel:9900029910">
                                         <Phone size={20} />
-                                        +91-9764310135
+                                        +91-9900029910
                                     </a>
                                 </p>
                                 <p className="email">
                                     {/* Email ko 'mailto:' ke saath 'a' tag me daalein */}
-                                    <a href="mailto:contact@obw.com">
+                                    <a href="mailto:info@obwclinic.com">
                                         <Mail size={20} />
-                                        contact@obw.com
+                                        info@obwclinic.com
                                     </a>
                                 </p>
                             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
                 <div className="footer-policy-links">
                     <a onClick={() => HandleNavigation("/privacy-policy")}>Privacy Policy</a>
                     <a onClick={() => HandleNavigation("/terms-of-service")}>Terms of Service</a>
-                    <a onClick={() => HandleNavigation("/cookies-settings")}>Cookies Settings</a>
+                    {/* <a onClick={() => HandleNavigation("/cookies-settings")}>Cookies Settings</a> */}
                 </div>
                 <div className="right_">
                     <div className="footer-copyright">

@@ -315,7 +315,7 @@ const ArticleDetail = () => {
 
         switch (platform) {
             case "linkedin":
-                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+                shareUrl = `https://www.inst.com/sharing/share-offsite/?url=${encodedUrl}`;
                 break;
             case "twitter":
                 // You can also add text to the tweet
@@ -466,7 +466,7 @@ const ArticleDetail = () => {
                     </div>
 
 
-                    <aside className="sidebar">
+                    {/* <aside className="sidebar">
                         <div className="newsletter">
                             <h3>{article.newsletter.heading}</h3>
                             <p>Subscribe to receive the latest blog posts to your inbox every week.</p>
@@ -486,7 +486,7 @@ const ArticleDetail = () => {
                                 <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
                             </h4>
                         </div>
-                    </aside>
+                    </aside> */}
                 </div>
             </div>
             <div className="article-wrapper">

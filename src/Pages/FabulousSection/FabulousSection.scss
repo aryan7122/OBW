@@ -240,12 +240,13 @@
 .media-container {
     position: relative;
     flex: 1;
-    min-width: 350px;
-    max-width: 550px; // Adjusted max-width
-    width: 100%;
+    min-width: 400px;
+    max-width: 470px; // Adjusted max-width
+    // width: 100%;
     border-radius: 20px; // Rounded corners
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
+    // border: 1px solid red !important;
+    // overflow: hidden;
+    // aspect-ratio: 16 / 9;
     cursor: pointer;
      @media (max-width: 450px){
       min-width: 100%;
