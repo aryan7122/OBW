@@ -1,9 +1,9 @@
 import { useState } from "react";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
-import placeholderImg from "../assets/babypng_loader.gif";
-// import placeholderImg from "../assets/LazyLoadImage.png";
-import "./WebPImage.scss";
+// import placeholderImg from "../assets/babypng_loader.gif";
+import placeholderImg from "../assets/LazyLoadImage.png";
+// import "./WebPImage.scss";
 const WebPImage = ({ src, alt, className }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -15,13 +15,13 @@ const WebPImage = ({ src, alt, className }) => {
                     alt="Loading..."
                     className="placeholder"
                     style={{
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%",
+                        // position: "absolute",
+                        // width: "100%",
+                        // height: "100%",
                         objectFit: "cover",
-                        zIndex: 1, // ✅ Ensuring it's above the real image initially
-                        transition: "opacity 0.3s ease-in-out",
-                        opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
+                        // zIndex: 1, // ✅ Ensuring it's above the real image initially
+                        // transition: "opacity 0.3s ease-in-out",
+                        // opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
                     }}
                 />
             )}
