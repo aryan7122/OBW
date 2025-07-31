@@ -204,8 +204,8 @@ function App() {
                     }
                   />
                   <Route path="/treatment" element={<AllTreatments />} />
-                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy  type='CLINIC' />} />
+                  <Route path="/terms-of-service" element={<TermsOfService  type='CLINIC' />} />
                 </Routes>
                 <Footer />
               </>
@@ -276,8 +276,8 @@ function App() {
 
                     }
                   />
-                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy type='SALON' />} />
+                  <Route path="/terms-of-service" element={<TermsOfService  type='SALON' />} />
                 </Routes>
                 <SalonFooter />
               </div>

@@ -7,7 +7,7 @@ import WebPImage from "../../util/WebPImage";
 // import { image } from "motion/react-client";
 import img1 from '../../assets/TrendingTreatments/Body Contouring (LipoLaser).jpg'
 import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.webp'
-import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
+import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.webp'
 import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
 import img5 from '../../assets/TrendingTreatments/chemical peelGlow peel.webp'
 import imght from '../../assets/TrendingTreatments/hair transplantation .webp'
@@ -43,12 +43,12 @@ const treatments = [
         // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Skin_Boosters-min_rcxqeq",
         image: img5,
     },
-    {
-        title: "Laser Hair reduction",
-        description: "Deeply hydrate and rejuvenate your skin with our premium skin boosters, enhancing elasticity, glow, and long-lasting hydration.   ",
-        // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Skin_Boosters-min_rcxqeq",
-        image: img4,
-    },
+    // {
+    //     title: "Laser Hair reduction",
+    //     description: "Deeply hydrate and rejuvenate your skin with our premium skin boosters, enhancing elasticity, glow, and long-lasting hydration.   ",
+    //     // image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Skin_Boosters-min_rcxqeq",
+    //     image: img4,
+    // },
     {
         title: "Lipolytic Injections   ",
         description: "Melt stubborn fat with our non-surgical lipolytic injections, sculpting and contouring problem areas for a slimmer, more defined look.   ",
