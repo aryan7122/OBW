@@ -5,7 +5,7 @@ const ImageWithBlur = ({ src, alt = '', className = '' }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`image-container ${className}`}>
+    <div className={`${loaded ? '' : 'image-container'}  ${className}`}>
       {!loaded && <div className="shimmer-loader" />}
       <img
         src={src}
