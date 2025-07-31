@@ -90,9 +90,9 @@ Step into our peaceful salon, where every visit feels like a break from the busy
                     <div className="salon-footer__contact">
                         <h4 className="salon-footer__title">Contact:</h4>
                         <div className="salon-footer__contact-details">
-                            <a href="tel:+919972011222"><Phone size={20} /> +91 99720 11222</a>
+                            <a href="tel:+919741143122"><Phone size={20} /> +91 9741143122</a>
                             {/* <span className="salon-footer__separator">,</span> */}
-                            <a href="mailto:contact@obwsalon.com"><Mail size={20} /> contact@obwsalon.com</a>
+                            <a href="mailto:cObwsalonmanager@gmail.com"><Mail size={20} /> Obwsalonmanager@gmail.com</a>
                         </div>
                     </div>
                 </div>

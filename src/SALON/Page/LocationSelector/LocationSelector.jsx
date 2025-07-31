@@ -10,6 +10,7 @@ import LocationImg32 from '../../../assets/SALON/hero/Location/Kanakapura2.jpg';
 import LocationImg4 from '../../../assets/SALON/hero/Location/Kodipalya Road.jpg';
 import LocationImg42 from '../../../assets/SALON/hero/Location/kodipalya2.jpg';
 import SalonBookAppointment from "../../Components/SalonBookAppointment/SalonBookAppointment";
+import WebPImage from "../../../util/WebPImage";
 
 const locations = [
     {
@@ -120,8 +121,8 @@ const LocationSelector = () => {
                                 <div className="location-image">
 
                                     <div className="imges_l">
-                                        <img src={active.image} alt={active.name} />
-                                        <img className="img2" src={active.image2} alt={active.name} />
+                                        <WebPImage src={active.image} alt={active.name} />
+                                        <WebPImage className="img2" src={active.image2} alt={active.name} />
                                     </div>
                                     <div className="location-info">
 

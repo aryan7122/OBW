@@ -5,6 +5,7 @@ import './SalonContactUs.scss';
 
 // Make sure this path is correct for your project structure
 import contactImage from '../../../assets/SALON/hero/contact-image.webp';
+import WebPImage from '../../../util/WebPImage';
 
 const SalonContactUs = () => {
     const [formData, setFormData] = useState({
@@ -108,7 +109,7 @@ const SalonContactUs = () => {
                 <div className="info-section">
                     <div className="image-wrapper">
                         <div className="image-bg-pattern"></div>
-                        <img src={contactImage} alt="Woman in a salon chair" />
+                        <WebPImage src={contactImage} alt="Woman in a salon chair" />
                     </div>
                     <div className="contact-details-box">
                         <div className="contact-detail-item">
@@ -118,7 +119,7 @@ const SalonContactUs = () => {
                             </span>
                             <div>
                                 <strong>Email</strong>
-                                <p>Office : contact@obw.salon.co</p>
+                                <p>Office : Obwsalonmanager@gmail.com</p>
                             </div>
                         </div>
                         <div className="contact-detail-item">
@@ -128,7 +129,7 @@ const SalonContactUs = () => {
                             </span>
                             <div>
                                 <strong>Phone</strong>
-                                <p>Office : +91-99720 11222</p>
+                                <p>Office : +91-9741143122</p>
                             </div>
                         </div>
                     </div>

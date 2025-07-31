@@ -6,6 +6,7 @@ import "./SalonFaq.scss";
 import faqImage1 from "../../../assets/SALON/hero/faq/faq-image-1.jpg";
 import faqImage2 from "../../../assets/SALON/hero/faq/faq-image-2.jpg";
 import str3 from "../../../assets/SALON/hero/str.png";
+import WebPImage from "../../../util/WebPImage";
 
 // Store FAQ data in an array for easy management
 const faqData = [
@@ -96,7 +97,7 @@ const SalonFaq = () => {
                 {/* Right Column: Sidebar */}
                 <aside className="salon-faq-sidebar">
                     <div className="image-stack">
-                        <img className="img_f_1" src={faqImage1} alt="Woman receiving a facial treatment" />
+                        <WebPImage className="img_f_1" src={faqImage1} alt="Woman receiving a facial treatment" />
                         <img className="img_f_2" src={faqImage2} alt="Skincare product application" />
                     </div>
                 </aside>

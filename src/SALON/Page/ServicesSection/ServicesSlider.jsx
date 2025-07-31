@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import './ServicesSection.scss';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SalonBookAppointment from '../../Components/SalonBookAppointment/SalonBookAppointment';
+import WebPImage from '../../../util/WebPImage';
 
 const ServicesSlider = ({ services,tab }) => {
 
@@ -97,7 +98,7 @@ const ServicesSlider = ({ services,tab }) => {
             <div className={`services-slider card_is_${services.length}`} ref={containerRef}>
                 {services.map((service, index) => (
                     <div className={`service-card `} key={index}>
-                        <img src={service.image} alt={service.title} className="service-img" />
+                        <WebPImage src={service.image} alt={service.title} className="service-img" />
                         <div className="service-blur">
                             <h4 className="service-title">{service.title}</h4>
                             <hr className="divider" />

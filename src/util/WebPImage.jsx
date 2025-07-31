@@ -7,7 +7,7 @@ const WebPImage = ({ src, alt, className }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
-        <div className="image-wrapper" style={{ position: "relative" }}>
+        < >
             {/* {!imageLoaded && (
                 <img
                     src={placeholderImg}
@@ -37,7 +37,7 @@ const WebPImage = ({ src, alt, className }) => {
                     style: { transitionDelay: "0.1s" },
                 }}
             />
-        </div>
+        </>
     );
 };
 

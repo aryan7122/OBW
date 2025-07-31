@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HeroGlowSection.scss';
 import img1 from '../../../assets/SALON/hero/HeroGlowSection/img (4).png'
 import img2 from '../../../assets/SALON/hero/HeroGlowSection/img (1).png'
 import img3 from '../../../assets/SALON/hero/HeroGlowSection/img (3).png'
 import img4 from '../../../assets/SALON/hero/HeroGlowSection/img (2).png'
 import { ArrowRight } from 'lucide-react';
+import WebPImage from '../../../util/WebPImage';
+import SalonBookAppointment from '../../Components/SalonBookAppointment/SalonBookAppointment';
 
 export default function HeroGlowSection() {
+      const [showModal, setShowModal] = useState(false);
+        const handleBookNowClick = () => {
+            setShowModal(true);
+        };
+        const closeModal = () => {
+            setShowModal(false);
+        };
     return (
         <section className="hero-glow-section">
             <div className="image image-top-left">
-                <img src={img1} alt="Lips" />
+                <WebPImage src={img1} alt="Lips" />
             </div>
             <div className="image image-bottom-left">
-                <img src={img2} alt="Mask Face" />
+                <WebPImage src={img2} alt="Mask Face" />
             </div>
             <div className="image image-top-right">
-                <img src={img3} alt="Model" />
+                <WebPImage src={img3} alt="Model" />
             </div>
             <div className="image image-bottom-right">
-                <img src={img4} alt="Facial Mask" />
+                <WebPImage src={img4} alt="Facial Mask" />
             </div>
 
             <div className="trusted-badge">
@@ -39,7 +48,7 @@ Let your beauty shine at OBW, where you can feel pampered and confident. Book yo
             </p>
 
             <div className="hero-buttons">
-                <button className="btn-primary btn">
+                <button className="btn-primary btn" onClick={handleBookNowClick}>
                     <span>
                         Book Appointment  <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </span>
@@ -48,6 +57,8 @@ Let your beauty shine at OBW, where you can feel pampered and confident. Book yo
                     Learn More <span>→</span>
                 </a>
             </div>
+                        {showModal && <SalonBookAppointment onClose={closeModal} />}
+
         </section>
     );
 }

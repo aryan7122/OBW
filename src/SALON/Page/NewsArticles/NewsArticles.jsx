@@ -4,6 +4,7 @@ import img1 from "../../../assets/SALON/hero/NewsArticles/img1.jpg";
 import img2 from "../../../assets/SALON/hero/NewsArticles/img2.jpg";
 import img3 from "../../../assets/SALON/hero/NewsArticles/img3.jpg";
 import { useNavigate } from "react-router-dom";
+import WebPImage from "../../../util/WebPImage";
 
 const articles = [
   {
@@ -39,7 +40,7 @@ export default function NewsArticles() {
             className={`news-card ${index === 0 ? "large" : "small"}`}
             key={index}
           >
-            <img src={article.image} alt={article.title} className="news-img" />
+            <WebPImage src={article.image} alt={article.title} className="news-img" />
             <div className="text">
               <h4>{article.title}</h4>
               {article.description && <p>{article.description}</p>}

@@ -6,6 +6,7 @@ import productImg from '../../../assets/SALON/hero/productImg.webp';
 import str from '../../../assets/SALON/hero/str.png';
 import str3 from '../../../assets/SALON/hero/str3.png';
 import { useNavigate } from 'react-router-dom';
+import WebPImage from '../../../util/WebPImage';
 
 const AboutUsSection = () => {
       const navigate = useNavigate();
@@ -25,13 +26,13 @@ const AboutUsSection = () => {
                     </div>
                     <img src={str3} className='str3' />
                     <div className="about-us-product-img">
-                        <img src={productImg} alt="Products" />
+                        <WebPImage  src={productImg} alt="Products" />
                     </div>
                 </div>
 
                 <div className="about-us-right">
                     <h4 className="about-us-subhead">
-                        ABOUT US <span className="about-us-spark"><img src={str} /></span>
+                        ABOUT US <span className="about-us-spark"><WebPImage src={str} /></span>
                     </h4>
                     <h2 className="about-us-headline">
                         We Care About How You Look and Feel

@@ -18,6 +18,7 @@ import service8 from '../../../assets/SALON/hero/TOP SERVICES/img (8).jpg';
 import service9 from '../../../assets/SALON/hero/TOP SERVICES/img (9).jpg';
 import service10 from '../../../assets/SALON/hero/TOP SERVICES/img (10).jpg';
 import service11 from '../../../assets/SALON/hero/TOP SERVICES/img (11).webp';
+import WebPImage from '../../../util/WebPImage';
 
 const services = [
     { id: 1, title: 'Refreshing clean up', image: service1 },
@@ -63,7 +64,7 @@ const TopServices = () => {
                 >
                     {services.map((service, index) => (
                         <SwiperSlide key={index} className="swiper-slide-custom">
-                            <img src={service.image} alt={service.title} />
+                            <WebPImage src={service.image} alt={service.title} />
                             {/* <div className="label">{service.title}</div> */}
                         </SwiperSlide>
                     ))}

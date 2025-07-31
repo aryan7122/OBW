@@ -14,6 +14,7 @@ import img2 from '../../../assets/SALON/hero/ClassicDeals/offer2.png';
 import img3 from '../../../assets/SALON/hero/ClassicDeals/offer3.png';
 import img4 from '../../../assets/SALON/hero/ClassicDeals/offer4.png';
 import img5 from '../../../assets/SALON/hero/ClassicDeals/offer5.png';
+import WebPImage from '../../../util/WebPImage';
 
 const offers = [
   {
@@ -109,7 +110,7 @@ const ClassicDealsOffer = () => {
                     Book Now <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                   </button>
                 </div>
-                <img src={offer.image} alt="deal" className="deal-img" />
+                <WebPImage src={offer.image} alt="deal" className="deal-img" />
               </div>
             </SwiperSlide>
           ))}
