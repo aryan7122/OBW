@@ -20,47 +20,47 @@ const testimonials = [
         image: googleLogo, // Use the imported google logo
         bgColor: "#FFF4DB", // Light yellow background for Google summary
     },
-    {
+     {
         type: "testimonial",
-        name: "Pavan Naik",
-        role: "2 days ago", // Matching the image
+        name: "Prajwal M J",
+        role: "a months ago", // Matching the image
         rating: 5.0,
-        text: "I had a wonderful head massage from Deepika. She was highly professional, gentle yet effective, and ensured a truly relaxing experience. The pressure was just right, and I left feeling completely refreshed and stress-free. I would highly recommend her services to anyone seeking a calming and rejuvenating session.",
+        text: "I recently visited Salon OBW, and I must say it was an exceptional experience from start to finish. The salon’s modern and chic aesthetics instantly set a relaxing tone, and the cleanliness was on point, making me feel comfortable throughout my visit. Suraj, who attended to me, did an outstanding job with my haircut and beard trim. His attention to detail and skill truly impressed me, and I left feeling completely satisfied. The staff was warm and welcoming, ensuring that my experience was nothing short of perfect. I highly recommend Salon OBW for anyone looking for top-notch grooming services!",
         initial: "P", // For placeholder if image is not there
-        bgColor: "#F4F1FF", // Light purple from the image
-        link: "Check on google", // Added a link text as in the first image
-    },
-    {
-        type: "testimonial",
-        name: "Hillery Moses",
-        role: "Three days ago", // Matching the image
-        rating: 5.0,
-        text: "I have had great experience with this salon. The staff has been amazingly good and gave my hair an exceptional look. I want my eye brows to be done by them again.",
-        initial: "H", // For placeholder if image is not there
         bgColor: "#FFF8CC", // Light yellow from the image
         link: "Check on google",
     },
     {
         type: "testimonial",
-        name: "Shrushthi Shinde",
-        role: "Student",
+        name: "deepu gowda",
+        role: "a months ago", // Matching the image
         rating: 5.0,
-        text: "Working at OBW Salon has greatly improved my career, enhancing my skills and enabling me to serve my clients better.",
-        initial: "S",
-        image:
-            "https://photosrush.net/wp-content/uploads/instagram-profile-picture-avatar_39.webp",
+        text: "Been visiting this place from past 1 year one of best saloon in south Bangalore. Thier services are great and also cost friendly. I have been taking services from Mr. Awiral, this guy has magic in his hands better than any specialist ☺️.",
+        initial: "C", // For placeholder if image is not there
+        bgColor: "#F4F1FF", // Light purple from the image
+        link: "Check on google", // Added a link text as in the first image
+    },
+   
+    {
+        type: "testimonial",
+        name: "Dhruvi Dolia",
+        role: "a week ago",
+        rating: 5.0,
+        text: "I’ve availed multiple services at this clinic,  from Glutathione IV treatments and full-body laser hair removal to regular salon services and I can confidently say this place is outstanding. The staff and doctors are extremely polite, professional, and attentive. Every experience I’ve had here has been smooth, comfortable and effective. Highly recommend this clinic for both medical and aesthetic treatments!",
+        initial: "D",
+        
         bgColor: "#F4F1FF",
         link: "Check on google",
     },
     {
         type: "testimonial",
-        name: "Ananya Roy",
-        role: "Junior Designer",
+        name: "Dinesh Suthar",
+        role: "3 weeks ago",
         rating: 5.0,
-        text: "I recently visited OBW Salon and was blown away by the atmosphere and the staff's professionalism. They really took the time to understand what I wanted and the results were fantastic!",
-        initial: "A",
-        image:
-            "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
+        text: "I had a fantastic experience getting my haircut with Nima! He  was incredibly professional, friendly, and really listened to what I wanted. The attention to detail was spot on — he took the time to shape everything perfectly and gave great styling tips too. I walked out feeling fresh and confident. Highly recommend Nima if you’re looking for someone who truly knows what they’re doing with hair!",
+        initial: "D",
+        // image:
+        //     "https://img.freepik.com/free-photo/beautiful-girl-stands-park_8353-5084.jpg?semt=ais_hybrid&w=740",
         bgColor: "#FFF8CC",
         link: "Check on google",
     },

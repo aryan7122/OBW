@@ -275,10 +275,20 @@
 				line-height: 1.5;
 				color: #333;
 				padding-bottom: 20px;
-				// height: 100px;
+				height: 150px;
 				width: 100%;
 				margin: 0 auto;
 				text-align: left;
+				overflow: auto;
+				scrollbar-width: none; /* Firefox */
+				-ms-overflow-style: none; /* IE and Edge */
+
+				&::-webkit-scrollbar {
+					display: none; /* Chrome, Safari */
+				}
+				@media only screen and (max-width: 400px) {
+					height: 120px;
+				}
 			}
 			.reviewG {
 				text-align: center;

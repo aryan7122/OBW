@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LocationSelector.scss";
 import { ArrowRight, ArrowLeft, Phone } from "lucide-react";
-import LocationImg1 from '../../../assets/SALON/hero/Location/Banashankari.webp';
+import LocationImg1 from '../../../assets/SALON/hero/Location/Banashankari (2).webp';
 import LocationImg12 from '../../../assets/SALON/hero/Location/banakshari .jpg';
 import LocationImg2 from '../../../assets/SALON/hero/Location/Rr nagar.jpg';
 import LocationImg22 from '../../../assets/SALON/hero/Location/Rr nagar2.jpg';
