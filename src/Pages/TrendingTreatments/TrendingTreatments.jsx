@@ -10,6 +10,10 @@ import img2 from '../../assets/TrendingTreatments/PRP-GFC for Hair.webp'
 import img3 from '../../assets/TrendingTreatments/Laser Hair reduction.jpg'
 import img4 from '../../assets/TrendingTreatments/chemical peelGlow peel.jpg'
 import img5 from '../../assets/TrendingTreatments/chemical peelGlow peel.webp'
+import imght from '../../assets/TrendingTreatments/hair transplantation .webp'
+import imgiv from '../../assets/TrendingTreatments/iv therpay .webp'
+import imgli from '../../assets/TrendingTreatments/LIPOLYTIC INJECTION DOUBLE CHIN.webp'
+import imgle from '../../assets/TrendingTreatments/freepik__candid-photography-with-natural-textures-and-highl__46534.webp'
 import hert from '../../assets/TrendingTreatments/hert.svg'
 import { useNavigate } from "react-router-dom";
 
@@ -48,12 +52,12 @@ const treatments = [
     {
         title: "Lipolytic Injections   ",
         description: "Melt stubborn fat with our non-surgical lipolytic injections, sculpting and contouring problem areas for a slimmer, more defined look.   ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Lipolytic_Injections-min_oqi1fs",
+        image:imgli,
     },
     {
         title: "IV Therapy for Skin, Hair & Body Care  ",
         description: "Boost your beauty from within with IV therapy, delivering essential vitamins and antioxidants for radiant skin, strong hair, and overall wellness.   ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/IV_Therapy_for_Skin_Hair_Body_Care-min_w5xd4u"
+        image:imgiv
     },
     {
         title: "Botulinum Toxin Injections ",
@@ -63,7 +67,7 @@ const treatments = [
     {
         title: " Hair Transplantation ",
         description: " Restore your confidence with advanced hair transplantation, offering natural-looking, long-lasting results for fuller, thicker hair.    ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Hair_Transplantation-min_hyvi4z"
+        image:imght,
     },
     {
         title: " Scar Revision or Reduction Treatments ",
@@ -73,7 +77,7 @@ const treatments = [
     {
         title: " Laser Resurfacing Treatments ",
         description: " Renew your skin with laser resurfacing, reducing wrinkles, pigmentation, and acne scars for a flawless, youthful complexion.  ",
-        image: "https://res.cloudinary.com/dvu9zrnsp/image/upload/f_auto,q_auto/v1/OBW_TRENING/Laser_Resurfacing_Treatments_2_-min_zlmx5q",
+        image: imgle,
     },
     {
         title: " HIFU (High-Intensity Focused Ultrasound) ",
