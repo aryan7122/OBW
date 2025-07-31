@@ -15,7 +15,8 @@ import { tabs } from "../../Page/ServicesSection/ServicesSection";
 const SalonBookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
     
 
-   const allTags = [...new Set(tabs)];
+//    const allTags = [...new Set(tabs)];
+const allTags = [...new Set(tabs), "Other"];
 
     
     const treatmentOptions = allTags.map(tag => ({ label: tag, value: tag }));

@@ -24,6 +24,9 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
             });
         });
     });
+    if (!allTags.includes("Other")) {
+    allTags.push("Other");
+}
 
     const treatmentOptions = allTags.map(tag => ({ label: tag, value: tag }));
 
