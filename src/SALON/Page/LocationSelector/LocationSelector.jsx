@@ -122,8 +122,8 @@ const LocationSelector = () => {
                                 <div className="location-image">
 
                                     <div className="imges_l">
-                                        <ImageWithBlur src={active.image} alt={active.name} />
-                                        <ImageWithBlur className="img2" src={active.image2} alt={active.name} />
+                                        <img src={active.image} alt={active.name} />
+                                        <img className="img2" src={active.image2} alt={active.name} />
                                     </div>
                                     <div className="location-info">
 
