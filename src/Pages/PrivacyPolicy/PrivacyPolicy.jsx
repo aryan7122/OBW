@@ -55,9 +55,9 @@ const PrivacyPolicy = () => {
                     <h2>Contact Us</h2>
                     <p>For questions or concerns about these terms, please contact us:</p>
                     <ul>
-                        <li>Phone: [Your Contact Number]</li>
-                        <li>Email: [Your Email Address]</li>
-                        <li>Address: [Your Clinic Address]</li>
+                        <li>Phone: 9741143122</li>
+                        <li>Email: Obwsalonmanager@gmail.com</li>
+                        <li>Address: Complete Address 2- Shop No 6 & 7, 1, Kodipalya Rd, opp. Vasthugreens Apartments, near Gudde Anjineya Temple, Kengeri, Bengaluru, Karnataka 560060</li>
                     </ul>
                 </section>
             </main>

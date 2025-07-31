@@ -108,7 +108,7 @@ Step into our peaceful salon, where every visit feels like a break from the busy
                 <div className="salon-footer__legal-links">
                     <a onClick={() => handleNavigation('/privacy-policy')}>Privacy Policy</a>
                     <a onClick={() => handleNavigation('/terms-of-service')}>Terms of Service</a>
-                    <a onClick={() => handleNavigation('/cookies-settings')}>Cookies Settings</a>
+                    {/* <a onClick={() => handleNavigation('/cookies-settings')}>Cookies Settings</a> */}
                 </div>
             </div>
         </footer>
