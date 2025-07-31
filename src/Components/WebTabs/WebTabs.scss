@@ -8,7 +8,7 @@
   height: 44px;
   width: 100%;
   background-color: #f0f0f0;
-  z-index: 9;
+  z-index: 99 !important;
   .left_tab,
   .Right_tab {
     width: 50%;
