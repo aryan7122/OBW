@@ -269,6 +269,17 @@
 				svg {
 					margin-left: 5px;
 				}
+				.Star_m{
+					@media only screen and (max-width: 530px) {
+						display: none;
+					}
+				}
+				.Star_d{
+					display: none;
+					@media only screen and (max-width: 530px) {
+						display: block;
+					}
+				}
 			}
 			.review {
 				font-size: 14px;

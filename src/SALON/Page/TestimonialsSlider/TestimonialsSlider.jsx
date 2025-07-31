@@ -15,33 +15,13 @@ const testimonials = [
         type: "googleSummary", // New type to distinguish Google slide
         name: "Google",
         role: "google",
-        rating: 4.9,
+        rating: 4.8,
+        totlereview:'(371)+',
         text: "Google review summary",
         image: googleLogo, // Use the imported google logo
         bgColor: "#FFF4DB", // Light yellow background for Google summary
     },
-     {
-        type: "testimonial",
-        name: "Prajwal M J",
-        role: "a months ago", // Matching the image
-        rating: 5.0,
-        text: "I recently visited Salon OBW, and I must say it was an exceptional experience from start to finish. The salon’s modern and chic aesthetics instantly set a relaxing tone, and the cleanliness was on point, making me feel comfortable throughout my visit. Suraj, who attended to me, did an outstanding job with my haircut and beard trim. His attention to detail and skill truly impressed me, and I left feeling completely satisfied. The staff was warm and welcoming, ensuring that my experience was nothing short of perfect. I highly recommend Salon OBW for anyone looking for top-notch grooming services!",
-        initial: "P", // For placeholder if image is not there
-        bgColor: "#FFF8CC", // Light yellow from the image
-        link: "Check on google",
-    },
-    {
-        type: "testimonial",
-        name: "deepu gowda",
-        role: "a months ago", // Matching the image
-        rating: 5.0,
-        text: "Been visiting this place from past 1 year one of best saloon in south Bangalore. Thier services are great and also cost friendly. I have been taking services from Mr. Awiral, this guy has magic in his hands better than any specialist ☺️.",
-        initial: "C", // For placeholder if image is not there
-        bgColor: "#F4F1FF", // Light purple from the image
-        link: "Check on google", // Added a link text as in the first image
-    },
-   
-    {
+      {
         type: "testimonial",
         name: "Dhruvi Dolia",
         role: "a week ago",
@@ -64,6 +44,58 @@ const testimonials = [
         bgColor: "#FFF8CC",
         link: "Check on google",
     },
+     {
+        type: "testimonial",
+        name: "Prajwal M J",
+        role: "a months ago", // Matching the image
+        rating: 5.0,
+        text: "I recently visited Salon OBW, and I must say it was an exceptional experience from start to finish. The salon’s modern and chic aesthetics instantly set a relaxing tone, and the cleanliness was on point, making me feel comfortable throughout my visit. Suraj, who attended to me, did an outstanding job with my haircut and beard trim. His attention to detail and skill truly impressed me, and I left feeling completely satisfied. The staff was warm and welcoming, ensuring that my experience was nothing short of perfect. I highly recommend Salon OBW for anyone looking for top-notch grooming services!",
+        initial: "P", // For placeholder if image is not there
+        bgColor: "#FFF8CC", // Light yellow from the image
+        link: "Check on google",
+    },
+    {
+        type: "testimonial",
+        name: "deepu gowda",
+        role: "a months ago", // Matching the image
+        rating: 5.0,
+        text: "Been visiting this place from past 1 year one of best saloon in south Bangalore. Thier services are great and also cost friendly. I have been taking services from Mr. Awiral, this guy has magic in his hands better than any specialist ☺️.",
+        initial: "C", // For placeholder if image is not there
+        bgColor: "#F4F1FF", // Light purple from the image
+        link: "Check on google", // Added a link text as in the first image
+    },
+    {
+        type: "testimonial",
+        name: "Go Green",
+        role: "a months ago", // Matching the image
+        rating: 5.0,
+        text: "Nima did an amazing job with my hair. He was spot on with figuring out my haor issues and provided guidance on how to fix it and also on daily hair maintenance tips. Would definitely come back here next time.",
+        initial: "G", // For placeholder if image is not there
+        bgColor: "#F4F1FF", // Light purple from the image
+        link: "Check on google", // Added a link text as in the first image
+    },
+    {
+        type: "testimonial",
+        name: "Anand R",
+        role: "a months ago", // Matching the image
+        rating: 5.0,
+        text: "Excellent service as always..   regular here for my haircut for last 2 years.. salon is trendy n classy yet fit our budgets. Stylist Suraj never fail to impress with his skills.    Good job guys.. Keep it up..",
+        initial: "A", // For placeholder if image is not there
+        bgColor: "#F4F1FF", // Light purple from the image
+        link: "Check on google", // Added a link text as in the first image
+    },
+    {
+        type: "testimonial",
+        name: "Keerthisri V",
+        role: "a year ago", // Matching the image
+        rating: 5.0,
+        text: "I have been going to this salon for almost 4  months now. Service is really good. It's very customer centric. Have got almost all services like facial, threading, manicure, pedicure, waxing, nail art and everything is done very professionally. Recently got the Hydra facial, with the new machine technique, it gave a instant glow on my face and have reduced my facial marks & pores lightly. The face is hydrated very well. They use Japanese products for this facial. This facial is affordable here compared to many salons where  I see they charge extremely too much. They have advised 3 sessions to see maximum results.",
+        initial: "K", // For placeholder if image is not there
+        bgColor: "#F4F1FF", // Light purple from the image
+        link: "Check on google", // Added a link text as in the first image
+    },
+   
+  
 ];
 
 export default function TestimonialsSlider() {
@@ -151,6 +183,7 @@ export default function TestimonialsSlider() {
                                             ))}
                                         </div>
                                         <h4>  {item.rating.toFixed(1)} stars</h4>
+                                        {/* <p> {item.totlereview}</p> */}
                                         {/* <div className="meta google-meta">
                     <div>
                       <h4>{item.name}</h4>
@@ -200,7 +233,10 @@ export default function TestimonialsSlider() {
                                     <div className="testimonial-content">
                                         <div className="rating">
                                             {item.rating.toFixed(1)}
-                                            <Star size={20} fill="#FEB909" strokeWidth={0} />
+                                            <Star className="Star_d" size={20} fill="#FEB909" strokeWidth={0} />
+                                             {[...Array(5)].map((_, i) => (
+                                                <Star className="Star_m" key={i} size={20} fill="#FEB909" strokeWidth={0} />
+                                            ))}
 
                                         </div>
                                         <p className="review">{item.text}</p>
