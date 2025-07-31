@@ -34,6 +34,7 @@ $brand-color: #3032b6; // A nice purple for accents
   @media only screen and (max-width: 400px) {
     padding: 30px 10px;
   }
+  font-family: 'inter';
 }
 
 /* --- Header --- */
@@ -87,7 +88,7 @@ $brand-color: #3032b6; // A nice purple for accents
     font-style: SemiBold;
     font-size: clamp(20px, 5vw, 36px);
     line-height: 46.08px;
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
     vertical-align: middle;
     
     margin: 0;
@@ -222,7 +223,7 @@ $brand-color: #3032b6; // A nice purple for accents
     font-style: Medium;
     font-size: 36px;
     line-height: 46.08px;
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
     color: #472525;
     margin-bottom: 5px;
   }
