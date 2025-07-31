@@ -8,7 +8,7 @@ const WebPImage = ({ src, alt, className }) => {
 
     return (
         < >
-            {/* {!imageLoaded && (
+            {!imageLoaded && (
                 <img
                     src={placeholderImg}
                     alt="Loading..."
@@ -23,8 +23,8 @@ const WebPImage = ({ src, alt, className }) => {
                         opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
                     }}
                 />
-            )} */}
-            {!imageLoaded && <div className="shimmer-loader"></div>}
+            )}
+            {/* {imageLoaded && <div className="shimmer-loader"></div>} */}
 
             <img
                 effect="blur"
