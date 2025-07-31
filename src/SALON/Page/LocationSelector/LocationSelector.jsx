@@ -11,6 +11,7 @@ import LocationImg4 from '../../../assets/SALON/hero/Location/Kodipalya Road.web
 import LocationImg42 from '../../../assets/SALON/hero/Location/kodipalya2.webp';
 import SalonBookAppointment from "../../Components/SalonBookAppointment/SalonBookAppointment";
 import WebPImage from "../../../util/WebPImage";
+import ImageWithBlur from "../../../util/ImageWithBlur";
 
 const locations = [
     {
@@ -121,8 +122,8 @@ const LocationSelector = () => {
                                 <div className="location-image">
 
                                     <div className="imges_l">
-                                        <WebPImage src={active.image} alt={active.name} />
-                                        <WebPImage className="img2" src={active.image2} alt={active.name} />
+                                        <ImageWithBlur src={active.image} alt={active.name} />
+                                        <ImageWithBlur className="img2" src={active.image2} alt={active.name} />
                                     </div>
                                     <div className="location-info">
 
