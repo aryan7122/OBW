@@ -2,34 +2,36 @@ import { useState } from "react";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
 // import placeholderImg from "../assets/babypng_loader.gif";
-import placeholderImg from "../assets/LazyLoadImage.png";
+// import placeholderImg from "../assets/LazyLoadImage.png";
+import placeholderImg from "../assets/LazyLoadImage_11zon.png";
 // import "./WebPImage.scss";
 const WebPImage = ({ src, alt, className }) => {
     const [imageLoaded, setImageLoaded] = useState(false);
 
     return (
         < >
-            {!imageLoaded && (
+            {/* {!imageLoaded && (
                 <img
                     src={placeholderImg}
                     alt="Loading..."
-                    className="placeholder"
+                    // className="placeholder"
                     style={{
                         // position: "absolute",
                         // width: "100%",
                         // height: "100%",
                         objectFit: "cover",
-                        // zIndex: 1, // ✅ Ensuring it's above the real image initially
-                        // transition: "opacity 0.3s ease-in-out",
-                        // opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
+                        objectPosition: "center",
+                        zIndex: 1, // ✅ Ensuring it's above the real image initially
+                        transition: "opacity 0.3s ease-in-out",
+                        opacity: imageLoaded ? 0 : 1, // ✅ Hide after image loads
                     }}
                 />
-            )}
+            )} */}
             {/* {imageLoaded && <div className="shimmer-loader"></div>} */}
 
             <img
                 effect="blur"
-                src={src}
+                src={!imageLoaded ? placeholderImg : src}
                 alt={alt || ""}
                 className={className || ""}
                 loading="lazy"

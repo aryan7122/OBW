@@ -1,42 +1,42 @@
-.image-wrapper {
-  position: relative;
-  // width: 100%;
-  // // height: 100%;
-  // overflow: hidden;
-  // border-radius: 12px;
-  // background-color: #e0e0e0;
-}
+// .image-wrapper {
+//   position: relative;
+//   // width: 100%;
+//   // // height: 100%;
+//   // overflow: hidden;
+//   // border-radius: 12px;
+//   // background-color: #e0e0e0;
+// }
 
-.shimmer-loader {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
-  background-size: 200% 100%;
-  animation: shimmer 1.2s infinite;
-  z-index: 1;
-  border-radius: 12px;
-}
+// .shimmer-loader {
+//   position: absolute;
+//   inset: 0;
+//   background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+//   background-size: 200% 100%;
+//   animation: shimmer 1.2s infinite;
+//   z-index: 1;
+//   border-radius: 12px;
+// }
 
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
+// @keyframes shimmer {
+//   0% {
+//     background-position: -200% 0;
+//   }
+//   100% {
+//     background-position: 200% 0;
+//   }
+// }
 
-.actual-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-  position: relative;
-  z-index: 2;
-  display: block;
-}
+// .actual-image {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   opacity: 0;
+//   transition: opacity 0.6s ease;
+//   position: relative;
+//   z-index: 2;
+//   display: block;
+// }
 
-.actual-image.loaded {
-  opacity: 1;
-}
+// .actual-image.loaded {
+//   opacity: 1;
+// }
