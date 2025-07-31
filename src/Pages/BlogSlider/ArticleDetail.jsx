@@ -315,7 +315,7 @@ const ArticleDetail = () => {
 
         switch (platform) {
             case "linkedin":
-                shareUrl = `https://www.inst.com/sharing/share-offsite/?url=${encodedUrl}`;
+                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
                 break;
             case "twitter":
                 // You can also add text to the tweet
