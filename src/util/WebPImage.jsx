@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 // import "react-lazy-load-image-component/src/effects/blur.css";
-import placeholderImg from "../assets/babypng_loader.png";
+import placeholderImg from "../assets/babypng_loader.gif";
 // import placeholderImg from "../assets/LazyLoadImage.png";
 import "./WebPImage.scss";
 const WebPImage = ({ src, alt, className }) => {
