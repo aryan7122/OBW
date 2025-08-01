@@ -285,6 +285,10 @@
       .right_ {
         // gap: 30px;
         justify-content: space-between;
+        @media only screen and (max-width: 350px) {
+          flex-direction: column-reverse;
+          gap: 10px;
+        }
       }
     }
 
@@ -310,7 +314,7 @@
       }
 
       @media only screen and (max-width: 360px) {
-        flex-direction: column-reverse; // Stack policy links on very small screens
+        // flex-direction: column-reverse; // Stack policy links on very small screens
         gap: 8px;
       }
 

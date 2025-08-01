@@ -172,8 +172,6 @@ function Navbar() {
                     <li onClick={() => CloseMenu()}><Link to="/about" className={isActive('/about')}>ABOUT US</Link></li>
                     <li onClick={() => CloseMenu()}><Link to="/blogs" className={isActive('/blogs') || isActive('/blog-detail')}>BLOGS</Link></li>
                     <li onClick={() => CloseMenu()}><Link to="/contact" className={isActive('/contact')}>CONTACT</Link></li>
-
-
                 </ul>
             }
         </header >
