@@ -1,10 +1,10 @@
 .fabulous-section {
+  height: fit-content;
   // padding: clamp(2rem, 6vw, 6rem);
   padding: 40px 120px;
    background-color: #f4fdff !important;
-
-  @media only screen and (max-width: 1400px) {
-    padding: 40px 100px;
+   @media only screen and (max-width: 1400px) {
+     padding: 40px 100px;
   }
   
   @media only screen and (max-width: 1400px) {
@@ -39,14 +39,20 @@
     padding: 26px;
     border-radius: 16px;
     border-radius: 18px;
-    gap: clamp(2rem, 4vw, 4rem);
-    flex-wrap: wrap;
+    gap: clamp(1rem, 4vw, 4rem);
+    // flex-wrap: wrap;
 
     @media (max-width: 1024px) {
       flex-direction: column;
       text-align: center;
+      justify-content: center;
       padding: clamp(1.5rem, 6vw, 3rem);
+      height: 1000px;
+      gap: 0px !important;
     }
+        @media (max-width: 800px) {
+          // height: 100%;
+        }
       @media (max-width: 450px){
         padding: 0px;
         background: transparent;
@@ -60,6 +66,14 @@
       height: 458px;
       border-radius: 8px;
       overflow: hidden;
+         @media (max-width: 800px){
+           max-width: 300px !important;
+          max-height: 400px !important;
+         }
+         @media (max-width: 450px){
+           max-width: 250px !important;
+          max-height: 390px !important;
+         }
       @media (max-width: 640px){
         width: 100%;
         height: fit-content;
@@ -174,7 +188,8 @@
           font-weight: 500;
           color: #00575D;
           display: flex;
-          align-items: center;
+          align-items: left;
+          text-align: left;
           gap: 1rem;
           width: 100%;
           border-bottom: 1px solid #e8e8e8;

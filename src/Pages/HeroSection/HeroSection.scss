@@ -8,6 +8,9 @@
   background-size: cover;
   background-blend-mode: multiply;
   padding: 10px;
+  @media only screen and (max-width: 400px) {
+    padding: 0;
+  }
   .hero_bg {
     background-size: cover;
     background-repeat: no-repeat;
@@ -22,6 +25,12 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 60px;
+    @media only screen and (max-width: 600px) {
+            border-radius: 40px;
+          }
+    @media only screen and (max-width: 400px) {
+            border-radius: 0px;
+          }
     &::after {
       content: "";
       position: absolute;
@@ -38,6 +47,14 @@
       );
 
       z-index: 0;
+        @media only screen and (max-width: 600px) {
+             border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+          }
+           @media only screen and (max-width: 400px) {
+             border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+          }
     }
     &::before {
       content: "";
@@ -58,6 +75,14 @@
       mask-image: linear-gradient(to top, black 25%, transparent 100%);
       -webkit-mask-image: linear-gradient(to top, black 25%, transparent 100%);
       z-index: 1;
+        @media only screen and (max-width: 600px) {
+             border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+          }
+        @media only screen and (max-width: 400px) {
+             border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+          }
     }
     @media only screen and (max-width: 1100px) {
       background-position: 40% 0;
