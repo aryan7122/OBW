@@ -3,23 +3,34 @@ import React, { createContext, useState, useEffect } from 'react';
 export const TabContext = createContext();
 
 export const TabProvider = ({ children }) => {
-    const [pageTab, setPageTab] = useState('CLINIC');
+  const [pageTab, setPageTab] = useState('CLINIC');
 
-    useEffect(() => {
-        const savedTab = localStorage.getItem('activeTab');
-        if (savedTab) {
-            setPageTab(savedTab);
-        }
-    }, []);
+  useEffect(() => {
+    const hostname = window.location.hostname;
 
-    const changeTab = (tab) => {
-        setPageTab(tab);
-        localStorage.setItem('activeTab', tab);
-    };
+    if (hostname.includes('obwsalon.com')) {
+      setPageTab('SALON');
+    } else if (hostname.includes('obwclinic.com')) {
+      setPageTab('CLINIC');
+    } else {
+      // localhost ya unknown domain ke liye saved tab ya default
+      const savedTab = localStorage.getItem('activeTab');
+      if (savedTab) {
+        setPageTab(savedTab);
+      } else {
+        setPageTab('CLINIC'); // default
+      }
+    }
+  }, []);
 
-    return (
-        <TabContext.Provider value={{ pageTab, changeTab }}>
-            {children}
-        </TabContext.Provider>
-    );
+  const changeTab = (tab) => {
+    setPageTab(tab);
+    localStorage.setItem('activeTab', tab);
+  };
+
+  return (
+    <TabContext.Provider value={{ pageTab, changeTab }}>
+      {children}
+    </TabContext.Provider>
+  );
 };
