@@ -69,186 +69,186 @@ export const tabs = [
 const services = [
     {
         title: "Men's Hair cut",
-        price: '1200',
+        price: '400',
         image: mensHairCut,
         category: 'Styling'
     },
     {
         title: 'Shave',
-        price: '1350',
+        price: '200',
         image: shave,
         category: 'Styling'
     },
     {
         title: 'Blowdry',
-        price: '1500',
+        price: '500',
         image: blowdry,
         category: 'Styling'
     },
     {
         title: "Women's Hair cut",
-        price: '1600',
+        price: '400',
         image: womensHairCut,
         category: 'Styling'
     },
     {
         title: 'Ironing without wash',
-        price: '1750',
+        price: '1000',
         image: ironing,
         category: 'Styling'
     },
     {
         title: "Women's Blowdry",
-        price: '1900',
+        price: '500',
         image: womensBlowdry,
         category: 'Styling'
     },
     {
         title: 'Tonging without wash',
-        price: '2000',
+        price: '1300',
         image: tonging,
         category: 'Styling'
     },
     // 
     {
         title: 'Manicure',
-        price: '1200',
+        price: '150',
         image: Manicure,
         category: 'Manicure'
     },
     // 
     {
         title: `Men's Coloring`,
-        price: '1200',
+        price: '600',
         image: menColoring,
         category: 'Coloring'
     },
     {
         title: `Women's coloring`,
-        price: '1200',
+        price: '550',
         image: womenColoring,
         category: 'Coloring'
     },
     // Hair Treatment
     {
         title: `Hair fiber treatment`,
-        price: '1200',
+        price: '700',
         image: Hairfibertreatment,
         category: 'Hair Treatment'
     },
     {
         title: `Smoothening / Rebounding`,
-        price: '1200',
+        price: '5500',
         image: SmootheningRebounding,
         category: 'Hair Treatment'
     },
     {
         title: `Botox treatment`,
-        price: '1200',
+        price: '6500',
         image: Botoxtreatment,
         category: 'Hair Treatment'
     },
     // 
     {
         title: `Men's re-born treatment`,
-        price: '1200',
+        price: '1300',
         image: Menborntreatment,
         category: 'Bonacure spa'
     },
     {
         title: `Women's re-born treatment`,
-        price: '1350',
+        price: '2000',
         image: Menborentreatment,
         category: 'Bonacure spa'
     },
     {
         title: `Men's essential treatment`,
-        price: '1500',
+        price: '1000',
         image: Menessentialtreatment,
         category: 'Bonacure spa'
     },
     {
         title: `Women's essential treatment`,
-        price: '1500',
+        price: '1000',
         image: Womenessentialtreatment,
         category: 'Bonacure spa'
     },
     // 
     {
         title: `Pedicure`,
-        price: '1200',
+        price: '150',
         image: Pedicure,
         category: 'Pedicure'
     },
     // 
     {
         title: `Nail Extension`,
-        price: '1200',
+        price: '50',
         image: NailExtension,
         category: 'Nail Extension'
     },
     // Waxing
     {
         title: `Premium roll on`,
-        price: '1200',
+        price: '550',
         image: Premiumrollon,
         category: 'Waxing'
     },
     {
         title: `Brazilian stripples`,
-        price: '1350',
+        price: '110',
         image: Brazilianstripples,
         category: 'Waxing'
     },
     {
         title: `Rica regular`,
-        price: '1350',
+        price: '200',
         image: Ricaregular,
         category: 'Waxing'
     },
     // 
     {
         title: `Detan & Bleach`,
-        price: '1200',
+        price: '350',
         image: DetanBleach,
         category: 'Detan & Bleach'
     },
     // Threading
     {
         title: `Threading`,
-        price: '1200',
+        price: '30',
         image: Threading,
         category: 'Threading'
     },
     // Facial’s
     {
         title: `Refreshing clean up`,
-        price: '1200',
+        price: '1000',
         image: Refreshingcleanup,
         category: 'Facial’s'
     },
     {
         title: `Premium facial`,
-        price: '1350',
+        price: '2500',
         image: Premiumfacial,
         category: 'Facial’s'
     },
     {
         title: `Gensyl & dermasyl hydra facial `,
-        price: '1500',
+        price: '4100',
         image: Gensyldermasylhydrafacial,
         category: 'Facial’s'
     },
     {
         title: `Aminu signature treatment `,
-        price: '1500',
+        price: '5900',
         image: Aminusignaturetreatment,
         category: 'Facial’s'
     },
     // Reflexology
     {
         title: `Reflexology `,
-        price: '1200',
+        price: '250',
         image: Reflexology,
         category: 'Reflexology'
     },

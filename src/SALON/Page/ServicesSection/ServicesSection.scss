@@ -63,7 +63,7 @@
     // flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
     border: 1px solid #1b1b1b1a;
     padding: 5px;
@@ -250,7 +250,7 @@
 .slider-wrapper {
   position: relative;
   width: 100%;
-  margin-top: 3rem;
+  // margin-top: 40px;
   padding-left: 20px;
   .services-slider {
     display: flex;
@@ -258,7 +258,7 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     gap: 1.5rem;
-    padding: 1rem 0;
+    padding: 30px 0;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -450,9 +450,9 @@
     }
   }
   .card_is_1 {
-    padding: 40px 120px;
+    padding: 30px 120px;
     @media only screen and (max-width: 1400px) {
-      padding: 40px 100px;
+      padding: 30px 100px;
     }
     @media only screen and (max-width: 1300px) {
       padding: 30px 80px;
@@ -483,10 +483,10 @@
    
   }
   .card_is_2 {
-    padding: 40px 120px;
+    padding: 30px 120px;
 
     @media only screen and (max-width: 1400px) {
-      padding: 40px 100px;
+      padding: 30px 100px;
     }
     @media only screen and (max-width: 1300px) {
       padding: 30px 80px;
@@ -528,10 +528,10 @@
     }
   }
   .card_is_3 {
-      padding: 40px 120px;
+      padding: 30px 120px;
 
       @media only screen and (max-width: 1400px) {
-        padding: 40px 100px;
+        padding: 30px 100px;
       }
       @media only screen and (max-width: 1300px) {
         padding: 30px 80px;
