@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ContactForm.scss";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -12,8 +12,13 @@ import emailjs from "@emailjs/browser";
 
 // const img = "https://res.cloudinary.com/dkxfvxdca/image/upload/f_auto,q_auto/v1/Clinical%20Concerns/Contact/es04fxmgloqufdmxlpnt"
 import img from '../../../assets/about/ContactForm.webp'
+import { useDispatch, useSelector } from "react-redux";
+import { clinicContactUs } from "../../../features/clinic/clinicContactSlice";
 
 const ContactForm = () => {
+    const dispatch = useDispatch();
+    const { loading, data, error } = useSelector(state => state.clinicContact);
+
     const [phone, setPhone] = useState("");
     const [selectedDate, setSelectedDate] = useState(null);
     const [formData, setFormData] = useState({
@@ -25,74 +30,73 @@ const ContactForm = () => {
         location: "",
     });
 
+    
+
+
+
+
     // Handle Input Change
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     // Handle Form Submission
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        console.log("📩 Form Data Submitted:", formData);
-        console.log("📞 Phone:", phone);
-        console.log("📅 Selected Date:", selectedDate);
-
-        // Validation
         if (!formData.name || !phone) {
-            toast.error("🙏 Please fill all the fields!"), {
-                // duration: 5000,
-            };
+            toast.error("🙏 Please fill all the fields!");
             return;
         }
 
-        // Success Message
-        toast.success("Form submitted successfully! 🎉");
+        const payload = {
+            full_name: formData.name,
+            email: formData.email,
+            phone_number: formData.phone,
+            our_location: formData.location,
+            message: formData.message,
+        };
 
-
-
-
-        // EmailJS se email send karna
-        // EmailJS se email send karna
         const templateParams = {
-            to_email: "obwellness1@gmail.com", // Jis email pe bhejna hai
+            to_email: "obwellness1@gmail.com",
             name: formData.name,
             MoNumber: phone,
             email: formData.email,
             date: selectedDate ? selectedDate.toLocaleDateString("en-GB") : "",
             location: formData.location,
-            // treatment: "General Consultation", // Agar treatment select karwana ho toh alag se field add karo
             message: formData.message,
         };
 
-
-        emailjs
-            .send(
-                "service_zwhrgv1", // Replace with your EmailJS service ID
-                "template_np3exoh", // Replace with your EmailJS template ID
-                templateParams,
-                "dnG0LC_cuxIZMOgLu" // Replace with your EmailJS Public Key
-            )
-            .then(
-                (response) => {
-                    console.log("SUCCESS!", response.status, response.text);
-                    toast.success("Appointment booked successfully! ✅");
-                },
-                (err) => {
-                    console.log("FAILED...", err);
-                    toast.error("Failed to send email! ❌");
+        try {
+            await toast.promise(
+                Promise.all([
+                    dispatch(clinicContactUs(payload)).unwrap(),
+                    emailjs.send(
+                        "service_zwhrgv1",
+                        "template_np3exoh",
+                        templateParams,
+                        "dnG0LC_cuxIZMOgLu"
+                    ),
+                ]),
+                {
+                    loading: "📤 Sending request...",
+                    success: " Sended successfully!",
+                    error: "Failed to send request.",
                 }
             );
 
-        // Reset Form
-        setFormData({
-            name: "",
-            email: "",
-            message: "",
-            location: "",
-        });
-        setPhone("");
-        setSelectedDate(null);
+            // Reset form
+            setFormData({
+                name: "",
+                email: "",
+                message: "",
+                location: "",
+            });
+            setPhone("");
+            setSelectedDate(null);
+        } catch (err) {
+            console.error("Error:", err);
+        }
     };
 
     return (
@@ -108,7 +112,7 @@ const ContactForm = () => {
                             {/* Please feel free to get in touch at any time. <br /> */}
                             <span> You can reach us anytime via <a href="mailto:info@obwclinic.com">info@obwclinic.com</a> </span>
                         </p>
-                   </div>
+                    </div>
                     <form onSubmit={handleSubmit} className="form_card">
                         <div className="form-group">
                             <label>Full Name</label>
@@ -154,13 +158,13 @@ const ContactForm = () => {
                                 {["Banashankari", "Kanakapura Main Road", "Rajarajeshwari Nagar", "Kodipalya"].map((loc) => (
                                     <label key={loc}>
                                         <input
-                                        className="radio1"
+                                            className="radio1"
                                             type="radio"
                                             name="location"
                                             value={loc}
                                             checked={formData.location === loc}
                                             onChange={handleChange}
-                                            style={{width:'17px',padding:'0',height:'17px'}}
+                                            style={{ width: '17px', padding: '0', height: '17px' }}
                                         /> {loc}
                                     </label>
                                 ))}
@@ -174,9 +178,9 @@ const ContactForm = () => {
 
                         <button type="submit" className="submit-btn btn">
                             <span>
-                                
-                           Submit
-                        </span>
+
+                                Submit
+                            </span>
                             {/* <ArrowRight className="arrow-icon" size={16} strokeWidth={2} /> */}
                         </button>
                     </form>

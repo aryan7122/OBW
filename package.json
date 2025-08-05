@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@reduxjs/toolkit": "^2.8.2",
+    "axios": "^1.11.0",
     "firebase": "^11.3.1",
     "lucide-react": "^0.474.0",
     "motion": "^12.4.2",
@@ -22,6 +24,7 @@
     "react-lazy-load-image-component": "^1.6.3",
     "react-phone-input-2": "^2.15.1",
     "react-photo-view": "^1.2.7",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
     "react-select": "^5.10.1",
     "react-spinners": "^0.15.0",

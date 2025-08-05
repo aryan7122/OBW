@@ -8,17 +8,22 @@ import emailjs from "@emailjs/browser";
 import Select from "react-select";
 import { clinicalData } from "../../../Pages/ClinicalConcerns/ClinicalConcerns";
 import { tabs } from "../../Page/ServicesSection/ServicesSection";
+import { useDispatch, useSelector } from "react-redux";
+import { bookSalonAppointment } from "../../../features/salon/salonAppointmentSlice";
 
 
 
-  
+
 const SalonBookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
-    
 
-//    const allTags = [...new Set(tabs)];
-const allTags = [...new Set(tabs), "Other"];
+    const dispatch = useDispatch();
+    const { loading, data, error } = useSelector(state => state.salonAppointment);
 
-    
+
+    //    const allTags = [...new Set(tabs)];
+    const allTags = [...new Set(tabs), "Other"];
+
+
     const treatmentOptions = allTags.map(tag => ({ label: tag, value: tag }));
 
 
@@ -31,29 +36,57 @@ const allTags = [...new Set(tabs), "Other"];
         treatment: preSelectedTreatment,
         message: "",
     });
-     const [errors, setErrors] = useState({
-            name: false,
-            MoNumber: false,
-        });
+    const [errors, setErrors] = useState({
+        name: false,
+        MoNumber: false,
+    });
+    function formatDateForBackend(inputDateTime) {
+        if (!inputDateTime) return "";
 
-   const handleChange = (e) => {
-    const { name, value } = e.target;
+        const date = new Date(inputDateTime);
 
-    setFormData({ ...formData, [name]: value });
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0"); // Month starts at 0
+        const year = date.getFullYear();
 
-    // Reset error on typing
-    if (value.trim() !== "") {
-        setErrors((prev) => ({ ...prev, [name]: false }));
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+
+        return `${day}-${month}-${year} ${hours}:${minutes}:00`;
     }
+    const formattedDate = formatDateForBackend(formData.date);
+
+    const payload = {
+        name: formData.name,
+        contact_number: formData.MoNumber,
+        email: formData.email,
+        date_time: formattedDate,
+        location: formData.location,
+        service: formData.treatment,
+        message: formData.message,
+    };
+    console.log('payload', payload)
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData({ ...formData, [name]: value });
+
+        // Reset error on typing
+        if (value.trim() !== "") {
+            setErrors((prev) => ({ ...prev, [name]: false }));
+        }
 
 
     };
 
-    const handleSubmit = (e) => {
+
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const { name, MoNumber, email, date, location, treatment, message } = formData;
-  const newErrors = {
+        const newErrors = {
             name: !name.trim(),
             MoNumber: !MoNumber.trim(),
         };
@@ -65,49 +98,41 @@ const allTags = [...new Set(tabs), "Other"];
             return;
         }
 
-        // Success Message
-        toast.success("Appointment booked successfully!");
 
-        console.log("Form Submitted:", formData);
-        // EmailJS se email send karna
-        const templateParams = {
-            to_email: "obwellness1@gmail.com", // Jis email pe bhejna hai
-            name,
-            MoNumber,
-            email,
-            date,
-            location,
-            treatment,
-            message,
-        };
+        try {
+            await toast.promise(
+                Promise.all([
+                    dispatch(bookSalonAppointment(payload)).unwrap(),
 
-        emailjs
-            .send(
-                "service_zwhrgv1", // Replace with your EmailJS service ID
-                "template_go8s6bk", // Replace with your EmailJS template ID
-                templateParams,
-                "dnG0LC_cuxIZMOgLu" // Replace with your EmailJS Public Key
-            )
-            .then(
-                (response) => {
-                    console.log("SUCCESS!", response.status, response.text);
-                    toast.success("Appointment booked successfully! ✅");
-                    setTimeout(() => {
-                        onClose();
-                    }, 1500);
-                },
-                (err) => {
-                    console.log("FAILED...", err);
-                    toast.error("Failed to send email! ❌");
+                ]),
+                {
+                    loading: "📤 Sending request...",
+                    success: " Sended successfully!",
+                    error: "Failed to send request.",
                 }
             );
 
-        // Modal Close after 1.5s
-        setTimeout(() => {
-            onClose();
-        }, 1500);
+            // Reset form
+            setFormData({
+                name: "",
+                MoNumber: "",
+                email: "",
+                date: '',
+                location: "",
+                treatment: preSelectedTreatment,
+                message: "",
+            });
+
+            setTimeout(() => {
+                onClose();
+            }, 5000);
+        } catch (err) {
+            console.error("Error:", err);
+        }
+
+
     };
-     const handleOverlayClick = (e) => {
+    const handleOverlayClick = (e) => {
         // Only close if the click is directly on the overlay, not its children
         if (e.target === e.currentTarget) {
             onClose();
@@ -115,7 +140,7 @@ const allTags = [...new Set(tabs), "Other"];
     };
 
     return (
-        <motion.div className="SalonBookAppointment-overlay"  onClick={handleOverlayClick}>
+        <motion.div className="SalonBookAppointment-overlay" onClick={handleOverlayClick}>
             <motion.div
                 className="SalonBookAppointment-container"
                 initial={{ opacity: 0, scale: 0 }}
@@ -141,7 +166,7 @@ const allTags = [...new Set(tabs), "Other"];
 
                         <div className="form_group">
                             <label>Contact Number</label>
-                            <input  className={errors.MoNumber ? "error-border" : ""} type="text" name="MoNumber" placeholder="Enter your Mo. Number" value={formData.MoNumber} onChange={handleChange} />
+                            <input className={errors.MoNumber ? "error-border" : ""} type="text" name="MoNumber" placeholder="Enter your Mo. Number" value={formData.MoNumber} onChange={handleChange} />
                         </div>
                     </div>
 
@@ -165,7 +190,7 @@ const allTags = [...new Set(tabs), "Other"];
                     </div>
 
                     <div className="form-row">
-                    <div className="form_group">
+                        <div className="form_group">
                             <label>Location</label>
                             <select name="location" value={formData.location} onChange={handleChange}>
                                 <option value="">Select Location</option>
@@ -215,7 +240,7 @@ const allTags = [...new Set(tabs), "Other"];
                     </div>
 
                     <button type="submit" className="book-now-o btn">
-                        <span>Book Now</span> 
+                        <span>Book Now</span>
                         <ArrowRight className="arrow-icon" size={20} strokeWidth={2} />
                     </button>
                 </form>

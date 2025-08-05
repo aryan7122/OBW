@@ -6,8 +6,13 @@ import './SalonContactUs.scss';
 // Make sure this path is correct for your project structure
 import contactImage from '../../../assets/SALON/hero/contact-image.webp';
 import WebPImage from '../../../util/WebPImage';
+import { useDispatch, useSelector } from 'react-redux';
+import { salonContactUs } from '../../../features/salon/salonContactSlice';
 
 const SalonContactUs = () => {
+    const dispatch = useDispatch();
+    const { loading, data, error } = useSelector(state => state.salonContact);
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -22,19 +27,50 @@ const SalonContactUs = () => {
         setFormData(prevData => ({ ...prevData, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!formData.firstName || !formData.email || !formData.mobileNumber || !formData.message) {
             toast.error('Please fill out all required fields.');
             return;
         }
-        console.log('Form Submitted Data:', formData);
-        toast.success('Thank you! Your message has been sent.');
-        setFormData({
-            firstName: '', lastName: '', email: '',
-            mobileNumber: '', outlet: 'Kodipalya road', message: ''
-        });
+        // console.log('Form Submitted Data:', formData);
+        const payload = {
+            first_name: formData.firstName,
+            last_name: formData.lastName,
+            email: formData.email,
+            mobile_number: formData.mobileNumber,
+            outlet: formData.outlet,
+            message: formData.message,
+        };
+
+        try {
+            await toast.promise(
+                Promise.all([
+                    dispatch(salonContactUs(payload)).unwrap(),
+
+                ]),
+                {
+                    loading: "📤 Sending request...",
+                    success: " Sended successfully!",
+                    error: "Failed to send request.",
+                }
+            );
+
+            // Reset form
+            setFormData({
+                firstName: '', lastName: '', email: '',
+                mobileNumber: '', outlet: 'Kodipalya road', message: ''
+            });
+
+            setPhone("");
+            setSelectedDate(null);
+        } catch (err) {
+            console.error("Error:", err);
+        }
+
+
     };
+
 
     const features = [
         "Clean, safe, and peaceful place to relax ",
@@ -49,7 +85,7 @@ const SalonContactUs = () => {
             <header className="contact-header">
                 <h1>We’re Just a Message Away!</h1>
                 <p className="subtitle">
-                   Taking care of your beauty isn’t just about looks; it’s about feeling amazing in your skin. Let’s connect and help you glow from the inside out.
+                    Taking care of your beauty isn’t just about looks; it’s about feeling amazing in your skin. Let’s connect and help you glow from the inside out.
                 </p>
                 <div className="features-bar">
                     {features.map((feature, index) => (

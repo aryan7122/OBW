@@ -7,11 +7,15 @@ import { toast, Toaster } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import Select from "react-select";
 import { clinicalData } from "../../Pages/ClinicalConcerns/ClinicalConcerns";
+import { bookClinicAppointment } from "../../features/clinic/clinicAppointmentSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
 
 const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
+    const dispatch = useDispatch();
+    const { loading, data, error } = useSelector(state => state.clinicAppointment);
 
     const allTags = [];
 
@@ -25,8 +29,8 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
         });
     });
     if (!allTags.includes("Other")) {
-    allTags.push("Other");
-}
+        allTags.push("Other");
+    }
 
     const treatmentOptions = allTags.map(tag => ({ label: tag, value: tag }));
 
@@ -46,20 +50,46 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
         MoNumber: false,
     });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+    function formatDateForBackend(inputDateTime) {
+        if (!inputDateTime) return "";
 
-    setFormData({ ...formData, [name]: value });
+        const date = new Date(inputDateTime);
 
-    // Reset error on typing
-    if (value.trim() !== "") {
-        setErrors((prev) => ({ ...prev, [name]: false }));
+        const day = String(date.getDate()).padStart(2, "0");
+        const month = String(date.getMonth() + 1).padStart(2, "0"); // Month starts at 0
+        const year = date.getFullYear();
+
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+
+        return `${day}-${month}-${year} ${hours}:${minutes}:00`;
     }
-};
+    const formattedDate = formatDateForBackend(formData.date);
+
+    const payload = {
+        name: formData.name,
+        contact_number: formData.MoNumber,
+        email: formData.email,
+        date_time: formattedDate,
+        location: formData.location,
+        treatment: formData.treatment,
+        note: formData.message,
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setFormData({ ...formData, [name]: value });
+
+        // Reset error on typing
+        if (value.trim() !== "") {
+            setErrors((prev) => ({ ...prev, [name]: false }));
+        }
+    };
 
 
-   
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const { name, MoNumber, email, date, location, treatment, message } = formData;
@@ -77,46 +107,49 @@ const BookAppointment = ({ onClose, preSelectedTreatment = "" }) => {
         }
 
         // Success Message
-        toast.success("Appointment booked successfully!");
 
-        console.log("Form Submitted:", formData);
         // EmailJS se email send karna
-        const templateParams = {
-            to_email: "obwellness1@gmail.com", // Jis email pe bhejna hai
-            name,
-            MoNumber,
-            email,
-            date,
-            location,
-            treatment,
-            message,
-        };
 
-        emailjs
-            .send(
-                "service_zwhrgv1", // Replace with your EmailJS service ID
-                "template_go8s6bk", // Replace with your EmailJS template ID
-                templateParams,
-                "dnG0LC_cuxIZMOgLu" // Replace with your EmailJS Public Key
-            )
-            .then(
-                (response) => {
-                    console.log("SUCCESS!", response.status, response.text);
-                    toast.success("Appointment booked successfully! ✅");
-                    setTimeout(() => {
-                        onClose();
-                    }, 1500);
-                },
-                (err) => {
-                    console.log("FAILED...", err);
-                    toast.error("Failed to send email! ❌");
+        try {
+            await toast.promise(
+                Promise.all([
+                    dispatch(bookClinicAppointment(payload)).unwrap(),
+                    // emailjs.send(
+                    //     "service_zwhrgv1", // Replace with your EmailJS service ID
+                    //     "template_go8s6bk", // Replace with your EmailJS template ID
+                    //     templateParams,
+                    //     "dnG0LC_cuxIZMOgLu" // Replace with your EmailJS Public Key
+                    // ),
+
+                ]),
+                {
+                    loading: "📤 Sending request...",
+                    success: " Sended successfully!",
+                    error: "Failed to send request.",
                 }
             );
 
-        // Modal Close after 1.5s
-        setTimeout(() => {
-            onClose();
-        }, 1500);
+            // Reset form
+            setFormData({
+                name: "",
+                MoNumber: "",
+                email: "",
+                date: '',
+                location: "",
+                treatment: preSelectedTreatment,
+                message: "",
+            });
+
+            setTimeout(() => {
+                onClose();
+            }, 5000);
+        } catch (err) {
+            console.error("Error:", err);
+        }
+
+
+
+
     };
     const handleOverlayClick = (e) => {
         // Only close if the click is directly on the overlay, not its children
