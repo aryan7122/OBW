@@ -26,6 +26,9 @@ import img5 from '../../../../assets/SALON/hero/blogs/img5.jpg'
 
 // NOTE: I'm defining a placeholder for 'blogs' here if it's not imported from './Blog'
 // If you actually import 'blogs' from './Blog.js', you can remove this placeholder.
+
+
+
 export const blogs = [
     {
         title: "Why Every Woman Needs a 'Reset Ritual' And How a Salon Visit Can Be Yours",

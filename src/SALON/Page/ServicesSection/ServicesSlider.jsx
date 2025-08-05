@@ -5,14 +5,14 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import SalonBookAppointment from '../../Components/SalonBookAppointment/SalonBookAppointment';
 import WebPImage from '../../../util/WebPImage';
 
-const ServicesSlider = ({ services,tab }) => {
+const ServicesSlider = ({ services, tab }) => {
 
-    console.log('object',tab)
+    console.log('object', tab)
     const containerRef = useRef(null);
     const [showControls, setShowControls] = useState(false);
     const [canScrollLeft, setCanScrollLeft] = useState(false);
     const [canScrollRight, setCanScrollRight] = useState(false);
-      const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
 
     useEffect(() => {
@@ -85,31 +85,59 @@ const ServicesSlider = ({ services,tab }) => {
 
     // console.log('😒😒😒😒😒', containerRef)
 
-      const handleBookNowClick = () => {
+    const handleBookNowClick = () => {
         setShowModal(true);
     };
     const closeModal = () => {
         setShowModal(false);
     };
+
+     const [activeIndex, setActiveIndex] = useState(null);
+
+    const handleCardClick = (index) => {
+        if (index === activeIndex) {
+            setActiveIndex(null);
+        } else {
+            setActiveIndex(index);
+        }
+    };
     return (
         <div className={`slider-wrapper slider-card_is_${services.length}`}>
-            {showModal && <SalonBookAppointment preSelectedTreatment={tab} onClose={closeModal}  />}
+            {showModal && <SalonBookAppointment preSelectedTreatment={tab} onClose={closeModal} />}
 
             <div className={`services-slider card_is_${services.length}`} ref={containerRef}>
                 {services.map((service, index) => (
-                    <div className={`service-card `} key={index}>
+                    <div
+                    className={`service-card ${activeIndex === index ? 'is-active' : ''}`} 
+                        key={index}
+                        onClick={() => handleCardClick(index)}
+
+                      >
                         <WebPImage src={service.image} alt={service.title} className="service-img" />
+                        <div></div>
                         <div className="service-blur">
                             <h4 className="service-title">{service.title}</h4>
-                            <hr className="divider" />
+                            <div className="divider" ></div>
                             <div className="bottom-info">
-                                <span className="price">Rs.{service.price} <p>Onwards</p></span>
+                                {/* <span className="price">Rs.{service.price} <p>Onwards</p></span> */}
                                 <button className="book-btn " onClick={handleBookNowClick}>
                                     <span>
                                         Book Appointment
                                     </span>
                                 </button>
                             </div>
+                            <div className='list-services'>
+                                <p>SERVICES</p>
+                                <p>Prices</p>
+                            </div>
+                            <div className={`service-list ${service.services?.length > 5 ? 'vertical-scroll' : ''}`}>                                {service.services?.map((sub, subIndex) => (
+                                <div className={`sub-service `} key={subIndex}>
+                                    <span className="sub-service-title">{sub.title}</span>
+                                    <span className="sub-service-price">{sub.price}<span className='Onwards'>{sub.Onwards} </span></span>
+                                </div>
+                            ))}
+                            </div>
+
                         </div>
                     </div>
                 ))}
