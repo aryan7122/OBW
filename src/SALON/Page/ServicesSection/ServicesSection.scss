@@ -410,7 +410,8 @@
             
             // Vertical scrollbar ko enable karega (jab zaroorat ho)
             overflow-y: auto;
-  
+            margin-bottom: -15px;
+            padding-bottom: 10px;
             // Bonus: Scrollbar ko chhipane ke liye, jaisa humne pehle discuss kiya tha
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* IE and Edge */
@@ -425,7 +426,7 @@
 						justify-content: space-between;
 						margin-bottom: 5px;
 						gap: 15px;
-           border-bottom: 1px dashed #ffffff18;
+           border-bottom: 1px dashed #ffffff22;
 						.sub-service-title {
               // text-transform: capitalize;
               font-weight: 400 ;
