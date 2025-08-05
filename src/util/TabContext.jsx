@@ -23,19 +23,19 @@ export const TabProvider = ({ children }) => {
     setPageTab(tab);
   }, []);
 
-  // const changeTab = (tab) => {
-  //   setPageTab(tab);
-  //   localStorage.setItem('activeTab', tab);
-  // };
-const changeTab = (tab) => {
-  localStorage.setItem('activeTab', tab);
+  const changeTab = (tab) => {
+    setPageTab(tab);
+    localStorage.setItem('activeTab', tab);
+  };
+// const changeTab = (tab) => {
+//   localStorage.setItem('activeTab', tab);
 
-  if (tab === 'SALON') {
-    window.location.href = 'https://www.obwsalon.com';
-  } else if (tab === 'CLINIC') {
-    window.location.href = 'https://www.obwclinic.com';
-  }
-};
+//   if (tab === 'SALON') {
+//     window.location.href = 'https://www.obwsalon.com';
+//   } else if (tab === 'CLINIC') {
+//     window.location.href = 'https://www.obwclinic.com';
+//   }
+// };
 
   return (
     <TabContext.Provider value={{ pageTab, changeTab }}>
