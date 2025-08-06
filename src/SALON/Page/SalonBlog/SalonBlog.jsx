@@ -5,15 +5,15 @@ import { Search, ArrowLeft, ArrowRight, ChevronDown, ChevronUp } from 'lucide-re
 import imgBlog from "../../../assets/Blog.jpg";
 
 // Images ka import
-import img1 from "../../../assets/TrendingTreatments/Medi-Facials-min.jpg";
-import img2 from "../../../assets/TrendingTreatments/Laser Hair Removal-min.jpg";
-import img3 from "../../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg";
-import img4 from "../../../assets/TrendingTreatments/Carbon Laser Peel_11zon.jpg";
-import img5 from "../../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg";
-import img6 from "../../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg";
-import img7 from "../../../assets/TrendingTreatments/Skin Brightening-min.jpg";
-import img8 from "../../../assets/TrendingTreatments/Hair Transplantation-min.jpg";
-import img9 from "../../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg";
+// import img1 from "../../../assets/TrendingTreatments/Medi-Facials-min.jpg";
+// import img2 from "../../../assets/TrendingTreatments/Laser Hair Removal-min.jpg";
+// import img3 from "../../../assets/TrendingTreatments/IV Therapy for Skin, Hair & Body Care-min.jpg";
+// import img4 from "../../../assets/TrendingTreatments/Carbon Laser Peel_11zon.jpg";
+// import img5 from "../../../assets/TrendingTreatments/Hair GFC & PRP-min.jpg";
+// import img6 from "../../../assets/TrendingTreatments/PMU (Permanent Makeup)-min.jpg";
+// import img7 from "../../../assets/TrendingTreatments/Skin Brightening-min.jpg";
+// import img8 from "../../../assets/TrendingTreatments/Hair Transplantation-min.jpg";
+// import img9 from "../../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg";
 import WebPImage from "../../../util/WebPImage";
 import { blogs } from "./SalonBlogDetail/SalonBlogDetail";
 import { useDispatch, useSelector } from "react-redux";
