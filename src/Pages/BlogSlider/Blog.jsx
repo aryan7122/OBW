@@ -3,7 +3,7 @@ import "./Blog.scss";
 import Frame from "../../assets/about/Frame.svg";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import imgBlog from "../../assets/Blog.jpg";
+import imgBlog from "../../assets/blog.jpg";
 
 import img1 from '../../assets/blog/Hair Transplant Surgery for Men What You Need to Know.webp'
 import img2 from '../../assets/blog/Q-Switch Laser Glow Without Filters.webp'

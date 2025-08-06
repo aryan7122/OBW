@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo, useRef, useCallback } from "react"
 import "./SalonBlog.scss";
 import { useNavigate } from "react-router-dom";
 import { Search, ArrowLeft, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
-import imgBlog from "../../../assets/Blog.jpg";
+import imgBlog from "../../../assets/blog.jpg";
 
 // Images ka import
 // import img1 from "../../../assets/TrendingTreatments/Medi-Facials-min.jpg";
