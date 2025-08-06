@@ -2,6 +2,7 @@ import React, { useEffect, useState, useMemo, useRef, useCallback } from "react"
 import "./SalonBlog.scss";
 import { useNavigate } from "react-router-dom";
 import { Search, ArrowLeft, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
+import imgBlog from "../../../assets/Blog.jpg";
 
 // Images ka import
 import img1 from "../../../assets/TrendingTreatments/Medi-Facials-min.jpg";
@@ -15,6 +16,11 @@ import img8 from "../../../assets/TrendingTreatments/Hair Transplantation-min.jp
 import img9 from "../../../assets/TrendingTreatments/Anti-DHT Mesotherapy-min.jpg";
 import WebPImage from "../../../util/WebPImage";
 import { blogs } from "./SalonBlogDetail/SalonBlogDetail";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSalonBlogs } from "../../../features/salon/salonBlogSlice";
+import LoaderPage from "../../../util/Loader/LoaderPage";
+import BlogError from "../../../util/BlogError/BlogError";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 // --- FIX #1: DATA KO COMPONENT KE BAHAR NIKALEIN ---
 // Isse yeh array baar-baar nahi banenge aur loop nahi banega.
@@ -31,9 +37,10 @@ import { blogs } from "./SalonBlogDetail/SalonBlogDetail";
 //     { id: 10, title: "A guide to hair coloring", description: "Explore the world of hair color with our expert tips and trend analysis for the season.", image: img2, category: "Coloring", date: "19 July" },
 //     { id: 11, title: "Advanced Skin Treatments", description: "A look into the most advanced skin treatments available today for a youthful glow.", image: img1, category: "Skin", date: "20 July" },
 // ];
+
 const allBlogs = blogs;
 
-const categories = ["View all", "Styling", "Hair", "Nails", "Skin", "Coloring"];
+// const categories = ["View all", "Styling", "Hair", "Nails", "Skin", "Coloring"];
 
 const getBlogsPerPage = () => window.innerWidth <= 992 ? 8 : 9;
 
@@ -55,6 +62,25 @@ const SalonBlog = () => {
     // --- FIX #2: useEffect KO THEEK KAREIN ---
     // Is useEffect ko ab sirf ek baar chalna chahiye jab component load ho.
     // Empty dependency array `[]` ka matlab hai - "sirf ek baar chalo".
+    // apis
+    const dispatch = useDispatch();
+    const { loading, apiblogs, error } = useSelector(state => state.salonBlog);
+    useEffect(() => {
+        dispatch(fetchSalonBlogs());
+    }, [dispatch]);
+    const categories = useMemo(() => {
+        const uniqueCategories = Array.from(
+            new Set(apiblogs.map(blog => blog?.category).filter(Boolean))
+        );
+        return ["View all", ...uniqueCategories];
+    }, [apiblogs]);
+
+    const HandleNavigation = (title) => {
+        const formattedTitle = title.toLowerCase().replace(/\s+/g, "-"); // Slug conversion
+        window.scrollTo(0, 0);
+        navigate(`/blog-detail/${formattedTitle}`);
+    };
+
     useEffect(() => {
         const calculateVisibleCategories = () => {
             if (!filtersContainerRef.current) return;
@@ -78,6 +104,7 @@ const SalonBlog = () => {
 
             setVisibleCategories(tempVisible);
             setDropdownCategories(tempDropdown);
+
         };
 
         const handleResize = () => {
@@ -90,21 +117,25 @@ const SalonBlog = () => {
 
         // Component hatne par listener ko saaf karo
         return () => window.removeEventListener('resize', handleResize);
-    }, []); // <-- YEH SABSE ZAROORI FIX HAI (EMPTY ARRAY)
+    }, [apiblogs]); // <-- YEH SABSE ZAROORI FIX HAI (EMPTY ARRAY)
 
     // --- FILTERING AND PAGINATION LOGIC ---
     const filteredBlogs = useMemo(() => {
-        let blogs = allBlogs;
+        let filtered = apiblogs; // ✅ Use API se aaya data
+
         if (searchTerm) {
-            blogs = blogs.filter(blog =>
+            filtered = filtered.filter(blog =>
                 blog.title.toLowerCase().includes(searchTerm.toLowerCase())
             );
         }
+
         if (selectedCategory !== "View all") {
-            blogs = blogs.filter(blog => blog.category === selectedCategory);
+            filtered = filtered.filter(blog => blog.category === selectedCategory);
         }
-        return blogs;
-    }, [searchTerm, selectedCategory]);
+
+        return filtered;
+    }, [searchTerm, selectedCategory, apiblogs]);
+
 
     useEffect(() => {
         setCurrentPage(1);
@@ -118,7 +149,8 @@ const SalonBlog = () => {
     const handleNavigation = (title) => {
         const formattedTitle = title.toLowerCase().replace(/\s+/g, "-");
         window.scrollTo(0, 0);
-        navigate(`/blog-detail/${formattedTitle}`);
+        navigate(`/blog-detail/${title}`);
+        console.log(('urlll', title))
     };
 
     const handlePageChange = (page) => {
@@ -134,28 +166,116 @@ const SalonBlog = () => {
     };
 
     // --- RENDER FUNCTIONS ---
+
     const renderPageNumbers = () => {
-        if (totalPages <= 1) return null;
-        return (
-            <div className="pagination">
-                <button
-                    onClick={() => handlePageChange(currentPage - 1)}
-                    disabled={currentPage === 1}
-                    className="pagination-arrow"
-                >
-                    <ArrowLeft size={20} />
-                </button>
-                <span>{`Page ${currentPage} of ${totalPages}`}</span>
-                <button
-                    onClick={() => handlePageChange(currentPage + 1)}
-                    disabled={currentPage === totalPages}
-                    className="pagination-arrow"
-                >
-                    <ArrowRight size={20} />
-                </button>
-            </div>
-        );
+        const pageNumbers = [];
+        const maxPagesToShow = 5; // Max numbers to display directly (e.g., 1, 2, 3, ..., 8, 9, 10)
+
+        if (totalPages <= maxPagesToShow) {
+            for (let i = 1; i <= totalPages; i++) {
+                pageNumbers.push(i);
+            }
+        } else {
+            // Logic for displaying numbers like 1, 2, 3, ..., 8, 9, 10
+            // Always show first two pages
+            pageNumbers.push(1);
+            pageNumbers.push(2);
+
+            if (currentPage > 3) {
+                pageNumbers.push("...");
+            }
+
+            // Show current page, and pages around it
+            if (currentPage > 2 && currentPage < totalPages - 1) {
+                if (currentPage === totalPages) { // If current page is the last one
+                    pageNumbers.push(currentPage - 2);
+                    pageNumbers.push(currentPage - 1);
+                } else if (currentPage === totalPages - 1) { // If current page is second to last
+                    pageNumbers.push(currentPage - 1);
+                    pageNumbers.push(currentPage);
+                } else {
+                    pageNumbers.push(currentPage);
+                }
+            }
+
+            if (currentPage < totalPages - 2) {
+                pageNumbers.push("...");
+            }
+
+            // Always show last two pages
+            if (totalPages > 2) {
+                if (!pageNumbers.includes(totalPages - 1)) {
+                    pageNumbers.push(totalPages - 1);
+                }
+                if (!pageNumbers.includes(totalPages)) {
+                    pageNumbers.push(totalPages);
+                }
+            }
+
+            // Filter out duplicates and sort
+            const uniquePageNumbers = [...new Set(pageNumbers)].sort((a, b) => {
+                if (a === "...") return 1;
+                if (b === "...") return -1;
+                return a - b;
+            });
+
+            return uniquePageNumbers.map((number, index) => {
+                if (number === "...") {
+                    return (
+                        <span key={index} className="ellipsis">
+                            ...
+                        </span>
+                    );
+                }
+                return (
+                    <button
+                        key={number}
+                        onClick={() => handlePageChange(number)}
+                        className={currentPage === number ? "active" : ""}
+                    >
+                        {number}
+                    </button>
+                );
+            });
+        }
+
+        return pageNumbers.map((number) => (
+            <button
+                key={number}
+                onClick={() => handlePageChange(number)}
+                className={currentPage === number ? "active" : ""}
+            >
+                {number}
+            </button>
+        ));
     };
+    // const renderPageNumbers = () => {
+    //     if (totalPages <= 1) return null;
+    //     return (
+    //         <div className="pagination">
+    //             <button
+    //                 onClick={() => handlePageChange(currentPage - 1)}
+    //                 disabled={currentPage === 1}
+    //                 className="pagination-arrow"
+    //             >
+    //                 <ArrowLeft size={20} />
+    //             </button>
+    //             <span>{`Page ${currentPage} of ${totalPages}`}</span>
+    //             <button
+    //                 onClick={() => handlePageChange(currentPage + 1)}
+    //                 disabled={currentPage === totalPages}
+    //                 className="pagination-arrow"
+    //             >
+    //                 <ArrowRight size={20} />
+    //             </button>
+    //         </div>
+    //     );
+    // };
+
+
+    if (loading) return <LoaderPage loading={true} />;
+    if (blogs.length === 0 || error) return <BlogError />;
+
 
     return (
         <div className="salon-blog-page">
@@ -172,7 +292,6 @@ const SalonBlog = () => {
                     />
                 </div>
             </header>
-
             <main className="salon-blog-content">
                 <div className="category-filters" ref={filtersContainerRef}>
                     <div style={{ visibility: 'hidden', position: 'absolute', display: 'flex', gap: '15px' }}>
@@ -218,20 +337,25 @@ const SalonBlog = () => {
 
                 <div className="salon-blog-grid">
                     {visibleBlogs.length > 0 ? (
-                        visibleBlogs.map((blog) => (
-                            <div key={blog.id} className="salon-blog-card" onClick={() => handleNavigation(blog.title)}>
-                                <WebPImage src={blog.image} alt={blog.title} className="card-image" />
+                        visibleBlogs.map((blog, i) => (
+                            <div key={i} className="salon-blog-card" onClick={() => handleNavigation(blog.url)}>
+                                <WebPImage
+
+                                    src={blog?.image || imgBlog}
+                                    //   src={blog.image && blog.image.trim() !== "" ? blog.image : imgBlog} 
+
+                                    alt={blog.title} className="card-image" />
                                 <div className="card-content">
                                     <div className="info_title">
                                         <p>{blog.category}</p>
-                                        <p>{blog.date}</p>
+                                        <p>{blog.published_at}</p>
                                     </div>
                                     <h3 className="card-title">{blog.title}</h3>
                                     <p className="card-description">
-                                        {blog.p.length > 80
-                                            ? blog.p.slice(0, 80) + "..."
+                                        {blog?.subtitle.length > 80
+                                            ? blog.subtitle.slice(0, 80) + "..."
                                             : blog.p}
-                                        {blog.p.length > 80 && (
+                                        {blog.subtitle.length > 80 && (
                                             <span className="read-more">Read more</span>
                                         )}
                                     </p>
@@ -244,7 +368,26 @@ const SalonBlog = () => {
                     )}
                 </div>
 
-                {renderPageNumbers()}
+                {/* {renderPageNumbers()} */}
+                {totalPages > 1 && ( // Only show pagination if there's more than one page
+                    <div className="pagination">
+                        <button
+                            onClick={() => handlePageChange(currentPage - 1)}
+                            disabled={currentPage === 1}
+                            className="pagination-prev-next pre-"
+                        >
+                            <FaArrowLeft /> Previous
+                        </button>
+                        <div className="page-numbers">{renderPageNumbers()}</div>
+                        <button
+                            onClick={() => handlePageChange(currentPage + 1)}
+                            disabled={currentPage === totalPages}
+                            className="pagination-prev-next next-"
+                        >
+                            Next <FaArrowRight />
+                        </button>
+                    </div>
+                )}
             </main>
         </div>
     );

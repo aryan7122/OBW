@@ -299,14 +299,14 @@
       position: relative;
       // background: #fff;
       border-radius: 16px;
-      min-height: 500px;
+      // min-height: 500px;
 
       // width: 100%;
       max-width: 540px;
       //   border: 1px solid red;
       border-radius: 20px;
 
-      margin: 0 10px;
+      margin: 10px;
       text-align: left;
 
       @media only screen and (max-width: 1330px) {
@@ -393,7 +393,7 @@
         color: #1b1b1b;
         margin-top: 8px;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         /* Maximum 3 lines */
         -webkit-box-orient: vertical;
         overflow: hidden;
@@ -422,7 +422,7 @@
         color: #454545;
         margin-top: 8px;
         display: -webkit-box;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         /* Maximum 3 lines */
         -webkit-box-orient: vertical;
         overflow: hidden;
