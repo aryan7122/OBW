@@ -5,7 +5,7 @@ import { FaLinkedin, FaFacebook, FaTwitter, FaLink } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
-import imgBlog from "../../assets/Blog.jpg";
+import imgBlog from "../../assets/blog.jpg";
 import img1 from '../../assets/blog/Hair Transplant Surgery for Men What You Need to Know.webp'
 import img2 from '../../assets/blog/Q-Switch Laser Glow Without Filters.webp'
 import img3 from '../../assets/blog/Laser Hair Reduction for Men A Smarter Way to Stay Groomed.webp'
