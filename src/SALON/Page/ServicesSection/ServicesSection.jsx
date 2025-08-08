@@ -22,10 +22,10 @@ import Botoxtreatment from '../../../assets/SALON/hero/services/Botoxtreatment.j
 import SmootheningRebounding from '../../../assets/SALON/hero/services/SmootheningRebounding.webp';
 import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertreatment.webp';
 // 
-import Menborntreatment from '../../../assets/SALON/hero/services/men-born-treatment.JPG';
-import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment2.JPG';
-import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.JPG';
-import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.JPG';
+import Menborntreatment from '../../../assets/SALON/hero/services/men-born-treatment.webp';
+import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment2.webp';
+import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.webp';
+import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.webp';
 // 
 import Pedicure from '../../../assets/SALON/hero/services/Pedicure.webp';
 // 
