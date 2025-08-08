@@ -24,8 +24,8 @@ import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertre
 // 
 import Menborntreatment from '../../../assets/SALON/hero/services/men-born-treatment.JPG';
 import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment (2).jpg';
-import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.jpg';
-import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.jpg';
+import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.JPG';
+import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.JPG';
 // 
 import Pedicure from '../../../assets/SALON/hero/services/Pedicure.webp';
 // 
