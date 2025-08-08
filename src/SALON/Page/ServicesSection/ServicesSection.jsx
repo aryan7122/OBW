@@ -5,7 +5,7 @@ import str3 from '../../../assets/SALON/hero/str.png';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 // 
-import mensHairCut from '../../../assets/SALON/hero/services/mens-hair-cut.jpg';
+import mensHairCut from '../../../assets/SALON/hero/services/mens-hair-cut.webp';
 import shave from '../../../assets/SALON/hero/services/Shave.webp';
 import blowdry from '../../../assets/SALON/hero/services/blowdry.webp';
 import womensHairCut from '../../../assets/SALON/hero/services/womens-hair-cut.jpg';
