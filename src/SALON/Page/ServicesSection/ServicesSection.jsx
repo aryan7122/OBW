@@ -24,7 +24,7 @@ import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertre
 // 
 import Menborntreatment from '../../../assets/SALON/hero/services/men-born-treatment.webp';
 import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment2.webp';
-import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.webp';
+import Menessentialtreatment from '../../../assets/SALON/hero/services/Menessentialtreatment.webp';
 import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.webp';
 // 
 import Pedicure from '../../../assets/SALON/hero/services/Pedicure.webp';
