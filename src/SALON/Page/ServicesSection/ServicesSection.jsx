@@ -23,9 +23,9 @@ import SmootheningRebounding from '../../../assets/SALON/hero/services/Smootheni
 import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertreatment.webp';
 // 
 import Menborntreatment from '../../../assets/SALON/hero/services/men-born-treatment.jpg';
-import Menborentreatment from '../../../assets/SALON/hero/services/Menborntreatment (2).jpg';
+import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment (2).jpg';
 import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.jpg';
-import Womenessentialtreatment from '../../../assets/SALON/hero/services/Womenessentialtreatment.jpg';
+import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.jpg';
 // 
 import Pedicure from '../../../assets/SALON/hero/services/Pedicure.webp';
 // 
