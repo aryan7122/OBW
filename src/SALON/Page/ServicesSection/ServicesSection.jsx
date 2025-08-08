@@ -23,7 +23,7 @@ import SmootheningRebounding from '../../../assets/SALON/hero/services/Smootheni
 import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertreatment.webp';
 // 
 import Menborntreatment from '../../../assets/SALON/hero/services/men-born-treatment.JPG';
-import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment (2).jpg';
+import Menborentreatment from '../../../assets/SALON/hero/services/menborntreatment (2).JPG';
 import Menessentialtreatment from '../../../assets/SALON/hero/services/menessentialtreatment.JPG';
 import Womenessentialtreatment from '../../../assets/SALON/hero/services/womenessentialtreatment.JPG';
 // 
