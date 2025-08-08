@@ -10,7 +10,7 @@ import shave from '../../../assets/SALON/hero/services/Shave.webp';
 import blowdry from '../../../assets/SALON/hero/services/blowdry.webp';
 import womensHairCut from '../../../assets/SALON/hero/services/womens-hair-cut.jpg';
 import ironing from '../../../assets/SALON/hero/services/ironing.jpg';
-import womensBlowdry from '../../../assets/SALON/hero/services/womenblowdry.jpg';
+import womensBlowdry from '../../../assets/SALON/hero/services/womenblowdry.webp';
 import tonging from '../../../assets/SALON/hero/services/tonging.jpg';
 // 
 import Manicure from '../../../assets/SALON/hero/services/Manicure.jpg';
