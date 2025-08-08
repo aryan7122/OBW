@@ -546,30 +546,82 @@ $brand-color: #3032b6; // A nice purple for accents
 
 .article-html-content {
   p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: $text-secondary;
-      margin: 0 0 16px 0;
+    font-size: 16px;
+    line-height:24px;
+    color: $text-secondary;
+
   }
 
-  h2 {
-    font-size: 28px;
-      font-weight: 500;
-      // margin-bottom: 26px;
-      padding-bottom: 12px;
-      letter-spacing: -1px;
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-primary;
+    // font-weight: 600;
+    // line-height: 1.4;
+    margin:  10px 0;
+    letter-spacing: -0.5px;
+  }
 
-    margin: 0;
-    @media (max-width: 1250px){
-      max-width: 100%;
-       font-size: 30px;
-    line-height: 40px;
-    letter-spacing: -1px;
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    // margin-bottom: 24px;
+    line-height: 46.08px;
+    @media (max-width: 768px) {
+      font-size: 28px;
     }
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: 500;
+     line-height: 40.08px;
+    // padding-bottom: 12px;
+    // border-bottom: 1px solid #e0e0e0;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+  
+  h3 {
+    font-size: 26px;
+         line-height: 34.08px;
+
+    font-weight: 500;
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  h5 {
+    font-size: 18px;
+    font-weight: 500;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+
+  h6 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-secondary;
   }
 
   ul, ol {
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
+    line-height: 1.7;
+
+    li {
+      margin-bottom: 8px;
+    }
   }
 }
