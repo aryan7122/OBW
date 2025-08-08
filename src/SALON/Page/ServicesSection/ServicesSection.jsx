@@ -5,7 +5,7 @@ import str3 from '../../../assets/SALON/hero/str.png';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 // 
-import mensHairCut from '../../../assets/SALON/hero/services/mens-hair-cut.webp';
+import mensHairCut from '../../../assets/SALON/hero/services/mens-hair-cut.jpg';
 import shave from '../../../assets/SALON/hero/services/Shave.webp';
 import blowdry from '../../../assets/SALON/hero/services/blowdry.webp';
 import womensHairCut from '../../../assets/SALON/hero/services/womens-hair-cut.jpg';
@@ -18,13 +18,13 @@ import Manicure from '../../../assets/SALON/hero/services/Manicure.jpg';
 import menColoring from '../../../assets/SALON/hero/services/menColoring.webp';
 import womenColoring from '../../../assets/SALON/hero/services/womenColoring.webp';
 // 
-import Botoxtreatment from '../../../assets/SALON/hero/services/Botoxtreatment.webp';
+import Botoxtreatment from '../../../assets/SALON/hero/services/Botoxtreatment.jpg';
 import SmootheningRebounding from '../../../assets/SALON/hero/services/SmootheningRebounding.webp';
 import Hairfibertreatment from '../../../assets/SALON/hero/services/Hairfibertreatment.webp';
 // 
-import Menborntreatment from '../../../assets/SALON/hero/services/Menborntreatment.webp';
-import Menborentreatment from '../../../assets/SALON/hero/services/Menborntreatment (2).webp';
-import Menessentialtreatment from '../../../assets/SALON/hero/services/Menessentialtreatment.webp';
+import Menborntreatment from '../../../assets/SALON/hero/services/Menborntreatment.jpg';
+import Menborentreatment from '../../../assets/SALON/hero/services/Menborntreatment (2).jpg';
+import Menessentialtreatment from '../../../assets/SALON/hero/services/Menessentialtreatment.jpg';
 import Womenessentialtreatment from '../../../assets/SALON/hero/services/Womenessentialtreatment.jpg';
 // 
 import Pedicure from '../../../assets/SALON/hero/services/Pedicure.webp';
