@@ -275,7 +275,7 @@ const SalonBlog = () => {
 
     if (loading) return <LoaderPage loading={true} />;
     if (blogs.length === 0 || error) return <BlogError />;
-
+    console.log('visibleBlogs', visibleBlogs)
 
     return (
         <div className="salon-blog-page">
@@ -336,29 +336,30 @@ const SalonBlog = () => {
                 </div>
 
                 <div className="salon-blog-grid">
-                    {visibleBlogs.length > 0 ? (
-                        visibleBlogs.map((blog, i) => (
+                    {visibleBlogs?.length > 0 ? (
+                        visibleBlogs?.map((blog, i) => (
                             <div key={i} className="salon-blog-card" onClick={() => handleNavigation(blog.url)}>
                                 <WebPImage
 
                                     src={blog?.image || imgBlog}
                                     //   src={blog.image && blog.image.trim() !== "" ? blog.image : imgBlog} 
 
-                                    alt={blog.title} className="card-image" />
+                                    alt={blog?.title} className="card-image" />
                                 <div className="card-content">
                                     <div className="info_title">
-                                        <p>{blog.category}</p>
-                                        <p>{blog.published_at}</p>
+                                        <p>{blog?.category}</p>
+                                        <p>{blog?.published_at}</p>
                                     </div>
                                     <h3 className="card-title">{blog.title}</h3>
                                     <p className="card-description">
-                                        {blog?.subtitle.length > 80
-                                            ? blog.subtitle.slice(0, 80) + "..."
-                                            : blog.p}
-                                        {blog.subtitle.length > 80 && (
+                                        {blog?.subtitle?.length > 80
+                                            ? blog?.subtitle?.slice(0, 80) + "..."
+                                            : blog?.subtitle}
+                                        {blog?.subtitle?.length > 80 && (
                                             <span className="read-more">Read more</span>
                                         )}
                                     </p>
+
 
                                 </div>
                             </div>
